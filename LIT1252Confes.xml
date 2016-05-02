@@ -1,36 +1,65 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT1252Confes">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT1252Confes" type="work">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Confessio Claudii</title>
-            <title type="alt">Confessio Fidei</title>
-            <author>Gälawdewos</author>
+            <title xml:lang="lat" type="normalized" xml:id="t1">Confessio Claudii</title>
+            <title type="alt" xml:lang="la" xml:id="t2">Confessio Fidei</title>
+            <author corresp="PRS4428Galawdew" cert="unknown">Galāwdewos</author>
+
+
          </titleStmt>
          <publicationStmt>
             <p>A Work part of Ethiopian Literature</p>
+          
          </publicationStmt>
          <sourceDesc>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            
+            <listWit>
+               <witness type="external" corresp="bm:Ludolf1661Confessio"> </witness>
+
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
+         <creation notBefore="1555" notAfter="1555">23 Sane (17 June) 1555 in <placeName corresp="LOC2488Damot">Damot</placeName>
+         </creation>
          <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <language ident="gez">Gǝʿǝz</language>
+      </langUsage>
+        
       </profileDesc>
       <revisionDesc>
-         <change who="Pietro Liuzzo" when="2016-03-21T15:41:52.214+01:00"> Created file from google
+         <change who="PL" when="2016-03-21T15:41:52.214+01:00"> Created file from google
             spreadsheet </change>
-         <change who="Eugenia Sokolinski" when="2016-02-09-12:00">CREATED: text record</change>
+         <change who="ES" when="2016-02-09-12:00">CREATED: text record</change>
+         <change who="ES" when="2016-05-03">completed text record</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl corresp="bm:Ludolf1661Confessio"/>
+               <bibl corresp="bm:Ludolf1702Confessio"/>
+            </listBibl>
+            
+            <listBibl type="secondary">
+               <bibl corresp="bm:Lozza1946Confessio"/>
+               <bibl corresp="bm:Ludolf1691Commentarius"><citedRange>a 1. III, c I, n. XII, p. 278</citedRange></bibl>
+               <bibl corresp="bm:Conzelman1895Galawdewos"><citedRange unit="page">xxix-xxx</citedRange></bibl>
+               
+            </listBibl>
+            
+            <listBibl type="relations">
+               <bibl/>
+               
+            </listBibl>
+         </div>
+
       </body>
    </text>
 </TEI>
