@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT1376Apocal">
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="work"
+     xml:lang="en"
+     xml:id="LIT1376Apocal">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Apocalypse of Ezra</title>
-            <title type="alt">4 Ezra</title>
-            <title type="alt">Ezra Sutaʾel</title>
+            <title xml:id="t1">Apocalypse of Ezra</title>
+            <title xml:id="t1">4 Ezra</title>
+            <title xml:id="t1">Ezra Sutaʾel</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -33,21 +40,28 @@
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="Pietro Liuzzo" when="2016-03-21"> Created file from google
+         <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
-         <change who="Eugenia Sokolinski" when="2016-02-09">CREATED: text record</change>
-         <change who="MV" when="2016-04-28">Added bibliographic references and one witness</change>
+         <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2016-04-28">Added bibliographic references and one witness</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
             <listBibl type="editions">
-     <bibl><ptr target="bm:Laurence1820PrimiEzrae"/></bibl>
-               <bibl><ptr target="bm:Dillmann1894VetTest"/><citedRange>153-193</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Laurence1820PrimiEzrae"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Dillmann1894VetTest"/>
+                  <citedRange>153-193</citedRange>
+               </bibl>
             </listBibl>
-            <listBibl type="translation" >
-               <bibl><ptr target="bm:Basset1899Apocal"/></bibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Basset1899Apocal"/>
+               </bibl>
             </listBibl>
          </div>
       </body>
