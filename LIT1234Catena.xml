@@ -10,7 +10,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Catena Commentary on the Gospel</title>
+            <title xml:id="t1">Commentary on the Gospel of Matthew</title>
+            <title xml:id="t2">Copto-Arabic Gospel Catena</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -26,8 +27,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit>
+               <witness corresp="BLadd16220#p2_i1" xml:id="BLadd16220"/>
+               <witness corresp="EMML2088"></witness>
+               <witness corresp="EMML2797"></witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -39,6 +43,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
+         <change who="MV" when="2016-06-14">New title, in order to distinguish it from LIT2456Tergwa</change>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
@@ -46,7 +51,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Cowley1983Apocalypse"/><citedRange unit="page">37</citedRange></bibl>
+               <bibl><ptr target="bm:Cowley1988Exeget"/><citedRange unit="page">47, 53</citedRange></bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
