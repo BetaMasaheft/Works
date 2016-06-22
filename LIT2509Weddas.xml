@@ -10,7 +10,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Wǝddāse Māryām</title> 
+            <title xml:id="t1">Wǝddāse  Māryām </title>
+            <title xml:id="t2">Wǝddāse ʾǝgzǝʾtǝna Māryām dǝngǝl walādita āmlāk</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -26,28 +27,103 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness corresp="Bladd11621#i1.4"/>
-            </listWit>
+            <ab/>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
+         <abstract>
+            <p>The Wǝddāse Māryām is the short title of a famous office of the Ethiopian Orthodox Church, consisting of blessings and praise of the Mother of God and intercessions to her.
+            </p>
+            <p>In some manuscripts, the lection for Sunday is the first, in others the lection for Monday, but this difference does not constitute two textual traditions.</p>
+         </abstract>
+         <textClass>
+            <keywords>
+               <term key="Prayers"/>
+            </keywords>
+         </textClass>
          <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
-            <language ident="gez">Gǝʿǝz</language>
+            <language ident="en"/>
+            <language ident="ar"/>
+            <language ident="it"/>
+            <language ident="gez"/>
+            <language ident="cop"/>
          </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-06-22">changes</change>
       </revisionDesc>
    </teiHeader>
+   
    <text>
       <body>
-         <ab/>
+         
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Fries1892Weddase"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:1964Psalter"/>
+                  <citedRange unit="page">434-467</citedRange>
+               </bibl>
+            </listBibl>
+            
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Budge1922Mary"/>
+               </bibl>
+            </listBibl>
+            
+               <listBibl type="secondary">
+                  <bibl>
+                     <ptr target="bm:Grohmann1919Marien"/>
+                     <citedRange unit="page">9-18</citedRange>
+                  </bibl>
+                  <bibl>
+                     <ptr target="bm:Euringer1911Weddase"/>
+                  </bibl>
+                  <bibl>
+                     <ptr target="bm:Cerulli1943Maria"/>
+                     <citedRange unit="page">290-300</citedRange>
+                  </bibl>
+                  <bibl>
+                     <ptr target="bm:Böll1998Maria"/>
+                  </bibl>
+                  <bibl>
+                     <ptr target="bm:O'Leary1950Theotokia"/>
+                  </bibl>
+                  <bibl>
+                     <ptr target="bm:Cowley1980Andemta"/>
+                  </bibl>
+                  <bibl>
+                     <ptr target="bm:Ishaq1991Theotokion"/>
+                  </bibl>
+                  <bibl>
+                     <ptr target="bm:Guidi1932storia"/>
+                     <citedRange unit="page">30-31</citedRange>
+                  </bibl>
+               </listBibl>
+            
+            <listBibl type="relations">
+             <bibl>      </bibl>
+               <relation name="saws:isRelatedTo" active="#LIT2509" passive="#LIT3306Theotokion"/>
+       
+            </listBibl>
+            
+            </div>
+         
+           
+            <div type="textpart" subtype="chapter"  xml:id="Sunday"/>
+            <div type="textpart" subtype="chapter" xml:id="Monday"/>
+            <div type="textpart" subtype="chapter" xml:id="Tuesday"/>
+            <div type="textpart" subtype="chapter" xml:id="Wednesday"/>
+            <div type="textpart" subtype="chapter" xml:id="Thursday"/>
+            <div type="textpart" subtype="chapter" xml:id="Friday"/>
+            <div type="textpart" subtype="chapter" xml:id="Saturday"/>
+           
       </body>
    </text>
 </TEI>
