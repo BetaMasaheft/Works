@@ -10,9 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mäṣḥafä säʿatat</title>
+            <title xml:id="t1">Maṣḥafa saʿātāt</title>
             <title xml:id="t2">Horologium</title>
-            <author>Giyorgis of Sägla</author>
+            <title xml:id="t3">Saʿātāt</title>
+           
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -28,27 +29,65 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            
+            <listWit>        <witness corresp="BNFet9#3">Belongs probably to <title ref="LIT3575Mashaf"/>, but contains the "Service at the Cockcrow" from <title ref="LIT2230Saatat"/>.</witness>
+             <witness corresp="BNFet11#i3"> Doesn't belong to the same recension as <ref type="mss" corresp="BNFet9"/> and <ref type="mss" corresp="BNFet12"/></witness>
+               <witness corresp="BNFet12#3">Belongs probably to <title ref="LIT3575Mashaf"/>, see an invocation for king <persName ref="PRS10626ZaraY">Zarʾa Yāʿǝqob</persName>, but contains the "Service at the Cockcrow" from <ref target="#S1.1Cockcrow"/></witness>
+             <witness corresp="BNFet13#i7"/>
+             <witness corresp="BAVet15"/>
+             <witness corresp="BAVet21"/></listWit>
+      
+            
          </sourceDesc>
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
-            <language ident="gez">Gǝʿǝz</language>
+            <language ident="en"/>
+            <language ident="ar"/>
+            <language ident="it"/>
+            <language ident="gez"/>
          </langUsage>
+         <abstract>
+            <p>  A Church service made up of psalms, biblical readings and hymns. Four types of Saʿātāt have been identified by <bibl><ptr target="bm:Taft1986Liturgy "/>
+            <citedRange unit="page">266</citedRange></bibl>:</p>
+            <p> <title ref="LIT2230Saatat"/>: the Coptic Saʿātāt;</p>
+            <p> <title ref="LIT3575Mashaf"/>: the Saʿātāt of <persName ref="PRS4709Giyorgis">Giyorgis of Saglā</persName>, 
+               which replaced the <title ref="LIT2230Saatat"/>:  and is presently in use in Ethiopia and Eritrea;</p>
+            <p><title ref="LIT3576Saatat"/>:  a Saʿātāt that includes the entire Psalter in the daily pensum;</p>
+            <p><title ref="LIT3577GizeS"/>: a cursus of prayers which is not really a Saʿātāt, but a Gize ṣalot for hermits and recluses.</p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-08-05">Added details</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <listBibl type="editions" corresp="LIT2230Saatat">
+            <bibl>
+               <ptr target=" bm:Turaev1895Saatat"/>
+            </bibl>
+         </listBibl>
+         <listBibl type="translation" corresp="LIT2230Saatat">
+           <bibl>
+              <ptr target="bm:VanLantschoot1940Horologion "/>
+            </bibl>
+         </listBibl>
+         <listBibl type="secondary">
+            <bibl>
+               <ptr target="bm:Taft1986Liturgy"/>
+            </bibl>
+            <bibl>
+               <ptr target="bm:ZanettiFritsch2014Saatat"/>
+            </bibl>
+         </listBibl>
+         <listBibl type="relations">
+            <bibl/>
+            <relation name=""></relation>
+         </listBibl>
       </body>
    </text>
 </TEI>
