@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Proverbs</title>
+            <title  xml:lang="en" xml:id="t1">Proverbs</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -29,6 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <listWit>
                <witness corresp="Bladd16186#i1"/>
                <witness corresp="Bladd16189#i1"/>
+               <witness corresp="BNFet8#i2"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -44,11 +45,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-08-24">Updated title and added relations</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <listBibl type="relations">
+            <bibl/>
+            <relation name="saws:contains" active="LIT2195Prover" passive="LIT3927Messale"/>
+            <relation name="saws:contains" active="LIT2195Prover" passive="LIT2396Tagsas"/>
+         </listBibl>
       </body>
    </text>
 </TEI>
