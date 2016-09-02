@@ -11,9 +11,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ድርሳን፡ በእንተ፡ እለ፡ ኖሙ፡ ካህናት፡ ወዲያቆናት፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān baʾǝnta ʾǝlla nomu kāhǝnāt wadiyāqonāt</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān ba-ʾǝnta ʾǝlla nomu kāhǝnāt wa-diyāqonāt</title>
             <title xml:lang="en" corresp="#t1">Homily on Priests and Deacons who have Fallen Asleep</title>
-            <author>Jacob of Serug</author>
+            <title xml:lang="syr" xml:id="t1syriac" type="translated">Consolation, for priests</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -31,8 +31,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit>        
+               <witness corresp="ESaqg006#p2_i1.3"/>
+               <witness corresp="BNFet86"/> 
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -41,17 +43,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="syr">Syriac</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-09-02">Changes</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="relations">
+               <bibl></bibl>
+               <relation name="saws:isAttributedToAuthor" active="LIT1629Homily" passive="PRS5655Jacobof"/>
+               <relation name="saws:CLP46i_may_form_part_of" active="LIT1629Homily" passive="LIT1931Mashaf">
+                  <desc>The Dǝrsān ba-ʾǝnta ʾǝlla nomu kāhǝnāt wa-diyāqonāt is contained in most manuscripts of the Maṣḥafa gǝnzat. 
+                     <bibl><ptr target="bm:Witakowski2007Jacob"/></bibl></desc>
+                  <!--Is this the correct relation? Sould it be only in the record of LIT1931Mashaf-->
+               </relation> 
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1629Homily" passive="#t1syriac"/>
+            </listBibl>
+            <listBibl type="editions" corresp="#t1syriac">
+               <bibl><ptr target="bm:Bedjan1906HomiliaeII"/> <citedRange unit="page">877-886</citedRange> </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Witakowski2007Jacob"/> </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
