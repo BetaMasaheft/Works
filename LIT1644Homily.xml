@@ -10,8 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Homily on the Deceased</title>
-            <author>Sälama</author>
+            <title xml:id="t1" xml:lang="en">Homily on the Deceased</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -45,11 +44,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-09-02">Changes</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="relations">
+               <bibl></bibl>
+               <relation name="saws:isAttributedToAuthor" active="LIT1644Homily" passive="PRS8387SalamaI"/>
+               <relation name="saws:formsPartOf" active="LIT1644Homily" passive="LIT1931Mashaf"/>
+            </listBibl>
+            <listBibl type="editions">
+               <bibl><ptr target="bm:ContiRossini1904manoscritti" xml:id="edition"/> <citedRange unit="page">248-252</citedRange> </bibl>
+            </listBibl>
+         </div>
+         <div type="textpart" xml:id="incipit" corresp="#edition">
+           <ab>ድርሳን፡ ዘቅዱስ፡ ወብፁዕ፡ አባ፡ ሰላማ፡ ሊቀ፡ ጳጳሳት፡ ዘብሔረ፡ ኢትዮጵያ። ዝንቱ፡ ዘይትነበብ፡ ላዕለ፡ ምውታን፡ እምድኅረ፡ ጸሎት፡ ላዕሌሆሙ፡ በሰላመ፡ እግዚአብሔር፡ አሜን</ab>
+         </div>
       </body>
    </text>
 </TEI>
