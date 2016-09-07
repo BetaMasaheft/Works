@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Gädlä Yoḥanni(Däbrä ʿAśa)</title>
+            <title xml:lang="gez" xml:id="t1">ገድለ፡ ዮሐኒ፡ ዘደብረ፡ ዐሣ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Yoḥanni za-Dabra ʿAśā</title>
+            <title xml:lang="en" corresp="#t1">Vita of Yoḥanni of Dabra ʿAśā</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -44,11 +46,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2016-09-07" who="MV">Fixed title and bibliographic references</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Basset1884ViedAbba"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation" xml:lang="fr">
+               <bibl>
+                  <ptr target="bm:Basset1884ViedAbba"/>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
