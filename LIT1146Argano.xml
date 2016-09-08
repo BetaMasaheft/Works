@@ -10,9 +10,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Arganonä Maryam</title>
-            <title xml:id="t2">Arganonä Wǝddase</title>
-            <author>Giyorgis of Sägla</author>
+            <title xml:lang="gez" xml:id="t1">አርጋኖነ፡ ማርያም፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">ʾArgānona Māryām</title>
+            <title xml:lang="en" corresp="#t1">The Organ of Mary</title>
+            <title xml:lang="gez" xml:id="t2">አርጋኖነ፡ ውዳሴ፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">ʾArgānona Wǝddāse</title>
+            <title xml:lang="en" corresp="#t2">The Organ of Praise</title>
+            <title xml:lang="gez" xml:id="t3">አርጋኖነ፡ ድንግል፡</title>
+            <title xml:lang="gez" corresp="#t3" type="normalized">ʾArgānona Dǝngǝl</title>
+            <title xml:lang="en" corresp="#t3">The Organ of the Virgin</title>
+            <title xml:lang="lat" xml:id="t2latin" type="translated"></title>
+            <!-- See issue #85 on this topic, and see BLharl7629-->
+            <author>Giyorgis of Saglā</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -50,7 +59,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+         <listBibl type="relations">
+            <bibl></bibl>
+            <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1146Argano#t1" passive="#t1latin"/>
+         </listBibl>
+      </div>
+         <div type="textpart" xml:id="Monday"></div>
+         <div type="textpart" xml:id="Tuesday"></div>
+         <div type="textpart" xml:id="Wednesday"></div>
+         <div type="textpart" xml:id="Thursday"></div>
+         <div type="textpart" xml:id="Friday"></div>
+         <div type="textpart" xml:id="Saturday"></div>
+         <div type="textpart" xml:id="Sunday"></div>
       </body>
    </text>
 </TEI>
