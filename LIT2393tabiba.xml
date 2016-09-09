@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Ṭäbibä ṭäbiban</title>
+            <title xml:lang="gez" xml:id="t1">ጠቢበ፡ ጠቢባን፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Ṭabiba ṭabibān</title>
+            <title xml:lang="en" corresp="#t1">The Wisest among the Wisest Ones</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -48,7 +50,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Dillmann1866Chrestomathia"/>
+                  <citedRange unit="page">108-131</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
