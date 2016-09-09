@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Śǝrʿatä mǝnkwǝsǝnna</title>
+            <title xml:lang="gez" xml:id="t1">ሥርዓተ፡ ምንኵስና፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Śǝrʿāta mǝnkʷǝsǝnnā (general record)</title>
+            <title xml:lang="en" corresp="#t1">The Order of the Monastic Profession</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,16 +41,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract><p>The Śǝrʿāta mǝnkʷǝsǝnnā is a generic title given to a number of works containing the ritual of receiving the monastic habit by the novice.
+            <bibl><ptr target="bm:Nosnitsin2010Serata"/></bibl></p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-09-09">Title, abstract and bibliography added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <listBibl type="relations">
+            <bibl/>
+            <relation name="saws:isRelatedTo" active="LIT2342serata" passive="LIT3982Serata"/>
+         </listBibl>
+         <listBibl type="secondary">
+            <bibl><ptr target="bm:Nosnitsin2010Serata"/></bibl>
+         </listBibl>
       </body>
    </text>
 </TEI>
