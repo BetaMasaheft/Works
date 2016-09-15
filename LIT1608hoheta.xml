@@ -10,8 +10,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Ḫoḫǝtä bǝrhan</title>
-            <author>Giyorgis of Sägla</author>
+            <title xml:lang="gez" xml:id="t1">ኆኅተ፡ ብርሃን፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Ḫoḫǝta bǝrhān</title>
+            <title xml:lang="en" corresp="#t1">Gate of the Light</title>
+            <title xml:lang="gez" xml:id="t2">ፀዳለ፡ ብርሃን፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t2">Ḍadāla bǝrhān</title>
+            <title xml:lang="en" corresp="#t2">Splendour of the Light</title>
+            <title xml:lang="gez" xml:id="t3">ፀዳለ፡ ፀሐይ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t3">Ḍadāla ḍaḥay</title>
+            <title xml:lang="en" corresp="#t3">Splendour of the Sun</title>
+            <title xml:lang="gez" xml:id="t4">ሙፃአ፡ ፀሐይ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t4">Muḍāʾa ḍaḥay</title>
+            <title xml:lang="en" corresp="#t4">Exit of the Sun</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -45,11 +55,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-09-15">Added title and bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+      <listBibl type="relations">
+         <bibl/>
+         <relation name="saws:isAttributedToAuthor" active="LIT1608hoheta" passive="PRS4709Giyorgis"/>
+         <relation name="saws:isAttributedToAuthor" active="LIT1608hoheta" passive="PRS3709eleni"><desc>The authorship of <persName ref="PRS3709eleni"/>
+            is considered as unlikely by <bibl><ptr target="bm:Habtemichael2007Hoheta"/></bibl>.</desc></relation>
+      </listBibl>
+         <listBibl type="secondary">
+            <bibl><ptr target="bm:Habtemichael2007Hoheta"/></bibl>
+            <bibl><ptr target="bm:Chernestsov2005Ǝleni "/></bibl>
+         </listBibl>
       </body>
    </text>
 </TEI>
