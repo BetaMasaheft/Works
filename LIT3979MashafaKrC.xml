@@ -19,7 +19,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" corresp="#t3" type="normalized">Maṣḥafa ṭǝmqat za-krǝstǝnnā</title>
             <title xml:lang="gez" xml:id="t4">መጽሐፈ፡ ክርስትና፡ ዘጥምቀት፡</title>
             <title xml:lang="gez" corresp="#t4" type="normalized">Maṣḥafa krǝstǝnnā za-ṭǝmqat</title>
-            <!-- <title xml:lang="cop" xml:id="t1coptic" type="translated">Coptic baptismal rite</title>-->
+           <title xml:lang="cop" xml:id="t1coptic" type="translated">Coptic baptismal rite</title>
             <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -39,9 +39,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc> 
             <listWit>        
-            <!--Chaine edition-->
                <witness corresp="ESaqg006#p2_i2">This manuscript's text is not entirely equal with that of   <bibl><ptr target="bm:Chaine1913Bapteme"/></bibl>,
-                  as between the Credo and the Biblical readings it has less prayers. However, in the rite of confirmation, it agress nearly entirely with <bibl><ptr target="bm:Chaine1913Bapteme"/></bibl>.</witness>
+                  as between the <ref target="#Confession"/> and the <ref target="#Titus"/> it has less prayers. However, in the rite of confirmation, it agrees nearly entirely with <bibl><ptr target="bm:Chaine1913Bapteme"/></bibl>.</witness>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -59,9 +58,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </p>
               <p> It is sometimes grouped in manuscripts with <title ref="LIT1975Mashaf"/>. 
             </p>
-            <p>The long version agrees with the short versions <title ref="LIT3948MashafaKrS"/> until the recitation of the Credo, then there are many added prayers. 
-               The Psalms <title ref="LIT2000Mazmur#Ps61"> 61</title> and <title ref="LIT2000Mazmur#Ps113">113, 20-end</title> are absent.
-               The ṣawātǝw prayers are more elaborated than in the short recension.</p> <!--Check--> 
             <!--As there is no critical edition yet, the records LIT3948MashafaKrS, LIT3949MashafaKrL and LIT3979MashafaKrC are based on the editions of, respectively, 
             <bibl><ptr target="bm:Trumpp1878Taufbuch"/></bibl>, <bibl><ptr target="bm:Grebaut1927Ordre"/></bibl> and   <bibl><ptr target="bm:Chaine1913Bapteme"/></bibl>-->
          </abstract>
@@ -73,7 +69,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="editions"><!--add corresp with ref to Chaine's ms-->
+            <listBibl type="editions">
                <bibl><ptr target="bm:Chaine1913Bapteme"/></bibl>
             </listBibl>
             <listBibl type="secondary">
@@ -89,26 +85,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <desc>Blessing of mother and child</desc>
             
             <div type="textpart" subtype="chapter" xml:id="BlessingPrayerThanksgiving">
-               <desc>Prayer of thanksgiving</desc>
+               <desc>Introduction, Prayer of thanksgiving and incense</desc>
                <q xml:lang="gez"></q>
             </div>
             
-            <div type="textpart" subtype="chapter" xml:id="BlessingSecondPrayer">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="BlessingPrayerDeacon">
-               <desc>Prayer by the deacon</desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="BlessingFourthPrayer">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="BlessingFifthPrayer">
+            <div type="textpart" subtype="chapter" xml:id="BlessingPrayer">
                <desc></desc>
                <q xml:lang="gez"></q>
             </div>
@@ -148,15 +129,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </div>
          
          <div type="textpart" subtype="chapter" xml:id="FourthPrayer">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         <!--Until here-->
-         <div type="textpart" subtype="chapter" xml:id="AnointingFrontShouldersForearmBreastHandFingers ">
-            <desc></desc>
+            <desc>Prayer over the Oil</desc>
             <q xml:lang="gez"></q>
          </div>
          
+            <div type="textpart" subtype="chapter" xml:id="IntroductionAnointing">
+               <desc></desc>
+               <q xml:lang="gez"></q>
+            </div>
+            
+         <div type="textpart" subtype="chapter" xml:id="AnointingFaceNoseEyesMouthEars">
+            <desc></desc>
+            <q xml:lang="gez"></q>
+         </div>
+            
+            <div type="textpart" subtype="chapter" xml:id="AnointingDiverseBodyPartsOil">
+               <desc></desc>
+               <q xml:lang="gez"></q>
+            </div>
+            
          <div type="textpart" subtype="chapter" xml:id="PrayerAfterAnointing">
             <desc>After anointing, the priest speaks a prayer of thanksgiving, bends the knees of those to be baptised and says another prayer</desc>
             <q xml:lang="gez"></q>
@@ -166,7 +157,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <desc>Prayer</desc>
             <q xml:lang="gez"></q>
          </div>
-         
+            
          <div type="textpart" subtype="chapter" xml:id="PrayerNames">
             <desc>Prayer for those who gave their names for baptism</desc>
             <q xml:lang="gez"></q>
@@ -183,7 +174,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
             
             <div type="textpart" subtype="chapter" xml:id="FurtherPrayer">
-               <desc></desc>
+               <desc>Further Prayer for those who gave their names to be baptised</desc>
                <q xml:lang="gez"></q>
             </div>
             
@@ -198,7 +189,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
             
             <div type="textpart" subtype="chapter" xml:id="OtherPrayer">
-               <desc>Prayer while putting the hand on those to be baptised</desc>
+               <desc>Prayer while imposing the hand on those to be baptised</desc>
                <q xml:lang="gez"></q>
             </div>
             
@@ -248,37 +239,47 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </div>
          
          <div type="textpart" subtype="chapter" xml:id="Titus">
-            <desc>After a prayer of thanksgiving, reading from Titus</desc>
+            <desc>The biblical readings are designated by their incipit and explicit and not quoted fully.</desc>
             <q xml:lang="gez"></q>
          </div>
          
          <div type="textpart" subtype="chapter" xml:id="FirstJohn">
-            <desc></desc>
+            <desc>The biblical readings are only designated by their incipit and explicit and not quoted fully.</desc>
             <q xml:lang="gez"></q>
          </div>
          
          <div type="textpart" subtype="chapter" xml:id="Acts8">
-            <desc></desc>
+            <desc>The biblical readings are only designated by their incipit and explicit and not quoted fully.</desc>
             <q xml:lang="gez"></q>
          </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="Ps31">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
+            
+            <div type="textpart" subtype="chapter" xml:id="OurFatherBeforeGospel">
+               <desc>The biblical readings are only designated by their incipit and explicit and not quoted fully.</desc>
+               <q xml:lang="gez"></q>
+            </div>
+            
+            <div type="textpart" subtype="chapter" xml:id="Ps31">
+               <desc>The biblical readings are only designated by their incipit and explicit and not quoted fully.</desc>
+               <q xml:lang="gez"></q>
+            </div>
          
          <div type="textpart" subtype="chapter" xml:id="John3">
-            <desc></desc>
+            <desc>The biblical readings are only designated by their incipit and explicit and not quoted fully.</desc>
             <q xml:lang="gez"></q>
          </div>
          
+            <div type="textpart" subtype="chapter" xml:id="SickDeceased">
+               <desc>From the prayers for the sick to the prayers for the deceased. The texts are not quoted.</desc>
+               <q xml:lang="gez"></q>
+            </div>
+            
          <div type="textpart" subtype="chapter" xml:id="OnYourServants">
             <desc>Prayer over those to be baptised</desc>
             <q xml:lang="gez"></q>
          </div>
          
          <div type="textpart" subtype="chapter" xml:id="GodOfProphets">
-            <desc></desc>
+            <desc>Prayer over the baptiserium</desc>
             <q xml:lang="gez"></q>
          </div>
          
@@ -288,17 +289,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </div>
          
          <div type="textpart" subtype="chapter" xml:id="ForPeace2">
-            <desc></desc>
+            <desc>The text is not quoted.</desc>
             <q xml:lang="gez"></q>
          </div>
          
          <div type="textpart" subtype="chapter" xml:id="ForBishop2">
-            <desc></desc>
+            <desc>The text is not quoted.</desc>
             <q xml:lang="gez"></q>
          </div>
          
          <div type="textpart" subtype="chapter" xml:id="ForCongregation2">
-            <desc></desc>
+            <desc>The text is not quoted.</desc>
             <q xml:lang="gez"></q>
          </div>
          
@@ -316,7 +317,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <desc></desc>
             <q xml:lang="gez"></q>
          </div>
-         
+            
          <div type="textpart" subtype="chapter" xml:id="PrayerBlessingWater">
             <desc></desc>
             <q xml:lang="gez"></q>
@@ -331,7 +332,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <desc></desc>
             <q xml:lang="gez"></q>
          </div>
-         
+            
          <div type="textpart" subtype="chapter" xml:id="OtherPrayer2">
             <desc></desc>
             <q xml:lang="gez"></q>
@@ -357,16 +358,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <q xml:lang="gez"></q>
          </div>
          
-         <div type="textpart" subtype="chapter" xml:id="OtherPrayer6">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="OurFather">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
          <div type="textpart" subtype="chapter" xml:id="PrayerImpositionHands">
             <desc></desc>
             <q xml:lang="gez"></q>
@@ -376,22 +367,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <desc></desc>
             <q xml:lang="gez"></q>
          </div>
-         
+            
          <div type="textpart" subtype="chapter" xml:id="PrayerInBaptiserium">
             <desc></desc>
             <q xml:lang="gez"></q>
          </div>
          
-         <div type="textpart" subtype="chapter" xml:id="Ps131Ps28Ps33Ps65Ps50">
+            <div type="textpart" subtype="chapter" xml:id="Ps28Ps33Ps50Ps65Ps113Ps150">
             <desc>Extracts from the Psalms</desc>
             <q xml:lang="gez"></q>
          </div>
-         
+            
          <div type="textpart" subtype="chapter" xml:id="PrayerBaptism">
             <desc></desc>
             <q xml:lang="gez"></q>
          </div>
-         
+            
          <div type="textpart" subtype="chapter" xml:id="PrayerAbsolutionWater">
             <desc></desc>
             <q xml:lang="gez"></q>
