@@ -10,7 +10,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mäṣḥafä mǝśṭiräsämay wämǝdr</title>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ምሥቲረ፡ ሰማይ፡ ወምድር፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa mǝśṭira samāy wa-mǝdr</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -44,11 +45,45 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-09-23">Added information</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <listBibl type="relations">
+            <bibl/>
+            <relation name="saws:isAttributedToAuthor" active="LIT1954Mashaf" passive="PRS11179Yeshaq"/>
+            <relation name="saws:isAttributedToAuthor" active="LIT1954Mashaf" passive="PRS2528Basalota"><desc>The book was revealed to <persName ref="PRS11179Yeshaq"/>  
+               by his spiritual father, <persName ref="PRS2528Basalota"/> or <persName ref="PRS2356Bahayla"/>, who probably are the same person.</desc></relation>
+            <relation name="saws:isAttributedToAuthor" active="LIT1954Mashaf" passive="PRS2356Bahayla"><desc>The book was revealed to <persName ref="PRS11179Yeshaq"/>  
+               by his spiritual father, <persName ref="PRS2528Basalota"/> or <persName ref="PRS2356Bahayla"/>, who probably are the same person.</desc></relation>
+         </listBibl>
+         <listBibl type="secondary">
+            <bibl>
+               <ptr target="bm:Lusini2007Mestira "/>
+            </bibl>
+         </listBibl>
+         <div type="textpart" subtype="chapter" n="1" xml:id="Treatise1">
+            <label>First Treatise</label>
+            <div type="textpart" subtype="chapter"  xml:id="Treatise1.1">
+               <label>Dǝrsān about Genesis and Exodus</label>
+            </div>
+            <div type="textpart" subtype="chapter"  xml:id="Treatise1.2">
+               <label>Tǝrgʷāme upon a passage of Ezekiel</label>
+            </div>
+            <div type="textpart" subtype="chapter"  xml:id="Treatise1.3">
+               <label>Rāʾǝy upon ultimate things</label>
+            </div>
+         </div>
+         <div type="textpart" subtype="chapter" n="2" xml:id="Treatise2">
+            <label>Original Tǝrgʷāme on the Revelation of John</label>
+         </div>
+         <div type="textpart" subtype="chapter" n="3" xml:id="Treatise3">
+            <label>Dǝrsān about the mystery of the divinity, mǝśṭira malakot</label>
+         </div>
+         <div type="textpart" subtype="chapter" n="4" xml:id="Treatise4">
+            <label>Dǝrsān about the birth of Enoch, lǝdatu la-Henok </label>
+         </div>
       </body>
    </text>
 </TEI>
