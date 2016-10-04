@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">ʿAwdä nägäśt</title>
+            <title xml:lang="gez" xml:id="t1">ዐውደ፡ ነገሥት፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">ʿAwda nagaśt</title>
+            <title xml:lang="en" corresp="#t1">Cycle of the kings</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -44,11 +46,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2016-10-04" who="MV">Fixed title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:ContiRossini1941AwdaNagast"/>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="textpart" xml:id="tables"><label>Sixteen circular tables, each subdivided into sixteen parts with questions on various topics</label></div>
+         <div type="textpart" xml:id="seas"><label>Sixteen "seas" (ባሕር፡), each containing 16 sentences as a response to the previous questions</label></div>
       </body>
    </text>
 </TEI>
