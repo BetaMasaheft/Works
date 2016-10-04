@@ -6,13 +6,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
      xml:lang="en"
-     xml:id="LIT3983Dersan">
+     xml:id="LIT4010Haymanotu">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            
-            <title xml:id="t1">Dǝrsān ba-ʾǝnta tazālǝfota ʾAyhud wa-margama Yǝhudā ʾAsqorotawi</title>
-            <author ><persName ref="PRS8746Semon">Sǝmʿon</persName></author>
+            <title xml:lang="gez" xml:id="t1">ሃይማኖቱ፡ ለቅዱስ፡ ዓቢይ፡ ማሪ፡ ያዕቆብ፡ እልበራድዒ</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Hāymānotu la-qǝddus ʿābiyy māri Yaʿǝqob ʾƎlbarādʿi</title>
+            <title xml:lang="en" corresp="#t1">Creed of Jacob Baradaeus</title>
+            <title xml:lang="ar" xml:id="t2arabic">Creed of Jacob Baradaeus</title>
+            <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -30,27 +32,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit>
+               <witness corresp="BNFet11#ms_i2"/>
+               <witness corresp="BLadd24988"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="syr">Syriac</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
-         <change who="SG" when="2016-09-09">Complete record</change>
+         <change who="DR" when="2016-10-04">Record created</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <listBibl type="editions">
+            <bibl><ptr target="bm:Cornill1876Glaubensbekenntnis"/></bibl>
+         </listBibl>
+         <listBibl type="translation">
+            <bibl><ptr target="bm:Cornill1876Glaubensbekenntnis"/></bibl>
+         </listBibl>
+         <listBibl type="secondary" corresp="#t3arabic">
+            <bibl><ptr target="bm:Assemanus1721Bibliotheca"/><citedRange unit="page">67</citedRange></bibl>
+         </listBibl>
+      <listBibl type="relations">
+         <bibl/>
+         <relation name="saws:isAttributedToAuthor" active="LIT4010Haymanotu" passive="PRS5651JacobBa"/>
+         <relation name="saws:isVersionInAnotherLanguageOf" active="LIT4010Haymanotu#t1" passive="LIT4010Haymanotu#t2arabic" cert="low"/>
+      </listBibl>
       </body>
    </text>
 </TEI>
