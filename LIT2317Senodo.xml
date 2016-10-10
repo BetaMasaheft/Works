@@ -14,12 +14,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Senodos</title>
-            <title>ሴኖዶስ፡</title>
-            <title>መጽሐፈ፡ ሴኖዶስ፡</title>
-            <title xml:id="t2">Maṣḥafa Senodos</title>
-            <title>Sinūdūs</title>
-            <title>Synodos</title>
+            <title xml:lang="gez" xml:id="t1">ሴኖዶስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Senodos</title>
+            <title xml:lang="gez" xml:id="t2">መጽሐፈ፡ ሴኖዶስ፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Maṣḥafa Senodos</title>
+            <title xml:lang="ar" xml:id="t3arabic" type="normalized">Sinūdūs</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -45,7 +44,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <witness corresp="BLorient796"/>
                <witness corresp="TuebingenAeth7" xml:id="TuebingenAeth7"/>
                <witness corresp="BNabb65" xml:id="BNabb65"/>             
-               <witness corresp="BNFet95"/>
+               <witness corresp="BNFet121"/>
                <witness corresp="BNFet181"/>
                <witness corresp="BerOr398"/>
                <witness corresp="BerOr3117"/>
@@ -136,6 +135,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="ES" when="2016-04-19">added manuscripts</change>
          <change who="ES" when="2016-04-26">added relations</change>
+         <change who="DR" when="2016-10-10">title updated and minor correction</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -150,8 +150,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <ptr target="bm:Ewald1843Tuebingen"/>
                   <citedRange unit="page">179-180</citedRange>
                </bibl>
-               <bibl corresp="bm:Wright1877BM"> 
-                  <ptr target="BLorient481"/>
+               <bibl corresp="BLorient481"> 
+                  <ptr target="bm:Wright1877BM"/>
                   <citedRange unit="page">2-4</citedRange>
                </bibl>
             </listBibl>
@@ -170,7 +170,55 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <bibl/>
                <relation name="saws:contains"
                          active="LIT2317Senodo"
-                         passive="LIT2666SenodInCo LIT2672SenodosInMe                           LIT2673CanonsAscension LIT2639CanonsSimon                                              LIT2671CanonsSimon LIT2668AC56Title LIT2670AC56                           LIT2674AC81Title LIT2675AC81 LIT2676ACAbt1Title                           LIT2677ACABt1 LIT2678ACAbt2Title                                            LIT2679ACAbt2 LIT2680ClemPeter LIT2667Statut71Title                           LIT2669Statut71 LIT2649CanonsCouncils                           LIT2681AncyraT LIT2662Ancyra LIT2682CanonsNCT LIT2661Canons                                             LIT2683CanonsCouncilsT LIT2651CanonsCouncils                           LIT2652CanonsCouncils LIT2684CanonsCouncilsT                           LIT2653CanonsCouncils LIT2685CanonsLaoT LIT2686CanonsLao                                             LIT2687CanonsNicaea1T LIT2650CanonsNicaea1 LIT2688CanonsNicaea2 LIT2689CanonsNicaea2T                           LIT2690Gangra LIT2691Antioch LIT1313Discou LIT1371Exposi LIT2654EssenceTrinity                                            LIT2655GoodEvil LIT2656FearGod LIT2657Ancient LIT2658Jews LIT2659Wisdom                           LIT2660Penit LIT2692Penit LIT1348Epistl LIT2693CanR LIT2694TenC LIT2695Hom                                              LIT2696Hom"/>
+                         passive="LIT2666SenodInCo 
+                         LIT2672SenodosInMe                           
+                         LIT2673CanonsAscension
+                         LIT2639CanonsSimon                                            
+                         LIT2671CanonsSimon
+                         LIT2668AC56Title 
+                         LIT2670AC56     
+                         LIT2674AC81Title 
+                         LIT2675AC81 
+                         LIT2676ACAbt1Title            
+                         LIT2677ACABt1
+                         LIT2678ACAbt2Title            
+                         LIT2679ACAbt2 
+                         LIT2680ClemPeter 
+                         LIT2667Statut71Title     
+                         LIT2669Statut71
+                         LIT2649CanonsCouncils    
+                         LIT2681AncyraT
+                         LIT2662Ancyra
+                         LIT2682CanonsNCT
+                         LIT2661Canons         
+                         LIT2683CanonsCouncilsT 
+                         LIT2651CanonsCouncils    
+                         LIT2652CanonsCouncils
+                         LIT2684CanonsCouncilsT      
+                         LIT2653CanonsCouncils 
+                         LIT2685CanonsLaoT
+                         LIT2686CanonsLao   
+                         LIT2687CanonsNicaea1T 
+                         LIT2650CanonsNicaea1
+                         LIT2688CanonsNicaea2 
+                         LIT2689CanonsNicaea2T
+                         LIT2690Gangra 
+                         LIT2691Antioch
+                         LIT1313Discou 
+                         LIT1371Exposi 
+                         LIT2654EssenceTrinity           
+                         LIT2655GoodEvil 
+                         LIT2656FearGod 
+                         LIT2657Ancient 
+                         LIT2658Jews
+                         LIT2659Wisdom                         
+                         LIT2660Penit
+                         LIT2692Penit
+                         LIT1348Epistl 
+                         LIT2693CanR 
+                         LIT2694TenC
+                         LIT2695Hom          
+                         LIT2696Hom"/>
             </listBibl>
          </div>
       </body>
