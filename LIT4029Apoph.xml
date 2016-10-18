@@ -6,11 +6,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
      xml:lang="en"
-     xml:id="LIT1136Apopht">
+     xml:id="LIT4029Apoph">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Apophthegmata Patrum (Generic record)</title>
+            <title xml:lang="en" xml:id="t1">Apophthegmata by John Colobus</title>
+            <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,8 +29,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+          <listWit>
+             <witness corresp="BNFet125#ms_i4"/>
+          </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -39,16 +41,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract><p>Apophthegmata by <persName ref="PRS5722JohnCol"/></p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
-         <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-10-18">Created file</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
-      </body>
+         <div type="bibliography">
+            <listBibl type="catalogue">
+               <bibl>
+                  <ptr target="bm:Zotenberg1877Catalogue"/>
+                  <citedRange unit="page">150</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Sentence1">
+               <label>Sentence 1 </label>
+             <!--relation-->
+               <bibl><ptr target="bm:Cotelier1677monumenta"/><citedRange unit="page">477</citedRange><citedRange unit="part">XXIV</citedRange></bibl>
+         </div>
+            
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Sentence2">
+               <label>Sentence 2: on the virtues of Saints from the Old and New Testament, whose possession allows to obtain the heavenly kingdom </label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Sentence3">
+               <label>Sentence 3: on the ways to prevent evil thoughts</label>
+            </div>
+         </div>
+          </body>
    </text>
 </TEI>
