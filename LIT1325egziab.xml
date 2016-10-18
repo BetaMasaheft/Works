@@ -10,8 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">ʾƎgziʾabǝḥer nagśa</title>
-            <title xml:id="t2">[nagś] sǝbḥatihu</title>
+            <title xml:lang="gez" xml:id="t1">እግዚአብሔር፡ ነግሠ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">ʾƎgziʾabǝḥer nagśa</title>
+            <title xml:lang="en" corresp="#t1"></title>
+            <title xml:lang="gez" xml:id="t2">ነግሥ፡ ስብሐቲሁ፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">[nagś] sǝbḥatihu</title>
+            <title xml:lang="en" corresp="#t2"></title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -43,17 +47,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-10-19">Title updated and relation added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
+     <div type="bibliography">    
+        <listBibl type="relations">
             <bibl/>
             <relation name="saws:contains"
                       active="LIT1325egziab"
                       passive="LIT3133Salam LIT3134Salam LIT3135Salam LIT3136Salam LIT3137Salam"/>
+           <relation name="saws:isDifferentTo" active="LIT1325egziab" passive="LIT2001Mazmur"><desc>Both works have often be confused with each other, such as in
+              <bibl><ptr target="bm:Ewald1846Tuebingen"/><citedRange unit="page">37</citedRange></bibl>, 
+              <bibl><ptr target="bm:Abbadie1859Cat"/><citedRange unit="page">149</citedRange></bibl> and
+              <bibl><ptr target="bm:Dillmann1865Lexicon"/><citedRange unit="part">Prolegomena</citedRange><citedRange unit="column">XI</citedRange></bibl>.
+              See <bibl><ptr target="bm:Zotenberg1877Catalogue"/><citedRange unit="page">196</citedRange></bibl>.</desc></relation>
          </listBibl>
-         <ab/>
+        <listBibl type="catalogue">
+           <bibl><ptr target="bm:Zotenberg1877Catalogue"/><citedRange unit="page">195-196</citedRange></bibl>
+        </listBibl>
+        
+     </div>
+        
       </body>
    </text>
 </TEI>
