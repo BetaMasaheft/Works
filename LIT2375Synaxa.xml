@@ -11,9 +11,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ስንክሳር፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Sǝnkǝssār</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Sǝnkǝssār (Generic record)</title>
             <title xml:lang="en" corresp="#t1">Synaxarium</title>
-            <title xml:lang="en" corresp="#t2">Synaxary</title>
+            <title xml:lang="en" xml:id="t2">Synaxary</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -47,12 +47,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-10-19">Bibliography added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
-         <div type="textpart" subtype="chapter" xml:id="Maskaram"/>
+         
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Colin2010EAESenkessar"/></bibl>
+            </listBibl>
+         </div>
+         
+         <div type="edition">
+         
+            <div type="textpart" subtype="chapter" xml:id="Maskaram"/>
          <div type="textpart" subtype="chapter" xml:id="Teqemt"/>
          <div type="textpart" subtype="chapter" xml:id="Hedar"/>
          <div type="textpart" subtype="chapter" xml:id="Tahsas"/>
@@ -65,6 +74,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="textpart" subtype="chapter" xml:id="Hamle"/>
          <div type="textpart" subtype="chapter" xml:id="Nahase"/>
          <div type="textpart" subtype="chapter" xml:id="Pagwemen"/>
+            
+         </div>
+         
       </body>
    </text>
 </TEI>
