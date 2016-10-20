@@ -10,8 +10,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Gospels</title>
-            <title xml:id="t2">Four Gospels; Qǝddus Wängel</title>
+            <title xml:lang="gez" xml:id="t1">አርባዕቱ፡ ወንጌል፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">ʾArbāʿtu wangel</title>
+            <title xml:lang="en" corresp="#t1">Four Gospels</title>
+            <title xml:lang="en" corresp="#t1">Tetraevangelium</title>
+            <title xml:lang="gez" xml:id="t2">ቅዱስ፡ ወንጌል፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Qǝddus wangel</title>
+            <title xml:lang="en" corresp="#t1">Holy Gospel</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -45,11 +50,82 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-10-20">Title updated and textparts added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="edition">
+            
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionGospels">
+               <label>Introduction to the Four Gospels</label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionMaqdema">
+                  <label>Maqdǝma wangel</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionEpistle">
+                  <label>Epistle to Carpianus by Eusebius</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionCanons">
+                  <label>Canons of Eusebius</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionGessawe">
+                  <label>Gǝṣṣāwe śǝrʿāt</label>
+               </div>
+            </div>
+            
+            <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT1558Matthew" xml:id="GospelMatthew">
+               <label>Gospel of Matthew</label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BiographyMatthew">
+                  <label>Biography of Matthew</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="TituliMatthew">
+                  <label>Tituli of the Gospel of Matthew</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BesrataMatthew">
+                  <label>Bəsrata Mātewos</label>
+               </div>
+            </div>
+            
+            <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT1882MarkGo" xml:id="GospelMark">
+               <label>Gospel of Mark</label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BiographyMark">
+                  <label>Biography of Mark</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="TituliMark">
+                  <label>Tituli of the Gospel of Mark</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BesrataMark">
+                  <label>Bəsrata Mārqos</label>
+               </div>
+            </div>
+            
+            <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT1812GospelLuke" xml:id="GospelLuke">
+               <label>Gospel of Luke</label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BiographyLuke">
+                  <label>Biography of Luke</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="TituliLuke">
+                  <label>Tituli of the Gospel of Luke</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BesrataLuke">
+                  <label>Bəsrata Luqās</label>
+               </div>
+            </div>
+            
+            <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT1693John" xml:id="GospelJohn">
+               <label>Gospel of John</label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BiographyJohn">
+                  <label>Biography of John</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="TituliJohn">
+                  <label>Tituli of the Gospel of John</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BesrataJohn">
+                  <label>Bəsrata Yoḥannǝs</label>
+               </div>
+            </div>
+            
+         </div>
       </body>
    </text>
 </TEI>

@@ -10,8 +10,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mäṣḥafälǝdäta lämaryam</title>
-            <title xml:id="t2">Protevangelium Jacobi</title>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ልደታ፡ ለማርያም፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa lǝdatā la-Māryām</title>
+            <title xml:lang="en" corresp="#t1">The Book of the Nativity of Mary</title>
+            <title xml:lang="la" corresp="#t1">Liber Nativitatis Mariae</title>
+            <title xml:id="t2" xml:lang="la" resp="PRS7936Postel">Protevangelium Jacobi</title>
+            <title xml:lang="grc" xml:id="t3greek"></title>
+            <title xml:lang="ar" xml:id="t4arabic"></title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,16 +45,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <creation notAfter="0300" corresp="#t3greek"/>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-10-20">Title updated and bibliography added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Ezra2007Ledata"/></bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
