@@ -10,8 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mark, Gospel of</title>
-            <title xml:id="t2">Mk</title>
+            <title xml:lang="gez" xml:id="t1">ወንጌል፡ ዘማርቆስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Wangel za-Mārqos</title>
+            <title xml:lang="en" corresp="#t1">Gospel of Mark</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -49,7 +50,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+      <div type="edition"> 
+         <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BiographyMark">
+            <label>Introduction and Biography of Mark</label>
+            <listBibl type="catalogue">
+               <bibl>
+                  <ptr target="bm:Dillmann1848Catalogus"/>
+                  <citedRange unit="page">14</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Nicoll1821Bodleianae"/>
+                  <citedRange unit="page">17</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
+         
+         <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="TituliMark">
+            <label>Tituli of the Gospel of Mark</label>
+         </div>
+         
+         <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BesrataMark">
+            <label>Bəsrata Mārqos</label>
+         </div>
+         
+ 
+      </div>
       </body>
    </text>
 </TEI>

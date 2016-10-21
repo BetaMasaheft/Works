@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Gospel of John (with titles and biography)</title>
+            <title xml:lang="gez" xml:id="t1">ወንጌል፡ ዘዮሐንስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Wangel za-Yoḥannǝs</title>
+            <title xml:lang="en" corresp="#t1">Gospel of John</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -49,7 +51,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         
+         <div type="edition">
+            
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BiographyJohn">
+               <label>Introduction and Biography of John</label>
+               <listBibl type="catalogue">
+                  <bibl>
+                     <ptr target="bm:Dillmann1848Catalogus"/>
+                     <citedRange unit="page">16</citedRange>
+                  </bibl>
+                  <bibl>
+                     <ptr target="bm:Nicoll1821Bodleianae"/>
+                     <citedRange unit="page">18</citedRange>
+                  </bibl>
+               </listBibl>
+            </div>
+            
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="TituliJohn">
+               <label>Tituli of the Gospel of John</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BesrataJohn">
+               <label>Bəsrata Yoḥannǝs</label>
+            </div>
+            
+         </div>
+            
       </body>
    </text>
 </TEI>
