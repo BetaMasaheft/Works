@@ -43,11 +43,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="DR" when="2016-10-24">Relation added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <div type="bibliography"><!--in GS--></div>
+         <div type="bibliography">
+            <listBibl type="otherLanguages">
+               <bibl><ptr target=""/><citedRange unit="page"></citedRange></bibl>
+               <!--Surius, Vitae Sanctorum, 18 Nov.-->
+            </listBibl>
+            <listBibl type="catalogue">
+               <bibl><ptr target="bm:Wright1872CatalogueSyriac"/><citedRange unit="page">1131-1132</citedRange></bibl> <!--Syriac-->
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:CLP46i_may_form_part_of"
+                  active="LIT1895Martyr"
+                  passive="LIT1493Gadlas"/>
+            </listBibl>
+         </div>
+         
       </body>
    </text>
 </TEI>

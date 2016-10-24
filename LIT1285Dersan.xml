@@ -10,8 +10,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dǝrsanä Gärima</title>
-            <title xml:id="t2">Gädlä Abba Gärima</title>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘደረሰ፡ ቅዱስ፡ ዮሐንስ፡ ኤጲስ፡ ቆጶስ፡ ዘአክሱም፡ በእንተ፡ ዕበዩ፡ ወገድሉ፡ ለቅዱስ፡ ይስሐቅ።</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān za-darasa qǝddus Yoḥannǝs ʾeṗṗis qoṗṗos za-ʾAksum ba-ʾǝnta ʿǝbayu wa-gadlu la-qǝddus
+            Yǝsḥāq</title>
+            <title xml:lang="gez" xml:id="t2">ድርሳነ፡ ገሪማ፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Dǝrsāna Garimā</title>
+            <title xml:lang="gez" xml:id="t3">ገድለ፡ አባ፡ ገሪማ፡</title>
+            <title xml:lang="gez" corresp="#t3" type="normalized">Gadla ʾAbbā Garimā</title>
+            <title xml:lang="fr" xml:id="t4">Panégyrique de S. Isaac</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -45,11 +51,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-10-24">Bibliography added and title updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+        <div type="bibliography">
+           <listBibl type="editions">
+              <bibl><ptr target="bm:ContiRossini1898Garima"/></bibl>
+           </listBibl>
+           
+           <listBibl type="relations">
+              <bibl/>
+              <relation name="saws:isAttributedToAuthor" active="LIT1285Dersan" passive="PRS10382Yohanne"/>
+           </listBibl>
+        </div>
       </body>
    </text>
 </TEI>
