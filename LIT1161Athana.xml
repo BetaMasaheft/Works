@@ -10,8 +10,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Athanasian Creed</title>
-            <title xml:id="t2">Afri­can Symbol or Profession of FaithQuicumque</title>
+            <title xml:lang="gez" xml:id="t1">ጸሎተ፡ ሃይማኖት፡ ዘአፍራቅያ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalota hāymānota za-ʾAfrāqǝyā</title>
+            <title xml:lang="en" corresp="#t1">Symbol of Africa</title>
+            <title xml:lang="en" xml:id="t2">Athanasian Creed</title>
+            <title xml:lang="en" xml:id="t3">Profession of Faith of Athanasius</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -49,7 +52,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="relations">
+               <bibl></bibl>
+               <relation name="saws:isAttributedToAuthor" active="LIT1161Athana" passive="PRS2209Athanasi"/>
+            </listBibl>
+            <listBibl type="editions">
+               <bibl><ptr target="bm:Guerrier1915Symbole"/></bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
