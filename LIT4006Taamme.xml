@@ -6,15 +6,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
      xml:lang="en"
-     xml:id="LIT1899Martyr">
+     xml:id="LIT4006Taamme">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ገድለ፡ መርቆርዮስ፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Marqoryos</title>
-            <title xml:lang="en" corresp="#t1">Vita of St. Marqoryos</title>
-            <title xml:lang="en" xml:id="t2">Martyrium of Mercurios Philopater</title>
-            <title xml:lang="ar" xml:id="t3arabic">Arabic Vita of Mercurios</title>
+            <title xml:lang="gez" xml:id="t1">ተአምረ፡ ጊዮርጊስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Taʾammǝra Giyorgis</title>
+            <title xml:lang="en" corresp="#t1">Miracles of St. George</title>
+            <title xml:lang="ar" xml:id="t2arabic"> </title>
+            <title xml:lang="ar" corresp="#t2arabic" type="normalized"></title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -32,10 +32,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-         <listWit>
-            <witness corresp="BNFet133#p2_i3"/>
-            <witness corresp="#t2arabic">Ancien fonds arabe 153 <locus from="33v"/></witness>
-         </listWit>
+           <listWit>
+              <witness corresp="BNFet133#p1_i1"/>
+              <witness corresp="#t2arabic">BnF Ancien fonds Arabe 158 <locus from="153"/></witness>
+           </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -47,23 +47,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
-         <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change who="DR" when="2016-10-26">Added relation</change>
+         <change who="DR" when="2016-10-26"> Created file </change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:isAttributedToAuthor" active="LIT1899Martyr#t3arabic" passive="PRS11260Archelides"/>
-               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1899Martyr#t1" passive="LIT1899Martyr#t3arabic">
-                  <desc>The last part of the martyrdom in <ref type="mss" corresp="BNFet133#p2_i3"/> agrees with the Arabic version contained in BnF Ancien fonds arabe 153 <locus from="33v"/>.</desc>
-               </relation>
-            </listBibl>
-         </div>
+        <div type="bibliography">
+           
+           <listBibl type="catalogue">
+              <bibl corresp="#t1">
+                 <ptr target="bm:Zotenberg1877Catalogue"/>
+                 <citedRange unit="page">199</citedRange>
+              </bibl>
+           </listBibl>
+           
+           <listBibl type="secondary">
+              <bibl><ptr target="bm:Raineri2005EAEGeorge"/></bibl>
+           </listBibl>
+        </div>
       </body>
    </text>
 </TEI>
