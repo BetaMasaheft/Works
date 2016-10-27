@@ -10,8 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Book ofJubilees</title>
-            <title xml:id="t2">Mäṣḥafä kufale</title>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ኩፋሌ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa kufāle</title>
+            <title xml:lang="en" corresp="#t1">Book of Jubilees</title>
+            <title xml:lang="he" xml:id="t2hebrew">Hebrew Book of Jubilees</title>
+            <title xml:lang="grc" xml:id="t3greek">Greek Book of Jubilees</title>
+            <title xml:lang="la" xml:id="t4latin">Latin Book of Jubilees</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -45,11 +49,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-10-27">Title updated and bibliography added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+        <div type="bibliography">
+           
+           <listBibl type="editions">
+              <bibl corresp="#t1"><ptr target="bm:Vanderkam1989Jubilees"/></bibl>
+              <bibl corresp="#t1"><ptr target="bm:Dillmann1859Kufale"/></bibl>
+              <bibl corresp="#t4latin"><ptr target="bm:Ceriani1861Monumenta"/><citedRange unit="page">9-64</citedRange></bibl>
+              <bibl corresp="#t4latin"><ptr target="bm:Roensch1874Jubilaeen"/><citedRange unit="page">10-94</citedRange></bibl>
+           </listBibl>
+           
+           <listBibl type="translation">
+              <bibl corresp="#t1"><ptr target="bm:Vanderkam1989Jubilees"/></bibl>
+              <bibl corresp="#t1"><ptr target="bm:Dillmann1850Jubilaeen"/></bibl>
+              <bibl corresp="#t1"><ptr target="bm:Roensch1874Jubilaeen"/><citedRange unit="page">11-95</citedRange></bibl>
+           </listBibl>
+           
+           <listBibl type="secondary">
+              <bibl corresp="#t1"><ptr target="bm:Vanderkam2007EAEJubilees"/></bibl>
+              <bibl><ptr target="bm:Roensch1874Jubilaeen"/></bibl>
+           </listBibl>
+           
+           <listBibl type="relations">
+              <bibl/>
+              <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1697Jubilees#t3greek" passive="LIT1697Jubilees#t2hebrew"/>
+              <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1697Jubilees#t1" passive="LIT1697Jubilees#t3greek"/>
+              <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1697Jubilees#t4latin" passive="LIT1697Jubilees#t3greek"/>
+           </listBibl>
+           
+        </div>
       </body>
    </text>
 </TEI>
