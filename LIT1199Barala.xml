@@ -10,8 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Bärälam wäyǝwasǝf</title>
-            <title xml:id="t2">Book of Barlaam and Josaphat</title>
+            <title xml:lang="gez" xml:id="t1">በረላም፡ ወይዋስፍ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Baralām wa-Yǝwāsǝf</title>
+            <title xml:lang="en" corresp="#t1">Baralām and Yǝwāsǝf</title>
+            <title xml:lang="en" xml:id="t2">Book of Barlaam and Josaphat</title>
+            <title xml:lang="pal" xml:id="t3pahlavi"></title>
+            <title xml:lang="ar" xml:id="t4arabic" type="normalized">Bilawhar wa-Būdāsaf</title>
+            <title xml:lang="geo" xml:id="t5georgian"></title>
+            <title xml:lang="grc" xml:id="t6greek"></title>
+            <title xml:lang="ar" xml:id="t7arabic"></title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -29,8 +36,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+          <listWit>
+             <witness corresp="BNFet140"/>
+          </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -39,17 +47,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="geo">Georgian</language>
+            <language ident="pal">Pahlavi</language>
          </langUsage>
+         <abstract><p>Baralām wa-Yǝwāsǝf is a religious romance deriving from the traditional biography of <persName ref="PRS2933Buddha"/>.</p>
+            <p><bibl><ptr target="bm:Zotenberg1877Catalogue"/><citedRange unit="page">208a</citedRange></bibl> points out the following Arabic manuscripts at the <placeName ref="INS0303BNF"/>:
+            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89546b"/>, 
+            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89548t"/>, 
+            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc895453"/>, 
+            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc895492"/>, 
+            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89544v"/>, 
+            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89547k"/>, 
+            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc346502"/>, </p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-11-02">Title updated and information added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Weninger2003EAEBaralam"/></bibl>
+               <bibl><ptr target="bm:Zotenberg1864Barlaam"/><citedRange unit="page">315-317</citedRange></bibl>
+               <bibl><ptr target="bm:Zotenberg1886Barlaam"/></bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1199Barala#t1" passive="PRS3779enbaqom"/>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1199Barala#t1" passive="LIT1199Barala#t7arabic"/>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1199Barala#t4arabic" passive="LIT1199Barala#t3pahlavi"/>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1199Barala#t5georgian" passive="LIT1199Barala#t4arabic"/>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1199Barala#t6greek" passive="LIT1199Barala#t5georgian"/>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1199Barala#t7arabic" passive="LIT1199Barala#t6greek"/>
+            </listBibl>
+            <listBibl type="editions">
+               <bibl corresp="#t1"><ptr target="bm:Budge1923BaralamText"/></bibl>
+               <bibl corresp="#t6greek"><ptr target="bm:Boissonade1832Anecdota"/></bibl>
+            </listBibl>
+            <listBibl type="translation">
+               <bibl corresp="#t1"><ptr target="bm:Budge1923BaralamTranslation"/></bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
