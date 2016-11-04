@@ -10,8 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Śǝrʿatä mängǝśt</title>
-            <title xml:id="t2">Mäṣḥafä Śǝrʿatä mängǝśt</title>
+            <title xml:lang="gez" xml:id="t1">ሠርዓተ፡ መንግሥት፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Śǝrʿāta mangǝśt (general record)</title>
+            <title xml:lang="en" corresp="#t1">Order of the Kingdom</title>
+            <title xml:lang="gez" xml:id="t2">መጽሐፈ፡ ሠርዓተ፡ መንግሥት፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Maṣḥafa śǝrʿāta mangǝśt</title>
+            <title xml:lang="en" corresp="#t2">Book of the Order of the Kingdom</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,16 +44,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract><p>Śǝrʿāta mangǝśt is a generic title for a group of writings concerning court rituals and life, royalty, hierarchy, appointment and privileges of dignitaries.</p>
+       </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-11-04">Title updated, abstract and bibliography added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Nosnitsin2010EAESerata"/></bibl>
+               <bibl><ptr target="bm:Bruce1813Travels3"/><citedRange unit="page">12-13</citedRange></bibl>
+               <bibl><ptr target="bm:Guidi1922Contributi"/><citedRange unit="page">65-89</citedRange></bibl>
+               
+            </listBibl>
+            <listBibl type="editions">
+               <bibl><ptr target="bm:Varenbergh1915Reichsordnung"/></bibl>
+            </listBibl>
+            <listBibl type="catalogue">
+               <bibl><ptr target="bm:Zotenberg1877Catalogue"/><citedRange unit="page">216a</citedRange></bibl>
+               <bibl><ptr target="bm:Dillmann1848Catalogus"/><citedRange unit="page">74b-75b</citedRange></bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
