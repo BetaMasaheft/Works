@@ -14,6 +14,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" corresp="#t1" type="normalized">Rāʾǝya Māryām</title>
             <title xml:lang="en" corresp="#t1">Vision of Mary</title>
             <title xml:lang="en" xml:id="t2">Apocalypse of Mary</title>
+            <title xml:lang="grc" xml:id="t3greek">CANT 325</title>
+            <title xml:lang="ar" xml:id="t4arabic">Arabic Vision of Paul</title>
+            <title xml:lang="amh" xml:id="t5amharic">Amharic Vision of Mary</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -47,11 +50,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-11-09">Bibliography added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Sokolinskaia2007EAEMary"/></bibl>
+            </listBibl>
+            
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1124Apocal#t4arabic" passive="LIT1124Apocal#t3greek"></relation>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1124Apocal#t1" passive="LIT1124Apocal#t4arabic">
+                  <desc>The Arabic Apocalypse of Paul was translated into Gǝʿǝz, renamed, edited and developed. New visions were added. 
+                     <bibl><ptr target="bm:Sokolinskaia2007EAEMary"/></bibl>
+                  </desc> 
+               </relation>
+                  <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1124Apocal#t5amharic" passive="LIT1124Apocal#t1"/>
+            </listBibl>
+            
+         </div>
       </body>
    </text>
 </TEI>

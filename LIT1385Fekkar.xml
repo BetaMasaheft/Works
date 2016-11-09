@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ፍካሬ፡ ኢየሱስ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Fǝkkāre ʾIyasus</title>
+            <title xml:lang="en" corresp="#t1">Explanation of Jesus</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -49,11 +50,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-11-09">Bibliography added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Nosnitsin2005EAEFekkareI"/></bibl>
+            </listBibl>
+            
+            <listBibl type="catalogue">
+               <bibl><ptr target="bm:Dillmann1847BM"/><citedRange unit="page">22-23</citedRange></bibl>
+               <bibl><ptr target="bm:Abbadie1859Cat"/><citedRange unit="page">129; 191; 192</citedRange></bibl>
+            </listBibl>
+            
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1385Fekkar" passive="PRS3947ezra">
+                  <desc>In a few manuscripts the <foreign xml:lang="gez">Fǝkkāre ʾIyasus</foreign> is ascribed to <persName ref="PRS3947ezra"/>.</desc>
+               </relation>
+            </listBibl>
+            
+         </div>
       </body>
    </text>
 </TEI>
