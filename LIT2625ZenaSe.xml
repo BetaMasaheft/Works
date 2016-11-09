@@ -10,8 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Zena Sǝkǝndǝs ṭäbib läʾǝndǝryanos nǝguś wätǝmhǝrtatihu wäṭǝbäbu
-               wätäsǝʾǝlotatihu</title>
+            <title xml:lang="gez" xml:id="t1">ዜና፡ ስክንድስ፡ ጠቢብ፡ ለእንድርያኖስ፡ ንጉሥ፡ ወትምህርታቲሁ፡ ወጥበቡ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Zenā Sǝkǝndǝs ṭabib la-ʾƎndǝryānos nǝguś wa-tǝmhǝrtātihu wa-ṭǝbabu
+               wa-tasǝʾǝlotātihu</title>
+            <title xml:lang="en" corresp="#t1">The story of Secundus, King Hadrian's sage and of his teachings, his wisdom and his dialogue</title>
+            <title xml:lang="grc" xml:id="t2greek">Greek Secundus</title>
+            <title xml:lang="ar" xml:id="t3arabic">Arabic Secundus</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -45,11 +49,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-11-09">Title updated, bibliography and abstract added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+        <div type="bibliography">
+           
+           <listBibl type="secondary">
+              <bibl><ptr target="bm:Weninger2010EAESecundus"/></bibl>
+           </listBibl>
+           
+           <listBibl type="editions">
+              <bibl corresp="#t1 #t3arabic"><ptr target="bm:Heide2014Secundus"/></bibl>
+           </listBibl>
+           
+           <listBibl type="relations">
+              <bibl/>
+              <relation name="saws:isVersionInAnotherLanguageOf" active="#t3arabic" passive="#t2greek"/>
+              <relation name="saws:isVersionInAnotherLanguageOf" active="#t1" passive="#t3arabic"/>
+           </listBibl>
+        </div>
       </body>
    </text>
 </TEI>

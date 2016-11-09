@@ -12,7 +12,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ጥበበ፡ ሳቤላ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Ṭǝbaba Sābelā</title>
-            <title xml:lang="en" corresp="#t1">Wisdom of the Sybil</title>
+            <title xml:lang="en" corresp="#t1">Wisdom of the Sibyl</title>
+            <title xml:lang="ar" xml:id="t2arabic">Arabic Wisdom of Sibyl</title>
             <editor role="generalEditor" key="AB"/>
             <editor key="MV"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -51,6 +52,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="MV" when="2016-04-28">Added bibliographic references and one witness</change>
+         <change who="MV" when="2016-11-09">Added catalogue bibliography and relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -74,6 +76,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Beylot1980apocal"/>
                </bibl>
            </listBibl>
+            <listBibl type="catalogue">
+               <bibl corresp="#t2arabic"><ptr target="bm:Zotenberg1874Catalogue"/><citedRange unit="page">29b-30a</citedRange></bibl>
+               <bibl corresp="#t2arabic"><ptr target="bm:PayneSmith1864Catalog"/><citedRange unit="column">451</citedRange></bibl>
+            </listBibl>
+            
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT2353SibylW#t1" passive="LIT2353SibylW#t2arabic"/>
+            </listBibl>
          </div>
       </body>
    </text>

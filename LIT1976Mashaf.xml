@@ -10,8 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Maṣḥafä ṭǝntä haymanot</title>
-            <title xml:id="t2">Maṣḥafä ṭǝntä haymanot zäfäkkärä ab mar Eṗifanis</title>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ጥንተ፡ ሃይማኖት፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa ṭǝnta hāymānot</title>
+            <title xml:lang="en" corresp="#t1">Book on the Beginning of Faith</title>
+            <title xml:lang="gez" xml:id="t2">መጽሐፈ፡ ጥንተ፡ ሃይማኖት፡ ዘፈከረ፡ አብ፡ ማር፡ ኤጲፋኒስ፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Maṣḥafa ṭǝnta hāymānot za-fakkara ʾab mār ʾEṗifānis</title>
+            <title xml:lang="en" corresp="#t2">Book on the Beginning of Faith, which ʾEṗifānis explained</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,16 +44,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract><p>The <foreign xml:lang="gez">Maṣḥafa ṭǝnta hāymānot</foreign> is an anonymous work attributed to <persName ref="PRS7974PseudoE"/>.
+            Its main sources are <title ref="LIT1046Aksima"/> and, to a lesser extent, <title ref="LIT1957Mashaf"/>.
+            <bibl><ptr target="bm:Weninger2010EAETentaH"/></bibl></p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-11-09">Title updated, abstract and bibliography added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Weninger2010EAETentaH"/></bibl>
+            </listBibl>
+            
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1976Mashaf" passive="PRS7974PseudoE">
+                  <desc>The Maṣḥafa ṭǝnta hāymānot is an anonymous work attributed to <persName ref="PRS3828Epiphani"/>.</desc>
+               </relation>
+               <relation name="saws:isDifferentTo" active="LIT1976Mashaf" passive="LIT1046Aksima"></relation>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>

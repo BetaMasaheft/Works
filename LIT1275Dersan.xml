@@ -10,9 +10,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dǝrsanzäʾabba Yaʿǝqob ṗaṗṗas zähagärä Nǝṣǝbin zäkämä mäṣʾa nǝguśä Fars
-               bämäwaʿǝlihu wǝst hagärä Nǝṣǝbin</title>
-            <author>Aphrahat</author>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘአባ፡ ያዕቆብ፡ ጳጳስ፡ ዘሀገረ፡ ንጽቢን፡ ዘከመ፡ መጽአ፡ ንጉሠ፡ ፋርስ፡ በመዋዕሊሁ፡ ውስት፡ ሀገረ፡ ንጽቢን።</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān za-ʾabbā Yāʿǝqob ṗāṗṗās za-hagara Nǝṣǝbin za-kama maṣʾa nǝguśa Fārs
+               ba-mawāʿǝlihu wǝst hagara Nǝṣǝbin</title>
+            <title xml:lang="en" corresp="#t1">The Homily by Father Jacob, bishop of the city of Nisibis, on the arrival in his days of the king of the Persians at Nisibis</title>
+            <title xml:lang="syr" xml:id="t2syriac"> <!--add Syriaca reference--></title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -30,8 +32,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit>
+               <witness corresp="BNFet146#ms_i17"/>
+               <witness corresp="BLorient818"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -41,16 +45,44 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract><p>The work transmitted in Gǝʿǝz as <foreign xml:lang="gez">Dǝrsān za-ʾabbā Yāʿǝqob ṗāṗṗās za-hagara Nǝṣǝbin za-kama maṣʾa nǝguśa Fārs
+            ba-mawāʿǝlihu wǝst hagara Nǝṣǝbin</foreign> is a translation of <persName ref="PRS1980Aphrahat"/>'s fifth homily, <title ref="LIT1275Dersan#t2syriac"/>. </p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-11-09">Title updated, bibliography, relations, witnesses and abstract added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Witakowski2003EAEAphrahat"/></bibl>
+            </listBibl>
+            
+            <listBibl type="editions">
+               <bibl corresp="#t1"><ptr target="bm:Pereira1906Jacobi"/></bibl>
+               <bibl corresp="#t2syriac"><ptr target="bm:Wright1869Homilies"/><citedRange unit="page">ܥܛ-ܩܒ</citedRange><!--ʿṭ-qb--></bibl>
+            </listBibl>
+            
+            <listBibl type="translation">
+               <bibl corresp="#t2syriac"><ptr target="bm:Bruns1991Aphrahat1"/><citedRange unit="page">156-179</citedRange></bibl>
+            </listBibl>
+            
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1275Dersan#t2syriac" passive="PRS1980Aphrahat"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1275Dersan" passive="PRS5654Jacobof"><desc>The homily is attributed to
+                  <persName ref="PRS5654Jacobof"/>, a confusion due to <persName ref="PRS1980Aphrahat"/>'s baptismal name Jacob and
+                   the tradition of  <persName ref="PRS5654Jacobof"/> being the defender of Nisibis against Persian attacks.
+                  <bibl><ptr target="bm:Witakowski2003EAEAphrahat"/></bibl></desc>
+               </relation>
+            </listBibl>
+         </div>
+         
       </body>
    </text>
 </TEI>
