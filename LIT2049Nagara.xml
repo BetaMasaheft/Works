@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Nägärä mädḫanit</title>
+            <title xml:lang="gez" xml:id="t1">  ነገረ፡ መድኀኒት፡ እምቃላተ፡ ማሪ፡ ኤፍሬም፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Nagara madḫanit ʾǝm-qālāta Māri ʾEfrem </title>
+            <title xml:lang="en" corresp="#t1">Discourse from the words of Efrem</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -44,11 +46,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MV" when="2016-11-11">Fixed title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Weninger2005EAEEphrem"/>
+                  <citedRange unit="page">332b</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor" 
+                  active="LIT2049Nagara" 
+                  passive="PRS3827Ephrem"/>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
