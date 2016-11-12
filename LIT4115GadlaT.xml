@@ -6,12 +6,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
      xml:lang="en"
-     xml:id="LIT1507GadlaT">
+     xml:id="LIT4115GadlaT">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ገድለ፡ ተክለ፡ ሃይማኖት፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Takla Hāymānot (Dabra Libānos recension, general record)</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Takla Hāymānot (Dabra Libānos recension, second sub-recension)</title>
             <title xml:lang="en" corresp="#t1">Vita of Takla Hāymānot</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -43,10 +43,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
-         <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change who="DR" when="2016-11-12">Added bibliography</change>
+         <change who="DR" when="2016-11-12">Created file</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -54,10 +51,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="bibliography">
             
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Nosnitsin2010TaklaHaymanot"/></bibl>
+               <bibl><ptr target="bm:ContiRossini1909Listes"/><citedRange unit="page">274-283</citedRange></bibl>
+               <bibl><ptr target="bm:Nosnitsin2010TaklaHaymanot"/><citedRange unit="page">832b</citedRange></bibl>
             </listBibl>
-         </div>
             
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:contains" active="LIT4115GadlaT" passive="LIT3854KingList"/>
+               <relation name="saws:contains" active="LIT4115GadlaT" passive="LIT3971Taamme"/>
+            </listBibl>
+            
+         </div>
+         
+         <div type="edition">
+            
+            <div type="textpart" xml:lang="gez" xml:id="Genealogy" corresp="LIT3854KingList">
+               <label>King List</label>
+            </div>
+            
+            <div type="textpart" xml:lang="gez" xml:id="Gadl">
+               <label>Gadl of Takla Hāymānot</label>
+            </div>
+            
+            <div type="textpart" xml:lang="gez" xml:id="Miracles" corresp="LIT3971Taamme">
+               <label>Miracles of Takla Hāymānot</label>
+            </div>
+            
+         </div>
       </body>
    </text>
 </TEI>
