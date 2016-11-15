@@ -10,7 +10,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Maṣḥafäfälasfa ṭäbiban</title>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ፈላስፋ፡ ጠቢባን፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa falāsfā ṭabibān</title>
+            <title xml:lang="en" corresp="#t1">The book of the wise philosophers</title>
+            <title xml:lang="at" xml:id="t2arabic">كتاب البستان وقاعدة الحكماء وشمس الآداب</title>
+            <title xml:lang="ar" corresp="#t2arabic" type="normalized">Kitāb al-bustān wa-qāʿidat al-ḥukamāʾ wa-šams al-ʾādāb</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -44,11 +48,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-11-15">Updated title and added bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+       <div type="bibliography">
+          <listBibl type="secondary">
+             <bibl><ptr target="bm:Pietruschka2005EAEFalasfa"/></bibl>
+             <bibl><ptr target="bm:Cornill1875Falasfa"/></bibl>
+          </listBibl>
+          
+          <listBibl type="relations">
+             <bibl/>
+             <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1925Mashaf#t1" passive="LIT1925Mashaf#t2arabic"/>
+             <relation name="saws:isAttributedToAuthor" active="LIT1925Mashaft2arabic" passive="PRS7509Nasralla">
+                <desc>It is nor clear whether <persName ref="PRS7509Nasralla"/>, who is otherwise unknown, is the compiler or author.
+                   <bibl><ptr target="bm:Pietruschka2005EAEFalasfa"/></bibl>
+                </desc>
+             </relation>
+          </listBibl>
+       </div>
       </body>
    </text>
 </TEI>
