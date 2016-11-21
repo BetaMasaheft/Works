@@ -10,7 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mäʿazä qǝddase wǝkuf</title>
+            <title xml:lang="gez" xml:id="t1">መዐዘ፡ ቅዳሴ፡ ውኩፍ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maʿaza qǝddāse wǝkuf</title>
+            <title xml:lang="en" corresp="#t1">A pleasant perfume of sanctity</title>
+            <title xml:lang="en" corresp="#t2">Anaphora to Our Lady Mary by Giyorgis</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,8 +31,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit>
+               <listWit>
+                  <witness corresp="BAVet15#p2_i1.4"/>
+                  <witness corresp="BAVet18#i1"/>
+                  <witness corresp="BAVet24#i.25"/>
+               </listWit>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -48,7 +56,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Semharay1937Messe"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:bm:Hammerschmidt1987Anaphoras"/><citedRange unit="page">33-34</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
