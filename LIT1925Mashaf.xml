@@ -11,7 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ፈላስፋ፡ ጠቢባን፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa falāsfā ṭabibān</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa falāsfā ṭabibān (general record)</title>
             <title xml:lang="en" corresp="#t1">The book of the wise philosophers</title>
             <title xml:lang="at" xml:id="t2arabic">كتاب البستان وقاعدة الحكماء وشمس الآداب</title>
             <title xml:lang="ar" corresp="#t2arabic" type="normalized">Kitāb al-bustān wa-qāʿidat al-ḥukamāʾ wa-šams al-ʾādāb</title>
@@ -32,8 +32,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+           <listWit>
+              <witness type="external" corresp="BnF Arabe  4811">BnF Arabe 4811 containing <title  ref="LIT1925Mashaf#t2arabic"/> was the Vorlage
+                 of <title ref="LIT1925Mashaf#t1"/>.  
+                 <bibl><ptr target="bm:Pietruschka2002Falasfa"/><citedRange unit="page">142</citedRange></bibl></witness>
+           </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -43,6 +46,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract><p>
+            There exist a short and a long recension of the <foreign xml:lang="gez">Maṣḥafa falāsfā ṭabibān</foreign>. The short recension generally 
+            preserves the Arabic text. To the long recension, sayings of the Church fathers and other stories, 
+            especially of <persName ref="PRS1499Ahiqar"/>, have been added.
+         </p>
+       <p>     
+          <listBibl type="secondary">
+               <bibl><ptr target="bm:Pietruschka2005EAEFalasfa"/></bibl>
+         </listBibl>
+       </p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -57,13 +71,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <listBibl type="secondary">
              <bibl><ptr target="bm:Pietruschka2005EAEFalasfa"/></bibl>
              <bibl><ptr target="bm:Cornill1875Falasfa"/></bibl>
+             <bibl><ptr target="bm:Euringer1941Lehrsprüche"/></bibl>
+             <bibl><ptr target="bm:Pietruschka2002Falasfa"/></bibl>
           </listBibl>
           
           <listBibl type="relations">
              <bibl/>
              <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1925Mashaf#t1" passive="LIT1925Mashaf#t2arabic"/>
              <relation name="saws:isAttributedToAuthor" active="LIT1925Mashaft2arabic" passive="PRS7509Nasralla">
-                <desc>It is nor clear whether <persName ref="PRS7509Nasralla"/>, who is otherwise unknown, is the compiler or author.
+                <desc>It is not clear whether <persName ref="PRS7509Nasralla"/>, who is otherwise unknown, is the compiler or author.
                    <bibl><ptr target="bm:Pietruschka2005EAEFalasfa"/></bibl>
                 </desc>
              </relation>
