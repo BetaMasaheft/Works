@@ -32,8 +32,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+          <listWit>
+             <witness corresp="SBB or. 394"></witness> <!--mini mss for mss in Bachmann's edition have to be created-->
+             <witness corresp="BLorient691"/> <!--create mini ms-->
+          </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -149,6 +151,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <label><foreign xml:lang="gez">Yakkātit</foreign></label>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyYakkatit">
                   <label>Anonymous homily for <foreign xml:lang="gez">Yakkātit</foreign></label>
+                  <listBibl type="editions">
+                     <bibl corresp=""><ptr target="bm:Hammerschmidt1988Anthologia"/><citedRange unit="page">20-24</citedRange></bibl> 
+                  </listBibl>
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleYakkatit">
                   <label>Miracle for <foreign xml:lang="gez">Yakkātit</foreign></label>
@@ -163,9 +168,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Maggabit">
                <label><foreign xml:lang="gez">Maggābit</foreign></label>
+               
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyMaggabit">
                   <label>Homily for <foreign xml:lang="gez">Maggābit</foreign> by a patriarch of Antioch</label>
+                  <listBibl type="editions">
+                     <bibl corresp="#BLorient691"><ptr target="bm:budge1894stmichael"/><citedRange unit="page">195-216</citedRange></bibl>
+                  </listBibl>
+                  <listBibl type="relations">
+                     <bibl/>
+                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyMaggabit" passive="PRS8790Severus">
+                        <desc>The homily for <foreign xml:lang="gez">Maggābit</foreign> is attributed in many manuscripts to a 
+                           patriarch of Antioch, identified in <bibl><ptr target="bm:Zotenberg1877Catalogue"/><citedRange unit="page">207a</citedRange></bibl>
+                           and <bibl><ptr target="bm:budge1894stmichael"/></bibl> as <persName ref="PRS8790Severus"/>. His name is often omitted,
+                           leaving only his title "patriarch of Antioch". Occassionally it is also attributed to other authors.
+                        </desc>
+                     </relation>
+                  </listBibl>
                </div>
+               
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleMaggabit">
                   <label>Miracle for <foreign xml:lang="gez">Maggābit</foreign></label>
                </div>
