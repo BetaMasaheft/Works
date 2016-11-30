@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dǝrsanä Giyorgis</title>
+            <title xml:lang="gez" xml:id="t1">ድርሳነ፡ ጊዮርጊስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsāna Giyorgis</title>
+            <title xml:lang="en" corresp="#t1">Homily on St. George</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,16 +41,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract><p>The Homily on St. George often precedes his <foreign xml:lang="gez">gadl</foreign> in manuscripts of the Acts of St. George.</p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-11-30">Title updated, abstract and bibliography added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            
+            <listBibl type="catalogue">
+               <bibl><ptr target="bm:Zotenberg1877Catalogue"/><citedRange unit="page">199b</citedRange></bibl>
+            </listBibl>
+            
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Witakowski2010EAETheodotos"/><citedRange unit="page">945a</citedRange></bibl>
+               <bibl><ptr target="bm:Raineri2005EAEGeorge"/><citedRange unit="page">764a</citedRange></bibl>
+            </listBibl>
+            
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1287Dersan" passive="PRS9481Theodoto">
+                  <desc>The Homily on St. George is traditionally attributed to <persName ref="PRS9481Theodoto"/>. Though this
+                     attribution already appears in Coptic tradition, it is probably apocryphal.
+                     <bibl><ptr target="bm:Witakowski2010EAETheodotos"/><citedRange unit="page">945a</citedRange></bibl></desc>
+               </relation>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>

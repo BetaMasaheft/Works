@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Homily on the Commemoration of ʾabbā Yoḥanni</title>
+            <title xml:id="t1" xml:lang="gez">ድርሳን፡ ዘብፁዕ፡ አባ፡ ሚናስ፡ ኤጲስ፡ ቆጶስ፡ ዘአኵሱም፡ በእንተ፡ ብፁዕ፡ ወቅዱስ፡ አባ፡ ዮሐኒ።</title>
+            <title xml:lang="gez" corresp="#t1">Dǝrsān za-bǝḍuʿ ʾabbā Minās ʾeṗis qoṗos za-ʾAkʷsum ba-ʾǝnta bǝḍuʿ wa-qǝddus ʾabbā Yoḥanni</title>
+            <title xml:lang="en" corresp="#t1">Homily of the blessed  ʾabbā Minās, bishop of Aksum, on the blessed and holy ʾabbā Yoḥanni</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -27,7 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <listWit>
-               <witness/>
+               <witness corresp="BNFet132#ms_i5"/>
+               <witness type="external" corresp="EMML1763"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -44,17 +47,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="DR" when="2016-11-30">Additions</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
+            
             <listBibl type="relations">
                <bibl/>
-               <relation name="saws:isAttributedAuthorOf" active="" passive="LIT4051Homily"><!--Minās--></relation>
-               <relation name="lawd:hasAttestation"
-                         active="LIT4051Homily"
-                         passive="BNFet133"><!--BNFet133--></relation>
+               <relation name="saws:isAttributedToAuthor" active="LIT4051Homily" passive="PRS7104Minas"/>
+            </listBibl>
+            
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Nosnitsin2007Minas"/></bibl>
             </listBibl>
          </div>
       </body>

@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dǝrsanä Gärima</title>
+            <title xml:id="t1">Dǝrsāna Garimā</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,8 +28,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit>
+               <witness corresp="BLorient8192"/>
+               <witness type="external" corresp="EMML1763"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -44,11 +46,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-11-30">witnesses and bibliography added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+      <div type="bibliography">
+         <listBibl type="editions">
+            <bibl><ptr target="bm:Getatchew1985Luleyanos"/></bibl>
+         </listBibl>
+         <listBibl type="relations">
+            <bibl/>
+            <relation name="saws:isDifferentTo" active="LIT1286Dersan" passive="LIT1285Dersan"/>
+         </listBibl>
+      </div>
       </body>
    </text>
 </TEI>
