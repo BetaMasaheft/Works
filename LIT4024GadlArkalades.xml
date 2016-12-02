@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Gadl za-qǝddus ʾArkaladǝs</title>
+            <title xml:lang="gez" xml:id="t1">ገድል፡ ዘቅዱስ፡ አርከለድስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Gadl za-qǝddus ʾArkaladǝs</title>
+            <title xml:lang="en" corresp="#t1">Vita of St. ʾArkaladǝs</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -27,7 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <listWit>
-               <witness/>
+               <witness corresp="BNFet125#ms_i2"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -44,6 +46,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="DR" when="2016-12-02">Adjustments and bibliography added</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -51,10 +54,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="bibliography">
             <listBibl type="relations">
                <bibl/>
-               <relation name="saws:formsPartOf" active="LIT4024GadlArkalades" passive=""><!--different from LIT1421GadlaA--></relation>
-               <relation name="lawd:hasAttestation"
-                         active="LIT4024GadlArkalades"
-                         passive="BNFet125"><!--BNFet125--></relation>
+               <relation name="saws:isDifferentTo" active="LIT4024GadlArkalades" passive="LIT1421GadlaA"/>
+            </listBibl>
+            
+            <!--Syriac mss in Zotenberg 150 of this work or LIT1421GadlaA?-->
+            
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Wensinck1911Legends"/>
+                  <citedRange unit="page">
+                     <foreign xml:lang="gez">፩-፯</foreign>
+                  </citedRange>
+               </bibl>
+            </listBibl>
+            
+            <listBibl type="catalogue">
+              <bibl>
+               <ptr target="bm:Zotenberg1877Catalogue"/>
+               <citedRange unit="page">150a</citedRange>
+               </bibl>
             </listBibl>
          </div>
       </body>
