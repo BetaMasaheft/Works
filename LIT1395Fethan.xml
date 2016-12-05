@@ -35,8 +35,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+           <listWit>
+              <witness type="external" corresp="BnF Syriaque 225">BnF Syriaque 225</witness>
+              <witness type="external" corresp="BnF Arabe 247">BnF Arabe 247, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc895236"/></witness>
+              <witness type="external" corresp="BnF Arabe 248">BnF Arabe 248, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89524f"/></witness>
+              <witness type="external" corresp="BnF Arabe 245">BnF Arabe 245, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89521q"/></witness>
+              <witness type="external" corresp="BnF Arabe 249">BnF Arabe 249, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89525p"/></witness>
+              <witness type="external" corresp="BnF Arabe 246">BnF Arabe 246, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89522z"/></witness>
+           </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -47,8 +53,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <creation corresp="#t2arabic" when="1238-09"/>
-         <abstract><p>The Fǝtḥa nagaśt is a book of law which was in use in Ethiopia from the <date>16th century</date> and was still referenced to in the Penal and Civil Codes of 1930, 1957 and 1960.</p>
-            <p>The date of its translation from the Arabic <ref target="#t2arabic"/> by <persName ref="PRS7834PetrosA"/> is debated, possibly it was translated the <date>16th century</date>.</p>
+         <abstract><p>The <foreign xml:lang="gez">Fǝtḥa nagaśt</foreign> is a book of law which was in use in Ethiopia from the <date>16th century</date> and was still referenced to in the Penal and Civil Codes of 1930, 1957 and 1960.</p>
+            <p>The date of its translation from the Arabic <ref target="#t2arabic"/> by <persName role="translator" ref="PRS7834PetrosA"/> is debated, possibly it was translated the <date>16th century</date>.</p>
          <p><listBibl type="secondary">
             <bibl><ptr target="bm:Guidi1901Senodos"/><citedRange unit="page">501-502</citedRange></bibl>
             <bibl><ptr target="bm:Paulos2005EAEFetha"/></bibl>
@@ -93,15 +99,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <listBibl type="relations">
             <bibl/>
             <relation name="saws:isAttributedToAuthor" active="LIT1395Fethan#t2arabic" passive="PRS1341AbulFa"/>
-            <relation name="saws:isAttributedToAuthor" active="IT1395Fethan#t1" passive="PRS7834PetrosA"/> <!--Translator-->
+            <relation name="saws:isAttributedToAuthor" active="IT1395Fethan#t1" passive="PRS7834PetrosA"/> 
          </listBibl></div>
          
         
-            <div type="textpart" subtype="chapter" xml:id="EthiopicIntroduction">
+        <div type="textpart" xml:id="Introduction"> 
+           <label>Introduction</label>
+           <div type="textpart" subtype="chapter" xml:id="EthiopicIntroduction">
                <label>Ethiopic Introduction not present in the Arabic text, explaining that this work was
                   composed by <persName ref="PRS1341AbulFa"/> on the demand made by <persName ref="PRS3175Constant"/> to the 318 Fathers of Nicaea.</label>
             </div>
-         <div type="textpart" subtype="chapter" xml:id="Introduction">
+         <div type="textpart" subtype="chapter" xml:id="IntroductionCanons">
             <label> Introduction enumerating the canons used for this compilation</label>
             <listBibl type="secondary" corresp="LIT1395Fethan#t2arabic">
                <bibl><ptr target="bm:Dillmann1848Catalogus"/><citedRange unit="page">25-27</citedRange></bibl>
@@ -113,6 +121,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="textpart" subtype="chapter" xml:id="IndexPart2">
             <label>Index of Part 2</label>
          </div>
+        </div>
          
          <div type="textpart" subtype="chapter" xml:id="Part1">
             <label>Part 1: On religious matters</label>
@@ -281,7 +290,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <label>Appendix on heritages, not present in all Arabic manuscripts</label>
             </div>
           <div type="textpart" subtype="chapter" xml:id="FinalNoteTranslation">
-             <label>Final note on the translation</label>
+             <label>Final note on the translation</label> <!--colophon?-->
              <listBibl type="secondary">
                 <bibl><ptr target="bm:Isenberg1841Dictionary"/><citedRange unit="page">212</citedRange></bibl>
              </listBibl>
