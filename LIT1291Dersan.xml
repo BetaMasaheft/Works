@@ -42,17 +42,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract><p>It is not entirely clear from the catalogues whether the work contained in <ref type="mss" corresp="BNFet116#ms_i1"/> is the same as in
+            <ref type="mss" corresp="Bladd16254#ms_i1"/> and <ref type="mss" corresp="BNFabb29"/>.</p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-12-06">Added bibliography and abstract</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <ab/>
-         <div type="textpart" subtype="chapter" xml:id="Introduction"><label>Introductory prayer</label></div>
+        <div type="edition">
+           <div type="textpart" subtype="chapter" xml:id="Introduction"><label>Introductory prayer</label></div>
          <div type="textpart" subtype="chapter" xml:id="Monday"><label>Reading for Monday, Compline (ንዋም፡)</label></div>
          <div type="textpart" subtype="chapter" xml:id="Tuesday"><label>Reading for Tuesday, Matins (መንፈቀ፡ ሌሊት፡)</label></div>
          <div type="textpart" subtype="chapter" xml:id="Wednesday"><label>Reading for Wednesday, Lauds (ነግህ፡)</label></div>
@@ -60,6 +64,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="textpart" subtype="chapter" xml:id="Friday"><label>Reading for Friday, Sext (ቀትር፡)</label></div>
          <div type="textpart" subtype="chapter" xml:id="Saturday"><label>Reading for Saturday, None (ተሳዕቱ፡ ሰዓት፡)</label></div>
          <div type="textpart" subtype="chapter" xml:id="Sunday"><label>Reading for Sunday, Vespers (ሠርክ፡)</label></div>
+        </div>
+         
+         <div type="bibliography">
+            <listBibl type="catalogue">
+               <bibl>
+                  <ptr target="bm:Dillmann1847BM"/>
+                  <citedRange unit="page">46b-47a</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Zotenberg1877Catalogue"/>
+                  <citedRange unit="page">136b-137a</citedRange>
+               </bibl>
+               <bibl> <ptr target="bm:Abbadie1859Cat"/><citedRange unit="page">34-35</citedRange></bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
