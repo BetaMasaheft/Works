@@ -41,22 +41,90 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract><p>General record</p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-12-07">Bibliography added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
+            
+            <listBibl type="editions">
+               <bibl><ptr target="bm:Euringer1940Rechtfertigung"/><citedRange unit="page">91-99</citedRange></bibl>
+            </listBibl>
+            
+            <listBibl type="translation">
+               <bibl><ptr target="bm:Euringer1940Rechtfertigung"/><citedRange unit="page">244-259</citedRange></bibl>
+            </listBibl>
+            
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Burtea2007EAELefafa"/></bibl>
+            </listBibl>
+            
             <listBibl type="relations">
                <bibl/>
                <relation name="saws:CLP46i_may_form_part_of"
                   active="LIT1758Lefafa"
-                  passive="LIT1931Mashaf"><desc>The Lǝfāfa ṣǝdǝq can circulate both as an independent work and as a part of the Maṣḥafa gǝnzat</desc></relation>
+                  passive="LIT1931Mashaf"><desc>The <foreign xml:lang="gez">Lǝfāfa ṣǝdǝq</foreign> can circulate both as an independent work and as a part of the <foreign xml:lang="gez">Maṣḥafa gǝnzat</foreign></desc></relation>
+               <relation name="saws:contains" active="LIT1758Lefafa" passive="LIT1873Mangad"/>
             </listBibl>
+         </div>
+         
+         <div type="edition">
+            <div type="textpart" subtype="book" xml:id="FirstPart" xml:lang="gez">
+               <label>First part: revelation of the powerful names of Jesus</label>
+               
+               <div type="textpart" subtype="chapter" n="1" xml:id="FirstChapter" xml:lang="gez">
+                  <label>First Chapter</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="2" xml:id="SecondChapter" xml:lang="gez">
+                  <label>Second Chapter</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="3" xml:id="ThirdChapter" xml:lang="gez">
+                  <label>Third Chapter</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4" xml:id="FourthChapter" xml:lang="gez">
+                  <label>Fourth Chapter</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="5" xml:id="FifthChapter" xml:lang="gez">
+                  <label>Fifth Chapter</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="6" xml:id="SixthChapter" xml:lang="gez">
+                  <label>Sixth Chapter</label>
+               </div>
+            </div>
+            
+            <div type="textpart" subtype="book" xml:id="MangadaSamay" xml:lang="gez" corresp="LIT1873Mangad">
+               <label>Second part: Prayers for the heavenly journey</label>
+               
+               <div type="textpart" subtype="chapter" n="1" xml:id="FirstPrayer" xml:lang="gez">
+                  <label>First Prayer</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="2" xml:id="SecondPrayer" xml:lang="gez">
+                  <label>Second Prayer</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="3" xml:id="ThirdPrayer" xml:lang="gez">
+                  <label>Third Prayer</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4" xml:id="FourthPrayer" xml:lang="gez">
+                  <label>Fourth Prayer</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="5" xml:id="FifthPrayer" xml:lang="gez">
+                  <label>Fifth Prayer</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="6" xml:id="SixthPrayer" xml:lang="gez">
+                  <label>Sixth Prayer</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="7" xml:id="SeventhPrayer" xml:lang="gez">
+                  <label>Seventh Prayer</label>
+               </div>
+            </div>
+          
          </div>
       </body>
    </text>
