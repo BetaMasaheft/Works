@@ -11,14 +11,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ታሪከ፡ ዓምደ፡ ጽዮን ፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">TārikaʿĀmda Ṣǝyon </title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Tārika ʿĀmda Ṣǝyon </title>
             <title xml:lang="en" corresp="#t1">Chronicle of ʿAmda Ṣǝyon</title>
             
             
-            <editor role="generalEditor" key="AB"/>
+            <editor role="generalEditor" key="ES"/>
             <funder>Akademie der Wissenschaften in Hamburg; ERC</funder>
          </titleStmt>
          
+         <editionStmt>
+            <p>Digital text based on  <bibl><ptr target="bm:Marrassini1993AmdaSeyon"/></bibl>, digitized by AB, processed by VP. </p>
+         </editionStmt>
+         
+         <extent>10170  words</extent>
          
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -34,17 +39,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Digital text based on             <bibl><ptr target="bm:Marrassini1993AmdaSeyon"/></bibl>, digitized by AB, processed by VP</p>
-            
-            
+            <p>
+               
+               According to the stemma codicum proposed by <bibl><ptr target="bm:Marrassini1993AmdaSeyon"/><citedRange unit="page">8-17</citedRange></bibl>, 
+               the  manuscripts with this text can be grouped in two different families, 
+               both coming from a common archetype (Ω): family AM (subarchetype α), and family BPRA2L (subarchetype β); cp. also the stemma codicum proposed by <bibl>
+                  <ptr target="bm:Kropp1994AmdaSeyonTr"/><citedRange unit="page">XXVII-XXXIII
+               </citedRange></bibl></p>
+          
+            <!--  here the list of mss with the text should appear when described, BritLib Or 821, Bodl Aeth 29 (Bruce 88), BnF Mondon 27, Frankfurt Rüppel Ia, BnF d'Abbadie 52, 118; BnF Éth. 147 -->
          </sourceDesc>
       </fileDesc>
       <profileDesc>
          <creation notBefore="1500">Author and date of writing not known. 
 
-            A witness to the events narrated or a later elaboration (15th cent.?) upon unknown earlier source; cp.  <bibl><ptr target="bm:Chernetsov2007Hist"/> <citedRange unit="page">41</citedRange></bibl>
+            A witness to the events narrated or a later elaboration (15th cent.?) upon unknown earlier source; cp.  <bibl><ptr target="bm:Chernetsov2007Hist"/> <citedRange unit="page">41</citedRange></bibl>.
             About various hypothesis on the dating, see <bibl><ptr target="bm:Marrassini1993AmdaSeyon"/><citedRange unit="page">39-43</citedRange></bibl>.
             
+            A second redaction (<title xml:id="t2Haylu">Redaction Ḫaylu</title>) was promoted by daǧǧāzmāč <persName ref="PRS5222haylaMi">Ḫāylu</persName> around the year <date>1785</date> 
+            (after rās <persName ref="PRS7091Mikael">Mikāʾēl</persName> set the historical archives of <placeName ref="LOC3577Gondar">Gondar</placeName> on fire)
          </creation>
          <langUsage>
             <language ident="gez">Gǝʿǝz</language>
@@ -55,7 +68,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               </p>
            <p>
            According to <bibl><ptr target="bm:Marrassini1993AmdaSeyon"/><citedRange unit="page">43-46</citedRange></bibl>, 
-              originally it was not a real historical work, but an homily to read in the church, with a propagandist purpose
+              originally it was not a real historical work, but a homily to read in the church, with a propagandist purpose.
            </p>
         </abstract>
          <textClass>
@@ -73,27 +86,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
+         
+         
          <div type="bibliography">
+            
             <listBibl type="editions">
-               <bibl><ptr target="bm:Marrassini1993AmdaSeyon"/></bibl>
+               <bibl><ptr target="bm:Marrassini1993AmdaSeyon"/><note>Uses mss BnF Abbadie 52, 118, Bodleian Aeth 29, BL Orient 821, Mondon 27, BnF 147 (143 Zotenberg), Rüppell Ia</note></bibl>
+               
+               
                <bibl>
                   <ptr target="bm:Kropp1994AmdaSeyon"/>
-                  
+                  <note>Uses mss BnF Abbadie 52, 118, Bodleian Aeth 29, BL Orient 821, Mondon 27, BnF 147 (143 Zotenberg), Rüppell Ia</note>
                </bibl>
                
-               <bibl> <ptr target="bm:Perruchon1889Amda"/></bibl>
+               <bibl><ptr target="bm:Perruchon1889Amda"/>
+                  <note>Uses ms BL Orient 821</note>
+               </bibl>
             </listBibl>
             
             <listBibl type="translation">
                <bibl><ptr target="bm:Marrassini1993AmdaSeyon"/></bibl>
-               <bibl><ptr target="bm:Dillmann1884Amda"/> </bibl>
+               <bibl><ptr target="bm:Dillmann1884Amda"/> 
+                  <note>Uses ms Bodleian Aeth 29</note>
+               </bibl>
                <bibl><ptr target="bm:Ducati1934Amda"/></bibl>
-               <bibl><ptr target="bm:Huntingford1965AmdaSeyon"/></bibl>
+               <bibl><ptr target="bm:Huntingford1965AmdaSeyon"/>
+                  <note>Uses ms BL Orient 821</note>
+               </bibl>
                <bibl>
-                  <ptr target="bm:Kropp1994AmdaSeyon"/>
+                  <ptr target="bm:Kropp1994AmdaSeyonTr"/>
                   
                </bibl>
-               <bibl><ptr target="bm:Perruchon1889Amda"/></bibl>
+               <bibl><ptr target="bm:Perruchon1889Amda"/>
+                  <note>Uses ms BL Orient 821</note>
+               </bibl>
                <bibl><ptr target="bm:Turaev1936Chronicles"/></bibl>
                <bibl> <ptr target="bm:Paez1906HistAeth"/> <citedRange unit="page">1-14</citedRange></bibl>
             </listBibl>
