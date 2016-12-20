@@ -10,11 +10,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Testamentum Domini</title>
-            <title xml:id="t2">Kidan zäʾǝgziʾǝnä Iyäsus Krǝstos</title>
+            <title xml:id="t1" xml:lang="gez">ኪዳን፡ ዘእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡</title>
+            <title xml:lang="lat" corresp="#t1">Testamentum Domini</title>
+            <title xml:lang="en" corresp="#t1">Testament of Our Lord Jesus Christ</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Kidan zäʾǝgziʾǝnä Iyäsus Krǝstos</title>
+            
+            
+            <title xml:lang="lat" xml:id="t2arabic">Testamentum Domini (Arabic)</title>
+            <title xml:lang="lat" xml:id="t3syriac">Testamentum Domini (Syriac)</title>
+            <title xml:lang="lat" xml:id="t4greek">Testamentum Domini (Syriac)</title>
+            
+            
             <editor role="generalEditor" key="AB"/>
+            <editor key="ES" role="createdRecord"></editor>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
+            <funder>ERC</funder>
+            <respStmt>
+               <resp>digitization</resp>
+               <persName ref="AE" from="2014" to="2016"/>
+               
+            </respStmt>
          </titleStmt>
+         
+         <editionStmt>
+            <p>Digital text based on  <bibl><ptr target="bm:Beylot1984TestDom"/></bibl>.</p>
+         </editionStmt>
+         
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
@@ -30,26 +51,86 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            
          </sourceDesc>
       </fileDesc>
+      
+      
+      <encodingDesc>
+         <projectDesc>
+            <p>Text prepared within the framework of the TraCES project.</p>
+         </projectDesc>
+         <editorialDecl>
+            <correction>
+               <p>The following errors
+                  in Beylot edition have been corrected:
+                  <list>
+                     <item>...</item>
+                     <item>...</item>
+                     <item>...</item>
+                     
+                  </list>
+               </p>
+               
+            </correction>
+            
+            <normalization>
+               <p>Original spelling and typography is retained.</p>
+            </normalization>
+         </editorialDecl>
+         <tagsDecl>
+            <!-- the format for the tagsDecl to be specified -->
+         </tagsDecl>
+         
+      </encodingDesc>
+      
       <profileDesc>
+         <creation notBefore="0500">The long investigation carried out after the dis-covery and publication of the Syriac version of the T.D. 
+            has concluded  (cp. <bibl><ptr target="bm:Coquin1974TestDom"/></bibl>; <bibl><ptr target="bm:Ellwardt2005TestDom"/></bibl>) that the work, one of the last products of the pseudo-apostolic literature, was originally composed in Greek in the 5th cent. (contra, cp. Drijvers 1994). 
+            The almost totally lost <ref target="#t4greek">Greek original</ref> is attested by three integral versions in <ref target="#t3syriac">Syriac</ref>, <ref target="#t2arabic">Arabic</ref>, and Geez, plus a few Latin and Georgian fragments, and the widely attested Coptic version of the Mystagogy.  See <bibl><ptr target="bm:Bausi2010TestDom"/></bibl>.
+         </creation>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="syr">Syriac</language>
          </langUsage>
+         <abstract>
+            <p>
+               One of the major canonico-liturgical works of the Ethiopian Orthodox Church. As with other works of the same genre, the purpose of the T.D. 
+               is to establish upon the basis of a pseudo-epigraphical authority – in this case, Jesus Christ in person – rules and prescriptions for the right or-ganization of the Church and Christian practice.
+            </p>
+            <p>The T.D. consists of 60 chapters and is clearly subdivided into two parts.</p>
+         </abstract>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="CanonLaw"/>
+               <term key="ChristianLiterature"/>
+               <term key="Liturgy"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2016-12-19" who="ES">updated record</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Bausi2010TestDom"/></bibl>
+               <bibl><ptr target="bm:Coquin1974TestDom"/></bibl>
+               <bibl><ptr target="bm:Ellwardt2005TestDom" corresp="#t3syriac"/></bibl>
+            </listBibl>
+        <listBibl type="editions">
+           <bibl><ptr target="bm:Beylot1984TestDom"/></bibl>
+        </listBibl>
+        
+         </div>
+        
       </body>
    </text>
 </TEI>
