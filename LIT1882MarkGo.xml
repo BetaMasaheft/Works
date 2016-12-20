@@ -15,7 +15,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="en" corresp="#t1">Gospel of Mark</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
+            <funder>ERC</funder>
+            <respStmt>
+               <resp>digitization</resp>
+               <persName ref="WD" from="2015" to="2016"/>
+               
+            </respStmt>
          </titleStmt>
+         
+         <editionStmt>
+            <p>Digital text based on  <bibl><ptr target="bm:Zuurmond1989EvangeliumMarc"/></bibl>.</p>
+         </editionStmt>
+         
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
@@ -34,6 +45,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
+      
+      <encodingDesc>
+         <projectDesc>
+            <p>Text prepared within the framework of the TraCES project.</p>
+         </projectDesc>
+         <editorialDecl>
+                        
+            <normalization>
+               <p>Original spelling and typography is retained.</p>
+            </normalization>
+         </editorialDecl>
+         <tagsDecl>
+            <!-- the format for the tagsDecl to be specified -->
+         </tagsDecl>
+         
+      </encodingDesc>
+      
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -46,10 +74,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2016-12-20" who="ES">updated record</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Zuurmond1989EvangeliumMarc"/>
+               </bibl>
+            </listBibl>
+         </div>
+         
+         
       <div type="edition"> 
          <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BiographyMark">
             <label>Introduction and Biography of Mark</label>
