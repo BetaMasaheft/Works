@@ -34,17 +34,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
           <listWit >
              <listWit rend="other">
-             <witness type="external" corresp="BnF Arabe 264" facs="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89540w/cd0e210"></witness>
+             <witness type="external" corresp="BNFarabe264" facs="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89540w/cd0e210"></witness>
              </listWit>
              <listWit rend="edition">
-                <witness type="external" corresp="BnF Abbadie 97"></witness>
-             <witness type="external" corresp="BnF Abbadie 132"></witness>
-             <witness type="external" corresp="BnF Abbadie 152"></witness>
-             <witness type="external" corresp="EMML 50"></witness>
-             <witness type="external" corresp="ANLin Conti Rossini 27"></witness>
-             <witness type="external" corresp="Oxford Bodleian Bruce 87"></witness>
-             <witness type="external" corresp="Oxford Bodleian Bruce 93"></witness>
-             <witness type="external" corresp="SPK Ms. or. fol. 395"></witness></listWit>
+                <witness  corresp="BNFet94" xml:id="bnfet94"/>
+                <witness  corresp="BNFet123" xml:id="bnfet123"/>
+                <witness  corresp="BNFabbadie97" xml:id="bnfabb97"></witness>
+                <witness  corresp="BNFabbadie132" xml:id="bnfabb132"></witness>
+                <witness  corresp="BNFabbadie152" xml:id="bnfabb152"></witness>
+                <witness corresp="BLorient818" xml:id="blor818"></witness>
+                <witness corresp="BLorient819" xml:id="blor819"></witness>
+                <witness type="external" corresp="EMML50" xml:id="EMML50"></witness>
+                <witness type="external" corresp="ANLcontirossini27" xml:id="anlcr27"></witness>
+                <witness  corresp="BDLbruce87" xml:id="BDLbruce87"></witness>
+                <witness  corresp="BDLbruce93" xml:id="BDLbruce93"></witness>
+             <witness type="external" corresp="SPK Ms. or. fol. 395" xml:id="berlin395"></witness></listWit>
           </listWit>
          </sourceDesc>
       </fileDesc>
@@ -107,11 +111,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>
             <listBibl type="editions">
                <bibl><ptr target="bm:Praetorius1870Fabula"/></bibl>
-               <bibl><ptr target="bm:Bezold1905KebraN"/></bibl>
+               <bibl corresp="#bnfet94 #bnfet123 #BDLbruce93 #BDLbruce87 #berlin395 #blor818 #blor819"><ptr target="bm:Bezold1905KebraN"/></bibl>
             </listBibl>
             
             <listBibl type="catalogue">
-               <bibl><ptr target="bm:Dillmann1848Catalogus"/><citedRange unit="page">68-72; 74</citedRange></bibl>
+               <bibl corresp="#BDLbruce87 #BDLbruce93"><ptr target="bm:Dillmann1848Catalogus"/><citedRange unit="page">68-72; 74</citedRange></bibl>
+               <bibl corresp="#bnfet94 #bnfet123"><ptr target="bm:Zotenberg1877Catalogue"/></bibl>
+               <bibl corresp="#blor818 #blor819"><ptr target="bm:Wright1877BM"/><citedRange unit="page">297</citedRange></bibl>
             </listBibl>
             
             <listBibl type="relations">
