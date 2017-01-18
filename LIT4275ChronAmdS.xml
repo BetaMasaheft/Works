@@ -66,14 +66,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             
           
 
-            <listWit>
-               <witness corresp="BLorient821" xml:id="blorient821"/>
-               <witness corresp="BDLaeth29" xml:id="bdlaeth29"/>
+            <listWit xml:id="all">
+               <listWit xml:id="edDillmann"><witness corresp="BDLaeth29" xml:id="bdlaeth29"/></listWit>
+               <listWit xml:id="transPerr"><listWit xml:id="transHunt"><witness corresp="BLorient821" xml:id="blorient821"/></listWit>
+               <witness corresp="BNFet147" xml:id="bnfet147"/></listWit>
                <witness corresp="BNFmondon27" xml:id="bnfmondon27"/>
                <witness corresp="Frueppel1a" xml:id="frueppel1a"/>
                <witness corresp="BNFabbadie52" xml:id="bnfabbadie52"/>
                <witness corresp="BNFabbadie118" xml:id="bnfabbadie118"/>
-               <witness corresp="BNFet147" xml:id="bnfet147"/>
+               
                
                
             </listWit>
@@ -145,6 +146,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          
          <change when="2016-12-14" who="ES">CREATED: text record</change>
+         <change when="2017-01-18" who="ES">updated record</change>
          
          
       </revisionDesc>
@@ -158,11 +160,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <listBibl type="editions">
                
                               
-               <bibl corresp="#bnfabbadie52 #bdlaeth29 #blorient821 #bnfmondon27 #bnfet147 #frueppel1a">
+               <bibl corresp="#all">
                   <ptr target="bm:Marrassini1993AmdaSeyon"/></bibl>
                
                
-               <bibl corresp="#bnfabbadie52 #bnfabbadie118 #bdlaeth29 #blorient821 #bnfmondon27 #bnfet147 #frueppel1a">
+               <bibl corresp="#all">
                   <ptr target="bm:Kropp1994AmdaSeyon"/>
                   
                </bibl>
@@ -173,7 +175,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>
             
             <listBibl type="translation">
-               <bibl corresp="#bnfabbadie52 #bdlaeth29 #blorient821 #bnfmondon27 #bnfet147 #frueppel1a"><ptr target="bm:Marrassini1993AmdaSeyon"/></bibl>
+               <bibl corresp="#all"><ptr target="bm:Marrassini1993AmdaSeyon"/></bibl>
                <bibl corresp="#bdlaeth29"><ptr target="bm:Dillmann1884Amda"/> 
                   
                </bibl>
@@ -181,11 +183,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <bibl corresp="#blorient821"><ptr target="bm:Huntingford1965AmdaSeyon"/>
                   
                </bibl>
-               <bibl corresp="#bnfabbadie52 #bnfabbadie118 #bdlaeth29 #blorient821 #bnfmondon27 #bnfet147 #frueppel1a">
+               <bibl corresp="#all">
                   <ptr target="bm:Kropp1994AmdaSeyonTr"/>
                   
                </bibl>
-               <bibl corresp="#blorient821"><ptr target="bm:Perruchon1889Amda"/>
+               <bibl corresp="#transPerr"><ptr target="bm:Perruchon1889Amda"/>
                   
                </bibl>
                <bibl><ptr target="bm:Turaev1936Chronicles"/></bibl>
