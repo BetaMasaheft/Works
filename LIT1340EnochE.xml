@@ -10,9 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Enoch, [Ethiopic] Book of</title>
-            <title xml:id="t2">Mäṣḥafä Henok, 1 Enoch</title>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ሄኖክ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa Henok</title>
+            <title xml:lang="en" corresp="#t1">Book of Enoch</title>
+            <title xml:id="t2"  xml:lang="en">Ethiopic Book of Enoch</title>
+            <title xml:id="t3" xml:lang="en">1 Enoch</title>
+            <title xml:id="t4aramaic">Aramaic Version of Enoch</title> <!--titles of work in foreign languages written in English-->
+            <title xml:id="t5greek">Greek Version of Enoch</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="DR"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -34,10 +40,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
+         <abstract><p>The <foreign xml:lang="gez">Maṣḥafa Henok</foreign> is a Jewish apocalypse preserved only in Gǝʿǝz.
+         The original language of the work seems to have been Aramaic. There are fragments of a Greek version, which have been used
+         by the Ethiopic translator as a Vorlage.
+            <bibl><ptr target="bm:Uhlig2005EAEEnoch"/></bibl></p></abstract>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="grc">Greek</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
       </profileDesc>
@@ -45,11 +55,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-01-24">Updated title, added abstract, bibliography and textparts</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+        <div type="bibliography">
+           
+           <listBibl type="secondary">
+              <bibl><ptr target="bm:Uhlig2005EAEEnoch"/></bibl>
+           </listBibl>
+           
+           <listBibl type="editions">
+              <bibl><ptr target="bm:Dillmann1851Henoch"/></bibl>
+              <bibl><ptr target="bm:Charles1912Enoch"/></bibl>
+              <bibl><ptr target="bm:KnibbUllendorff1978Enoch1"/></bibl>
+           </listBibl>
+           
+           <listBibl type="translation">
+              <bibl><ptr target="bm:KnibbUllendorff1978Enoch2"/></bibl>
+           </listBibl>
+           
+           <listBibl type="relations">
+              <bibl/>
+              <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1340EnochE#t5greek" passive="LIT1340EnochE#t4aramaic"/>
+              <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1340EnochE#t1" passive="LIT1340EnochE#t5greek"/>
+           </listBibl>
+        </div>
+         
+         <div type="edition">
+            <div type="textpart" subtype="book" xml:lang="gez" xml:id="Watchers">
+               <label>Book of the Watchers</label>
+            </div>
+            <div type="textpart" subtype="book" xml:lang="gez" xml:id="Parables">
+               <label>Book of the Parables</label>
+            </div>
+            <div type="textpart" subtype="book" xml:lang="gez" xml:id="Luminaries">
+               <label>Book of the Luminaries</label>
+            </div>
+            <div type="textpart" subtype="book" xml:lang="gez" xml:id="DreamVisions">
+               <label>Book of the Dream Visions</label>
+            </div>
+            <div type="textpart" subtype="book" xml:lang="gez" xml:id="Epistle">
+               <label>Book of the Epistle</label>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

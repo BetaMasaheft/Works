@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Maṣḥafa miṭat</title>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ሚጠተ፡ ብርሃናተ፡ ሰማይ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa miṭata bǝrhānāta samāy</title>
+            <title xml:lang="en" corresp="#t1">Book of the Revolution of the Lights of Heaven</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -27,13 +29,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <listWit>
-               <witness/>
+               <witness corresp="BNFet64#ms_i3"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
          <abstract>
-            <p/>
+            <p>Small calendarian treatise containing a development and application of the Book of Enoch, chapters 72-76.
+            It deals with the length and variations of the year, months, days, hours, etc.</p>
          </abstract>
          <langUsage>
             <language ident="en">English</language>
@@ -44,6 +47,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="DR" when="2017-01-24">Updated title, added witness, abstract and relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -51,10 +55,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="bibliography">
             <listBibl type="relations">
                <bibl/>
-               <relation name="saws:formsPartOf" active="LIT3850MashafaM" passive=""><!--apparently developed from LIT2467TheBoo--></relation>
-               <relation name="saws:isAttributedAuthorOf"
-                         active=""
-                         passive="LIT3850MashafaM"><!--Henok--></relation>
+               <relation name="saws:isRelatedTo" active="LIT3850MashafaM" passive="LIT1340EnochE#Luminaries"/>
             </listBibl>
          </div>
       </body>
