@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Prayer of supplication the Virgin in two parts, recited at night</title>
+            <title xml:id="t1">Prayer of supplication to Mary in two parts, recited at night</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -27,7 +27,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <listWit>
-               <witness/>
+               <witness corresp="BNFet58#ms_i6"/>
+               <witness corresp="BAVet15#p1_i15.9"/>
+               <witness corresp="BAVet17#ms_i2"/>
+               <witness corresp="BAVet40#ms_i3"/>
+               <witness corresp="ESqma005"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -44,15 +48,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="DR" when="2017-01-26">Additions</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:formsPartOf" active="LIT3582Prayer" passive=""><!--ጸሎት፡ ወአስተብቍዖት፡ ኀበ፡ እግዚእትነ፡ ማርያም፡ ዘይትነበብ፡ በሌሊት።--></relation>
-            </listBibl>
+        
+         <div type="edition">
+            <div type="textpart" subtype="incipit"  xml:lang="gez" xml:id="Incipit">
+               <ab>ጸሎት፡ ወአስተብቍዖት፡ ኀበ፡ እግዝእትነ፡ ማርያም፡ ዘይትነበብ፡ በሌሊት።</ab>
+            </div>
+            <div type="textpart" subtype="chapter"  xml:lang="gez" xml:id="FirstPart">
+               <!--the following is the incipit-->
+               <ab>እሴብሕ፡ ጸጋኪ፡ ኦእግዝእትየ፡ ማርያም፡ ወእስእለኪ፡ ታብርሂ፡ ልብየ፡ ወታርትዒ፡ ፍኖትየ፡ ከመ፡ እሖር፡ በንጹሕ፡ ልብ፡ በግኖተ፡ ክርስቶስ፡ ወበትእዛዛቲሁ።</ab>
+            </div>
+            <div type="textpart" subtype="chapter"  xml:lang="gez" xml:id="SecondPart">
+               <!--the following is the incipit-->
+               <ab>ኦመሰረት፡ አንቲ፡ ለኵሉ፡ ዓለም፡ ዘኮንኪ፡ ማኅደሮ፡ ለዐቢይ፡</ab>
+            </div>
          </div>
       </body>
    </text>
