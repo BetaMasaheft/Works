@@ -13,6 +13,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">ዜና፡ ለማርያም፡ ወፍልሰታ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Zenā la-Māryām wa-fǝlsatā</title>
             <title xml:lang="en" corresp="#t1">Story of Mary and her Assumption</title>
+            <title xml:lang="syr" xml:id="t2syriac">Syriac Version</title>
+            <title xml:lang="ar" xml:id="t3arabic">Arabic Version</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -30,8 +32,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         <listWit>
+            <witness type="external" corresp="BnF Syriaque 196"/>
+         </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -51,7 +54,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+    <div type="bibliography">
+       <listBibl type="editions">
+          <bibl corresp="#t3arabic">
+             <ptr target="bm:Enger1856Transitu"/>
+          </bibl>   
+          <bibl corresp="#t2syriac">
+             <ptr target="bm:Wright1865Departure"/>
+          </bibl>
+       </listBibl>
+       <listBibl type="translation">
+          <bibl corresp="#t3arabic">
+             <ptr target="bm:Enger1856Transitu"/>
+          </bibl>
+          <bibl corresp="#t2syriac">
+             <ptr target="bm:Wright1865Departure"/>
+          </bibl>
+       </listBibl>
+    </div>
+         
+         <div type="edition">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Prologue">
+               <label>Prologue</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MainPart">
+               <label>Main Part</label>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
