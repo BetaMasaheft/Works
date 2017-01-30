@@ -15,6 +15,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="en" corresp="#t1">Story of Mary and her Assumption</title>
             <title xml:lang="syr" xml:id="t2syriac">Syriac Version</title>
             <title xml:lang="ar" xml:id="t3arabic">Arabic Version</title>
+            <title xml:lang="grc" xml:id="t4greek">Arabic Version</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -43,6 +44,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="syr">Syriac</language>
+            <language ident="grc">Greek</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
@@ -50,6 +53,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-10-27">Title updated</change>
+         <change who="DR" when="2017-01-30">Small changes</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -62,6 +66,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <bibl corresp="#t2syriac">
              <ptr target="bm:Wright1865Departure"/>
           </bibl>
+          <bibl corresp="#t4greek">
+             <ptr target="bm:Tischendorf1866Apocalypses"/> 
+             <citedRange unit="page">xxxvi</citedRange>
+             <citedRange unit="page">99</citedRange>
+          </bibl>
        </listBibl>
        <listBibl type="translation">
           <bibl corresp="#t3arabic">
@@ -70,6 +79,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <bibl corresp="#t2syriac">
              <ptr target="bm:Wright1865Departure"/>
           </bibl>
+          <bibl corresp="#t2syriac"><ptr target="bm:Wright1865Contributions"/>
+             <citedRange unit="page">22</citedRange></bibl>
+       </listBibl>
+       <listBibl type="catalogue">
+          <bibl corresp="#t3arabic"><ptr target="bm:Zotenberg1874Catalogue"/><citedRange unit="page">181</citedRange></bibl>
        </listBibl>
     </div>
          

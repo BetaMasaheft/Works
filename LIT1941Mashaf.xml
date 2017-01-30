@@ -13,11 +13,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ልደታ፡ ለማርያም፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa lǝdatā la-Māryām</title>
             <title xml:lang="en" corresp="#t1">The Book of the Nativity of Mary</title>
-            <title xml:lang="la" corresp="#t1">Liber Nativitatis Mariae</title>
+            <title xml:lang="la" xml:id="t6latin">Liber Nativitatis Mariae</title>
             <title xml:id="t2" xml:lang="la" resp="PRS7936Postel">Protevangelium Jacobi</title>
             <title xml:id="t3" xml:lang="en">Gospel of James</title>
-            <title xml:lang="grc" xml:id="t3greek"></title>
-            <title xml:lang="ar" xml:id="t4arabic"></title>
+            <title xml:lang="grc" xml:id="t3greek"></title> <!--title to be added-->
+            <title xml:lang="ar" xml:id="t4arabic"></title> <!--title to be added-->
+            <title xml:lang="syr" xml:id="t5syriac"></title> <!--title to be added-->
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -35,8 +36,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+           <listWit>
+              <witness corresp="BnF Syriaque 232"/>  
+              <witness corresp="BnF Syriaque 238"/>
+              <witness corresp="BnF Arabe 147" facs="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc894209/cd0e565"/>
+              <witness corresp="BnF Arabe 264" facs="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89539v/cd0e245"/>
+           </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -45,6 +50,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="syr">Syriac</language>
+            <language ident="grc">Greek</language>
          </langUsage>
          <creation notAfter="0300" corresp="#t3greek"/>
       </profileDesc>
@@ -53,6 +60,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-10-20">Title updated and bibliography added</change>
+         <change who="DR" when="2017-01-30">Witnesses added</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -60,6 +68,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="bibliography">
             <listBibl type="secondary">
                <bibl><ptr target="bm:Ezra2007Ledata"/></bibl>
+            </listBibl>
+            <listBibl type="editions">
+               <bibl corresp="#t6latin">
+                  <ptr target="bm:Giles1852Codex"/>
+                  <citedRange unit="page">66-89</citedRange>
+               </bibl>
+               <bibl corresp="#t3greek">
+                  <ptr target="bm:Tischendorf1853Evangelia"/>
+                  <citedRange unit="page">1-49</citedRange>
+               </bibl>
+               <bibl corresp="#t5syriac">
+                  <ptr target="bm:Wright1865Contributions"/>
+               </bibl>
             </listBibl>
          </div>
       </body>
