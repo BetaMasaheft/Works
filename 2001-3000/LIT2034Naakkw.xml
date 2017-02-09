@@ -10,7 +10,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Näʾakkwǝtäkä amlak bäwäldǝkä</title>
+            <title xml:id="t1">Anaphora of Our Lady <persName ref="PRS6819Mary">Mary</persName></title>
+            <title xml:id="t2" xml:lang="gez">ነአኩተከ፡ አምላክ፡ በወልድከ፡ ዋህድ፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Naʾakkwǝtaka ʾamlāk bawaldǝka wāhǝd ...</title>
+            <title corresp="#t2" xml:lang="en">We give thee Thanks, O God, by thy Only-Begotten Son ...</title>
+            <author ref="PRS4824Gregory"></author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,15 +43,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Homily"></term>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-02-09" who="ES">updated title keywords relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl/>
+            <relation name="saws:isAttributedToAuthor" active="LIT2034Naakkw" passive="PRS4824Gregory"></relation>
+            <relation name="saws:P129i_is_subject_of" active="PRS6819Mary" passive="LIT2034Naakkw"></relation>
+         </listBibl>
+         <listBibl type="editions">
+            <bibl>
+               <ptr target="bm:Hammerschmidt1987Anaphoras"></ptr><citedRange>170, note 49</citedRange>
+            </bibl>
+         </listBibl>
          <ab/>
       </body>
    </text>
