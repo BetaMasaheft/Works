@@ -14,10 +14,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:id="t1">Psalter
+                <title xml:id="t1">Ethiopic Psalter
 
                 </title>
-                <title xml:id="t2">Dawit</title>
+                <title xml:lang="gez" xml:id="t2">ዳዊት፡</title>
+                <title xml:lang="gez" corresp="#t2" type="normalized">Dāwit</title>
+                <title xml:lang="en" corresp="#t2">David</title>
 
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -36,14 +38,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </availability>
          </publicationStmt>
             <sourceDesc>
-                <listBibl type="editions">
-                    <bibl> 
-                  <ptr target="bm:Potken1513Psalterium"/>
-               </bibl>
-                    <bibl> 
-                  <ptr target="bm:Ludolf1701Psalterium"/>
-               </bibl>
-                </listBibl>
+                <p/>
+                
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -56,13 +52,35 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <language ident="it">Italian</language>
                 <language ident="gez">Gǝʿǝz</language>
             </langUsage>
+            
+            <textClass>
+                <keywords scheme="#ethioauthlist">
+                    <term key="Bible"/>
+                    <term key="OldTestament"/>
+                    <term key="ChristianLiterature"/>
+                </keywords>
+            </textClass>
         </profileDesc>
         <revisionDesc>
             <change who="MV" when="2016-04-26">Created work</change>
+            <change when="2017-02-09" who="ES">updated keywords and relations</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
+            <listBibl type="editions">
+                <bibl> 
+                    <ptr target="bm:Potken1513Psalterium"/>
+                </bibl>
+                <bibl> 
+                    <ptr target="bm:Ludolf1701Psalterium"/>
+                </bibl>
+            </listBibl>
+            
+            <listBibl type="relations">
+                <bibl/>
+                <relation name="saws:contains" active="LIT2701Dawit" passive="LIT2000Mazmur LIT1233Cantic LIT2362Songof LIT2509Weddas LIT1113Anqasa"></relation>
+            </listBibl>
         
             <ab/>
             
