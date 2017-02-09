@@ -13,14 +13,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      type="work">
     <teiHeader>
         <fileDesc>
+            
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ነገሥት፡ ቀዳማዊ፡</title>
-                <title xml:lang="gez" corresp="#t1" type="normalized">Nagaśt qadāmāwi</title>
-                <title xml:lang="en" corresp="#t1">Book of Kings 1</title>
-                <title xml:lang="en" xml:id="t2">Book of Samuel 1</title>
-            <editor role="generalEditor" key="AB"/>
-            <funder>Akademie der Wissenschaften in Hamburg</funder>
-         </titleStmt>
+                <title xml:id="t1" xml:lang="en">Book of Samuel 1 = (Ethiopic) Book of Kings 1</title>
+                
+                
+                <title xml:id="t2" xml:lang="gez">ነገሥት፡ ቀዳማዊ፡</title>
+                <title corresp="#t2" xml:lang="gez" type="normalized">Nagaśt qadāmāwi</title>
+                <title corresp="#t2" xml:lang="en">First Kings</title>
+                
+                <title xml:id="t3">1 Sam (Septuagint)</title>
+                
+                <editor role="generalEditor" key="AB"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
+            </titleStmt>
+            
+            
             <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
@@ -50,27 +58,36 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <language ident="it">Italian</language>
                 <language ident="gez">Gǝʿǝz</language>
             </langUsage>
+            
+            <textClass>
+                <keywords>
+                    <term key="Bible"></term>
+                    <term key="OldTestament"></term>
+                </keywords>
+            </textClass>
         </profileDesc>
         <revisionDesc>
             <change who="MV" when="2016-04-26">Created work</change>
+            <change when="2017-02-09" who="ES">updated title, keywords, relation</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-        <div type="bibliography">
+            <listBibl type="relations">
+                <bibl/>
+                <relation name="saws:formsPartOf" active="LIT2697Sam" passive="LIT1719Bookso"></relation>
+            </listBibl>
             <listBibl type="editions">
                 <bibl>
                   <ptr target="bm:Dillmann1861VetTest"/>
                   <citedRange unit="page">1-53</citedRange>
                </bibl>
             </listBibl>
-        </div>
+        
             <div type="edition">
                 <ab/>
             </div>
-            <div type="translation" xml:lang="en">
-                <ab/>
-            </div>
+            
         </body>
     </text>
 </TEI>

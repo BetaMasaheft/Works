@@ -13,17 +13,24 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      type="work">
     <teiHeader>
         <fileDesc>
+            
             <titleStmt>
-                <title>
-                <date/>
-                </title>
-                <title xml:id="t1">Book of Kings 4</title>
-                <title>ነገሥት፡ ራብዓዊ፡</title>
-                <title xml:id="t2">Nagaśt rābǝʿāwi</title>
-                <title xml:id="t3">Book of Kings 2</title>
-            <editor role="generalEditor" key="AB"/>
-            <funder>Akademie der Wissenschaften in Hamburg</funder>
-         </titleStmt>
+                <title xml:id="t1" xml:lang="en">Kings 2 = (Ethiopic) Book of Kings 4</title>
+                
+                
+                <title xml:id="t2" xml:lang="gez">ነገሥት፡ ራብዓዊ፡</title>
+                <title corresp="#t2" xml:lang="gez" type="normalized">Nagaśt rābǝʿāwi</title>
+                <title corresp="#t2" xml:lang="en">Fourth Kings</title>
+                
+                <title xml:id="t3">Kings 2 (Septuagint)</title>
+                <title corresp="#t3">Kgs 2</title>
+                
+                <editor role="generalEditor" key="AB"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
+            </titleStmt>
+            
+            
+            
             <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
@@ -38,7 +45,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </availability>
          </publicationStmt>
             <sourceDesc>
-                <listWit/>
+                <p/>
                 
             </sourceDesc>
         </fileDesc>
@@ -52,27 +59,37 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <language ident="it">Italian</language>
                 <language ident="gez">Gǝʿǝz</language>
             </langUsage>
+            
+            <textClass>
+                <keywords>
+                    <term key="Bible"></term>
+                    <term key="OldTestament"></term>
+                </keywords>
+            </textClass>
         </profileDesc>
         <revisionDesc>
             <change who="MV" when="2016-04-26">Created work</change>
+            <change when="2017-02-09" who="ES">updated title, keywords, relation</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-        <div type="bibliography">
+            <listBibl type="relations">
+                <bibl/>
+                <relation name="saws:formsPartOf" active="LIT2700Kings" passive="LIT1719Bookso"></relation>
+            </listBibl>
+        
             <listBibl type="editions">
                 <bibl>
                   <ptr target="bm:Dillmann1871VetTest"/>
                   <citedRange unit="page">52-98</citedRange>
                </bibl>
             </listBibl>
-        </div>
+        
             <div type="edition">
                 <ab/>
             </div>
-            <div type="translation" xml:lang="en">
-                <ab/>
-            </div>
+            
         </body>
     </text>
 </TEI>
