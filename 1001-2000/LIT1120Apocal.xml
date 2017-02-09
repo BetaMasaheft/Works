@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Apocalypse ofBaruch</title>
+            <title xml:id="t1">Apocalypse of Baruch</title> <!--not completed-->
             <title xml:id="t2">5 Baruch</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -43,17 +43,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="ChristianLiterature"/>
+               <term key="ApocryphaPseudoepigrapha"/>
+            </keywords>
+         </textClass>
+         <abstract><p>The Ethiopic Apocalypse of Baruch (5 Baruch) should not be confused with the Syriac Apocalypse of Baruch (2 Baruch)
+            or the Greek Apocalypse of Baruch (3 Baruch). It was originally composed in Ethiopia and exists in a Christian and a Beta ʾƎsrāʾel version, which
+            was purged of obvious Christian elements.</p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="MV" when="2016-08-05">Added witness.</change>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-02-09">Added keywords, title, bibliography, abstract</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Witakowski2003EAEBaruchApo"/></bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1120Apocal" passive="PRS2516Baruch"/>
+               <relation name="saws:isDifferentTo" active="LIT1120Apocal" passive="LIT2167Parali"/>
+               <relation name="saws:isShorterVersionOf" active="LIT1120Apocal" passive="LIT1127Apocal"><!-- or LIT1128Apocal?-->
+                  <desc>according to <bibl><ptr target=""/></bibl></desc> 
+               </relation>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
