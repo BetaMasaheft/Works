@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Anaphora of St. Mark</title>
+            <title xml:lang="gez" xml:id="t1">አኰቴተ፡ ቍርባን፡ ዘማርቆስ፡</title><!--to be completed-->
+            <title xml:lang="gez" type="normalized" corresp="#t1">ʾAkkʷateta qʷǝrbān za-Mārqos</title><!--to be completed-->
+            <title xml:lang="en" corresp="#t1">Anaphora of St. Mark</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,16 +41,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="ChristianLiterature"/>
+               <term key="Liturgy"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-02-09">Added keywords, title, incipit, bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         
+        <div type="bibliography">
+           <listBibl type="secondary">
+            <bibl><ptr target="bm:Habtemichael2003EAEAnaphoras"/></bibl>
+         </listBibl>
+           <listBibl type="relations">
+              <bibl/>
+              <relation name="saws:isAttributedToAuthor" active="LIT1102Anapho" passive="PRS6751Mark"/>
+           </listBibl>
+        </div>
+         
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  እግዚአብሔር፡ አምላክነ፡ አብ፡ አኃዜ፡ ኵሉ፡ ለከ፡ ንሴብሐከ፡ ለከ፡ ንዌድሰከ፡
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
