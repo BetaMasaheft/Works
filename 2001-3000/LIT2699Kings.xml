@@ -14,13 +14,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>
-                <date/>
-                </title>
-                <title xml:id="t1">Book of Kings 3</title>
-                <title>ነገሥት፡ ሣልሳዊ፡</title>
-                <title xml:id="t2">Nagaśt śālǝsāwi</title>
-                <title xml:id="t3">Book of Kings 1</title>
+                <title xml:id="t1" xml:lang="en">Kings 1 = (Ethiopic) Book of Kings 3</title>
+               
+                
+                <title xml:id="t2" xml:lang="gez">ነገሥት፡ ሣልሳዊ፡</title>
+                <title corresp="#t2" xml:lang="gez" type="normalized">Nagaśt śālǝsāwi</title>
+                <title corresp="#t2" xml:lang="en">Third Kings</title>
+                
+                <title xml:id="t3">1 Kings (Septuagint)</title>
+                
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -53,27 +55,39 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <language ident="it">Italian</language>
                 <language ident="gez">Gǝʿǝz</language>
             </langUsage>
+            
+            <textClass>
+                <keywords>
+                    <term key="Bible"></term>
+                    <term key="OldTestament"></term>
+                </keywords>
+            </textClass>
+            
         </profileDesc>
         <revisionDesc>
             <change who="MV" when="2016-04-26">Created work</change>
+            <change when="2017-02-09" who="ES">updated title, keywords, relation</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-        <div type="bibliography">
+           <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:formsPartOf" active="LIT2699Kings" passive="LIT1719Bookso"></relation>
+           </listBibl> 
+           
+       
             <listBibl type="editions">
                 <bibl>
                   <ptr target="bm:Dillmann1871VetTest"/>
                   <citedRange unit="page">1-51</citedRange>
                </bibl>
             </listBibl>
-        </div>
+        
             <div type="edition">
                 <ab/>
             </div>
-            <div type="translation" xml:lang="en">
-                <ab/>
-            </div>
+            
         </body>
     </text>
 </TEI>
