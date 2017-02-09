@@ -10,8 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mäzmurä Krǝstos</title>
-            <author>Mäzmurä Krǝstos</author>
+            <title xml:id="t1" xml:lang="gez">መዝሙረ፡ ክርስቶስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Mazmura Krǝstos</title>
+            <title xml:lang="en" corresp="#t1">Psalter of Jesus Christ</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,15 +42,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Poetry"/>
+            </keywords>
+         </textClass>
+         
+         <abstract><p>A <date notBefore="1400" notAfter="1500">15th century</date> composition in honour
+            of <persName ref="PRS5684JesusCh">Jesus Christ</persName> attributed to <persName ref="PRS6956Mazmura" role="author"/> </p>
+         </abstract>
+         
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-02-09" who="ES">updated record</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations"><bibl/>
+            <relation name="saws:isAttributedToAuthor" active="LIT2003Mazmur" passive="PRS6956Mazmura"></relation>
+            <relation name="saws:P129i_is_subject_of" active="PRS5684JesusCh" passive="LIT2003Mazmur"></relation>         
+         </listBibl>
          <ab/>
       </body>
    </text>

@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mǝntänu aʿassǝyäkki</title>
+            <title xml:id="t1">ምንታኑ፡ አዓስየኪ፡ </title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Mǝntanu ʾaʿāssǝyakki</title>
+            <title corresp="#t1" xml:lang="en">How can I Reward you?</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,15 +41,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         
+         <textClass>
+            <keywords>
+
+               <term key="Poetry"/>
+            </keywords>
+         </textClass>
+         
+         <abstract><p>A short invocation to <persName ref="PRS6819Mary">Mary</persName> attested in the <ref type="title" corresp="LIT2230Saatat">Saʿātāt</ref>.</p>
+            <p> </p>
+         </abstract>
+         
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-02-09" who="ES">updated record keywords title relations</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl/>
+            <relation name="saws:formsPartOf" active="LIT2010Mentan" passive="LIT2230Saatat"/>
+            <relation name="saws:P129i_is_subject_of" active="PRS6819Mary" passive="LIT2010Mentan"/>
+         </listBibl>
          <ab/>
       </body>
    </text>
