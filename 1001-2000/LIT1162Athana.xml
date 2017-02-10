@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Athanasius,Anaphora of</title>
+            <title xml:lang="gez" xml:id="t1">አኰቴተ፡ ቍርባን፡ አትናቴዎስ፡</title> <!--to be completed-->
+            <title xml:lang="gez" type="normalized" corresp="#t1">ʾAkkʷateta qʷǝrbān za-ʾAtnātewos</title><!--to be completed-->
+            <title xml:lang="en" corresp="#t1">Anaphora of Athanasius</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,16 +41,44 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="ChristianLiterature"/>
+               <term key="Liturgy"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-02-10">Added keywords, title, incipit, bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Habtemichael2003EAEAnaphoras"/></bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1101Anapho" passive="PRS2209Athanasi"/>
+               <relation name="saws:formsPartOf" active="LIT1101Anapho" passive="LIT3189Anapho"/>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit">
+               <ab>
+                አሰምዕ፡ ለክሙ፡ ሰማያተ፡ አሰምዕ፡ ለክሙ፡ ምድረ፡
+               </ab>
+            </div>
+            <div type="textpart" subtype="incipit" xml:lang="gez" corresp="#Incipit">
+               <ab>
+                  ʾAsammǝʿ lakǝmu samāyāta ʾasammǝʿ lakǝmu mǝdra
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
