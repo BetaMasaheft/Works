@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Anqäṣä nǝssǝḥa</title>
+            <title xml:lang="gez" xml:id="t1">አንቀጸ፡ ንስሐ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">ʾAnqaṣa nǝssǝḥa</title>
+            <title xml:lang="en" corresp="#t1">The Gate of Penance</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,16 +41,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="ChristianLiterature"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-02-10">Added keywords, title, bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Zanetti2003EAEAnqasa"/></bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>

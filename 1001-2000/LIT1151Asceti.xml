@@ -10,8 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Asceticon</title>
-            <title xml:id="t2">Zena zäʾǝmʾabäwinä qǝddusan</title>
+            <title xml:id="t1" xml:lang="la">Asceticon</title>
+            <title xml:lang="gez" xml:id="t2">ዜና፡ ዘእምአበዊነ፡ ቅዱሳን፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Zenā za-ʾǝm-ʾabawina qǝddusān</title>
+            <title xml:lang="en" corresp="#t2">History of Our Holy Fathers</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -37,19 +39,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="la">Latin</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="ChristianLiterature"/>
+               <term key="MonasticLiterature"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-02-10">Added keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Bausi2007Monastic"/></bibl>
+            </listBibl>
+         </div>
+         
       </body>
    </text>
 </TEI>
