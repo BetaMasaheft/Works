@@ -10,7 +10,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Näʾakkwǝto lägäbare śännayat</title>
+            <title xml:id="t1">The Anaphora of St Gregory of Nyssa</title>
+            <title xml:id="t2">Hosanna Liturgy of St Gregory</title>
+            <title xml:id="t3" xml:lang="gez">ነአኩቶ፡ ለገበሬ፡ ሠናያት፡ ላዕለነ፡ እግዚአብሔር፡ መሐሪ፡</title>
+            <title corresp="#t3" xml:lang="gez" type="normalized">Naʾakkwǝto lagabāre śanāyāt lāʾǝlena, ʾǝgziʾabǝḥer maḥari...</title>
+            <title corresp="#t3" xml:lang="en">We give Thanks, to our Benefactor, God the merciful ...</title>
+            
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,15 +45,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Homily"></term>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-02-13" who="ES">updated title keywords relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl/>
+            <relation name="saws:isAttributedToAuthor" active="LIT2040Naakkw" passive="PRS4824Gregory"></relation>
+            <relation name="saws:formsPartOf" active="LIT2040Naakkw" passive="LIT3189Anapho"></relation>
+            
+         </listBibl>
+         <listBibl type="secondary">
+            <bibl>
+               <ptr target="bm:Hammerschmidt1987Anaphoras"></ptr><citedRange>no. 8</citedRange>
+            </bibl>
+            
+         </listBibl>
+         
+         
          <ab/>
       </body>
    </text>
