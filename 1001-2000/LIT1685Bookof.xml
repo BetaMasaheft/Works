@@ -11,6 +11,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Book of Jeremiah</title>
+            <title xml:id="t2" xml:lang="gez">ትንቢተ፡ ኤርምያስ፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalued">Tǝnbita Ermǝyas</title>
+            <title corresp="#t2" xml:lang="en">Prophecy of Jeremiah</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,15 +42,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="ChristianLiterature"/>
+               <term key="Bible"/>
+               <term key="OldTestament"/>
+
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-02-13" who="ES">added relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl/>
+            <relation name="saws:formsPartOf" active="LIT1685Bookof" passive="LIT2035Jerem"></relation>
+         </listBibl>
          <ab/>
       </body>
    </text>
