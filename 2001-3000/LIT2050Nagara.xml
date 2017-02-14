@@ -10,7 +10,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Nägärä mänäkosat</title>
+            <title xml:id="t1">ነገረ፡ መነኮሳት፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Nagara manakosāt</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,8 +29,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+<listWit>
+   <witness corresp="BLorient757"></witness>
+</listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -39,15 +41,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="MonasticLiterature"></term>
+            </keywords>
+         </textClass>
+         <abstract><p>One of the Ethiopic collections of the <title ref="LIT1136Apopht">Apophthegmata Patrum</title></p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-02-14" who="ES">updated title keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations"><bibl/><relation name="saws:fallsWithin" active="LIT2050Nagara" passive="LIT1136Apopht"></relation></listBibl>
          <ab/>
       </body>
    </text>
