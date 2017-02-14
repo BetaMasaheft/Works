@@ -10,7 +10,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Nägärä Maryam</title>
+            <title xml:id="t1" xml:lang="gez">ነገረ፡ ማርያም፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Nagara Māryām</title>
+            <title corresp="#t1" xml:lang="en">Story of <persName ref="PRS6819Mary">Mary</persName></title>
+            
+            <title xml:id="t2" xml:lang="gez">ገድለ፡ ማርያም፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Gadla Māryām</title>
+            <title corresp="#t2" xml:lang="en">Life of <persName ref="PRS6819Mary">Mary</persName></title>
+            
+            <title xml:id="t3amh" xml:lang="am">ነገረ፡ ማርያም፡</title>
+            <title corresp="#t3" xml:lang="am" type="normalized">Nagara Māryām</title>
+            <title corresp="#t3" xml:lang="en">Story of <persName ref="PRS6819Mary">Mary</persName></title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,8 +39,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit>
+               <witness corresp="BLorient602"></witness>
+               <witness corresp="BLorient603"></witness>
+               <witness corresp="BLorient604"></witness>
+               <witness corresp="BLorient605"></witness>
+               <witness corresp="BLorient607"></witness>
+               <witness corresp="BLorient790"></witness>
+               <witness corresp="BLorient13223" xml:lang="am"></witness>
+               <witness corresp="BLadd16193"></witness>
+               <witness corresp="BNFabb102"></witness>
+               <witness corresp="EMML2461" type="external"></witness>
+               <witness corresp="EMML4279" type="external"></witness>
+               <witness corresp="EMML4355" type="external"></witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -39,15 +62,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         
+         <textClass>
+            <keywords>
+               <term key="Apocrypha"></term>
+               <term key="ChristianLiterature"></term>
+            </keywords>
+         </textClass>
+         <abstract>
+            <p>Ethiopic apocryphal composition, based on many sources of various origins, that develops the account of 
+               Mary’s flight from Herod (Mt 2: 13–17).</p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-02-09" who="ES">updated title keywords relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl/>
+            <relation name="saws:P129i_is_subject_of" active="PRS6819Mary" passive="LIT2051Nagara"></relation>
+         </listBibl>
+         <listBibl type="secondary">
+            <bibl>
+               <ptr target="bm:Witakowski2014NagaraMaryam"></ptr>
+            </bibl>
+         </listBibl>
          <ab/>
       </body>
    </text>
