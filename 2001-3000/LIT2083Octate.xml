@@ -11,7 +11,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Octateuch</title>
-            <title xml:id="t2">Orit</title>
+            <title xml:id="t2">ኦሪት፡</title>
+            <title corresp="#t2">ʾOrit</title>
+            <title corresp="#t2" xml:lang="en">(Books of) Law</title>
+            <title xml:id="t3" xml:lang="en">Eight Books of Moses</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,15 +43,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Bible"></term>
+               <term key="OldTestament"></term>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-02-15" who="ES">added title keywords relations</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl></bibl>
+            <relation name="saws:P57_has_number_of_parts" active="LIT2083Octate" passive="LIT1546Genesi LIT1367Exodus LIT1793Leviti LIT2075Number LIT2637Deuteronomy LIT1696Joshua LIT1700Judges LIT2229RuthBo"></relation>
+         </listBibl>
          <ab/>
       </body>
    </text>
