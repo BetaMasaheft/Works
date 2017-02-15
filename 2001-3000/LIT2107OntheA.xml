@@ -10,8 +10,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">On the Annunciation to Mary by Gabriel</title>
-            <author>John Chrysostom</author>
+            <title xml:id="t1">On the Annunciation to <persName ref="PRS6819Mary">Mary</persName> by <persName ref="PRS4377Gabriel">Gabriel</persName></title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,15 +40,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Theology"></term>
+               <term key="Translation"></term>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-02-15" who="ES">keywords relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl/>
+            <relation name="saws:P129i_is_subject_of" active="PRS6819Mary PRS4377Gabriel" passive="LIT2107OntheA"></relation>
+            
+            <relation name="saws:isAttributedToAuthor" active="LIT2107OntheA" passive="PRS5720JohnChr"></relation>
+         </listBibl>
          <ab/>
       </body>
    </text>
