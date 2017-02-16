@@ -11,8 +11,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Paralipomena of Jeremiah</title>
-            <title>4 Baruch; Liber Baruch;The Rest of the Words of Baruch;Paralipomena of
-               Jeremiah</title>
+            <title xml:id="t2">4 Baruch</title>
+            <title xml:id="t3"> Liber Baruch</title>
+            <title xml:id="t4" type="main">The Rest of the Words of Baruch</title>
+         
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -35,6 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
+         
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
@@ -47,16 +51,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ApocryphaPseudoepigrapha"/>
             </keywords>
          </textClass>
+         <abstract><p>CAVT 225</p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-02-10">Added keywords</change>
+         <change when="2017-02-16" who="ES">split titles added relations</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations"><bibl></bibl>
+            <relation name="saws:formsPartOf" active="LIT2167Parali" passive="LIT2035Jerem"></relation>
+            <relation name="saws:P129i_is_subject_of" active="PRS2516Baruch" passive="LIT2167Parali"></relation>
+         </listBibl>
          <ab/>
       </body>
    </text>
