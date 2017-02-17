@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Anaphora by John Chrysostom</title>
+            <title xml:lang="gez" xml:id="t1">አኰቴተ፡ ቍርባን፡ ዘዮሐንስ፡ አፈ፡ ወርቅ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">ʾAkkʷateta qʷǝrbān za-Yoḥannǝs ʾAfa Warq</title>
+            <title xml:lang="en" corresp="#t1">Anaphora of the Eucharist by John Chrysostom</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,9 +42,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Liturgy"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+         <change when="2017-02-17" who="MV">Added title, keyword, incipit</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -62,6 +70,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="page">51-56</citedRange>
                </bibl>
             </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+                  <citedRange unit="page">20</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Habtemichael2003EAEAnaphoras"/>
+                  <citedRange unit="page">251</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit"  xml:lang="gez">
+               <ab>
+                  ናሁ፡ ንዜኑ፡ ህላዌሁ፡ ለአብ፡ ዘሀሎ፡ እምቅድመ፡ ይትፈጠር፡ ዓለም፡ ወይሄሉ፡ እስከ፡ ለዓለመ፡ ዓለም፡
+               </ab>
+            </div>
          </div>
       </body>
    </text>
