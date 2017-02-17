@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Prayer of the twelfth hour for the time of the twilight</title>
+            <title xml:lang="gez" xml:id="t1">ጸሎት፡ በ፲፪፡ ሰዓት፡ በጊዜ፡ ሰርክ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalot ba-12 saʿāt ba-gize sark</title>
+            <title xml:lang="en" corresp="#t1">Prayer of the twelfth hour for the time of the twilight</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -29,7 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <listWit>
-               <witness/>
+               <witness corresp="BAVet1"></witness>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -40,14 +42,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Liturgy"/>
+               <term key="Prayers"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+         <change when="2017-02-17" who="MV">Added title, keyword, incipit</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <div type="bibliography"><!--Ṣalot ba12saʿāt ba-gize sark--></div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit"  xml:lang="gez">
+               <ab>
+                  በ፭። ህየነ፡ እዴከ፡ ትመርሀኒ፡ ወታነብረኒ፡ የማንከ። አይቴኑ፡ አኀውር፡ እመንፈስከ፡ ወአይቴኑ፡ እጐይይ፡ እምቅድመ፡ ገፅከ፡ ብጹዕ፡ ዘኀረይኮ፡ ወዘተወከፍኮ፡ ወዘአሕደርኮ፡ ውስተ፡ አዕፃዲከ፨
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
