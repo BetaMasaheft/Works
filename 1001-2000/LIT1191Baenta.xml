@@ -10,7 +10,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Bäʾǝntä śǝllasekä</title>
+            <title xml:id="t1" xml:lang="gez">በእንተ፡ ሥላሴከ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Ba-ʾǝnta śǝllāseka</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,16 +40,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Liturgy"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2016-02-20">Title, keywords and relation added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <listBibl type="relations">
+            <bibl/>
+            <relation name="saws:formsPartOf" active="LIT1191Baenta" passive="LIT2300Sebhat"/>
+         </listBibl>
       </body>
    </text>
 </TEI>

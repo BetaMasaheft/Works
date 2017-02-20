@@ -10,8 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dǝrsanä śǝllase</title>
-            <title xml:id="t2">Zena nägäromu läśǝllase</title>
+            <title xml:id="t1" xml:lang="gez">ድርሳነ፡ ሥላሴ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Dǝrsāna śǝllāse</title>
+            <title corresp="#t1" xml:lang="en">Homily on the Trinity</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,16 +41,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+               <term key="Homily"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-02-20">Title, keywords and bibliography added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Lusini2003EAEDersanaS"/></bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isVersionOf" active="LIT1300Dersan" passive="LIT2623Zenana LIT1966Mashaf"/>
+               <relation name="saws:formsPartOf" active="LIT1300Dersan" passive="LIT2296Sayfas"><desc>Parts of the <ref type="work" corresp="LIT1300Dersan"/>
+                  are contained in <ref type="work" corresp="LIT2296Sayfas"/>.</desc></relation>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
