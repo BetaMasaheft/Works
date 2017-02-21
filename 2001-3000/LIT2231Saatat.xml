@@ -10,7 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Säʿatat zämäʿalt</title>
+            <title xml:id="t1">ሰዓታት፡ ዘመዓልት፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Saʿātāt za-maʿālt</title>
+            <title corresp="#t1" xml:lang="en">Horologium for the Day</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,8 +31,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+<listWit>
+   <witness corresp="EMML4016" type="external"></witness>
+</listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -39,15 +43,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Liturgy"></term>
+            </keywords>
+         </textClass>
+         <abstract><p>A version of the Horologium attributed to <persName ref="PRS4709Giyorgis">Giyorgis of Saglā</persName>
+            and used in some churches, primarily <placeName ref="LOC2290DabraI">Dabra Iyāsus</placeName>.</p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-02-20" who="ES">updated keywords relations title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations"><bibl></bibl>
+            <relation name="saws:isVersionOf"
+               active="LIT2231Saatat"
+               passive="LIT1961Mashaf">
+               
+            </relation>
+            
+            <relation name="saws:isAttributedToAuthor" active="LIT2231Saatat" passive="PRS4709Giyorgis"></relation>
+         </listBibl>
          <ab/>
       </body>
    </text>

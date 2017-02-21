@@ -10,7 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Saʿātāt za-gǝbṣ</title>
+            <title xml:id="t1">ሰዓታት፡ ዘግብጽ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Saʿātāt za-gǝbṣ</title>
+            <title corresp="#t1" xml:lang="en">The Coptic Horologium</title>
+            <title corresp="#t1" xml:lang="en">The Coptic Book of Hours</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -45,10 +48,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Liturgy"></term>
+            </keywords>
+         </textClass>
          <abstract>
             <p> <foreign xml:lang="gez">Saʿātāt za-gǝbṣ</foreign> is a version of the <title ref="LIT1961Mashaf">Maṣḥafa saʿātāt</title>, a Church service made up of psalms, biblical readings and hymns. 
                It is taken from the Copto-Arabic tradition. The date of the translation into Gǝʿǝz is unknown, according to the teachers of the <foreign xml:lang="gez">Qǝddāse bet</foreign>, it was spread
-               in the <date>13th centuy</date> by <persName ref="PRS9162TaklaHa">Takla Hāymānot</persName> and his monastic network. </p>
+               in the <date>13th century</date> by <persName ref="PRS9162TaklaHa">Takla Hāymānot</persName> and his monastic network. </p>
            <p>The three other types of Maṣḥafa saʿātāt identified by  <bibl>
                   <ptr target="bm:Taft1986Liturgy"/>
                   <citedRange unit="page">266</citedRange>
@@ -75,6 +84,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-08-05"> Added Information </change>
          <change who="DR" when="2016-08-08"> Added Information </change>
+         <change when="2017-02-20" who="ES">updated keywords relations title</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -109,35 +119,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                       passive="LIT3196dorho">
                <desc>Some manuscripts of the Saʿātāt za-gǝbṣ contain the <title ref="LIT3196dorho">Service at the Cockcrow</title>.</desc>
             </relation>
+            
+            
             <relation name="saws:isVersionInAnotherLanguageOf"
                       active="LIT2230Saatat"
                       passive="LIT3570Agbiya">
                <desc>The Coptic <title ref="LIT3570Agbiya"/> is the main source for the <title ref="LIT2230Saatat"/>.</desc>
             </relation>
-            <relation name="" active="LIT2230Saatat" passive="LIT3564Psalmodia">
+            <relation name="saws:hasUsed" active="LIT2230Saatat" passive="LIT3564Psalmodia">
                <desc>Parts of <title ref="LIT3564Psalmodia"/>, mainly <title ref="LIT3566Theotokia"/> and <title ref="LIT3568Psalis"/> 
                   are among additional material included in <title ref="LIT2230Saatat"/>, but not in <title ref="LIT3570Agbiya"/>.</desc>
             </relation>
-            <relation name="" active="LIT2230Saatat" passive="LIT3566Theotokia">
+            <relation name="saws:hasUsed" active="LIT2230Saatat" passive="LIT3566Theotokia">
                <desc>Additional material included in <title ref="LIT2230Saatat"/>, but not in <title ref="LIT3570Agbiya"/>.</desc>
             </relation>
-            <relation name="" active="LIT2230Saatat" passive="LIT3568Psalis">
+            <relation name="saws:hasUsed" active="LIT2230Saatat" passive="LIT3568Psalis">
                <desc>Additional material included in <title ref="LIT2230Saatat"/>, but not in <title ref="LIT3570Agbiya"/>.</desc>
             </relation>
-            <relation name="" active="LIT2230Saatat" passive="LIT3572Horologium">
+            <relation name="saws:hasUsed" active="LIT2230Saatat" passive="LIT3572Horologium">
                <desc>Prayers and troparia from <title ref="LIT3572Horologium"/> are among additional material included in <title ref="LIT2230Saatat"/>, but not in <title ref="LIT3570Agbiya"/>.</desc>
             </relation>
-            <relation name="" active="LIT2230Saatat" passive="LIT3573Horologium">
+            <relation name="saws:hasUsed" active="LIT2230Saatat" passive="LIT3573Horologium">
                <desc>Some prayers found exclusively in the Horologium maroniticum (Rome 1584)
                   are among additional material included in <title ref="LIT2230Saatat"/>, but not in <title ref="LIT3570Agbiya"/>.</desc>
             </relation>
-            <relation name="" active="LIT2230Saatat" passive="LIT3574Euchologion">
+            <relation name="saws:hasUsed" active="LIT2230Saatat" passive="LIT3574Euchologion">
                <desc>Additional material included in <title ref="LIT2230Saatat"/>, but not in <title ref="LIT3570Agbiya"/>.</desc>
             </relation>
-            <relation name="" active="LIT2230Saatat" passive="LIT3575Mashaf">
+            <relation name="saws:hasUsed" active="LIT2230Saatat" passive="LIT3575Mashaf">
                <desc>Parts of <title ref="LIT3575Mashaf"/> are among additional material included in <title ref="LIT2230Saatat"/>, but not in <title ref="LIT3570Agbiya"/>.</desc>
             </relation>
-            <relation name="" active="LIT2230Saatat" passive="LIT1544Gebrah">
+            <relation name="saws:hasDescendant" active="LIT2230Saatat" passive="LIT1544Gebrah">
                <desc>Parts of <title ref="LIT2230Saatat"/> survive in <title ref="LIT1544Gebrah"/>.</desc>
             </relation>
             
