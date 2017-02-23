@@ -12,7 +12,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ጸሎተ፡ ሙሴ፡ ዘሣልስ፡ ሕግ፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalota Muse za-śālǝs ḥǝgg </title>
-            <title xml:lang="en" xml:id="t2">The Third Prayer of Moses</title>
+            <title xml:lang="en" corresp="#t1" type="main">The Third Prayer of Moses</title>
+            <title xml:lang="en" xml:id="t2">Third Song of Moses</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -30,9 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <listWit><witness corresp="BNFet9"></witness></listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -42,13 +41,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Bible"/>
+               <term key="OldTestament"/>
+               <term key="ChristianLiterature"/>
+            </keywords>
+         </textClass>
          <abstract>
-            <p>Deut 32:22-43</p>
+            <p>Extract from <title ref="LIT2637Deuteronomy"/> 32:22-43</p>
          </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2016-08-24">Added information</change>
+         <change who="ES" when="2017-02-24">Added information</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -66,6 +73,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <relation name="saws:formsPartOf"
                       active="LIT2703salota"
                       passive="LIT2637Deuteronomy"/>
+            <relation name="saws:P129i_is_subject_of" active="PRS7181MosesM" passive="LIT2277salotu"></relation>
          </listBibl>
       </body>
    </text>

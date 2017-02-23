@@ -10,9 +10,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ጸሎተ፡ ስምዖን፡ ነቢይ፡</title>
-            <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalota Sǝmʿon nabiyy</title>
-            <title xml:lang="en" xml:id="t2">The Prayer of Simon</title>
+            <title xml:lang="lat" xml:id="t1">Nunc dimittis</title>
+            <title xml:lang="en" corresp="#t1">Now you dismiss</title>
+            
+            <title xml:lang="en" xml:id="t2">Song of <persName ref="PRS8854Simeon">Simeon</persName></title>
+            <title xml:lang="en" corresp="#t2">Canticle of Simeon</title>
+          
+            <title xml:lang="gez" xml:id="t3">ጸሎተ፡ ስምዖን፡ ነቢይ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t3">Ṣalota Sǝmʿon nabiyy</title>
+            <title xml:lang="en" corresp="#t3">The Prayer of Simeon the Prophet</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -30,8 +37,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit><witness corresp="BNFet9"></witness></listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -41,8 +47,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Bible"/>
+               <term key="OldTestament"/>
+               <term key="ChristianLiterature"/>
+               <term key="Prayers"></term>
+            </keywords>
+         </textClass>
          <abstract>
-            <p></p>
+            <p>From <title ref="LIT1812GospelLuke"/> 2, 29-32</p>
          </abstract>
       </profileDesc>
       <revisionDesc>
@@ -50,6 +64,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-08-24">Added information</change>
+         <change who="ES" when="2017-02-24">Added information</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -64,7 +79,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <relation name="saws:formsPartOf"
                active="LIT2272salota"
                       passive="LIT1828Mahale"/>
+            <relation name="saws:formsPartOf"
+               active="LIT2272salota"
+               passive="LIT1812GospelLuke"/>
+            
          </listBibl>
+         
+         <div type="edition" xml:lang="gr">
+          <p>  νῦν ἀπολύεις τὸν δοῦλόν σου, δέσποτα, κατὰ τὸ ῥῆμά σου ἐν εἰρήνῃ·
+            ὅτι εἶδον οἱ ὀφθαλμοί μου τὸ σωτήριόν σου,
+            ὃ ἡτοίμασας κατὰ πρόσωπον πάντων τῶν λαῶν,
+            φῶς εἰς αποκάλυψιν ἐθνῶν καὶ δόξαν λαοῦ σου Ἰσραήλ.</p>
+            
+         </div>
+         <div type="edition" xml:lang="lat" corresp="#t1">
+            <p>
+               Nunc dimittis servum tuum, Domine, secundum verbum tuum in pace:
+               Quia viderunt oculi mei salutare tuum
+               Quod parasti ante faciem omnium populorum:
+               Lumen ad revelationem gentium, et gloriam plebis tuae Israel.
+               
+            </p>
+            
+         </div>
       </body>
    </text>
 </TEI>

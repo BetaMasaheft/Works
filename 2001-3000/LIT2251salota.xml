@@ -12,7 +12,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ጸሎተ፡ ዕንባቆም፡ ነቢይ፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalota ʿƎnbāqom nabiyy</title>
-            <title xml:lang="en" xml:id="t2">The Prayer of Habakkuk, the Prophet</title>
+            <title xml:lang="en" corresp="#t1">The Prayer of <persName ref="PRS4914Habakkuk">Habakkuk</persName>, the Prophet</title>
+            
+            <title xml:id="t2">Song of Habakkuk</title>
+            <title xml:id="t3">Legend of Habakkuk</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -30,8 +34,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit><witness corresp="BNFet9"></witness>
+               <witness corresp="BLorient498"></witness></listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -41,8 +45,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Bible"/>
+               <term key="OldTestament"/>
+               <term key="ChristianLiterature"/>
+               <term key="Prayers"></term>
+            </keywords>
+         </textClass>
          <abstract>
-            <p>Hab 3:1-19</p>
+            <p><title ref="LIT1567Bookof">Hab</title> 3:1-19</p>
          </abstract>
       </profileDesc>
       <revisionDesc>
@@ -50,6 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-08-24">Added information</change>
+         <change who="ES" when="2017-02-24">Added information</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -67,6 +80,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <relation name="saws:formsPartOf"
                       active="LIT2251salota"
                       passive="LIT1567Bookof"/>
+            <relation name="saws:P129i_is_subject_of" active="PRS4914Habakkuk" passive="LIT2251salota"></relation>
          </listBibl>
       </body>
    </text>

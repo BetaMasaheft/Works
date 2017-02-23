@@ -11,6 +11,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Magnificat</title>
+            
+            <title xml:id="t2">Song of Mary</title>
+            
+            <title xml:id="t3">Canticle of Mary</title>
+            
+            <title xml:id="t4">Ode of the Theotokos</title>
+            <title corresp="#t4" xml:lang="gr">Ἡ ᾨδὴ τῆς Θεοτόκου</title>
+            
+            <title xml:id="t5" xml:lang="gez">ጸሎተ፡ እግዝእትነ፡ ማርያም፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t5">ṣalota ʾǝgziʾǝtǝna Māryām</title>
+            <title xml:lang="en" corresp="#t5">Prayer of Our Lady Mary</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,8 +40,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit><witness corresp="BNFet9"></witness>
+               </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -39,15 +51,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Bible"/>
+               <term key="OldTestament"/>
+               <term key="ChristianLiterature"/>
+               <term key="Prayers"></term>
+            </keywords>
+         </textClass>
+         <abstract><p>Extract from <title ref="LIT1812GospelLuke"/> 1:46-55</p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="ES" when="2017-02-24">Added information</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl/>
+            <relation name="saws:formsPartOf"
+               active="LIT1827Magnif"
+               passive="LIT1828Mahale"/>
+            <relation name="saws:formsPartOf"
+               active="LIT1827Magnif"
+               passive="LIT1812GospelLuke"/>
+            <relation name="saws:P129i_is_subject_of" active="PRS6819Mary" passive="LIT1827Magnif"></relation>
+         </listBibl>
          <ab/>
       </body>
    </text>

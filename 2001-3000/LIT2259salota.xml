@@ -10,9 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ጸሎተ፡ ኢሳይያስ፡ ነቢይ፡</title>
-            <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalota ʾIsāyǝyās nabiyy</title>
-            <title xml:lang="en" xml:id="t2">The Prayer of ʾIsāyǝyās, the Prophet</title>
+            <title xml:id="t1">Song of Isaiah</title>
+            <title xml:lang="gez" xml:id="t2">ጸሎተ፡ ኢሳይያስ፡ ነቢይ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t2">Ṣalota ʾIsāyǝyās nabiyy</title>
+            <title xml:lang="en" corresp="#t2">The Prayer of Isaiah, the Prophet</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -30,8 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit><witness corresp="BNFet9"></witness></listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -41,8 +41,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Bible"/>
+               <term key="OldTestament"/>
+               <term key="ChristianLiterature"/>
+            </keywords>
+         </textClass>
          <abstract>
-            <p>Isaiah 26:9-20</p>
+            <p>Extract from <title ref="LIT1672Isaiah"/> 26:9-20</p>
          </abstract>
       </profileDesc>
       <revisionDesc>
@@ -50,6 +57,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-08-24">Added information</change>
+         <change who="ES" when="2017-02-24">Added information</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -64,6 +72,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <relation name="saws:formsPartOf"
                active="LIT2259salota"
                       passive="LIT1828Mahale"/>
+            <relation name="saws:P129i_is_subject_of" active="PRS5584Isaiah" passive="LIT2259salota"></relation>
          </listBibl>
       </body>
    </text>

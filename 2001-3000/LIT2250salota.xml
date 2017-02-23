@@ -10,9 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ጸሎተ፡ ዳንኤል፡</title>
-            <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalota Dānǝʾel</title>
-            <title xml:lang="en" xml:id="t2">The Prayer of Daniel</title>
+            <title xml:id="t1">First Song of the <persName ref="PRS11288AnAzMi">Three Youths in the Furnace</persName></title>
+            <title xml:lang="gez" xml:id="t2">ጸሎተ፡ ዳንኤል፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t2">Ṣalota Dānǝʾel</title>
+            <title xml:lang="en" corresp="#t2">The Prayer of Daniel</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -30,8 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit><witness corresp="BNFet9"></witness></listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -41,8 +41,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Bible"/>
+               <term key="OldTestament"/>
+               <term key="ChristianLiterature"/>
+               <term key="Prayers"></term>
+            </keywords>
+         </textClass>
          <abstract>
-            <p>Dan 3:26-45 [apocryphal Prayer of Azariah 1-22]</p>
+            <p> Extract from <title ref="LIT3529Daniel"/> 3:26-45 [apocryphal Prayer of <persName ref="PRS11435Azaria">Azariah</persName> 1-22]</p>
          </abstract>
       </profileDesc>
       <revisionDesc>
@@ -50,6 +58,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-08-24">Added information</change>
+         <change who="ES" when="2017-02-24">Added information</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -67,6 +76,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <relation name="saws:formsPartOf"
                       active="LIT2250salota"
                       passive="LIT1259Daniel"/>
+            <relation name="saws:P129i_is_subject_of" active="PRS11435Azaria PRS11288AnAzMi" passive="LIT2250salota"></relation>
+            
          </listBibl>
       </body>
    </text>
