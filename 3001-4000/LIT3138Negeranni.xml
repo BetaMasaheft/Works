@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Nǝgǝranni sǝmaka ...</title>
+            <title xml:lang="gez" xml:id="t1">ንግረኒ፡ ስመከ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Nǝgǝranni sǝmaka</title>
+            <title xml:lang="en" corresp="#t2">Prayer of Our Lady Mary to Our Lord Jesus Christ to know His name</title>
            <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,8 +30,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit>
+               <witness corresp="BAVet35#p1_i3"/>
+               <witness corresp="BAVet37#ms_i4"/>
+               <witness corresp="BAVet42#ms_i2"/>
+               <witness corresp="BAVet50#ms_i10"/>
+               <witness corresp="BAVet55#ms_i4"/>
+               <witness corresp="BLorient711"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -39,12 +47,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Prayers"/>
+               <term key="ApocryphaPseudoepigrapha"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DN" when="2016-04-28">ِAdded bibliographic references</change>
+         <change who="MV" when="2017-02-24">Added title, keywords and incipit</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -56,7 +71,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="page">261-264</citedRange>
                </bibl>
             </listBibl>
-
+            <div type="edition">
+               <div type="textpart" subtype="incipit"  xml:lang="gez">
+                  <ab>
+                     ጸሎት፡ ዘተስእለቶ፡ ማርያም፡ ለእግዚእነ፡ ወትቤሎ፡ ንግረኒ፡ 
+                     ስመከ፡ ወይቤላ፡ እፎ፡ እነግረኪ፡ ስምየ፡ ዘዕፁብ፡ ወግሩም፡ ሰምዮቱ፡ ለስምየ፨ ወትቤሎ፡ ንግረኒ፡ ስመከ፨ ወይቤላ፡ እመ፡ መጽኡ፡ መላእክት፡ ኀቤየ፡ 
+                     እነግረኪ፡ ስምየ፨ ወትቤሎ፡ ንግረኒ፡ ስምከ፨ ወይቤላ፡ እመ፡ መጽኡ፡ ሊቃነ፡ መላእክት፡ ኀቤየ፡ እነግረኪ፡ ስምየ፨ ወትቤሎ፡ ንግረኒ፡ ስመከ፨ ወይቤላ፡ እመ፡ ነገርኩኪ፡ በሀገር፡ ይነድድ፡ እሳት፡ በምድር፨ 
+                     ወትቤሎ፡ ንግረኒ፡ ስመከ፨ ወይቤላ፡ እመ፡ ነገርኩኪ፡ በዳግም፡ ይጠፍኡ፡ እንስሳ፡ ገዳም፨
+                  </ab>
+               </div>
+            </div>
          </div>
       </body>
    </text>
