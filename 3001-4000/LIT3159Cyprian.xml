@@ -14,7 +14,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Martyrdom of Cyprian and Justa</title>
+            <title xml:id="t1">Martyrdom of Cyprian and Justa</title>
             
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -34,8 +34,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <listWit>
-                              <witness corresp="BLorient686"/>
-               
+               <witness corresp="BLorient686"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -46,34 +45,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Hagiography"/>
+            </keywords>
+         </textClass>
          <abstract>
             <p/>
          </abstract>
       </profileDesc>
       <revisionDesc>
-
          <change who="MV" when="2016-05-31">CREATED: text record</change>
          <change who="DR" when="2016-10-24">Relations added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         
          <div type="bibliography">
-            <listBibl type="editions">
-               <bibl/>
-            </listBibl>
-            <listBibl type="text">
-               <bibl/>
-            </listBibl>
-            <listBibl type="otherLanguages">
-               <bibl><ptr target="bm:Bollandistes1760Septembris"/><citedRange unit="page">242-246</citedRange></bibl> <!--Greek-->
-            </listBibl>
             <listBibl type="relations">
                <bibl/>
                <relation name="saws:CLP46i_may_form_part_of"
                   active="LIT1895Martyr"
                   passive="LIT1493Gadlas"/>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit"  xml:lang="gez">
+               <ab>
+               </ab>
+            </div>
+         </div>
+         <div type="bibliography">
+            <listBibl type="otherLanguages">
+               <bibl><ptr target="bm:Bollandistes1760Septembris"/><citedRange unit="page">242-246</citedRange></bibl> <!--Greek-->
             </listBibl>
          </div>
       </body>
