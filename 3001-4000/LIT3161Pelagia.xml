@@ -14,7 +14,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Martyrdom of Pelagia</title>
+            <title xml:id="t1">Martyrdom of Pelagia</title>
             
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -46,6 +46,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Hagiography"/>
+            </keywords>
+         </textClass>
          <abstract>
             <p/>
          </abstract>
@@ -53,21 +59,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
 
          <change who="MV" when="2016-05-31">CREATED: text record</change>
+         <change who="MV" when="2017-02-27">Added keywords and relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         
          <div type="bibliography">
-            <listBibl type="editions">
+            <listBibl type="relations">
                <bibl/>
+               <relation name="saws:formsPartOf"
+                  active="LIT3161Pelagia"
+                  passive="LIT1493Gadlas">
+               </relation>
             </listBibl>
-            <listBibl type="text">
-               <bibl/>
-            </listBibl>
-            <listBibl type="otherLanguages">
-               <bibl/>
-            </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit"  xml:lang="gez">
+               <ab>
+               </ab>
+            </div>
          </div>
       </body>
    </text>

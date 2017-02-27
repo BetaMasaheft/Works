@@ -40,14 +40,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Hagiography"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="MV" when="2017-02-27">Added keywords and relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <div type="bibliography"><!--in GS--></div>
+         <div type="bibliography">
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:formsPartOf"
+                  active="LIT3168Theophilus"
+                  passive="LIT1493Gadlas">
+               </relation>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit"  xml:lang="gez">
+               <ab>
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
