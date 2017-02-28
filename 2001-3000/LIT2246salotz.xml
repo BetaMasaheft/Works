@@ -54,6 +54,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Prayers"></term>
+               <term key="Liturgy"></term>
+            </keywords>
+         </textClass>
          <abstract>
             <p>
                The Prayer [of St. Mary on 21] Sane [on the mount of] Golgotha
@@ -68,11 +75,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-08-15">Added informations</change>
          <change when="2016-09-08" who="MV">Fixed title</change>
+         <change when="2017-02-27" who="ES">updated keywords relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <div type="bibliography">
+         
             
             <listBibl type="translation" corresp="BNFet58#1; BNFet68#5">
                <bibl> 
@@ -91,7 +99,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="page">197</citedRange>
                </bibl>
             </listBibl>
-         </div>
+         
+         
+         <listBibl type="relations">
+            <bibl></bibl>
+            <relation name="saws:isAttributedToAuthor" active="LIT2246salotz" passive="PRS7953Prochoru"></relation>
+            <relation name="saws:isMemberOf" active="LIT2246salotz" passive="LIT2701Dawit"></relation>
+         </listBibl>
       </body>
    </text>
 </TEI>

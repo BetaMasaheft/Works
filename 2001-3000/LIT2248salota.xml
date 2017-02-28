@@ -10,7 +10,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Ṣälotä akkwätet</title>
+            <title xml:id="t1" xml:lang="gez">ጸሎተ፡ አኰቴት፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalota akkwatet</title>
+            <title corresp="#t1">Prayer of Thanksgiving</title>
+            
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,8 +32,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit>
+               <witness corresp="EMML74" type="external"></witness>
+               <witness corresp="EMML321" type="external"></witness>
+               <witness corresp="EMML4777" type="external"></witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -39,15 +46,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Prayers"></term>
+               <term key="Liturgy"></term>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-02-27" who="ES">updated title keywords relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl></bibl>
+            <relation name="saws:isAttributedToAuthor" active="IT2248salota" passive="PRS2546Basilth"></relation>
+            
+         </listBibl>
          <ab/>
       </body>
    </text>

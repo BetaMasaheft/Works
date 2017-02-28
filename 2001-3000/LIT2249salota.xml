@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Ṣälotä burake</title>
+            <title xml:id="t1" xml:lang="gez">ጸሎተ፡ ቡራኬ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalota burāke</title>
+            <title corresp="#t1">Prayer of Blessing</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,15 +41,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Prayers"></term>
+               <term key="Liturgy"></term>
+            </keywords>
+         </textClass>
+         <abstract><p>Often part of the Maṣḥafa qǝddāse</p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-02-27" who="ES">updated title keywords relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl></bibl>
+            <relation name="saws:isAttributedToAuthor" active="IT2249salota" passive="PRS2546Basilth"></relation>
+            <relation name="saws:isMemberOf" active="LIT2249salota" passive="LIT1960Mashaf"></relation>
+         </listBibl>
          <ab/>
       </body>
    </text>
