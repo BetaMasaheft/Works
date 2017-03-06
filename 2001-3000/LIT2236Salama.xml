@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Sälamä qǝddusan</title>
+            <title xml:id="t1" xml:lang="gez">ሰላመ፡ ቅዱሳን፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Salāma qǝddusān</title>
+            <title corresp="#t1" xml:lang="en" >Salutation to the Saints</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,8 +30,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+           <listWit>
+              <witness corresp="BLorient534"></witness>
+           </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -39,15 +42,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Hagiography"></term>
+            </keywords>
+         </textClass>
+         <abstract>
+            <p>A collection of hymns by <persName ref="PRS2370Bahrey">Bāḥrǝy</persName>. In BLorient534 it is called “Salutation to the Saints and Martyrs, for each day of the year, from 1 Maskaram
+               to 6 Pagwǝmen”. It was composed between <date>1583/1584</date> and sometime after <date>1597</date></p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-03-06" who="ES">added title keywords relations</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="secondary">
+            <bibl>
+               <ptr target="bm:Getachew2010Salama"/>
+            </bibl>
+            <bibl>
+               <ptr target="bm:Getachew2002ZenahuLagalla"/>
+            </bibl>
+         </listBibl>
+         <listBibl type="relations">
+            <bibl></bibl>
+            <relation name="saws:isAttributedToAuthor" active="LIT2236Salama" passive="PRS2370Bahrey"></relation>
+         </listBibl>
          <ab/>
       </body>
    </text>
