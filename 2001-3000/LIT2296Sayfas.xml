@@ -10,7 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Säyfä śǝllase</title>
+            <title xml:id="t1" xml:lang="gez">ሰይፈ፡ ሥላሴ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Sayfa śǝllāse</title>
+            <title corresp="#t1" xml:lang="en">Sword of the Trinity</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,6 +42,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Magic"></term>
+            </keywords>
+         </textClass>
+         <abstract><p></p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -48,6 +58,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="secondary">
+            <bibl><ptr target="bm:Lifchitz1940textes"/><citedRange unit="page">213-238</citedRange></bibl>
+            <bibl><ptr target="bm:Lusini2003EAEDersanaS"/></bibl>
+         </listBibl>
+         <listBibl type="relations">
+            <bibl></bibl>
+            <relation name="saws:hasUsed" active="LIT2296Sayfas" passive="LIT1300Dersan"></relation>
+            <relation name="saws:P129i_is_subject_of" active="LIT1300Dersan" passive="PRS10775Trinity"></relation>
+            <relation name="syriaca:share-a-name" active="LIT2296Sayfas" passive="LIT2286ZenaSellase"></relation>
+         </listBibl>
          <ab/>
       </body>
    </text>
