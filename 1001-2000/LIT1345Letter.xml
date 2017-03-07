@@ -10,8 +10,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Letter toEpictus Bishop of Corinthos</title>
-            <author>Athanasius</author>
+            <title xml:id="t1">Letter to Epictus Bishop of Corinthos</title>
+            <!--CPG-->
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,16 +40,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-03-07">Added keywords and bibliography and updated title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Witakowski2003EAEAthanasius"/><citedRange unit="page">392b</citedRange></bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="dcterms:creator" active="LIT1345Letter" passive="PRS2209Athanasi"/>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>

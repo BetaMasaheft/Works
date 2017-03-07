@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Epiphanius anaphora</title>
+            <title xml:lang="gez" xml:id="t1"> አኰቴተ፡ ቍርባን፡ </title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">ʾAkkʷateta qʷǝrbān za-</title>
+            <title xml:lang="en" corresp="#t1">Anaphora of Epiphanius</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,16 +41,47 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="ChristianLiterature"/>
+               <term key="Liturgy"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-03-07">Added keywords and bibliography and updated title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         
+         <div type="bibliography">
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1347Epipha" passive="PRS3828Epiphani"/>
+               <relation name="saws:formsPartOf" active="LIT1347Epipha" passive="LIT3189Anapho"/>
+            </listBibl>
+            
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Habtemichael2003EAEAnaphoras"/></bibl>
+            </listBibl>
+         </div>
+         
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit">
+               <ab>
+               ዓቢይ፡ ውእቱ፡ እግዚአብሔር፡ በዕበዩ፡ ቅዱስ፡ በቅዳሴሁ፡
+               </ab>
+            </div>
+            <div type="textpart" subtype="incipit" xml:lang="gez" corresp="#Incipit">
+               <ab>
+                  ʿAbiyy wǝʾǝtu ʾƎgziʾabǝḥer ba-ʿǝbayu qǝddus ba-qǝddāsehu
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
