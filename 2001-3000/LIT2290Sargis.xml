@@ -10,8 +10,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Särgis Abǝrgawi</title>
-            <title xml:id="t2">Doctrina Jacobi nuper baptizati, Teaching of Jacob</title>
+            <title xml:id="t1" type="main">Teaching of Jacob</title>
+            <title corresp="#t1" xml:lang="gr">Διδασκαλία Ἰακώβου</title>
+            <title corresp="#t1" xml:lang="gr" type="normalized">Didaskalia Iakobou</title>
+            
+            <title xml:id="t2" xml:lang="lat">Doctrina Jacobi nuper baptizati</title>
+            
+            <title xml:id="t3" xml:lang="gez">ሰርጊስ ፡ አብርጋዊ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t3">Sargis ʾAbǝrgāwi</title>
+            <title corresp="#t3" xml:lang="en">Sargis of Aberga</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,15 +48,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract><p>A 7th-century Greek Christian anti-Jewish polemical tract set in Carthage in 634 
+            but written in Palestine sometime between <date>634</date> and <date>640</date>. 
+            It supposedly records a July 13, 634 discussion between a Jew forced to convert to Christianity, Jacob, 
+            and some Jews about the condition of the Byzantine Empire in light of the recent Arab conquests, 
+            and how they should proceed as he had done, and convert to Christianity.</p>
+            <p>The Ethiopic version depends upon an
+               Arabic translation, probably from Greek.</p></abstract>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Religion"></term>
+               <term key="Translation"></term>
+               <term key="Theology"></term>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-03-07" who="ES">added titles keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="secondary">
+            <bibl><ptr target="bm:Bausi2010Sargis"/></bibl>
+         </listBibl>
          <ab/>
       </body>
    </text>
