@@ -10,7 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Säqoqawä dǝngǝl</title>
+            <title xml:id="t1" xml:lang="gez">ሰቆቃወ፡ ድንግል፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Saqoqāwa dǝngǝl</title>
+            <title corresp="#t1" xml:lang="en">Lament on the Virgin</title>
+            <title corresp="#t1" xml:lang="en">Elegy on the Virgin</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,15 +42,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract><p>A Gǝʿǝz poem devoted to St. <persName ref="PRS6819Mary">Mary</persName>,
+            which tells of her sorrow and distress caused
+            by various tribulations the Holy Family experienced
+            during the Flight to Egypt. According
+            to the text, the exile lasted 42 months and ended
+            with Herod’s death. It is chanted in the Liturgy of the Hours.</p></abstract>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Poetry"></term>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-03-06" who="ES">added title abstract relation keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl></bibl>
+            <relation name="saws:P129i_is_subject_of" active="LIT2285Saqoqa" passive="PRS6819Mary"></relation>
+            <relation name="dcterms:isPartOf" active="LIT2285Saqoqa" passive="LIT2301Sebhat LIT1961Mashaf"></relation>
+         </listBibl>
+         <listBibl type="secondary">
+            <bibl>
+               <ptr target="bm:Witakowski2010SD"/>
+            </bibl>
+         </listBibl>
          <ab/>
       </body>
    </text>
