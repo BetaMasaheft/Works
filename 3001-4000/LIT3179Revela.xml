@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Revelation of John</title>
+            <title xml:lang="gez" xml:id="t1">አቡቀለምሲስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">ʾAbuqalamsis</title>
+            <title xml:lang="en" corresp="#t1">Revelation of John</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,14 +42,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Bible"/>
+               <term key="NewTestament"/>
+               <term key="ChristianLiterature"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
+         <change when="2017-03-09" who="MV">Added title, keywords, bibliography</change>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <div type="bibliography"><!--Apocalypse of John; Qalamsis--></div>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Petrus1548Test"/>
+                  <ptr target="bm:Hoffmann1969Apokalypse55"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation" xml:lang="de">
+               <bibl>
+                  <ptr target="bm:Hoffmann1969Apokalypse56"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Hoffmann1959Ubersetzung"/>
+                  <ptr target="bm:Uhlig2010EAERevelation"/>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
