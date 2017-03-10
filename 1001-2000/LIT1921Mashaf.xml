@@ -10,8 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mäṣḥafä bǝrhan</title>
-            <author>Zärʾa Yaʿǝqob</author>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ብርሃን፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Maṣḥafa bǝrhān</title>
+            <title xml:lang="en" corresp="#t1">The Book of Light</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,16 +41,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-03-10">Additions</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1919Mashaf" passive="PRS10626ZaraY"/>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Getatchew2003EAEBerhan"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation">
+               <bibl><ptr target="bm:ContiRossini1965BerhanV"/></bibl>
+            </listBibl>
+            <listBibl type="editions">
+               <bibl><ptr target="bm:ContiRossini1964BerhanT"/></bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
