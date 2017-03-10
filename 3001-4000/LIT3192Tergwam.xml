@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Commentary on Luke</title>
+            <title xml:lang="gez" xml:id="t1">ትርጓሜ፡ ሉቃስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Tǝrgʷāme Luqās</title>
+            <title xml:lang="en" corresp="#t1">Commentary on Luke</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,9 +42,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="Commentary"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+         <change when="2017-03-10" who="MV">Title and keyword added</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -53,6 +61,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <relation name="saws:formsPartOf"
                          active="LIT3192Tergwam"
                          passive="LIT2456Tergwa"/>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Garcia2010EAETergwame"/>
+               </bibl>
             </listBibl>
          </div>
       </body>
