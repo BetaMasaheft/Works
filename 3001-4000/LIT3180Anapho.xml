@@ -40,10 +40,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Liturgy"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-01-04">Bibliography added</change>
+         <change who="MV" when="2017-03-10">Keyword and bibliography added</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -53,7 +59,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <bibl/>
                <relation name="saws:formsPartOf"
                          active="LIT3180Anapho"
-                         passive="LIT3189Anapho)"/>
+                         passive="LIT3189Anapho"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT3180Anaphora" passive="PRS3591Dioscoru">
+            </relation>
             </listBibl>
             <listBibl type="editions">
                <bibl><ptr target="bm:Ludolf1661Confessio"/><citedRange unit="part">Liturgia S. Dioscori</citedRange></bibl>
@@ -61,6 +69,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <listBibl type="translation">
                <bibl><ptr target="bm:Rodwell1864Liturgies2"/><citedRange unit="page">368-369</citedRange></bibl>
             </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Habtemichael2003EAEAnaphoras"/><citedRange unit="page">251</citedRange></bibl>
+               <bibl><ptr target="bm:Hammerschmidt1987Anaphoras"/><!-- add citedRange unit="page" --></bibl>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit"  xml:lang="gez">
+               <ab>
+                እምቅድመ፡ ዓለም፡ ወእስከ፡ ለዓለም፡ ሀሎ፡ እግዚአብሔር፡ በትሥልስቱ፡
+               </ab>
+            </div>
          </div>
       </body>
    </text>
