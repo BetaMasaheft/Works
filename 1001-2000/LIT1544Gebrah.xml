@@ -13,8 +13,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">ግብረ፡ ሕማማት፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Gǝbra Ḥǝmāmāt</title>
             <title xml:lang="en" corresp="#t1">Lectionary of the Holy Week</title>
+            <title xml:lang="gez" xml:id="t2">መጽሐፈ፡ ግብረ፡ ሕማማት፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Maṣḥafa Gǝbra Ḥǝmāmāt</title>
             <editor role="generalEditor" key="AB"/>
-            <editor key="MV"></editor>
+            <editor key="MV"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -42,18 +44,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="Liturgy"/>                  <term key="ChristianLiterature"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2016-09-05" who="MV">Added div textparts</change>
+         <change who="DR" when="2017-03-14">Added keywords and t2</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
-         <div type="textpart" subtype="chapter" xml:id="Introduction"/>
+     <div type="edition">
+        <div type="textpart" subtype="chapter" xml:id="Introduction"/>
          <div type="textpart" subtype="chapter" xml:id="PalmSunday"/>
          <div type="textpart" subtype="chapter" xml:id="Monday"/>
          <div type="textpart" subtype="chapter" xml:id="Tuesday"/>
@@ -69,6 +77,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </div>
          <div type="textpart" subtype="chapter" xml:id="Saturday"/>
          <div type="textpart" subtype="chapter" xml:id="Sunday"/>
+     </div>
       </body>
    </text>
 </TEI>

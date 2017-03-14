@@ -10,8 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Ḫabekä ǝgziʾo amlakä amalǝkt wäʾǝgziʾa agaʾǝzt</title>
-            <author>Cyril</author>
+            <title xml:lang="en" xml:id="t1">Anaphora of Cyril of Alexandria</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,16 +39,43 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="ChristianLiterature"/>
+               <term key="Liturgy"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-03-14">Added keywords and updated title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+               <listBibl type="secondary">
+                  <bibl><ptr target="bm:Habtemichael2003EAEAnaphoras"/></bibl>
+               </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1569habeka" passive="PRS3255CyrilI"/>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit">
+               <ab>
+                  ኀቤከ፡ እግዚኦ፡ አማልክት፡ ወእግዚአ፡ አጋእዝት፡
+               </ab>
+            </div>
+            <div type="textpart" subtype="incipit" xml:lang="gez" corresp="#Incipit">
+               <ab>
+                  Ḫabeka ʾǝgziʾo ʾamlāka ʾamālǝkt wa-ʾǝgziʾa ʾagāʾǝzt
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
