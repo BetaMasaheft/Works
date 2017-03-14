@@ -10,8 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Life of Paul, the First Hermit</title>
-            <author>Athanasius</author>
+            <title xml:id="t1" xml:lang="en">Life of Paul, the First Hermit</title>
+            <title xml:lang="gez" xml:id="t2">ገድለ፡ ጳውሊ፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Gadla Ṗāwli</title>
+            <title xml:lang="en" corresp="#t2">Life of Ṗāwli</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,16 +42,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Hagiography"/>
+               <term key="ApocryphaPseudoepigrapha"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-03-14">Added keywords and relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1803Lifeof" passive="PRS2209Athanasi"/>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
