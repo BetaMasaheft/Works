@@ -13,7 +13,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">ድርሳን፡ በእንተ፡ እለ፡ ኖሙ፡ ካህናት፡ ወዲያቆናት፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān ba-ʾǝnta ʾǝlla nomu kāhǝnāt wa-diyāqonāt</title>
             <title xml:lang="en" corresp="#t1">Homily on Priests and Deacons who have Fallen Asleep</title>
-            <title xml:lang="syr" xml:id="t2syriac" type="translated">Consolation, for priests</title>
+            <title xml:lang="syr" xml:id="t2syriac">Consolation, for priests</title> <!--fix title-->
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -45,12 +45,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="gez">Gǝʿǝz</language>
             <language ident="syr">Syriac</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+               <term key="Homily"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-09-02">Changes</change>
+         <change who="DR" when="2017-03-14">Added keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -60,7 +68,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <bibl></bibl>
                <relation name="saws:isAttributedToAuthor" active="LIT1629Homily" passive="PRS5655Jacobof"/>
                <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1629Homily" passive="LIT1931Mashaf">
-                  <desc>The Dǝrsān ba-ʾǝnta ʾǝlla nomu kāhǝnāt wa-diyāqonāt is contained in most manuscripts of the Maṣḥafa gǝnzat. 
+                  <desc>The <foreign xml:lang="gez">Dǝrsān ba-ʾǝnta ʾǝlla nomu kāhǝnāt wa-diyāqonāt</foreign> is contained in most manuscripts of the <ref type="work" corresp="LIT1931Mashaf">Maṣḥafa gǝnzat</ref>. 
                      <bibl><ptr target="bm:Witakowski2007Jacob"/></bibl></desc>
                   <!--Is this the correct relation? Sould it be only in the record of LIT1931Mashaf-->
                </relation> 
