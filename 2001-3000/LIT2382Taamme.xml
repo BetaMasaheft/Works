@@ -11,10 +11,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">ተኣምረ፡ ኤየሱስ፡</title>
-            <title xml:id="t1.1" xml:lang="gez" type="normalized" corresp="#t1">Taʾāmmǝra ʾIyasus</title>
-            <title xml:id="t1.2" xml:lang="en" corresp="#t1">Miracles of Jesus</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Taʾāmmǝra ʾIyasus</title>
+            <title xml:lang="en" corresp="#t1">Miracles of Jesus</title>
+            
             <title xml:id="t2" xml:lang="gez">መጽሐፈ፡ እልአትቀርፋ፡</title>
-            <title xml:id="t2.1" xml:lang="gez" type="normalized" corresp="#t2">Maṣḥafa ʾǝlʾatqarfā</title>
+            <title xml:lang="gez" type="normalized" corresp="#t2">Maṣḥafa ʾǝlʾatqarfā</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -43,19 +45,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract>
+            <p>A general entry for the abstract collection of the Miracles of Jesus</p>
+         </abstract>
+      <textClass>
+         <keywords>
+            <term key="ChristianLiterature"></term>
+            <term key="Hagiography"></term>
+         </keywords>
+      </textClass>
       </profileDesc>
+      
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-03-15" who="ES">updated keywords relations + corrections</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl></bibl>
+            <relation name="saws:isAttributedToAuthor" active="LIT2382Taamme" passive="PRS5695John"></relation>
+            <relation name="ecrm:P129_is_about" active="LIT2382Taamme" passive="PRS5684JesusCh"></relation>
+         </listBibl>
+         
+         
+<div type="edition"> 
          <div type="textpart" xml:id="Introduction"><label>Introduction</label></div>
          <div type="textpart" xml:id="John"><label>On John the Evangelist as the author of the book; on the creation and the fall of the angels</label></div>
          <div type="textpart" xml:id="Adam"><label>Story of the family of Adam</label></div>
          <div type="textpart" xml:id="Miracles"><label>Miracles of Jesus</label></div>
+</div>
       </body>
    </text>
 </TEI>
