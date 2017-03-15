@@ -10,7 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to Our Lady Mary</title>
+            <title xml:id="t1" xml:lang="gez">ኦርኅርኅተ፡ ኅሊና፡ </title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">ʾO rǝḫrǝḫta ḫǝllinā</title>
+            <title corresp="#t1" xml:lang="en">O merciful of mind</title>
+            <title xml:lang="gez" xml:id="t2">መልክአ፡ ሥዕል፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Malkǝʾa śǝʿǝl</title>
+            <title corresp="#t2" xml:lang="en">Image of the Icon</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -42,23 +47,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
+               <term key="ChristianLiterature"/>
                <term key="Poetry"/>
             </keywords>
          </textClass>
+         <abstract>
+            <p>A hymn in the honour of <persName ref="PRS6819Mary">Mary</persName> describing her magnanimity and her icon.</p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keyword and incipit</change>
+         <change who="MV" when="2017-03-15">Fixed title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl></bibl>
+            <relation name="saws:formsPartOf" active="LIT3088RepCh368" passive="LIT1850Malkea LIT1961Mashaf"></relation>
+         </listBibl>
          <div type="bibliography">
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">368</citedRange>
                </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Boell2010Orehrehta"/></bibl>
             </listBibl>
          </div>
          <div type="edition">
