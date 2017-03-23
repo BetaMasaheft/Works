@@ -43,7 +43,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
-         
+         <textClass>
+            <keywords>
+               <term key="Magic"/>
+               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="ChristianLiterature"/>
+               <term key="Liturgy"/>
+            </keywords>
+         </textClass>
          <abstract>
             <p>
                A short theological treatise. It was probably translated from a Greek Vorlage. It is found in many manuscripts together with other 
@@ -61,16 +68,48 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-08-30">Title updated</change>
          <change when="2016-12-21" who="ES">relation added</change>
+         <change who="DR" when="2017-03-23">Added keywords, bibliography and textparts</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-        <listBibl type="relations">
-           <bibl/>
-           <relation name="saws:isVariantOf" active="LIT2444Temher" passive="LIT3978Elmastoagya"/>
-           <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2444Temher" passive="LIT2461Testam#Chapter22"></relation>
-           
-        </listBibl>
+     
+       <div type="bibliography">
+          <listBibl type="secondary">
+             <bibl><ptr target="bm:Burtea2010EAETemherta"/></bibl>
+             <bibl><ptr target="bm:Lifchitz1940textes"/></bibl>
+          </listBibl>
+          <listBibl type="editions">
+             <bibl><ptr target="bm:Lifchitz1940textes"/><citedRange unit="page">40-52</citedRange></bibl>
+          </listBibl>
+          <listBibl type="translation">
+             <bibl><ptr target="bm:Lifchitz1940textes"/><citedRange unit="page">41-52</citedRange></bibl>
+          </listBibl>
+          <listBibl type="relations">
+             <bibl/>
+             <relation name="saws:isVariantOf" active="LIT2444Temher" passive="LIT3978Elmastoagya"/>
+             <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2444Temher" passive="LIT2461Testam#Chapter22"></relation>
+          </listBibl>
+       </div>
+         
+         <div type="edition">
+            <!-- arrangement of textparts according to <bibl><ptr target="bm:Lifchitz1940textes"/><citedRange unit="page">40-52</citedRange></bibl>-->
+            <div type="textpart" subtype="chapter" n="1" xml:lang="gez" xml:id="Chapter1">
+               <label>Chapter 1</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="2" xml:lang="gez" xml:id="Chapter2">
+               <label>Chapter 2</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="3" xml:lang="gez" xml:id="Chapter3">
+               <label>Chapter 3</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="4" xml:lang="gez" xml:id="Chapter4">
+               <label>Chapter 4</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="5" xml:lang="gez" xml:id="Chapter5">
+               <label>Chapter 5</label>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
