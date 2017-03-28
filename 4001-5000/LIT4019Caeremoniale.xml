@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Caeremoniale sacerdotum</title>
+            <title xml:id="t1" xml:lang="la">Caeremoniale sacerdotum</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -27,7 +27,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <listWit>
-               <witness/>
+               <witness corresp="BLadd16205"/>
+               <witness corresp="BNFet121"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -38,26 +39,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="la">Latin</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Liturgy"/> 
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="DR" when="2017-03-28">Updated and added keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="lawd:hasAttestation"
-                         active="LIT4019Caeremoniale"
-                         passive="BLadd16205, BNFet121"><!--BLadd16205, BNFet121--></relation>
-            </listBibl>
-         </div>
          <div type="edition">
-            <ab> ዘይደሉ፡ እምሥርዓተ፡ ቅኔ፡ መልእክተ፡ ክህነት፡ ዘይትፈቀድ፡ በውስተ፡ ጸሎታት፡ ወቅዳሴያት፡<!--TO BE MARKEDUP!--></ab>
+           <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="incipit">
+              <ab> ዘይደሉ፡ እምሥርዓተ፡ ቅኔ፡ መልእክተ፡ ክህነት፡ ዘይትፈቀድ፡ በውስተ፡ ጸሎታት፡ ወቅዳሴያት፡
+              </ab>
+           </div>
          </div>
       </body>
    </text>
