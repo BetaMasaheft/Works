@@ -45,6 +45,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="gez">Gǝʿǝz</language>
             <language ident="grc">Greek</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+               <term key="MonasticLiterature"/>
+               <term key="Translation"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -54,16 +62,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-        <listBibl type="secondary">
+         
+       <div type="bibliography">
+          <listBibl type="secondary">
            <bibl><ptr target="bm:Ezra2005Hawi"/></bibl>
         </listBibl>
+         
          <listBibl type="relations">
             <bibl/>
             <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1933Mashaf#t1" passive="LIT1933Mashaf#t2arabic"/>
             <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1933Mashaf#t2arabic" passive="LIT1933Mashaf#t3greek"/>
             <relation name="saws:isAttributedToAuthor" active="LIT1933Mashaf#t1" passive="PRS8410Salikof"/>
          </listBibl>
-         <div type="textpart" subtype="chapter" n="0" xml:id="Introduction">
+       </div>
+         
+        <div type="edition">
+           <div type="textpart" subtype="chapter" n="0" xml:id="Introduction">
             <label>Introduction followed by the table of the 63 rubrics and a short explanation by the translator on his methods.</label>
          </div>
          <div type="textpart" subtype="chapter" n="1" xml:id="Chapter1">
@@ -267,7 +281,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </div>
          <div type="textpart" subtype="chapter" n="63" xml:id="Chapter63">
             <label>On the ordination and deposition of priests</label>
-         </div>
+         </div></div>
       </body>
    </text>
 </TEI>

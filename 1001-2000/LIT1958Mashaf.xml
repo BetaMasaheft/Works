@@ -44,6 +44,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="cop">Coptic</language>
             <language ident="grc">Greek</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="RitualsAndRites"/>
+               <term key="Translation"/>
+            </keywords>
+         </textClass>
          <abstract>
             <p>
              The <foreign xml:lang="gez">Maṣḥafa qandil</foreign> is the ritual for the Unction of the Sick in the Ethiopian Church. Each of its seven sections consists of the following elements:
@@ -62,17 +69,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-09-05">Bibliography, witness and abstract added</change>
          <change who="DR" when="2016-12-02">Minor correction</change>
+         <change who="DR" when="2017-03-30">Added keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         
          <div type="bibliography">
+            
             <listBibl type="translation" corresp="#t2Arabic">
                <bibl>
                   <ptr target="bm:Burmester1967Liturgical"/>
                   <citedRange unit="page">144-151</citedRange>
                </bibl>
             </listBibl>
+            
          <listBibl type="secondary">
             <bibl>
                <ptr target="bm:Zanetti2010Qandil"/>
@@ -81,14 +92,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <ptr target="bm:Wion2011Onction"/>
             </bibl>
          </listBibl>
+            
             <listBibl type="relations">
-               <bibl></bibl>
+               <bibl/>
                <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1958Mashaf#t1" passive="LIT1958Mashaf#t2arabic"/>
                <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1958Mashaf#t2arabic" passive="LIT1958Mashaf#t3greek"/>
                <relation name="saws:isDifferentTo" active="LIT1958Mashaf#t1" passive="LIT1918Mashaf"/>
             </listBibl>
          </div>
-         <div type="textpart" subtype="chapter" xml:id="Beginning">
+         
+       <div type="edition">
+          <div type="textpart" subtype="chapter" xml:id="Beginning">
          </div>
          <div type="textpart" subtype="chapter" xml:id="FirstPrayer">
          </div>
@@ -104,6 +118,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </div>
          <div type="textpart" subtype="chapter" xml:id="SeventhPrayer">
          </div>
+       </div>
       </body>
    </text>
 </TEI>
