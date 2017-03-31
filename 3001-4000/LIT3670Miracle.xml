@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Miracle of a source caused by Jesus in Māḫḍāb while returning to Palestine</title>
+            <title xml:id="t1">Miracle of a fountain of water caused by Jesus in Māḫḍāb while returning to Palestine</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -41,9 +41,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="ApocryphaPseudoepigrapha"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="MV" when="2017-03-31">Added keywords and relations</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -54,7 +61,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Budge1923Miracles"/>
                   <citedRange unit="item">41</citedRange>
                </bibl>
-               <!--part of LIT2384Taamme; Budge 41-->
+            </listBibl>
+            <listBibl type="translation" xml:lang="en">
+               <bibl>
+                  <ptr target="bm:Budge1933Miracles"/>
+                  <citedRange unit="page">145-146</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:formsPartOf"
+                  active="LIT3670Miracle"
+                  passive="LIT2384Taamme"/>
             </listBibl>
          </div>
       </body>
