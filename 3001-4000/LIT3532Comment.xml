@@ -44,12 +44,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <textClass>
             <keywords>
                <term key="Commentary"/>
+               <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-24">Added keywords</change>
+         <change when="2017-03-31" who="DR">Relation added</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -57,7 +59,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="bibliography">
             <listBibl type="relations">
                <bibl/>
-               <relation name="saws:isAttributedAuthorOf" active="" passive="LIT3532Comment"><!--Eusebius--></relation>
+               <relation name="saws:isAttributedToAuthor" active="LIT3532Comment" passive="PRS3912Eusebius"/>
+               <relation name="saws:isCommentOn" active="LIT3532Comment" passive="LIT2000Mazmur"/>
             </listBibl>
          </div>
       </body>
