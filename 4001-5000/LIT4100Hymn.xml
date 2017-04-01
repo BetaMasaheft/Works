@@ -10,7 +10,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to God</title>
+            <title xml:id="t1" xml:lang="gez">ማኅልይ፡ ዘእግዚአብሔር፡ ዐቢይ፡ በ፫፡ ሃሌ፡ ሉያ።</title>
+            <title xml:lang="en" corresp="#t1">Māḫlǝy za-ʾƎgziʾabḥer ʿabiy ba-3 hāle luyā</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -41,21 +42,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Poetry"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="DR" when="2017-04-01">Added keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:formsPartOf" active="LIT4100Hymn" passive=""><!--ማኅልይ፡ ዘእግዚአብሔር፡ ዐቢይ፡ በ፫፡ ሃሌ፡ ሉያ።--></relation>
-            </listBibl>
-         </div>
-         <div type="edition">
-            <ab> ለአዳም፡ አቡነ፡ ዘለሐኮ፡ በአርአያከ። <!--TO BE MARKEDUP!--></ab>
+            <div type="edition">
+               <div type="textpart" subtype="incipit" xml:id="Incipit" xml:lang="gez">
+                  <ab>ለአዳም፡ አቡነ፡ ዘለሐኮ፡ በአርአያከ። </ab>
+               </div>
          </div>
       </body>
    </text>
