@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="en" xml:id="t1">Vita and Martyrdom of Bārbārā</title>
+            <title xml:lang="gez" xml:id="t1">ገድል፡ ወስምዕ፡ ዘቅድስት፡ ባርባራ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Gadl wa-sǝmʿ za-qǝddǝst Bārbārā</title>
+            <title xml:lang="en" corresp="#t1">Vita and Martyrdom of St. Bārbārā</title>    
             <editor role="generalEditor" key="AB"/>
             <editor key="DR"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -50,11 +52,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </profileDesc>
       <revisionDesc>
          <change who="DR" when="2017-02-16">Created file</change>
+         <change who="MV" when="2017-04-06">Added bibliography, fixed title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-<ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Moreno1960BarbaraGiuliana"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation" xml:lang="it">
+               <bibl>
+                  <ptr target="bm:Moreno1960BarbaraGiuliana"/>
+                  <citedRange>374-386</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography">
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:formsPartOf"
+                  active="LIT4509GadlaBarb"
+                  passive="LIT1493Gadlas">
+               </relation>
+            </listBibl>
+         </div>
+         <!-- The work is also mentioned as an independent text in the famous inventory list of ʾIyasus Moʾa (year 1292). 
+            See also BHO nos. 132-134, Bibl. Sanct. II, p. 760-67.
+         MV (2017-04-06) -->
       </body>
    </text>
 </TEI>
