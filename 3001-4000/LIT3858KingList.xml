@@ -41,17 +41,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="HistoryAndHistoriography"/>
+               <term key="Chronography"/>
+               <term key="ChristianLiterature"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="MV" when="2017-04-07">Added relations, bibliography and keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:ContiRossini1909Listes"/>
+                  <citedRange unit="page">299-300</citedRange>
+               </bibl>
+            </listBibl>
             <listBibl type="relations">
                <bibl/>
-               <relation name="saws:formsPartOf" active="LIT3858KingList" passive=""><!--Conti Rossini 1909--></relation>
+               <relation name="saws:formsPartOf" active="LIT3858KingList" passive="LIT3852KingList"></relation>
             </listBibl>
          </div>
       </body>
