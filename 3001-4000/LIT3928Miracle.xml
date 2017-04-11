@@ -41,9 +41,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="ApocryphaPseudoepigrapha"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="MV" when="2017-04-11">Added keywords and relations</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -52,9 +59,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Budge1923Miracles"/>
-                  <citedRange unit="item">57a, part of LIT2384Taamme</citedRange>
+                  <citedRange unit="item">57a</citedRange>
                </bibl>
-               <!--Budge 57a, part of LIT2384Taamme-->
+            </listBibl>
+            <!--  It might be the same as the miracle of the monk who managed to kiss the face of Our Lady Mary, contained in BAVet69#ms_i4.3 and
+                           edited and translated into German by Otto Hofmann, "Ein Schläferspiel zwischen Maria und einem Mönch" in Zeitschrift für Assyriologie, 34 (1922), pp. 79-86.
+               Compare the two incipits. MV (2017-04-11) - See also LIT3879Miracle -->
+            <listBibl type="translation" xml:lang="en">
+               <bibl>
+                  <ptr target="bm:Budge1933Miracles"/>
+                  <citedRange unit="page"><!-- Insert pages --></citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:formsPartOf"
+                  active="LIT3928Miracle"
+                  passive="LIT2384Taamme"/>
+               <relation name="saws:isRelatedTo"
+                  active="LIT3928Miracle"
+                  passive="LIT3879Miracle"/>
             </listBibl>
          </div>
       </body>
