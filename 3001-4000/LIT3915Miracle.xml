@@ -41,9 +41,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="ApocryphaPseudoepigrapha"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="MV" when="2017-04-11">Added keywords and relations</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -52,9 +59,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Budge1923Miracles"/>
-                  <citedRange unit="item">99, part of LIT2384Taamme</citedRange>
+                  <citedRange unit="item">99</citedRange>
                </bibl>
-               <!--Budge 99, part of LIT2384Taamme-->
+            </listBibl>
+            <listBibl type="translation" xml:lang="en">
+               <bibl>
+                  <ptr target="bm:Budge1933Miracles"/>
+                  <citedRange unit="page"><!-- Insert pages --></citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:formsPartOf"
+                  active="LIT3915Miracle"
+                  passive="LIT2384Taamme"/>
             </listBibl>
          </div>
       </body>
