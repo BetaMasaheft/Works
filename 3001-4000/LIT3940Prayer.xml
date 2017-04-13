@@ -41,9 +41,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Prayers"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="MV" when="2017-04-13">Added keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -53,11 +60,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <bibl/>
                <relation name="lawd:hasAttestation"
                          active="LIT3940Prayer"
-                         passive="BNFet69, BNFet70"><!--BNFet69, BNFet70--></relation>
+                         passive="BNFet69"></relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3940Prayer"
+                  passive=" BNFet70"></relation>
             </listBibl>
          </div>
          <div type="edition">
-            <ab>በስመ፡ እግዚአብሔር፡ ቀዳማዊ፡ ዘእንበለ፡ ትማልም፡ ወማዕከላዊ፡ ዘእንበለ፡ ዮም፡ ወደኃራዊ፡ ዘእንበለ፡ ጌሠም።<!--TO BE MARKEDUP!--></ab>
+            <div type="textpart" subtype="incipit"  xml:lang="gez">
+               <ab>
+                  በስመ፡ እግዚአብሔር፡ ቀዳማዊ፡ ዘእንበለ፡ ትማልም፡ ወማዕከላዊ፡ ዘእንበለ፡ ዮም፡ ወደኃራዊ፡ ዘእንበለ፡ ጌሠም።
+               </ab>
+         </div>
          </div>
       </body>
    </text>
