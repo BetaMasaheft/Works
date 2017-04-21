@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dǝrsān ... ba-ʾǝnta kǝbrā la-dǝngǝl </title>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ በእንተ፡ ክብራ፡ ለድንግል፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān ... ba-ʾǝnta kǝbrā la-dǝngǝl </title>
+            <editor role="generalEditor" key="AB"/>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -27,7 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <listWit>
-               <witness/>
+               <witness corresp="BNFet104"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -41,9 +43,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Homily"/>
+               <term key="ChristianLiterature"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="MV" when="2017-04-21">Added keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -52,10 +61,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <listBibl type="relations">
                <bibl/>
                <relation name="saws:formsPartOf" active="LIT3998Dersan" passive=""><!--probably different from LIT1278Dersan--></relation>
-               <relation name="saws:isAttributedAuthorOf" active="" passive="LIT3998Dersan"><!--Cyriacus of Behnesa--></relation>
-               <relation name="lawd:hasAttestation"
+               <relation name="saws:isAttributedAuthorOf" active="PRS3251Cyriacus" passive="LIT3998Dersan"></relation>
+               <!--    
+                  <relation name="lawd:hasAttestation"
                          active="LIT3998Dersan"
-                         passive="BNFet104 (BNFsyr232, BNFsyr233)"><!--BNFet104 (BNFsyr232, BNFsyr233)--></relation>
+                         passive="BNFet104 (BNFsyr232, BNFsyr233)"></relation>
+               -->
             </listBibl>
          </div>
       </body>
