@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Canons of the Council of Laodicea: titles</title>
+            <title xml:id="t1">Titles of the Canons of the Council of Laodicea</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -29,7 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <listWit>
-               <witness/>
+               <witness corresp="BLorient481"/>
+               
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -40,13 +41,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               <term key="Liturgy"></term>
+               <term key="CanonLaw"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+         <change when="2017-04-24" who="ES">added keywords witnesses relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl></bibl>
+            <relation name="dcterms:isPartOf" active="LIT2685CanonsLaoT" passive="LIT2317Senodo"></relation>
+            <relation name="dcterms:isPartOf" active="LIT2685CanonsLaoT" passive="LIT2686CanonsLao"></relation>
+         </listBibl>
          <ab/>
       </body>
    </text>

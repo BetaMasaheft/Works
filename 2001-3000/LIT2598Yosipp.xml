@@ -10,8 +10,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Yosippon</title>
-            <title xml:id="t2">Sēfer Yosippon, Sēfer [Yosef] Ben Goryon, Zena Ayhud</title>
+            <title xml:id="t1" xml:lang="en">Yosippon</title>
+            <title corresp="#t1"  xml:lang="en">Josippon</title>
+            <title xml:id="t3" xml:lang="heb">ספר יוסיפון</title>
+            <title corresp="#t3" xml:lang="heb" type="normalized">Sēfer Yosippon</title>
+            <title xml:id="t4">Sēfer [Yosef] Ben Goryon</title>
+            <title xml:id="t5" xml:lang="gez">ዜና፡ አይሁድ፡</title>
+            <title corresp="#t5" xml:lang="gez" type="normalized">Zena ʾAyhud</title>
+            <title corresp="#t5" xml:lang="en">Story of Jews</title>
             <author>Joseph ben Gorion</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -41,15 +47,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+               <term key="Bible"/>
+               <term key="OldTestament"></term>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2017-04-24" who="ES">keywords title relations added</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listBibl type="relations">
+            <bibl>
+                           </bibl>
+            <relation name="saws:isAttributedToAuthor" active="LIT2598Yosipp" passive="PRS5772Josephus"><desc>attributed by the medieval Hebrew tradition to Josephus Flavius</desc></relation>
+            <relation name="saws:isAttributedToAuthor" active="LIT2598Yosipp" passive="PRS5769Josephb"><desc>The identity of "Joseph ben Gurion" is not fully clear.</desc></relation>
+         </listBibl>
          <ab/>
       </body>
    </text>
