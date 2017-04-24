@@ -29,7 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <listWit>
-               <witness/>
+               <witness corresp="BLorient481"/>
+               
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -40,14 +41,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"></term>
+               
+               <term key="CanonLaw"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+         <change when="2017-04-24" who="ES">added keywords witnesses relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="bibliography"><!--(part of Canons of the Apostles)--></div>
-      </body>
+<body>      <listBibl type="relations">
+         <bibl></bibl>
+         <relation name="dcterms:isPartOf" active="LIT2644CanonsPaul" passive="LIT2639CanonsSimon1 LIT1141Aposto"></relation>
+      </listBibl></body>
    </text>
 </TEI>
