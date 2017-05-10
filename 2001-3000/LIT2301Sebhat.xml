@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">ስብሐተ፡ ነግህ፡</title>
             <title corresp="#t1" xml:lang="gez" type="normalized">Sǝbḥata nagh</title>
+            <title xml:lang="en" corresp="#t1">Morning Praise</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -42,8 +43,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Poetry"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Chants"/>
+               <term key="Liturgy"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -51,12 +53,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change when="2017-03-15" who="ES">updated title keywords</change>
+         <change who="MV" when="2017-05-10">Added keywords and relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:formsPartOf"
+                  active="LIT2301Sebhat"
+                  passive="LIT3186Meeraf">
+               </relation>
+            </listBibl>
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Velat1966MeerafText"/>
+                  <citedRange>222-252</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation" xml:lang="fr">
+               <bibl>
+                  <ptr target="bm:Velat1966MeerafTrad"/>
+                  <citedRange>432-466</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
+
+
