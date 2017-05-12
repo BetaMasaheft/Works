@@ -10,8 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Naʿa ḫabeya Dāwit nǝguś</title>
-            <title xml:lang="en" corresp="#t1">Come to me, David the Psalmist</title>
+            <title xml:lang="gez" xml:id="t1">ነዐ፡ ኀቤየ፡ ዳዊት፡ ንጉሠ፡ እስራኤል፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Naʿa ḫabeya Dāwit nǝguśa ʾƎsrāʾel</title>
+            <title xml:lang="en" corresp="#t1">Come to me, David king of Israel</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -28,7 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <listWit>
-               <witness corresp="BAVet3"/>
+               <witness corresp="BAVet3#ms_i2.1"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -45,17 +46,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
+               <term key="Poetry"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-03-24">Updated and added keywords</change>
+         <change who="MV" when="2017-05-12">Fixed title, added incipit and relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-     <ab/>
+         <div type="bibliography">
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="ecrm:CLP46i_may_form_part_of"
+                  active="LIT4009Naahab"
+                  passive="LIT3985Mazmura">
+               </relation>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit"  xml:lang="gez">
+               <ab>
+                  ነዐ፡ ኀቤየ፡ ወዳዊት፡ ንጉሠ፡ እስራኤል፡ በዓለ፡ መዝሙር፡ ሠናይ፡ ወጥዑመ፡ ቃል፡ 
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
