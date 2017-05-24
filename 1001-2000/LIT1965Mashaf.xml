@@ -10,7 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mäṣḥafä sǝddät</title>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ስደት፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa sǝddat</title>
+            <title xml:lang="gez" xml:id="t2">መጽሐፈ፡ ስደቶሙ፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Maṣḥafa sǝddatomu</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,6 +42,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="HistoryAndHistoriography"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -48,7 +57,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+      <div type="bibliography">
+         <listBibl type="secondary">
+            <bibl><ptr target="bm:Dege2010EAESeddat"/></bibl>
+         </listBibl>
+         <listBibl type="editions">
+            <bibl><ptr target="bm:Kropp1988LebnaI"/><citedRange unit="page">12-14</citedRange></bibl>
+         </listBibl>
+      </div>
       </body>
    </text>
 </TEI>
