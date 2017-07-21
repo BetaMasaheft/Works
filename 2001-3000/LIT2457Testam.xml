@@ -4,26 +4,44 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2457Testam">
+   type="work"
+   xml:lang="en"
+   xml:id="LIT2457Testam">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Testament of Adam</title>
+            <title xml:lang="la" xml:id="t1">Testamentum Adami</title>
+            <title xml:id="t2" xml:lang="en">Testament of Adam</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="RHC"/>
+            <respStmt>
+               <resp>Digitization and encoded by</resp>
+               <persName>Michal Jerabek</persName>
+               <persName ref="RHC"/>
+            </respStmt>
+            
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
+         <editionStmt>
+            <p>The text is that copied by Michal Jerabek.</p>
+            <p>The non-unicode encoded text was saved from the website by Ran HaCohen and converted
+               to Unicode.</p>
+         </editionStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+               multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
                   <p>
-                This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
+                     This file is licensed under the Creative Commons
+                     Attribution-ShareAlike 4.0. </p>
+                  <p>The text within has the following copyright. 1995 Library of Ethiopian Texts,
+                     created and maintained by Michal Jerabek, Prague. Permission to use, copy, and
+                     distribute this text, for any NONCOMMERCIAL purpose is hereby granted without
+                     fee, provided that the copyright notice and this permission notice appear in
+                     all copies of this text. This text cannot be sold under any circumstances.</p>
                </licence>
             </availability>
          </publicationStmt>
@@ -44,11 +62,56 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="RHC" when="2017-07-18">Sent word file with unicode encoded text.</change>
+         <change who="PL" when="2017-07-21">Marked up minimally the text provided.</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:bezold1906Adami"/>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="gez">
+            <ab>
+               <l n="2"> ወዓዲ ፡ ለቡ ፡ ሰዓታተ ፡ ዘመዓልት ፡ ወዘሌሊት ፡ ወዘከመ ፡ መፍትው ፡ ታስተበቍዕ ፡ ኀበ ፡ እግዚአብሔር ፡ ወትስአል ፡ በበጊዜሁ ።</l>
+               <l n="3"> እስመ ፡ መሀረኒ ፡ ፈጣሪየ ፡ ዘንተ ፡ ኵሎ ፡ ወነገረኒ ፡ አስማቲሆሙ ፡ ለኵሎሙ ፡ አራዊት ፡ ወእንስሳ ፡ ወአዕዋፈ ፡ ሰማይ ፤ ወእምዝ ፡ አለበወኒ ፡ እግዚአብሔር ፡ ኍልቈ ፡ ሰዓታት ፡ ዘመዓልት ፡ ወዘሌሊት ፡ ወነገረኒ ፡ ዘከመ ፡ ይሴብሕዎ ፡ መላእክት ፡ ለእግዚአብሔር ።</l>
+               <l n="4"> ለቡ ፡ እንከ ፡ ኦወልድየ ፡ በቀዳሚት ፡ ሰዓተ ፡ መዓልት ፡ የዐርግ ፡ ጸሎቶሙ ፡ ለውሉድየ ፡ ኀበ ፡ እግዚአብሔር ።</l>
+               <l n="5"> ወበዳግሚት ፡ ሰዓት ፡ ይከውን ፡ ጸሎቶሙ ፡ ወስእለቶሙ ፡ ለመላእክት ።</l>
+               <l n="6"> ወበሣልስ ፡ ሰዓት ፡ ይሴብሕዎ ፡ አዕዋፈ ፡ ሰማይ ።</l>
+               <l n="7"> ወበራብዕ ፡ ሰዓት ፡ ያመልክዎ ፡ መንፈሳውያን ።</l>
+               <l n="8"> ወበ ፡ ኃምስ ፡ ሰዓት ፡ ይኤምኅዎ ፡ ኵሎሙ ፡ አራዊት ፡ ወእንስሳ ።</l>
+               <l n="9"> ወበሳድስ ፡ ሰዓት ፡ ይከውን ፡ ስእለቶሙ ፡ ለኪሩቤል ።</l>
+               <l n="10"> ወበሳብዕ ፡ ሰዓት ፡ ይበውኡ ፡ መላእክት ፡ ኀበ ፡ እግዚአብሔር ፡ ወይወፅኡ ፡ እምኀቤሁ ፡ እስመ ፡ በዛቲ ፡ ሰዓት ፡ የዐርግ ፡ ጸሎተ ፡ ኵሉ ፡ ሕያው ፡ ኀበ ፡ እግዚአብሔር ።</l>
+               <l n="11"> ወበሳምን ፡ ሰዓት ፡ ይሴብሕዎ ፡ ሰማያውያን ፡ ብሩሃን ።</l>
+               <l n="12"> ወበተስዐቱ ፡ ሰዓት ፡ ይትቀነዩ ፡ መላእክቲሁ ፡ ለእግዚአብሔር ፡ እለ ፡ ይቀውሙ ፡ ቅድመ ፡ መንበሩ ፡ ለልዑል ።</l>
+               <l n="13"> ወበ ፡ ዐሠርቱ ፡ ሰዓት ፡ ይጼልል ፡ መንፈስ ፡ ቅዱስ ፡ ላዕለ ፡ ማያት ፡ ወይጐይዩ ፡ አጋንንት ፡ ወይሴስሉ ፡ እምነ ፡ ማያት ፤ ወሶበሰ ፡ ኢጸለለ ፡ መንፈስ ፡ ቅዱስ ፡ በዛቲ ፡ ሰዓት ፡ ላዕለ ፡ ማያት ፡ ኵሎ ፡ ዕለተ ፡ እምኢክህለ ፡ ወኢመኑሂ ፡ ሰቲዮቶ ፡ ለማይ ፡ ወእማስነ ፡ ሥጋሁ ፡ እምኀበ ፡ አጋንንት ፡ እኩያን ።</l>
+               <l n="14"> ወሶበ ፡ ነሥአ ፡ ካህን ፡ ማየ ፡ በዛቲ ፡ ሰዓት ፡ ወቶስሐ ፡ ምስሌሁ ፡ ዘይተ ፡ ቅዱሰ ፡ ወቀብአ ፡ ቦቱ ፡ ድውያነ ፡ ወእለሂ ፡ ቦሙ ፡ መናፍስተ ፡ ርኩሳን ፡ እምተፈወሱ ፡ እምደዌሆሙ ።</l>
+               <l n="15"> ወበዐሠርቱ ፡ ወአሐዱ ፡ ሰዓት ፡ ይከውን ፡ ፍሥሓሆሙ ፡ ለጻድቃን ።</l>
+               <l n="16"> ወበዐሠርቱ ፡ ወክልኤቱ ፡ ሰዓት ፡ ይትዌከፍ ፡ እግዚአብሔር ፡ ልዑል ፡ ጸሎቶሙ ፡ ወስእለቶሙ ፡ ለውሉደ ፡ ሰብእ ።</l>
+               <l n="17"> ወበቀዳሚት ፡ ሰዓተ ፡ ሌሊት ፡ ያአኵትዎ ፡ አጋንንት ፡ ለእግዚአብሔር ፡ ልዑል ፡ ወአልቦሙ ፡ እከይ ፡ ወኢላዕለ ፡ መኑሂ ፡ እስከ ፡ አመ ፡ ይፌጽሙ ፡ ቅኔሆሙ ።</l>
+               <l n="18"> ወበዳግም ፡ ሰዓት ፡ ይሴብሕዎ ፡ ዓሣት ፡ ወኵሉ ፡ ዘሀሎ ፡ ውስተ ፡ ማያት ፡ አራዊት ፡ ወዐናብርት ።</l>
+               <l n="19"> ወበሣልስ ፡ ሰዓት ፡ ትሴብሖ ፡ እሳት ፡ እስመ ፡ መትሕተ ፡ ታሕቲት ፤ ወበዛቲ ፡ ሰዓት ፡ ኢይክል ፡ መኑሂ ፡ ተናግሮ ።</l>
+               <l n="20"> ወበራብዕት ፡ ሰዓት ፡ ይቄድስዎ ፡ ሱራፌል ።</l>
+               <l n="21"> ወበኃምስ ፡ ሰዓት ፡ ይሴብሕዎ ፡ ማያት ፡ ዘመልዕልተ ፡ ሰማያት ፤ ወቀዲሙሰ ፡ ነበርኩ ፡ እንዘ ፡ እሰምዖሙ ፡ ለመላእክት ፡ በዛቲ ፡ ሰዓት ፡ ዘከመ ፡ ይጸርኁ ፡ ከመ ፡ ድምፀ ፡ መንኵራኵር ፡ ዐበይት ፡ ወዓዲ ፡ ይጸርኁ ፡ መዋግድ ፡ በቃለ ፡ ስብሐት ፡ ለእግዚአብሔር ።</l>
+               <l n="22"> ወበሳድስ ፡ ሰዓት ፡ ይሴብሕዎ ፡ ደመናት ፡ ለእግዚአብሔር ፡ በፍርሀት ፡ ወበረዓድ ።</l>
+               <l n="23"> ወበሳብዕ ፡ ሰዓት ፡ ታረምም ፡ ምድር ፡ ወኵሉ ፡ ዘዲቤሃ ፡ ወይነውሙ ፡ ማያት ፤ ወበዛቱ ፡ ሰዓት ፡ ሶበ ፡ ነሥአ ፡ ካህን ፡ ማየ ፡ ወቶስሐ ፡ ምስሌሁ ፡ ዘይተ ፡ ቅዱሰ ፡ ወቀብአ ፡ ቦቱ ፡ ድውያነ ፡ ወእለሂ ፡ ኢይነውሙ ፡ ሌሊተ ፡ እምብዝኀ ፡ ሕማም ፡ እምተፈወሱ ፡ እምደዌሆሙ ፡ ወእምኖሙ ፡ እለ ፡ ይተግሁ ።</l>
+               <l n="24"> ወበሳምን ፡ ሰዓት ፡ ታወዕእ ፡ ምድር ፡ ሣዕረ ፡ ወሐመልማለ ፡ ወታበቍል ፡ ዕፀወ ።</l>
+               <l n="25"> ወበትስዐቱ ፡ ሰዓት ፡ ይትቀነዩ ፡ መላእክት ፡ ለእግዚአብሔር ፡ ወትበውእ ፡ ጸሎቶሙ ፡ ለውሉደ ፡ ሰብእ ፡ ቅድመ ፡ እግዚአብሔር ፡ ልዑል ።</l>
+               <l n="26"> ወበዐሠርቱ ፡ ሰዓት ፡ ይትረኀዉ ፡ አናቅጸ ፡ ሰማይ ፡ ወይሰምዕ ፡ እግዚአብሔር ፡ ጸሎቶሙ ፡ ለውሉደ ፡ መሃይምናን ፡ ወይትወሀቦሙ ፡ ስእለቶሙ ፡ ዘይስእሉ ፡ እምኀበ ፡ እግዚአብሔር ፡ ወበ ፡ ድምፀ ፡ ክነፊሆሙ ፡ ለሱራፌል ፡ ውእተ ፡ ጊዜ ፡ ይነቁ ፡ ዶርሆ ፡ ወይሴብሕዎ ፡ ለእግዚአብሄር ።</l>
+               <l n="27"> ወበዐሠርቱ ፡ ወአሐዱ ፡ ሰዓት ፡ ይከውን ፡ ፍሥሓ ፡ ወሐሤት ፡ ዲበ ፡ ኵሉ ፡ ምድር ፡ እስመ ፡ ፀሐይ ፡ ይበውእ ፡ ውስተ ፡ ገነት ፡ ወይሠርቅ ፡ ብርሃኑ ፡ ውስተ ፡ ኵሉ ፡ አጽናፈ ፡ ዓለም ፡ ወያበርህ ፡ ላዕለ ፡ ኵሉ ፡ ፍጥረት ።</l>
+               <l n="28"> ወበዐሠርቱ ፡ ወክልኤቱ ፡ ሰዓት ፡ መፍትው ፡ ለውሉድየ ፡ ይቁሙ ፡ ቅድመ ፡ እግዚአብሄር ፡ ወይትቀነዩ ፡ እስመ ፡ በዛቲ ፡ ሰዓት ፡ ይከውን ፡ አርምሞ ፡ ብዙኅ ፡ ላዕለ ፡ ኵሎሙ ፡ ሰማያውያን ።</l>
+               <l n="29"> አእምርኬ ፡ ዘንተ ፡ ኵሎ ፡ ወስምዐኒ ፡ ነገርየ ፡ ወለቡ ፡ ከመ ፡ ቃለ ፡ እግዚአብሄር ፡ ልዑል ፡ ይወርድ ፡ ውስተ ፡ ምድር ፡ በከመ ፡ ነገረኒ ፡ ጊዜ ፡ አውፅአኒ ፡ እምውስተ ፡ ገነት ፤ እስመ ፡ ውእቱ ፡ ይቤለኒ ፡ ከመ ፡ ቃሉ ፡ በደኃሪ ፡ መዋዕል ፡ ይሰባእ ፡ እምወለት ፡ ድንግል ፡ እንተ ፡ ስማ ፡ ማርያም ፡ ወይሴወር ፡ ውስቴታ ፡ ወይለብስ ፡ ሥጋ ፡ ወይትወለድ ፡ በአምሳለ ፡ ሰብእ ፡ በዐቢይ ፡ ኀይል ፡ ወኪን ፡ ወጥበብ ፡ አልቦ ፡ ዘያአምሮ ፡ ዘእንበሌሁ ፡ ወዓዲ ፡ ዘከሠተ ፡ ሎቱ ፡ ወያንሶሱ ፡ ምስለ ፡ ውሉድ ፡ ዲበ ፡ ምድር ፡ ወይልህቅ ፡ በመዋዕል ፡ ወዓመታት ፡ ወይገብር ፡ ተአምራተ ፡ ወመንክራተ ፡ ክሡተ ፡ ወየሐውር ፡ ዲበ ፡ ባሕር ፡ ከመ ፡ ዘየሐውር ፡ በየብስ ፡ ወይጌሥጽ ፡ ባሕረ ፡ ወነፋሳተ ፡ ገሃደ ፡ ወይትኤዘዙ ፡ ሎቱ ፡ ወይጼውዖሙ ፡ ለመዋግደ ፡ ባሕር ፡ ወያወሥእዎ ፡ ፍጡነ ።</l>
+               <l n="30"> ወይሬስዮሙ ፡ ለዕውራን ፡ ይርአዩ ፡ ወእለ ፡ ለምጽ ፡ ይንጽሑ ፡ ወጽሙማን ፡ ይስምዑ ፡ ወበሃማን ፡ ይንብቡ ፡ ወያነሥኦሙ ፡ ለመፃጕዓን ፡ ወያረውጾሙ ፡ ለሐንካሳን ፡ ወይመይጦሙ ፡ ለብዙኃን ፡ እምስሕተት ፡ ውስተ ፡ አእምሮ ፡ እግዚአብሄር ፡ ወይሰድዶሙ ፡ ለአጋንንት ፡ እምላዕለ ፡ ሰብእ ።</l>
+               <l n="31"> ወዓዲ ፡ ነገረኒ ፡ እግዚአብሔር ፡ ወይቤለኒ ፡ ኢትሕዝን ፡ ኦአዳም ፡ እስመ ፡ ፈቀድከ ፡ ትኩን ፡ አምላከ ፡ ወዐለውከ ፡ ትእዛዝየ ፤ ናሁ ፡ እሬስየከ ፡ ወአኮ ፡ ይእዜ ፡ አላ ፡ ባሕቱ ፡ እምድኅረ ፡ ኅዳጥ ፡ መዋዕል ።</l>
+               <l n="32"> ወካዕበ ፡ ነገረኒ ፡ ወይቤለኒ ፡ አነ ፡ ውእቱ ፡ እግዚአብሔር ፡ ዘአውፃእኩከ ፡ እም ፡ ገነተ ፡ ትፍሥሕት ፡ ውስተ ፡ ምድር ፡ እንተ ፡ ታበቍል ፡ ሦከ ፡ ወአሜከላ ፡ ወተኀድር ፡ ውስቴታ ፤ ኣደንን ፡ ዘባነከ ፡ ወአርዕድ ፡ ብረከከ ፡ በርሥእና ፡ ወእሬሲ ፡ ሥጋከ ፡ ሲሳየ ፡ ለዕፄያት ፤ ወእምድኅረ ፡ ኀሙስ ፡ መዋዕል ፡ ወመንፈቀ ፡ መዓልት ፡ እሣህለከ ፡ ወእምሕረከ ፡ በብዙኅ ፡ ሣህልየ ፡ ወምሕረትየ ፡ ወእወርድ ፡ ውስተ ፡ ቤትከ ፡ ወአኀድር ፡ ውስተ ፡ ሥጋከ ፤ ወበእንቲአከ ፡ ኦአዳም ፡ እትወለድ ፡ ከመ ፡ ሕፃን ፡ ወበእንአከ ፡ ኦአዳም ፡ አሐውር ፡ ውስተ ፡ ምሥያጥ ፡ ወ ፡ በእንቲአከ ፡ ኦአዳም ፡ እጸውም ፡ አርብዓ ፡ መዓልተ ፡ ወበእንቲአከ ፡ ኦአዳም ፡ እትዌከፍ ፡ ጥምቀተ ፡ ወበእንቲአከ ፡ ኦአዳም ፡ እትዔገሥ ፡ ሕማመ ፡ ወበእንቲአከ ፡ ኦአዳም ፡ እሰቀል ፡ ዲበ ፡ ዕፀ ፡ መስቀል ፡ ወዝንቱ ፡ ኵሉ ፡ በእንቲአከ ፡ ኦአዳም ፤ ዘሎቱ ፡ ስብሐት ፡ ወዕበይ ፡ ወእኂዝ ፡ ወክብር ፡ ወሰጊድ ፡ ወዘምሮ ፡ ምስለ ፡ አቡሁ ፡ ወመንፈስ ፡ ቅዱስ ፡ እምይእዜ ፡ ወእስከ ፡ ለዓለመ ፡ ዓለም ፡ አሜን ።</l>
+               <l n="33"> ወዓዲ ፡ አእምር ፡ ኦወልድየ ፡ ሴት ፡ ናሁ ፡ ይመጽእ ፡ አይኅ ፡ ወየኀፅባ ፡ ለኵላ ፡ ምድር ፡ በእንተ ፡ ውሉዱ ፡ ለቃየል ፡ ቀታሊ ፡ ዘቀተለ ፡ እኁሁ ፡ በቅንአት ፡ በእንተ ፡ እኅቱ ፡ ሉድ ፤ ወእምድኅረ ፡ አይኅ ፡ በብዙኅ ፡ ሱባዔ ፡ ይከውን ፡ ደኃሪ ፡ መዋዕል ፡ ወይትፌጸም ፡ ኵሉ ፡ ወይበጽሕ ፡ ጊዜሁ ፡ ወትበልዕ ፡ እሳት ፡ ኵሎ ፡ ዘትረክብ ፡ ቅድመ ፡ እግዚአብሄር ፡ ወትትቄደስ ፡ ምድር ፡ ወየሐውር ፡ ዲቤሃ ፡ እግዚአ ፡ አጋእዝት ።</l>
+               <l n="34"> ወጸሐፈ ፡ ሴት ፡ ዛተ ፡ ትእዛዘ ፡ ወኀተማ ፡ በማኅተሙ ፡ ወበማኅተመ ፡ አቡሁ ፡ አዳም ፡ ዘነሥአ ፡ ምስሌሁ ፡ እምውስተ ፡ ገነት ፡ ወበማኅተማ ፡ ለሄዋን ፡ እሙ ፨ ፨ ፨ ፨ ፨ ፨ ፨ </l>
+            </ab>
+         </div>
       </body>
    </text>
 </TEI>
