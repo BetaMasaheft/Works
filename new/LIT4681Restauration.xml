@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Restauration of the Royal throne in Aksum</title>
+                <title xml:id="t1">Restauration of the Royal throne in Aksum</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -35,6 +35,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="HistoryAndHistoriography"/>
+                    <term key="ChristianLiterature"/>
+                    <term key="Paks2" cert="low"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -51,7 +53,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listBibl type="secondary">
+                    <bibl><ptr target="bm:Wion2009LibAks"/><citedRange unit="page">156-157</citedRange></bibl>
+                </listBibl>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="chapter" n="1" xml:id="Part1">
+                    <label>Restauration of the throne of the kings of ʾAksum by <persName ref="PRS10626ZaraY"/> in the year <date calendar="grace">87</date></label>
+                </div>
+                <div type="textpart" subtype="chapter" n="2" xml:id="Part2">
+                    <label>Restauration of the throne of the kings of ʾAksum by <persName ref="PRS8550sardaDe"/> in the year <date calendar="grace">231</date></label>
+                </div>
+            </div> 
         </body>
     </text>
 </TEI>

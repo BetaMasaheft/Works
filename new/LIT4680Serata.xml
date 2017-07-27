@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Śǝrʿāta beta mangǝśt</title>
+                <title xml:lang="gez" xml:id="t1">ሥርዓተ፡ ቤተ፡ መንግሥት፡</title>
+                <title xml:lang="gez" corresp="#t1">Śǝrʿāta beta mangǝśt</title>
+                <title xml:lang="gez" corresp="#t1">Rule of Royal House</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -35,6 +37,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="HistoryAndHistoriography"/>
+                    <term key="ChristianLiterature"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -47,11 +50,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2017-07-26">Created entity</change>
+            <change who="DR" when="2017-07-27">Additions</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl><ptr target="bm:Dillmann1884Kirchenordnung"/><citedRange unit="page">77</citedRange></bibl>
+                </listBibl>
+                <listBibl type="secondary">
+                    <bibl><ptr target="bm:Wion2009LibAks"/><citedRange unit="page">153-154</citedRange></bibl>
+                </listBibl>
+                <listBibl type="relations">
+                    <bibl/>
+                    <relation name="saws:isDifferentTo" active="LIT4680Serata" passive="LIT2341serata"/>
+                </listBibl>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Part1" n="1">
+                    <label>List of twelve palace dignitaries, followed by a group of women, the "Daughters of Ṣǝyon", each
+                    listed with their attributes and objects representing their funtions.</label>
+                </div>
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Part2" n="2">
+                    <label>List of the twelve houses of Israel which accompanied <persName ref="PRS7005Menilek"/> to Ethiopia.</label>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>

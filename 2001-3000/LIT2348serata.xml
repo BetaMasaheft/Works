@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Śǝrʿatä qwǝrḥat</title>
+            <title xml:lang="gez" xml:id="t1">ሥርዓተ፡ ቍርሐት፡</title>
+            <title xml:lang="gez" corresp="#t1">Śǝrʿāta qʷǝrḥat</title>
+            <title xml:lang="gez" corresp="#t1">Rule of tonsure</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,16 +41,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="HistoryAndHistoriography"/>
+               <term key="ChristianLiterature"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-07-27">Additions</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+      <div type="bibliography">
+         <listBibl type="editions">
+            <bibl><ptr target="bm:Dillmann1884Kirchenordnung"/></bibl>
+         </listBibl>
+         <listBibl type="translation">
+            <bibl><ptr target="bm:Dillmann1884Kirchenordnung"/></bibl>
+         </listBibl>
+         <listBibl type="secondary">
+            <bibl><ptr target="bm:Wion2009LibAks"/><citedRange unit="page">150-153</citedRange></bibl>
+         </listBibl>
+      </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit">
+               <ab>ዝውእቱ፡ መጽሐፍ፡ ዘወሀቦ፡ ሰሎሞን፡ ንጉሥ፡ ለዕብነ፡ ሐኪም፡ ወልዱ፡ ወወሀቦ፡ ሰብአ፡ ሕግ፡ እለ፡ የሐውሩ፡ ምስሌሁ፡ ሀገረ፡ ኢትዮጵያ።</ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
