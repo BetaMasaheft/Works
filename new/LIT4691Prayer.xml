@@ -6,13 +6,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
      xml:lang="en"
-     xml:id="LIT2248salota">
+     xml:id="LIT4691Prayer">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ጸሎተ፡ አኰቴት፡ ዘባስልዮስ፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Prayer of Thanksgiving by St Basil</title>
-            <title xml:lang="en" corresp="#t1">Prayer of St Basil</title>
+            <title xml:id="t1">Prayer for the weekdays</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -30,12 +28,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness corresp="EMML74" type="external"></witness>
-               <witness corresp="EMML321" type="external"></witness>
-               <witness corresp="EMML4777" type="external"></witness>
-               <witness corresp="BAVet97"></witness>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
+            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -47,29 +41,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Prayers"></term>
-               <term key="Liturgy"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Prayers"/>
+               <term key="Liturgy"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
-         <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change when="2017-02-27" who="ES">updated title keywords relation</change>
-         <change when="2017-08-04" who="MV">Updates</change>
+         <change who="MV" when="2017-08-04">Created entity</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl></bibl>
-            <relation name="saws:isAttributedToAuthor" active="IT2248salota" passive="PRS2546Basilth"></relation>
-         </listBibl>
-         <listBibl type="secondary">
-            <bibl><ptr target="bm:Witakowski2003Basil"/><citedRange>497b</citedRange></bibl>
-         </listBibl>
+         <div type="edition">
+            <div type="textpart" xml:id="Monday"><label>Prayer for Monday</label></div>
+            <div type="textpart" xml:id="Tuesday"><label>Prayer for Tuesday</label></div>
+            <div type="textpart" xml:id="Wednesday"><label>Prayer for Wednesday</label></div>
+            <div type="textpart" xml:id="Thursday"><label>Prayer for Thursday</label></div>
+            <div type="textpart" xml:id="Friday"><label>Prayer for Friday</label></div>
+            <div type="textpart" xml:id="Saturday"><label>Prayer for Saturday</label></div>
+            <div type="textpart" xml:id="Sunday"><label>Prayer for Sunday</label></div>
+         </div>
       </body>
    </text>
 </TEI>
