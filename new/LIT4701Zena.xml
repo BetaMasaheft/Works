@@ -1,11 +1,12 @@
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4633Chronicle" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4701Zena" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:id="t1">Chronicle of Bakāffā</title>
+                <title xml:lang="gez" xml:id="t1">ዜና፡ ልደቶሙ፡ ለነገሥት፡ እምአዳም፡ እስከ፡ ይእዜ።</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Zenā lǝdatomu la-nagaśt ʾǝm-ʾAddām ʾǝska yǝʾǝze</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -28,12 +29,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A digital born TEI file</p>
         </encodingDesc>
         <profileDesc>
+            <creation/>
+            <abstract>
+                <p/>
+            </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
+                    <term key="Chronography"/>
                     <term key="HistoryAndHistoriography"/>
-                    <term key="Chronicles"/>
-                    <term key="Gon"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -45,35 +49,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DR" when="2017-05-12">Created entity</change>
-            <change who="DR" when="2017-08-08">Additions</change>
+            <change who="DR" when="2017-08-09">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-     <div type="edition">
-         <div type="textpart" subtype="part" xml:id="Part1" n="1">
-             <label>Part 1</label>
-                 <note>The first part of the chronicle deals with the first four years of
-                     <persName ref="PRS2377Bakaffa"/>'s reign. </note>
-             <ab/>
-         </div>
-         <div type="textpart" subtype="part" xml:id="Part2" n="2">
-             <label>Part 1</label>
-             <ab/>
-         </div>
-         <div type="textpart" subtype="part" xml:id="Part3" n="3">
-             <label>Part 1</label>
-             <ab/>
-         </div>
-     </div>
-            <div type="bibliography">
-                <listBibl type="relations">
-                    <bibl/>
-                    <relation name="saws:isAttributedToAuthor" active="LIT4633Chronicle#Part2" passive="PRS8871Sinoda"/>
-                    <relation name="saws:isAttributedToAuthor" active="LIT4633Chronicle#Part3" passive="PRS5941KenfaMi"/>
-                </listBibl>
-            </div>
+            <div type="bibliography"/><!---->
         </body>
     </text>
 </TEI>
