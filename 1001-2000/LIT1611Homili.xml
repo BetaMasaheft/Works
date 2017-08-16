@@ -33,6 +33,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Homily"/>
+            </keywords>
+         </textClass>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
@@ -44,11 +50,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-08-16">Added keywords and relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor"
+                  active="LIT1611Homili"
+                  passive="PRS2546Basilth"/>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
