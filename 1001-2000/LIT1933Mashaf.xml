@@ -13,7 +13,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ሓዊ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa ḥāwi</title>
             <title xml:lang="en" corresp="#t1">Book of Ḥāwi</title>
-            <title xml:lang="ar" xml:id="t2arabic" type="normalized">Kitāb al-ḥāwi</title>
+            <title xml:lang="ar" xml:id="t2arabic">كتاب الحاوي</title>
+            <title xml:lang="ar" corresp="#t2arabic" type="normalized">Kitāb al-ḥāwi</title>
             <title xml:lang="grc" xml:id="t3greek">Πανδέκται τῶν ἑρμηνείον τῶν θείον ἐντολῶν τοῦ Κυρίου</title>
             <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
@@ -41,7 +42,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
             <language ident="grc">Greek</language>
          </langUsage>
@@ -51,6 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Theology"/>
                <term key="MonasticLiterature"/>
                <term key="Translation"/>
+               <term key="Paks2"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -58,6 +59,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-08-30">Additions</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -72,11 +74,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <bibl/>
             <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1933Mashaf#t1" passive="LIT1933Mashaf#t2arabic"/>
             <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1933Mashaf#t2arabic" passive="LIT1933Mashaf#t3greek"/>
-            <relation name="saws:isAttributedToAuthor" active="LIT1933Mashaf#t1" passive="PRS8410Salikof"/>
+            <relation name="dcterms:creator" active="LIT1933Mashaf#t1" passive="PRS8410Salikof"/>
          </listBibl>
        </div>
          
         <div type="edition">
+           <note>The following division into textparts follows <ref type="mss" corresp="BNFet110"/> and <ref type="mss" corresp="FSUor13"/>.</note>
+           
            <div type="textpart" subtype="chapter" n="0" xml:id="Introduction">
             <label>Introduction followed by the table of the 63 rubrics and a short explanation by the translator on his methods.</label>
          </div>
@@ -281,7 +285,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </div>
          <div type="textpart" subtype="chapter" n="63" xml:id="Chapter63">
             <label>On the ordination and deposition of priests</label>
-         </div></div>
+         </div>
+           <div type="textpart" subtype="chapter" n="64" xml:id="Colophon">
+              <label>On the time of this work's composition</label>
+           </div>
+        </div>
       </body>
    </text>
 </TEI>
