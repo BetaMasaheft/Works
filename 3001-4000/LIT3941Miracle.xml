@@ -46,17 +46,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/> 
                <term key="Miracle"/> 
                <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-13">Added keywords and relations</change>
+         <change who="DR" when="2017-10-09">Added bibliography and relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <div type="bibliography"><!----></div>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl><ptr target="bm:Grebaut1920MiraclesJesusII"/><citedRange unit="page">823-827</citedRange></bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:formsPartOf" active="LIT4720Miracle" passive="LIT2382Taamme"/>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
