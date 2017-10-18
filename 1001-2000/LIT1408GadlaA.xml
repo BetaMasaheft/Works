@@ -10,7 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Gädlä Abranyos</title>
+            <title xml:lang="gez" xml:id="t1">ገድለ፡ አብራንዮስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla ʾAbrānyos</title>
+            <title xml:lang="en" corresp="#t1">Vita of ʾAbrānyos</title>
+            <title xml:lang="gez" xml:id="t2">KRZ 3</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,8 +31,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl corresp="#t2" type="KRZ"><ptr target="bm:KRZ"/><citedRange unit="item">3</citedRange></bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -39,16 +43,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Hagiography"/>
+               <term key="ZaMa"></term>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MV" when="2017-10-18">Edited</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl><ptr target="bm:Raineri1983Abranyos"/>
+               <citedRange>435-530</citedRange></bibl>
+            </listBibl>
+            <listBibl type="translation" xml:lang="it">
+               <bibl><ptr target="bm:Raineri1983Abranyos"/>
+                  <citedRange>562-622</citedRange></bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Raineri2003Abranyos"/></bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
