@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Ḫāylu-Compilation (general record)</title>
+            <title xml:id="t1">Ḫāylu Compilation (general record)</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -25,15 +25,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
-         <sourceDesc>
-            <listWit>
-               <witness corresp="BNFet143"/>
-            </listWit>
-         </sourceDesc>
+         <sourceDesc><ab/></sourceDesc>
       </fileDesc>
       <profileDesc>
          <abstract>
-            <p>General Record</p>
+            <p>The so-called "Ḫāylu Compilation" is a compilation of chronicles and other historiographic works begun by <persName ref="PRS5222haylaMi"/> by collecting manuscripts and commissioning copies after
+               a fire at the Royal Palace in <placeName ref="LOC3577Gondar"/> destroyed many manuscripts. 
+               The actual "Ḫāylu Compilation" was produced during a later exile in <placeName ref="LOC4432Mahdar"/> by
+               <persName ref="PRS5222haylaMi"/>'s friend and secretary <persName ref="PRS1007Abagaz"/>. After ending his compilatory work with the time of the exile in
+               <placeName ref="LOC4432Mahdar"/>, <persName ref="PRS1007Abagaz"/> continued by writing himself the history of <persName ref="PRS5222haylaMi"/> and of Ethiopia,
+               stopping after the death of <persName ref="PRS5222haylaMi"/> in <date>1809</date>, which is not included in the Compilation.
+            Some manuscripts contain brief accounts of events taking place after <date>1809</date>, but these do not form part of the original Compilation.
+               Most of the works included in the Ḫāylu Compilation also circulate independently.</p>
          </abstract>
          <langUsage>
             <language ident="en">English</language>
@@ -45,17 +48,67 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="HistoryAndHistoriography"/>
+               <term key="Chronicles"/>
+               <term key="ZaMa"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-03-31">Added keywords and adjustments</change>
+         <change who="DR" when="2017-10-11">Added abstract, bibliography and textparts</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+        <div type="bibliography">
+           <listBibl type="secondary">
+              <bibl><ptr target="bm:Kropp2016Zekra"/></bibl>
+              <bibl> 
+                 <ptr target="bm:Kropp1989Haylu"/>
+              </bibl> 
+              <bibl> 
+                 <ptr target="bm:ChernestsovRed2005HayluEsate"/>
+              </bibl>  
+           </listBibl>
+        </div>
+        <!-- this division into textparts is still in progress! it is based on bm:Kropp1989Haylu DR 2017-10-13-->
+         <div type="edition">
+            <div type="textpart" subtype="chapter" n="1" xml:id="IntroductionWaldaAmid" corresp="LIT4724WaldaAmidIntroduction">
+               <label></label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="SubscriptionIntroduction">
+               <label>Subscription following the end of the introduction and king lists, preceding the Śǝrʿāta gǝbr.</label>
+                  <bibl><ptr target="bm:Kropp1989Haylu"/><citedRange unit="page">26-27</citedRange></bibl> 
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="RasMikael">
+               <label>The deeds of <persName ref="PRS5222haylaMi"/></label>
+               <bibl><ptr target="bm:Kropp1989Haylu"/><citedRange unit="page">47-78</citedRange></bibl> 
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="GweltMakanaIyasus">
+               <label>Record of a proclamation of <persName ref="PRS5332hezqeyas"/> concerning land grants to 
+                  the church of <placeName ref="LOC4452Makana"/> by <persName ref="PRS5222haylaMi"/>. The
+               church was also given the right to provide asylum.</label>
+               <bibl><ptr target="bm:Kropp1989Haylu"/><citedRange unit="page">79-86</citedRange></bibl> 
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="ParcelsMakanaIyasus"> <!--should this be a text part?-->
+               <label>List of land parcels included in the land grants of <persName ref="PRS5222haylaMi"/>  to <placeName ref="LOC4452Makana"/>.
+               This list included on <locus target="#39a"/> of <ref type="mss" corresp="BLorient820"/>, which probably was a loose leaf inserted
+               at the appropriate place the manuscript before being bound to it.</label>
+               <bibl><ptr target="bm:Kropp1989Haylu"/><citedRange unit="page">87-94</citedRange></bibl> 
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="LandsEsate"> <!--should this be a text part?-->
+               <label>Register of lands belonging to <persName ref="PRS3856esateof"/>.
+                  This register was added at a later date on <locus target="#62a"/> of <ref type="mss" corresp="BLorient820"/>.</label>
+               <bibl><ptr target="bm:Kropp1989Haylu"/><citedRange unit="page">87-90; 95-98</citedRange></bibl> 
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="ConstructionMakanaIyasus"> 
+               <label>Account of the construction of <placeName ref="LOC4452Makana"/>, included by
+                  <persName ref="PRS1007Abagaz"/> as a separate account following the chronicle and the account of
+                  <persName ref="PRS5222haylaMi"/>'s wife's imprisonment.</label>
+               <bibl><ptr target="bm:Kropp1989Haylu"/><citedRange unit="page">99-112</citedRange></bibl> 
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
