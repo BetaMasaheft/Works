@@ -11,7 +11,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">On the Fig Tree</title>
-            
+            <title xml:lang="la" corresp="#t1">In ficum</title>
+            <title xml:lang="grc" xml:id="t2greek">CPG 4588</title>
+            <author>John Chrysostom</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -29,8 +31,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl  type="CPG">
+                  <ptr target="bm:CPG2"/>
+                  <citedRange unit="item">4588</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -59,11 +65,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body>
          <listBibl type="relations">
             <bibl/>
-            
-            
             <relation name="saws:isAttributedToAuthor" active="LIT2122OntheF" passive="PRS5720JohnChr"></relation>
          </listBibl>
-         <ab/>
+         <listBibl type="secondary">
+            <bibl>
+               <ptr target="bm:Lusini1988patristica"/>
+               <citedRange>486</citedRange>
+            </bibl>
+         </listBibl>
       </body>
    </text>
 </TEI>
