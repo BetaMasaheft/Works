@@ -10,8 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Antichrist</title>
-            <author>Hyppolitus</author>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ምሥጢር፡ ዘሄጶሊጦስ፡ በእንተ፡ ክርስቶስ፡ ወበእንተ፡ ሐሳዌ፡ መሲሕ፡ </title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Maṣḥafa mǝśṭir za-Heṗoliṭos ba-ʾǝnta Krǝstos wa-ba-ʾǝnta ḥassāwe masiḥ</title>
+            <title xml:lang="en" corresp="#t1">Book of the mystery by Hyppolitus on Christ and the Antichrist</title>
+            <title xml:lang="la" corresp="#t1">De Antichristo</title>
+            <title xml:lang="grc" corresp="#t2greek">CPG 1872</title>
+            <author>Hippolytus</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -29,8 +33,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl  type="CPG">
+                  <ptr target="bm:CPG1"/>
+                  <citedRange unit="item">3765</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -40,16 +48,43 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+               <term key="Aks"></term>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MV" when="2017-10-23">Edited</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Caquot1965Antichrist"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation" xml:lang="fr">
+               <bibl>
+                  <ptr target="bm:Beylot1991Antechrist"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Bausi2007Hippolytus"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Lusini2001Elementiromani"/>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
