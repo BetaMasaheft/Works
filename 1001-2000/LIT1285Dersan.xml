@@ -15,9 +15,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             Yǝsḥāq</title>
             <title xml:lang="gez" xml:id="t2">ድርሳነ፡ ገሪማ፡</title>
             <title xml:lang="gez" corresp="#t2" type="normalized">Dǝrsāna Garimā</title>
+            <title xml:lang="en" corresp="#t2">Homily in honour of Garimā</title>
             <title xml:lang="gez" xml:id="t3">ገድለ፡ አባ፡ ገሪማ፡</title>
             <title xml:lang="gez" corresp="#t3" type="normalized">Gadla ʾAbbā Garimā</title>
+            <title xml:lang="en" corresp="#t3">Vita of Garimā</title>
             <title xml:lang="fr" xml:id="t4">Panégyrique de S. Isaac</title>
+            <title xml:lang="gez" corresp="#t1">KRZ 70</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -35,8 +38,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl type="KRZ">
+                  <ptr target="bm:KRZ"/>
+                  <citedRange unit="item">70</citedRange>
+               </bibl>
+            </listBibl>
+            <listWit>
+               <witness corresp="BNFet132"></witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -60,6 +70,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-10-24">Bibliography added and title updated</change>
          <change who="DR" when="2017-03-30">Added keywords</change>
+         <change who="MV" when="2017-10-26">Edited</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -68,7 +79,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
            <listBibl type="editions">
               <bibl><ptr target="bm:ContiRossini1898Garima"/></bibl>
            </listBibl>
-           
+           <listBibl type="translation" xml:lang="fr">
+              <bibl>
+                 <ptr target="bm:Colin2017Saintsfondateurs"/>
+                 <citedRange>6-37</citedRange>
+              </bibl>
+           </listBibl> 
+           <listBibl type="secondary">
+              <bibl> 
+                 <ptr target="bm:Nosnitsin2005Garima"/>
+              </bibl>
+           </listBibl>
            <listBibl type="relations">
               <bibl/>
               <relation name="saws:isAttributedToAuthor" active="LIT1285Dersan" passive="PRS10382Yohanne"/>
