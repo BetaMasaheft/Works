@@ -10,7 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Gadla Malkǝʾa Krǝstos</title>
+            <title xml:lang="gez" xml:id="t1">ገድለ፡ መልክአ፡ ክርስቶስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Malkǝʾa Krǝstos</title>
+            <title xml:lang="en" corresp="#t1">Vita of Malkǝʾa Krǝstos</title>
+            <title xml:lang="gez" corresp="#t1">KRZ 99</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,8 +31,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl type="KRZ">
+                  <ptr target="bm:KRZ"/>
+                  <citedRange unit="item">99</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -51,11 +58,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="SG" when="2016-11-03">CREATED: text record</change>
          <change who="DR" when="2017-04-01">Added keywords</change>
+         <change who="MV" when="2017-10-30">Edited</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl> 
+                  <ptr target="bm:Amsalu2007Malkeakrestos"/>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
