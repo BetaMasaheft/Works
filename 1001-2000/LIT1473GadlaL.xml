@@ -13,6 +13,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">ገድለ፡ ሊባኖስ፡</title>
             <title corresp="#t1" xml:lang="gez">Gadla Libānos</title>
             <title corresp="#t1" xml:lang="en">Vita of Libānos</title>
+            <title xml:lang="gez" corresp="#t1">KRZ 91</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -30,8 +31,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl type="KRZ">
+                  <ptr target="bm:KRZ"/>
+                  <citedRange unit="item">91</citedRange>
+               </bibl>
+            </listBibl>
+            <listWit>
+               <witness corresp="BAVcerulli198"></witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -41,16 +49,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Hagiography"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MV" when="2017-10-30">Edited</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Bausi2003Libanos"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl> 
+                  <ptr target="bm:Bausi2007Libanos"/>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
