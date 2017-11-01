@@ -14,7 +14,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān qālu za-bǝṣuʿ Yāʿǝqob ʾeṗis qoṗos za-Śǝrug ba-ʾǝnta malʾak wa-fayyātāwi</title>
             <title xml:lang="en" corresp="#t1">Homily by the blessed Yāʿǝqob, bishop of Śǝrug on the Angel and the Thief</title>
             <title xml:lang="syr" xml:id="t2syriac"><!--Add Syriaca reference--></title>
-            <title xml:lang="ar" xml:id="t3arabic"></title>
+            <title xml:lang="ar" xml:id="t3arabic"/>
             <author>Jacob of Serug</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -64,23 +64,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-      <div type="bibliography">
+         <div type="bibliography">
          
-         <listBibl type="secondary">
-            <bibl><ptr target="bm:Witakowski2007Jacob"/><citedRange unit="page">262b</citedRange></bibl>
-         </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Witakowski2007Jacob"/>
+                  <citedRange unit="page">262b</citedRange>
+               </bibl>
+            </listBibl>
          
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:isAttributedToAuthor" active="LIT1631Homily#2syriac" passive="PRS5655Jacobof"/>
-         </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT1631Homily#2syriac"
+                         passive="PRS5655Jacobof"/>
+            </listBibl>
          
-         <listBibl type="catalogue">
-            <bibl corresp="#t3arabic"><ptr target="bm:Zotenberg1874Catalogue"/><citedRange unit="page">181b</citedRange></bibl>
-            <bibl corresp="#t2syriac"><ptr target="bm:Zotenberg1874Catalogue"/><citedRange unit="page">136a; 143a</citedRange></bibl>
-         </listBibl>
+            <listBibl type="catalogue">
+               <bibl corresp="#t3arabic">
+                  <ptr target="bm:Zotenberg1874Catalogue"/>
+                  <citedRange unit="page">181b</citedRange>
+               </bibl>
+               <bibl corresp="#t2syriac">
+                  <ptr target="bm:Zotenberg1874Catalogue"/>
+                  <citedRange unit="page">136a; 143a</citedRange>
+               </bibl>
+            </listBibl>
          
-      </div>
+         </div>
       </body>
    </text>
 </TEI>
