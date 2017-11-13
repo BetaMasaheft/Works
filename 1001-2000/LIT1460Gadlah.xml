@@ -10,8 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Gädlä Ḥanna</title>
-            <title xml:id="t2">Life of Hannah</title>
+            <title xml:lang="gez" xml:id="t1">ገድለ፡ ሐና፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Ḥannā</title>
+            <title xml:lang="en" corresp="#t1">Vita of Hanna</title>
+            <title xml:lang="gez" corresp="#t1">BHO 60</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -29,8 +31,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">60</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -40,16 +46,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Hagiography"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MV" when="2017-11-13">Additions</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Budge1900Miracles"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation" xml:lang="en">
+               <bibl>
+                  <ptr target="bm:Budge1900Miracles"/>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
