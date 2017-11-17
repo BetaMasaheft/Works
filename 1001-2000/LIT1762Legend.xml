@@ -12,6 +12,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Legend of Jeremiah</title>
             <title xml:id="t2">Life of Jeremiah</title>
+            <!-- Fix this -->
+            <title xml:lang="gez" corresp="#t1">BHO 437</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -29,12 +31,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>  <p>
-               <listBibl type="clavis">
-                  <bibl  type="CAVT"><ptr target="bm:CAVT"/><citedRange unit="item">213</citedRange></bibl>
-               </listBibl>
-            </p>
+            <listBibl type="clavis">
+               <bibl  type="CAVT">
+                  <ptr target="bm:CAVT"/>
+                  <citedRange unit="item">213</citedRange>
+               </bibl>
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">437</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -44,11 +50,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Translation"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MV" when="2017-11-17">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
