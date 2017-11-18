@@ -10,9 +10,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Legend of Jeremiah</title>
-            <title xml:id="t2">Life of Jeremiah</title>
-            <!-- Fix this -->
+            <title xml:lang="en" xml:id="t1">Legend of Jeremiah</title>
+            <title xml:lang="en" xml:id="t2">Life of Jeremiah</title>
+            <title xml:lang="gez" xml:id="t3">መጽሐፈ፡ ተዝካር፡ ወተረፈ፡ ነገር፡ ዘግብጻዊያን፡</title>
+            <title xml:lang="gez" corresp="#t3" type="normalized">Maṣḥafa tazkār wa-tarafa nagar za-Gǝbṣāwiyān</title>
+            <title xml:lang="en" corresp="#t3">Book of the commemoration and paralipomena of the Egyptians</title>
             <title xml:lang="gez" corresp="#t1">BHO 437</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -41,6 +43,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">437</citedRange>
                </bibl>
             </listBibl>
+            <listWit>
+               <witness corresp="BerOr42"/>
+               <witness corresp="BNFabb195"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -67,7 +73,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  ኤርምያስ፡ እምአናቶት፡ ውእቱ፡ በጴናጦስ፡ ዘግብጽ፡ ተወግረ፡ እምሕዝብ፡ በእብን፡ ወሞተ።
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
