@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Zena zǝkrä sǝmu</title>
+            <title xml:lang="gez" xml:id="t1">ዜና፡ ዝክረ፡ ስሙ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Zenā zǝkra sǝmu</title>
+            <title xml:lang="en" xml:id="t2">Biography of Kǝfla Māryām</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,16 +41,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Biography"/>
+               <term key="HistoryAndHistoriography"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-11-19">Added title, bibliography, abstract</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+      <div type="bibliography">
+         <listBibl type="editions">
+            <bibl><ptr target="bm:Bachmann1893Lesestuecke"/><citedRange unit="page">33-44</citedRange></bibl>
+         </listBibl>
+         <listBibl type="secondary">
+            <bibl><ptr target="bm:Guidi1896Lesestuecke"/></bibl>
+            <bibl><ptr target="bm:Kropp1986Hypothesis"/></bibl>
+         </listBibl>
+      </div>
       </body>
    </text>
 </TEI>
