@@ -35,7 +35,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
-                    <term key="Hagiography"/>
+                    <term key="Biography"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -52,7 +52,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listBibl type="relations">
+                    <bibl/>
+                    <relation name="saws:follows" active="LIT4836ZenaEskenderyawit" passive="LIT2627Zenaze"/>
+                    <relation name="dcterms:creator" active="LIT4836ZenaEskenderyawit" passive="PRS9167TaklaHa"/>
+                </listBibl>
+                <listBibl type="editions">
+                    <bibl><ptr target="bm:Kropp1986Hypothesis"/><citedRange unit="page">361-362</citedRange></bibl>
+                </listBibl>
+            </div>
         </body>
     </text>
 </TEI>
