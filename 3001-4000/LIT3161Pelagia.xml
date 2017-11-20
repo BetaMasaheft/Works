@@ -10,9 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ስምዕ፡ ዘጲላጊያ፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Sǝmʿ za-Ṗilāgiyā</title>
-            <title xml:lang="en" corresp="#t1">Martyrdom of Pelagia</title>
+            <title xml:lang="gez" xml:id="t1">መልእክት፡ ዘጲላጊያ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Malʾǝkt za-Ṗilāgiyā</title>
+            <title xml:lang="en" corresp="#t1">Epistle of Pelagia</title>
+            <title xml:lang="gez" corresp="#t1">BHO 890</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -30,9 +31,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">890</citedRange>
+               </bibl>
+            </listBibl>
             <listWit>
-                              <witness corresp="BLorient686"/>
-               
+               <witness corresp="BLorient686"/>
+               <witness corresp="BLorient689"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -47,6 +54,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Hagiography"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
          <abstract>
@@ -54,14 +62,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </abstract>
       </profileDesc>
       <revisionDesc>
-
          <change who="MV" when="2016-05-31">CREATED: text record</change>
          <change who="MV" when="2017-02-27">Added keywords and relation</change>
+         <change who="MV" when="2017-11-20">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
+            <listBibl type="editions">
+               <bibl> 
+                  <ptr target="bm:Goodspeed1904Pelagia"/>
+                  <citedRange>99-104</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation" xml:lang="en">
+               <bibl> 
+                  <ptr target="bm:Goodspeed1904Pelagia"/>
+                  <citedRange>105-108</citedRange>
+               </bibl>
+            </listBibl>
             <listBibl type="relations">
                <bibl/>
                <relation name="saws:formsPartOf"

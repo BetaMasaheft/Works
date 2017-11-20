@@ -10,10 +10,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1" xml:lang="en">Life of Paul, the First Hermit</title>
+            <title xml:lang="gez" xml:id="t1">ዜናሁ፡ ለቅዱስ፡ አባ፡ ጳውሊ፡ ፈላሲ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Zenā-hu la-qǝddus ʾabbā Ṗāwli falāsi</title>
+            <title xml:lang="en" corresp="#t1">History of St Paul the hermit</title>
             <title xml:lang="gez" xml:id="t2">ገድለ፡ ጳውሊ፡</title>
             <title xml:lang="gez" corresp="#t2" type="normalized">Gadla Ṗāwli</title>
-            <title xml:lang="en" corresp="#t2">Life of Ṗāwli</title>
+            <title xml:lang="en" corresp="#t2">Life of Paul (the first hermit)</title>
+            <title xml:lang="gez" corresp="#t1">BHO 915</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -31,8 +34,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">915</citedRange>
+               </bibl>
+            </listBibl>
+            <listWit>
+               <witness corresp="BNFabb60"></witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -46,7 +56,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Hagiography"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -55,17 +65,47 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-03-14">Added keywords and relation</change>
+         <change who="MV" when="2017-11-20">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Pereira1903MariaEgypcia"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Pereira1903MariaEgypcia"/>
+               </bibl>
+            </listBibl>
             <listBibl type="relations">
                <bibl/>
                <relation name="saws:isAttributedToAuthor"
                          active="LIT1803Lifeof"
                          passive="PRS2209Athanasi"/>
             </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart"
+               subtype="chapter"
+               xml:lang="gez"
+               xml:id="MainPart">
+            </div>
+            <div type="textpart"
+               subtype="chapter"
+               xml:lang="gez"
+               xml:id="Epilogue">
+               <label>Epilogue</label>
+               <listBibl type="clavis">
+                  <bibl type="BHO">
+                     <ptr target="bm:BHO"/>
+                     <citedRange unit="item">916</citedRange>
+                  </bibl>
+               </listBibl>
+            </div>
          </div>
       </body>
    </text>
