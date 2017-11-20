@@ -10,10 +10,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1"/>
-            <!--Titles to be added-->
-            <title xml:lang="gez" corresp="#t1" type="normalized"/>
-            <title xml:lang="en" corresp="#t1">Visions and ascetic councils of ʾAbbā Nabyud</title>
+            <title xml:lang="gez" xml:id="t1">ዘተነበየ፡ አባ፡ ነቢዩድ፡ መነኮስ፡ ዘደብረ፡ ሲሀት፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Za-tanabbaya ʾabbā Nabiyud manakos za-Dabra Sihat</title>
+            <title xml:lang="en" corresp="#t1">What ʾAbbā Nabiyud, monk of Dabra Sihat, predicted</title>
+            <title xml:lang="en" xml:id="t2">Visions and ascetic councils of ʾAbbā Nabyud of Dabra Sihat</title>
+            <title xml:lang="gez" corresp="#t1">BHO 875</title>
             <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -31,6 +32,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">875</citedRange>
+               </bibl>
+            </listBibl>
             <listWit>
                <witness corresp="BNFet125#ms_i8"/>
                <witness corresp="BLorient763">BL Orient 763, <locus from="132ra" to="162rc"/>
@@ -56,45 +63,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="MonasticLiterature"/>
+               <term key="Paks1"></term>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="DR" when="2016-10-18">Created file</change>
          <change who="DR" when="2017-03-28">Added keywords</change>
+         <change who="MV" when="2017-11-20">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Beylot1976NabyudTextus"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Beylot1976NabyudVersio"/>
+               </bibl>
+            </listBibl>
             <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Bausi2007Monastic"/>
                   <citedRange unit="page">995b</citedRange>
                </bibl>
             </listBibl>
-
-            <listBibl type="editions">
-               <bibl>
-                  <ptr target="bm:Beylot1976NabyudTextus"/>
-               </bibl>
-            </listBibl>
-
-            <listBibl type="translation">
-               <bibl>
-                  <ptr target="bm:Beylot1976NabyudVersio"/>
-               </bibl>
-            </listBibl>
-
             <listBibl type="relations">
                <bibl/>
                <relation name="saws:isAttributedToAuthor"
-                         active="LIT4023Visions"
-                         passive="PRS7460Nabyud"/>
+                  active="LIT4023Visions"
+                  passive="PRS7460Nabyud"/>
             </listBibl>
          </div>
-
       </body>
    </text>
 </TEI>
