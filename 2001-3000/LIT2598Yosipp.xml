@@ -16,7 +16,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title corresp="#t3" xml:lang="he" type="normalized">Sēfer Yosippon</title>
             <title xml:id="t4">Sēfer [Yosef] Ben Goryon</title>
             <title xml:id="t5" xml:lang="gez">ዜና፡ አይሁድ፡</title>
-            <title corresp="#t5" xml:lang="gez" type="normalized">Zena ʾAyhud</title>
+            <title corresp="#t5" xml:lang="gez" type="normalized">Zenā ʾAyhud</title>
             <title corresp="#t5" xml:lang="en">Story of Jews</title>
             <title type="short">Jsp.</title>
             <author>Joseph ben Gorion</author>
@@ -66,6 +66,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-04-24" who="ES">keywords title relations added</change>
          <change who="DR" when="2017-08-14">Added textparts</change>
+         <change who="DR" when="2017-11-28">Corrected title and relations</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -76,14 +77,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <relation name="saws:isAttributedToAuthor"
                          active="LIT2598Yosipp"
                          passive="PRS5772Josephus">
-                  <desc>Attributed by the medieval Hebrew tradition to Josephus Flavius.</desc>
+                  <desc>Attributed by the medieval Hebrew tradition to Flavius Josephus.</desc>
                </relation>
                <relation name="saws:isAttributedToAuthor"
                          active="LIT2598Yosipp"
                          passive="PRS5769Josephb">
-                  <desc>The identity of "Joseph ben Gurion" is not fully clear.</desc>
+                  <desc>The work was attributed to <persName ref="PRS5769Josephb"/> due to a mistake in one of its sources.</desc>
                </relation>
             </listBibl>
+           <listBibl type="editions">
+              <bibl><ptr target="bm:Murad1938ZenaAyhud"/></bibl>
+           </listBibl>
+           <listBibl type="secondary">
+              <bibl><ptr target="bm:Witakowski2014EAEZenaAyhud"/></bibl>
+           </listBibl>
         </div>
          <div type="edition">
             <note>This division into textparts follows <ref type="mss" corresp="FSUrueppII2"/>.</note>
@@ -92,14 +99,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                  n="1"
                  xml:id="Kefl1"
                  xml:lang="gez">
-               <label>Kǝfl 1</label>
+               <label>Kǝfl 1, starting with <persName ref="PRS1386Adam"/> and mainly treating Persian history.</label>
             </div>
             <div type="textpart"
                  subtype="book"
                  n="2"
                  xml:id="Kefl2"
                  xml:lang="gez">
-               <label>Kǝfl 2</label>
+               <label>Kǝfl 2, Romance of Alexander</label> 
+               <listBibl type="translation">
+                  <bibl><ptr target="bm:Budge1896AlexanderTranslation"/><citedRange unit="page">403-428</citedRange></bibl>
+               </listBibl>
             </div>
             <div type="textpart"
                  subtype="book"
