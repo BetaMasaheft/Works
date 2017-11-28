@@ -51,6 +51,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/>
                <term key="ApocryphaPseudoepigrapha"/>
                <term key="Hagiography"/>
+               <term key="Translation"/>
+               <term key="Paks1"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -64,12 +66,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body>
          <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Budge1899ContendingsText"/>
+                  <citedRange>83-92</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation" xml:lang="en">
+               <bibl>
+                  <ptr target="bm:Budge1901ContendingsTransl"/>
+                  <citedRange>90-103</citedRange>
+               </bibl>
+            </listBibl>
             <listBibl type="relations">
                <bibl/>
                <relation name="saws:formsPartOf"
                   active="LIT2183Preach"
                   passive="LIT1461Gadlah"/>
             </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  ወኮነ፡ ሶበ፡ ተጋብኡ፡ ሐዋርያት፡ <gap reason="omitted" extent="unknown"/> ወወፅአ፡ ዕፃ፡ ለበርተሎሜዎስ፡ ከመ፡ ይፃእ፡ ውስተ፡ ብሔር፡ እልዋሕ፡       
+               </ab>
+            </div>
+            <div type="textpart" subtype="explicit" xml:lang="gez">
+               <ab>
+                  ወወፅአ፡ እልዋሐ፡ ወሖረ፡ ሀገረ፡ ንኢንዶስ፡ ከመ፡ ይስብከ፡ ባቲ፡ በስመ፡ እግዚእነ፡ 
+                  <gap reason="omitted" extent="unknown"/> አሜን።
+               </ab>
+            </div>
          </div>
       </body>
    </text>
