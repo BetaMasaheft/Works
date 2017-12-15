@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Vision of Theophilus of Alexandria on the Mount Qʷǝsqʷām</title>
+            <title xml:id="t2">Homily of Theophilus of Alexandria on the Mount Qʷǝsqʷām</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -32,6 +33,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <bibl type="CANT">
                   <ptr target="bm:CANT"/>
                   <citedRange unit="item">56</citedRange>
+               </bibl>
+               <bibl type="CPG">
+                  <ptr target="bm:CPG"/><!-- specify the volume (bm:CPG1, bm:CPG2, bm:CPG3, etc.) in the Zotero tag -->
+                  <citedRange unit="item">2628</citedRange>
                </bibl>
             </listBibl>
          </sourceDesc>
@@ -60,7 +65,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:ContiRossini1912Coscam"/>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
