@@ -11,11 +11,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Anaphora of Our Lady <persName ref="PRS6819Mary">Mary</persName> by Gregory or Nathaniel</title>
-            <title xml:id="t2" xml:lang="gez">ነአኩተከ፡ እግዚኦ፡ በፍቁር፡ ወልድከ፡ ኢየሱስ፡ ክርስቶስ፡</title>
-            <title corresp="#t2" xml:lang="gez" type="normalized">Naʾakkwǝtaka ʾǝgziʾo ba-fǝqur waldǝka ʾIyasus Krǝstos qʷǝrbān nǝṣuḥ za-yǝśamǝro la-ḫirutǝka...</title>
+            <title xml:id="t2" xml:lang="gez">ነአኩተከ፡ እግዚኦ፡ በፍቁር፡ ወልድከ፡ ኢየሱስ፡ ክርስቶስ፡...</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Naʾakkwǝtaka ʾǝgziʾo ba-fǝqur waldǝka ʾIyasus Krǝstos qʷǝrbān nǝṣuḥ za-yǝśammǝro la-ḫirutǝka...</title>
             <title corresp="#t2" xml:lang="en">We give thee Thanks, O Lord, through thy Beloved Son Jesus Christ, the pure oblation which is pleasing to your goodness ...</title>
-            
-            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,8 +31,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl type="H">
+                  <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+                  <citedRange unit="item">11</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -64,6 +66,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-09" who="ES">updated title keywords relation</change>
          <change who="DR" when="2017-06-14">Additions</change>
+         <change who="MV" when="2017-12-18">Added clavis ID</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -88,8 +91,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </bibl>
          </listBibl>
          
-         
-         <ab/>
+         <div type="edition">
+            <div type="textpart"
+               subtype="incipit"
+               xml:lang="gez"
+               xml:id="Incipit">
+               <ab>
+                 ነአኵተከ፡ እግዚኦ፡ በፍቁር፡ ወልድከ፡ ኢየሱስ፡ ክርስቶስ፡ ቍርባን፡ ንጹሕ፡ ዘይሠምሮ፡ ለኂሩትከ፡
+               </ab>
+            </div>
+            <div type="textpart"
+               subtype="incipit"
+               xml:lang="gez"
+               corresp="#Incipit">
+               <ab>
+                  Naʾakkwǝtaka ʾǝgziʾo ba-fǝqur waldǝka ʾIyasus Krǝstos qʷǝrbān nǝṣuḥ za-yǝśammǝro la-ḫirutǝka
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

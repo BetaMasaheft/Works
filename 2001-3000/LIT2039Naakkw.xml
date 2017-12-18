@@ -15,7 +15,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title corresp="#t2" xml:lang="gez" type="normalized">Naʾakkwǝtaka wa-nāleʿǝlaka nǝbārkaka wa-nǝsebbǝḥaka...</title>
             <title corresp="#t2" xml:lang="en">We give thee Thanks, and we exalt Thee, we bless Thee and we glorify Thee ...</title>
             
-            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,6 +32,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="H">
+                  <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+                  <citedRange unit="item">17</citedRange>
+               </bibl>
+            </listBibl>
             <listWit>
                <witness corresp="BNFet74"/>
             </listWit>
@@ -58,6 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-13" who="ES">updated title keywords relation</change>
          <change who="DR" when="2017-06-14">Additions</change>
+         <change who="MV" when="2017-12-18">Added clavis ID and incipit, corrected title</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -84,7 +90,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </bibl>
          </listBibl>
          
-         <ab/>
+         <div type="edition">
+            <div type="textpart"
+               subtype="incipit"
+               xml:lang="gez"
+               xml:id="Incipit">
+               <ab>
+                  ነአኩተከ፡ ወናሌዕለከ፡ ንባርከከ፡ ወንሴብሐከ፡
+               </ab>
+            </div>
+            <div type="textpart"
+               subtype="incipit"
+               xml:lang="gez"
+               corresp="#Incipit">
+               <ab>
+                  Naʾakkwǝtaka wa-nāleʿǝlaka nǝbārkaka wa-nǝsebbǝḥaka
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

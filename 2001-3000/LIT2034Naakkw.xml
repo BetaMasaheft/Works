@@ -10,11 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Anaphora of Our Lady <persName ref="PRS6819Mary">Mary</persName> by <persName ref="PRS4824Gregory">Gregory</persName>
-            </title>
-            <title xml:id="t2" xml:lang="gez">ነአኵተከ፡ አምላክ፡ በወልድከ፡ ዋህድ፡</title>
-            <title corresp="#t2" xml:lang="gez" type="normalized">Naʾakkʷǝtaka ʾamlāk ba-waldǝka wāhǝd wa-manfasǝka qǝddus ʾǝnbala tafalṭo za-tǝśellǝs ...</title>
-            <title corresp="#t2" xml:lang="en">We give thee Thanks, O God, by thy Only-Begotten Son and thy Holy Spirit without separation, who are triune ...</title>
+            <title xml:id="t1">Anaphora of Our Lady Mary by Gregory</title>
+            <title xml:id="t2" xml:lang="gez">ነአኵተከ፡ አምላክ፡ በወልድከ፡ ዋህድ፡...</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Naʾakkʷǝtaka ʾamlāk ba-waldǝka wāhǝd...</title>
+            <title corresp="#t2" xml:lang="en">We give thee Thanks, O God, by thy Only-Begotten Son...</title>
             
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -33,6 +32,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="H">
+                  <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+                  <citedRange unit="item">10</citedRange>
+               </bibl>
+            </listBibl>
             <listWit>
                <witness corresp="BNFet74"/>
                <witness corresp="BerOr2168"/>
@@ -65,6 +70,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-09" who="ES">updated title keywords relation</change>
          <change who="DR" when="2017-06-14">Additions</change>
+         <change who="MV" when="2017-12-18">Added clavis ID and incipit, corrected title</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -84,7 +90,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <citedRange unit="page">25</citedRange>
             </bibl>
          </listBibl>
-         <ab/>
+         <div type="edition">
+            <div type="textpart"
+               subtype="incipit"
+               xml:lang="gez"
+               xml:id="Incipit">
+               <ab>
+                  ነአኵተከ፡ አምላክ፡ በወልድከ፡ ዋህድ፡ ወመንፈስከ፡ ቅዱስ፡ እንበለ፡ ተፈልጦ፡ ዘትሤልስ፡...
+               </ab>
+            </div>
+            <div type="textpart"
+               subtype="incipit"
+               xml:lang="gez"
+               corresp="#Incipit">
+               <ab>
+                  Naʾakkʷǝtaka ʾamlāk ba-waldǝka wāhǝd wa-manfasǝka qǝddus ʾǝnbala tafalṭo za-tǝśellǝs...
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
