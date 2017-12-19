@@ -10,8 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">To Eulogius</title>
-            <author>Evagrius</author>
+            <title xml:id="t1">Treatise to Eulogius</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -29,8 +28,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl type="CPG">
+                  <ptr target="bm:CPG"/>
+                  <!-- specify the volume (bm:CPG1, bm:CPG2, bm:CPG3, etc.) in the Zotero tag -->
+                  <citedRange unit="item">2447</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -45,11 +49,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MV" when="2017-12-19">Added clavis ID and bibl</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Bausi2005Evagrius"/>
+                  <citedRange>458b</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor"
+                  active="LIT2471ToEulo"
+                  passive="PRS3921Evagrius"/>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
