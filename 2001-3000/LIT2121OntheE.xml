@@ -10,8 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">On the Eight Thoughts of Evilness</title>
-            
+            <title xml:lang="gez" xml:id="t1">ነገራት፡ በእንተ፡ ፰ኅሊናት፡ ዘአብ፡ ወግሪስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Nagarāt baʾǝnta 8ḫallināt za-ʾab Wagris</title>
+            <title xml:lang="en" corresp="#t1">On the Eight Thoughts of Evilness by Evagrius</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -29,8 +30,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl type="CPG">
+                  <ptr target="bm:CPG"/>
+                  <!-- specify the volume (bm:CPG1, bm:CPG2, bm:CPG3, etc.) in the Zotero tag -->
+                  <citedRange unit="item">2451</citedRange>
+               </bibl>
+            </listBibl>
+            <listWit>
+               <witness corresp="UBTaeth3"/>
+               <witness corresp="UBTaeth20"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -45,6 +55,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/>
                <term key="Theology"/>
                <term key="Homily"/>
+               <term key="Translation"/>
+               <term key="Paks2"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -52,20 +64,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change when="2017-02-15" who="ES">keywords relation</change>
+         <change who="ES" when="2017-02-15">keywords relation</change>
+         <change who="MV" when="2017-12-19">Corrected title, added clavis ID, witnesses and bibl</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl/>
-            
-            
-            <relation name="saws:isAttributedToAuthor"
-                      active="LIT2121OntheE"
-                      passive="PRS3921Evagrius"/>
-         </listBibl>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Bachmann1893Lesestuecke"/>
+                  <citedRange>26-33</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Bausi2005Evagrius"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor"
+                  active="LIT2121OntheE"
+                  passive="PRS3921Evagrius"/>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
