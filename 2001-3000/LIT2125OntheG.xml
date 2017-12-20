@@ -10,8 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">On the Glory of John the Baptist</title>
-            <author>John Chrysostom</author>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘደረሰ፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ ... በእንተ፡ ክብሩ፡ ለዮሐንስ፡ መጥምቅ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān za-darasa Yoḥannǝs ʾafa warq ... ba-ʾǝnta kǝbru la-Yoḥannǝs maṭmǝq</title>
+            <title xml:lang="en" corresp="#t1">Homily by John Chrysostom ... on the Glory of John the Baptist</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -29,8 +30,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl type="CPG">
+                  <ptr target="bm:CPG"/>
+                  <!-- specify the volume (bm:CPG1, bm:CPG2, bm:CPG3, etc.) in the Zotero tag -->
+                  <citedRange unit="item">5150, 5153.3</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -45,6 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/>
                <term key="Theology"/>
                <term key="Homily"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -52,14 +59,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change when="2017-02-15" who="ES">keywords relation</change>
+         <change who="ES" when="2017-02-15">keywords relation</change>
+         <change who="MV" when="2017-12-20">Added clavis ID, updated title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <div type="bibliography">
          <listBibl type="relations">
             <bibl/>
-            
             <relation name="ecrm:P129_is_about"
                       active="LIT2125OntheG"
                       passive="PRS5741Johnthe"/>
@@ -67,7 +75,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                       active="LIT2125OntheG"
                       passive="PRS5720JohnChr"/>
          </listBibl>
-         <ab/>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Bausi2007John"/>
+                  <citedRange>289a-289b</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
