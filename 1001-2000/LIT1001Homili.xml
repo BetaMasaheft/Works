@@ -10,7 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">15 Homilies on the Song of Songs</title>
+            <title xml:lang="gez" xml:id="t1">ትርጓሜ፡ መጽሐፈ፡ ሰሎሞን፡ ዘውእቱ፡ መሓልየ፡ መሓልይ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Tǝrgʷāme maṣḥafa Salomon za-wǝʾǝtu maḥālǝya maḥālǝy</title>
+            <title xml:lang="en" corresp="#t1" >Explanation of the Book of Solomon, which is the Song of Songs</title>
+            <title xml:lang="en" xml:id="t2">Fifteenth homily on the Song of Songs</title>
             <editor role="generalEditor" key="AB"/>
             <editor key="MV"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -29,8 +32,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl type="CPG">
+                  <ptr target="bm:CPG2"/>
+                  <citedRange unit="item">3158</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -40,6 +47,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+               <term key="Translation"/>
+               <term key="Paks2"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -47,11 +62,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-05-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MV" when="2017-12-19">Corrected title, added clavis ID, keywords, relations</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Witakowski2005GregoryNyssa"/>
+                  <citedRange>893a</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor"
+                  active="LIT1001Homili"
+                  passive="PRS4824Gregory"/>
+               <relation name="saws:formsPartOf"
+                  active="LIT1001Homili"
+                  passive="LIT1586Hayman#GregoryNyssa"/>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
