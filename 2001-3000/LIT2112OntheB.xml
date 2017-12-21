@@ -11,9 +11,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">On the Beheading</title>
-            <title xml:id="t2">On Decapitation of <persName ref="PRS5741Johnthe">John the Baptist</persName>
-            </title>
-            
+            <title xml:id="t2">On Decapitation of John the Baptist</title>
+            <title xml:id="t3">On Herodias</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -31,8 +30,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl type="CPG">
+                  <ptr target="bm:CPG2"/>
+                  <citedRange unit="item">4570</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -47,6 +50,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/>
                <term key="Theology"/>
                <term key="Homily"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -59,9 +63,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Bausi2007John"/>
+                  <citedRange>294a</citedRange>
+               </bibl>
+            </listBibl>
          <listBibl type="relations">
             <bibl/>
-            
             <relation name="ecrm:P129_is_about"
                       active="LIT2112OntheB"
                       passive="PRS5741Johnthe"/>
@@ -69,7 +79,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                       active="LIT2112OntheB"
                       passive="PRS5720JohnChr"/>
          </listBibl>
-         <ab/>
+         </div>
       </body>
    </text>
 </TEI>
