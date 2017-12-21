@@ -10,8 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">On the Wedding at Cana</title>
-            
+            <title xml:id="t1">On the Wedding Feast at Cana</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -29,8 +28,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+           <p></p>
+            <!--  
+               <listBibl type="clavis">
+                  <bibl type="CPG">
+                     <ptr target="bm:CPG2"/>
+                     <citedRange unit="item">4522 (certainly wrong in the EAE)</citedRange>
+                  </bibl>
+               </listBibl>
+          -->
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -45,6 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/>
                <term key="Theology"/>
                <term key="Homily"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -52,20 +59,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change when="2017-02-15" who="ES">keywords relation</change>
+         <change who="ES" when="2017-02-15">keywords relation</change>
+         <change who="MV" when="2017-12-21">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <div type="bibliography">
+         <listBibl type="secondary">
+            <bibl>
+               <ptr target="bm:Bausi2007John"/>
+               <citedRange>293b</citedRange>
+            </bibl>
+         </listBibl>
          <listBibl type="relations">
             <bibl/>
-            
-            
             <relation name="saws:isAttributedToAuthor"
                       active="LIT2150OntheW"
                       passive="PRS5720JohnChr"/>
          </listBibl>
-         <ab/>
+         </div>
       </body>
    </text>
 </TEI>
