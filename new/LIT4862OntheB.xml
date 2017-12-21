@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Second Homily on the Baptism of Our Lord by John the Baptist</title>
+            <title  xml:lang="en" xml:id="t1">Second Homily on the Baptism of Our Lord by John the Baptist</title>
+            <title xml:lang="la" corresp="#t1">De baptismate, 2</title>
+            <title xml:lang="grc" xml:id="t2greek">CPG 7385</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -59,21 +61,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body>
          <div type="bibliography">
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="ecrm:P129_is_about"
-               active="LIT4862OntheB"
-               passive="PRS5741Johnthe"/>
-            <relation name="saws:isAttributedToAuthor"
-               active="LIT4862OntheB"
-               passive="PRS5720JohnChr"/>
-         </listBibl>
-         <listBibl type="secondary">
-            <bibl>
-               <ptr target="bm:Bausi2007John"/>
-               <citedRange>293b</citedRange>
-            </bibl>
-         </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="ecrm:P129_is_about"
+                  active="LIT4862OntheB"
+                  passive="PRS5741Johnthe"/>
+               <relation name="saws:isAttributedToAuthor"
+                  active="LIT4862OntheB#t1"
+                  passive="PRS5720JohnChr"/>
+               <relation name="saws:isAttributedToAuthor"
+                  active="LIT4862OntheB#t2greek"
+                  passive="PRS4821Gregory"/>
+            </listBibl>
+            
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Pereira1911Chrysostomo2"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Lusini1988patristica"/>
+                  <citedRange>483</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Bausi2007John"/>
+                  <citedRange>293b</citedRange>
+               </bibl>
+            </listBibl>
          </div>
       </body>
    </text>
