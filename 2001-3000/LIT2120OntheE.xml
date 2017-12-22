@@ -11,7 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">On the Easter Sunday</title>
-            
+            <title xml:lang="la" corresp="#t1">De Paschate</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -45,6 +45,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/>
                <term key="Theology"/>
                <term key="Homily"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -53,19 +54,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-15" who="ES">keywords relation</change>
+         <change who="MV" when="2017-12-21">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl/>
-            
-            
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Lusini1988patristica"/>
+                  <citedRange>484</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
             <relation name="saws:isAttributedToAuthor"
                       active="LIT2120OntheE"
                       passive="PRS5720JohnChr"/>
          </listBibl>
-         <ab/>
+         </div>
       </body>
    </text>
 </TEI>
