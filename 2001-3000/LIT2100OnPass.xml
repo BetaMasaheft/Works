@@ -10,8 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">On Passion of our Lord</title>
-            <author>John Chrysostom</author>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘቅዱስ፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ በእንተ፡ ሕማማቲሁ፡ ለክርስቶስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān za-qǝddus Yoḥannǝs ʾafa warq ba-ʾǝnta ḥǝmāmātihu la-Krǝstos</title>
+            <title xml:lang="en" corresp="#t1">Homily by St John Chrysostom on the Passion of Our Lord</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -44,6 +45,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Theology"/>
+               <term key="Homily"/>
                <term key="Translation"/>
             </keywords>
          </textClass>
@@ -53,19 +55,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-15" who="ES">keywords relation</change>
+         <change who="MV" when="2017-12-22">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl/>
-            
-            
-            <relation name="saws:isAttributedToAuthor"
-                      active="LIT2100OnPass"
-                      passive="PRS5720JohnChr"/>
-         </listBibl>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Pereira1910Homilias"/>
+                  <citedRange>8</citedRange>
+                  <citedRange unit="item">10</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor"
+                  active="LIT2100OnPass"
+                  passive="PRS5720JohnChr"/>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
