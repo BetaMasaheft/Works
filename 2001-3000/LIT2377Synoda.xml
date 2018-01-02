@@ -10,8 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Synodal Letter</title>
-            <author>Theodosios of Alexandria</author>
+            <title xml:id="t1" xml:lang="gez">ጦማረ፡ መልእክቱ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Ṭomāra malʾǝktu</title>
+            <title corresp="#t1" xml:lang="en">Synodal Letter by Theodosios of Alexandria</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -29,8 +30,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl type="CPG">
+                  <ptr target="bm:CPG"/>
+                  <!-- specify the volume (bm:CPG1, bm:CPG2, bm:CPG3, etc.) in the Zotero tag -->
+                  <citedRange unit="item">7134</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -40,16 +46,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+               <term key="Translation"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MV" when="2018-01-02">Additions</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:formsPartOf"
+                  active="LIT2377Synoda"
+                  passive="LIT1586Hayman"/>
+               <relation name="saws:isAttributedToAuthor"
+                  active="LIT2377Synoda"
+                  passive="PRS9477Theodosi"/>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
