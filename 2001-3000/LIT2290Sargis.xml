@@ -37,8 +37,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl type="CPG">
+                  <ptr target="bm:CPG3"/>
+                  <citedRange unit="item">7793</citedRange>
+               </bibl>
+            </listBibl>
+            <listWit>
+               <witness corresp="BNFabb51"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -72,17 +79,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change when="2017-03-07" who="ES">added titles keywords</change>
+         <change who="ES" when="2017-03-07">added titles keywords</change>
+         <change who="MV" when="2018-01-02">Added clavis ID and bibl</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="secondary">
-            <bibl>
-               <ptr target="bm:Bausi2010Sargis"/>
-            </bibl>
-         </listBibl>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:GrebautGuidi1907Sargis"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Grebaut1916Sargis"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Bausi2010Sargis"/>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
