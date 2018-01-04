@@ -11,7 +11,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Letters Concerning the Death of Children</title>
-            <author>Timothy</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -29,8 +28,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listBibl type="clavis">
+               <bibl type="CPG">
+                  <ptr target="bm:CPG"/>
+                  <!-- specify the volume (bm:CPG1, bm:CPG2, bm:CPG3, etc.) in the Zotero tag -->
+                  <citedRange unit="item">5490</citedRange>
+               </bibl>
+            </listBibl>
+            <listWit>
+               <witness type="external" corresp="EMML6307"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -40,16 +47,46 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Translation"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MV" when="2018-01-04">Additions</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Getachew1987Letter"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation" xml:lang="en">
+               <bibl>
+                  <ptr target="bm:Getachew1987Letter"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Witakowski2010TimothyIII"/>
+                  <citedRange>962a</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="relations">
+               <bibl/>
+               <relation name="saws:isAttributedToAuthor"
+                  active="LIT1789Letter"
+                  passive="PRS9523Timothy"/>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
