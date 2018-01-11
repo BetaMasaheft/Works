@@ -53,11 +53,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-05-26">Additions</change>
+         <change who="DR" when="2018-01-11">Added bibliography and textparts</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Zuurmond1989EvangeliumMarc"/><citedRange unit="part">I</citedRange><citedRange unit="page">8-9</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit">
+               <ab>በእንተ፡ ኅብረተ፡ ቃላት፡ ዘአርባዕቱ፡ ወንጌላት። እንዘ፡ ይተሉ፡ ረድኤተ፡ ክልኤቱ፡ ባሕቲቶሙ፡ ጸሐፉ፡ እንከ፡ ወንጌለ፡ እምሐዋርያት።</ab>
+            </div>
+            <div type="textpart" subtype="explicit" xml:lang="gez" xml:id="Explicit">
+               <ab>በእንተ፡ ኅብረተ፡ ቃላት፡ ዘቅዱሳን፡ አርባዕቱ፡ ወንጌላት። ተፈጸመ።</ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
