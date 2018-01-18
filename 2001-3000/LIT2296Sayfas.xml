@@ -82,29 +82,43 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <ab/>
          <div type="edition">
             <!-- The following textparts based on weekdays are in accordance with BAVet89#ms_1 (MV - 2017-08-01) -->
-            <div type="textpart" corresp="Monday">
+            <div type="textpart" xml:id="Monday">
                <label>Praise for Monday</label>
+               
+               <div type="textpart" xml:id="SalamMonday"> <!--present in BLorient525 and ESktm012, probably also in other mss DR 2018-01-18-->
+                  <note>Part of the prayer for Monday, the first verse is identical in <ref type="mss" corresp="BLorient525"/>
+                     and <ref type="mss" corresp="ESktm012"/>, then possibly diverging.</note>
+                  <label>ሰላም፡ ለአብ፡ ነቅዓ፡ ዘይት፡ ምሕርት፡ ጥሉል።</label>
+               </div>
+               <div type="textpart" xml:id="PrayerMonday"> <!--present in BLorient525 and ESktm012, probably also in other mss DR 2018-01-18-->
+                  <note>Part of the prayer for Monday, following <ref target="#SalamMonday"/>. The beginning in <ref type="mss" corresp="BLorient525"/>
+                     and <ref type="mss" corresp="ESktm012"/> is not identical, but very similar.</note>
+                  <label>በስመ፡ አብ፡ <gap reason="ellipsis" resp="PRS10171Wright"/>
+                     መለኮተ፡ ሥላሴ፡ ፍጽምት፡ አሐቲ፡ ስምረት፡ ወሠለስቱ፡ <del rend="erasure"/>
+                     አካል፡ በዋህድ፡ ጽምረት፡ ፩መንበር፡ በ፩ህላዌ፡</label>
+               </div>
+              
             </div>
-            <div type="textpart" corresp="Tuesday">
+            <div type="textpart" xml:id="Tuesday">
                <label>Praise for Tuesday</label>
             </div>
-            <div type="textpart" corresp="Wednesday">
+            <div type="textpart" xml:id="Wednesday">
                <label>Praise for Wednesday</label>
             </div>
-            <div type="textpart" corresp="Thursday">
+            <div type="textpart" xml:id="Thursday">
                <label>Praise for Thursday</label>
             </div>
-            <div type="textpart" corresp="Friday">
+            <div type="textpart" xml:id="Friday">
                <label>Praise for Friday</label>
             </div>
-            <div type="textpart" corresp="Saturday">
+            <div type="textpart" xml:id="Saturday">
                <label>Praise for Saturday</label>
             </div>
-            <div type="textpart" corresp="Daily">
+            <div type="textpart" xml:id="Daily">
                <label>Praise for every day (<foreign xml:lang="gez">ዘዘወትር፡</foreign>
                </label>
             </div>
-            <div type="textpart" corresp="Sunday">
+            <div type="textpart" xml:id="Sunday">
                <label>Praise for Sunday</label>
             </div>
          </div>
