@@ -29,9 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+          <p/>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -46,12 +44,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/>
                <term key="NewTestament"/>
                <term key="Bible"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-15">Added keywords</change>
+         <change who="DR" when="2018-01-29">Added textparts, bibliography and keyword</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -62,6 +62,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                          active="LIT3528Epistle"
                          passive="LIT3505PaulineEpis"/>
             </listRelation>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Tedros2005EAEPauline"/></bibl>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" xml:id="Introduction">
+               <label>Introduction</label>
+            </div>
+            <div type="textpart" xml:id="Epistle">
+               <label>Epistle</label>
+            </div>
          </div>
       </body>
    </text>
