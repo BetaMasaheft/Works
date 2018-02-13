@@ -13,7 +13,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <editionStmt>
-                <p>Digital text of <ref target="#ed1"/> based on  <bibl><ptr target="bm:Hommel1877Physiologus"/></bibl>.</p>
+                <p>Digital text of <ref target="#ed1"/> based on <bibl><ptr target="bm:Hommel1877Physiologus"/></bibl>.</p>
             </editionStmt>
             <publicationStmt>
                 <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -26,7 +26,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="BLorient818"/>
+                    <witness corresp="BNFet146"/>
+                    <witness corresp="ONBAeth4"/>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -60,10 +64,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body>
             <listRelation><relation name="saws:isVersionOf"
                 active="LIT4915PhysA"
-                passive="LIT1401Fisalg"/></listRelation>
+                passive="LIT1401Fisalg"/>
+            </listRelation>
             <div type="bibliography">
-                <bibl><ptr target="bm:Hommel1877Physiologus"/></bibl>
-            </div><!---->
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:Hommel1877Physiologus"/>
+                    </bibl>
+                </listBibl>
+                <listBibl type="translation">
+                    <bibl xml:lang="de">
+                        <ptr target="bm:Hommel1890AethPhysiologus"/>
+                    </bibl>
+                    <bibl xml:lang="it">
+                        <ptr target="bm:ContiRossini1951Fisiologo"/>
+                        <citedRange unit="page">16-51</citedRange>
+                    </bibl>
+                    <bibl xml:lang="en">
+                        <ptr target="bm:Sumner1982Fisalgwos"/>
+                        <citedRange unit="page">9-65</citedRange>
+                    </bibl> 
+                </listBibl>
+                <listBibl type="secondary">
+                    <bibl>
+                        <ptr target="bm:Weninger2005EAEFisalgos"/>
+                    </bibl>
+                </listBibl>
+            </div>
+            <!---->
+            
             <div type="edition" xml:lang="gez" xml:id="ed1">
                 <div n="1" xml:id="ed1ch1" type="textpart" subtype="chapter">
 
