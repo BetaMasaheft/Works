@@ -14,6 +14,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa qǝddāse</title>
             <title xml:lang="en" corresp="#t1">Book of the Consecration</title>
             <title xml:lang="en" xml:id="t2">Missal</title>
+            <title xml:lang="en" xml:id="t3">Book of Liturgy</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -54,6 +55,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2016-09-06">Title changed and relation added</change>
          <change who="DR" when="2017-03-27">Minor correction</change>
          <change who="DR" when="2017-04-04">Added keywords</change>
+         <change when="2018-03-27" who="ES">added prayers/textparts from the Maṣḥāfa nәfq in ESagm009</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -94,8 +96,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="edition">
             <!--This is a preliminary outline following bm:Bausi2010EAEQeddase and bm:1951Qeddase -->
             <div type="textpart" subtype="chapter" xml:id="SerataQeddase">
-               <label>Śǝrʿāta qǝddāse</label>
-
+               <label xml:lang="gez" type="normalized">Śǝrʿāta qǝddāse</label>
+               <label xml:lang="gez">ሥርዓተ፡ ቅዳሴ፡</label>
                <div type="textpart" subtype="chapter" xml:id="SerataQeddaseChapter1">
                   <label>Śǝrʿāta qǝddāse, Chapter 1: Prayer over new vessels</label>
                   
@@ -120,14 +122,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      ministers and the altar</label>
                </div>
                <div type="textpart" subtype="chapter" xml:id="SerataQeddaseChapter3">
-                  <label>Śǝrʿāta qǝddāse, Chapter 3</label>
+                  <label>Śǝrʿāta qǝddāse, Chapter 3: Liturgy of Catechumen, Liturgy of the Word</label>
+<div type="textpart" xml:id="Catechumen"><label>Liturgy of Catechumen</label>              
+   <div type="textpart" xml:id="SerataQeddaseProthesis"><label>Liturgy of Catechumen: Prayer by the assistant priest receiving the host during the Prothesis</label><note>MQ, SQ ch. III, §§ 22-25</note></div>
+   <div type="textpart" xml:id="SerataQeddaseOblation"><label>Liturgy of Catechumen: Prayer of oblation</label><note>MQ, SQ ch. III, §§ 41-44</note></div>
+   <div type="textpart" xml:id="SerataQeddaseFethat" corresp="LIT1398Fethat"><label>Liturgy of Catechumen: Absolution of the son</label><note>MQ, SQ ch. III, §§ 56-60</note></div>
+   <div type="textpart" xml:id="SerataQeddaseAbsolution"><label>Liturgy of Catechumen: General absolution</label><note>MQ, SQ ch. III, §§ 61-65</note></div></div>
+                  
+                  
+                  <div type="textpart" xml:id="Word"><label>Liturgy of the Word</label>               
+                     <div type="textpart" xml:id="SerataQeddaseChant"><label>Liturgy of the Word: Concluding chant after the reading from the Pauline Epistles</label><note>MQ, SQ ch. III, §§ 132-135</note></div>
+                     <div type="textpart" xml:id="SerataQeddaseMonition"><label>Monition from the Liturgy of the Word (MQ, Śǝrʿāta qǝddāse, ch. III, §§ 148)</label></div>
+                     <div type="textpart" xml:id="SerataQeddaseUniversal"><label>Liturgy of the Word: Universal prayer by the assistant priest</label><note>MQ, SQ ch. III, §§ 194-209</note></div>
+                     
+                  </div>
                </div>
                <div type="textpart" subtype="chapter" xml:id="SerataQeddaseChapter4">
-                  <label>Śǝrʿāta qǝddāse, Chapter 4</label>
+                  <label>Śǝrʿāta qǝddāse, Chapter 4: Liturgy of the Word</label>
+                  <div type="textpart" xml:id="SerataQeddasePeace"><label>Liturgy of the Word: Supplication for peace, the hierarchy and the assembly</label><note>MQ, SQ ch. ch. IV, §§ 15-20</note></div>
                </div>
             </div>
 
-            <div type="textpart" xml:id="Anaphoras">
+ <div type="textpart" xml:id="Eucharist"><label>Liturgy of the Eucharist</label>
+    <div type="textpart" xml:id="Anaphoras">
 
                <div type="textpart" corresp="LIT3189Anapho" xml:id="FourteenAnaphoras">
 
@@ -136,6 +153,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        corresp="LIT1104Anapho"
                        xml:id="AnaphoraApostles">
                      <label>Anaphora of the Apostles</label>
+                     <label xml:lang="gez">ቅዳሴ፡ ዘሐዋርያት፡</label>
                   </div>
                   <div type="textpart"
                        subtype="chapter"
@@ -172,6 +190,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        corresp="LIT1098Anapho"
                        xml:id="AnaphoraBasil">
                      <label>Anaphora by Basil</label>
+                     <note>Prayer of blessing of St Basil, see MQ, Qәddase za-ḥawāryāt, §§ 10-21</note>
                   </div>
                   <div type="textpart"
                        subtype="chapter"
@@ -271,6 +290,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <label>Litany for morning and evening, and litany for the Saturday of the
                      Victory</label>
                </div>
+               <div type="textpart" subtype="chapter" xml:id="Before"><label>Prayer before the congregation receives the Eucharist</label><note>from the Liturgy of the Eucharist, Anaphora of the Apostles (MQ, Qәddāse za-ḥawāryāt, §§ 110-112)</note></div>
+               <div type="textpart" subtype="chapter" xml:id="Imposition"><label>Prayer of intercession following the imposition of the celebrant‘s hand </label><note>from the Liturgy of the Eucharist, Anaphora of the Apostles (MQ, Qәddāse za-ḥawāryāt, §§ 154-158)</note></div>
                <div type="textpart" subtype="chapter" xml:id="Intercessions">
                   <label>Intercessions</label>
                </div>
@@ -283,7 +304,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </div>
                <div type="textpart" subtype="chapter" xml:id="OtherIntercessions">
                   <label>Other intercessions</label>
-               </div>
+               </div></div>
             </div>
          </div>
       </body>
