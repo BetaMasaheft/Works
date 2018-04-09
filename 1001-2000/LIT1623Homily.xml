@@ -14,7 +14,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān za-darasa Yoḥannǝs ʾAfa Warq baʾǝnta Yoḥannǝs Maṭmǝq</title>
             <title xml:lang="en" corresp="#t1">Homily on John the Baptist</title>
             <!-- MV: More sub-recensions seem to exist: see Proverbio, La recensione etiopica dell'omelia pseudocrisostomica etc. (AeF 50), pp. 82f., no. 29 -->
-            <author>John Chrysostom</author>
+            <author ref="PRS5720JohnChr"/>
+           
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -52,11 +53,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body>
          <div type="bibliography">
-            <listRelation>
-               <relation name="saws:isAttributedToAuthor"
-                         active="LIT1623Homily"
-                         passive="PRS5720JohnChr"/>
-            </listRelation>
+            
             <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Lusini1988patristica"/>
@@ -64,6 +61,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
          </div>
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor"
+               active="LIT1623Homily"
+               passive="PRS5720JohnChr"/>
+            <relation name="ecrm:P129_is_about"
+               active="LIT1623Homily"
+               passive="PRS5741Johnthe"/>
+         </listRelation>
       </body>
    </text>
 </TEI>
