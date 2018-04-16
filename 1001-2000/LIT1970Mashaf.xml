@@ -10,7 +10,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mäṣḥafä täklil</title>
+            
+            
+            <title xml:id="t1">መጽሐፈ፡ ተክሊል፡</title>
+            <title corresp="#t1" type="normalized">Maṣḥafa taklil</title>
+            <title corresp="#t1">Book of the Marriage Ritual</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -43,11 +47,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2018-04-16" who="ES">adjusted title added textparts</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="edition">
+            <div type="textpart" subtype="chapter" xml:id="Clothes"><label>Prayers on the clothes</label></div>
+            <div type="textpart" subtype="chapter" xml:id="Bride"><label>Prayers on the bride and the bridegroom</label></div>
+         </div>
+         
       </body>
    </text>
 </TEI>
