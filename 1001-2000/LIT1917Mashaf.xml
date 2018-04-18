@@ -10,7 +10,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mäṣḥafä asǝlṭi</title>
+            <title xml:id="t1" xml:lang="gez">መጽሐፈ፡ አሥልጢ፡</title>
+            <title corresp="#t1" type="normalized" xml:lang="gez">Maṣḥafa ʾaślәṭi</title>
+            <title corresp="#t1" xml:lang="en">Book of usefulness</title>
+            <title corresp="#t1" xml:lang="en">Lectionary</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -32,6 +36,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
+         <abstract><p>Lesser lectionary, translated from Copto Arabic (from aslata, ‘to accomplish, to make useful’,
+            hence the meaning ‘handy manual’).</p></abstract>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
@@ -43,11 +49,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2018-04-17" who="ES">adjusted title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="edition">
+            <div type="textpart" subtype="chapter" xml:id="week"><label>Scriptural readings for the days of the week</label></div>
+            <div type="textpart" subtype="chapter" xml:id="year"><label>Scriptural readings for liturgical periods, fasts and feasts for the entire year</label></div>
+         </div>
+         
       </body>
    </text>
 </TEI>
