@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mäṣḥafäkidanä mǝḥrät</title>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ኪዳነ፡ ምሕረት፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa kidāna mǝḥrat</title>
+            <title xml:lang="en" corresp="#t1">Book of the Covenant of Mercy</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -32,21 +34,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
+         <abstract><p>including: Story of St Anna, engagement of St Mary with Joseph, conception of St Mary
+         </p></abstract>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Hagiography"/>
+               <term key="ChristianLiterature"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2018-04-27" who="ES">updated title keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
+      <listRelation><relation name="ecrm:P129_is_about" active="LIT1939Mashaf" passive="PRS10776Kidan PRS6819Mary"></relation>
+         <relation name="dcterms:isPartOf" active="LIT1939Mashaf" passive="LIT1290Dersan"></relation></listRelation>
       <body>
+         <listBibl type="editions"><bibl><ptr target="bm:Chaine1909MariaText"/><citedRange unit="page">3-19</citedRange></bibl>
+            <bibl><ptr target="bm:Chaine1962MariaText"/><citedRange unit="page">3-19</citedRange></bibl></listBibl>
+         <listBibl type="translation"><bibl><ptr target="bm:Chaine1962MariaVersio"/><citedRange unit="page">3-16</citedRange></bibl>
+            <bibl><ptr target="bm:Chaine1962MariaVersio"/><citedRange unit="page">3-16</citedRange></bibl></listBibl>
          <ab/>
       </body>
    </text>
