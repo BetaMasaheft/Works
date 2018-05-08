@@ -19,6 +19,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <editor key="SG"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
+         <editionStmt>
+         <p>Digital text based on <bibl>
+            <ptr target="bm:Ullendorff1987Confessio"/>
+         </bibl>.</p>
+         </editionStmt>
+         
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
@@ -56,6 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2016-02-09" who="ES">CREATED: text record</change>
          <change when="2016-05-03" who="ES">completed text record</change>
          <change when="2016-05-04" who="ES">abstract added</change>
+         <change when="2018-05-08" who="SG">Uploading the text</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -68,6 +75,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <bibl> 
                   <ptr target="bm:Ludolf1702Confessio"/>
                </bibl>
+               <bibl> 
+                  <ptr target="bm:Ullendorff1987Confessio"/>
+               </bibl>
+               
             </listBibl>
             
             <listBibl type="secondary">
@@ -97,12 +108,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 ነገሥት፡ እሥራኤላውያን፡ ወሃይማኖተ፡ መርዔትየ፡ እለ፡ ሀለዉ፡ በዐፀደ፡ መንግሥትየ።</ab>
           </div>
             <div type="textpart" n="paragraph" next="2">
-               <ab>ንሕነ፡ ነአምን፡ በ፩አምላክ፡ ወበወልድ፡ ዋሕድ፡ ኢየሱስ፡ ክርስቶስ፡ ውእቱ፡ ቃሉ፡ ወውእቱ፡ ኀይሉ።
+               <ab>ንሕነ፡ ነአምን፡ በ፩አምላክ፡ ወበወልድ፡ ዋሕድ፡ <persName ref="PRS5684JesusCh">ኢየሱስ፡ ክርስቶስ፡</persName> ውእቱ፡ ቃሉ፡ ወውእቱ፡ ኀይሉ።
                   ውእቱ፡ ምክሩ፡ ወውእቱ፡ ጥበቡ። ዘሀለወ፡ ምስሌሁ፡ እምቅድመ፡ ይትፈጠር፡ ዓለም። 
                   ወበደኃሪ፡ ማዋዕል፡ መጽአ፡ ኀቤነ፡ እንዘ፡ ኢየዐርቅ፡ እመንበረ፡ መለኮቱ። 
-                  ወተሰብአ፡ እመንፈስ፡ ቅዱስ፡ ወእማርያም፡ እምቅድስት፡ ድንግል።
-                  ወተጠምቀ፡ በዮርዳኖስ፡ በ፴፡ ክረምት፡ ወኮነ፡ብእሴ፡ ፍጹመ፡
-                  ወተሰቅለ፡ ዲበ፡ ዕፀ፡ መስቀል፡ በመዋዕለ፡ ጲላጦስ፡ ጰንጤናዊ። 
+                  ወተሰብአ፡ እመንፈስ፡ ቅዱስ፡ ወእ<persName ref="PRS6819Mary">ማርያም፡</persName> እምቅድስት፡ ድንግል።
+                  ወተጠምቀ፡ በ<placeName ref="LOC3959Jordan">ዮርዳኖስ፡</placeName> በ፴፡ ክረምት፡ ወኮነ፡ብእሴ፡ ፍጹመ፡
+                  ወተሰቅለ፡ ዲበ፡ ዕፀ፡ መስቀል፡ በመዋዕለ፡ <persName ref="PRS7928Pontius">ጲላጦስ፡ ጰንጤናዊ።</persName>
                   ሐመ፡ ወሞተ፡ ወተቀብረ፡ ወተንሥአ፡ በሣልስት፡ ዕለት። 
                   ወእምዝ፡ በ፵ዕለት፡ ዓርገ፡ በስብሐት፡ ውስተ፡ ሰማያት፡ ወነበረ፡ በየማነ፡ አቡሁ።
                   ወካዕበ፡ ይመጽእ፡ በስብሐት፡ ይኰንን፡ ሕያዋነ፡ ወሙታነ፡ ወአልቦ፡ ማኀለቅተ፡ ለመንግሥቱ። ወነአምን፡
@@ -111,11 +122,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
             <div type="textpart" subtype="paragraph" n="3">
                <ab>ንሕነሰ፡ ነሐውር፡ በፍኖተ፡ ንጉሥ፡ ጽዩሕ፡ አማናዊ፡ ወኢናጸንን፡ ኢለየማን፡
-                  ወኢለፀጋም፡ እምትምህርተ፡ አበዊነ፡ ፲ወ፪ሐዋርያት፡ ወጳውሎስ፡ ፈልፈለ፡ 
+                  ወኢለፀጋም፡ እምትምህርተ፡ አበዊነ፡ ፲ወ፪ሐዋርያት፡ ወ<persName ref="PRS7743Paul">ጳውሎስ፡ </persName> ፈልፈለ፡ 
                   ጥበብ፡ ወ፸ወ፪አርድእት፡ ወ፫፻፲ወ፰፡ ርቱዓነ፡ ሃይማኖት፡ ዘተጋብኡ፡ 
-                  በኒቅያ፡ ወ፻ወ፶፡ በቍስጥንጥንያ፡ ወ፪፻በኤፌሶን። ከመዝ፡ እሰብክ፡ ወከመዝ፡
-                  እሜህር፡ አነ፡ <persName ref="PRS4428Galawdew">ገላውዴዎስ፡ </persName> <persName ref="PRS4428Galawdew"><roleName type="title">ንጉሥ፡ </roleName> </persName>
-                  ዘኢትዮጵያ፡ ወስመ፡ መንግስትየ፡ 
+                  በ<placeName ref="LOC4993Nicaea">ኒቅያ፡ </placeName> ወ፻ወ፶፡ በ<placeName ref="LOC2196Consta">ቍስጥንጥንያ፡</placeName>
+                  ወ፪፻በ<placeName ref="LOC2985Ephesu">ኤፌሶን።</placeName> ከመዝ፡ እሰብክ፡ ወከመዝ፡
+                  እሜህር፡ አነ፡ <persName ref="PRS4428Galawdew">ገላውዴዎስ፡</persName>
+                  <persName ref="PRS4428Galawdew"><roleName type="title">ንጉሥ፡</roleName> </persName>
+                  ዘ<placeName ref="LOC3010Ethiop">ኢትዮጵያ፡</placeName> ወስመ፡ መንግስትየ፡ 
                   <persName ref="PRS4428Galawdew"> አጽናፍ፡ ሰገድ፡</persName>  
                   <persName ref="PRS6229LebnaDe">ወልደ፡ ወናግ፡ ሰገድ፡</persName> ወልደ፡ 
                   <persName ref="PRS7481NaodA">ናኦድ።</persName></ab>
@@ -129,28 +142,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
             <div type="textpart" subtype="paragraph" n="5">
                <ab>ወባሕቱ፡ ንሕነሰ፡ ናከብራ፡ እንዘ፡ ናዓርግ፡ ባቲ፡ ቍርባን፡ ወንገብር፡ ባቲ፡ ምሳሐ፡
-                  በከመ፡ አዘዙነ፡ አበዊነ፡ ሐዋርያት፡ በዲድስቅልያ። አኮ፡ ዘናከብራ፡ ከመ፡ ሰንበተ፡
-                  እሑድ፡ እንተ፡ ይእቲ፡ ዕለተ፡ ሐደስ፡ ዘይቤ፡ ዳዊት፡ በእንቲአሃ፡ ዛቲ፡ ዕለት፡ እንተ፡ 
-                  ገብረ፡ እግዚአብሔር፡ ንትፈሣሕ፡ ወንትኀሠይ፡ ባቲ። እስመ፡ ባቲ፡ ተንሥአ፡ እግዚእነ፡ 
-                  ኢየሱስ፡ ክርስቶስ፡ ወባቲ፡ ወረደ፡ መንፈስ፡ ቅዱስ፡ ላዕለ፡ ሐዋርያት፡ በጽርሐ፡ ጽዮን። 
+                  በከመ፡ አዘዙነ፡ አበዊነ፡ ሐዋርያት፡ በ<title ref="LIT1309Didesq">ዲድስቅልያ።</title> አኮ፡ ዘናከብራ፡ ከመ፡ ሰንበተ፡
+                  እሑድ፡ እንተ፡ ይእቲ፡ ዕለተ፡ ሐደስ፡ ዘይቤ፡ <persName ref="PRS3417David">ዳዊት፡</persName> በእንቲአሃ፡ ዛቲ፡ ዕለት፡ እንተ፡ 
+                  ገብረ፡ <persName ref="PRS3697egziabe">እግዚአብሔር፡</persName>ንትፈሣሕ፡ ወንትኀሠይ፡ ባቲ። 
+                  እስመ፡ ባቲ፡ ተንሥአ፡ እግዚእነ፡ 
+                  <persName ref="PRS5684JesusCh">ኢየሱስ፡ ክርስቶስ፡</persName> ወባቲ፡ ወረደ፡ መንፈስ፡ ቅዱስ፡ ላዕለ፡ ሐዋርያት፡ በጽርሐ፡ ጽዮን። 
                   ወባቲ፡ ተሰብአ፡ ውስተ፡ ከርሠ፡ ቅድስት፡ 
-                  ማርያም፡ ድንግል፡ በኵሉ፡ ጊዜ። ወባቲ፡ ይመጽእ፡ ዳግመ፡ ለዕሤተ፡ ጻድቃን፡ ወለፍዳ፡ ኃጥአን።</ab>
+                  <persName ref="PRS6819Mary">ማርያም፡</persName> ድንግል፡ በኵሉ፡ ጊዜ። ወባቲ፡ ይመጽእ፡ ዳግመ፡ ለዕሤተ፡ ጻድቃን፡ ወለፍዳ፡ ኃጥአን።</ab>
             </div>
             <div type="textpart" subtype="paragraph" n="6">
                <ab>ወበእንት፡ ሥርዓተ፡ ግዝረትኒ፡ አኮ፡ ዘንትገዘር፡ ከመ፡ አይሁድ፡ እስመ፡ ንሕነ፡ ናአምር፡ ቃለ፡ ምህሮሁ፡ 
-                  ለጳውሎስ፡ ፈልፈለ፡ ጥበብ፡ ዘይቤ፡ ተገዝሮሂ፡ ኢይበቍዕ፡ ወኢተገዝሮሂ፡ ኢያሠልጥ፡ ዘእንበለ፡ ዳእሙ፡ 
-                  ሐደስ፡ ፍጥረት፡ ዝውእቱ፡ አሚን፡ በእግዚእነ፡ ኢየሱስ፡ ክርስቶስ። 
+                  ለ<persName ref="PRS7743Paul">ጳውሎስ፡</persName> ፈልፈለ፡ ጥበብ፡ ዘይቤ፡ ተገዝሮሂ፡ ኢይበቍዕ፡ ወኢተገዝሮሂ፡ ኢያሠልጥ፡ ዘእንበለ፡ ዳእሙ፡ 
+                  ሐደስ፡ ፍጥረት፡ ዝውእቱ፡ አሚን፡ በእግዚእነ፡ <persName ref="PRS5684JesusCh">ኢየሱስ፡ ክርስቶስ።</persName>
                   ወካዕበ፡ ይቤ፡ ለሰብአ፡ ቆሮንቶስ፡ ዘሂ፡ ነሥአ፡ ግዝረተ፡ ኢይንሣእ፡ ቍልፈተ።
-                  ኵሉ፡ መጽሐፈ፡ ትምህርቱ፡ ለጳውሎስ፡ ሀለወ፡ ኀቤነ፡ ወይሜህረነ፡ በእንተ፡ ግዝረት፡ ወበእንተ፡ ቍልፈት። 
-                  ወባሕቱ፡ ግዝረትሰ፡ ዘኮነ፡ በኀቤነ፡ በልማደ፡ ሀገር፡ ከመ፡ ብጥኅተ፡ ገጽ፡ ዘኢትዮጵያ፡ ወኖባ። 
-                  ወከመ፡ ስቍረተ፡ እዝን፡ ዘሰብአ፡ ህንድ። 
+                  ኵሉ፡ መጽሐፈ፡ ትምህርቱ፡ ለ<persName ref="PRS7743Paul">ጳውሎስ፡</persName> ሀለወ፡ ኀቤነ፡ ወይሜህረነ፡ በእንተ፡ ግዝረት፡ ወበእንተ፡ ቍልፈት። 
+                  ወባሕቱ፡ ግዝረትሰ፡ ዘኮነ፡ በኀቤነ፡ በልማደ፡ ሀገር፡ ከመ፡ ብጥኅተ፡ ገጽ፡ 
+                  ዘ<placeName ref="LOC3010Ethiop">ኢትዮጵያ፡</placeName> ወ
+                  <placeName ref="LOC5004Noba">ኖባ።</placeName>
+                  ወከመ፡ ስቍረተ፡ እዝን፡ ዘሰብአ፡ <placeName ref="pleiades:50004">ህንድ።</placeName>
                   ዘንተሰ፡ ዘንገብር፡ አኮ፡ በዐቂበ፡ ሕገገ፡ ኦሪት፡ ዳእሙ፡ በልማደ፡ ሰብእ።</ab>
             </div>
             <div type="textpart" subtype="paragraph" n="7">
                <ab> ወበእንተ፡ በሊዐ፡ ሐራውያኒ፡ አኮ፡ ዘንትከላእ፡ በዐቂበ፡ ሕገገ፡ ኦሪት፡ ከመ፡ አይሁድ፡ 
                   ለዘኒ፡ በልዐ፡ ኢናስቆርሮ፡ ወኢናረኵሶ፡ ወለዘኒ፡ ኢበልዐ፡ ከመ፡ ይብላዕ፡ ኢናጌብሮ።
-                  በከመ፡ ፀሐፈ፡ አቡነ፡ ጳውሎስ፡ ለብሔረ፡ ሮሜ፡ እንዘ፡ ይብል፡ ዘኒ፡ በልዐ፡ ኢይመንኖ፡
-                  ለዘኢይበልዕ፡ ወለኵሎሙ፡ እግዚአብሔር፡ ተወክፎሙ። መንግሥተ፡ እግዚአብሔር፡ 
+                  በከመ፡ ፀሐፈ፡ አቡነ፡ <persName ref="PRS7743Paul">ጳውሎስ፡</persName> ለብሔረ፡ ሮሜ፡ እንዘ፡ ይብል፡ ዘኒ፡ በልዐ፡ ኢይመንኖ፡
+                  ለዘኢይበልዕ፡ ወለኵሎሙ፡ <persName ref="PRS3697egziabe">እግዚአብሔር፡</persName>ተወክፎሙ። 
+                  መንግሥተ፡ <persName ref="PRS3697egziabe">እግዚአብሔር፡ </persName>
                   ኢኮነት፡ በመብልዕ፡ ወበመስቴ፡ ኵሉ፡ ንጹሕ፡ ለንጹሐን፡ ወእኩይሰ፡ ለሰብእ፡ በሊዕ፡
                   ምስለ፡ ዕቅፍት። ወማቴዎስ፡ ወንጌላዊ፡ ይቤ፡ አልቦ፡ ዘይክል፡ አርኵሶቶ፡ ለሰብእ፡ 
                   ዘእንበለ፡ ዘይወፅእ፡ እምአፉሁ። ወዘሰ፡ ውስተ፡ ከርሥ፡ ይበውእ፡ ወይትገመር፡ ጽመ፡ 
@@ -160,10 +177,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="textpart" subtype="paragraph" n="8">
                <ab>ሊተሰ፡ ሃይማኖትየ፡ ወሃይማኖተ፡ ካህናት፡ ማእምራን፡ እለ፡ ይሜህሩ፡ በትእዛዝየ፡
                   በዐፀደ፡ መንግስትየ፡ ወኢይትገኅሡ፡ እምፍኖተ፡ ወንጌል፡ ወእምትህምርተ፡ 
-                  አቡነ፡ ጳውሎስ፡ ኢለየማን፡ ወኢለፀጋም። ወበመጽሐፈ፡ታሪክኒ፡ ጽሑፍ፡ 
-                  ሀሎ፡ በመጽሐፈ፡ ዚአነ፡ እስመ፡ ቆስጠንጢኖስ፡ ንጉሥ፡ አዘዘ፡ በመዋዕለ፡ መንግሥቱ፡ ለኵሎሙ፡ እለ፡
+                  አቡነ፡ <persName ref="PRS7743Paul">ጳውሎስ፡</persName> ኢለየማን፡ ወኢለፀጋም። ወበመጽሐፈ፡ታሪክኒ፡ ጽሑፍ፡ 
+                  ሀሎ፡ በመጽሐፈ፡ ዚአነ፡ እስመ፡ <persName ref="PRS10626ZaraY">ቆስጠንጢኖስ፡<roleName type="title">ንጉሥ፡ </roleName></persName> አዘዘ፡ በመዋዕለ፡ መንግሥቱ፡ ለኵሎሙ፡ እለ፡
                   ተጠምቁ፡ አይሁድ፡ከመ፡ ያብልዕዎሙ፡ ሥጋ፡
-                  ሐራውያ፡ በዕለተ፡ ትንሣኤሁ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ።</ab>
+                  ሐራውያ፡ በዕለተ፡ ትንሣኤሁ፡ ለእግዚእነ፡ <persName ref="PRS5684JesusCh">ኢየሱስ፡ ክርስቶስ።</persName></ab>
             </div>
             <div type="textpart" subtype="paragraph" n="9">
                <ab>ወባሕቱ፡ በከመ፡ አደሞ፡ ልቡ፡ ለሰብእ፡ ይትኄረም፡ እምበሊዐ፡ ሥጋ፡ እንስሳ ።
@@ -172,11 +189,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   ከመዝ፡ ውእቱ፡ ሥምረቱ፡ ወፈቃዱ፡ ለሰብእ። 
                   በእንተ፡ መብልዐ፡ ሥጋ፡ እንስሳሰ፡ አልቦ፡ ሕገ፡ ወአልቦ፡
                   ቀኖና፡ ውስተ፡ መጽሐፍ፡ ሐደስ፤ ኵሉ፡ ንጹሕ፡ ለንጹሐን። 
-                  ወጳውሎስኒ፡ ዘሰ፡ የአምን፡ ኵሎ፡ ለይብላዕ።</ab>
+                  ወ <persName ref="PRS7743Paul">ጳውሎስ፡</persName>ኒ፡ ዘሰ፡ የአምን፡ ኵሎ፡ ለይብላዕ።</ab>
             </div>
             <div type="textpart" >
                <ab>ዘንተ፡ ኵሎ፡ ዘጽህቁ፡ ለጽሒፍ፡ ከመ ፡ ታአምር፡ ጽድቀ፡ ሃይማኖትየ። 
-                  ተጽሕፈ፡ በ፲ወ፻፶ወ፭ዐመት፡ እምልደተ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ አመ፡ ፳ወ፫ለሰኔ፡ በሀገረ፡、、
+                  ተጽሕፈ፡ በ፲ወ፻፶ወ፭ዐመት፡ እምልደተ፡ እግዚእነ፡ <persName ref="PRS5684JesusCh">ኢየሱስ፡ ክርስቶስ፡</persName> አመ፡ ፳ወ፫ለሰኔ፡ በሀገረ፡、、
                   <placeName ref="LOC2488Damot">ዳሞት።</placeName> 
                   
                </ab>
