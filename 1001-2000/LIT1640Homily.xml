@@ -10,9 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Homily on the Assumption of Mary</title>
-            <title xml:id="t2">Dǝrsanä fǝlsäta</title>
-            <author>Rǝtuʿa Haymanot</author>
+            <title xml:id="t1">ድርሳነ፡ ፍልሰታ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsāna fǝlsatā</title>
+            <title xml:lang="en" type="main" corresp="#t1">Homily on the Assumption of Mary</title>
+            
+            
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -45,11 +48,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2018-06-06" who="ES">updated title relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <ab/>
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor"
+               active="LIT1640Homily"
+               passive="PRS8121RetuaH"/>
+            
+            <relation name="syriaca:different-from" active="LIT1640Homily" passive="LIT1638Homily LIT1639Homily LIT4971MalkeaErgata LIT2932RepCh213"></relation>
+         </listRelation>
       </body>
    </text>
 </TEI>
