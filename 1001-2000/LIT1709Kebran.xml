@@ -19,19 +19,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <editor role="generalEditor" key="AB"/>
             <editor key="SH" role="encoder annotator"/>
             <editor key="RHC" role="encoder"/>
+            <editor key="ES" role="metadata"></editor>
             <respStmt>
-               <resp>Digitization and encoded by</resp>
-               <persName from="1995" to="1995">Michal Jerabek</persName>
-               <persName from="2000" to="2003" ref="RHC"/>
+               <resp>Digitized by</resp>
+               <persName from="1995" to="1995">Michal Jerabek (<ref target="#RHC">edition 1</ref>)</persName>
+               <persName from="2000" to="2003" ref="RHC">Ran Ha-Cohen (<ref target="#RHC">edition 1</ref>)</persName>
                
-               <persName ref="SH" from="2014" to="2018"/>
+               
+               
+               <persName ref="SH" from="2014" to="2018">Susanne Hummel (<ref target="#traces">edition 2</ref>)</persName>
             </respStmt>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <editionStmt>
-            <p>The text currently reproduced is that copied by Michal Jerabek.</p>
-            <p>The non-unicode encoded text was saved from the website by Ran HaCohen and converted to Unicode.</p>
-            <p>This is currently not the text prepared by the TraCES project.</p>
+            <p>The text currently reproduced as <ref target="#RHC">edition 1</ref> is that copied by Michal Jerabek from <bibl>
+               <ptr target="bm:Bezold1905KebraN"/>
+            </bibl>.</p>
+            <p>The non-unicode encoded text of <ref target="#RHC">edition 1</ref> was saved from the website by Ran HaCohen and converted to Unicode.</p>
+            <p>The text of <ref target="#traces">edition 2</ref> was prepared by the TraCES project on the basis of <bibl>
+               <ptr target="bm:Bezold1905KebraN"/>
+            </bibl>.</p>
+            
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -42,7 +50,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <p>
                 This file is licensed under the Creative Commons
                 Attribution-ShareAlike 4.0. </p>
-                  <p>The text within has the following copyright. 1995 Library of Ethiopian Texts,
+                  <p>The text of <ref target="#RHC">edition 1</ref> has the following copyright. 1995 Library of Ethiopian Texts,
                      created and maintained by Michal Jerabek, Prague. Permission to use, copy, and
                      distribute this text, for any NONCOMMERCIAL purpose is hereby granted without
                      fee, provided that the copyright notice and this permission notice appear in
@@ -81,7 +89,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
       <encodingDesc>
          <projectDesc>
-            <p>The description for the text prepared within the framework of the TraCES project.</p>
+            <p>The text of <ref target="#traces">edition 2</ref> was prepared within the framework of the TraCES project.</p>
          </projectDesc>
          <editorialDecl>
             <correction>
@@ -142,7 +150,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="RHC" when="2017-07-18">Sent word file with unicode encoded text.</change>
          <change who="PL" when="2017-07-21">Marked up minimally the text provided.</change>
          <change who="DR" when="2017-07-27">Minor correction to the text division</change>
+         <change who="SH" when="2018-06-29">Edited and annotated selected chapters for the TraCES project</change>
+         
       </revisionDesc>
+      
    </teiHeader>
    <text>
       <body>
@@ -272,7 +283,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listRelation>
          </div>
 
-         <div type="edition" xml:lang="gez">
+         <div type="edition" xml:lang="gez" xml:id="RHC" resp="RHC">
             <div type="textpart"
                  subtype="introduction"
                  xml:lang="gez"
@@ -4090,6 +4101,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             እግዚአብሔር ፡ አነ ፡ አቀንኦሙ ፡ በዘኢኮነ ፡ ሕዝብ ። ወእምድኅሬሁ ፡ አግብአ ፡ ሎሙ ፤ ይኵኖ ፡ አምላክ ፤ ያግባ ፡ ጽዮን ፤ ባሕር ፡
             ሰገድ ፤ ሕዝበ ፡ አርዓድ ፤ ቅድመ ፡ ሰገድ ፤ ዣን ፡ ሰገድ ፤ ውድም ፡ አርዓድ ፤ ዓምደ ፡ ጽዮን ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
+         </div>
+         <div type="edition" xml:lang="gez" xml:id="traces" resp="SH">
+            
          </div>
       </body>
 
