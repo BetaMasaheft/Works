@@ -12,8 +12,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Epistle of Eusebius to Carpianus (generic record)</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="AE" role="encoder annotator"></editor>
+            <editor key="ES" role="metadata"></editor>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
+            <funder>ERC</funder>
+            <respStmt>
+               <resp>digitization</resp>
+               <persName ref="AB" from="2014" to="2015"/>
+               <persName ref="AE" from="2017" to="2018"/>
+               
+            </respStmt>
          </titleStmt>
+         
+         <editionStmt>
+            <p>Digital text based on  <bibl>
+               <ptr target="bm:Bausi2015Carpiano"/>
+            </bibl>.</p>
+         </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
@@ -61,6 +76,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="MV" when="2017-12-19">Added keywords, clavis ID, and bibl</change>
          <change when="2018-06-20" who="ES">added relation</change>
+         <change when="2018-07-02" who="ES">added metadata for traces</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -90,6 +106,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <listRelation>
             <relation name="saws:isAttributedToAuthor" active="LIT1349EpistlEusebius" passive="PRS3912Eusebius"></relation>
             <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1349EpistlEusebius" passive="LIT1560Gospel#IntroductionGospels"></relation>
+            <relation name="saws:hasMember" active="LIT1349EpistlEusebius" passive="LIT4876LetterCanons"></relation>
+            
          </listRelation>
       </body>
    </text>
