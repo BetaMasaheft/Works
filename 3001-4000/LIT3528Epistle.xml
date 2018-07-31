@@ -54,6 +54,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-15">Added keywords</change>
          <change who="DR" when="2018-01-29">Added textparts, bibliography and keyword</change>
+         <change who="DR" when="2018-07-31">Added excerpts, bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -69,13 +70,46 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Tedros2005EAEPauline"/>
                </bibl>
             </listBibl>
+         <listBibl type="editions">
+            <bibl><ptr target="bm:Uhlig1993Gefangenschaftsbriefe"/></bibl>
+         </listBibl>
          </div>
          <div type="edition">
-            <div type="textpart" xml:id="Introduction">
+            <note>All excerpts are taken from   <bibl><ptr target="bm:Uhlig1993Gefangenschaftsbriefe"/></bibl>.</note>
+            <div type="textpart" xml:id="Introduction" xml:lang="gez">
                <label>Introduction</label>
             </div>
-            <div type="textpart" xml:id="Epistle">
+            <div type="textpart" xml:id="Epistle" xml:lang="gez">
                <label>Epistle</label>
+               
+               <div type="textpart" xml:id="Praescriptio">
+                  <label>Praescriptio</label>
+                  <ab>ለሰብአ፡ ኤፌሶን፡ ወተጽሕፈ፡ እንዘ፡ ሀሎ፡ ብሔረ፡ ሮሜ።</ab>
+               </div>
+               
+               <div type="textpart" subtype="chapter" xml:id="Chapter1" n="1">
+                  <label>Chapter 1</label>
+                  <ab>
+                     <l n="1">
+               ጳውሎስ፡ ሐዋርያሁ፡ ለኢየሱስ፡ ክርስቶስ፡ በፈቃደ፡ እግዚአብሔር፡ ለቅዱሳን፡ እለ፡ ኤፌሶን፡ ወመእመናን፡ ለኢየሱስ፡ ክርስቶስ።
+                     </l>
+                     <l n="2">
+                     ሰላም፡ ለክሙ፡ ወጸጋ፡ እግዚአብሔር፡ አቡነ፡ ወእግዚእነ፡ ኢየሱስ፡ ክርስቶስ።
+                     </l>
+                  </ab>
+               </div>
+               
+               <div type="textpart" subtype="chapter" xml:id="Chapter6" n="6">
+                  <label>Chapter 6</label>
+                  <ab>
+                     <l n="23">
+                        ሰላም፡ ለአኀዊነ፡ ወተፋቅሮ፡ ምስለ፡ ሃይማኖት፡ እምኀበ፡ እግዚአብሔር፡ አቡነ፡ ወእግዚእነ፡ ኢየሱስ፡ ክርስቶስ።
+                     </l>
+                     <l n="24">
+                      ወጸጋሁ፡ ምስለ፡ ኵልክሙ፡ እለ፡ ያፈቅርዎ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ዘኢይጠፍእ።
+                     </l>
+                  </ab>
+               </div>
             </div>
          </div>
       </body>
