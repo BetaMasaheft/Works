@@ -36,9 +36,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <listRelation>
                <relation name="saws:isVersionInAnotherLanguageOf"
                          passive="LIT4850pseudotrilingual"
-                         active="LIT4851greekRoyal">
-                        <desc/>
-                    </relation>
+                         active="LIT4851greekRoyal"/>
             </listRelation>
             </sourceDesc>
         </fileDesc>
@@ -71,15 +69,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
+            <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl xml:id="EBernand"><ptr target="bm:BernandRIEIIIA"/><citedRange unit="page">7</citedRange></bibl>
+                    <bibl xml:id="Dillmann"><ptr target="bm:Dillmann1878Anfange"/></bibl>
+                    <bibl xml:id="salt"><ptr target="bm:Salt1809III"/></bibl>
+                    <bibl xml:id="littmann"><ptr target="bm:Littmann1913DAEIV"/></bibl>
+                </listBibl>
+            </div>
             <div type="edition" xml:lang="grc">
-                <ab> Ἀειζανᾶς βασιλεὺς Ἀξωμιτῶν κα<supplied reason="lost">ὶ</supplied> Ὁμηριτῶν καὶ
-                    τοῦ Ῥαειδᾶν καὶ Αἰθιόπων καὶ Σαβαειτῶν καὶ τοῦ Σιλεῆ καὶ τοῦ Τιαμῶ καὶ
-                    Βουγαειτῶν <expan>
+                <ab> Ἀειζανᾶς βασιλεὺς 
+                    <placeName ref="pleiades:39303">Ἀξωμιτῶν</placeName> κα<supplied reason="lost">ὶ</supplied> 
+                    <placeName ref="pleiades:39350">Ὁμηριτῶν</placeName> καὶ
+                    τοῦ <placeName ref="LOC5333Raydan">Ῥαειδᾶν</placeName> καὶ 
+                    <placeName ref="LO 3843HBS" resp="#EBernand">Αἰθιόπων<!--this is supported by the other copies, which have Habashat--></placeName> καὶ 
+                    <placeName ref="LOC5395Saba">Σαβαειτῶν</placeName> καὶ 
+                    τοῦ <placeName ref="LOC5491Salhen" resp="Dillmann"><certainty 
+                        locus="value" match="../@ref" assertedValue="http://dare.ht.lu.se/places/42554" resp="salt"/>
+                        <listRelation>
+                            <relation name="skos:closeMatch" active="http://dare.ht.lu.se/places/42554" passive="https://pleiades.stoa.org/places/39304"/>
+                        </listRelation>Σιλεῆ</placeName> καὶ 
+                    τοῦ <placeName ref="pleiades:40338"><certainty 
+                        locus="value" match="../@ref" assertedValue="pleiades:39399" resp="littmann"/><certainty 
+                            locus="value" match="../@ref" assertedValue="pleiades:39307" resp="littmann"/>Τιαμῶ</placeName> καὶ
+                    <persName ref="pleiades:40079">Βουγαειτῶν</persName> <expan>
                   <abbr>κ</abbr>
                   <ex>αὶ</ex>
-               </expan> τοῦ Κάσου, βασιλεὺς
+                    </expan> τοῦ <placeName ref="pleiades:805630">Κάσου</placeName>, 
+                    βασιλεὺς
                     βασιλέων, υἱὸς θεοῦ ἀνικήτου Ἄρεως, ἀτακτησάντων κατὰ καιρὸν τοῦ ἔθνους τῶν
-                    Βουγαειτῶν ἀπεστίλαμεν τοὺς ἡμετέρους ἀδελφοὺς Σαϊαζανᾶ καὶ τὸν Ἀδηφᾶν τούτους
+                    <placeName type="ethnic" ref="pleiades:40079"><listRelation>
+                        <relation name="skos:closeMatch" active="https://pleiades.stoa.org/places/795790" passive="https://pleiades.stoa.org/places/40079" cert="low"/>
+                    </listRelation>Βουγαειτῶν</placeName> ἀπεστίλαμεν τοὺς ἡμετέρους ἀδελφοὺς Σαϊαζανᾶ καὶ τὸν Ἀδηφᾶν τούτους
                     πολεμῆσαι, καὶ παραδεδωκότων αὐτῶν ὑποτάξαντες αὐτοὺς ἤγαγον πρὸς ἡμᾶς μετὰ καὶ
                     τῶν θρεμμάτων αὐτῶν, βοῶν τέ γριβ καὶ πρ<supplied reason="lost">ο</supplied>βάτων ςσκδ καὶ κτηνῶν νωτοφόρω<supplied reason="lost">ν</supplied>,
                     θρέψαντες αὐτοὺς βόεσίν τε καὶ ἐπισιτ<supplied reason="lost">ισ</supplied>μῷ
@@ -105,7 +126,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ex>αὶ</ex>
                </expan> ἀμφιάσαντες αὐτούς,
                         μετοικήσαντε<supplied reason="lost">ς</supplied> κατεστήσαμεν ἴς τινα τόπον
-                    τῆς ἡμετέρας χ<supplied reason="lost">ώ</supplied>ρας καλούμενον Μάτλια,
+                    τῆς ἡμετέρας χ<supplied reason="lost">ώ</supplied>ρας καλούμενον <placeName ref="LOC7054matlia">Μάτλια</placeName>,
                             <expan>
                   <abbr>κ</abbr>
                   <ex>αὶ</ex>
