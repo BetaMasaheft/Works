@@ -73,7 +73,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <listBibl type="editions">
                     <bibl xml:id="EBernand"><ptr target="bm:BernandRIEIIIA"/><citedRange unit="page">7</citedRange></bibl>
                     <bibl xml:id="Dillmann"><ptr target="bm:Dillmann1878Anfange"/></bibl>
-                    <bibl xml:id="salt"><ptr target="bm:Salt1809III"/></bibl>
+                    <bibl xml:id="salt"><ptr target="bm:Salt1809III"/><citedRange unit="page">179-201</citedRange></bibl>
                     <bibl xml:id="littmann"><ptr target="bm:Littmann1913DAEIV"/></bibl>
                 </listBibl>
             </div>
@@ -85,14 +85,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <placeName ref="LO 3843HBS" resp="#EBernand">Αἰθιόπων<!--this is supported by the other copies, which have Habashat--></placeName> καὶ 
                     <placeName ref="LOC5395Saba">Σαβαειτῶν</placeName> καὶ 
                     τοῦ <placeName ref="LOC5491Salhen" resp="Dillmann"><certainty 
-                        locus="value" match="../@ref" assertedValue="http://dare.ht.lu.se/places/42554" resp="salt"/>
+                        locus="value" match="../@ref" assertedValue="http://dare.ht.lu.se/places/42554" resp="salt"><desc>Zeyla<cit><bibl><ptr target="bm:Salt1809III"/><citedRange unit="page">188</citedRange></bibl><quote>The same Zeila is in all modern charts.</quote></cit></desc></certainty>
                         <listRelation>
                             <relation name="skos:closeMatch" active="http://dare.ht.lu.se/places/42554" passive="https://pleiades.stoa.org/places/39304"/>
                         </listRelation>Σιλεῆ</placeName> καὶ 
-                    τοῦ <placeName ref="pleiades:40338"><certainty 
-                        locus="value" match="../@ref" assertedValue="pleiades:39399" resp="littmann"/><certainty 
+                    τοῦ <placeName ref="pleiades:40338">
+                        <certainty 
+                            locus="value" match="../@ref" resp="salt"><desc><cit><bibl><ptr target="bm:Salt1809III"/><citedRange unit="page">188</citedRange></bibl><quote>the Tehama of Arabia</quote></cit></desc></certainty>
+                        <certainty 
+                        locus="value" match="../@ref" assertedValue="pleiades:39399" resp="littmann"/>
+                        <certainty 
                             locus="value" match="../@ref" assertedValue="pleiades:39307" resp="littmann"/>Τιαμῶ</placeName> καὶ
-                    <persName ref="pleiades:40079">Βουγαειτῶν</persName> <expan>
+                    <persName ref="pleiades:40079">
+                        <certainty locus="value" match="../@ref"><desc><cit><quote>I consider to be the Bogenses of Edrisi; I conceive the g, to have been pronounced soft like j; hence to be the same as the Modern Beja tribe near Suakin.</quote><bibl><ptr target="bm:Salt1809III"/>
+                            <citedRange unit="page">188</citedRange>"/></bibl></cit></desc></certainty>Βουγαειτῶν</persName> <expan>
                   <abbr>κ</abbr>
                   <ex>αὶ</ex>
                     </expan> τοῦ <placeName ref="pleiades:805630">Κάσου</placeName>, 

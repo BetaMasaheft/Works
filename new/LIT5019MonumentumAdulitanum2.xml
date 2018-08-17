@@ -60,22 +60,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body>
             <div type="bibliography">
                 <listBibl type="secondary">
+                    <bibl xml:id="salt">
+                        <ptr target="bm:Salt1809III"/>
+                        <citedRange unit="page">179-201</citedRange>
+                    </bibl>
                     <bibl>
                         <ptr target="bm:RIE1"/>
                         <citedRange unit="page">20-24</citedRange>
                         <citedRange unit="page">375</citedRange>
                     </bibl>
-                    <bibl>
+                    <bibl xml:id="Bernand">
+                        <ptr target="bm:BernandRIEIIIA"/>
+                        <citedRange unit="page">20-24</citedRange>
+                        <citedRange unit="page">375</citedRange>
+                    </bibl>
+                    <bibl xml:id="Huntingford">
                         <ptr target="bm:Huntingford1987Historicalgeo"/>
                         <citedRange unit="page">40-47</citedRange>
                     </bibl>
-                    <bibl><ptr target="bm:DAE2"/><citedRange unit="page">66</citedRange></bibl>
+                    <bibl xml:id="DAE"><ptr target="bm:DAE2"/><citedRange unit="page">66</citedRange></bibl>
                     <bibl xml:id="Fauvelle-Aymar"><ptr target="bm:fauvelleAymar2009"/></bibl>
                     <bibl xml:id="Cosma"><ptr target="bm:WolskaConusCosma"/><citedRange
                             unit="volume">II</citedRange>
                         <citedRange unit="page">60-63</citedRange>
                     </bibl>
-                    <bibl><ptr target="bm:Fiaccadori2007Adulitanum"/></bibl>
+                    <bibl xml:id="fiaccadori"><ptr target="bm:Fiaccadori2007Adulitanum"/></bibl>
                     <bibl xml:id="speidel"><ptr target="bm:Speidel2016Adulis"/></bibl>
                 </listBibl>
             </div>
@@ -84,29 +93,84 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <pb corresp="#VatGr699" n="16v"/>
                     <cb n="a"/>
                     <pb corresp="#Cosma" n="60"/> ... μεθ᾽ ἅ ἀνδρειώσας τὰ μὲν ἔγγιστα τοῦ βασιλείου
-                    ἔθνη εἰρηνεύεσθαι κελεύσας, ἐπολέμησα καὶ ὑπέταξα μάχαις τὰ ὑπογεγραμμένα ἔθνη·
-                        <app>
-                            <lem><placeName ref="pleiades:39303" type="ethnic">Γάζη</placeName></lem>
-                            <note xml:lang="en">Identified with Aksum, because the Scholion to
-                                Florentinus Laurentianus Plut. IX.28 says <foreign xml:lang="grc"
-                                    >Γάζην λέγει τοῦς Ἀξωμίτας · ἄχρι γὰρ καὶ τοῦ νῦν Ἀγάζη αὐτοῦς
-                                    ὀνομάζουσι</foreign>.</note>
-                        </app> ἔθνος ἐπολέμησα, ἔπειτα <placeName ref="LOC1236Agama"
-                        >Ἄγαμε</placeName> καὶ <placeName ref="pleiades:40308">Σιγύηνε</placeName>
-                    νικήσας τὴν ἡμίσειαν πάντων τῶν παρ᾽ αὐτοῖς καὶ αὐτῶν ἐμερισάμην. 
+                    ἔθνη εἰρηνεύεσθαι κελεύσας, ἐπολέμησα καὶ ὑπέταξα μάχαις τὰ ὑπογεγραμμένα ἔθνη· <app>
+                        <lem>
+                            
+                            <placeName ref="pleiades:39303" type="ethnic">
+                                <certainty locus="value" match="../@ref" resp="#salt">
+                                    <desc><quote>Adegada, or Gaza; (Ade simply meaning a town or district)</quote>
+                                        <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#3d068ad0-8e24-424f-a5ce-e481770d60fd">Ludolf map 1683</ref>
+                                    </desc></certainty>Γάζη</placeName>
+                            <!--                  pleiades:39303=aksum
+                                
+                            -->
+                        
+                        </lem>
+                        <note xml:lang="en">Identified with Aksum, because the Scholion to
+                            Florentinus Laurentianus Plut. IX.28 says <foreign xml:lang="grc">Γάζην
+                                λέγει τοῦς <placeName ref="pleiades:39303">Ἀξωμίτας</placeName> · ἄχρι γὰρ καὶ τοῦ νῦν Ἀγάζη αὐτοῦς
+                                ὀνομάζουσι</foreign>.</note>
+                    </app> ἔθνος ἐπολέμησα, ἔπειτα 
                     
-                    <placeName ref="pleiades:40063">Αὔα</placeName> καὶ <placeName ref="pleiades:40351"
-                        >Ζινγαβηνὲ</placeName>
+                    <placeName ref="LOC1236Agama" resp="#salt">Ἄγαμε</placeName>
+                    
+                    καὶ <placeName ref="pleiades:40308">
+                        <certainty locus="value" match="../@ref" resp="#salt"><desc><quote>province of Sigue or Siré (as Dr. Vincent says)</quote>
+                            <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#6c70dbe8-ee0f-40fb-bc96-f356b50a853b">
+                                <q>Sire.P.</q> on Ludolf map (1683) above <q>Axum</q></ref></desc></certainty>
+                        <certainty locus="value" match="../@ref" resp="#Huntingford"><desc><quote>The Sigyēnĕ are unidentifiable even with the help of alternative name Suskinitas given in scholion</quote></desc></certainty>
+                        Σιγύηνε</placeName> 
                     <app>
-                        <lem/>
+                            <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 Scholion says
+                                <foreign xml:lang="grc"><placeName ref="pleiades:40308">Σιγύηνε</placeName> τοῦς <placeName ref="pleiades:40308">Σουσκινίτας</placeName> καλεῖ καὶ τὰ ἐγγὺς αὐτῶν ἔθνη.</foreign></note>
+                        </app>
+                    
+                    νικήσας τὴν ἡμίσειαν
+                    πάντων τῶν παρ᾽ αὐτοῖς καὶ αὐτῶν ἐμερισάμην. 
+                    
+<!--                    END OF FIRST GROUP for HUNTINGFORD-->
+                    
+                    <placeName ref="pleiades:40063">
+                        <certainty locus="value" match="../@ref" resp="#salt"><desc><quote>Awa or AVA, which is Ade-Awa, or 
+                            Adawi, a considerable district bordering on Axum.</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#1da1a3eb-cc39-4850-bb58-0fa084e469d8">
+                                <q>Adawa</q> on Ludolf map (1683) south of <q>Axum</q></ref></desc></certainty>
+                        <certainty locus="value" match="../@ref" resp="#Huntingford"><desc><quote>Cannot be satisfactorily identified</quote></desc></certainty>
+                        <certainty locus="value" match="../@ref" resp="#Bent" assertedValue="LOC6384Yeha"></certainty>Αὔα</placeName> καὶ 
+<!--                    Here Salt reconstruction has Tiama and Gambela-->
+                    <placeName ref="pleiades:40351"><certainty locus="value" match="../@ref" resp="#salt"><desc><quote>the province of Bugné, inhabited by blacks (or Galla)</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#">
+                        <q>Bugna R.</q> on Ludolf map (1683) south of <q>Axum</q></ref></desc></certainty>
+                        <certainty locus="value" match="../@ref" resp="#Huntingford"><desc><quote>Cannot be satisfactorily identified</quote></desc></certainty>Ζινγαβηνὲ</placeName> καὶ 
+                    
+                    <placeName ref="ETH1085Aggabe"><certainty locus="value" match="../@ref" resp="#salt">
+                        <desc><quote>Angabet or Andabet in Begemder</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#bfaa74d2-f350-4f3e-a072-019a9c811eab">
+                            <q>Andabet</q> on Ludolf map (1683) south of <q>Axum</q></ref></desc></certainty>
+                        <certainty locus="value" match="../@ref" resp="#Huntingford"><desc><quote>a place called Angäba in the chiefdom of Sedya between ʿAdwa and the river Bäläsa NW of Entäṣĕw;  
+                            Angabĕ may also be the same as the Angao of DAE 9.</quote></desc></certainty>
+                        Ἀγγαβὲ</placeName> 
+                    <app>
                         <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 Scholion says
                                 <foreign xml:lang="grc">Τὰ ἐγγὺς Ἀδυλέως λέγει ἔθνη τῶν <placeName
-                                    ref="LOC6569Tegray">Τιγρητῶν</placeName>,
-                            Ζιγγαβηνέ.</foreign></note>
-                    </app> καὶ <placeName ref="ETH1085Aggabe">Ἀγγαβὲ</placeName> 
-                    καὶ <placeName ref="pleiades:40338">Τιάμαα</placeName> 
-                    καὶ <placeName ref="pleiades:40059">Ἀθαγαοὺς</placeName> 
-                    καὶ <placeName ref="pleiades:40169">Καλαὰ</placeName> 
+                                    ref="LOC6569Tegray">Τιγρητῶν</placeName>.</foreign></note>
+                    </app>   καὶ 
+                    
+                    <placeName ref="pleiades:40338">
+                        <certainty locus="value" match="../@ref" resp="#salt">
+                            <desc><quote>Tziama, or Tzama.</quote>
+                            <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#9c534774-5f1d-48e7-a04c-cb76e18f39a8">
+                                <q>Tzama</q> on Ludolf map (1683) south of <q>Axum</q></ref></desc></certainty>
+                        <certainty locus="value" match="../@ref" resp="#Huntingford"><desc><quote>Ṣĕyamo-Tziamo-Tiama the kingdom over which Ezana claimed sovereignity in this area.</quote></desc></certainty>
+                        Τιάμαα</placeName> καὶ 
+                    <app>
+                        <note xml:lang="en">Vaticanus Graecus 699
+                            <foreign xml:lang="grc">Τίαμα τοῦς λεγουμένος Τζιαμῶ καὶ τοὺς Γαμβελὰ καὶ τὰ ἐγγὺς αὐτῶν λέγει ἔθνη τὰ πέραν τοῦ Νείλου.</foreign></note>
+                    </app>
+                    <placeName ref="pleiades:40059"><certainty locus="value" match="../@ref" resp="#salt">
+                        <desc><quote>Ath-Agaws or the Agaws</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#bb8b7f1d-26a8-4c1d-94a6-ba4639fb90fd">
+                            <q>Agaw G.</q> on Ludolf map (1683) south of <q>Axum</q></ref></desc></certainty>Ἀθαγαοὺς</placeName> καὶ 
+                    
+                    <placeName ref="pleiades:40169"><certainty locus="value" match="../@ref" resp="#salt">
+                        <desc><quote>Halaat or Salait</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#c6ac3700-eecf-4d44-8e17-b30d59e444b7">
+                            <q>Salait</q> on Ludolf map (1683) west of <q>Axum</q></ref></desc></certainty>Καλαὰ</placeName>
                     <!--                  Bernand E. 2000 p. 37 
                         Dillmann : Kelau people,
                   Dittenberger OGIS Koloé in the Aksum region = LOC5232Qohayt ==> Κολόην in PME 4 + Cl. Ptol. 4.7.8
@@ -114,91 +178,210 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   Kobishchanov proposed Kaila sud of Aksum, Est of blue nile
                   
                   -->
-                    καὶ <placeName ref="LOC5671Semen">Σαμῆνε</placeName> ἔθνος 
-<!--                    crawford Itineraria in his gazetteer of Fra Mauro Map says p. simi is the same place-->
-                    πέραν τοῦ <placeName ref="LOC6850Takkaze" cert="low">
-                        <certainty locus="value" match="../@ref" assertedValue="pleiades:727172" resp="#LIT5019MonumentumAdulitanum2"/>
-                        <certainty locus="value" match="../@ref" assertedValue="LOC4560Marab" resp="#Fauvelle-Aymar"/>Νείλου</placeName>
+                    
+                    καὶ <placeName ref="LOC5671Semen" resp="#salt"><certainty locus="value" match="../@ref" resp="#salt">
+                        <desc><quote>Sembre or Samen</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#637e1a03-303e-4fa7-b7ea-9f79fa445b9f">
+                            <q>Samen R.</q> on Ludolf map (1683) west of <q>Axum</q></ref></desc></certainty>Σαμῆνε</placeName> ἔθνος
+                    
+                    
+                    <!--                    crawford Itineraria in his gazetteer of Fra Mauro Map says p. simi is the same place-->
+                    πέραν τοῦ <placeName ref="LOC6850Takkaze" cert="low" resp="#salt">
+                        <certainty locus="value" match="../@ref" assertedValue="pleiades:727172"
+                            resp="#LIT5019MonumentumAdulitanum2"/>
+                        <certainty locus="value" match="../@ref" assertedValue="LOC4560Marab"
+                            resp="#Fauvelle-Aymar"/>Νείλου</placeName>
                     <!--             pleiades:727172 is a generic label for the Nile, not for blue Nile or a specific part of it.
                     but in here it seams more to refer to the Tekeze river which is between Aksum and the semen mountains. -->
-                    ἐν <placeName ref="LOC5671Semen">δυσβάτοις καὶ χιονώδεσι ὄρεσιν</placeName> οἰκοῦντας, ἐν οἷς διὰ
-                    παντὸς νιφετοὶ καὶ κρύη καὶ χιόνες βαθεῖαι, ὡς μέχρι γονάτων καταδύειν τὸν
-                    ἄνδρα, τὸν ποταμὸν διαβὰς ὑπέταξα, 
-                    ἔπειτα <placeName ref="pleiades:40192">Λασινὲ</placeName> 
-                    καὶ <placeName ref="pleiades:40347">Ζαὰ</placeName> 
-                    καὶ <placeName ref="pleiades:40144">Γαβαλὰ</placeName> οἰκοῦντας παρ᾽
-                        ὄρεει θερμῶν ὑδάτων βλύοντι καὶ καταρρύτῳ.
-<!--                        where are these hot water springs? hot springs famous in Ethiopia are all areound Addis or towards Kenya-->
-                    <placeName ref="pleiades:40058">Ἀταλμῶ</placeName> καὶ <placeName ref="pleiades:40079"
-                        >Βεγὰ</placeName> καὶ τὰ σὺν αὐτοῖς ἔθνη πάντα
-                    <placeName ref="ETH2303Tangaitai">Ταγγαϊτῶν</placeName>, τὰ μέχρι τῶν τῆς
-                    <placeName  ref="pleiades:981503">Αἰγύπτου</placeName> ὁρίων οἰκοῦντα, ὑποτάξας πεζεύεσθαι ἐποίησα
-                    τὴν ὁδὸν ἀπὸ τῶν τῆς ἐμῆς βασιλείας τόπων μέχρι <placeName  ref="pleiades:981503">Αἰγύπτου</placeName>,
-<!--                    the road from my reign until Egypt (not against Egypt) see fiaccadori EAe 2007-->
-                    ἔπειτα <placeName ref="pleiades:40040">Ἀννήνε</placeName> 
-                    καὶ <placeName ref="pleiades:40223">Μετίνε</placeName> ἐν
-                        ἀποκρήμνοις οἰκοῦντας ὄρεσι. <pb corresp="#Cosma"
-                        n="61"/>
-                    <placeName ref="pleiades:40306">Σεσέα</placeName> ἔθνος ἐπολέμησα, οὓς καὶ μέγιστον καὶ δυσβατώτατον
-                    ὄρος ἀνελ<cb n="b"/>θόντας περιφρουρήσας κατὴγαγον, καὶ ἀπελεξάμην ἐμαυτῷ τούς
-                    τε νέους αὐτῶν καὶ γυναῖκας καὶ παῖδας καὶ παρθένους καὶ πᾶσαν τὴν ὑπάρχουσαν
-                    αὐτοῖς κτῆσιν. <placeName ref="pleiades:40270">Ῥαυσῶ</placeName> 
-                    ἔθνη μεσόγεια <placeName ref="pleiades:39370">λιβανωτοφόρων βαρβάρων</placeName>
-                    οἰκοῦντα ἐντὸς πεδίων μεγάλων ἀνύδρων, καὶ <placeName ref="pleiades:40316">Σολάτε</placeName> ἔθνος
-                    ὑπέταξα, οἶς καὶ τοὺς αἰγιαλοὺς τῆς θαλάσσης φυλάσσειν ἐκέλευσα. 
-                    <app><note xml:lang="en">Vaticanus Graecus 699 note says that <foreign xml:lang="grc">Σολὰτε οἱ λεγόμενοι Τιγρῆται οἱ παραθαλλάσσιοι ἐπὶ
-                    τὴν Βαρβαρίαν.</foreign></note>
-                        <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 has a 
-                            scholion saying <foreign xml:lang="grc">Σολὰτε: Σολὰτε γὰρ τοὺς ἐπὶ
-                                τὴν Βαρβαρίαν Τιγρῆτας τοὺς παραλίους λέγει.</foreign></note></app>
-                    <pb
-                        corresp="#Cosma" n="62"/> Ταῦτα δὲ πάντα τὰ ἔθνη ὄρεσιν ἰσχυροῖς
+                    
+                    
+                    ἐν <placeName ref="LOC5671Semen">δυσβάτοις καὶ χιονώδεσι ὄρεσιν</placeName>
+                    οἰκοῦντας, ἐν οἷς διὰ παντὸς νιφετοὶ καὶ κρύη καὶ χιόνες βαθεῖαι, ὡς μέχρι
+                    γονάτων καταδύειν τὸν ἄνδρα, τὸν ποταμὸν διαβὰς ὑπέταξα, ἔπειτα 
+                    <placeName ref="pleiades:40192"><certainty locus="value" match="../@ref" resp="#salt" assertedValue="LOC4259Lasta">
+                        <desc><quote>Lasta</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#fa572b5b-8bfc-469d-ae3e-26604f851019">
+                            <q>Lasta M. hinc Lastenses</q> on Ludolf map (1683) west of <q>Axum</q></ref></desc></certainty>Λασινὲ</placeName> καὶ 
+                    
+                    <placeName ref="pleiades:40347"><certainty locus="value" match="../@ref" resp="#salt" assertedValue="LOC5597Sawa">
+                        <desc><quote>Shawa or Zaa</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#6e5f1b0d-e73c-40d8-a896-59320539ca67">
+                            <q>Sewa</q> or <q>Shawada P.</q> on Ludolf map (1683) south-west of <q>Axum</q></ref></desc></certainty>Ζαὰ</placeName> καὶ 
+                    
+                    <placeName ref="pleiades:40144">Γαβαλὰ</placeName>
+                    <app>
+                        <note xml:lang="en">Vaticanus Graecus 699
+                            <foreign xml:lang="grc">Ταῦτα ἔθνη ἕως τῆς σήμερον οὕτως καλοῦνται.</foreign></note>
+                    </app>
+                    
+                    οἰκοῦντας παρ᾽ ὄρεει θερμῶν ὑδάτων βλύοντι καὶ καταρρύτῳ. <!--                        where are these hot water springs? hot springs famous in Ethiopia are all areound Addis or towards Kenya-->
+                    
+                    <placeName ref="pleiades:40058">Ἀταλμῶ</placeName> καὶ 
+                    
+                    <placeName ref="pleiades:40079">
+                        <certainty locus="value" match="../@ref" resp=" #salt"><desc><quote>Bega or Bega Midra</quote>
+                            <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#75c919ae-9ad1-49a3-9c0b-b4b450062b42">
+                            <q>Midra Bahr</q> on Ludolf map (1683) East of <q>Axum</q></ref></desc></certainty>
+                        Βεγὰ</placeName>
+                    
+<!--                    END OF SECOND GROUP FOR HUNTINGFORD-->
+                    καὶ τὰ σὺν αὐτοῖς ἔθνη πάντα
+                    
+                        <placeName ref="ETH2303Tangaitai">Ταγγαϊτῶν</placeName>, 
+                    <app>
+                        <note xml:lang="en">Vaticanus Graecus 699
+                            <foreign xml:lang="grc">τοὺς Βλέμμυας οὕτως καλοῦσιν οὶ Αἰθίοπες. τοῦς Ταγγαίτας καλεῖ τοὺς Ἀτταβιτη καὶ τοὺς Ἀδρα..ς</foreign></note>
+                    </app>
+                    
+                    τὰ μέχρι τῶν τῆς <placeName ref="pleiades:981503">Αἰγύπτου</placeName> ὁρίων οἰκοῦντα,
+                    ὑποτάξας πεζεύεσθαι ἐποίησα τὴν ὁδὸν ἀπὸ τῶν τῆς ἐμῆς βασιλείας τόπων μέχρι
+                        <placeName ref="pleiades:981503">Αἰγύπτου</placeName>,
+                    <!--                    the road from my reign until Egypt (not against Egypt) see fiaccadori EAe 2007-->
+<!--                    Salt from here on interprets all as tribes of the south east of Aksum-->
+                    
+                    ἔπειτα <placeName ref="pleiades:40040">Ἀννήνε</placeName> καὶ 
+                    
+                    
+                    <placeName ref="pleiades:40223">Μετίνε</placeName>
+                    <app>
+                        <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 Scholion says
+                            <foreign xml:lang="grc">[Ἀννίνε] καὶ Μετίνε ἕως τοῦ νῦν ταῦτα τὰ ἔθνη οὕτω καλοῦνται</foreign></note>
+                    </app> 
+                    ἐν ἀποκρήμνοις οἰκοῦντας ὄρεσι. <pb
+                        corresp="#Cosma" n="61"/>
+                    
+                    
+                    <placeName ref="pleiades:40306">Σεσέα</placeName>
+                    <app>
+                        <note xml:lang="en">Vaticanus Graecus 699
+                            <foreign xml:lang="grc">Τὰ τῆς Βαρβαρίας ἔθνη ἐνταῦθα δηλοῖ</foreign></note>
+                    </app>
+                    
+                    ἔθνος 
+                    
+                    ἐπολέμησα, οὓς καὶ
+                    μέγιστον καὶ δυσβατώτατον ὄρος ἀνελ<cb n="b"/>θόντας περιφρουρήσας κατὴγαγον,
+                    καὶ ἀπελεξάμην ἐμαυτῷ τούς τε νέους αὐτῶν καὶ γυναῖκας καὶ παῖδας καὶ παρθένους
+                    καὶ πᾶσαν τὴν ὑπάρχουσαν αὐτοῖς κτῆσιν. 
+                    
+                    <placeName ref="pleiades:40270">Ῥαυσῶ</placeName> ἔθνη 
+                    <app>
+                        <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 Scholion says
+                            <foreign xml:lang="grc">Βαρ.[οὕτω]σι Βαρβαρίας ἔθνη λέγει</foreign></note>
+                    </app> 
+                    
+                    μεσόγεια 
+                    
+                    <placeName ref="pleiades:39370">λιβανωτοφόρων βαρβάρων</placeName> οἰκοῦντα ἐντὸς πεδίων μεγάλων ἀνύδρων,
+                    
+                    
+                   
+                    καὶ <placeName ref="pleiades:40316">Σολάτε</placeName>
+                    <app>
+                        <note xml:lang="en">Vaticanus Graecus 699 note says that <foreign
+                                xml:lang="grc">Σολὰτε οἱ λεγόμενοι Τιγρῆται οἱ παραθαλλάσσιοι ἐπὶ
+                                τὴν Βαρβαρίαν.</foreign></note>
+                        <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 has a scholion
+                            saying <foreign xml:lang="grc">Σολὰτε: Σολὰτε γὰρ τοὺς ἐπὶ τὴν Βαρβαρίαν
+                                Τιγρῆτας τοὺς παραλίους λέγει.</foreign></note>
+                    </app>
+                    
+                    ἔθνος ὑπέταξα, οἶς καὶ
+                    τοὺς αἰγιαλοὺς τῆς θαλάσσης φυλάσσειν ἐκέλευσα. 
+                    <pb corresp="#Cosma" n="62"/> Ταῦτα δὲ πάντα τὰ ἔθνη ὄρεσιν ἰσχυροῖς
                     πεφφρουρημένα αὐτὸς ἐγὼ ἐν ταῖς μάχαις παρὼν νικήσας καὶ ὐποτάξας, ἐχαρισάμην
                     αὐτοῖς πάσας τὰς χώρας ἐπὶ φόροις. Ἄλλα δὲ πλεῖστα ἔθνη ἑκόντα ὑπετάγη μοι ἐπὶ
-                    φόροις. Καὶ πέραν δὲ τῆς<placeName ref="pleiades:39290">Ἐρυθρᾶς θαλάσσης </placeName>
-                    οἰκοῦντα
-                    <placeName ref="pleiades:40050">Ἀραβίτας</placeName> 
-                    καὶ <placeName ref="pleiades:39360">Κιναιδοκολπίτας</placeName>,
-<!--                    Ostrakon O.Max. inv 81 
+                    φόροις. 
+                    <app>
+                        <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 has a scholion
+                            saying <foreign xml:lang="grc">Μέχρι τοῦ νῦν ὅλοι οἱ Τιγρῆται τὰ παράλια οἰκοῦσι μέρη ἀπὸ Ἀδουλέως μέχρι τῶν τῆς Βαρβαρίας τόπων.</foreign></note>
+                    </app>
+                    
+                    Καὶ πέραν δὲ τῆς<placeName ref="pleiades:39290">Ἐρυθρᾶς θαλάσσης</placeName> οἰκοῦντα 
+                    
+                    <app>
+                        <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 has a scholion
+                            saying <foreign xml:lang="grc">Ἀραβίτας ἐνταῦθα τοὺς Ὁμηρίτας καλεῖ καὶ Κιναιδοκολπίτας τοὺς παραλίους Ἀδονίτας καλεῖ</foreign></note>
+                    </app>
+                    
+                    <placeName ref="pleiades:40050">Ἀραβίτας</placeName> καὶ
+                    
+                        <placeName ref="pleiades:39360">Κιναιδοκολπίτας</placeName>,
+                    <!--                    Ostrakon O.Max. inv 81 
                     TOPOI 6 1996
                     I have added to http://papyri.info/ddbdp/sb;24;16187
                     the annotation https://hyp.is/QeBujJmgEeiKtVfF3yG2gg
                     -->
+                    <app>
+                        <note xml:lang="en">Vaticanus Graecus 699 note says that <foreign
+                            xml:lang="grc">Ἀρραβίτας καὶ Κιναιδοκολπίτας τοὺς εἰς τὸν Ὁμηρίτην σημαίνει, τουτέστι τοὺς ἐν τῇ Εὐδαίμονι Ἀρραβίᾳ</foreign></note>
+                    </app>
                     στράτευμα ναυτικὸν καὶ πεζικὸν διαπεμψάμενος, καὶ ὐποτάξας αὐτῶν τοὺς βασιλέας,
                     φόρους τῆς γῆς τελεῖν ἐκέλευσα καὶ ὁδεύεσθαι μετ᾽εἰρήνης καὶ πλέεσθαι, ἀπὸ τε
-                    <placeName ref="pleiades:814698">Λευκῆς κώμης</placeName> 
-                    ἕως τῶν <placeName ref="LOC5395Saba">Σαβαίων</placeName>
-                    χώρας ἐπολέμησα. <pb corresp="#Cosma" n="63"/> Πάντα δὲ ταῦτα τὰ ἔθνη πρῶτος καὶ
-                    μόνος βασιλέων τῶν πρὸ ἐμοῦ ὑπέταξα, δι᾽ἣν ἔχω πρὸς τὸν μέγιστον θεόν μου Ἄρην
-                    εὐχαριστίαν, ὅς με καὶ ἐγέννησε, <pb corresp="#VatGr699" n="17r"/> δι᾽οὗ πάντα
-                    τὰ ἔθνη δι᾽οὗ πάντα τὰ ἔθνη <cb n="a"/> τὰ ὁμοροῦντα τῇ ἐμῇ γῇ ἀπὸ μὲν ἀνατολῆς
-<!--                    coloro che confinano con la mia terra da est fino ai portatori di incenso-->
-                    μέχρι τῆς <placeName ref="pleiades:39370">λιβανωτοφόρου</placeName>, 
-<!--                    Fiaccadori dice che questa è la Somalia, ma non può essere. stesso luogo nominato in Periplus-->
-                    ἀπὸ δὲ δύσεως μέχρι τῶν τῆς <placeName
-                        ref="LOC7053Aithiopia"><certainty 
-                            locus="value" match="../@ref" assertedValue="pleiades:334481" resp="PL"/><certainty 
-                                locus="value" match="../@ref" assertedValue="LOC5017Nubia" resp="#speidel"/>Αἰθιοπίας</placeName> 
-                    καὶ <placeName ref="pleiades:40296">Σάσου</placeName>
-<!--                    coloro che confinano con la mia terra da ovest fino all etiopia e a sasu -->
-                    <app><note xml:lang="en">Vaticanus Graecus 699 has a note in the text saying 
-                        <foreign xml:lang="grc">Αὕτη ἡ Σάσου χώρα ὑστάτη ἐστὶν τῶν Αἰθιόπων
-                        ἔνθα καὶ πολὺ χρυσίον ἐστίν, τὸ λεγόμενον ταγχάρας. Ἐπέκεινα δὲ ταύτης ὁ 
-                        Ὡκεανὸς παράκειται, ὥσπερ καὶ τῶν βαρβαρεωτῶν τῶν καὶ τὸν λίβανον ἐμπορευομένων.</foreign></note>
-                        <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 has a note in the text saying 
-                            <foreign xml:lang="grc">Σάσου καὶ λιβανωτοφόρον καλεῖ τὰς πέραν τῶν Αἰθιόπων χώρας, τὴν μὲν 
-                                Σάσου εἰς νότον καὶ δύσιν κειμένην, τὴν δὲ Βαρβαρίαν εἰς νότον καὶ ἀντολὴν κειμένην. Βαρβαρία δέ ἐστιν ἡ
-                                τὸν λίβανον ποιοῦσα γῆ. Ἡ δὲ Σάσου χώρα ὑστάτη ἐστὶ τῶν Αἰθιόπων ἔνθα καὶ πολὺ χρυσίον ἐστίν, τὸ λεγόμενον ταγχάρας. Ἐπέκεινα δὲ ταύτης ὁ 
-                                Ὡκεανὸς παράκειται, ὥσπερ καὶ τῶν βαρβαρεωτῶν τῶν καὶ τὸν λίβανον ἐμπορευομένων. </foreign></note>
-                        
+                    
+                    
+                        <placeName ref="pleiades:814698">Λευκῆς κώμης</placeName> 
+                    <app>
+                        <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 has a scholion
+                            saying <foreign xml:lang="grc">Λευκῆν κώμην καλεῖ τὸ λεγόμενον Λευκόγην ἐπὶ τὰ μέρη τῶν Βλεμμύων ὂν παρὰ θάλασσαν.</foreign></note>
                     </app>
-                    τόπων, ὑπ᾽ἐμαυτὸν ἐποίησα, ἃ μὲν αὐτὸς ἐγὼ ἐλθὼν καὶ νικήσας, ἃ δὲ
+                    
+                    ἕως τῶν <placeName
+                        ref="LOC5395Saba">Σαβαίων</placeName> χώρας ἐπολέμησα. 
+                    <app>
+                        <note xml:lang="en">Vaticanus Graecus 699 note says that <foreign
+                            xml:lang="grc">Εἰς τὰ μέρη τῶν Βλεμμύων ἐστιν κώμη καλουμένη τὸ Λευκόγην.</foreign></note>
+                    </app>
+                    <pb corresp="#Cosma"
+                        n="63"/> Πάντα δὲ ταῦτα τὰ ἔθνη πρῶτος καὶ μόνος βασιλέων τῶν πρὸ ἐμοῦ
+                    ὑπέταξα, δι᾽ἣν ἔχω πρὸς τὸν μέγιστον θεόν μου Ἄρην εὐχαριστίαν, 
+                    <app>
+                        <note xml:lang="en">Vaticanus Graecus 699 note says that <foreign
+                            xml:lang="grc">Σαβαίων χώρα πάλιν εἰς τὸν Ὁμηρίτην ἐστίν</foreign></note>
+                        <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 has a scholion
+                            saying <foreign xml:lang="grc">Σαβέων χώραν τὸν Ὁμηρίτην λέγει</foreign></note>
+                    </app>
+                    ὅς με καὶ
+                    ἐγέννησε, <pb corresp="#VatGr699" n="17r"/> δι᾽οὗ πάντα τὰ ἔθνη δι᾽οὗ πάντα τὰ
+                    ἔθνη <cb n="a"/> τὰ ὁμοροῦντα τῇ ἐμῇ γῇ ἀπὸ μὲν ἀνατολῆς
+                    <!--                    coloro che confinano con la mia terra da est fino ai portatori di incenso-->
+                    μέχρι τῆς <placeName ref="pleiades:39370">λιβανωτοφόρου</placeName>,
+                    <!--                    Fiaccadori dice che questa è la Somalia, ma non può essere. stesso luogo nominato in Periplus-->
+                    
+                    
+                    
+                    ἀπὸ δὲ δύσεως μέχρι τῶν τῆς <placeName ref="LOC7053Aithiopia"><certainty
+                            locus="value" match="../@ref" assertedValue="pleiades:334481" resp="PL"
+                            /><certainty locus="value" match="../@ref" assertedValue="LOC5017Nubia"
+                            resp="#speidel"/>Αἰθιοπίας</placeName>
+<!--                    Ethiopia is not discussed by Salt-->
+                    καὶ <placeName
+                        ref="pleiades:40296">Σάσου</placeName>
+                    <!--                    coloro che confinano con la mia terra da ovest fino all etiopia e a sasu -->
+<!--                    Salt says Sasou is 'opposite Aden' and 'can only apply to an abyssinian kingdom' which I do not understand-->
+                    
+                    <app>
+                        <note xml:lang="en">Vaticanus Graecus 699 has a note in the text saying
+                                <foreign xml:lang="grc">Αὕτη ἡ Σάσου χώρα ὑστάτη ἐστὶν τῶν Αἰθιόπων
+                                ἔνθα καὶ πολὺ χρυσίον ἐστίν, τὸ λεγόμενον ταγχάρας. Ἐπέκεινα δὲ
+                                ταύτης ὁ Ὡκεανὸς παράκειται, ὥσπερ καὶ τῶν βαρβαρεωτῶν τῶν καὶ τὸν
+                                λίβανον ἐμπορευομένων.</foreign></note>
+                        <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 has a note in the
+                            text saying <foreign xml:lang="grc">Σάσου καὶ λιβανωτοφόρον καλεῖ τὰς
+                                πέραν τῶν Αἰθιόπων χώρας, τὴν μὲν Σάσου εἰς νότον καὶ δύσιν
+                                κειμένην, τὴν δὲ Βαρβαρίαν εἰς νότον καὶ ἀντολὴν κειμένην. Βαρβαρία
+                                δέ ἐστιν ἡ τὸν λίβανον ποιοῦσα γῆ. Ἡ δὲ Σάσου χώρα ὑστάτη ἐστὶ τῶν
+                                Αἰθιόπων ἔνθα καὶ πολὺ χρυσίον ἐστίν, τὸ λεγόμενον ταγχάρας.
+                                Ἐπέκεινα δὲ ταύτης ὁ Ὡκεανὸς παράκειται, ὥσπερ καὶ τῶν βαρβαρεωτῶν
+                                τῶν καὶ τὸν λίβανον ἐμπορευομένων. </foreign></note>
+
+                    </app> τόπων, ὑπ᾽ἐμαυτὸν ἐποίησα, ἃ μὲν αὐτὸς ἐγὼ ἐλθὼν καὶ νικήσας, ἃ δὲ
                     διαπεμπόμενος, καὶ ἐν εἰρήνῃ καταστήσας πάντα τὸν ὑπ᾽ἐμοὶ κόσμον κατῆλθον εἰς
-                    τὴν <placeName ref="LOC1261Adulis">Ἀδούλι</placeName> τῷ Διὶ καὶ τῷ Ἄρεει καὶ τῷ Ποσειδῶνι θυσιάσαι
-                    ὑπὲρ τῶν πλοϊζομένων· ἀθροίσας δὲ μου τὰ στρατεύματα καὶ ἐφ᾽ἓν ποιήσας, ἐπὶ
-                    τούτῳ τῷ τόπῳ καθίσας τόνδε τὸν δίφρον παραθήκην τῷ Ἄρεει ἐποίησα <date>ἔτει τῆς ἐμῆς
-                    βασιλείας <expan><abbr>κ</abbr><ex>εἰκοστῷ</ex></expan>
-                    <expan><abbr>ζ</abbr><ex>ἑβδόμῳ</ex></expan></date>. </ab>
+                    
+                    
+                    τὴν <placeName ref="LOC1261Adulis">Ἀδούλι</placeName> τῷ Διὶ καὶ τῷ Ἄρεει καὶ τῷ
+                    Ποσειδῶνι θυσιάσαι ὑπὲρ τῶν πλοϊζομένων· ἀθροίσας δὲ μου τὰ στρατεύματα καὶ
+                    ἐφ᾽ἓν ποιήσας, ἐπὶ τούτῳ τῷ τόπῳ καθίσας τόνδε τὸν δίφρον παραθήκην τῷ Ἄρεει
+                    ἐποίησα <date>ἔτει τῆς ἐμῆς βασιλείας
+                            <expan><abbr>κ</abbr><ex>εἰκοστῷ</ex></expan>
+                        <expan><abbr>ζ</abbr><ex>ἑβδόμῳ</ex></expan></date>. </ab>
             </div>
         </body>
     </text>
