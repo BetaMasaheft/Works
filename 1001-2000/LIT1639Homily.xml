@@ -13,7 +13,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:id="t1">ድርሳነ፡ ፍልሰታ፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsāna fǝlsatā</title>
             <title xml:lang="en" type="main" corresp="#t1">Homily on the Assumption of Mary</title>
-            
             <author ref="PRS3255CyrilI">Cyril</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -42,12 +41,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Homily"/>
+               <term key="Translation"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2018-06-06" who="ES">updated title relation</change>
+         <change when="2018-08-20" who="DR">Added title, keywords and bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -60,6 +68,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             
             <relation name="syriaca:different-from" active="LIT1639Homily" passive="LIT1640Homily LIT1638Homily LIT4971MalkeaErgata LIT2932RepCh213"></relation>
          </listRelation>
+         <listBibl type="editions">
+            <bibl><ptr target="bm:Arras1974TransituText"/><citedRange unit="page">1-33</citedRange></bibl>
+         </listBibl>
+         <listBibl type="translation">
+            <bibl><ptr target="bm:Arras1974TransituVersio"/><citedRange unit="page">1-25</citedRange></bibl>
+         </listBibl>
       </body>
    </text>
 </TEI>
