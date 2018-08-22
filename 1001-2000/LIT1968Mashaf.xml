@@ -10,8 +10,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mäṣḥafä śǝrʿat</title>
-            <title xml:id="t2">Canon of Muʿallaqah</title>
+            <title xml:id="t1" xml:lang="gez">መጽሐፈ፡ ሥርዓት፡ ዘወጽአ፡ እመንበረ፡ ማርቆስ፡ ሐዋርያ፡ እመካነ፡ መዓልቃ፡ </title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Maṣḥafa śǝrʿāt za-waṣʾa ʾǝm-manbara Mārqos ḥawāryā ʾǝm-makāna maʿāllǝqā</title>
+            <title corresp="#t1" xml:lang="en">Book of the Rules</title>
+            <title xml:id="t2" xml:lang="en">Canon of Muʿallaqa</title>
+            <title xml:id="t3" xml:lang="en">Introductory Rite</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -39,16 +42,52 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Liturgy"/>
+            </keywords>
+         </textClass>
+         <abstract><ab>The Canon of Muʿallaqa is an introduction to the <ref type="work" corresp="LIT2384Taamme"/>. It was purportedly translated from Arabic in <date when="1441"/> at the order of <persName ref="PRS10626ZaraY"/>,
+            but no Arabic version is known. It can be followed or preceded by
+            <ref type="work" corresp="LIT3584Intro"/>.</ab></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2018-08-22">Updated title, added keywords, abstract, bibliography, relation and text</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>The incipit is taken from <bibl>
+                  <ptr target="bm:Dillmann1847BM"/>
+                  <citedRange unit="page">26a</citedRange>
+               </bibl>.</note>
+               <ab>ዝንቱ፡ መጽሐፈ፡ ሥርዓት፡ ዘወጽአ፡ እመንበረ፡ ማርቆስ፡ ሐዋርያ፡ እመካነ፡ መዓልቃ፡ ዘምስር፡ ዘአንበሩ፡ መምህራን፡ ሊቃነ፡ ጳጳሳት፡ ክቡራነ፡ መገብያነ፡ 
+                  ምሥጢር፡ ርቱዓነ፡ ሃይማኖት፡ ዘትትናገሮሙ፡ እግዝእትነ፡ ማርያም፡ ዘልፈ፡ ቦ፡ አመ፡ ትትናገሮሙ፡ በራዕይ፡ ወቦ፡ አመ፡ ትትናገሮሙ፡ በገሃድ፡ እሉ፡ እሙንቱ፡ አባ፡ አብርሃም፡ ወአባ፡ 
+                  ማርቆስ፡ ወአባ፡ ማቲዎስ፡ ገባያነ፡ መንክራት፡ ወዜና፡ ነገሮሙሰ፡ ሀሎ፡ ጽሑፍ፡ ውስተ፡ መጽሐፈ፡ ተአምሪሃ፡ ለእግዝእትነ፡ ማርያም፡ ዘከመ፡ ተናገረቶሙ፡ ወዘከመ፡ ገብረት፡ ሎሙ፡ 
+                  ተአምራተ፡ ወመንክራተ፡ ወመጽሐፈ፡ ሥርዓቶሙሰ፡ ተተርጐመት፡ እምነገረ፡ አረቢ፡ ለግዕዝ፡ ብሔረ፡ ኢትዮጵያ፡ በመዋዕለ፡ ንጉሥነ፡ ዘርአ፡ ያዕቆብ፡ ዘተሰምየ፡ ቈስጠጢኖስ፡ ወሊቀ፡ 
+                  ጳጳሳቲነ፡ አባ፡ ሚካኤል፡ ወአባ፡ ገብርኤል፡ ወኤጲስ፡ ቆጶስነ፡ አባ፡ ዮሐንስ፡ እም፡ አመ፡ ወጽኡ፡ ውስተ፡ ብሔረ፡ ኢትዮጵያ፡ በ፫ዓመት፡ በመዋዕሊሁ፡ ለንጉሥነ፡ ዘርአ፡ ያዕቆብ፡ ዘተሰምየ፡ 
+                  ቈስጠጢኖስ፡ እምአመ፡ ነግሠ፡ በ፯ዓመት።</ab>
+            </div>
+         </div>
+         <div type="bibliography">
+            <listRelation>
+               <relation name="saws:formsPartOf" active="LIT1968Mashaf" passive="LIT2384Taamme"/>
+            </listRelation>
+            <listBibl type="translation">
+               <bibl><ptr target="bm:Budge1933Miracles"/><citedRange unit="page">xlvi-liv</citedRange></bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Boell2005Erafta"/><citedRange unit="page">351a</citedRange></bibl>
+               <bibl><ptr target="bm:Cerulli1943Maria"/><citedRange unit="page">17-22</citedRange></bibl>
+               <bibl><ptr target="bm:Getatchew1992Mariology"/></bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
