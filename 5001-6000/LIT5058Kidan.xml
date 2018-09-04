@@ -6,15 +6,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
      xml:lang="en"
-     xml:id="LIT2462Testam">
+     xml:id="LIT5058Kidan">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="la" xml:id="t1">Testamentum Domini in Galilea</title>
-            
-            <title xml:id="t2eth" xml:lang="gez">ኪዳን፡ ዘእግዚእነ፡ ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ፡</title>
-            <title xml:lang="en" corresp="#t2eth">Testament of Our Lord and Saviour Jesus Christ</title>
-            <title xml:lang="gez" corresp="#t2eth" type="normalized">Kidān za-ʾǝgziʾǝna za-madḫanina ʾIyasus Krǝstos</title>
+            <title  xml:id="t1">Testamentum Domini Collection</title>
+
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -42,17 +39,63 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract>
+            <p>
+               The constellation of texts around the Testamentum Domini typical of the Ethiopic tradition, includes <ref type="work" corresp="LIT2461Testam"/>, <ref type="work" corresp="LIT2462Testam"/>, and <ref type="work" corresp="LIT1354Epistu"/>.</p>
+         </abstract>
+         <textClass>
+            <keywords>
+                                
+               <term key="ChristianLiterature"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
-         <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change when="2018-03-09" who="ES">adjusted title</change>
+         <change who="ES" when="2018-09-04"> Created file </change>
+
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <bibl>
+               <ptr target="bm:Peres1999Epitre"/>
+            </bibl>
+            <bibl>
+               <ptr target="bm:DickhutEllwardt2018Dillmann"/>
+            </bibl>
+         </div>
+         
+         <div type="edition">
+            
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="TD"
+                 corresp="LIT2461Testam">
+               <label>Testamentum Domini</label>
+            </div>
+               
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:lang="gez"
+                    xml:id="TDG"
+                    corresp="LIT2462Testam">
+                  <label>Testamentum Domini in Galilea</label>
+                  
+               </div>
+               
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:lang="gez"
+                    xml:id="EpAp"
+                    corresp="LIT1354Epistu">
+                  <label>Epistula Apostolorum</label>
+               </div>
+               
+               
+            </div>
+         
       </body>
    </text>
 </TEI>
