@@ -5,7 +5,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle of a sheperd who was praying for the salvation of his herd from cold</title>
+                <title xml:lang="en" xml:id="t1">Miracle of a shepherd who was praying for the salvation of his herd from cold</title>
+                <title xml:lang="en" xml:id="t2">A herdsman saves his beasts in a storm by praying to St Mary</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -38,6 +39,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="ApocryphaPseudoepigrapha"/>
                     <term key="ChristianLiterature"/>
                     <term key="Pseudoepigrapha"/>
+                    <term key="Hagiography"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -50,11 +52,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DN" when="2018-08-04">Created entity</change>
+            <change who="DR" when="2018-11-13">Added keyword, Macomber reference and title, corrected bibliography</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+                
+                <listBibl type="secondary">
                 <bibl>
                 <ptr target="bm:Cerulli1965Leningrado"/>
                 <citedRange>15</citedRange>
@@ -62,10 +67,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </citedRange>
                 </bibl> 
                 
+                <bibl><ptr target="bm:Macomber2017Miracles"/><citedRange unit="item">183</citedRange></bibl>
+                </listBibl>
+                
+                <listBibl type="translation">
+                    <bibl><ptr target="bm:Budge1933Miracles"/>
+                    <citedRange unit="item">94</citedRange>
+                    <citedRange unit="page">314-316</citedRange></bibl>
+                </listBibl>
+                
                 <listRelation>
                     <relation name="saws:formsPartOf" active="LIT5047MiracleSheperd" passive="LIT2384Taamme"/>
                 </listRelation>
-            </div><!---->
+            </div>
         </body>
     </text>
 </TEI>
