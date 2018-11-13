@@ -24,13 +24,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
-         <sourceDesc>
+         <sourceDesc>   
             <p>A Work part of Ethiopian Literature</p>
-         </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -48,12 +43,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/>
                <term key="ApocryphaPseudoepigrapha"/> 
                <term key="Miracle"/> 
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-07">Added keywords and relations</change>
+         <change who="DR" when="2018-11-12">Added keyword, Macomber reference, corrected bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -63,14 +60,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <bibl>
                      <ptr target="bm:Budge1923Miracles"/>
                      <citedRange unit="item">49</citedRange>
-                     <!-- Colin no. 6 -->
                   </bibl>
                </listBibl>
-               <listBibl type="translation" xml:lang="en">
+               <listBibl type="translation">
                   <bibl>
                      <ptr target="bm:Budge1933Miracles"/>
+                     <citedRange unit="item">49</citedRange>
                      <citedRange unit="page">177-179</citedRange>
                   </bibl>
+                  <bibl>
+                     <ptr target="bm:Colin2004TaamraMaryam"/>
+                     <citedRange unit="item">6</citedRange>
+                     <citedRange unit="page">31-34</citedRange>
+                  </bibl>
+               </listBibl>
+               <listBibl type="secondary">
+                  <bibl><ptr target="bm:Macomber2017Miracles"/><citedRange unit="item">171</citedRange></bibl>
                </listBibl>
                <listRelation>
                <relation name="saws:formsPartOf"
