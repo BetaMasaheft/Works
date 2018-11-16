@@ -38,6 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="ChristianLiterature"/>
                     <term key="Pseudoepigrapha"/>
                     <term key="Miracle"/>
+                    <term key="Hagiography"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -50,32 +51,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DN" when="2018-07-18">Created entity</change>
+            <change who="DR" when="2018-11-12">Added keyword, Macomber reference, corrected bibliography</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+                <listBibl type="secondary">
                 <bibl>
                     <ptr target="bm:Cerulli1965Leningrado"/>
-                    <citedRange>12</citedRange>
-                    <citedRange>no. 44</citedRange>
+                    <citedRange unit="page">12</citedRange>
+                    <citedRange unit="item">no. 44</citedRange>
                 </bibl>
                 
                 <bibl>
                     <ptr target="bm:Cerulli1943Maria"/>
-                    <citedRange>533-534</citedRange>
+                    <citedRange unit="page">533-534</citedRange>
                     </bibl>
+                    
+                    <bibl><ptr target="bm:Macomber2017Miracles"/><citedRange unit="item">165</citedRange></bibl>
+                </listBibl>
                 
-                <listBibl type="editions">
+                <listBibl type="translation">
                     <bibl>
                         <ptr target="bm:Colin2004TaamraMaryam"/>
-                        <citedRange unit="item">329</citedRange>
+                        <citedRange unit="item">127</citedRange>
+                        <citedRange unit="page">329-331</citedRange>
                     </bibl>
                 </listBibl>
                 <listRelation>
                     <relation name="saws:formsPartOf" active="LIT5008MiracleScorpionSwallowed" passive="LIT2384Taamme"/>
                 </listRelation>
-            </div><!---->
+            </div>
         </body>
     </text>
 </TEI>

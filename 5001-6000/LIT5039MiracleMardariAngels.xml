@@ -5,7 +5,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle of ʾabbā Mārdāri who was visited and blessed by 12 angels</title>
+                <title xml:lang="en" xml:id="t1">Miracle of ʾabbā Mārdāri who was visited and blessed by 12 angels</title>
+                <title xml:lang="en" xml:id="t2">ʾAbbā Mārdāri, who overheard twelve angels talking about going to Constantinople to hear St John Chrysostom praise St Mary</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -38,6 +39,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="ApocryphaPseudoepigrapha"/>
                     <term key="ChristianLiterature"/>
                     <term key="Pseudoepigrapha"/>
+                    <term key="Hagiography"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -50,22 +52,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DN" when="2018-08-04">Created entity</change>
+            <change who="DR" when="2018-11-13">Added keyword, Macomber reference and title, corrected bibliography</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+                <listBibl type="secondary">
                 <bibl>
                     <ptr target="bm:Cerulli1965Leningrado"/>
                     <citedRange>18</citedRange>
                     <citedRange>no. 86</citedRange>
                 </bibl>
                 
+                <bibl><ptr target="bm:Macomber2017Miracles"/><citedRange unit="item">208</citedRange></bibl>
+                </listBibl>
+                
                 <listRelation>
                     <relation name="saws:formsPartOf" active="LIT5039MiracleMardariAngels" passive="LIT2384Taamme"/>
                 </listRelation>
                 
-            </div><!---->
+            </div>
         </body>
     </text>
 </TEI>

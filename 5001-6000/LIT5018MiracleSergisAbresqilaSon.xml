@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle of Sergis and Abrisqilla and their son saved from Hell</title>
+                <title xml:id="t1">Miracle of Sargiyos and ʾAbrǝsqilā and their son saved from Hell</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -38,6 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="ApocryphaPseudoepigrapha"/>
                     <term key="ChristianLiterature"/>
                     <term key="Pseudoepigrapha"/>
+                    <term key="Hagiography"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -50,30 +51,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DN" when="2018-07-20">Created entity</change>
+            <change who="DR" when="2018-11-13">Added keyword, Macomber reference</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+                <listBibl type="secondary">
                 <bibl>
                     <ptr target="bm:Cerulli1943Maria"/>
-                    <citedRange> 341-359 </citedRange>
-                   
+                    <citedRange unit="page"> 341-359 </citedRange>
                 </bibl>    
                 
                 <bibl>
                     <ptr target="bm:Cerulli1965Leningrado"/>
-                    <citedRange>13</citedRange>
-                    <citedRange>no. 49</citedRange>
+                    <citedRange unit="page">13</citedRange>
+                    <citedRange unit="item">no. 49</citedRange>
                 </bibl> 
-            </div>
-                        <div type="bibliography">
+                    
+                    <bibl><ptr target="bm:Macomber2017Miracles"/><citedRange unit="item">171</citedRange></bibl>
+                </listBibl>
+           
                             
                 <listRelation>
                     <relation name="saws:formsPartOf" active="LIT5018MiracleSergisAbresqilaSon" passive="LIT2384Taamme"/>
-                    
                 </listRelation>
-            </div><!---->
+            </div>
         </body>
     </text>
 </TEI>
