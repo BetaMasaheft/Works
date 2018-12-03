@@ -31,11 +31,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
       </fileDesc>
       <profileDesc>
          <langUsage>
@@ -48,23 +43,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords scheme="#ethioauthlist">
                <term key="Bible"/>
                <term key="NewTestament"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change when="2017-02-10" who="MV">Added title and keywords</change>
+         <change when="2018-12-03" who="DR">Added relation and keyword</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-            <!--Bǝsrāta Matewos-->
             <listRelation>
                <relation name="saws:formsPartOf"
                          active="LIT2709Matthew"
                          passive="LIT1558Matthew">
                </relation>
+               <relation name="skos:broadMatch" 
+                  active="https://corpuscoranicum.de/kontexte/index/sure/4/vers/61/intertext/977"
+                  passive="LIT2709Matthew"/>
             </listRelation>
          </div>
       </body>
