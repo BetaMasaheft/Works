@@ -73,29 +73,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor"
+               active="LIT1120Apocal"
+               passive="PRS2516Baruch"/>
+            <relation name="saws:isDifferentTo"
+               active="LIT1120Apocal"
+               passive="LIT2167Parali"/>
+            <relation name="saws:isShorterVersionOf"
+               active="LIT1120Apocal"
+               passive="LIT1127Apocal"><!-- or LIT1128Apocal?-->
+               <desc>according to <bibl>
+                  <ptr target="bm:Leslau1951Falasha"/>
+                  <citedRange unit="page">63</citedRange>
+               </bibl>
+               </desc> 
+            </relation>
+         </listRelation>
          <div type="bibliography">
             <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Witakowski2003EAEBaruchApo"/>
                </bibl>
             </listBibl>
-            <listRelation>
-               <relation name="saws:isAttributedToAuthor"
-                         active="LIT1120Apocal"
-                         passive="PRS2516Baruch"/>
-               <relation name="saws:isDifferentTo"
-                         active="LIT1120Apocal"
-                         passive="LIT2167Parali"/>
-               <relation name="saws:isShorterVersionOf"
-                         active="LIT1120Apocal"
-                         passive="LIT1127Apocal"><!-- or LIT1128Apocal?-->
-                  <desc>according to <bibl>
-                        <ptr target="bm:Leslau1951Falasha"/>
-                        <citedRange unit="page">63</citedRange>
-                     </bibl>
-                  </desc> 
-               </relation>
-            </listRelation>
+           
          </div>
       </body>
    </text>
