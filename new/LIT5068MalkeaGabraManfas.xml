@@ -1,11 +1,12 @@
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5000Miracle" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5068MalkeaGabraManfas" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Miracle</title>
+                <title xml:lang="gez" xml:id="t1">መልክአ᎓ ገብረ᎓ መንፈስ᎓ ቅዱስ᎓ </title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Malkǝʾa Gabra Manfas Qǝddus</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -35,9 +36,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
-                    <term key="Apocrypha"/>
-                    <term key="Miracle"/>
                     <term key="Hagiography"/>
+                    <term key="Poetry"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -49,23 +49,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DN" when="2018-07-17">Created entity</change>
+            <change who="DN" when="2018-11-30">Created entity</change>
+            <change who="DR" when="2018-12-03">Added title transliteration</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
-                <listBibl type="secondary">
-                    <bibl>
-                        <ptr target="bm:Cerulli1965Leningrado"/>
-                        <citedRange unit="page">6</citedRange>
-                        <citedRange unit="item">no. 7</citedRange>
-                    </bibl>
-                </listBibl>
-                
-                <listRelation>
-                    <relation name="saws:formsPartOf" active="LIT5000Miracle" passive="LIT2384Taamme"/>
+                <listRelation>               
+                    <relation name="ecrm:P129_is_about" active="LIT5068MalkeaGabraManfas" passive="PRS4306GabraMa"/>
+                    <relation name="saws:follows" active="LIT5068MalkeaGabraManfas" passive="LIT5068MalkeaGabraManfas"/>                
                 </listRelation>
+             <note>The work as attested in the manuscript is probably incomplete, but it seems to be different from other malkǝʾ-poems dedicated to the saint. </note>                             
+            </div>
+            <div type="edition">
+                  <div type="textpart" subtype="stanza" xml:id="Stanza1" xml:lang="gez" n="1">
+                    <label>Stanza 1</label>
+                    <ab>ሰላም፡ ለዝክረ፡ ስምከ ከመ፡ ጸሃይ፡ ምውቅ፡ ዘያበርህ፡ ወትረ፡ እስከነ፡ ምእራብ፡
+                        ወሰርቅ፡ ገብረ፡ መንፈስ፡ ቅዱስ፡ ስጋከ፡ ዘተሰርገወ፡ በሰቅ፡ ክድነኒ᎓ ሞገሰ᎓ ስምከ᎓ ከመ᎓ ልብሰ᎓ ሜላት᎓ ስውቅ᎓ በብኄረ᎓ መርቄ᎓ ሳይል᎓ ለነዳይ᎓ ዕሩቅ᎓ 
+                    </ab>                      
+                </div>
+                <div type="textpart" subtype="stanza" xml:id="Stanza24" xml:lang="gez" n="24">
+                    <ab>ሰላም፡ ለጸአተ፡ ነፍስከ፡ ወለብድነ፡ ስጋከ፡
+                        መአዛ፡ ለግንዘትከ፡ ላም፡ ወለመቃብሪከ፡ ዘምድረ፡ ሎዛ፡ ገብረ፡ መንፈስ፡ ቅዱስ፡ ፃ</ab>                  
+            </div>
             </div>
         </body>
     </text>
