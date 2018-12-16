@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of the Apparition of the Virgin to John Chrysostom</title>
+            <title xml:id="t2" xml:lang="en">St Peter gives St John Chrysostom the keys of the kingdom and St John the Evangelist gives him the Gospels; then St Mary appears to him</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -27,11 +28,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
       </fileDesc>
       <profileDesc>
          <abstract>
@@ -47,23 +43,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/> 
                <term key="Miracle"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords</change>
+         <change who="DR" when="2018-11-26">Added keyword, relations, title and Macomber reference</change>
+         <change who="DR" when="2018-12-06">Added incipit from deleted LIT4312Miracle</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">241</citedRange></bibl>
+            </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf"
                          active="LIT3689Miracle"
                          passive="LIT2384Taamme"/>
+               <relation name="ecrm:P129_is_about" active="LIT3689Miracle" passive="PRS5720JohnChr"/>
+               <relation name="ecrm:P129_is_about" active="LIT3689Miracle" passive="PRS5695John"/>
+               <relation name="ecrm:P129_is_about" active="LIT3689Miracle" passive="PRS7805Peter"/>
             </listRelation>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  ዘከመ፡ አስተርአየቶ፡ ለዮሐንስ፡ አፈ፡ ወርቅ፡ በአልባስ፡ ጸዓዳ፡ ከመ፡ በረድ፡
+               </ab>
+            </div>
          </div>
       </body>
    </text>

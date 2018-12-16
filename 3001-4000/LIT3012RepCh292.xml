@@ -10,7 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to Our Lady Mary</title>
+            
+            <title xml:lang="gez" xml:id="t1">ብፅዕት፡ አንቲ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Bǝḍǝʿt ʾanti</title>
+            <title xml:lang="en" corresp="#t1">Blessed you are...</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -57,20 +60,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="editions">
+            <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">292</citedRange>
                </bibl>
             </listBibl>
-         </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ብጽዕት፡ አንቲ፡ ወንግሥተ፡ ጽድቅ።
-               </ab>
-            </div>
-         </div>
+           
+            <listBibl type="translation">
+                        <bibl>
+                           <ptr target="bm:Raineri1986BeseetAnti"/>
+                     
+                        </bibl>
+                     </listBibl>                   
+         
+         <listRelation>
+            <relation name="saws:formsPartOf" active="LIT3012RepCh292" passive="LIT2300Sebhat"/>
+                          
+         </listRelation>
+              <note> The text forms a part of the Sǝbḥata fǝqur office. </note> 
+            
+               </div>
+               <div type="edition">
+                  <div type="textpart" subtype="incipit" xml:lang="gez">
+                     <ab>
+                        ብፅዕት፡ አንቲ፡ ወንግሥተ፡ ጽድቅ᎓ ዘትሜንኒ᎓ ማርያም᎓ መንበረ᎓ ስላቅ᎓ ታቦትነ᎓ አንቲ᎓ እንተ᎓ ወርቅ።
+                     </ab>
+                     </div>
+                     <div type="textpart" subtype="explicit" xml:lang="gez">
+                                            
+                  </div>
+               </div>   
+               
       </body>
    </text>
 </TEI>

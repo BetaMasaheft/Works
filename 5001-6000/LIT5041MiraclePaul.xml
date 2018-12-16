@@ -6,6 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" xml:id="t1">Miracle of St Paul who sees the glory of the Virgin Mary</title>
+                <title xml:id="t2" xml:lang="en">St Paul is taken to the third Heaven and there sees St Mary</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -13,7 +14,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
                 <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
-                            Forschungsumgebung / beta maṣāḥǝft</publisher>
+                            Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
@@ -34,11 +35,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </abstract>
             <textClass>
                 <keywords>
-                    <term key="Apocrypha"/>
-                    <term key="ApocryphaPseudoepigrapha"/>
                     <term key="ChristianLiterature"/>
-                    <term key="Pseudoepigrapha"/>
+                    <term key="Apocrypha"/>
                     <term key="Miracle"/>
+                    <term key="Hagiography"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -52,6 +52,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DN" when="2018-08-04">Created entity</change>
             <change who="DR" when="2018-09-04">Added keyword and corrected bibliography</change>
+            <change who="DR" when="2018-12-10">Added keyword, title, relation and Macomber reference</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -60,13 +61,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <listBibl type="secondary">
                 <bibl>
                     <ptr target="bm:Cerulli1965Leningrado"/>
-                    <citedRange>18</citedRange>
-                    <citedRange> no. 91</citedRange>        
+                    <citedRange unit="page">18</citedRange>
+                    <citedRange unit="item">no. 91</citedRange>        
                 </bibl>
+                <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">213</citedRange></bibl>
             </listBibl>
                 
                 <listRelation>
                     <relation name="saws:formsPartOf" active="LIT5041MiraclePaul" passive="LIT2384Taamme"/>
+                    <relation name="ecrm:P129_is_about" active="LIT5041MiraclePaul" passive="PRS7743Paul"/>
                 </listRelation>
             </div>
         </body>

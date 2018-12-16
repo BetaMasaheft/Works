@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of an image of Christ, painted by St John for Tiberius, revelations by Mary to St John</title>
+            <title xml:id="t2" xml:lang="en">John the Evangelist paints an icon of the Crucifixion for Emperor Tiberius</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -27,11 +28,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
       </fileDesc>
       <profileDesc>
          <abstract>
@@ -46,23 +42,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
-               <term key="ApocryphaPseudoepigrapha"/> 
+               <term key="Apocrypha"/> 
                <term key="Miracle"/> 
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-03">Added keywords</change>
+         <change who="DR" when="2018-11-20">Added keyword, relation, title and Macomber reference</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">76</citedRange></bibl>
+            </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf"
                          active="LIT3713Miracle"
                          passive="LIT2384Taamme"/>
+               <relation name="ecrm:P129_is_about" active="LIT3713Miracle" passive="PRS5695John"/>
             </listRelation>
          </div>
       </body>
