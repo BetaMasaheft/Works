@@ -11,14 +11,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" type="main">Teaching of Jacob</title>
-            <title corresp="#t1" xml:lang="grc">Διδασκαλία Ἰακώβου</title>
-            <title corresp="#t1" xml:lang="grc" type="normalized">Didaskalia Iakobou</title>
             
-            <title xml:id="t2" xml:lang="la">Doctrina Jacobi nuper baptizati</title>
+            <title xml:id="t2grc" xml:lang="grc">Διδασκαλία Ἰακώβου</title>
+            <title corresp="#t2grc" xml:lang="grc" type="normalized">Didaskalia Iakobou</title>
             
-            <title xml:id="t3" xml:lang="gez">ሰርጊስ ፡ አብርጋዊ፡</title>
-            <title xml:lang="gez" type="normalized" corresp="#t3">Sargis ʾAbǝrgāwi</title>
-            <title corresp="#t3" xml:lang="en">Sargis of Aberga</title>
+            <title xml:id="t3lat" xml:lang="la">Doctrina Jacobi nuper baptizati</title>
+            
+            <title xml:id="t4gez" xml:lang="gez">ሰርጊስ ፡ አብርጋዊ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t4gez">Sargis ʾAbǝrgāwi</title>
+            <title corresp="#t4gez" xml:lang="en">Sargis of Aberga</title>
             
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -40,16 +41,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
          <sourceDesc>
             <listBibl type="clavis">
-               <bibl type="CPG">
+               <bibl corresp="#t2grc" type="CPG">
                   <ptr target="bm:CPG3"/>
                   <citedRange unit="item">7793</citedRange>
                </bibl>
-               <bibl corresp="#grc" type="BHG">
+               <bibl corresp="#t2grc" type="BHG">
                   <ptr target="bm:BHG"/>
                   <citedRange unit="item">1322m, 1322mb</citedRange>
                </bibl>
             </listBibl>
-            <listWit>
+            <listWit corresp="#t4gez">
                <witness corresp="BNFabb51"/>
             </listWit>
          </sourceDesc>
@@ -87,12 +88,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="ES" when="2017-03-07">added titles keywords</change>
          <change who="MV" when="2018-01-02">Added clavis ID and bibl</change>
+         <change when="2019-02-13" who="ES">corrected corresp and IDs</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="editions">
+            <listBibl type="editions" corresp="#t4gez">
                <bibl>
                   <ptr target="bm:GrebautGuidi1907Sargis"/>
                </bibl>
@@ -100,7 +102,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Grebaut1916Sargis"/>
                </bibl>
             </listBibl>
-            <listBibl type="secondary">
+            <listBibl type="secondary" corresp="#t4gez">
                <bibl>
                   <ptr target="bm:Bausi2010Sargis"/>
                </bibl>
