@@ -27,11 +27,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               
-            </listWit>
-         </sourceDesc>
       </fileDesc>
       <profileDesc>
          <abstract>
@@ -49,15 +44,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Hagiography"/>
             </keywords>
          </textClass>
+         <abstract><p>The third version of the <ref type="work" corresp="LIT1451GadlaG"/>, a conflation of
+            <ref type="work" corresp="LIT4074GadlaMA"/> and <ref type="work" corresp="LIT4075GadlaMB"/>.</p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-03-29">Added keywords</change>
+         <change who="DR" when="2019-03-04">Added reference and abstract</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <div type="bibliography"><!----></div>
+         <listBibl type="secondary">
+            <bibl> 
+               <ptr target="bm:Marrassini2005GabraManfasQeddus"/>
+            </bibl>
+         </listBibl>
+         <listRelation>
+            <relation name="saws:isVersionOf" active="LIT4076GadlaMC" passive="LIT1451GadlaG"/>
+            <relation name="saws:isRelatedTo" active="LIT4076GadlaMC" passive="LIT4074GadlaMA"/>
+            <relation name="saws:isRelatedTo" active="LIT4076GadlaMC" passive="LIT4075GadlaMB"/>
+         </listRelation>
       </body>
    </text>
 </TEI>
