@@ -27,11 +27,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               
-            </listWit>
-         </sourceDesc>
       </fileDesc>
       <profileDesc>
          <abstract>
@@ -49,6 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Hagiography"/>
             </keywords>
          </textClass>
+         <abstract><p>The most widely known version of the <ref type="work" corresp="LIT1451GadlaG"/>, rich in fabulous hagiographical motifs.</p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
@@ -57,7 +53,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <div type="bibliography"><!----></div>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl> 
+                  <ptr target="bm:Marrassini2005GabraManfasQeddus"/>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:isVersionOf" active="LIT4074GadlaMA" passive="LIT1451GadlaG"/>
+            </listRelation>
+         </div>
       </body>
    </text>
 </TEI>

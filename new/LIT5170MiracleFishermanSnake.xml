@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle of a fisherman who adored the Virgin Mary and was saved from snake</title>
+                <title xml:lang="en" xml:id="t1">Miracle of a fisherman who adored the Virgin Mary and was saved from snake</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -37,6 +37,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="Apocrypha"/>
                     <term key="ChristianLiterature"/>
                     <term key="Miracle"/>
+                    <term key="Hagiography"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -49,15 +50,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DN" when="2019-01-31">Created entity</change>
+            <change who="DR" when="2019-03-06">Added Macomber reference</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+                <listBibl type="secondary">
+                    <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">416</citedRange></bibl>
+                </listBibl>
                 <listRelation>
-                    <relation name="lawd:hasAttestation" active="LIT5170MiracleFishermanSnake" passive="LIT3908Miracle"/>
+                    <relation name="saws:formsPartOf"
+                        active="LIT5170MiracleFishermanSnake"
+                        passive="LIT2384Taamme"/>
                 </listRelation>
-            </div><!---->
+            </div>
         </body>
     </text>
 </TEI>
