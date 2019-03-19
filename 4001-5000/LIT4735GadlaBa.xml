@@ -11,9 +11,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ገድለ፡ በትረ፡ ግላ፡ ማርያም፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Batra Gǝlā Māryām</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Batra Gǝlā Māryām (general record)</title>
             <title xml:lang="en" corresp="#t1">Vita of Batra Gǝlā Māryām</title>
-            
             <editor key="MV"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -53,11 +52,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Hagiography"/>
+               <term key="Miracle"/>
+               <term key="Apocrypha"/>
             </keywords>
          </textClass>
+         <abstract><p>The acts of <persName ref="PRS2536BatraGe"/> are only preserved as three miracles within the 
+            <ref type="work" corresp="LIT2384Taamme"/>: <ref type="work" corresp="LIT5255MiracleBatergela1"/>,<ref type="work" corresp="LIT5256MiracleBatergela2"/> 
+            and <ref type="work" corresp="LIT5257MiracleBatergela3"/>.</p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="MV" when="2017-10-20">Created text record</change>
+         <change who="DR" when="2019-03-07">Added information from Macomber</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -72,10 +77,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <bibl>
                   <ptr target="bm:Getachew1982Betragelamaryam"/>
                </bibl>
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">287-289</citedRange></bibl>
                <bibl> 
                   <ptr target="bm:Raineri2003Betragelamaryam"/>
                </bibl>
             </listBibl>
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT4735GadlaBa" passive="PRS2536BatraGe"/>
+               <relation name="saws:formsPartOf"
+                  active="LIT4735GadlaBa"
+                  passive="LIT2384Taamme"/>
+            </listRelation>
          </div>
       </body>
    </text>
