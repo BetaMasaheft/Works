@@ -29,11 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <profileDesc>
          <langUsage>
@@ -42,14 +38,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass><keywords>
+            <term key="ChristianLiterature"/>
+            <term key="CanonLaw"/>
+            <term key="Translation"/>
+            <term key="Homily"/>
+         </keywords></textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+         <change when="2019-03-22" who="ES">added titles keywords author</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <ab/>
       </body>
+      <listRelation>
+         <relation name="saws:isAttributedToAuthor"
+            active="LIT2658Jews"
+            passive="PRS4825Gregory"/>
+      </listRelation>
    </text>
 </TEI>
