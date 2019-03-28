@@ -36,9 +36,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <listWit>
           <!--   <witness corresp="SBB or. 394"></witness> --><!--mini mss for mss in Bachmann's edition have to be created-->
-               <witness corresp="BLorient691"/> 
+               <witness corresp="BerOr394"/>
+               <witness corresp="BLorient691"/>
+               <witness corresp="BLorient4849"/>
+               <witness corresp="BMLacq776"/>
+               <witness corresp="EMML424"/>
+               <witness corresp="EMML301"/>
+               <witness corresp="EMML44"/>
+               <witness corresp="BNFet346"/>
+               <witness corresp="BAVet82"/>
                <!--create mini ms-->
             </listWit>
+            <!-- list from ESam004 
+            <listBibl type="mss">
+               <bibl>BritMus Orient. 4849 (17th-18th cent.), <locus from="37r" to="108v">37r-108v</locus> (StrBritLib 94, n<locus target="#58">58</locus>);</bibl>
+               <bibl>VatLib Aeth. 82 (19th cent.), <locus from="15" to="83">15-83</locus> (GréTisVat I, 298-307);</bibl>
+               <bibl>EMML n° 424 (19th-20th cent.), <locus from="1a" to="124b">1a-124b</locus> (EMML II, 143);</bibl>
+               <bibl>EMML n°301 (20th cent.), <locus from="2a" to="138a">2a-138a</locus> (EMML II, 1);</bibl>
+               <bibl>EMML n°44 (20th cent.), <locus from="2a" to="15a">2a-15a</locus>, 31b-53b, 64a-83a (EMML I, 48);</bibl>
+               <bibl>BN éth. 346 (20th cent.), <locus from="1r" to="220v">1r-220v</locus> (GrébGriaule I–III, 33-45, n<locus target="#42">42</locus>).</bibl>
+            </listBibl>
+            -->
+            
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -75,6 +94,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2017-04-04">Added keywords</change>
          <change who="MV" when="2017-05-17">Added textpart</change>
          <change who="DR" when="2018-04-25">Added xml:lang to label</change>
+         <change when="2019-03-26" who="ES">bits of data from ESam004 added + relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -118,7 +138,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="textpart"
                  subtype="chapter"
                  xml:lang="gez"
-                 xml:id="Introduction"><!-- Added after BAVet82 (MV - 2017-05-17) --></div>
+                 xml:id="Introduction"><!-- Added after BAVet82 (MV - 2017-05-17); text of incipit from ESam004 -->
+               <div type="textpart" subtype="incipit"><ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩ዱ፡ አምላክ፡ ንቀድም፡ በረድኤተ፡ እግዚአብሔር፡ ልዑል፡ ጺሒፈ፡ ዜና፡ ዕበዩ፡ ወክብሩ፡ ወልዕልሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ይስአል፡ ለነ፡ እምኀበ፡ እግዚአብሔር፡ አምላኩ፡ መሐሪ፡ ምሕረት፡ ወሣህል።</ab></div>
+            </div>
             
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Hedar">
                <label xml:lang="en">
@@ -433,6 +455,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   
                   <label xml:lang="en">Homily for <foreign xml:lang="gez">Gǝnbot</foreign> by <persName ref="PRS10390Yohanne"/>
                   </label>
+                  <label>Homily Concerning John (Yoḥannəs), Metropolitan of Aksum, for the 12th day of Gənbot</label>
                </div>
                <div type="textpart"
                     subtype="chapter"
@@ -462,6 +485,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <label xml:lang="en">
                   <foreign xml:lang="gez">Sane</foreign>
                </label>
+               
                <div type="textpart"
                     subtype="chapter"
                     xml:lang="gez"
@@ -473,6 +497,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </listRelation>
                   <label xml:lang="en">Homily for <foreign xml:lang="gez">Sane</foreign> by <persName ref="PRS10382Yohanne"/>
                   </label>
+                  <label>Homily of John (Yoḥannəs), Metropolitan of Aksum, for the 12th day of Sane</label>
                </div>
                <div type="textpart"
                     subtype="chapter"
@@ -513,6 +538,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </listRelation>
                   <label xml:lang="en">Homily for <foreign xml:lang="gez">Ḥamle</foreign> by <persName ref="PRS10382Yohanne"/>
                   </label>
+                  <label>Homily of John (Yoḥannəs), Bishop of Aksum, for the 12th day of Ḥamle</label>
                </div>
                <div type="textpart"
                     subtype="chapter"
@@ -658,9 +684,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
                   </label>
                </div>
+               
+               <div type="textpart" subtype="explicit"><ab>ተፈጸመ፡ ድርሳነ፡ ሚካኤል፡ በሰላመ፡ እግዚአብሔር፡ ወበጸሎተ፡ ሚካኤል፡ ወስብሐት፡ ለእግዚአብሔር፡ ዘአፈጸመነ፡ በዳህና፡ ወበሰላም፡ አሜን።</ab><!-- from ESam004 --></div>
             </div>
             
          </div>
+         <listRelation><relation name="ecrm:P129_is_about" active="LIT1295Dersan" passive="PRS7049Michael"/></listRelation>
       </body>
    </text>
 </TEI>
