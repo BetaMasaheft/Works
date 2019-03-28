@@ -97,7 +97,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             
             <div type="textpart" xml:id="Daily">
                <label>Daily Office Prayers and Litanies</label>
+               
+               <!-- <listBibl type="mss">
+                        <bibl>CRAbb 70 (17th cent.), <locus target="#18v">18v</locus> : “prières de l’encens pour le matin (ጸሎተ፡ ዕጣን፡ ዘነግህ፡)” (CRAbb 110, n<locus target="#72">72</locus>).</bibl>
+                        <bibl>EMML n<locus target="#475">475</locus> (1881/89), <locus from="96r" to="97v">96r-97v</locus>: “Schematic rite of Incense [Ṣalota ‘eṭān]” (EMML II, 203).</bibl>
+                        <bibl>EMML n<locus target="#1434">1434</locus> (1680), <locus from="3r" to="10r">3r-10r</locus>: “Prayer of Incense [Ṣalota ‘eṭān]”: <locus target="#3v">3v</locus>: “[Ṣalota ‘eṭān]”.</bibl>
+                     </listBibl> -->
+               
+               <!-- some prayers taken from ESam007 -->
+               
+               <div type="textpart" xml:id="Incense"><label>Prayers of the Incense</label>
+                  <div type="textpart" xml:id="Incense1" corresp="LIT5449Salotaetanmorning">
+               
+                  <label>Morning Prayer of the Incense, from Egypt</label>
+               </div>
+               
+               <div type="textpart" xml:id="Incense2" corresp="LIT5450Salotaetaneve">
+                  
+                  <label>Evening Prayer of the Incense, from Egypt</label>
+               </div>
+               
+               
             </div>
+               
+               
+            
             
             
             <!--This is a preliminary outline following bm:Bausi2010EAEQeddase and bm:1951Qeddase -->
@@ -214,6 +238,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           corresp="LIT1103Anapho"
                           xml:id="Anaphora318">
                         <label>Anaphora of the 318</label>
+                        <div type="textpart" corresp="LIT3308Nicene" xml:id="NiceneCreed"><label>Nicene Creed</label></div>
                      </div>
                      <div type="textpart"
                           subtype="chapter"
@@ -318,13 +343,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        corresp="LIT2260salota"
                        xml:id="PrayerKidan">
                      <label>Prayer of the Covenant</label>
+                     <div type="textpart" xml:id="Kidan1" corresp="LIT1716Kidanz">
+                        
+                        <label>Testament of the Morning</label>
+                     </div>
+                     
+                     <div type="textpart" xml:id="Kidan2" corresp="LIT1717Kidanz">
+                        
+                        <label>Testament of the Evening</label>
+                     </div>
                   </div>
+                  
                   <div type="textpart"
                        subtype="chapter"
                        corresp="LIT1807Litonz"
                        xml:id="LitonZanagh">
                      <label>Litany for morning and evening, and litany for the Saturday of the
                      Victory</label>
+                  </div>
+                  <div type="textpart"
+                     subtype="chapter"
+                     corresp="LIT1808Litonz"
+                     xml:id="LitonZasarq">
+                     <label>Litany for the evening</label>
                   </div>
                   <div type="textpart" subtype="chapter" xml:id="Before">
                      <label>Prayer before the congregation receives the Eucharist</label>
@@ -346,10 +387,58 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                   <div type="textpart" subtype="chapter" xml:id="OtherIntercessions">
                      <label>Other intercessions</label>
+                     <div type="textpart" xml:id="Supplications" corresp="LIT4711Mastabqwe"><label>Supplications</label>
+                        <div type="textpart" xml:id="SupplicationNight" corresp="LIT4711Mastabqwe#SupplicationNight"><label>Mastabqʷǝʿ za-lelit “Supplication of the Night”</label>
+                           <div type="textpart" subtype="incipit"><ab>መስተብቍዐን፡ ዘይበቍዑ፡ ለጸሎት፡ በእንተ፡ ኵሉ፡ ግብር፡</ab></div></div>
+                        <div type="textpart" xml:id="SupplicationApostles" corresp="LIT4711Mastabqwe#SupplicationApostles"><label>ጸዋትው፡ ዘአበዊነ፡ ሐዋርያት፡  ṣawātǝw zaʾabawina ḥawāryāt “Series (of Supplications) of our Fathers the Apostles”</label>
+                           <div type="textpart" subtype="supplication"><ab>ስተብቍዕ፡ በእንተ፡ ዱየን፡ (mastabqʷǝʿ baʾǝnta duyan)</ab></div>
+                           <div type="textpart" subtype="supplication"><ab></ab></div>
+                           <div type="textpart" subtype="supplication"><ab></ab></div>
+                           <div type="textpart" subtype="supplication"><ab></ab></div>
+                           <div type="textpart" subtype="supplication"><ab></ab></div>
+                           <div type="textpart" subtype="supplication"><ab>ስተብቍዕ፡ በእንተ፡ ሰላም፡ (mastabqʷǝʿ baʾǝnta salām)</ab></div>
+                           <note>MSKLiton 18-26</note></div>
+                        <div type="textpart" subtype="supplication" xml:id="BaendaEllaNomu" corresp="LIT4711Mastabqwe#BaendaEllaNomu"><label>መስተብቍዕ፡ በእንተ፡ እለ፡ ኖሙ፡ (mastabqʷǝʿ baʾǝnta ʾǝlla nomu)</label>
+                           
+                           <div type="textpart" subtype="supplication" xml:id="BaendaEllaNomu1"><label>ወካዕባ፡ ናስተብቍዕ፡ በእንተ፡ እለ፡ ኖሙ፡ አኀዊነ፡ ከመ፡ ነፍሶሙ፡ የግዕዝ፡ ውስተ፡ መካን፡ ሥዑር፡ ኀባ፡ ማየ፡ ዕረፍት፡ 
+                              (wakāʿǝbā nāstabǝqqʷǝʿ baʾǝnta ʾǝlla nomu ʾaḫawina kama nafsomu yagʿǝz wǝsta makān śǝʿur ḫabā māya ʿǝraft)</label><!-- MSKLiton 36-38 --></div>
+                           
+                           <!-- MSKLiton 38-40 -->
+                           <div type="textpart" subtype="supplication"  xml:id="BaendaEllaNomu2"><label>ወካዕባ፡ ናስተብቍዕ፡ (wakāʿǝbā nāstabǝqqʷǝʿ)</label></div>
+                           <div type="textpart" subtype="supplication"  xml:id="BaendaEllaNomu3"><label>በል፡ (bal)</label></div>
+                           <div type="textpart" subtype="supplication"  xml:id="BaendaEllaNomu4"><label>እግዚአ፡ ሕይወተ፡ ሙታን፡ ተስፋ፡ ቅቡፃን፡ ረዳኤ፡ ምንዱባን፡ (ʾǝgziʾa ḥǝywata mutān tasfā qǝbuḍān radāʾe mǝndubān)</label></div>
+                        </div>
+                        <div type="textpart" subtype="supplication" xml:id="Egziabher" corresp="LIT4711Mastabqwe#Egziabher"><label>እግዚአብሔር፡ እግዚአብሔር፡ ኢየሱስ፡ ክርስቶስ፡ አምላክነ፡ ዘትቤሎ፡ ለፍቁርከ፡ ዮሐንስ፡ (ʾǝgziʾabǝḥer ʾǝgziʾabǝḥer ʾiyasus krǝstos ʾamlākǝna za-tǝbelo la-fǝqurǝka yoḥannǝs)</label><!-- MSKLiton 40-41 --></div>
+                        <div type="textpart" subtype="supplication" xml:id="Maryam" corresp="LIT4711Mastabqwe#Maryam"><label>መስተበቍዕ፡ ዘግዝእትነ፡ ማርያም፡ (mastabaqʷǝʿ za-ǝgzǝʾtǝna māryām)</label></div>
+                        <div type="textpart" subtype="supplication" xml:id="Maryam2" corresp="LIT4711Mastabqwe#Maryam2"><label>ወካዕባ፡ ናስተብቍዕ፡ ለግዝእትነ፡ ኵልነ፡ ርያም፡ ምነ፡ ወሙ፡ ለግዚእነ፡ (wakāʿǝbā nāstabǝqqʷǝʿ la-ǝgzǝʾtǝna kʷǝllǝna Māryām ǝmmǝna wa-ǝmu la-ǝgziʾǝna)</label></div>
+                        <div type="textpart" subtype="supplication" xml:id="Masqal" corresp="LIT4711Mastabqwe#Masqal"><label>ወካዕባ፡ ናስተብቍዕ፡ ለዕፀ፡ ቅዱስ፡ መስቀል፡ ጽኑዓ፡ ሥልታን፡ ወኃይል፡፡ (wakāʿǝbā nāstabǝqqʷǝʿ la-ʿǝḍa qǝddus masqal ṣǝnuʿā śǝltān wa-ḫāyl)</label></div>
+                        <div type="textpart" xml:id="SupplicationNightJesus" corresp="LIT4711Mastabqwe#SupplicationNightJesus"><label>መስተብቍዕ፡ ዘሌሊት፡ mastabqʷǝʿ za-lelit “Supplication of the Night”</label>
+                           <div type="textpart" subtype="incipit"><ab>ናስተብቍዕ፡ ዘኵሎ፡ ይእኅዝ፡ ግዚአብሔር፡ አብ፡ ለእግዚ፡ ወ፡ መድኀኒነ፡ ኢየሱስ፡ ክርስቶስ፡፡ እስማ፡ ረሰየነ፡ ተድለ፡ (Nāstabǝqqʷǝʿ za-kʷǝllo yǝʾǝḫḫǝz ǝgziʾabǝḥer ʾab la-ʾǝgzi wa madḫanina ʾIyasus Krǝstos. ʾƎsmā rasayanna tadla)</ab></div>
+                        </div>
+                     </div>
                   </div>
+                  
+                  <div type="textpart" xml:id="Litanies" corresp="LIT3188Liton"><label>Litanies</label>
+                     <div type="textpart" xml:id="LitaniesWeek" corresp="LIT4860Litanies"><label>Litanies for the days of the week</label>
+                     
+                        <div type="textpart" xml:id="LitanyMonday" corresp="LIT1807Litonz"><label>ሊጦን፡ ዘሰኑይ፡ Liṭon za-sanuy “Litany of Monday”</label></div>
+                        <div type="textpart" xml:id="LitanyTuesday" corresp="LIT4858Litany"><label>ሊጦን፡ ዘሠሉስ፡ Liṭon za-śallus “Litany of Tuesday”</label></div>
+                        <div type="textpart" xml:id="LitanyWednesday" corresp="LIT4859Litany"><label>ሊጦን፡ ዘረቡዕ፡ Liṭon za-rabuʿ “Litany of Wednesday"</label></div>
+                        <div type="textpart" xml:id="LitanyThursday" corresp="LIT4264Salota"><label>ሊጦን፡ ዘሐሙስ፡ Liṭon za-ḥamus “Litany of Thursday”</label></div>
+                        <div type="textpart" xml:id="LitanyFriday" corresp="LIT4266Litonz"><label>ሊጦን፡ ዘዓርብ፡ Litany of Friday</label></div>
+                        <div type="textpart" xml:id="LitanySaturday" corresp="LIT4265Litonz"><label>ሊጦን፡ ዘቀዳም፡ Liṭon za-qadām“Litany of Saturday”</label></div>           
+                        <div type="textpart" xml:id="LitanySunday" corresp="LIT4268Tazakkar"><label>ሊጦን፡ ዘእኁድ፡ Liṭon za-ʾǝhud “Litany of Sunday</label></div>
+                      
+                  </div>
+                     <div type="textpart" xml:id="LitanyEaster" corresp="LIT3571Litonz"><label>ሊጦን፡ ዘመኃትወ፡ ፋሲካ፡ Liṭon za-maḫatǝwa fāsikā “Litany of Easter Eve”</label>
+                     </div>
+                     
+                  </div>
+                  
                </div>
             </div>
          </div>
+         </div>        
       </body>
    </text>
 </TEI>
