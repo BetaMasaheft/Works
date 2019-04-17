@@ -71,13 +71,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
+         
          <div type="edition">
-            <p>በስመ፡“… ነገረ፡ ዘ፲ወ፪አርድእት…</p>
-            <listBibl type="text">
-               <bibl>
-                  <ptr target="bm:Littmann1904Ardeet"/>
-               </bibl>
-            </listBibl>
+            <div type="textpart" subtype="incipit"><p>በስመ፡“… ነገረ፡ ዘ፲ወ፪አርድእት…</p></div>
+            <div type="textpart" subtype="chapter" xml:id="Monday"><label>za-sanuy</label></div>
+            <div type="textpart" subtype="chapter" xml:id="Tuesday"><label>za-salus</label></div>
+            <div type="textpart" subtype="chapter" xml:id="Wednesday"><label>za-rabuʾǝ</label></div>
+            <div type="textpart" subtype="chapter" xml:id="Thursday"><label>za-ḥamus</label></div>
+            <div type="textpart" subtype="chapter" xml:id="Friday"><label>za-ʾarb</label></div>
+            <div type="textpart" subtype="chapter" xml:id="Saturday"><label>za-qadām</label></div>
+            <div type="textpart" subtype="chapter" xml:id="Sunday"><label>za-ʾǝhud</label></div>
+         </div>
+         <div type="bibliography">
+            <listBibl type="editions">
+            <bibl>
+               <ptr target="bm:Littmann1904Ardeet"/>
+            </bibl>
+         </listBibl>
+         </div>
             <listRelation>
                <relation name="saws:isVersionOf"
                          active="LIT3944ArdeetChL"
@@ -91,7 +102,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <desc>The Maṣḥafa ʾardǝʾǝt circulates both as an independent work and as a part of the Maṣḥafa gǝnzat</desc>
                </relation>
             </listRelation>
-         </div>
+         
       </body>
    </text>
 </TEI>
