@@ -1,13 +1,15 @@
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5000Miracle" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5654MGessew" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Miracle of Mary: The beggar at the church of Qirqos in ʾAmhārā from whose head a horn grew</title>
+                <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ግጽው፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa gǝṣṣǝw</title>
+                <title xml:lang="en" corresp="#t1">Lectionary</title>
                 <editor role="generalEditor" key="AB"/>
-                <editor key="DN"/>
+                <editor key="ES"></editor>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -30,14 +32,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>Lectionary</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
-                    <term key="Apocrypha"/>
-                    <term key="Miracle"/>
-                    <term key="Hagiography"/>
+                    <term key="Lectionary"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -49,35 +49,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DN" when="2018-07-17">Created entity</change>
-            <change who="DR" when="2019-02-28">Added title and Macomber reference</change>
-            <change who="AM" when="2019-04-24">added text</change>
+            <change who="ES" when="2019-04-25">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
-                <listBibl type="secondary">
-                    <bibl>
-                        <ptr target="bm:Cerulli1965Leningrado"/>
-                        <citedRange unit="page">6</citedRange>
-                        <citedRange unit="item">7</citedRange>
-                    </bibl>
-                    <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">116</citedRange></bibl>
-                </listBibl>
-
                 <listRelation>
-                    <relation name="saws:formsPartOf" active="LIT5000Miracle" passive="LIT2384Taamme"/>
+                    <relation name="saws:isDifferentTo" active="LIT5654MGessew" passive="LIT1932Mashaf"/>
                 </listRelation>
             </div>
             <div type="edition">
-                <div type="textpart" subtype="incipit" xml:lang="gez">
-                  <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
-                    <ab>
-                      በ፷፼፡ ወ፺፻፡ ወ፴፡ ወ፬፡ ዓመት፡ እምዓለም፣ በመዋዕሊሁ፡ ለዘርአ፡ ያዕቆብ፡ ንጉሥ፣ ወስመ፡ መንግሥቱ፡ ቋስጠንጢኖስ፣ ወልደ፡ ዳዊት።
-                    </ab>
-                </div>
+                <div type="textpart" subtype="chapter" xml:id="Maskaram"/>
+                <div type="textpart" subtype="chapter" xml:id="Teqemt"/>
+                <div type="textpart" subtype="chapter" xml:id="Hedar"/>
+                <div type="textpart" subtype="chapter" xml:id="Tahsas"/>
+                <div type="textpart" subtype="chapter" xml:id="Terr"/>
+                <div type="textpart" subtype="chapter" xml:id="Yakkatit"/>
+                <div type="textpart" subtype="chapter" xml:id="Maggabit"/>
+                <div type="textpart" subtype="chapter" xml:id="Miyazya"/>
+                <div type="textpart" subtype="chapter" xml:id="Genbot"/>
+                <div type="textpart" subtype="chapter" xml:id="Sane"/>
+                <div type="textpart" subtype="chapter" xml:id="Hamle"/>
+                <div type="textpart" subtype="chapter" xml:id="Nahase"/>
+                <div type="textpart" subtype="chapter" xml:id="Pagwemen"/>
             </div>
+            
         </body>
     </text>
 </TEI>
