@@ -1,5 +1,5 @@
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5017MiracleSophiaConfessor" xml:lang="en" type="work">
     <teiHeader>
@@ -51,12 +51,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DN" when="2018-07-20">Created entity</change>
             <change who="DR" when="2018-12-10">Added keywords and Macomber reference</change>
+            <change who="AM" when="2019-05-06">added text</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            
-            <div type="bibliography">                                                
+
+            <div type="bibliography">
                 <listBibl type="secondary">
                 <bibl>
                     <ptr target="bm:Cerulli1965Leningrado"/>
@@ -65,7 +66,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </bibl>
                     <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">168</citedRange></bibl>
                 </listBibl>
-                
+
                 <listBibl type="editions">
                     <bibl>
                         <ptr target="bm:TasfaGiyorgis1956Taammera"/>
@@ -73,23 +74,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <citedRange unit="page">182-187</citedRange>
                     </bibl>
                 </listBibl>
-                
+
                 <listBibl type="translation">
                     <bibl>
                     <ptr target="bm:Budge1933Miracles"/>
                     <citedRange>327-329</citedRange>
-                </bibl> 
+                </bibl>
                     <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">60</citedRange><citedRange unit="page">159-162</citedRange></bibl>
                 </listBibl>
-                
+
                 <listRelation>
                     <relation name="saws:formsPartOf" active="LIT5017MiracleSophiaConfessor" passive="LIT2384Taamme">
-                    <desc>The miracle seems to very close or nearly identical to the one 
+                    <desc>The miracle seems to very close or nearly identical to the one
                         edited E.W. Budge, but
-                        it contains the name of the person (Sophia) and the geographical location presented here as an island in the "Northern Sea". 
+                        it contains the name of the person (Sophia) and the geographical location presented here as an island in the "Northern Sea".
                        </desc> </relation>
                 </listRelation>
             </div><!---->
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                    <ab>
+                        ወሀለወት፡ አሐቲ፡ ብእሲት፡ ዘስማ፡ ሶፍያ፣ ክብርት፡ ዘትነብር፡ ውስተ፡ ደሴት፡ ማእከለ፡ ባሕር፡ ዘሰመናዊ፣
+                        ወይእቲ፡ እምዐበይተ፡ ሀገር፣ ወለተ፡ ክቡራነ፡ ዘመድ፣ እምደቂቀ፡ እስራኤል፡ አቡሃ፡ ወእማ፡ እምቤተ፡ አሮን።
+                    </ab>
+                    <div type="textpart" subtype="incipit" xml:lang="gez">
+                       <note>This incipit is taken from <ref type="mss" corresp="EMML7089"/>.</note>
+                       <ab>
+                         ተብህለ፡ ከመ፡ ሀለወት፡ አሐቲ፡ ብእሲት፡ ክብርት፡ እምዘመደ፡ ክቡራን፡ ውስተ፡ አሐቲ፡ ሀገር፡ በጽንፈ፡ ባሕር፡ ዘየዐቢ፣
+                         ወዘመዳ፡ ለይእቲ፡ ብእሲት፡ ይከብሩ፡ እምሰብአ፡ ይእቲ፡ ሀገር፣ ወባቲ፡ ምታ፡ እምክቡራነ፡ ሰብእ፡ ወሊቃውንት፡ ዐበይት።
+                       </ab>
+                    </div>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>
