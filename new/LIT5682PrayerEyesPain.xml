@@ -1,19 +1,19 @@
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5270MiracleCircumcision" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5682PrayerEyesPain" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Miracle of Mary: The Circumcision</title>
+                <title xml:lang="gez" xml:id="t1">Prayeragains Pain in the Eyes</title>
                 <editor role="generalEditor" key="AB"/>
-                <editor key="DR"/>
+                <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
                 <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
-                            Forschungsumgebung / beta maṣāḥǝft</publisher>
+                            Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
@@ -30,14 +30,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>A prayer against pain in the eyes, appears to be similar to <ref type="work" corresp="LIT4562Salot"/>
+                or <ref type="work" corresp="LIT5681SalotHemamaReesAyn"></ref></p>
             </abstract>
             <textClass>
                 <keywords>
-                    <term key="Apocrypha"/>
-                    <term key="ChristianLiterature"/>
-                    <term key="Hagiography"/>
-                    <term key="Miracle"/>
+                    <term key="Magic"/>
+                    <term key="Medicine"/>
+                    <term key="Prayers"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -49,30 +49,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DR" when="2019-03-08">Created entity</change>
-            <change who="AM" when="2019-05-22">added text</change>
+            <change who="DN" when="2019-05-22">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
-                <listBibl type="secondary">
-                    <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">300</citedRange></bibl>
-                </listBibl>
                 <listRelation>
-                    <relation name="saws:formsPartOf"
-                        active="LIT5270MiracleCircumcision"
-                        passive="LIT2384Taamme"/>
+                    <relation name="saws:isRelatedTo" active="LIT5682PrayerEyesPain" passive="IVorlov10"/>
+                    <relation name="saws:isRelatedTo" active="LIT5682PrayerEyesPain"
+                      passive="LIT5681SalotHemamaReesAyn"/>
+                      <relation name="saws:isRelatedTo" active="LIT5682PrayerEyesPain" passive="LIT4562Salot"/>
                 </listRelation>
-            </div>
-            <div type="edition">
-                <div type="textpart" subtype="incipit" xml:lang="gez">
-                  <note>This incipit is taken from <ref type="mss" corresp="EMML3051"/>.</note>
-                    <ab>
-                      ወፅኡ፡ እምውስተ፡ በዐት፡ ዮሴፍ፡ ወማርያም፡ ወዐተዉ፡ በቤተ፡ ልሔም፡ ወቤተ፡ ዮሴፍ፡ ፀራቢ።
-                     </ab>
-                 </div>
-             </div>
+            </div><!---->
         </body>
     </text>
 </TEI>
