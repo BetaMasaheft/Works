@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -12,19 +12,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">እልመስጦኣግያ፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t1">ʾƎlmasṭoʾagya</title>
-            <title xml:lang="en"  corresp="#t1">Introduction into the Mysteries</title>
-            <title xml:lang="en"  corresp="#t1">Mystagogy</title>
+            <title xml:lang="en" corresp="#t1">Introduction into the Mysteries</title>
+            <title xml:lang="en" corresp="#t1">Mystagogy</title>
             
             <title xml:lang="gez" xml:id="t2">ትምህርተ፡ ኅቡኣት፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t2">Tǝmhǝrta ḫǝbuʾāt</title>
-            <title xml:lang="en"  corresp="#t2">Doctrine of Mysteries</title>
-            <title xml:lang="lat"  corresp="#t2">Doctrina Arcanorum</title>
+            <title xml:lang="en" corresp="#t2">Doctrine of Mysteries</title>
+            <title xml:lang="la" corresp="#t2">Doctrina Arcanorum</title>
             
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -34,6 +33,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
             <listWit>
             </listWit>
@@ -49,6 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="la">Latin</language>
          </langUsage>
          <abstract>
             <p>A short Gǝʿǝz theological treatise - a translation from Arabic. In the early Church this kind of text was recited for the baptized faithful after the catechumens had been dismissed. 
@@ -69,10 +72,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:isVariantOf" active="LIT3978Elmastoagya" passive="LIT2444Temher"/>
-            </listBibl>
+            <listRelation>
+               <relation name="saws:isVariantOf"
+                         active="LIT3978Elmastoagya"
+                         passive="LIT2444Temher"/>
+            </listRelation>
          </div>
       </body>
    </text>

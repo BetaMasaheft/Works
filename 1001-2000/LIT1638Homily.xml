@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,16 +10,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Homily on the Assumption of Mary</title>
-            <title xml:id="t2">Dǝrsanä fǝlsäta</title>
-            <author>Cyriacus</author>
+            <title xml:id="t1">ድርሳነ፡ ፍልሰታ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsāna fǝlsatā</title>
+            <title xml:lang="en" type="main" corresp="#t1">Homily on the Assumption of Mary</title>
+            
+            <author ref="PRS3251Cyriacus">Cyriacus</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -41,16 +42,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Apocrypha"/>
+               <term key="Homily"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2018-06-06" who="ES">updated title relation</change>
+         <change when="2018-08-20" who="DR">Added keywords and bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <ab/>
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor"
+               active="LIT1638Homily"
+               passive="PRS3251Cyriacus"/>
+            
+            <relation name="syriaca:different-from" active="LIT1638Homily" passive="LIT1640Homily LIT1639Homily LIT4971MalkeaErgata LIT2932RepCh213"></relation>
+         </listRelation>
+         <listBibl type="editions">
+            <bibl><ptr target="bm:Arras1974TransituText"/><citedRange unit="page">34-55</citedRange></bibl>
+         </listBibl>
+         <listBibl type="translation">
+            <bibl><ptr target="bm:Arras1974TransituVersio"/><citedRange unit="page">26-42</citedRange></bibl>
+         </listBibl>
       </body>
    </text>
 </TEI>

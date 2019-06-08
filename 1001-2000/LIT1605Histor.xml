@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,14 +10,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">History of the Rechabites</title>
+            <title xml:lang="gez" xml:id="t1">ዜና፡ ብፁዓን፡ በመዋዕለ፡ ኤርምያስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Zenā bǝḍuʿān ba-mawāʿǝla ʾErmǝyās</title>
+            <title xml:lang="en" corresp="#t1">History of the Blessed at the time of Jeremiah</title>
+            <title xml:lang="en" xml:id="t2">History of the Rechabites</title>
+            <title xml:lang="en" xml:id="t3">Narrative of Zosimos</title>
+            <title xml:lang="en" xml:id="t4">History of Gerasimas</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -29,7 +34,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">324</citedRange>
+               </bibl>
+               <bibl type="CAVT">
+                  <ptr target="bm:CAVT"/>
+                  <citedRange unit="item">166</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -39,16 +55,69 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Translation"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MV" when="2017-11-17">Updated</change>
+         <change who="DR" when="2017-12-05">Added bibliography and textparts</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Budge1896Alexander1"/>
+                  <citedRange>355-276</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Budge1896AlexanderTranslation"/>
+                  <citedRange>555-584</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Haelewyck2016Rechabites"/>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  ስምዑ፡ አኀዊነ፡ ንዜንወክሙ፡ ዜና፡ ሐዲዘ፡ ዜናሆሙ፡ ለብፁዓን፡ ቅዱሳን፡ ጻድቃን፡ ዘኮኑ፡ በመዋዕለ፡ ኤርምያስ፡ ነቢይ፡  
+                  <gap reason="omitted"/> ወነግሠ፡ ፩ንጉሥ፡ ዘስሙ፡ ሴዴቅያስ፡
+               </ab>
+            </div>
+            <div type="textpart" subtype="explicit" xml:lang="gez">
+               <ab>
+                  ወአንበረ፡ ውስተ፡ ቤተ፡ ክርስቲያን፡ ዮሐንስ፡ መጥምቅ። ስብሐት፡ ለአብ፡ <gap reason="omitted"/> ዘከሠተ፡ ሎሙ፡ ምሥጢራተ፡ 
+                  <gap reason="omitted"/> እምርስሐተ፡ ዝንቱ፡ ዓለም፡ ኀላፊ፡ በምሕረተ፡ <gap reason="omitted"/>
+               </ab>
+            </div>
+            <note>The following division into textparts is based on <bibl>
+                  <ptr target="bm:Brankaer2016VersionEthiopienne"/>
+               </bibl>.</note>
+            <div type="textpart" subtype="part" xml:lang="gez" xml:id="Part1">
+               <label>History of the Blessed at the time of Jeremiah</label>
+            </div>
+            <div type="textpart" subtype="part" xml:lang="gez" xml:id="Part2">
+               <label>
+                  <persName ref="PRS1666Alexande"/> discovers the Island of the Blessed</label>
+            </div>
+            <div type="textpart" subtype="part" xml:lang="gez" xml:id="Part3">
+               <label>The monk Gerasimas is lead to the Island of the Blessed after having read about it in a History of Alexander</label>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

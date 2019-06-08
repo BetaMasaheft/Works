@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Miracle of the two brothers Tāg and Nazīb from Dalgā</title>
+            <title xml:id="t1">Miracle of Mary: Miracle of the two brothers Tāg and Nazīb from Dalgā</title>
+            <title xml:id="t2" xml:lang="en">The story of the two brothers from Dalgā who were dyers</title>
+            <title xml:id="t3">The Virgin Mary and the two brothers Tāg and Nazib</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +27,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -43,15 +42,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"/> 
+               <term key="ChristianLiterature"/>
                <term key="Miracle"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords and relations</change>
+         <change who="DR" when="2018-11-16">Added keyword, title and Macomber reference</change>
+         <change who="AM" when="2019-04-23">added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -63,18 +65,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">21</citedRange>
                </bibl>
             </listBibl>
-            <listBibl type="translation" xml:lang="en">
+            <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Budge1933Miracles"/>
+                  <citedRange unit="item">21</citedRange>
                   <citedRange unit="page">65-67</citedRange>
                </bibl>
             </listBibl>
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:formsPartOf"
-                  active="LIT3607Miracle"
-                  passive="LIT2384Taamme"/>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">83</citedRange></bibl>
             </listBibl>
+            <!-- The Virgin Mary and the two brothers Tāg and Nazib
+                        (BMirMA 34-35; BHMirM , 68-70 // mss. O Etiop. 15, LöfUpp 101, n<locus
+                           target="#32">32</locus>, I, D.-22; éth. 60, <locus from="34v" to="36v"
+                           >34v-36v</locus>, ZotBNat 63, n°60-22; Orient. 8814, fols. 1<ref
+                           type="mss" corresp="ES38r140">38r-140</ref>v, StrBritLib 47, n<locus
+                           target="#32">32</locus>, 16.-21).  -->
+            <listRelation>
+               <relation name="saws:formsPartOf"
+                         active="LIT3607Miracle"
+                         passive="LIT2384Taamme"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML6938"/>.</note>
+                 <ab>
+                  ወሀለዉ፡ ፪፡ አኃው፡ ውስተ፡ ሀገር፡ ዘትሰመይ፡ ደልጋ፣ የአልሉ፡ አልባሰ፡ በቀለመ፡ ኒል፣ ወአሐዱ፡ እምኔሆሙ፡ ቀሲስ፡ ዘስሙ፡ ታግ።
+                 </ab>
+             </div>
          </div>
       </body>
    </text>

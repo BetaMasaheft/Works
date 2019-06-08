@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,14 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Tanśǝʾu ba-fǝrhata ʾƎgziʾabǝḥer</title>
+            <title xml:lang="gez" xml:id="t1">አኰቴተ፡ ቍርባን፡ ዘቅዱስ፡ ያዕቆብ፡ ዘሥሩግ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">ʾAkkʷateta qʷǝrbān za-qǝddus Yāʿqob za-Śǝrug</title>
+            <title xml:lang="en" corresp="#t1">Anaphora by St Jacob of Serugh</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -29,7 +30,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="H">
+                  <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+                  <citedRange unit="item">18</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -51,26 +59,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-05-02">Additions</change>
+         <change who="DR" when="2017-06-14">Additions</change>
+         <change who="MV" when="2017-12-18">Added clavis ID, corrected title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:isAttributedToAuthor" active="LIT2404Tanseu" passive="PRS5655Jacobof"/>
-               <relation name="saws:formsPartOf" active="LIT2404Tanseu" passive="LIT3189Anapho"/>
-            </listBibl>
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT2404Tanseu"
+                         passive="PRS5655Jacobof"/>
+               <relation name="saws:formsPartOf"
+                         active="LIT2404Tanseu"
+                         passive="LIT3189Anapho"/>
+            </listRelation>
             
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Habtemichael2003EAEAnaphoras"/></bibl>
+               <bibl>
+                  <ptr target="bm:Habtemichael2003EAEAnaphoras"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+                  <citedRange unit="page">31-33</citedRange>
+               </bibl>
             </listBibl>
          </div>
          
          <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit">
+            <div type="textpart"
+                 subtype="incipit"
+                 xml:lang="gez"
+                 xml:id="Incipit">
                <ab>
-              
+              ተንሥኡ፡ በፍርሀተ፡ እግዚአብሔር፡
                </ab>
             </div>
          </div>

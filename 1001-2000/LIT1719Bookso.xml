@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,14 +11,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Books of Kings</title>
-            <title xml:id="t2">Kgs</title>
+            <!--<title xml:id="t2">Kgs</title>-->
+            <title type="short">Reg.</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -42,14 +42,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="Bible"></term>
-               <term key="OldTestament"></term>
+               <term key="Bible"/>
+               <term key="OldTestament"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
          <abstract>
-            <p>The four Ethiopic Books of Kings (1-4 Kgs) correspond in Ethiopic tradition to the Vulgata Books of Samuel (<ref type="title" corresp="LIT2697Sam">Sam 1</ref> 
-               and <ref type="title" corresp="LIT2698Sam">Sam 2</ref>) and Books of Kings (<ref type="title" corresp="LIT2699Kings">Kg 1</ref>  and
-               <ref type="title" corresp="LIT2700Kings"> Kg 2</ref>)</p>
+            <p>The four Ethiopic Books of Kings (1-4 Kgs) correspond in Ethiopic tradition to the Vulgata Books of Samuel (<ref type="work" corresp="LIT2697Sam">Sam 1</ref>
+               and <ref type="work" corresp="LIT2698Sam">Sam 2</ref>) and Books of Kings (<ref type="work" corresp="LIT2699Kings">Kg 1</ref>  and
+               <ref type="work" corresp="LIT2700Kings"> Kg 2</ref>)</p>
          </abstract>
       </profileDesc>
       <revisionDesc>
@@ -57,15 +58,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-09" who="ES">added relations and keywords</change>
+         <change when="2017-07-13" who="DE">added short title</change>
+         <change when="2017-07-10" who="RHC">Ran HaCohen Provided Transcription in HTML and Word of the text contained in the related records on 10.7.2017</change>
+         <change when="2017-07-24" who="DR">corrected references</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:contains" active="LIT1719Bookso"
-               passive="LIT2697Sam LIT2698Sam LIT2699Kings LIT2700Kings"></relation>
-         </listBibl>
+         <listRelation>
+            <relation name="saws:contains" active="LIT1719Bookso" passive="LIT2697Sam"/>
+            <relation name="saws:contains" active="LIT1719Bookso" passive="LIT2698Sam"/>
+            <relation name="saws:contains" active="LIT1719Bookso" passive="LIT2699Kings"/>
+            <relation name="saws:contains" active="LIT1719Bookso" passive="LIT2700Kings"/>
+         </listRelation>
          <ab/>
       </body>
    </text>

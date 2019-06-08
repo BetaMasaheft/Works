@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -13,28 +13,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ሲራክ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa Sirāk</title>
             <title xml:lang="en" corresp="#t1" type="main">Book of Sirach</title>
-            
+
             <title xml:id="t2">Wisdom of Sirach</title>
-            
+
             <title xml:id="t3">Book of the All-Virtuous Wisdom of Joshua ben Sira</title>
-            
+
             <title xml:id="t4">Ecclesiasticus</title>
             <title corresp="#t4" type="short">Ecclus</title>
-            
+
             <title xml:id="t5">Ben Sira</title>
-            
-            <title xml:id="t6Hebrew" xml:lang="heb">ספר בן סירא</title>
-            <title corresp="#t6Hebrew" xml:lang="heb" type="normalized">Sefer ben Siraʼ</title>
+
+            <title xml:id="t6Hebrew" xml:lang="he">ספר בן סירא</title>
+            <title corresp="#t6Hebrew" xml:lang="he" type="normalized">Sefer ben Siraʼ</title>
             <title corresp="#t6Hebrew" xml:lang="en">Book of ben Sirach</title>
-            
+            <title type="short">Sir.</title>
+
             <editor role="generalEditor" key="AB"/>
             <editor key="ES"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -45,18 +45,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
             <listWit>
                <listWit>
                   <witness corresp="BLadd16188#ms_i1"/>
-                  <witness corresp="BLorient484"></witness>
-                  <witness corresp="BLorient486"></witness>
-                  <witness corresp="BLorient487"></witness>
-                  <witness corresp="BLorient489"></witness>
-                  <witness corresp="BLorient492"></witness>
-                  <witness corresp="BLorient494"></witness>
-                  <witness corresp="BLorient498"></witness>
-                  <witness corresp="BLorient499"></witness>
-                  <witness corresp="BLorient500"></witness>
+                  <witness corresp="BLorient484"/>
+                  <witness corresp="BLorient486"/>
+                  <witness corresp="BLorient487"/>
+                  <witness corresp="BLorient489"/>
+                  <witness corresp="BLorient492"/>
+                  <witness corresp="BLorient494"/>
+                  <witness corresp="BLorient498"/>
+                  <witness corresp="BLorient499"/>
+                  <witness corresp="BLorient500"/>
                </listWit>
             </listWit>
          </sourceDesc>
@@ -67,12 +70,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="he">Hebrew</language>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="OldTestament"></term>
-               <term key="Bible"></term>
+               <term key="ChristianLiterature"/>
+               <term key="OldTestament"/>
+               <term key="Bible"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -87,10 +92,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl></bibl>
-            <relation name="saws:isAttributedToAuthor" active="LIT2358Sirach" passive="PRS5685Jesusth"></relation>
-         </listBibl>
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor"
+                      active="LIT2358Sirach"
+                      passive="PRS5685Jesusth"/>
+         </listRelation>
          <div type="bibliography">
             <listBibl type="editions">
                <bibl>

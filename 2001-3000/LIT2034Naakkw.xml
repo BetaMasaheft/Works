@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,18 +10,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Anaphora of Our Lady <persName ref="PRS6819Mary">Mary</persName> by <persName ref="PRS4824Gregory">Gregory</persName> </title>
-            <title xml:id="t2" xml:lang="gez">ነአኵተከ፡ አምላክ፡ በወልድከ፡ ዋህድ፡</title>
-            <title corresp="#t2" xml:lang="gez" type="normalized">Naʾakkʷǝtaka ʾamlāk ba-waldǝka wāhǝd wa-manfasǝka qǝddus ʾǝnbala tafalṭo za-tǝśellǝs ...</title>
-            <title corresp="#t2" xml:lang="en">We give thee Thanks, O God, by thy Only-Begotten Son and thy Holy Spirit without separation, who are triune ...</title>
+            <title xml:id="t1">Anaphora of Our Lady Mary by Gregory</title>
+            <title xml:id="t2" xml:lang="gez">ነአኵተከ፡ አምላክ፡ በወልድከ፡ ዋህድ፡...</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Naʾakkʷǝtaka ʾamlāk ba-waldǝka wāhǝd...</title>
+            <title corresp="#t2" xml:lang="en">We give thee Thanks, O God, by thy Only-Begotten Son...</title>
             
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -33,7 +32,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="H">
+                  <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+                  <citedRange unit="item">10</citedRange>
+               </bibl>
+            </listBibl>
+            <listWit>
+               <witness corresp="BNFet74"/>
+               <witness corresp="BerOr2168"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -43,11 +53,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
-         
+         <abstract>
+            <p>There are four anaphoras known under the name of Gregory: <ref type="work" corresp="LIT2040Naakkw"/>, <ref type="work" corresp="LIT2038Naakkw"/>,
+            <ref type="work" corresp="LIT2034Naakkw"/> and <ref type="work" corresp="LIT2037Naakkw"/>. They can be distinguished only by their incipit, content and use, as they
+            are indiscriminately ascribed to <persName ref="PRS4823Gregory"/>,
+            <persName ref="PRS4822Gregory"/>, <persName ref="PRS4824Gregory"/> and <persName ref="PRS4825Gregory"/>.</p>
+         </abstract>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Homily"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Liturgy"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -56,21 +71,44 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-09" who="ES">updated title keywords relation</change>
+         <change who="DR" when="2017-06-14">Additions</change>
+         <change who="MV" when="2017-12-18">Added clavis ID and incipit, corrected title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:isAttributedToAuthor" active="LIT2034Naakkw" passive="PRS4824Gregory"></relation>
-            <relation name="ecrm:P129_is_about" active="LIT2034Naakkw" passive="PRS6819Mary"></relation>
-         </listBibl>
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor"
+                      active="LIT2034Naakkw"
+                      passive="PRS4824Gregory"/>
+            <relation name="ecrm:P129_is_about"
+                      active="LIT2034Naakkw"
+                      passive="PRS6819Mary"/>
+         </listRelation>
          <listBibl type="secondary">
             <bibl>
-               <ptr target="bm:Hammerschmidt1987Anaphoras"></ptr><citedRange>170, note 49 b</citedRange>
+               <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+               <citedRange unit="page">25</citedRange>
             </bibl>
          </listBibl>
-         <ab/>
+         <div type="edition">
+            <div type="textpart"
+                 subtype="incipit"
+                 xml:lang="gez"
+                 xml:id="Incipit">
+               <ab>
+                  ነአኵተከ፡ አምላክ፡ በወልድከ፡ ዋህድ፡ ወመንፈስከ፡ ቅዱስ፡ እንበለ፡ ተፈልጦ፡ ዘትሤልስ፡...
+               </ab>
+            </div>
+            <div type="textpart"
+                 subtype="incipit"
+                 xml:lang="gez"
+                 corresp="#Incipit">
+               <ab>
+                  Naʾakkʷǝtaka ʾamlāk ba-waldǝka wāhǝd wa-manfasǝka qǝddus ʾǝnbala tafalṭo za-tǝśellǝs...
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

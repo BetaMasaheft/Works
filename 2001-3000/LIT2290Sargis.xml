@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,22 +11,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" type="main">Teaching of Jacob</title>
-            <title corresp="#t1" xml:lang="grc">Διδασκαλία Ἰακώβου</title>
-            <title corresp="#t1" xml:lang="grc" type="normalized">Didaskalia Iakobou</title>
             
-            <title xml:id="t2" xml:lang="lat">Doctrina Jacobi nuper baptizati</title>
+            <title xml:id="t2grc" xml:lang="grc">Διδασκαλία Ἰακώβου</title>
+            <title corresp="#t2grc" xml:lang="grc" type="normalized">Didaskalia Iakobou</title>
             
-            <title xml:id="t3" xml:lang="gez">ሰርጊስ ፡ አብርጋዊ፡</title>
-            <title xml:lang="gez" type="normalized" corresp="#t3">Sargis ʾAbǝrgāwi</title>
-            <title corresp="#t3" xml:lang="en">Sargis of Aberga</title>
+            <title xml:id="t3lat" xml:lang="la">Doctrina Jacobi nuper baptizati</title>
+            
+            <title xml:id="t4gez" xml:lang="gez">ሰርጊስ ፡ አብርጋዊ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t4gez">Sargis ʾAbǝrgāwi</title>
+            <title corresp="#t4gez" xml:lang="en">Sargis of Aberga</title>
             
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -38,7 +38,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl corresp="#t2grc" type="CPG">
+                  <ptr target="bm:CPG3"/>
+                  <citedRange unit="item">7793</citedRange>
+               </bibl>
+               <bibl corresp="#t2grc" type="BHG">
+                  <ptr target="bm:BHG"/>
+                  <citedRange unit="item">1322m, 1322mb</citedRange>
+               </bibl>
+            </listBibl>
+            <listWit corresp="#t4gez">
+               <witness corresp="BNFabb51"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -47,20 +61,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="grc">Greek</language>
+            <language ident="la">Latin</language>
          </langUsage>
-         <abstract><p>A 7th-century Greek Christian anti-Jewish polemical tract set in Carthage in 634 
+         <abstract>
+            <p>A 7th-century Greek Christian anti-Jewish polemical tract set in Carthage in 634 
             but written in Palestine sometime between <date>634</date> and <date>640</date>. 
             It supposedly records a July 13, 634 discussion between a Jew forced to convert to Christianity, Jacob, 
             and some Jews about the condition of the Byzantine Empire in light of the recent Arab conquests, 
             and how they should proceed as he had done, and convert to Christianity.</p>
             <p>The Ethiopic version depends upon an
-               Arabic translation, probably from Greek.</p></abstract>
+               Arabic translation, probably from Greek.</p>
+         </abstract>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Religion"></term>
-               <term key="Translation"></term>
-               <term key="Theology"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Religion"/>
+               <term key="Translation"/>
+               <term key="Theology"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -68,15 +86,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change when="2017-03-07" who="ES">added titles keywords</change>
+         <change who="ES" when="2017-03-07">added titles keywords</change>
+         <change who="MV" when="2018-01-02">Added clavis ID and bibl</change>
+         <change when="2019-02-13" who="ES">corrected corresp and IDs</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="secondary">
-            <bibl><ptr target="bm:Bausi2010Sargis"/></bibl>
-         </listBibl>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions" corresp="#t4gez">
+               <bibl>
+                  <ptr target="bm:GrebautGuidi1907Sargis"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Grebaut1916Sargis"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary" corresp="#t4gez">
+               <bibl>
+                  <ptr target="bm:Bausi2010Sargis"/>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>

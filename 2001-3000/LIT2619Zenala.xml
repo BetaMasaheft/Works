@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -13,16 +13,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">ዜና፡ ለማርያም፡ ወፍልሰታ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Zenā la-Māryām wa-fǝlsatā</title>
             <title xml:lang="en" corresp="#t1">Story of Mary and her Assumption</title>
+            
+
+            
             <title xml:lang="syr" xml:id="t2syriac">Syriac Version</title>
             <title xml:lang="ar" xml:id="t3arabic">Arabic Version</title>
-            <title xml:lang="grc" xml:id="t4greek">Arabic Version</title>
+            <title xml:lang="grc" xml:id="t4greek">Greek Version</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -33,9 +35,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-         <listWit>
-            <witness type="external" corresp="BnF Syriaque 196"/>
-         </listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">639</citedRange>
+               </bibl>
+            </listBibl>
+            <listWit>
+               <witness type="external" corresp="BnF Syriaque 196"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -47,6 +58,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="syr">Syriac</language>
             <language ident="grc">Greek</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="ChristianLiterature"/>
+               <term key="Translation"/>
+               <term key="Hagiography"/>
+               <term key="Apocrypha"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -54,44 +73,62 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-10-27">Title updated</change>
          <change who="DR" when="2017-01-30">Small changes</change>
+         <change who="DR" when="2017-06-29">Added keywords</change>
+         <change who="MV" when="2017-11-29">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-    <div type="bibliography">
-       <listBibl type="editions">
-          <bibl corresp="#t3arabic">
-             <ptr target="bm:Enger1856Transitu"/>
-          </bibl>   
-          <bibl corresp="#t2syriac">
-             <ptr target="bm:Wright1865Departure"/>
-          </bibl>
-          <bibl corresp="#t4greek">
-             <ptr target="bm:Tischendorf1866Apocalypses"/> 
-             <citedRange unit="page">xxxvi</citedRange>
-             <citedRange unit="page">99</citedRange>
-          </bibl>
-       </listBibl>
-       <listBibl type="translation">
-          <bibl corresp="#t3arabic">
-             <ptr target="bm:Enger1856Transitu"/>
-          </bibl>
-          <bibl corresp="#t2syriac">
-             <ptr target="bm:Wright1865Departure"/>
-          </bibl>
-          <bibl corresp="#t2syriac"><ptr target="bm:Wright1865Contributions"/>
-             <citedRange unit="page">22</citedRange></bibl>
-       </listBibl>
-       <listBibl type="catalogue">
-          <bibl corresp="#t3arabic"><ptr target="bm:Zotenberg1874Catalogue"/><citedRange unit="page">181</citedRange></bibl>
-       </listBibl>
-    </div>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl corresp="#t3arabic">
+                  <ptr target="bm:Enger1856Transitu"/>
+               </bibl>   
+               <bibl corresp="#t2syriac">
+                  <ptr target="bm:Wright1865Departure"/>
+               </bibl>
+               <bibl corresp="#t4greek">
+                  <ptr target="bm:Tischendorf1866Apocalypses"/> 
+                  <citedRange unit="page">xxxvi</citedRange>
+                  <citedRange unit="page">99</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation">
+               <bibl corresp="#t3arabic">
+                  <ptr target="bm:Enger1856Transitu"/>
+               </bibl>
+               <bibl corresp="#t2syriac">
+                  <ptr target="bm:Wright1865Departure"/>
+               </bibl>
+               <bibl corresp="#t2syriac">
+                  <ptr target="bm:Wright1865Contributions"/>
+                  <citedRange unit="page">22</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl corresp="#t3arabic">
+                  <ptr target="bm:Zotenberg1874Catalogue"/>
+                  <citedRange unit="page">181</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
          
          <div type="edition">
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Prologue">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="Prologue">
                <label>Prologue</label>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ወእምዝ፡ በሠለስቱ፡ ዕለት፡ ጊዜ፡ ቀትር፡ ወፅአት፡ ማርያም፡ እምቤታ፡ ወሖረት፡ ትጸሊ፡ ኀበ" መቃብር፡ ወልዳ።
+                  </ab>
+               </div>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MainPart">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="MainPart">
                <label>Main Part</label>
             </div>
          </div>

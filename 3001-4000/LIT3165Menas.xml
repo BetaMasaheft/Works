@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -12,14 +12,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ገድል፡ ወስምዕ፡ ዘሚናስ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Gadl wa-sǝmʿ za-Minās</title>
-            <title xml:lang="en" corresp="#t1">Martyrdom of Menas</title>
+            <title xml:lang="en" corresp="#t1">Acts and martyrdom of Menas</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -30,8 +30,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">746</citedRange>
+               </bibl>
+            </listBibl>
             <listWit>
-               <witness/>
+               <witness corresp="BLorient689"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -46,28 +55,53 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Hagiography"/>
+               <term key="Translation"/>
+               <term key="Paks1"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-27">Added keywords and relation</change>
+         <change who="MV" when="2017-11-30">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:formsPartOf"
-                  active="LIT3165Menas"
-                  passive="LIT1493Gadlas">
-               </relation>
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Budge1909Mena"/>
+                  <citedRange>59-73</citedRange>
+               </bibl>
             </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Budge1909Mena"/>
+                  <citedRange>44-58</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Witakowski2007EAEMenas"/>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:formsPartOf"
+                         active="LIT3165Menas"
+                         passive="LIT1493Gadlas">
+               </relation>
+            </listRelation>
          </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit"  xml:lang="gez">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
+              ዝንቱ፡ ቅዱስ፡ ሰማዕት፡ ብፁዕ፡ ሚናስ፡ ዘብሔረ፡ ግብጽ፡ እንተ፡ ስማ፡ ቄጥዋ፡
+               </ab>
+            </div>
+            <div type="textpart" subtype="explicit" xml:lang="gez">
+               <ab>
+                 ወኀይሉ፡ ወስእለቱ፡ ኀበ፡ እግዚአብሔር፡ እስከ፡ አጽናፈ፡ በሓውርት፡ ወሰአሎ፡ ለእግዚአብሔር፡ አምላክነ፡ ወመድኀኒነ፡ <gap reason="omitted"/>
                </ab>
             </div>
          </div>

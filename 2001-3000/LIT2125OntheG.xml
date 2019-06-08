@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,15 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">On the Glory of John the Baptist</title>
-            <author>John Chrysostom</author>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘደረሰ፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ ... በእንተ፡ ክብሩ፡ ለዮሐንስ፡ መጥምቅ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān za-darasa Yoḥannǝs ʾafa warq ... baʾǝnta kǝbru la-Yoḥannǝs maṭmǝq</title>
+            <title xml:lang="en" corresp="#t1">Homily by John Chrysostom ... on the Glory of John the Baptist</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -30,7 +30,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="CPG">
+                  <ptr target="bm:CPG2"/>
+                  <citedRange unit="item">5150, 5153.3</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -42,9 +49,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Theology"></term>
-               <term key="Homily"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+               <term key="Homily"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -52,18 +60,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change when="2017-02-15" who="ES">keywords relation</change>
+         <change who="ES" when="2017-02-15">keywords relation</change>
+         <change who="MV" when="2017-12-20">Added clavis ID, updated title</change>
+         <change who="DR" when="2018-11-27">Specified clavis</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl/>
-            
-            <relation name="ecrm:P129_is_about" active="LIT2125OntheG" passive="PRS5741Johnthe"></relation>
-            <relation name="saws:isAttributedToAuthor" active="LIT2125OntheG" passive="PRS5720JohnChr"></relation>
-         </listBibl>
-         <ab/>
+         <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT2125OntheG"
+                         passive="PRS5741Johnthe"/>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT2125OntheG"
+                         passive="PRS5720JohnChr"/>
+            </listRelation>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Bausi2007John"/>
+                  <citedRange>289a-289b</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>

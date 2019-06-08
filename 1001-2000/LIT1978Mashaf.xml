@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -17,18 +17,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" corresp="#t2" type="normalized">Ṭomāra ʾAtnātewos</title>
             <title xml:lang="en" corresp="#t2">Letter to Athanasius</title>
             <title xml:lang="en" xml:id="t3">Sunday Letter</title>
-            <title xml:lang="ar" xml:id="t4arabic"></title>
-            <title xml:lang="ar" xml:id="t5arabic"></title> 
-            <title xml:lang="ar" xml:id="t6arabic"></title>
-            <title xml:lang="syr" xml:id="t7syriac"></title>
-            <title xml:lang="grc" xml:id="t8greek" corresp="CANT311">CANT no. 311</title>
+            <title xml:lang="ar" xml:id="t4arabic"/>
+            <title xml:lang="ar" xml:id="t5arabic"/> 
+            <title xml:lang="ar" xml:id="t6arabic"/>
+            <title xml:lang="syr" xml:id="t7syriac"/>
+            <title xml:lang="grc" xml:id="t8greek">
+               <!-- CANT 311 -->
+            </title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -39,6 +40,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="CANT">
+                  <ptr target="bm:CANT"/>
+                  <citedRange unit="item">311</citedRange>
+               </bibl>
+            </listBibl>
             <listWit>
                <listWit>
                   <witness corresp="BLadd16192#ms_i.1"/>
@@ -59,12 +69,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Theology"/>
+               <term key="Apocrypha"/>
                <term key="Translation"/>
             </keywords>
          </textClass>
          <creation corresp="#t1" notBefore="1500" notAfter="1599"/>
-         <abstract><p>The Maṣḥafa ṭomār narrates how a letter urging the people to respect the Sunday rest appeared outside a Church of Rome in which the patriarch Athanasius celebrated mass.
-         </p></abstract>
+         <abstract>
+            <p>The <foreign xml:lang="gez">Maṣḥafa ṭomār</foreign> narrates how a letter urging the people to respect the Sunday rest appeared outside a Church of Rome in which the patriarch Athanasius celebrated mass.
+         </p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -72,49 +85,73 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-09-29">Title updated and relation added</change>
          <change who="DR" when="2017-03-30">Added keywords</change>
+         <change who="MV" when="2017-12-15">Added CANT id</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listRelation>
+            <relation name="ecrm:CLP46i_may_form_part_of"
+               active="LIT1978Mashaf"
+               passive="LIT1586Hayman">
+               <desc>The Maṣḥafa ṭomār is mostly contained in manuscripts with the Hāymānota ʾabaw, where it can precede or follow
+                  the table of contents. It also circulates independently.</desc>
+            </relation>
+            <relation name="saws:isVersionInAnotherLanguageOf"
+               active="LIT1978Mashaf#t1"
+               passive="LIT1978Mashaf#t4arabic">
+               <desc>The Ethiopic version of the Maṣḥafa ṭomār was translated from the Arabic version based on a Syriac version. 
+                  Guidi suggests that the Maṣḥafa ṭomār may have been translated in the mid-16th century.
+                  <bibl>
+                     <ptr target="bm:Guidi1932storia"/>
+                     <citedRange unit="page">72-73</citedRange>
+                  </bibl>
+                  <bibl>
+                     <ptr target="bm:Graf1944GCALI"/>
+                     <citedRange unit="page">295-297</citedRange>
+                  </bibl>
+               </desc>
+            </relation>
+            <relation name="saws:isVersionInAnotherLanguageOf"
+               active="LIT1978Mashaf#t4arabic"
+               passive="LIT1978Mashaf#t7syriac">
+               <desc/>
+            </relation>
+         </listRelation>
         <div type="bibliography">
-           <listBibl type="relations">
-           <bibl/>
-           <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1978Mashaf" passive="LIT1586Hayman">
-              <desc>The Maṣḥafa ṭomār is mostly contained in manuscripts with the Hāymānota ʾabaw, where it can precede or follow
-                 the table of contents. It also circulates independently.</desc>
-           </relation>
-           <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1978Mashaf#t1" passive="LIT1978Mashaf#t4arabic">
-              <desc>The Ethiopic version of the Maṣḥafa ṭomār was translated from the Arabic version based on a Syriac version. 
-                 Guidi suggests that the Maṣḥafa ṭomār may have been translated in the mid-16th century.
-                 <bibl><ptr target="bm:Guidi1932storia"/><citedRange unit="page">72-73</citedRange></bibl>
-                 <bibl><ptr target="bm:Graf1944GCALI"/><citedRange unit="page">295-297</citedRange></bibl></desc>
-           </relation>
-           <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1978Mashaf#t4arabic" passive="LIT1978Mashaf#t7syriac">
-              <desc></desc>
-           </relation>
-        </listBibl>
+        
            
-         <listBibl type="editions">
-            <bibl><ptr target="bm:Bittner1905Brief"/></bibl>
-            <bibl><ptr target="bm:Praetorius1869Tomar"/></bibl>
-         </listBibl>
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Bittner1905Brief"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Praetorius1869Tomar"/>
+               </bibl>
+            </listBibl>
            
-         <listBibl type="translation">
-            <bibl><ptr target="bm:Basset1893Tomar"/></bibl>
-            <bibl corresp="#t8greek"><ptr target="bm:Backus2005Lettre"/></bibl>
-         </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Basset1893Tomar"/>
+               </bibl>
+               <bibl corresp="#t8greek">
+                  <ptr target="bm:Backus2005Lettre"/>
+               </bibl>
+            </listBibl>
            
-         <listBibl type="secondary" corresp="#t1">
-            <bibl>
-               <ptr target="bm:Witakowski2010EAETomar"/>
-            </bibl>
-            <bibl>
-               <ptr target="bm:Guidi1932storia"/><citedRange unit="page">72-73</citedRange>
-            </bibl>
-            <bibl corresp="#t4arabic #t5arabic #t6arabic">
-               <ptr target="bm:Graf1944GCALI"/><citedRange unit="page">295-297</citedRange>
-            </bibl>
-         </listBibl>
+            <listBibl type="secondary" corresp="#t1">
+               <bibl>
+                  <ptr target="bm:Witakowski2010EAETomar"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Guidi1932storia"/>
+                  <citedRange unit="page">72-73</citedRange>
+               </bibl>
+               <bibl corresp="#t4arabic #t5arabic #t6arabic">
+                  <ptr target="bm:Graf1944GCALI"/>
+                  <citedRange unit="page">295-297</citedRange>
+               </bibl>
+            </listBibl>
          </div>
       </body>
    </text>

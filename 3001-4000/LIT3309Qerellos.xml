@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -12,13 +12,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ቄርሎስ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Qerǝllos</title>
+            <title type="short">Cyr.</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -29,8 +29,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
             <listWit>
-               <witness/>
+               <witness corresp="BNFabb18"/>
+               <witness corresp="BNFabb48"/>
+               <witness corresp="BLorient740"/>
+               <witness corresp="BLorient745"/>
+               <witness corresp="Tanasee42"/>
+               <witness corresp="Tanasee134"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -45,17 +53,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Theology"/>
+               <term key="Translation"/>
+               <term key="Aks"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-02-14">Added keywords</change>
+         <change who="MV" when="2017-12-27">Added witnesses, keywords, bibl</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Weischer1973QerellosI"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Weischer1993QerellosII"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Weischer1977QerellosIII"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Weischer1979QerellosIV1"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Weischer1979QerellosIV2"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Weischer1980QerellosIV3"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Weischer1980Florilegium"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Weischer1971Axumitic"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Lusini1988patristica"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Bausi2010EAEQerellos"/>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>

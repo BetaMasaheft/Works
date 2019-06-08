@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,7 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘአባ፡ ያዕቆብ፡ ጳጳስ፡ ዘሀገረ፡ ንጽቢን፡ ዘከመ፡ መጽአ፡ ንጉሠ፡ ፋርስ፡ በመዋዕሊሁ፡ ውስት፡ ሀገረ፡ ንጽቢን።</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān za-ʾabbā Yāʿǝqob ṗāṗṗās za-hagara Nǝṣǝbin za-kama maṣʾa nǝguśa Fārs
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān za-ʾabbā Yāʿqob ṗāṗṗās za-hagara Nǝṣǝbin za-kama maṣʾa nǝguśa Fārs
                ba-mawāʿǝlihu wǝst hagara Nǝṣǝbin</title>
             <title xml:lang="en" corresp="#t1">The Homily by Father Jacob, bishop of the city of Nisibis, on the arrival in his days of the king of the Persians at Nisibis</title>
             <title xml:lang="syr" xml:id="t2syriac"> <!--add Syriaca reference--></title>
@@ -19,9 +19,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -31,6 +30,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
             <listWit>
                <witness corresp="BNFet146#ms_i17"/>
@@ -53,8 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Translation"/>
             </keywords>
          </textClass>
-         <abstract><p>The work transmitted in Gǝʿǝz as <foreign xml:lang="gez">Dǝrsān za-ʾabbā Yāʿǝqob ṗāṗṗās za-hagara Nǝṣǝbin za-kama maṣʾa nǝguśa Fārs
-            ba-mawāʿǝlihu wǝst hagara Nǝṣǝbin</foreign> is a translation of <persName ref="PRS1980Aphrahat"/>'s fifth homily, <ref target="#t2syriac"/>. </p></abstract>
+         <abstract>
+            <p>The work transmitted in Gǝʿǝz as <foreign xml:lang="gez">Dǝrsān za-ʾabbā Yāʿqob ṗāṗṗās za-hagara Nǝṣǝbin za-kama maṣʾa nǝguśa Fārs
+            ba-mawāʿǝlihu wǝst hagara Nǝṣǝbin</foreign> is a translation of <persName ref="PRS1980Aphrahat"/>'s fifth homily, <ref target="#t2syriac"/>. </p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -66,30 +70,49 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor"
+               active="LIT1275Dersan#t2syriac"
+               passive="PRS1980Aphrahat"/>
+            <relation name="saws:isAttributedToAuthor"
+               active="LIT1275Dersan"
+               passive="PRS5654Jacobof">
+               <desc>The homily is attributed to
+                  <persName ref="PRS5654Jacobof"/>, a confusion due to <persName ref="PRS1980Aphrahat"/>'s baptismal name Jacob and
+                  the tradition of  <persName ref="PRS5654Jacobof"/> being the defender of Nisibis against Persian attacks.
+                  <bibl>
+                     <ptr target="bm:Witakowski2003EAEAphrahat"/>
+                  </bibl>
+               </desc>
+            </relation>
+         </listRelation>
          <div type="bibliography">
             
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Witakowski2003EAEAphrahat"/></bibl>
+               <bibl>
+                  <ptr target="bm:Witakowski2003EAEAphrahat"/>
+               </bibl>
             </listBibl>
             
             <listBibl type="editions">
-               <bibl corresp="#t1"><ptr target="bm:Pereira1906Jacobi"/></bibl>
-               <bibl corresp="#t2syriac"><ptr target="bm:Wright1869Homilies"/><citedRange unit="page">ܥܛ-ܩܒ</citedRange><!--ʿṭ-qb--></bibl>
+               <bibl corresp="#t1">
+                  <ptr target="bm:Pereira1906Jacobi"/>
+               </bibl>
+               <bibl corresp="#t2syriac">
+                  <ptr target="bm:Wright1869Homilies"/>
+                  <citedRange unit="page">ܥܛ-ܩܒ</citedRange>
+                  <!--ʿṭ-qb-->
+               </bibl>
             </listBibl>
             
             <listBibl type="translation">
-               <bibl corresp="#t2syriac"><ptr target="bm:Bruns1991Aphrahat1"/><citedRange unit="page">156-179</citedRange></bibl>
+               <bibl corresp="#t2syriac">
+                  <ptr target="bm:Bruns1991Aphrahat1"/>
+                  <citedRange unit="page">156-179</citedRange>
+               </bibl>
             </listBibl>
             
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:isAttributedToAuthor" active="LIT1275Dersan#t2syriac" passive="PRS1980Aphrahat"/>
-               <relation name="saws:isAttributedToAuthor" active="LIT1275Dersan" passive="PRS5654Jacobof"><desc>The homily is attributed to
-                  <persName ref="PRS5654Jacobof"/>, a confusion due to <persName ref="PRS1980Aphrahat"/>'s baptismal name Jacob and
-                   the tradition of  <persName ref="PRS5654Jacobof"/> being the defender of Nisibis against Persian attacks.
-                  <bibl><ptr target="bm:Witakowski2003EAEAphrahat"/></bibl></desc>
-               </relation>
-            </listBibl>
+           
          </div>
          
       </body>

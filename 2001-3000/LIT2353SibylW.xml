@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -19,9 +19,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -31,6 +30,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
             <listWit>
                <listWit>
@@ -48,7 +50,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
+               <term key="Translation"/>
+               <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -58,6 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="MV" when="2016-04-28">Added bibliographic references and one witness</change>
          <change who="MV" when="2016-11-09">Added catalogue bibliography and relation</change>
+         <change who="DR" when="2017-06-29">Added keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -68,7 +73,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Schleifer1908Sibyl"/>
                </bibl>
             </listBibl>
-            <listBibl type="translation" xml:lang="fr">
+            <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Basset1900Sibylle"/>
                </bibl>
@@ -80,16 +85,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <bibl>
                   <ptr target="bm:Beylot1980apocal"/>
                </bibl>
-           </listBibl>
-            <listBibl type="catalogue">
-               <bibl corresp="#t2arabic"><ptr target="bm:Zotenberg1874Catalogue"/><citedRange unit="page">29b-30a</citedRange></bibl>
-               <bibl corresp="#t2arabic"><ptr target="bm:PayneSmith1864Catalog"/><citedRange unit="column">451</citedRange></bibl>
+               <bibl corresp="#t2arabic">
+                  <ptr target="bm:Zotenberg1874Catalogue"/>
+                  <citedRange unit="page">29b-30a</citedRange>
+               </bibl>
+               <bibl corresp="#t2arabic">
+                  <ptr target="bm:PayneSmith1864Catalog"/>
+                  <citedRange unit="column">451</citedRange>
+               </bibl>
             </listBibl>
             
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT2353SibylW#t1" passive="LIT2353SibylW#t2arabic"/>
-            </listBibl>
+            <listRelation>
+               <relation name="saws:isVersionInAnotherLanguageOf"
+                         active="LIT2353SibylW#t1"
+                         passive="LIT2353SibylW#t2arabic"/>
+            </listRelation>
          </div>
       </body>
    </text>

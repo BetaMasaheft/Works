@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,14 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Gǝṣṣawe śǝʿrat</title>
+            <title xml:id="t1" xml:lang="gez">ግጻዌ፡ ሥርዓት፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Gǝṣṣāwe śǝrʿāt</title>
+            <title corresp="#t1" xml:lang="en" type="main">Synopsis of classes</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -39,16 +40,46 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="NewTestament"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-05-26">Additions</change>
+         <change who="DR" when="2018-01-11">Added bibliography and textparts</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Zuurmond1989EvangeliumMarc"/>
+                  <citedRange unit="part">I</citedRange>
+                  <citedRange unit="page">8-9</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart"
+                 subtype="incipit"
+                 xml:lang="gez"
+                 xml:id="Incipit">
+               <ab>በእንተ፡ ኅብረተ፡ ቃላት፡ ዘአርባዕቱ፡ ወንጌላት። እንዘ፡ ይተሉ፡ ረድኤተ፡ ክልኤቱ፡ ባሕቲቶሙ፡ ጸሐፉ፡ እንከ፡ ወንጌለ፡ እምሐዋርያት።</ab>
+            </div>
+            <div type="textpart"
+                 subtype="explicit"
+                 xml:lang="gez"
+                 xml:id="Explicit">
+               <ab>በእንተ፡ ኅብረተ፡ ቃላት፡ ዘቅዱሳን፡ አርባዕቱ፡ ወንጌላት። ተፈጸመ።</ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

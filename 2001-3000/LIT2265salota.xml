@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -17,9 +17,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -30,7 +29,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit><witness corresp="BNFet9"></witness></listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listWit>
+               <witness corresp="BNFet9"/>
+            </listWit>
+            <listBibl type="clavis">
+               <bibl type="CAVT">
+                  <ptr target="bm:CAVT"/>
+                  <citedRange unit="item">178</citedRange>
+               </bibl>
+               <bibl type="CPG">
+                  <ptr target="bm:CPG"/>
+                  <citedRange unit="item">1730</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -48,7 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </keywords>
          </textClass>
          <abstract>
-            <p></p>
+            <p/>
          </abstract>
       </profileDesc>
       <revisionDesc>
@@ -66,13 +80,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <ptr target="bm:Devens2007Mahaleya"/>
             </bibl>
          </listBibl>
-         <listBibl type="relations">
-            <bibl/>
+         <listRelation>
             <relation name="saws:formsPartOf"
-               active="LIT2265salota"
+                      active="LIT2265salota"
                       passive="LIT1828Mahale"/>
-            <relation name="ecrm:P129_is_about" active="LIT2265salota" passive="PRS6644Manasseh"></relation>
-         </listBibl>
+            <relation name="ecrm:P129_is_about"
+                      active="LIT2265salota"
+                      passive="PRS6644Manasseh"/>
+         </listRelation>
       </body>
    </text>
 </TEI>

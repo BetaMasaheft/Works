@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">How the Virgin Mary saved a lady from adultery by causing her to read the Prayers for the Dead and appeared to her</title>
+            <title xml:id="t1">Miracle of Mary: How the Virgin Mary saved a lady from adultery by causing her to read the Prayers for the Dead and appeared to her</title>
+            <title xml:id="t2">A knight tries to seduce the wife of a friend, but she is saved by a vision</title>
+            <title xml:lang="gez" xml:id="t3">Miracle of a woman who was saved from sin by the Book of Hours of St Mary</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +27,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -44,13 +43,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
+               <term key="Miracle"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-10">Added keywords and relations</change>
+         <change who="DR" when="2018-11-19">Added keyword, title and Macomber reference</change>
+         <change who="DR" when="2018-12-07">Added title and reference from deleted LIT5055MiracleBookHours</change>
+         <change who="AM" when="2019-05-08">added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -62,18 +66,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">64</citedRange>
                </bibl>
             </listBibl>
-            <listBibl type="translation" xml:lang="en">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">193</citedRange></bibl>
                <bibl>
-                  <ptr target="bm:Budge1933Miracles"/>
-                  <citedRange unit="page">232-234</citedRange>
+                  <ptr target="bm:Cerulli1965Leningrado"/>
+                  <citedRange unit="page">16</citedRange>
+                  <citedRange unit="item">71</citedRange>
                </bibl>
             </listBibl>
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:formsPartOf"
-                  active="LIT3885Miracle"
-                  passive="LIT2384Taamme"/>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Budge1933Miracles"/>
+                  <citedRange unit="item">64</citedRange>
+                  <citedRange unit="page">232-234</citedRange>
+               </bibl>
+               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">123</citedRange><citedRange unit="page">318-321</citedRange></bibl>
             </listBibl>
+            <listRelation>
+               <relation name="saws:formsPartOf"
+                         active="LIT3885Miracle"
+                         passive="LIT2384Taamme"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                 <ab>
+                     ወሀሎ፡ አሐዱ፡ ብእሲ፡ ባዕል፡ ጥቀ፣ ወቦቱ፡ ብእሲተ፡ ሠናየ፡ <choice resp="PRS6437Macomber"><corr>ወመንክረ፡</corr><sic>መንክር፡</sic></choice> ላሕያ፣
+                     ወወሀባ፡ እግዚአብሔር፡ ስነ፡ ወላሕየ፡ ወሞገሰ፡ ወጣዕመ፡ ቃል፡ ዘአልቦ፡ ዘይመስላ፡ በውስተ፡ ይእቲ፡ ሀገር።
+                 </ab>
+             </div>
          </div>
       </body>
    </text>

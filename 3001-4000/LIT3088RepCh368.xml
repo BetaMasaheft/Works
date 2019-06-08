@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1" xml:lang="gez">ኦርኅርኅተ፡ ኅሊና፡ </title>
+            <title xml:id="t1" xml:lang="gez">ኦርኅርኅተ፡ ኅሊና፡</title>
             <title corresp="#t1" xml:lang="gez" type="normalized">ʾO rǝḫrǝḫta ḫǝllinā</title>
             <title corresp="#t1" xml:lang="en">O merciful of mind</title>
             <title xml:lang="gez" xml:id="t2">መልክአ፡ ሥዕል፡</title>
@@ -20,9 +20,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -32,6 +31,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
             <listWit>
                <witness/>
@@ -63,10 +65,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl></bibl>
-            <relation name="saws:formsPartOf" active="LIT3088RepCh368" passive="LIT1850Malkea LIT1961Mashaf"></relation>
-         </listBibl>
+         <listRelation>
+            <relation name="saws:formsPartOf"
+                      active="LIT3088RepCh368"
+                      passive="LIT1850Malkea LIT1961Mashaf"/>
+         </listRelation>
          <div type="bibliography">
             <listBibl type="editions">
                <bibl>
@@ -75,13 +78,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Boell2010Orehrehta"/></bibl>
+               <bibl>
+                  <ptr target="bm:Boell2010Orehrehta"/>
+               </bibl>
             </listBibl>
          </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit"  xml:lang="gez">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
-                  ኦርኅርኅተ፡ ሕሊና፡ አፍቅሮተ፡ ሰብእ፡ ልማደ።
+                  ኦርኅርኅተ፡ ሕሊና፡ አፍቅሮተ፡ ሰብእ፡ ልማዳ።
                </ab>
             </div>
          </div>

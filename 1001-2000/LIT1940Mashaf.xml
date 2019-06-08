@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -25,9 +25,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -37,6 +36,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc> 
             <listWit>    
                <witness corresp="BAVet188"/>
@@ -69,7 +71,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <witness type="external" corresp="EMML432"/>
                <witness type="external" corresp="EMML620"/>
                <witness type="external" corresp="EMML3107"/>
-             <!--  more EMML mss to be added-->
+               <!--  more EMML mss to be added-->
                <!--mss need to be assigned to a recension!-->
             </listWit>
          </sourceDesc>
@@ -87,14 +89,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                The <foreign xml:lang="gez">Maṣḥafa krǝstǝnnā</foreign> is the service book for the administration of the Sacraments of Christian Initiation. It includes the preparatory rites and the threefold sercive
                of baptism, chrism and Eucharist. Its structure is the same as of the baptismal book of the Coptic Church.
             </p>
-              <p> It is sometimes grouped in manuscripts with <title ref="LIT1975Mashaf"/>. 
+            <p> It is sometimes grouped in manuscripts with <ref type="work" corresp="LIT1975Mashaf"/>. 
             </p>
          </abstract>
          <textClass>
             <keywords>
                <term key="Liturgy"/>
-               <term key="RitualsAndRites"></term>
-               <term key="ChristianLiterature"></term>
+               <term key="RitualsAndRites"/>
+               <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -108,32 +110,69 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
+         <listRelation>
+            <relation name="saws:isRelatedTo"
+               active="LIT1940Mashaf#t1"
+               passive="LIT1940Mashaf#t1coptic">
+               <desc>According to  <persName ref="PRS10747Zotenbe"/>, the recension of the Maṣḥafa krǝstǝnnā in <ref type="mss" corresp="BNFet78"/> 
+                  agrees nearly entirely to the Coptic baptismal rite edited by Assemani in <bibl>
+                     <ptr target="bm:Assemani1749Catechumenis"/>
+                     <citedRange unit="page">141-167</citedRange>
+                  </bibl>,
+                  <bibl>
+                     <ptr target="bm:Assemani1749Baptismo"/>
+                     <citedRange unit="page">150-193</citedRange>
+                  </bibl> and 
+                  <bibl>
+                     <ptr target="bm:Assemani1749Confirmatione"/>
+                     <citedRange unit="page">82-117</citedRange>
+                  </bibl>.</desc>  
+            </relation>
+         </listRelation>
          <div type="bibliography">
             <listBibl type="editions">
-               <bibl><ptr target="bm:1973Krestenna"/></bibl>
-               <bibl><ptr target="bm:Chaine1913Bapteme"/></bibl>
+               <bibl>
+                  <ptr target="bm:1973Krestenna"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Chaine1913Bapteme"/>
+               </bibl>
             </listBibl>
             <listBibl type="editions" corresp="#t1coptic">
-               <bibl><ptr target="bm:Assemani1749Catechumenis"/><citedRange unit="page">141-167</citedRange></bibl>
-               <bibl><ptr target="bm:Assemani1749Baptismo"/><citedRange unit="page">150-193</citedRange></bibl> 
-               <bibl><ptr target="bm:Assemani1749Confirmatione"/><citedRange unit="page">82-117</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Assemani1749Catechumenis"/>
+                  <citedRange unit="page">141-167</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Assemani1749Baptismo"/>
+                  <citedRange unit="page">150-193</citedRange>
+               </bibl> 
+               <bibl>
+                  <ptr target="bm:Assemani1749Confirmatione"/>
+                  <citedRange unit="page">82-117</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="secondary">
-               <bibl><ptr target="bm:FritschEtAl2007EAEKrestenna"/></bibl>
+               <bibl>
+                  <ptr target="bm:FritschEtAl2007EAEKrestenna"/>
+               </bibl>
             </listBibl>
-         <listBibl type="relations">
-            <bibl></bibl>
-            <relation name="saws:isRelatedTo" active="LIT1940Mashaf" passive="#t1coptic">
-               <desc>According to  <persName ref="PRS10747Zotenbe"/>, the recension of the Maṣḥafa krǝstǝnnā in <ref type="mss" corresp="BNFet78"/> 
-                  agrees nearly entirely to the Coptic baptismal rite edited by Assemani in <bibl><ptr target="bm:Assemani1749Catechumenis"/><citedRange unit="page">141-167</citedRange></bibl>,
-                  <bibl><ptr target="bm:Assemani1749Baptismo"/><citedRange unit="page">150-193</citedRange></bibl> and 
-                  <bibl><ptr target="bm:Assemani1749Confirmatione"/><citedRange unit="page">82-117</citedRange></bibl>.</desc>  </relation>
-         </listBibl>
+          
          </div>
-      <div type="edition">   <div type="textpart" subtype="chapter" xml:id="Blessing"><label>Blessing of mother and child</label></div>
-         <div type="textpart" subtype="chapter" xml:id="Baptism"><label>Rite of baptism</label></div>
-         <div type="textpart" subtype="chapter" xml:id="Confirmation"><label>Rite of Confirmation</label></div>
-         <div type="textpart" subtype="chapter" xml:id="Communion"><label>Rite of Communion</label></div></div>
+         <div type="edition">
+            <div type="textpart" subtype="chapter" xml:id="Blessing">
+               <label>Blessing of mother and child</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Baptism">
+               <label>Rite of baptism</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Confirmation">
+               <label>Rite of Confirmation</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Communion">
+               <label>Rite of Communion</label>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

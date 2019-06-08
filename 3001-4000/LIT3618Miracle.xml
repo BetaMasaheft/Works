@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Miracle of the thirsty dog whom the Virgin gave water</title>
+            <title xml:id="t1">Miracle of Mary: Miracle of the thirsty dog whom the Virgin gave water</title>
+            <title xml:id="t2" xml:lang="en">St Mary gives a thirsty dog water to drink from her shoe</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -43,15 +41,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"/> 
+               <term key="ChristianLiterature"/>
                <term key="Miracle"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords and relations</change>
+         <change who="DR" when="2018-11-16">Added keyword, title and Macomber reference</change>
+         <change who="DR" when="2018-12-12">Added Cerulli reference</change>
+         <change who="AM" when="2019-05-14">added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -62,20 +64,46 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Budge1923Miracles"/>
                   <citedRange unit="item">33</citedRange>
                </bibl>
-            </listBibl>
-            <listBibl type="translation" xml:lang="en">
                <bibl>
-                  <ptr target="bm:Budge1933Miracles"/>
-                  <citedRange unit="page">112</citedRange>
+                  <ptr target="bm:TasfaGiyorgis1956Taammera"/>
+                  <citedRange unit="item">71</citedRange>
+                  <citedRange unit="page">255-256</citedRange>
                </bibl>
             </listBibl>
-     <!-- An Italian translation of the miracle in Cerulli, Storia della lett. 1968 (MV - 2017-03-31) -->
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:formsPartOf"
-                  active="LIT3618Miracle"
-                  passive="LIT2384Taamme"/>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">236</citedRange></bibl>
             </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Budge1933Miracles"/>
+                  <citedRange unit="item">33</citedRange>
+                  <citedRange unit="page">112</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Cerulli1968Letteratura"/>
+                  <citedRange unit="page">98-99</citedRange>
+               </bibl>
+            </listBibl>
+            <!-- The Virgin Mary and the thirsty dog (BMirMA 51-52;
+                        BHMirM 112 // mss. O Etiop. 15, LöfUpp 102, n<locus target="#32">32</locus>,
+                        I, D.-32;  éth. 60, <locus from="56" to="57">56-57</locus>, ZotBNat 63,
+                        n°60-33; Orient. 8814, fols. 1<ref type="mss" corresp="ES65v167"
+                           >65v-167</ref>v, StrBritLib 48, n<locus target="#32">32</locus>, 16.-32). -->
+            <listRelation>
+               <relation name="saws:formsPartOf"
+                         active="LIT3618Miracle"
+                         passive="LIT2384Taamme"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                 <ab>
+                   ዘከመ፡ አስተየቶ፡ ለከልብ፡ ጽሙእ፡ በአሣዕና። ጸሎታ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
+                   ወሀለወት፡ አንስት፡ ምስለ፡ እግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> ወመጽአ፡ ከልብ፣
+                   ወሰደዳሁ፡ ውእቶን፡ አንስት።
+                 </ab>
+             </div>
          </div>
       </body>
    </text>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,13 +10,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Five Pains of the Virgin, Conversation of the Virgin and Jesus Christ; promise of salvation to those who recite the Paternoster and Ave Maria</title>
+            <title xml:id="t1">Miracle of Mary: Five Pains of the Virgin, Conversation of the Virgin and Jesus Christ; promise of salvation to those who recite the Paternoster and Ave Maria</title>
             <title xml:id="t2">Conversation of Jesus Christ and Our Lady Mary on the Five Pains</title>
+            <title xml:id="t3">The five dolours of St Mary</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -27,8 +27,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
             <listWit>
-               <witness/>
+               <witness corresp="IVsuhtelen255"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -44,27 +47,49 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"/> 
+               <term key="Paks2"></term>
+               <term key="ChristianLiterature"/>
                <term key="Miracle"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords</change>
+         <change who="DR" when="2018-11-19">Added keyword, title, Macomber reference</change>
+         <change who="AM" when="2019-05-29">added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
+            <listBibl type="editions">
+               <bibl><ptr target="bm:TasfaGiyorgis1956Taammera"/>
+                  <citedRange unit="item">49</citedRange>
+                  <citedRange unit="page">190-191</citedRange>
+              </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Cerulli1943Maria"/><citedRange unit="page">336-337</citedRange></bibl>
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">400</citedRange></bibl>
+            </listBibl>
+
+            <listRelation>
                <relation name="saws:formsPartOf"
                          active="LIT3633Miracle"
-                         passive="LIT2384Taamme"></relation>
-            </listBibl>
+                         passive="LIT2384Taamme"/>
+            </listRelation>
          </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML5520"/>.</note>
+                 <ab>
+                 ወበአሐቲ፡ ዕለት፡ ይቤላ፡ ክርስቶስ፡ ለእሙ፤ አይ፡ የዓቢ፡ እምነ፡ ሐዘናት፡ ዘረከበኪ።
+                 </ab>
+              </div>
+          </div>
       </body>
    </text>
 </TEI>

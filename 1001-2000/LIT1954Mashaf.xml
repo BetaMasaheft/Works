@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,16 +10,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ምሥቲረ፡ ሰማይ፡ ወምድር፡</title>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ምሥጢረ፡ ሰማይ፡ ወምድር፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa mǝśṭira samāy wa-mǝdr</title>
+            <title xml:lang="en" corresp="#t1">Book of the mysteries of the heaven and the earth</title>
             <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -30,14 +30,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
            <listWit>
               <witness corresp="BNFet117"/>
               <witness corresp="BNFet118"/>
-              <witness type="external" corresp="EMML2161"><desc><locus from="2r" to="101v"/></desc></witness>
-              <witness type="external" corresp="EMML4532"><desc><locus from="1r" to="45r"/></desc></witness>
-              <witness type="external" corresp="EMML2229"><desc><locus from="167r" to="174v"/>An abridged version </desc></witness>
-              <witness type="external" corresp="EMML7023"><desc>A shorter version than <ref type="mss" corresp="EMML2161"/>
-                 <bibl><ptr target="bm:Getatchew1981Controversies"/><citedRange unit="page">115-116</citedRange></bibl></desc></witness>
+              <witness type="external" corresp="EMML2161">
+                  <desc>
+                     <locus from="2r" to="101v"/>
+                  </desc>
+               </witness>
+              <witness type="external" corresp="EMML4532">
+                  <desc>
+                     <locus from="1r" to="45r"/>
+                  </desc>
+               </witness>
+              <witness type="external" corresp="EMML2229">
+                  <desc>
+                     <locus from="167r" to="174v"/>An abridged version </desc>
+               </witness>
+              <witness type="external" corresp="EMML7023">
+                  <desc>A shorter version than <ref type="mss" corresp="EMML2161"/>
+                     <bibl>
+                        <ptr target="bm:Getatchew1981Controversies"/>
+                        <citedRange unit="page">115-116</citedRange>
+                     </bibl>
+                  </desc>
+               </witness>
            </listWit>
          </sourceDesc>
       </fileDesc>
@@ -51,15 +71,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Theology"></term>
-               <term key="Homily"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+               <term key="Homily"/>
             </keywords>
          </textClass>
       </profileDesc>
-      
-      
-      
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
@@ -68,265 +85,350 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2016-10-10">Additions</change>
          <change when="2017-02-09" who="ES">keywords and minor corrections</change>
          <change who="DR" when="2017-03-27">Minor corrections</change>
+         <change when="2019-02-13" who="ES">changed corresp element in accordance with issue 863</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl corresp="#Treatise1">
+                  <ptr target="bm:Perruchon1903Mysteres"/>
+               </bibl>
+            </listBibl>
          
-         <listBibl type="editions">
-            <bibl corresp="LIT1954Mashaf#Treatise1"><ptr target="bm:Perruchon1903Mysteres"/></bibl>
-         </listBibl>
-         
-         <listBibl type="editions">
-            <bibl corresp="LIT1954Mashaf#Treatise2 #Treatise2 #Treatise3"><ptr target="bm:Grebaut1911Mysteres"/></bibl>
-         </listBibl>
-         
-         <listBibl type="secondary">
-            <bibl>
-               <ptr target="bm:Lusini2007Mestira"/>
-            </bibl>
-         </listBibl>
-         
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:isAttributedToAuthor" active="LIT1954Mashaf" passive="PRS11179Yeshaq"/>
-            <relation name="saws:isAttributedToAuthor" active="LIT1954Mashaf" passive="PRS2528Basalota"><desc>The book was revealed to <persName ref="PRS11179Yeshaq"/>  
-               by his spiritual father, <persName ref="PRS2528Basalota"/> or <persName ref="PRS2356Bahayla"/>, who probably are the same person.</desc></relation>
-            <relation name="saws:isAttributedToAuthor" active="LIT1954Mashaf" passive="PRS2356Bahayla"><desc>The book was revealed to <persName ref="PRS11179Yeshaq"/>  
-               by his spiritual father, <persName ref="PRS2528Basalota"/> or <persName ref="PRS2356Bahayla"/>, who probably are the same person.</desc></relation>
-         </listBibl>
-         
+            <listBibl type="editions">
+               <bibl corresp="#Treatise2 #Treatise3">
+                  <ptr target="bm:Grebaut1911Mysteres"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Lusini2007Mestira"/>
+               </bibl>
+            </listBibl>
+     
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT1954Mashaf"
+                         passive="PRS11179Yeshaq"/>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT1954Mashaf"
+                         passive="PRS2528Basalota">
+                  <desc>The book was revealed to <persName ref="PRS11179Yeshaq"/>  
+               by his spiritual father, <persName ref="PRS2528Basalota"/> or <persName ref="PRS2356Bahayla"/>, who probably are the same person.</desc>
+               </relation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT1954Mashaf"
+                         passive="PRS2356Bahayla">
+                  <desc>The book was revealed to <persName ref="PRS11179Yeshaq"/>  
+               by his spiritual father, <persName ref="PRS2528Basalota"/> or <persName ref="PRS2356Bahayla"/>, who probably are the same person.</desc>
+               </relation>
+            </listRelation>
+         </div>
          <div type="edition">
             <div type="textpart" subtype="chapter" n="1" xml:id="Treatise1">
-            <label>First Treatise</label>
-            <div type="textpart" subtype="chapter"  xml:id="Treatise1.1">
-               <label><foreign xml:lang="gez">Dǝrsān</foreign> about Genesis and Exodus</label>
+               <label>First Treatise</label>
+               <div type="textpart" subtype="chapter" xml:id="Treatise1.1">
+                  <label>
+                     <foreign xml:lang="gez">Dǝrsān</foreign> about Genesis and Exodus</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Treatise1.2">
+                  <label>
+                     <foreign xml:lang="gez">Tǝrgʷāme</foreign> upon a passage of Ezekiel</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Treatise1.3">
+                  <label>
+                     <foreign xml:lang="gez">Rāʾǝy</foreign> upon ultimate things</label>
+               </div>
             </div>
-            <div type="textpart" subtype="chapter"  xml:id="Treatise1.2">
-               <label><foreign xml:lang="gez">Tǝrgʷāme</foreign> upon a passage of Ezekiel</label>
-            </div>
-            <div type="textpart" subtype="chapter"  xml:id="Treatise1.3">
-               <label><foreign xml:lang="gez">Rāʾǝy</foreign> upon ultimate things</label>
-            </div>
-         </div>
          
-         <div type="textpart" subtype="chapter" n="2" xml:id="Treatise2">
-            <label>Original <foreign xml:lang="gez">tǝrgʷāme</foreign> on the Revelation of John</label>
-            <div type="textpart" subtype="chapter" n="2.1" xml:id="Treatise2.1">
-               <label>Title</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.2" xml:id="Treatise2.2">
-               <label>Burial of Moses</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.3" xml:id="Treatise2.3">
-               <label>Names of the angels of the seven Asian churches</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.4" xml:id="Treatise2.4">
-               <label>The book with seven seals</label>
-               <desc>The book with seven seals signifies Adam</desc>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.5" xml:id="Treatise2.5">
-               <label>The lamb with seven horns and seven eyes</label>
-               <desc>The seven eyes signify the seven books of the Church: <ref type="work" corresp="LIT1560Gospel"/>, <ref type="work" corresp="LIT3506CatholicEpis"/>, 
+            <div type="textpart" subtype="chapter" n="2" xml:id="Treatise2">
+               <label>Original <foreign xml:lang="gez">tǝrgʷāme</foreign> on the Revelation of John</label>
+               <div type="textpart" subtype="chapter" n="2.1" xml:id="Treatise2.1">
+                  <label>Title</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="2.2" xml:id="Treatise2.2">
+                  <label>Burial of Moses</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="2.3" xml:id="Treatise2.3">
+                  <label>Names of the angels of the seven Asian churches</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="2.4" xml:id="Treatise2.4">
+                  <label>The book with seven seals</label>
+                  <desc>The book with seven seals signifies Adam</desc>
+               </div>
+               <div type="textpart" subtype="chapter" n="2.5" xml:id="Treatise2.5">
+                  <label>The lamb with seven horns and seven eyes</label>
+                  <desc>The seven eyes signify the seven books of the Church: <ref type="work" corresp="LIT1560Gospel"/>, <ref type="work" corresp="LIT3506CatholicEpis"/>, 
                   <ref type="work" corresp="LIT1019Actsof"/>, <ref type="work" corresp="LIT3505PaulineEpis"/>,
                   <ref type="work" corresp="LIT2317Senodo"/>, <ref type="work" corresp="LIT3179Revela"/>, <ref type="work" corresp="LIT2461Testam"/> with <ref type="work" corresp="LIT2432Teachi"/>.</desc>
+               </div>
+               <div type="textpart" subtype="chapter" n="2.6" xml:id="Treatise2.6">
+                  <label>Explanation of the seven seals</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="2.7" xml:id="Treatise2.7">
+                  <label>The blasts of the angels' trumpets</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="2.8" xml:id="Treatise2.8">
+                  <label>The mystery of John ʾAbu Qalamsis</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="2.9" xml:id="Treatise2.9">
+                  <label>The hidden scriptures</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.10"
+                    xml:id="Treatise2.10">
+                  <label>The seven hidden gifts</label>
+                  <desc>Among the seven gifts which Adam received from God are kingdom and priesthood.</desc>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.11"
+                    xml:id="Treatise2.11">
+                  <label>Incredulity when faced with the exposition of the mystery</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.12"
+                    xml:id="Treatise2.12">
+                  <label>The origin of the prophets</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.13"
+                    xml:id="Treatise2.13">
+                  <label>Abraham</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.14"
+                    xml:id="Treatise2.14">
+                  <label>The names of the fathers and mothers of the prophets</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.15"
+                    xml:id="Treatise2.15">
+                  <label>The apostles</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.16"
+                    xml:id="Treatise2.16">
+                  <label>Exegesis of some biblical texts</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.17"
+                    xml:id="Treatise2.17">
+                  <label>Symbolism of the word "lion"</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.18"
+                    xml:id="Treatise2.18">
+                  <label>The wound of the beast</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.19"
+                    xml:id="Treatise2.19">
+                  <label>The number of the beast</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.20"
+                    xml:id="Treatise2.20">
+                  <label>The seven bowls</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.21"
+                    xml:id="Treatise2.21">
+                  <label>Names of several sovereigns</label>
+                  <desc>The kings mentioned in <ref type="work" corresp="LIT1957Mashaf"/>
+                  </desc>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.22"
+                    xml:id="Treatise2.22">
+                  <label>The false messiah</label>
+                  <desc>On the antichrist, who will one day be king of Rome and meet the king of Ethiopia</desc>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.23"
+                    xml:id="Treatise2.23">
+                  <label>The hidden scriptures</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.24"
+                    xml:id="Treatise2.24">
+                  <label>The hidden mystery</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="2.25"
+                    xml:id="Treatise2.25">
+                  <label>Reading of the book</label>
+               </div>
             </div>
-            <div type="textpart" subtype="chapter" n="2.6" xml:id="Treatise2.6">
-               <label>Explanation of the seven seals</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.7" xml:id="Treatise2.7">
-               <label>The blasts of the angels' trumpets</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.8" xml:id="Treatise2.8">
-               <label>The mystery of John ʾAbu Qalamsis</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.9" xml:id="Treatise2.9">
-               <label>The hidden scriptures</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.10" xml:id="Treatise2.10">
-               <label>The seven hidden gifts</label>
-               <desc>Among the seven gifts which Adam received from God are kingdom and priesthood.</desc>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.11" xml:id="Treatise2.11">
-               <label>Incredulity when faced with the exposition of the mystery</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.12" xml:id="Treatise2.12">
-               <label>The origin of the prophets</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.13" xml:id="Treatise2.13">
-               <label>Abraham</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.14" xml:id="Treatise2.14">
-               <label>The names of the fathers and mothers of the prophets</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.15" xml:id="Treatise2.15">
-               <label>The apostles</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.16" xml:id="Treatise2.16">
-               <label>Exegesis of some biblical texts</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.17" xml:id="Treatise2.17">
-               <label>Symbolism of the word "lion"</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.18" xml:id="Treatise2.18">
-               <label>The wound of the beast</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.19" xml:id="Treatise2.19">
-               <label>The number of the beast</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.20" xml:id="Treatise2.20">
-               <label>The seven bowls</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.21" xml:id="Treatise2.21">
-               <label>Names of several sovereigns</label>
-               <desc>The kings mentioned in <ref type="work" corresp="LIT1957Mashaf"/></desc>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.22" xml:id="Treatise2.22">
-               <label>The false messiah</label>
-               <desc>On the antichrist, who will one day be king of Rome and meet the king of Ethiopia</desc>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.23" xml:id="Treatise2.23">
-               <label>The hidden scriptures</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.24" xml:id="Treatise2.24">
-               <label>The hidden mystery</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="2.25" xml:id="Treatise2.25">
-               <label>Reading of the book</label>
-            </div>
-         </div>
          
-         <div type="textpart" subtype="chapter" n="3" xml:id="Treatise3">
-            <label><foreign xml:lang="gez">Dǝrsān</foreign> about the mystery of the divinity, mǝśṭira malakot</label>
-            <label>ምሥጢረ፡ መለኮት፡ </label>
-            <div type="textpart" subtype="chapter" n="3.1" xml:id="Treatise3.1">
-               <label>The mystery of the divinity</label>
+            <div type="textpart" subtype="chapter" n="3" xml:id="Treatise3">
+               <label>
+                  <foreign xml:lang="gez">Dǝrsān</foreign> about the mystery of the divinity, mǝśṭira malakot</label>
+               <label>ምሥጢረ፡ መለኮት፡ </label>
+               <div type="textpart" subtype="chapter" n="3.1" xml:id="Treatise3.1">
+                  <label>The mystery of the divinity</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="3.2" xml:id="Treatise3.2">
+                  <label>Trinitiy</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="3.3" xml:id="Treatise3.3">
+                  <label>The creation of Heaven and Earth</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="3.4" xml:id="Treatise3.4">
+                  <label>Symbolic interpretations</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="3.5" xml:id="Treatise3.5">
+                  <label>The four rivers</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="3.6" xml:id="Treatise3.6">
+                  <label>Explanation of the rivers</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="3.7" xml:id="Treatise3.7">
+                  <label>The days of creation</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="3.8" xml:id="Treatise3.8">
+                  <label>Creation of Adam</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="3.9" xml:id="Treatise3.9">
+                  <label>The entry into heaven and the good <!--larron--></label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="3.10"
+                    xml:id="Treatise3.10">
+                  <label>The entry of the righteous into Heaven</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    n="3.11"
+                    xml:id="Treatise3.11">
+                  <label>The Sabbath rest and the angels' circumcision</label>
+               </div>
             </div>
-            <div type="textpart" subtype="chapter" n="3.2" xml:id="Treatise3.2">
-               <label>Trinitiy</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="3.3" xml:id="Treatise3.3">
-               <label>The creation of Heaven and Earth</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="3.4" xml:id="Treatise3.4">
-               <label>Symbolic interpretations</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="3.5" xml:id="Treatise3.5">
-               <label>The four rivers</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="3.6" xml:id="Treatise3.6">
-               <label>Explanation of the rivers</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="3.7" xml:id="Treatise3.7">
-               <label>The days of creation</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="3.8" xml:id="Treatise3.8">
-               <label>Creation of Adam</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="3.9" xml:id="Treatise3.9">
-               <label>The entry into heaven and the good <!--larron--></label>
-            </div>
-            <div type="textpart" subtype="chapter" n="3.10" xml:id="Treatise3.10">
-               <label>The entry of the righteous into Heaven</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="3.11" xml:id="Treatise3.11">
-               <label>The Sabbath rest and the angels' circumcision</label>
-            </div>
-         </div>
-         
-         <div type="textpart" subtype="chapter" n="4" xml:id="Treatise4">
-            <label><foreign xml:lang="gez">Dǝrsān</foreign> about the birth of Enoch, <foreign xml:lang="gez">lǝdatu la-Henok</foreign> </label>
-            <note> <bibl><ptr target="bm:Zotenberg1877Catalogue"/><citedRange unit="page">140</citedRange></bibl> considers the first three chapters <ref target="#Treatise4.1  #Treatise4.2 #Treatise4.3"/> part of the
+            <div type="textpart" subtype="chapter" n="4" xml:id="Treatise4">
+               <label>
+                  <foreign xml:lang="gez">Dǝrsān</foreign> about the birth of Enoch, <foreign xml:lang="gez">lǝdatu la-Henok</foreign> 
+               </label>
+               <listBibl type="clavis">
+                  <bibl type="CAVT">
+                     <ptr target="bm:CAVT"/>
+                     <citedRange unit="item">72</citedRange>
+                  </bibl>
+               </listBibl>
+               <note> 
+                  <bibl>
+                     <ptr target="bm:Zotenberg1877Catalogue"/>
+                     <citedRange unit="page">140</citedRange>
+                  </bibl> considers the first three chapters <ref target="#Treatise4.1  #Treatise4.2 #Treatise4.3"/> part of the
             preceding <ref target="#Treatise3"/>.</note>
             
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.1">
-               <label>Introduction</label>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.1">
+                  <label>Introduction</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.2">
+                  <label>Adam's birthday</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.3">
+                  <label>Adam and Jesus</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4.1" xml:id="Treatise4.4">
+                  <label>Symbolic explanation of the ten weeks of <ref type="work" corresp="LIT1340EnochE"/>
+                  </label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4.2" xml:id="Treatise4.5">
+                  <label>Computus of Enoch's birthday </label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4.3" xml:id="Treatise4.6">
+                  <label>Computus of Noah's birthday </label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4.4" xml:id="Treatise4.7">
+                  <label>Noah, symbol of the son</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4.5" xml:id="Treatise4.8">
+                  <label>Computus of Abraham's birthday</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.9">
+                  <label>Abraham, symbol of Jesus</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.10">
+                  <label>Monks and prophets</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.11">
+                  <label>St Anthony</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.12">
+                  <label>Birth of Isaac</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.13">
+                  <label>Isaac, symbol of Jesus</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.14">
+                  <label>Birth of Jacob</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.15">
+                  <label>Sainthood and role of Jacob</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.16">
+                  <label>Symbolism of the life of Jacob</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.17">
+                  <label>Birth of Joseph</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.18">
+                  <label>Joseph, symbol of Jesus</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.19">
+                  <label>The testament of the Lord - The ewe</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.20">
+                  <label>The tabernacle</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.21">
+                  <label>Symbolism of the tabernacle</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.22">
+                  <label>Aaron's priestly clothes</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.23">
+                  <label>The precious stones and their symbolism</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.24">
+                  <label>On the priesthood</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.25">
+                  <label>Incense, symbol of Christ's suffering</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.26">
+                  <label>The Virgin Mary</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.27">
+                  <label>Joshua, symbol of Jesus</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.28">
+                  <label>David</label>
+               </div>
+               <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.29">
+                  <label>David and the trinity</label>
+               </div>
             </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.2">
-               <label>Adam's birthday</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.3">
-               <label>Adam and Jesus</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4.1" xml:id="Treatise4.4">
-               <label>Symbolic explanation of the ten weeks of <ref type="work" corresp="LIT1340EnochE"/></label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4.2" xml:id="Treatise4.5">
-               <label>Computus of Enoch's birthday </label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4.3" xml:id="Treatise4.6">
-               <label>Computus of Noah's birthday </label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4.4" xml:id="Treatise4.7">
-               <label>Noah, symbol of the son</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4.5" xml:id="Treatise4.8">
-               <label>Computus of Abraham's birthday</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.9">
-               <label>Abraham, symbol of Jesus</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.10">
-               <label>Monks and prophets</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.11">
-               <label>St. Anthony</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.12">
-               <label>Birth of Isaac</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.13">
-               <label>Isaac, symbol of Jesus</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.14">
-               <label>Birth of Jacob</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.15">
-               <label>Sainthood and role of Jacob</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.16">
-               <label>Symbolism of the life of Jacob</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.17">
-               <label>Birth of Joseph</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.18">
-               <label>Joseph, symbol of Jesus</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.19">
-               <label>The testament of the Lord - The ewe</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.20">
-               <label>The tabernacle</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.21">
-               <label>Symbolism of the tabernacle</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.22">
-               <label>Aaron's priestly clothes</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.23">
-               <label>The precious stones and their symbolism</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.24">
-               <label>On the priesthood</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.25">
-               <label>Incense, symbol of Christ's suffering</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.26">
-               <label>The Virgin Mary</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.27">
-               <label>Joshua, symbol of Jesus</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.28">
-               <label>David</label>
-            </div>
-            <div type="textpart" subtype="chapter" n="4." xml:id="Treatise4.29">
-               <label>David and the trinity</label>
-            </div>
-         </div></div>
+         </div>
       </body>
    </text>
 </TEI>

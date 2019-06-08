@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,13 +11,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">ድርሳን፡ ዘብጹዕ፡ አባ፡ ሚናስ፡ ኤጲስ፡ ቆጶስ፡ ዘአኵሱም፡ በእንተ፡ ብጹዕ፡ ወቅዱስ፡ አባ፡ ዮሐኒ።</title>
-            <title xml:lang="gez" corresp="#t1">Dǝrsān za-bǝṣuʿ ʾabbā Minās ʾeṗis qoṗos za-ʾAkʷsum ba-ʾǝnta bǝṣuʿ wa-qǝddus ʾabbā Yoḥanni</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān za-bǝṣuʿ ʾabbā Minās ʾeṗis qoṗos za-ʾAkʷsum baʾǝnta bǝṣuʿ wa-qǝddus ʾabbā Yoḥanni</title>
             <title xml:lang="en" corresp="#t1">Homily of the blessed  ʾabbā Minās, bishop of Aksum, on the blessed and holy ʾabbā Yoḥanni</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -27,6 +26,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
             <listWit>
                <witness corresp="BNFet132#ms_i5"/>
@@ -62,13 +64,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body>
          <div type="bibliography">
             
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:isAttributedToAuthor" active="LIT4051Homily" passive="PRS7104Minas"/>
-            </listBibl>
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT4051Homily"
+                         passive="PRS7104Minas"/>
+            </listRelation>
             
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Nosnitsin2007Minas"/></bibl>
+               <bibl>
+                  <ptr target="bm:Nosnitsin2007Minas"/>
+               </bibl>
             </listBibl>
          </div>
       </body>

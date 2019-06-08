@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -17,9 +17,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -31,7 +30,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">1128</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -54,20 +60,50 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-11-12">Added bibliography</change>
          <change who="DR" when="2017-03-09">Added keywords</change>
+         <change who="MV" when="2017-12-01">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Nosnitsin2010TaklaHaymanot"/></bibl>
-               <bibl><ptr target="bm:Nosnitsin2003Felsatu"/><citedRange unit="page">145</citedRange>
-                  <citedRange unit="note">30</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Nosnitsin2010TaklaHaymanot"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Nosnitsin2003Felsatu"/>
+                  <citedRange unit="page">145</citedRange>
+                  <citedRange unit="note">30</citedRange>
+               </bibl>
             </listBibl>
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:formsPartOf" active="LIT1507GadlaT" passive="LIT3973GadlaT"></relation>
-            </listBibl>
+            <listRelation>
+               <relation name="saws:formsPartOf"
+                         active="LIT1507GadlaT"
+                         passive="LIT3973GadlaT"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+            <div type="textpart" xml:id="MainPart">
+               <label>Main part</label>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                  ንቀድም፡ በረድኤተ፡ እግዚአብሔር፡ መጽሐፈ፡ ልደቱ፡ ለአቡነ፡ <gap reason="omitted"/> ወልደ፡ እግዚአብሔር፡ በጸጋ፡ ወወልደ፡ አዳም፡ በሥጋ፡
+               </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                  በስምዐ፡ ፪ወ፫ሰማዕት፡ ይቁም፡ ኵሉ፡ ነገር። ትንብልናሁ፡ ለአቡነ፡ <gap reason="omitted"/> ወእምጋኔነ፡ ቀትር፡ በኵሉ፡ ሰዓት፡ <gap reason="omitted"/> አሜን።
+               </ab>
+               </div>
+            </div>
+            <div type="textpart" xml:id="Epilogue">
+               <label>Epilogue</label>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     በትእዛዘ፡ አቡነ፡ ጴጥሮስ፡ <gap reason="omitted"/> ዘበገድል፡ ሠናይ፡ ፈጸመ፡ ሑረቶ፡ <gap reason="omitted"/> 
+                  </ab>
+               </div>
+            </div>
          </div>
       </body>
    </text>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Miracle of the transmigration of the Virgin, Tāfonyā is sent to break the Virgin's bed and is saved by her</title>
+            <title xml:id="t1">Miracle of Mary: Miracle of the transmigration of the Virgin, Tāfonyā is sent to break the Virgin's bed and is saved by her</title>
+            <title xml:id="t2" xml:lang="en">When Tafonǝyā lays hands on the bier of St Mary, an angel cuts his arms off</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -44,25 +42,44 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
-               <term key="ApocryphaPseudoepigrapha"/> 
+               <term key="Apocrypha"/>
                <term key="Miracle"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords</change>
+         <change who="DR" when="2018-11-21">Added keyword, title and Macomber reference</change>
+         <change who="AM" when="2019-04-24">added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
+            <listBibl type="editions">
+               <bibl><ptr target="bm:TasfaGiyorgis1956Taammera"/>
+                  <citedRange unit="item">4</citedRange>
+                  <citedRange unit="page">30-32</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">119</citedRange></bibl>
+            </listBibl>
+            <listRelation>
                <relation name="saws:formsPartOf"
                          active="LIT3675Miracle"
-                         passive="LIT2384Taamme"></relation>
-            </listBibl>
+                         passive="LIT2384Taamme"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                 <ab>
+                   ወሶበ፡ ተጋብኡ፡ ሐዋርያት፡ ለግንዘተ፡ እሙ፣ ወረከብዋ፡ ለማርያም፡ በክብር፡ ወበዓቢይ፡ ስብሐት።
+                 </ab>
+             </div>
          </div>
       </body>
    </text>

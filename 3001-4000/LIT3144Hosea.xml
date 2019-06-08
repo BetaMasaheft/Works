@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,14 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Book of Hosea</title>
+            <title xml:id="t1" xml:lang="gez">ዘሆሴዕ፡ ነቢይ።</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Za-Hoseʿ nabiyy</title>
+            <title xml:id="t2" xml:lang="en">Book of Hosea</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -27,6 +28,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
             <listWit>
                <witness corresp="BLadd16189#ms_i6.1"/>
@@ -42,24 +46,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Bible"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Bible"/>
                <term key="OldTestament"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="MV" when="2016-05-26">CREATED: text record</change>
          <change when="2017-02-14" who="ES">added relation keywords</change>
+         <change when="2017-08-22" who="DR">Updated title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-         <listBibl type="relations">
-            <bibl></bibl>
-            <relation name="saws:formsPartOf" active="LIT3144Hosea" passive="LIT1315Dodeka"></relation>
-         </listBibl>
+            <listRelation>
+               <relation name="saws:formsPartOf"
+                         active="LIT3144Hosea"
+                         passive="LIT1315Dodeka"/>
+            </listRelation>
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Fuhs1971Hosea"/>

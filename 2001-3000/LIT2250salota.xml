@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">First Song of the <persName ref="PRS11288AnAzMi">Three Youths in the Furnace</persName></title>
+            <title xml:lang="gez" xml:id="t1">ጸሎተ፡ ዳንኤል፡ ነቢይ፡ ስብሐት፡ ዘእምኣዛርያ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalota Dānǝʾel nabiy sǝbḥat za-ʾǝm-ʾAzāryā</title>
+            <title xml:lang="en" corresp="#t1">First Song of the Three Youths in the Furnace</title>
             <title xml:lang="gez" xml:id="t2">ጸሎተ፡ ዳንኤል፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t2">Ṣalota Dānǝʾel</title>
             <title xml:lang="en" corresp="#t2">The Prayer of Daniel</title>
@@ -18,9 +20,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -31,7 +32,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit><witness corresp="BNFet9"></witness></listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listWit>
+               <witness corresp="BNFet9"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -46,11 +52,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Bible"/>
                <term key="OldTestament"/>
                <term key="ChristianLiterature"/>
-               <term key="Prayers"></term>
+               <term key="Prayers"/>
             </keywords>
          </textClass>
          <abstract>
-            <p> Extract from <title ref="LIT3529Daniel"/> 3:26-45 [apocryphal Prayer of <persName ref="PRS11464Azaria">Azariah</persName> 1-22]</p>
+            <p>Excerpt from <ref type="work" corresp="LIT3529Daniel"/> 3:26-45 [apocryphal Prayer of <persName ref="PRS11464Azaria">Azariah</persName> 1-22]</p>
          </abstract>
       </profileDesc>
       <revisionDesc>
@@ -68,17 +74,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <ptr target="bm:Devens2007Mahaleya"/>
             </bibl>
          </listBibl>
-         <listBibl type="relations">
-            <bibl/>
+         <listRelation>
             <relation name="saws:formsPartOf"
                       active="LIT2250salota"
                       passive="LIT1828Mahale"/>
             <relation name="saws:formsPartOf"
                       active="LIT2250salota"
                       passive="LIT1259Daniel"/>
-            <relation name="ecrm:P129_is_about" active="LIT2250salota" passive="PRS11464Azaria PRS11288AnAzMi"></relation>
-            
-         </listBibl>
+            <relation name="ecrm:P129_is_about"
+                      active="LIT2250salota"
+                      passive="PRS11464Azaria PRS11288AnAzMi"/>
+         </listRelation>
       </body>
    </text>
 </TEI>

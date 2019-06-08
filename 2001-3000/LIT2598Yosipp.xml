@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,21 +11,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" xml:lang="en">Yosippon</title>
-            <title corresp="#t1"  xml:lang="en">Josippon</title>
-            <title xml:id="t3" xml:lang="heb">ספר יוסיפון</title>
-            <title corresp="#t3" xml:lang="heb" type="normalized">Sēfer Yosippon</title>
+            <title corresp="#t1" xml:lang="en">Josippon</title>
+            <title xml:id="t3" xml:lang="he">ספר יוסיפון</title>
+            <title corresp="#t3" xml:lang="he" type="normalized">Sēfer Yosippon</title>
             <title xml:id="t4">Sēfer [Yosef] Ben Goryon</title>
             <title xml:id="t5" xml:lang="gez">ዜና፡ አይሁድ፡</title>
-            <title corresp="#t5" xml:lang="gez" type="normalized">Zena ʾAyhud</title>
+            <title corresp="#t5" xml:lang="gez" type="normalized">Zenā ʾAyhud</title>
             <title corresp="#t5" xml:lang="en">Story of Jews</title>
+            <title xml:id="t6" xml:lang="gez">መጽሐፈ፡ ሥርው፡</title>
+            <title corresp="#t6" xml:lang="gez" type="normalized">Maṣḥafa Śǝrw</title>
+            <title corresp="#t6" xml:lang="en">The History of the Jews</title>
+            
+            <title type="short">Jsp.</title>
             <author>Joseph ben Gorion</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -46,13 +50,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="he">Hebrew</language>
          </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Theology"/>
                <term key="Bible"/>
-               <term key="OldTestament"></term>
+               <term key="OldTestament"/>
+               <term key="Apocrypha"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -61,17 +68,101 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-04-24" who="ES">keywords title relations added</change>
+         <change who="DR" when="2017-08-14">Added textparts</change>
+         <change who="DR" when="2017-11-28">Corrected title and relations</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl>
-                           </bibl>
-            <relation name="saws:isAttributedToAuthor" active="LIT2598Yosipp" passive="PRS5772Josephus"><desc>attributed by the medieval Hebrew tradition to Josephus Flavius</desc></relation>
-            <relation name="saws:isAttributedToAuthor" active="LIT2598Yosipp" passive="PRS5769Josephb"><desc>The identity of "Joseph ben Gurion" is not fully clear.</desc></relation>
-         </listBibl>
-         <ab/>
+        <div type="bibliography">
+           <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT2598Yosipp"
+                         passive="PRS5772Josephus">
+                  <desc>Attributed by the medieval Hebrew tradition to Flavius Josephus.</desc>
+               </relation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT2598Yosipp"
+                         passive="PRS5769Josephb">
+                  <desc>The work was attributed to <persName ref="PRS5769Josephb"/> due to a mistake in one of its sources.</desc>
+               </relation>
+            </listRelation>
+           <listBibl type="editions">
+              <bibl>
+                  <ptr target="bm:Murad1938ZenaAyhud"/>
+               </bibl>
+           </listBibl>
+           <listBibl type="secondary">
+              <bibl>
+                  <ptr target="bm:Witakowski2014EAEZenaAyhud"/>
+               </bibl>
+           </listBibl>
+        </div>
+         <div type="edition">
+            <note>This division into textparts follows <ref type="mss" corresp="FSUrueppII2"/>.</note>
+            <div type="textpart"
+                 subtype="book"
+                 n="1"
+                 xml:id="Kefl1"
+                 xml:lang="gez">
+               <label>Kǝfl 1, starting with <persName ref="PRS1386Adam"/> and mainly treating Persian history.</label>
+            </div>
+            <div type="textpart"
+                 subtype="book"
+                 n="2"
+                 xml:id="Kefl2"
+                 xml:lang="gez">
+               <label>Kǝfl 2, Romance of Alexander</label> 
+               <listBibl type="translation">
+                  <bibl>
+                     <ptr target="bm:Budge1896AlexanderTranslation"/>
+                     <citedRange unit="page">403-428</citedRange>
+                  </bibl>
+               </listBibl>
+            </div>
+            <div type="textpart"
+                 subtype="book"
+                 n="3"
+                 xml:id="Kefl3"
+                 xml:lang="gez">
+               <label>Kǝfl 3</label>
+            </div>
+            <div type="textpart"
+                 subtype="book"
+                 n="4"
+                 xml:id="Kefl4"
+                 xml:lang="gez">
+               <label>Kǝfl 4</label>
+            </div>
+            <div type="textpart"
+                 subtype="book"
+                 n="5"
+                 xml:id="Kefl5"
+                 xml:lang="gez">
+               <label>Kǝfl 5</label>
+            </div>
+            <div type="textpart"
+                 subtype="book"
+                 n="6"
+                 xml:id="Kefl6"
+                 xml:lang="gez">
+               <label>Kǝfl 6</label>
+            </div>
+            <div type="textpart"
+                 subtype="book"
+                 n="7"
+                 xml:id="Kefl7"
+                 xml:lang="gez">
+               <label>Kǝfl 7</label>
+            </div>
+            <div type="textpart"
+                 subtype="book"
+                 n="8"
+                 xml:id="Kefl8"
+                 xml:lang="gez">
+               <label>Kǝfl 8</label>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

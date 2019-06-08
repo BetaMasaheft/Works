@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,15 +11,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ገድለ፡ ተክለ፡ ሃይማኖት፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Takla Hāymānot (Wāldǝbbā recension)</title>
-            <title xml:lang="en" corresp="#t1">Vita of Takla Hāymānot</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Takla Hāymānot</title>
+            <title xml:lang="en" corresp="#t1">Vita of Takla Hāymānot (Wāldǝbbā recension)</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -30,6 +29,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">1129</citedRange>
+               </bibl>
+            </listBibl>
             <listWit>
                <witness corresp="BNFet136#p1_i1"/>
                <witness corresp="BNFmon37#ms_i1"/>
@@ -45,7 +53,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <abstract>
             <p>The so-called Wāldǝbbā recension is a brief and early version, archaic in style.
-            <bibl><ptr target="bm:Nosnitsin2010TaklaHaymanot"/><citedRange unit="page">831b</citedRange></bibl></p>
+            <bibl>
+                  <ptr target="bm:Nosnitsin2010TaklaHaymanot"/>
+                  <citedRange unit="page">831b</citedRange>
+               </bibl>
+            </p>
          </abstract>
          <textClass>
             <keywords scheme="#ethioauthlist">
@@ -58,6 +70,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="MV" when="2016-09-06">CREATED: text record</change>
          <change who="DR" when="2016-10-31">Added abstract and witnesses</change>
          <change who="MV" when="2017-04-20">Added keywords</change>
+         <change who="MV" when="2017-12-01">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -68,13 +81,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:ContiRossini1896TaklaHaymanot"/>
                </bibl>
             </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Colin2017Saintsfondateurs"/>
+                  <citedRange>38-74</citedRange>
+               </bibl>
+            </listBibl> 
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Nosnitsin2010TaklaHaymanot"/></bibl>
+               <bibl>
+                  <ptr target="bm:Nosnitsin2010TaklaHaymanot"/>
+               </bibl>
             </listBibl>
-               <listBibl type="relations">
-                  <bibl/>
-                  <relation name="saws:formsPartOf" active="LIT3969GadlaTHW" passive="LIT3973GadlaT"></relation>
-               </listBibl>
+               <listRelation>
+               <relation name="saws:formsPartOf"
+                         active="LIT3969GadlaTHW"
+                         passive="LIT3973GadlaT"/>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT3969GadlaTHW"
+                         passive="PRS9162TaklaHa"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  ናሁ፡ ዜና፡ ለአቡነ፡ <gap reason="omitted"/> ሚላዱሰ፡ ምድረ፡ አምሐራ፡ እንተ፡ ትሰመይ፡ ባሕረ፡ ቀጋ፡
+               </ab>
+            </div>
+            <div type="textpart" subtype="explicit" xml:lang="gez">
+               <ab>
+                   በእዴሁ፡ ወበእደ፡ ደቂቁ፡ ወደቂቀ፡ ደቂቁ፡ እምድኅሬሁ። ኢይፍልጠነ፡ እምኔሁ፡ በጸሎተ፡ ዚአሁ፡ ወይክፍለነ፡ ውስተ፡ ፍሥሓሁ፡ <gap reason="omitted"/> ወአሜን።
+               </ab>
+            </div>
          </div>
       </body>
    </text>

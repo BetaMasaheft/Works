@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -13,14 +13,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">ተአምረ፡ ኤዎስጣቴዎስ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Taʾammǝra ʾEwosṭātewos</title>
             <title xml:lang="en" corresp="#t1">Miracles of ʾEwosṭātewos</title>
+            
             <editor role="generalEditor" key="AB"/>
             <editor key="MV"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -31,7 +31,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <!-- BHO 296-297, but the clavis ID has to be encoded in the textpart section. 
+               BHO 296 is already fixed, BHO 297 is still missing due to incomplete identification/encoding of the single miracles. 
+               Here BHO it is redundant. -->
             <listWit>
+               <witness corresp="BLorient703"/>
+               <witness corresp="BLorient704"/>
+               <witness corresp="BLorient705"/>
+               <witness corresp="BerOr1012"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -59,23 +69,67 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body>
          <div type="bibliography">
             <listBibl type="editions">
-               <bibl><ptr target="bm:Turaiev1905Eustathii"/></bibl>
+               <bibl>
+                  <ptr target="bm:Turaiev1905Eustathii"/>
+                  <citedRange unit="page">134-177</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="translation">
-               <bibl><ptr target="bm:Turaev1906Ewostatewos"/><citedRange unit="page">71-97</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Turaev1906Ewostatewos"/>
+                  <citedRange unit="page">71-97</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Lusini1996Ewostatewos"/><citedRange unit="page">353-365</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Lusini1996Ewostatewos"/>
+                  <citedRange unit="page">353-365</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Lusini1993Monachesimo"/>
+               </bibl>
             </listBibl>
          </div>
          <div type="edition">
-               <div type="textpart" subtype="chapter" xml:id="RichMonk"><label>On the rich monk and the locusts</label></div>
-               <div type="textpart" subtype="chapter" xml:id="Abdabal"><label>On ʾAbdabal the sinner</label></div>
-               <div type="textpart" subtype="chapter" xml:id="Woman"><label>On the woman who could observe the Sabbath</label></div>
-               <div type="textpart" subtype="chapter" xml:id="BurektMaryam"><label>On the vision of the widow Burǝkt Māryām</label></div>
-               <div type="textpart" subtype="chapter" xml:id="EvilMan"><label>On the evil man who was saved by the saint</label></div>
-               <div type="textpart" subtype="chapter" xml:id="Death"><label>On the death of ʾEwosṭātewos</label>
+            <div type="textpart" subtype="chapter" xml:id="First">
+               <label>First miracle</label>
+               <listBibl type="clavis">
+                  <bibl type="BHO">
+                     <ptr target="bm:BHO"/>
+                     <citedRange unit="item">296</citedRange>
+                  </bibl>
+               </listBibl>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ወሶበ፡ ተመይጠ፡ እምአርማንያ፡ አቡነ፡ ኤዎስጣቴዎስ፡ ውስተ፡ ብሔረ፡ ኢትዮጵያ፡
+                  </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                     ውእቱኬ፡ ጸዋሬ፡ መስቀል፡ ዘቃል፡ ከያዴ፡ ባሕር፡ ወማዕበል፡ በኀይለ፡ አማኑኤል፡ ውኩል።
+                  </ab>
+               </div>
+            </div>
+               <div type="textpart" subtype="chapter" xml:id="RichMonk">
+               <label>On the rich monk and the locusts</label>
+            </div>
+               <div type="textpart" subtype="chapter" xml:id="Abdabal">
+               <label>On ʾAbdabal the sinner</label>
+            </div>
+               <div type="textpart" subtype="chapter" xml:id="Woman">
+               <label>On the woman who could observe the Sabbath</label>
+            </div>
+               <div type="textpart" subtype="chapter" xml:id="BurektMaryam">
+               <label>On the vision of the widow Burǝkt Māryām</label>
+            </div>
+               <div type="textpart" subtype="chapter" xml:id="EvilMan">
+               <label>On the evil man who was saved by the saint</label>
+            </div>
+               <div type="textpart" subtype="chapter" xml:id="Death">
+               <label>On the death of ʾEwosṭātewos</label>
                   <!-- This is perhaps not a miracle, but the continuation of the Vita, cp. bm:Lusini1996Ewostatewos, p. 356 -->
+                  <!--  Miracles are 16 in Turaiev's edition, but they belong to different redactions (the recensio antiqua only contains 12) and should be 
+                  assigned different work records-->
                </div>
          </div>
       </body>

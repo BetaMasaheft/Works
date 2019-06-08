@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -12,7 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">አርባዕቱ፡ ወንጌል፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">ʾArbāʿtu wangel</title>
-            <title xml:lang="en" corresp="#t1">Four Gospels</title>
+            <title xml:lang="en" corresp="#t1" type="main">Four Gospels</title>
             <title xml:lang="en" corresp="#t1">Tetraevangelium</title>
             <title xml:lang="gez" xml:id="t2">ቅዱስ፡ ወንጌል፡</title>
             <title xml:lang="gez" corresp="#t2" type="normalized">Qǝddus wangel</title>
@@ -21,9 +21,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -64,10 +63,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body>
          <div type="edition">
             
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionGospels">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="IntroductionGospels"
+                 corresp="LIT2705Introd">
                <label>Introduction to the Four Gospels</label>
                
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionMaqdema">
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:lang="gez"
+                    xml:id="IntroductionMaqdema"
+                    corresp="LIT4872MaqdemaWangel">
                   <label>Maqdǝma wangel</label>
                   <note>This text has been translated from Arabic; an abridged version of the Arabic text can
                      be found in BNF Arabe 57, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89326k"/>.
@@ -75,35 +82,165 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <ptr target="bm:Zotenberg1877Catalogue"/>
                         <citedRange unit="page">29</citedRange>
                      </bibl>
+                     
+                     <!-- 
+                     <listBibl type="mss">
+                        <bibl corresp="EMML_no._4224">EMML X, 414-415<date>(14th cent.)</date>
+                        </bibl>
+                        <bibl>BritMus Orient. 510 (17th cent.), (WrBriMus 24-25, no 35)</bibl>
+                        <bibl corresp="EMML_no._3140">EMML VIII, 123<date>(17th/18th cent.)</date>
+                        </bibl>
+                        <bibl corresp="EMML_no._2707">EMML VII, 108<date>(18th cent.)</date>
+                        </bibl>
+                        <bibl corresp="EMML_no._2714">EMML VII, 113<date>(18th cent.)</date>
+                        </bibl>
+                     </listBibl>
+                      -->
                   </note>
                </div>
                
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionEpistle" corresp="LIT1349EpistlEusebius">
+               <div type="textpart"
+                  subtype="chapter"
+                  xml:lang="gez"
+                  xml:id="IntroductionDisciples"
+                  corresp="LIT4869Disciples">
+                  <label>Discourse on the 72 disciples</label>
+               </div>
+                              
+               
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:lang="gez"
+                    xml:id="IntroductionEpistle"
+                    corresp="LIT1349EpistlEusebius">
                   <label>Epistle to Carpianus by Eusebius</label>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionCanons">
+               
+               
+               
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:lang="gez"
+                    corresp="LIT1224Canons"
+                    xml:id="IntroductionCanons">
                   <label>Canons of Eusebius</label>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionGessawe">
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:lang="gez"
+                    xml:id="IntroductionGessawe"
+                    corresp="LIT1548Gessaw">
                   <label>Gǝṣṣāwe śǝrʿāt</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:lang="gez"
+                    xml:id="IntroductionReliability">
+                  <label>On the Reliability of the Gospels</label>
                </div>
             </div>
             
-            <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT1558Matthew" xml:id="GospelMatthew">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 corresp="LIT1558Matthew"
+                 xml:id="GospelMatthew">
                <label>Gospel of Matthew</label>
+               
+               <!-- 
+                     <listBibl type="mss">
+                        <bibl corresp="EMML_no._4224">EMML X, 414-415<date>(14th cent.)</date>
+                        </bibl>
+                        <bibl corresp="EMML_no._1930">EMML V, 414-415<date>(14th/15th cent.)</date>
+                        </bibl>
+                        <bibl>BN eth. 35 (15th cent.), (ZotBNat 32-33, n<locus target="#35">35</locus>;)</bibl>
+                        <bibl>BritMus Orient. 510 (17th cent.), (WrBriMus 24-25, no 35)</bibl>
+                        <bibl corresp="EMML_no._3140">EMML VIII, 123<date>(17th/18th cent.)</date>
+                        </bibl>
+                        <bibl corresp="EMML_no._2707">EMML VII, 108<date>(18th cent.)</date>
+                        </bibl>
+                        <bibl corresp="EMML_no._2714">EMML VII, 113<date>(18th cent.)</date>
+                        </bibl>
+                     </listBibl>
+                      -->
+               
             </div>
             
-            <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT1882MarkGo" xml:id="GospelMark">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 corresp="LIT1882MarkGo"
+                 xml:id="GospelMark">
                <label>Gospel of Mark</label>
+               
+               <!-- 
+                     <listBibl type="mss">
+                        <bibl corresp="EMML_no._4224">EMML X, 414-415<date>(14th cent.)</date>
+                        </bibl>
+                        <bibl corresp="EMML_no._1930">EMML V, 414-415<date>(14th/15th cent.)</date>
+                        </bibl>
+                        <bibl>BN eth. 35 (15th cent.), (ZotBNat 32-33, n<locus target="#35">35</locus>;)</bibl>
+                        <bibl>BritMus Orient. 510 (17th cent.), (WrBriMus 24-25, no 35)</bibl>
+                        <bibl corresp="EMML_no._3140">EMML VIII, 123<date>(17th/18th cent.)</date>
+                        </bibl>
+                        <bibl corresp="EMML_2707">EMML VII, 108<date>(18th cent.)</date>
+                        </bibl>
+                        <bibl corresp="EMML_2714">EMML VII, 113<date>(18th cent.)</date>
+                        </bibl>
+                     </listBibl> -->
             </div>
             
-            <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT1812GospelLuke" xml:id="GospelLuke">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 corresp="LIT1812GospelLuke"
+                 xml:id="GospelLuke">
                <label>Gospel of Luke</label>
+               
+               <!-- 
+                     <listBibl type="mss">
+                        <bibl corresp="EMML_no._4224">EMML X, 414-415<date>(14th cent.)</date>
+                        </bibl>
+                        <bibl corresp="EMML_no._1930">EMML V, 414-415<date>(14th/15th cent.)</date>
+                        </bibl>
+                        <bibl>BN eth. 35 (15th cent.), (ZotBNat 32-33, n<locus target="#35">35</locus>;)</bibl>
+                        <bibl>BritMus Orient. 510 (17th cent.), (WrBriMus 24-25, no 35)</bibl>
+                        <bibl corresp="EMML_no._3140">EMML VIII, 123<date>(17th/18th cent.)</date>
+                        </bibl>
+                        <bibl corresp="EMML_no._2707">EMML VII, 108<date>(18th cent.)</date>
+                        </bibl>
+                        <bibl corresp="EMML_no._2714">EMML VII, 113<date>(18th cent.)</date>
+                        </bibl>
+                     </listBibl>
+                      -->
             </div>
             
-            <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT1693John" xml:id="GospelJohn">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 corresp="LIT1693John"
+                 xml:id="GospelJohn">
                <label>Gospel of John</label>
+               
+               <!-- 
+                     <listBibl type="mss">
+                        <bibl corresp="EMML_no._4224">EMML X, 414-415<date>(14th cent.)</date>
+                        </bibl>
+                        <bibl corresp="EMML_no._1930">EMML V, 414-415<date>(14th/15th cent.)</date>
+                        </bibl>
+                        <bibl>BN eth. 35 (15th cent.), (ZotBNat 32-33, n<locus target="#35">35</locus>;)</bibl>
+                        <bibl>BritMus Orient. 510 (17th cent.), (WrBriMus 24-25, no 35)</bibl>
+                        <bibl corresp="EMML_no._3140">EMML VIII, 123<date>(17th/18th cent.)</date>
+                        </bibl>
+                        <bibl corresp="EMML_no._2707">EMML VII, 108<date>(18th cent.)</date>
+                        </bibl>
+                        <bibl corresp="EMML_no._2714">EMML VII, 113<date>(18th cent.)</date>
+                        </bibl>
+                     </listBibl>
+                      -->
             </div>
+            
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Postscript"><label>Postscript</label></div>
             
          </div>
       </body>

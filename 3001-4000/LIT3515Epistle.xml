@@ -1,36 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT3515Epistle">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3515Epistle">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Epistle to the Romans</title>
+            <title type="short">Rom.</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+               Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                  <p> This file is licensed under the Creative Commons Attribution-ShareAlike 4.0.
+                  </p>
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <p/>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -45,23 +43,62 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/>
                <term key="NewTestament"/>
                <term key="Bible"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="PL" when="2016-07-26">Created XML record from Ethio authority google
+            spreadsheet</change>
          <change who="MV" when="2017-03-15">Added keywords</change>
+         <change who="DR" when="2018-01-29">Added textparts, bibliography and keyword</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:formsPartOf"
-                         active="LIT3515Epistle"
-                         passive="LIT3505PaulineEpis"/>
+            <listRelation>
+               <relation name="saws:formsPartOf" active="LIT3515Epistle"
+                  passive="LIT3505PaulineEpis"/>
+            </listRelation>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Tedros2005EAEPauline"/>
+               </bibl>
             </listBibl>
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Tedros2001Romani"/>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <!--this is a preliminary division of the epistle to the Romans into textparts which are
+               present in manuscripts,  not taking into consideration the different recensions-->
+            <note>All excerpts are from <bibl>
+                  <ptr target="bm:Tedros2001Romani"/>
+               </bibl>.</note>
+            <div type="textpart" xml:id="Prescription">
+               <label>Prescription</label>
+               <ab>ለብሔረ፡ ሮሜ፡</ab>
+               <ab>መልእክት፡ ቀዳማዊ፡ ኀበ፡ ሰብአ፡ ሮሜ፡</ab>
+            </div>
+            <div type="textpart" xml:id="Introduction">
+               <label>Introduction</label>
+            </div>
+            <div type="textpart" xml:id="Epistle">
+               <label>Epistle</label>
+            </div>
+            <div type="textpart" xml:id="Subscription">
+               <label>Subscription</label>
+               <ab>ተፈጸመ፡ በዝየ፡ ዘሮሜ፡</ab>
+               <ab>ወተጽሕፈ፡ በቆሮንቶስ፡ ወተፈነወ፡ በእደ፡ ፌቤን፡ እንተ፡ ትትለአኮሙ፡ ለማኅበረ፡ ከንክራስ፡</ab>
+            </div>
+            <div type="textpart" xml:id="Stichometry">
+               <label>Stichometry</label>
+               <ab>ቃሉ፡ ፱፻ወ፶፡ ወምዕራፉ፡ ፲ወ፱፡ ለብሄረ፡ ሮሜ።</ab>
+               <ab>ቃሉ፡ ፺ወ፩፡ ወምዕራፉ፡ ፲።</ab>
+            </div>
          </div>
       </body>
    </text>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,15 +11,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ጸሎት፡ ዘእግዝእትነ፡ ማርያም፡ በደብረ፡ ጎልጎታ፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalot za-ʾǝgzǝʾtǝna Māryām ba-Dabra Golgotā</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalot za-ʾǝgzǝʾǝtǝna Māryām ba-Dabra Golgotā</title>
             <title xml:lang="en" corresp="#t1">Prayer of Our Lady Mary on Mount Golgotha on the 21st of Sane</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -30,10 +29,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
             <listWit>
                <witness corresp="BNFet58#ms_i1"/>
                <witness corresp="BNFet59"/>
-               <witness corresp="BNFet68#ms_i5"/>
+               <witness corresp="BNFet68#ms_i11"/>
                <witness corresp="BLadd16233"/>
                <witness corresp="BLharl5471#ms_i5"/>
                <witness corresp="BLorient639"/>
@@ -56,15 +58,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Prayers"></term>
-               <term key="Liturgy"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Prayers"/>
+               <term key="Liturgy"/>
+               <term key="Apocrypha"/>
             </keywords>
          </textClass>
          <abstract>
             <p>
-               The Prayer [of St. Mary on 21] Sane [on the mount of] Golgotha
-               (variants: 20<hi rend="apices">th</hi>, 24<hi rend="apices">th</hi>, 25<hi rend="apices">th</hi> Sane) is one of the prayers included in the printed <title ref="LIT2701Dawit">psalter</title>.
+               The Prayer [of St Mary on 21] Sane [on the mount of] Golgotha
+               (variants: 20<hi rend="apices">th</hi>, 24<hi rend="apices">th</hi>, 25<hi rend="apices">th</hi> Sane) is one of the prayers included in the printed <ref type="work" corresp="LIT2701Dawit"/>.
               It contains formulas against evil whose efficacy is guaranteed through Jesus Christ.      Some manuscripts mention as the author <persName ref="PRS7953Prochoru">Prochorus</persName>.
                 </p>
          </abstract>
@@ -73,7 +76,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change who="DR" when="2016-08-15">Added informations</change>
+         <change who="DR" when="2016-08-15">Added information</change>
          <change when="2016-09-08" who="MV">Fixed title</change>
          <change when="2017-02-27" who="ES">updated keywords relation</change>
       </revisionDesc>
@@ -82,7 +85,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body>
          
             
-            <listBibl type="translation" corresp="BNFet58#1; BNFet68#5">
+            <div type="bibliography">
+               <listBibl type="translation" corresp="BNFet58#ms_i1 BNFet68#ms_i11">
                <bibl> 
                   <ptr target="bm:Basset1895Prieres"/>
                   <citedRange unit="page">30-47</citedRange>
@@ -100,12 +104,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
          
-         
-         <listBibl type="relations">
-            <bibl></bibl>
-            <relation name="saws:isAttributedToAuthor" active="LIT2246salotz" passive="PRS7953Prochoru"></relation>
-            <relation name="saws:isMemberOf" active="LIT2246salotz" passive="LIT2701Dawit"></relation>
-         </listBibl>
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT2246salotz"
+                         passive="PRS7953Prochoru"/>
+               <relation name="saws:formsPartOf"
+                         active="LIT2246salotz"
+                         passive="LIT2701Dawit"/>
+            </listRelation>
+            </div>
       </body>
    </text>
 </TEI>

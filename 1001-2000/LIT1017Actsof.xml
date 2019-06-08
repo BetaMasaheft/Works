@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,14 +10,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Acts of Peter</title>
+            <title xml:lang="en" xml:id="t1">Acts of St Peter</title>
+            <title xml:lang="gez" xml:id="t2">ዜና፡ ጴጥሮስ፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Zenā Ṗeṭros</title>
+            <title xml:lang="en" corresp="#t2">History of Peter (told by his disciple Clemens)</title>
+          
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -29,7 +32,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listWit>
+               <witness corresp="BLorient683"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -39,16 +46,242 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
+               <term key="Translation"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MV" when="2017-11-30">Updated</change>
+         <change who="DR" when="2018-04-25">Added xml:lang to label</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Budge1899ContendingsText"/>
+                  <citedRange>382-435</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Budge1901ContendingsTransl"/>
+                  <citedRange>466-526</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:formsPartOf"
+                         active="LIT1017Actsof"
+                         passive="LIT1461Gadlah"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  ዜነወነ፡ ረድእ፡ ዐቢይ፡ ወትሩፍ፡ ቀሌምንጦስ፡ ዜና፡ መምህሩ፡ ጴጥሮስ፡ ርእሶሙ፡ ለሐዋርያት፡ አመ፡ ከሠተ፡ ሎቱ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡
+               </ab>
+            </div>
+            <div type="textpart"
+                 subtype="chapter"
+                 n="1"
+                 xml:id="FirstPart"
+                 xml:lang="gez">
+               <label xml:lang="en">The manifestation and how the Lord ascended into Heaven, and how he blessed the Apostles
+                  (<foreign xml:lang="gez">በእንተ፡ ከሢት፡ ዘከመ፡ እፎ፡ ዐርገ፡ እግዚእነ፡ ውስተ፡ ሰማይ፡ ወዘከመ፡ ባረኮሙ፡ ለሐዋርያት፡</foreign>)
+               </label>
+               <listBibl type="clavis">
+                  <bibl type="BHO">
+                     <ptr target="bm:BHO"/>
+                     <citedRange unit="item">944</citedRange>
+                  </bibl>
+               </listBibl>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ይቤ፡ ቀሌምንጦስ፡ ከመዝ፡ ይቤለኒ፡ አቡየ፡ ጴጥሮስ፡ ስማዕ፡ ኦወልድየ፡
+                  </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                     ወንጌል፡ ቅዱስ፡ ዘውእቱ፡ ወንጌል፡ መንግሥተ፡ እግዚአብሔር። ሎቱ፡ <gap reason="omitted"/> 
+                  </ab>
+               </div>
+            </div>
+            <div type="textpart"
+                 subtype="chapter"
+                 n="2"
+                 xml:id="SecondPart"
+                 xml:lang="gez">
+               <label xml:lang="en">
+                  How Peter saw a mighty similitude of the Lady of all Mary and her honourable glory
+                  (<foreign xml:lang="gez">ዘርእየ፡ ጴጥሮስ፡ አምሳለ፡ ዕበየ፡ ክብራ፡ ለእግዝእተ፡ ኵልነ፡ ማርያም፡ ንጽሕት፡ ወክብረ፡ ስብሐቲሃ።</foreign>)
+               </label>
+            </div>
+            <div type="textpart"
+                 subtype="chapter"
+                 n="3"
+                 xml:id="ThirdPart"
+                 xml:lang="gez">
+               <label xml:lang="en">On the coming of Clemens into the faith of Christ, and how Peter chose him to be his disciple, along with his brethren
+                  (<foreign xml:lang="gez">በእንተ፡ በአቱ፡ ለቀሌምንጦስ፡ ውስተ፡ ሃይማኖተ፡ ክርስቶስ፡ ወዘከመ፡ ኀረዮ፡ ጴጥሮስ፡ ከመ፡ ይኩኖ፡ ረድኦ፡ 
+                     ሎቱ፡ ምስለ፡ አኃዊሁ፡ ወተራክቦቶሙ፡ ምስለ፡ አቡሆሙ፡ ወእሞሙ፡</foreign>)
+               </label>
+               <listBibl type="clavis">
+                  <bibl type="BHO">
+                     <ptr target="bm:BHO"/>
+                     <citedRange unit="item">945</citedRange>
+                  </bibl>
+               </listBibl>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ይቤ፡ ቀሌምንጦስ። አነ፡ ቀሌምንጦስ፡ ከመ፡ መምህርየ፡ ጴጥሮስ፡ ባዕለ፡ መራኁተ፡ <gap reason="omitted"/> ኀለፈ፡ ውስተ፡ ጽንፈ፡ ባሕር፡
+                  </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                     ለአቡየ፡ ወለእምየ፡ ከመ፡ ይንበሩ፡ ውስተ፡ ኢየሩሳሌም። 
+                  </ab>
+               </div>
+            </div>
+            <div type="textpart"
+                 subtype="chapter"
+                 n="4"
+                 xml:id="FourthPart"
+                 xml:lang="gez">
+               <label xml:lang="en">Concerning the preaching of Peter and John in the city of Antioch, and their calling to men to the faith of Our Lord Jesus Christ 
+                  (<foreign xml:lang="gez">በእንተ፡ ስብከቶሙ፡ ለጴጥሮስ፡ ወለዮሐንስ፡ በሀገረ፡ አንጾኪያ፡ ወጸውዖቶሙ፡ ለሰብእ፡ ኀበ፡ አሚነ፡ እግዚእነ፡ 
+                     ኢየሱስ፡ ክርስቶስ፡</foreign>)
+               </label>
+               <listBibl type="clavis">
+                  <bibl type="BHO">
+                     <ptr target="bm:BHO"/>
+                     <citedRange unit="item">946</citedRange>
+                  </bibl>
+               </listBibl>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ይቤ፡ ቀሌምንጦስ፡ ከመ፡ መምህርየ፡ <gap reason="omitted"/> ይቤለኒ። እስመ፡ በጊዜ፡ ግብአትየ፡ እምሎዶቅየ፡
+                  </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                     ዮሐንስ፡ ኀበ፡ ሀገረ፡ ኤፌሳን፡ ወአነኒ፡ ሖርኩ፡ ኀበ፡ ሀገረ፡ ሮሜ። 
+                  </ab>
+               </div>
+            </div>
+            <div type="textpart"
+                 subtype="chapter"
+                 n="5"
+                 xml:id="FifthPart"
+                 xml:lang="gez">
+               <label xml:lang="en">How Peter preached in the city of Rome and called men unto the faith of Christ, and how miracles were performed, and of the coming of Paul, 
+                  Barnabas, Timothy and Titus 
+                  (<foreign xml:lang="gez">በእንተ፡ ዘከመ፡ ሰበከ፡ ጴጥሮስ፡ በሀገረ፡ ሮሜ፡ ወጸውዖቶ፡ ሰብአ፡ ኀበ፡ ሃይማኖተ፡ ክርስቶስ፡ ወዘኮነ፡ እምተአምራት፡ 
+                     ወምጽአቶሙ፡ ለጳውሎስ፡ ወለበርናባስ፡ ለጢሞቴዎስ፡ ወለቲቶ፡</foreign>)
+               </label>
+               <listBibl type="clavis">
+                  <bibl type="BHO">
+                     <ptr target="bm:BHO"/>
+                     <citedRange unit="item">947</citedRange>
+                  </bibl>
+               </listBibl>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ወሶበ፡ ኮነ፡ እምድኅረ፡ እማንቱ፡ መዋዕል፡ ጸውዐኒ፡ <gap reason="omitted"/> ወለአኀዊየ፡ ከመ፡ ንሖር፡ ሀገረ፡ ሮሜ፡
+                  </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                  ወእለ፡ ተረፉ፡ እምአርድእት፡ ኅዳጠ፡ መዋዕለ፡ በሀገረ፡ ሮሜ።
+                  </ab>
+               </div>
+            </div>
+            <div type="textpart"
+                 subtype="chapter"
+                 n="6"
+                 xml:id="SixthPart"
+                 xml:lang="gez">
+               <label xml:lang="en">How Satan told Peter what he would do against the believers, the priests, the servants of God, and how he would lead them astray in the last days 
+                  (<foreign xml:lang="gez">ዘከመ፡ ነገሮ፡ ሰይጣን፡ ለጴጥሮስ፡ በዘ፡ ይገብር፡ ላዕለ፡ መሃይምናን፡ ወካህናት፡ ወጽሙዳን፡ ወዘከመ፡ ያስሕቶሙ፡ በደኃሪ፡ መዋዕል።</foreign>)
+               </label>
+               <listBibl type="clavis">
+                  <bibl type="BHO">
+                     <ptr target="bm:BHO"/>
+                     <citedRange unit="item">948</citedRange>
+                  </bibl>
+               </listBibl>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ወእምዝ፡ ሖረ፡ መምህርየ፡ <gap reason="omitted"/> እምህየ፡ ኀበ፡ ሀገር፡ ዘሖረ፡ ኀቤሃ፡ ፊልጶስ፡
+                  </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                     ዓመተ፡ ወ፰አውራኀ፡ ወፈጸመ፡ ስብከቶ፡ በውስቴታ።
+                  </ab>
+               </div>
+            </div>
+            <div type="textpart"
+                 subtype="chapter"
+                 n="7"
+                 xml:id="SeventhPart"
+                 xml:lang="gez">
+               <label xml:lang="en">How Peter returned to the city of Rome and made an end of Simon Magus, and revealed the faith of Christ unto the people, and how they were baptized
+                  (<foreign xml:lang="gez">ዘከመ፡ ተመይጠ፡ ጴጥሮስ፡ ኀበ፡ ሀገረ፡ ሮሜ፡ ወአጥፍኦተ፡ ለሲሞን፡ መሠርይ፡ ወከሢተ፡ ሃይማኖተ፡ ክርስቶስ፡ ለብእ፡</foreign>)
+               </label>
+               <listBibl type="clavis">
+                  <bibl type="BHO">
+                     <ptr target="bm:BHO"/>
+                     <citedRange unit="item">949</citedRange>
+                  </bibl>
+               </listBibl>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ይቤ፡ መምህርየ፡ ጴጥሮስ፡ ወእምድኅረዝ፡ ጾረተኒ፡ ደመና፡
+                  </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                     ያድኅና፡ እምጸላእያን፡ እለ፡ የኀሥሥዋ፡ ወኢይክልዋ።
+                  </ab>
+               </div>
+            </div>
+            <div type="textpart"
+                 subtype="chapter"
+                 n="8"
+                 xml:id="EighthPart"
+                 xml:lang="gez">
+               <label xml:lang="en">How Clemens asked Peter concerning the remainder of the mysteries, and how Peter revealed unto him the remaining matters of the 
+                  ordinances of the mystery, the Law, and the Commandments 
+                  (<foreign xml:lang="gez">በእንተ፡ ዘከመ፡ ሰአሎ፡ ቀሌምንጦስ፡ ለጴጥሮስ፡ በእንተ፡ እለ፡ ተርፉ፡ እምሥጢራት፡ ወከሠተ፡ ሎቱ፡ እለ፡ ተርፉ፡ 
+                     እምቀኖናተ፡ ምሥጢር፡ ወሕግ፡ ወትእዛዛት፡ ዘአዘዞ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ኪያሃ፡</foreign>)
+               </label>
+               <listBibl type="clavis">
+                  <bibl type="BHO">
+                     <ptr target="bm:BHO"/>
+                     <citedRange unit="item">950</citedRange>
+                  </bibl>
+               </listBibl>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ወሶበ፡ ሰማዕኩ፡ ዘንተ፡ እመምህርየ፡ <gap reason="omitted"/> ተወሰከ፡ ተውሳከ፡ ክብሮሙ፡ በኀቤየ፡
+                  </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                     ወለእመኒ፡ እጽሕፎ፡ እምኢያግመሮ፡ ኵሉ፡ መጻሕፍተ፡ ዓለም። ሎቴኬ፡ ስብሐት፡ <gap reason="omitted"/>
+                  </ab>
+               </div>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Miracle of a sick man in a hospital</title>
+            <title xml:id="t1">Miracle of a sick man in a hospital whom Mary carries to Jerusalem</title>
+            <title xml:id="t2">St Mary carries a dying monk to Jerusalem</title>
+            <title xml:id="t3">The Virgin Mary and
+               the sick monk in the Monastery of Pilgrims (Dabra Naggādǝyān)</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +28,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -43,15 +43,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"/> 
+               <term key="ChristianLiterature"/>
                <term key="Miracle"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords and relations</change>
+         <change who="DR" when="2018-11-12">Added keyword, Macomber reference</change>
+         <change who="AM" when="2019-04-17">added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -62,19 +65,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Budge1923Miracles"/>
                   <citedRange unit="item">9</citedRange>
                </bibl>
+                  <bibl><ptr target="bm:TasfaGiyorgis1956Taammera"/>
+                     <citedRange unit="item">81</citedRange>
+                     <citedRange unit="page">282-283</citedRange>
+                  </bibl>
             </listBibl>
-               <listBibl type="translation" xml:lang="en">
+               <listBibl type="translation">
                   <bibl>
                      <ptr target="bm:Budge1933Miracles"/>
+                     <citedRange unit="item">9</citedRange>
                      <citedRange unit="page">33-34</citedRange>
                   </bibl>
+                  <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">44</citedRange><citedRange unit="page">121-122</citedRange></bibl>
                </listBibl>
-               <listBibl type="relations">
-                  <bibl/>
-                  <relation name="saws:formsPartOf"
-                     active="LIT3595Miracle"
-                     passive="LIT2384Taamme"/>
-               </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">54</citedRange></bibl>
+               <bibl><ptr target="bm:Cerulli1943Maria"/><citedRange unit="page">192</citedRange></bibl>
+            </listBibl>
+            <!-- The Virgin Mary and
+                        the sick monk in the ‟Monastery of Pilgers” ( Dabra Naggādǝyān) (BMirMA
+                        20-21; BHMirM 33-34; CerMaria 192 // mss. O Etiop. 15, LöfUpp 101, n<locus
+                           target="#32">32</locus>, I, D.-16; éth. 60, <locus from="19v" to="20v"
+                           >19v-20v</locus>, ZotBNat 63, n°60-10; Orient. 8814, fols. 1<ref
+                           type="mss" corresp="ES12v114">12v-114</ref>r, StrBritLib 47, n<locus
+                           target="#32">32</locus>, 16.-9). -->
+               <listRelation>
+               <relation name="saws:formsPartOf"
+                         active="LIT3595Miracle"
+                         passive="LIT2384Taamme"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML6938"/>.</note>
+                 <ab>
+                   ስምዑ፣ አበውየ፡ ወአኃውየ፣ ዘንተ፡ ነገረ፡ ዘኮነ፡ በእንተ፡ እግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> እመ፡ ምሕረት፣
+                   ሰማዒት፡ ለዘሰአላ፡ ወመስተፍሥሒት፡ ለሕዙናን፡ በአማን፣ ተወካፊት፡ ለዘሰአላ፡ በጥቡዕ፡ ልብ፡ ወበጽኑዕ፡ ሃይማኖት።
+                   ወእንዘ፡ ሀሎኩ፡ አነ፡ ነዳይ፡ ዮሐንስ፣ እስቁፍ፡ ዘገዳመ፡ አስቄጥስ፣ በደብረ፡ ነጋድያን፣ አዘዘኒ፡ መምህር፡ ከመ፡ እትለአኮሙ፡ ለሕሙማን።
+                   </ab>
+                 </div>
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                   <note>This incipit is taken from <ref type="mss" corresp="EMML5520"/>.</note>
+                   <ab>
+                   ወሀለወት፡ ሥዕለ፡ እግዝእትነ፡ ማርያም፡ በደብረ፡ ነጋድያን፡ በቤተ፡ ሕሙማን፡ መንገለ፡ ምሥራቅ።
+                 </ab>
+             </div>
          </div>
       </body>
    </text>

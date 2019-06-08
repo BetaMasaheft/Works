@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -19,9 +19,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -32,12 +31,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
             
             <listWit>        
                <witness corresp="BNFet9#ms_i1.5">Belongs probably to <ref type="work" corresp="LIT3575Mashaf"/>, but contains the "Service at the Cockcrow" from <ref type="work" corresp="LIT2230Saatat"/>.</witness>
                <witness corresp="BNFet11#ms_i3"> Doesn't belong to the same recension as <ref type="mss" corresp="BNFet9"/> and <ref type="mss" corresp="BNFet12"/>
                </witness>
-               <witness corresp="BNFet12#ms_i1.4">Belongs probably to <ref type="work" corresp="LIT3575Mashaf"/>, see an invocation for king <persName ref="PRS10626ZaraY">Zarʾa Yāʿǝqob</persName>, but contains the "Service at the Cockcrow" from <ref target="#S1.1Cockcrow"/> <!--correct  reference-->
+               <witness corresp="BNFet12#ms_i1.4">Belongs probably to <ref type="work" corresp="LIT3575Mashaf"/>, see an invocation for king <persName ref="PRS10626ZaraY">Zarʾa Yāʿqob</persName>, but contains the "Service at the Cockcrow" from <ref target="#S1.1Cockcrow"/> 
+                  <!--correct  reference-->
                </witness>
                <witness corresp="BNFet13#ms_i1.4"/>
                <witness corresp="BAVet15"/>
@@ -55,7 +58,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="gez"/>
          </langUsage>
          <abstract>
-            <p>  A Church service made up of psalms, biblical readings and hymns. Four types of <foreign xml:lang="gez">Saʿātāt</foreign> have been identified by <bibl>
+            <p>A Church service made up of psalms, biblical readings and hymns. Four types of <foreign xml:lang="gez">Saʿātāt</foreign> have been identified by <bibl>
                   <ptr target="bm:Taft1986Liturgy"/>
                   <citedRange unit="page">266</citedRange>
                </bibl>:</p>
@@ -92,6 +95,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <bibl>
                <ptr target="bm:Turaev1895Saatat"/>
             </bibl>
+            <bibl>
+               <ptr target="bm:Rome1952Saatat"/>
+            </bibl>
          </listBibl>
          <listBibl type="translation" corresp="LIT2230Saatat">
            <bibl>
@@ -106,11 +112,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <ptr target="bm:ZanettiFritsch2014Saatat"/>
             </bibl>
          </listBibl>
-         <listBibl type="relations">
-            <bibl/>
+         <listRelation>
             <relation name="saws:contains" active="LIT1961Mashaf" passive="LIT2010Mentan"/>
-         </listBibl>
-         <!--should textparts be added?-->
+         </listRelation>
       </body>
    </text>
 </TEI>

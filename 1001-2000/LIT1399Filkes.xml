@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -17,22 +17,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t3">ተስእሎታተ፡ ዜናሆሙ፡ ለአበው፡ መነኮሳት፡ ግብጻውያን። ወጸሐፎ፡ ቅዱስ፡ ፊልክስዮስ፡ ሶርያዊ፡ ኤጲስ፡ ቆጶስ፡ ዘመንበግ፡</title>
             <title xml:lang="gez" corresp="#t3" type="normalized">Tasʾǝlotāta zenāhomu la-ʾabaw manakosāt gǝbṣāwǝyān wa-ṣaḥafo qǝddus Filkǝsyos soryāwi ʾeṗis qoṗos za-Manbag</title>
             <title xml:lang="en" corresp="#t3">Questions about the stories of the Fathers, Egyptian monks. Holy Filkǝsyos the Syrian, bishop of Manbag, wrote it</title>
-            <title xml:lang="syr" xml:id="t4syriac"></title>
-            <title xml:lang="syr" corresp="#t4syriac" type="normalized"></title>
+            <title xml:lang="syr" xml:id="t4syriac"/>
+            <title xml:lang="syr" corresp="#t4syriac" type="normalized"/>
             <title xml:lang="en" corresp="#t4syriac">Paradise of the Fathers</title>
-            <title xml:lang="syr" xml:id="t5syriac"></title>
-            <title xml:lang="syr" corresp="#t5syriac" type="normalized"></title>
+            <title xml:lang="syr" xml:id="t5syriac"/>
+            <title xml:lang="syr" corresp="#t5syriac" type="normalized"/>
             <title xml:lang="en" corresp="#t5syriac">Commentary on the Paradise of the Fathers</title>
-            <title xml:lang="ar" xml:id="t6arabic"></title>
-            <title xml:lang="ar" corresp="#t6arabic" type="normalized"></title>
-            <title xml:lang="en" corresp="#t6arabic"></title>
+            <title xml:lang="ar" xml:id="t6arabic"/>
+            <title xml:lang="ar" corresp="#t6arabic" type="normalized"/>
+            <title xml:lang="en" corresp="#t6arabic"/>
+            <title type="short">Phlx.</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -48,6 +48,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
+         <abstract><p>The text consists of a series of questions asked by monks (beginning
+            with ይቤሉ: አኃው) and answers given by an “interpreter” (starting with ይቤ:
+            መተርጕም). The questions are numbered.</p></abstract>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
@@ -75,26 +78,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body>
         <div type="bibliography">
-           
+
            <listBibl type="secondary">
-              <bibl><ptr target="bm:Witakowski2005EAEFilkesyos"/></bibl>
+              <bibl>
+                  <ptr target="bm:Witakowski2005EAEFilkesyos"/>
+               </bibl>
            </listBibl>
-           
-           <listBibl type="relations">
-              <bibl/>
-              <relation name="saws:formsPartOf" active="LIT1399Filkes" passive="LIT1908Masahe"/>
-              <relation name="saws:isAttributedToAuthor" active="LIT1399Filkes" passive="PRS7853Philoxen">
-                 <desc></desc>
+
+           <listRelation>
+               <relation name="saws:formsPartOf"
+                         active="LIT1399Filkes"
+                         passive="LIT1908Masahe"/>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT1399Filkes"
+                         passive="PRS7853Philoxen">
+                 <desc/>
               </relation>
-              <relation name="saws:isAttributedToAuthor" active="LIT1399Filkes#t4syriac" passive="PRS3777enaniso"/>
-              <relation name="saws:isAttributedToAuthor" active="LIT1399Filkes#t5syriac" passive="PRS3282Dadiso"/>
-              <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1399Filkes#t6arabic" passive="LIT1399Filkes#t5syriac">
-                 <desc></desc>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT1399Filkes#t4syriac"
+                         passive="PRS3777enaniso"/>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT1399Filkes#t5syriac"
+                         passive="PRS3282Dadiso"/>
+               <relation name="saws:isVersionInAnotherLanguageOf"
+                         active="LIT1399Filkes#t6arabic"
+                         passive="LIT1399Filkes#t5syriac">
+                 <desc/>
               </relation>
-              <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1399Filkes#t1" passive="LIT1399Filkes#t6arabic"/>
-           </listBibl>
-           
+               <relation name="saws:isVersionInAnotherLanguageOf"
+                         active="LIT1399Filkes#t1"
+                         passive="LIT1399Filkes#t6arabic"/>
+            </listRelation>
+
         </div>
+         <div type="edition">
+            <div type="textpart" xml:id="Content"><label>Table of Content</label></div>
+            <div type="textpart" subtype="explicit"><p>መልአ፡ ዘሕፁር፡ እመጽሐፈ፡ ትርጓሜ፡ ገነት፡ ዘተጽሕፈ፡ እስከ፡
+               ተፍጻሜተ፡ መጽሐፍ፨ አኅጸረ፡ ውእቱ። ጽሕፈተ፡ ዘፅንስት፡ ጥቀ፡ አውጽኦታ፨ ዘአልቦቱ፡ ልማድ፡ ዘለዝላፉ፡ ለተናብቦ፡ በልሳነ፡
+               ዓረባዊት፡ እም፡ ልሳነ፡ ሶርያዊት፡ ኀበ፡ ዓረቢ፨ ወኮነ፡ ፍጻሜ፡ እምኔሁ፡ በወርኃ፡ ሰኔ፡ በዓመተ፡ ፲፻፳ወ፩ እም፡ ዓመተ፡
+               ሰማእታት፡ ንጹሐን፤ ትብልናሆሙ፡ ይዕቀበነ፡ አሜን፨ ወማኅሌት፡ ለእግዚአብሔር፡ ለዓለመ፡ ዓለም፡ አሜን፨ ወአሜን: ወተጋድሎትበአምጣነ ተክህሎ፤ ወማኅሌት ለእግዚአብሔር፡ ለዓለመ፡ ዓለም፡
+               አሜን፨ ወአሜን፨ አስተሐመመ፡ አእልዎቶ፡ ለግዕዝ፡ ጽሒቆ፤ አቡነ። ሊቀ፡ ጳጳሳት፡ ዘአዜብ፡ አባ፡ ሰላማ፡ ዘእግዚእ፡ ሶቆ፤ </p>
+               <note>According to
+                  the colophon, the Filkǝsyos was translated in 1021 of the Era of the Martyrs,
+                  that is, 1304-05 A.D. It ascribes the translation of the work to the
+                  metropolitan ʾabuna Salāma II “the Translator”. <bibl>
+                     <ptr target="bm:Witakowski2005EAEFilkesyos"/>
+                  </bibl>
+                  suggests that because Salāma was the metropolitan in the years <date>1348-1386</date>, the
+                  sign for 20 (፳) should be substituted by the sign for 80 (፹).</note></div>
+         </div>
       </body>
    </text>
 </TEI>

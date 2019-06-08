@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -21,9 +21,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -33,6 +32,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
              <listWit>
               <witness corresp="BAVet15"/>
@@ -46,6 +48,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="la">Latin</language>
          </langUsage>
          <textClass>
             <keywords>
@@ -55,8 +58,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </keywords>
          </textClass>
          <abstract>
-            <p> The <foreign xml:lang="gez">Maṣḥafa saʿātāt</foreign>  is a version of the <title ref="LIT1961Mashaf">Maṣḥafa saʿātāt</title>, a Church service made up of psalms, biblical readings and hymns. 
-               It includes the entire <title ref="LIT2701Dawit">Psalter</title> in its daily pensum.  Its witnesses "with no psalms at compline or in the midnight office, but with thirty psalms and three canticles in each of the other five hours" 
+            <p>The <foreign xml:lang="gez">Maṣḥafa saʿātāt</foreign>  is a version of the <ref type="work" corresp="LIT1961Mashaf">Maṣḥafa saʿātāt</ref>, a Church service made up of psalms, biblical readings and hymns. 
+               It includes the entire <ref type="work" corresp="LIT2701Dawit">Psalter</ref> in its daily pensum.  Its witnesses "with no psalms at compline or in the midnight office, but with thirty psalms and three canticles in each of the other five hours" 
                <bibl>
                   <ptr target="bm:Taft1986Liturgy"/> 
                   <citedRange unit="page">270</citedRange>
@@ -66,12 +69,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="page">266</citedRange>
                </bibl> are: </p>
             <p> 
-               <title ref="LIT2230Saatat"/>: the Coptic Saʿātāt;</p>
+               <ref type="work" corresp="LIT2230Saatat"/>: the Coptic Saʿātāt;</p>
             <p> 
-               <title ref="LIT3575Mashaf"/>: the Saʿātāt of <persName ref="PRS4709Giyorgis">Giyorgis of Saglā</persName>, 
-               which replaced the <title ref="LIT2230Saatat"/>:  and is presently in use in Ethiopia and Eritrea;</p>
+               <ref type="work" corresp="LIT3575Mashaf"/>: the Saʿātāt of <persName ref="PRS4709Giyorgis">Giyorgis of Saglā</persName>, 
+               which replaced the <ref type="work" corresp="LIT2230Saatat"/>:  and is presently in use in Ethiopia and Eritrea;</p>
             <p>
-               <title ref="LIT3577GizeS"/>: a cursus of prayers which is not really a <foreign xml:lang="gez">Saʿātāt</foreign>, but a
+               <ref type="work" corresp="LIT3577GizeS"/>: a cursus of prayers which is not really a <foreign xml:lang="gez">Saʿātāt</foreign>, but a
                <foreign xml:lang="gez">Gize ṣalot</foreign> for hermits and recluses.</p>
            <p>
                <listBibl type="secondary">
@@ -96,14 +99,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <ptr target="bm:ZanettiFritsch2014Saatat"/> 
             </bibl>
          </listBibl>
-         <listBibl type="relations">
-            <bibl/>
+         <listRelation>
             <relation name="saws:isVersionOf"
                       active="LIT3575Mashaf"
                       passive="LIT1961Mashaf">
-               <desc>The <foreign xml:lang="gez">Maṣḥafa saʿātāt</foreign> is a version of the <title ref="LIT1961Mashaf">Maṣḥafa saʿātāt</title>.</desc>
+               <desc>The <foreign xml:lang="gez">Maṣḥafa saʿātāt</foreign> is a version of the <ref type="work" corresp="LIT1961Mashaf">Maṣḥafa saʿātāt</ref>.</desc>
             </relation>
-         </listBibl>
+         </listRelation>
       </body>
    </text>
 </TEI>

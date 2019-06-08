@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -16,9 +16,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -28,6 +27,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
             <listWit>
                <witness corresp="BAVet43#ms_i4"/>
@@ -51,22 +53,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="bibliography">
             <listBibl type="editions">
                <bibl>
-                  <ptr target="bm:ContiRossini1927Inediti"/><citedRange>516-524</citedRange>
+                  <ptr target="bm:ContiRossini1927Inediti"/>
+                  <citedRange>516-524</citedRange>
                </bibl>
             </listBibl>
-            <listBibl type="relations">
-               <bibl></bibl>
-                  <relation name="saws:isAttributedToAuthor" active="LIT4313Prayer" passive="PRS10799Marqoryos" cert="unknown">
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT4313Prayer"
+                         passive="PRS10799Marqoryos"
+                         cert="unknown">
                      <desc> The work was translated from Arabic by a certain Marqoryos, possibly <persName ref="PRS10799Marqoryos"/> according to 
                         <persName ref="PRS3182ContiRo"/>.</desc>
                   </relation>
-            </listBibl>
+            </listRelation>
          </div>
          <div type="edition">
-            <div type="textpart" xml:id="Salam"><label>Salām-hymn to Our Lady Mary</label></div>
-            <div type="textpart" xml:id="Tafassehi"><label>Praises beginning with ተፈሥሒ፡</label></div>
-            <div type="textpart" xml:id="Beseetanti"><label>Praises beginning with ብፅዕት፡ አንቲ፡</label></div>
-            <div type="textpart" xml:id="Neselaki"><label>Supplications beginning with ንስእለኪ፡</label></div>
+            <div type="textpart" xml:id="Salam">
+               <label>Salām-hymn to Our Lady Mary</label>
+            </div>
+            <div type="textpart" xml:id="Tafassehi">
+               <label>Praises beginning with ተፈሥሒ፡</label>
+            </div>
+            <div type="textpart" xml:id="Beseetanti">
+               <label>Praises beginning with ብፅዕት፡ አንቲ፡</label>
+            </div>
+            <div type="textpart" xml:id="Neselaki">
+               <label>Supplications beginning with ንስእለኪ፡</label>
+            </div>
          </div>
       </body>
    </text>

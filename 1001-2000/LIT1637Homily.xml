@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -16,9 +16,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -60,25 +59,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          
          <div type="bibliography">
             
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:isAttributedToAuthor" active="LIT1637Homily" passive="PRS9523Timothy"/>
-               <relation name="saws:formsPartOf" active="LIT1637Homily" passive="LIT1295Dersan"/>
-            </listBibl>
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT1637Homily"
+                         passive="PRS9523Timothy"/>
+               <relation name="saws:formsPartOf"
+                         active="LIT1637Homily"
+                         passive="LIT1295Dersan"/>
+            </listRelation>
             
          </div>
          
-<div type="edition">
-   <note>The following text is taken from <bibl><ptr target="bm:Tasfa1954DersanaM"/><citedRange unit="page">15-34</citedRange></bibl>.</note>
+         <div type="edition">
+            <note>The following text is taken from <bibl>
+                  <ptr target="bm:Tasfa1954DersanaM"/>
+                  <citedRange unit="page">15-34</citedRange>
+               </bibl>.</note>
    
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyHedar">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="HomilyHedar">
                <!--p. 15-->
-               <p>በስመ፡ አብ፡ ወወልድ፡ ወምንፈስ፡ ቅዱስ፡ ፩፡ አምላክ፤</p> <!--how can this formula be encoded?-->
+               <p>በስመ፡ አብ፡ ወወልድ፡ ወምንፈስ፡ ቅዱስ፡ ፩፡ አምላክ፤</p> 
+               <!--how can this formula be encoded?-->
                   
                   <p>ዝንቱ፡  ድርሳን፡ ዘደረሰ፡ አባ፡ ደማቴዎስ፡ ሊቀ፡ ጳጳሳት፡ ዘእለእስክንድርያ፡ ዘይትነበብ፡ በዕለተ፡ በዓሉ፡ ለዐቢይ፡ ወክቡር፡ ወቅዱስ፡ ሊቀ፡
-               መላእክት፡ ሚካኤል፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ ኅዳር።</p> <!--this should be encoded as title-->
+               መላእክት፡ ሚካኤል፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ ኅዳር።</p> 
+               <!--this should be encoded as title-->
                
-             <p>  ያርእየነ፡ ኀይለ፡ ወተአምረ፡ ወክብረ፡ ዘወሀቦ፡ እግዚአብሔር፡ እምኵሎሙ፡ ቅዱሳን፡ መላእክት።
+               <p>ያርእየነ፡ ኀይለ፡ ወተአምረ፡ ወክብረ፡ ዘወሀቦ፡ እግዚአብሔር፡ እምኵሎሙ፡ ቅዱሳን፡ መላእክት።
                ጸሎቱ፡ ወበረከቱ፡ የሀሉ፡ ምስሌነ፡ ለዓለም፡ ዓለም፤ አሜን።</p>
              
                <p>

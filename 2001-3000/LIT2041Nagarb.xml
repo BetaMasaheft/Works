@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,17 +11,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             
-            <title xml:id="t1" xml:lang="gez">ነገር፡በእንተ፡ እለ፡ ይክሕዱ፡ ትንሣኤ፡ ምውታን፡</title>
-            <title corresp="#t1" xml:lang="gez" type="normalized">Nagar baʾǝnta ʾǝlla yǝkǝḥǝdu tǝnśāʾe mǝwǝtān</title>
-            <title corresp="#t1" xml:lang="en">Treatise on  those who deny the resurrection of the dead</title>
+            <title xml:id="t1" xml:lang="gez">ነገር፡ በእንተ፡ እለ፡ ይክሕዱ፡ ትንሣኤ፡ ምውታን፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Nagar baʾǝnta ʾǝlla yǝkǝḥǝdu tǝnśāʾe mǝwwǝtān</title>
+            <title corresp="#t1" xml:lang="en">Treatise on those who deny the resurrection of the dead</title>
             <title xml:id="t2">On the Vivification of the Dead</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -46,12 +45,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Theology"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+               <term key="Translation"/>
+               <term key="Paks1"/>
             </keywords>
          </textClass>
          <abstract>
-            <p>The Ethiopic <date>14th-century</date> treatise is the Ethiopic version of Aphrahat's Demonstration 8: The Resurrection of the Dead</p>
+            <p>The Ethiopic <date>14th-century</date> treatise is the Ethiopic version of Aphrahat's Demonstration 8: The Resurrection of the Dead.</p>
          </abstract>
       </profileDesc>
       <revisionDesc>
@@ -59,18 +60,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-09" who="ES">updated title keywords relation</change>
+         <change when="2018-11-14" who="DR">Corrected transliteration, added keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:isAttributedToAuthor" active="LIT2041Nagarb" passive="PRS1980Aphrahat"></relation>
-            
-         </listBibl>
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor"
+                      active="LIT2041Nagarb"
+                      passive="PRS1980Aphrahat"/>
+         </listRelation>
          <listBibl type="editions">
             <bibl>
-               <ptr target="bm:Cerulli1964Resurrectione"></ptr>
+               <ptr target="bm:Cerulli1964Resurrectione"/>
             </bibl>
          </listBibl>
          <ab/>

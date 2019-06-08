@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -18,9 +18,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -31,9 +30,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-<listWit>
-   <witness corresp="EMML4016" type="external"></witness>
-</listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listWit>
+               <witness corresp="EMML4016" type="external"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -45,12 +47,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Liturgy"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Liturgy"/>
             </keywords>
          </textClass>
-         <abstract><p>A version of the Horologium attributed to <persName ref="PRS4709Giyorgis">Giyorgis of Saglā</persName>
-            and used in some churches, primarily <placeName ref="LOC2290DabraI">Dabra Iyāsus</placeName>.</p></abstract>
+         <abstract>
+            <p>A version of the Horologium attributed to <persName ref="PRS4709Giyorgis">Giyorgis of Saglā</persName>
+            and used in some churches, primarily <placeName ref="LOC2290DabraI">Dabra Iyāsus</placeName>.</p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -61,15 +65,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations"><bibl></bibl>
+         <listRelation>
             <relation name="saws:isVersionOf"
-               active="LIT2231Saatat"
-               passive="LIT1961Mashaf">
+                      active="LIT2231Saatat"
+                      passive="LIT1961Mashaf">
                
             </relation>
-            
-            <relation name="saws:isAttributedToAuthor" active="LIT2231Saatat" passive="PRS4709Giyorgis"></relation>
-         </listBibl>
+            <relation name="saws:isAttributedToAuthor"
+                      active="LIT2231Saatat"
+                      passive="PRS4709Giyorgis"/>
+         </listRelation>
          <ab/>
       </body>
    </text>

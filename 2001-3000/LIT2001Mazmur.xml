@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -25,9 +25,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -38,14 +37,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-        <listWit>
-           <witness corresp="Uppsala"><bibl><ptr target="bm:Loefgren1974Katalog"/><citedRange unit="page">148-151</citedRange></bibl></witness> 
-           <witness corresp="BNFet129"/>
-           <witness corresp="BNFabb133"/>
-           <witness corresp="BLadd13309"/>
-           <witness type="external" corresp="EMML2706"/>
-           <witness corresp="BDLaeth21"></witness>
-        </listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listWit>
+               <witness corresp="Uppsala">
+                  <bibl>
+                     <ptr target="bm:Loefgren1974Katalog"/>
+                     <citedRange unit="page">148-151</citedRange>
+                  </bibl>
+               </witness> 
+               <witness corresp="BNFet129"/>
+               <witness corresp="BNFabb133"/>
+               <witness corresp="BLadd13309"/>
+               <witness type="external" corresp="EMML2706"/>
+               <witness corresp="BDLpoc8"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -60,12 +67,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                
                <term key="Poetry"/>
-               <term key="ChristianLiterature"></term>
+               <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
          
-         <abstract><p>Collection of the <foreign xml:lang="gez">ʿĀrke</foreign> hymns included in the <title ref="LIT2375Synaxa"/>. <persName ref="PRS6378Ludolf"/> used it to compile his calendar in 
-            <bibl><ptr target="bm:Ludolf1691Commentarius"/><citedRange unit="page">389-427</citedRange></bibl>.</p></abstract>
+         <abstract>
+            <p>Collection of the <foreign xml:lang="gez">ʿĀrke</foreign> hymns included in the <ref type="work" corresp="LIT2375Synaxa"/>. <persName ref="PRS6378Ludolf"/> used it to compile his calendar in 
+            <bibl>
+                  <ptr target="bm:Ludolf1691Commentarius"/>
+                  <citedRange unit="page">389-427</citedRange>
+               </bibl>.</p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -73,26 +85,46 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-10-18">Title updated and bibliography added</change>
          <change when="2017-02-09" who="ES">relations and keywords updated</change>
+         <change when="2017-07-13" who="PL">test change</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:isAttributedToAuthor" active="LIT2001Mazmur" passive="PRS2036Arkasel"/>
-         </listBibl>
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor"
+                      active="LIT2001Mazmur"
+                      passive="PRS2036Arkasel"/>
+         </listRelation>
          
          <div type="bibliography">
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Samuel2003EAEArke"/></bibl>
-               <bibl><ptr target="bm:Ludolf1699Lexicon"/><citedRange unit="part">Catalogus librorum</citedRange><citedRange unit="part">Sequuntur Manuscripti</citedRange></bibl>
-               <bibl><ptr target="bm:Habtemichael2005EAEEgziabeherNagsa"/></bibl>
-            </listBibl>
-            <listBibl type="catalogue">
-               <bibl><ptr target="bm:Zotenberg1877Catalogue"/><citedRange unit="page">195</citedRange></bibl>
-               <bibl><ptr target="bm:Dillmann1848Catalogus"/><citedRange unit="page">36-37</citedRange></bibl>
-               <bibl><ptr target="bm:Loefgren1974Katalog"/><citedRange unit="page">148-151</citedRange></bibl>
-               <bibl><ptr target="bm:Ewald1846Tuebingen"/><citedRange unit="page">37</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Samuel2003EAEArke"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Ludolf1699Lexicon"/>
+                  <citedRange unit="part">Catalogus librorum</citedRange>
+                  <citedRange unit="part">Sequuntur Manuscripti</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Habtemichael2005EAEEgziabeherNagsa"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Zotenberg1877Catalogue"/>
+                  <citedRange unit="page">195</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Dillmann1848Catalogus"/>
+                  <citedRange unit="page">36-37</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Loefgren1974Katalog"/>
+                  <citedRange unit="page">148-151</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Ewald1846Tuebingen"/>
+                  <citedRange unit="page">37</citedRange>
+               </bibl>
             </listBibl>
          </div>
       </body>

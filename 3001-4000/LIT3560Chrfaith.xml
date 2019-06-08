@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -13,9 +13,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:id="t1">Untitled Amharic treatise on the Christian faith</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -25,6 +24,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
             <listWit>
                <witness corresp="BLadd16222"/>
@@ -43,22 +45,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="am">Amharic</language>
          </langUsage>
          <textClass>
             <keywords>
                <term key="AmharicLiterature"/>
                <term key="Theology"/>
                <term key="ChristianLiterature"/>
+               <term key="Paks2" cert="low"/>
             </keywords>
          </textClass>
-         <abstract><p>The content, after the introduction, seems mostly based on the <ref type="work" corresp="LIT1586Hayman"/>;
+         <abstract>
+            <p>The content, after the introduction, seems mostly based on the <ref type="work" corresp="LIT1586Hayman"/>;
             in fact, this treatise in Amharic would appear to be some form of popular version of this work. 
             Amharic is predominant and is mainly used for commentary and explanation, while Gǝʿǝz
             is employed for rendering the sayings of the fathers as well as for theological terms.
             The Amharic show signs of some "antiquity".
          <listBibl type="secondary">
-            <bibl><ptr target="bm:Ullendorff1951Catalogue"/><citedRange unit="page">19b-20a</citedRange></bibl>
-         </listBibl></p></abstract>
+                  <bibl>
+                     <ptr target="bm:Ullendorff1951Catalogue"/>
+                     <citedRange unit="page">19b-20a</citedRange>
+                  </bibl>
+               </listBibl>
+            </p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
@@ -68,52 +78,79 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:isRelatedTo" active="LIT3560Chrfaith" passive="LIT1586Hayman"/>
-          
-            </listBibl>
+            <listRelation>
+               <relation name="saws:isRelatedTo"
+                         active="LIT3560Chrfaith"
+                         passive="LIT1586Hayman"/>
+            </listRelation>
          </div>
          <div type="edition">
-          <div type="textpart" subtype="incipit" xml:lang="am">
-             <ab>
-                BDLclarkeor39: ሃይማኖት፡ ለሚየከስ፡ እንዴኽ፡ ነው፡ በማን፡ ታምናለኽ፡ በእግዚአብሔር፤ እግዚአብሔር፡ ስንትነው፡ 
+            <div type="textpart" subtype="incipit" xml:lang="am">
+               <ab>
+                  <ref type="mss" corresp="BDLclarkeor39"/>: ሃይማኖት፡ ለሚየከስ፡ እንዴኽ፡ ነው፡ በማን፡ ታምናለኽ፡ በእግዚአብሔር፤ እግዚአብሔር፡ ስንትነው፡ 
                ሶስት፡ ነው፡ ሐንድም፡ ነው፡ ሶስትነትና፡ ሐንድነት፡ በምን፡ ይቻላል፡ ነፍስ፡ ፀሐይ፡ እሳት፡ ባሕር፡ ሶስት፡ ናቸው፡
                አንድም፡ ናቸው፡
-               BLadd16222: ሃይማኖት፡ ለሚየከስ፡ የሐይማኖት፡ ስመለለስ፡ እንዴህነው፡ በማን፡ ታመልካላሕ፡ 
+                  <ref type="mss" corresp="BLadd16222"/>: ሃይማኖት፡ ለሚየከስ፡ የሐይማኖት፡ ስመለለስ፡ እንዴህነው፡ በማን፡ ታመልካላሕ፡ 
                በእግዚአብሔር፡ ስንትነው፡ አንድም፡ ነው</ab>
-          </div>
-            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="JohnAlexandria1">
+            </div>
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="am"
+                 xml:id="JohnAlexandria1">
                <label>John of Alexandria</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="MenasAlexandria">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="am"
+                 xml:id="MenasAlexandria">
                <label>Menas of Alexandria</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="Athanasius1">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="am"
+                 xml:id="Athanasius1">
                <label>Athanasius of Alexandria</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="Gregory1">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="am"
+                 xml:id="Gregory1">
                <label>Gregory of Nazianz</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="Ignatius">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="am"
+                 xml:id="Ignatius">
                <label>Ignatius of Antioch</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="Gregory2">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="am"
+                 xml:id="Gregory2">
                <label>Gregory of Nazianz</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="JohnAlexandria2">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="am"
+                 xml:id="JohnAlexandria2">
                <label>John of Alexandria</label>
             </div>
             <div type="textpart" subtype="chapter" xml:lang="am" xml:id="Basil1">
                <label>Basil of Caesaria</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="Athanasius2">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="am"
+                 xml:id="Athanasius2">
                <label>Athanasius of Alexandria</label>
             </div>
             <div type="textpart" subtype="chapter" xml:lang="am" xml:id="Basil2">
                <label>Basil of Caesaria</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="Gregory3">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="am"
+                 xml:id="Gregory3">
                <label>Gregory of Nazianz</label>
             </div>
          </div>

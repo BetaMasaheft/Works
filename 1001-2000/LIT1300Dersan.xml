@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,17 +11,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">ድርሳነ፡ ሥላሴ፡</title>
-            <title corresp="#t1" xml:lang="gez" type="normalized">Dǝrsāna śǝllāse</title>
-            <title corresp="#t1" xml:lang="en">Homily on the <persName ref="PRS10775Trinity">Trinity</persName></title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Dǝrsāna Śǝllāse</title>
+            <title corresp="#t1" xml:lang="en">Homily on the <persName ref="PRS10775Trinity">Trinity</persName>
+            </title>
             
             
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -50,12 +50,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Homily"/>
             </keywords>
          </textClass>
-         <abstract><p>The homily is divided into 13 reading
+         <abstract>
+            <p>The homily is divided into 13 reading
             units, one for each month of the year. It is followed
             by a <ref type="work" corresp="LIT2282Trinity">collection of miracles, attributed to
             the awe-inspiring intervention of the Trinity</ref>,
             and by a final doxology divided into seven reading-
-            units, one for each day of the week.</p></abstract>
+            units, one for each day of the week.</p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -68,16 +70,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body>
          <div type="bibliography">
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Lusini2003EAEDersanaS"/></bibl>
+               <bibl>
+                  <ptr target="bm:Lusini2003EAEDersanaS"/>
+               </bibl>
             </listBibl>
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:isVersionOf" active="LIT1300Dersan" passive="LIT2623Zenana LIT1966Mashaf"/>
-               <relation name="saws:formsPartOf" active="LIT1300Dersan" passive="LIT2296Sayfas"><desc>Parts of the <ref type="work" corresp="LIT1300Dersan"/>
-                  are contained in <ref type="work" corresp="LIT2296Sayfas"/>.</desc></relation>
-               <relation name="ecrm:P129_is_about" active="LIT1300Dersan" passive="PRS10775Trinity"></relation>
-               <relation name="saws:contains" active="LIT1300Dersan" passive="LIT2282Trinity"></relation>
-            </listBibl>
+            <listRelation>
+               <relation name="saws:isVersionOf"
+                         active="LIT1300Dersan"
+                         passive="LIT2623Zenana"/>
+               <relation name="saws:isVersionOf"
+                         active="LIT1300Dersan"
+                         passive="LIT1966Mashaf"/>
+               <relation name="saws:formsPartOf"
+                         active="LIT1300Dersan"
+                         passive="LIT2296Sayfas">
+                  <desc>Parts of the <ref type="work" corresp="LIT1300Dersan"/>
+                  are contained in <ref type="work" corresp="LIT2296Sayfas"/>.</desc>
+               </relation>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT1300Dersan"
+                         passive="PRS10775Trinity"/>
+               <relation name="saws:contains"
+                         active="LIT1300Dersan"
+                         passive="LIT2282Trinity"/>
+            </listRelation>
          </div>
       </body>
    </text>

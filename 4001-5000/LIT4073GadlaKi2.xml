@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Gadla Kiros 2</title>
+            <title xml:lang="gez" xml:id="t1">ገድለ፡ ኪሮስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Kiros</title>
+            <title xml:lang="en" corresp="#t1">Vita of Kiros (second recension)</title> 
+            
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,6 +28,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">238</citedRange>
+               </bibl>
+               <bibl type="CC">
+                  <ptr target="bm:CC"/>
+                  <citedRange unit="item">0246</citedRange>
+               </bibl>
+            </listBibl>
             <listWit>
                <witness corresp="BNFet136"/>
             </listWit>
@@ -51,17 +66,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-03-29">Updated and added keywords</change>
+         <change who="MV" when="2017-11-15">Additions</change>
+         <change who="DR" when="2019-01-23">Added relation to general record</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
+            <listRelation>
                <relation name="saws:isAttributedToAuthor"
-                  active="LIT4073GadlaKi2"
-                  passive="PRS7709Pambo"/>
+                         active="LIT4073GadlaKi2"
+                         passive="PRS7709Pambo"/>
+               <relation name="saws:isVersionOf" active="LIT4073GadlaKi2" passive="LIT5134KirosGeneral"/>
+            </listRelation>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Marrassini2004Kiros"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Marrassini2007EAEKiros"/>
+               </bibl>
             </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                ይቤ፡ ቅዱስ፡ አባ፡ ባምዋ፡ እምሩ፡ ኦአኀው፡ ዘደደቀ፡ ሊተ፡ በአሐቲ፡ ዕለት፡ እምዕለታት፡ አጤይቀክሙ፡
+               </ab>
+            </div>
+            <div type="textpart" subtype="explicit" xml:lang="gez">
+               <ab>
+                   ወአምላከ፡ ሰላም፡ የሀብክሙ፡ ኦአኀው፡ ምሕረት፡ ስፉሐ፡ ዘእንበለ፡ ትዕይርት፡ <gap reason="omitted" extent="unknown"/> ወበጸሎተ፡ ኵሎሙ፡ ቅዱሳን፡ አሜን።
+               </ab>
+            </div>
          </div>
       </body>
    </text>

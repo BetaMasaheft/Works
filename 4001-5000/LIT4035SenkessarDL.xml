@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,7 +11,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ስንክሳር፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Sǝnkǝssār (Second revision, Dabra Libānos recension)</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Sǝnkǝssār (Second revision, Dabra
+               Libānos recension)</title>
             <title xml:lang="en" corresp="#t1">Synaxarium</title>
             <title xml:lang="en" xml:id="t2">Synaxary</title>
             <editor key="DR"/>
@@ -19,22 +20,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
+                  <p> This file is licensed under the Creative Commons Attribution-ShareAlike 4.0.
+                  </p>
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
-          <listWit>
-             <witness corresp="BNFet126"/>
-          </listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listWit>
+               <witness corresp="BNFet126"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -48,6 +50,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Hagiography"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -59,57 +62,89 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <div type="bibliography">    
+         <div type="bibliography">
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Colin2010EAESenkessar"/></bibl>
+               <bibl>
+                  <ptr target="bm:Colin2010EAESenkessar"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Colin1986Maskaram"/>
+               </bibl>
             </listBibl>
          </div>
-         
+
          <div type="edition">
-            
-            <!--add reference to PO edition-->
-            
-            <div type="textpart" subtype="chapter" xml:id="Maskaram">
-               <label><foreign xml:lang="gez">Maskaram</foreign></label>
-               
+
+            <!-- the following arrangement of the textparts and text of Maskaram is taken from
+               bm:Colin1986Maskaram when not indicated otherwise-->
+
+            <div type="textpart" subtype="chapter" n="1" xml:id="Maskaram">
+               <label>
+                  <foreign xml:lang="gez">Maskaram</foreign>
+               </label>
+
                <div type="textpart" subtype="chapter" xml:id="MaskIntroduction">
-                  <label>Introduction for <foreign xml:lang="gez">Maskaram</foreign></label>
+                  <label>Introduction for <foreign xml:lang="gez">Maskaram</foreign>
+                  </label>
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ንወጥን፡ በረድኤተ፡ እግዚኣብሔር፡ ወሠናይ፡ ሀብቱ፡ በጽሒፈ፡
+                     መጽሐፈ፡ ስንክሳር፡ ዘበትርጓሜሁ፡ ጉባኤ፡ ዘቀድኅዎ፡ አበዊነ፡ ቅዱሳን፡ መምህራነ፡ ቤተ፡ ክርስቲያን። አብ፡ ክቡር፡ አባ፡
+                     ሚካኤል፡ ኤጲስ፡ ቆጶስ፡ ዘሀገረ፡ አትሪብ፡ ወመሊግ። ወአብ፡ ክቡር፡ አባ፡ ዮሐንስ፡ ኤጲስ፡ ቆጶስ፡ ዘሀገረ፡ ቡርልስ።
+                     ወካልኣን፡ አበው፡ ቅዱሳን፡ ወክቡራን፡ እለ፡ አስተጋብእዎ፡ ለዝንቱ፡ መጽሐፍ፡ እምኵሎሙ፡ ገድላት፡ ዘመላእክት፡ ወሐዋርያት፡
+                     ወነቢያት፡ ወሰማዕታት፡ ወሊቃነ፡ ጳጳሳት፡ ወጻድቃን፡ ወገዳማዊያን፡ ወመነኮሳት። ከመ፡ ይግበሩ፡ ተዝካሮሙ፡ ወያንብቡ፡
+                     ገድሎሙ፡ ኵሎ፡ አሚረ፡ እም፩ ለመስከረም፡ እስከ፡ ተፍጻሜተ፡ ዓመት። ወኮነ፡ አስተጋብኦቱ፡ በ፱፻፷ወ፫ዓመት፡ ለሰማዕታት፡
+                     ንጹሓን። ጸሎቶሙ፡ ወበረከቶሙ፡ የሀሉ፡ ምስሌነ፡ አሜን። </ab>
                </div>
-               
+
                <div type="textpart" subtype="chapter" xml:id="Mask1">
-                  <label><date>1st <foreign xml:lang="gez">Maskaram</foreign></date></label>
-                  
+                  <label>
+                     <date>1st <foreign xml:lang="gez">Maskaram</foreign>
+                     </date>
+                  </label>
+
                   <div type="textpart" xml:id="Mask1Beginning">
                      <label>Beginning of the year</label>
                   </div>
-                  
-                  <div type="textpart" xml:id="Mask1Job">
-                     <label>Job's washing in the river</label>
+
+                  <div type="textpart" subtype="commemoration" xml:id="Mask1Job">
+                     <label>
+                        <persName ref="PRS5691Job"/>'s washing in the river</label>
                   </div>
-                  
-                  <div type="textpart" xml:id="Mask1Bartolomewos">
-                     <label>Death of Bartolomewos</label>
+
+                  <div type="textpart" subtype="commemoration" xml:id="Mask1Bartolomewos">
+                     <label>Death of <persName ref="PRS2481Bartholo"/>
+                     </label>
                   </div>
-                  
-                  <div type="textpart" xml:id="Mask1Melyos">
-                     <label>Death of Milyos</label>
+
+                  <div type="textpart" subtype="commemoration" xml:id="Mask1Melyos">
+                     <label>Death of <persName ref="PRS11847Milyos"/>
+                     </label>
                   </div>
-                  
-                  <div type="textpart" xml:id="Mask1Melki">
-                     <label>Death of Melki</label>
+
+                  <div type="textpart" subtype="commemoration" xml:id="Mask1Melki">
+                     <label>Death of <persName ref="PRS11848Melki"/>
+                     </label>
                   </div>
-                  
-                  <!--<div type="textpart" xml:id="Mask1JohnBaptistHenoch">
-                     <label>Commemoration of John the Baptist and Henoch</label> Described by Zotenberg in BNFet126, but not by Colin
-                  </div>-->
-                  
-                  <div type="textpart" xml:id="Mask1Raguel">
-                     <label>Feast of Raguʾel</label>
+
+                  <div type="textpart"
+                       subtype="commemoration"
+                       xml:id="Mask1JohnBaptistHenoch">
+                     <label>Commemoration of <persName ref="PRS5741Johnthe"/> and <persName ref="PRS3814Enoch"/>
+                     </label>
+                     <note>Described by in <ref type="mss" corresp="BNFet126"/>, but not in
+                              <bibl>
+                           <ptr target="bm:Colin1986Maskaram"/>
+                        </bibl>.</note>
                   </div>
-                  
-                  
+
+                  <div type="textpart" subtype="commemoration" xml:id="Mask1Raguel">
+                     <label>Feast of <persName ref="PRS8065Raguel"/>
+                     </label>
+                  </div>
+
                </div>
-               
+
                <div type="textpart" subtype="chapter" xml:id="Mask2"/>
 
                <div type="textpart" subtype="chapter" xml:id="Mask3"/>
@@ -141,8 +176,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" subtype="chapter" xml:id="Mask29"/>
                <div type="textpart" subtype="chapter" xml:id="Mask30"/>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="Teqemt">
+
+            <div type="textpart" subtype="chapter" n="2" xml:id="Teqemt">
                <div type="textpart" subtype="chapter" xml:id="TeqIntroduction"/>
                <div type="textpart" subtype="chapter" xml:id="Teq1"/>
                <div type="textpart" subtype="chapter" xml:id="Teq2"/>
@@ -175,8 +210,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" subtype="chapter" xml:id="Teq29"/>
                <div type="textpart" subtype="chapter" xml:id="Teq30"/>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="Hedar">
+
+            <div type="textpart" subtype="chapter" n="3" xml:id="Hedar">
                <div type="textpart" subtype="chapter" xml:id="HedIntroduction"/>
                <div type="textpart" subtype="chapter" xml:id="Hed1"/>
                <div type="textpart" subtype="chapter" xml:id="Hed2"/>
@@ -209,8 +244,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" subtype="chapter" xml:id="Hed29"/>
                <div type="textpart" subtype="chapter" xml:id="Hed30"/>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="Tahsas">
+
+            <div type="textpart" subtype="chapter" n="4" xml:id="Tahsas">
                <div type="textpart" subtype="chapter" xml:id="TahIntroduction"/>
                <div type="textpart" subtype="chapter" xml:id="Tah1"/>
                <div type="textpart" subtype="chapter" xml:id="Tah2"/>
@@ -243,8 +278,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" subtype="chapter" xml:id="Tah29"/>
                <div type="textpart" subtype="chapter" xml:id="Tah30"/>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="Terr">
+
+            <div type="textpart" subtype="chapter" n="5" xml:id="Terr">
                <div type="textpart" subtype="chapter" xml:id="TerrIntroduction"/>
                <div type="textpart" subtype="chapter" xml:id="Terr1"/>
                <div type="textpart" subtype="chapter" xml:id="Terr2"/>
@@ -277,8 +312,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" subtype="chapter" xml:id="Terr29"/>
                <div type="textpart" subtype="chapter" xml:id="Terr30"/>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="Yakkatit">
+
+            <div type="textpart" subtype="chapter" n="6" xml:id="Yakkatit">
                <div type="textpart" subtype="chapter" xml:id="YakIntroduction"/>
                <div type="textpart" subtype="chapter" xml:id="Yak1"/>
                <div type="textpart" subtype="chapter" xml:id="Yak2"/>
@@ -311,8 +346,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" subtype="chapter" xml:id="Yak29"/>
                <div type="textpart" subtype="chapter" xml:id="Yak30"/>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="Maggabit">
+
+            <div type="textpart" subtype="chapter" n="7" xml:id="Maggabit">
                <div type="textpart" subtype="chapter" xml:id="MaggIntroduction"/>
                <div type="textpart" subtype="chapter" xml:id="Magg1"/>
                <div type="textpart" subtype="chapter" xml:id="Magg2"/>
@@ -345,8 +380,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" subtype="chapter" xml:id="Magg29"/>
                <div type="textpart" subtype="chapter" xml:id="Magg30"/>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="Miyazya">
+
+            <div type="textpart" subtype="chapter" n="8" xml:id="Miyazya">
                <div type="textpart" subtype="chapter" xml:id="MiyIntroduction"/>
                <div type="textpart" subtype="chapter" xml:id="Miy1"/>
                <div type="textpart" subtype="chapter" xml:id="Miy2"/>
@@ -379,8 +414,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" subtype="chapter" xml:id="Miy29"/>
                <div type="textpart" subtype="chapter" xml:id="Miy30"/>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="Genbot">
+
+            <div type="textpart" subtype="chapter" n="9" xml:id="Genbot">
                <div type="textpart" subtype="chapter" xml:id="GenIntroduction"/>
                <div type="textpart" subtype="chapter" xml:id="Gen1"/>
                <div type="textpart" subtype="chapter" xml:id="Gen2"/>
@@ -413,8 +448,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" subtype="chapter" xml:id="Gen29"/>
                <div type="textpart" subtype="chapter" xml:id="Gen30"/>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="Sane">
+
+            <div type="textpart" subtype="chapter" n="10" xml:id="Sane">
                <div type="textpart" subtype="chapter" xml:id="SanIntroduction"/>
                <div type="textpart" subtype="chapter" xml:id="San1"/>
                <div type="textpart" subtype="chapter" xml:id="San2"/>
@@ -447,8 +482,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" subtype="chapter" xml:id="San29"/>
                <div type="textpart" subtype="chapter" xml:id="San30"/>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="Hamle">
+
+            <div type="textpart" subtype="chapter" n="11" xml:id="Hamle">
                <div type="textpart" subtype="chapter" xml:id="HamIntroduction"/>
                <div type="textpart" subtype="chapter" xml:id="Ham1"/>
                <div type="textpart" subtype="chapter" xml:id="Ham2"/>
@@ -481,8 +516,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" subtype="chapter" xml:id="Ham29"/>
                <div type="textpart" subtype="chapter" xml:id="Ham30"/>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="Nahase">
+
+            <div type="textpart" subtype="chapter" n="12" xml:id="Nahase">
                <div type="textpart" subtype="chapter" xml:id="NahIntroduction"/>
                <div type="textpart" subtype="chapter" xml:id="Nah1"/>
                <div type="textpart" subtype="chapter" xml:id="Nah2"/>
@@ -515,8 +550,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" subtype="chapter" xml:id="Nah29"/>
                <div type="textpart" subtype="chapter" xml:id="Nah30"/>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="Pagwemen">
+
+            <div type="textpart" subtype="chapter" n="13" xml:id="Pagwemen">
                <div type="textpart" subtype="chapter" xml:id="PagIntroduction"/>
                <div type="textpart" subtype="chapter" xml:id="Pag1"/>
                <div type="textpart" subtype="chapter" xml:id="Pag2"/>
@@ -525,8 +560,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" subtype="chapter" xml:id="Pag5"/>
                <div type="textpart" subtype="chapter" xml:id="Pag6"/>
             </div>
-            
+
          </div>
-          </body>
+      </body>
    </text>
 </TEI>

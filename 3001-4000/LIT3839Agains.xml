@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Against the Love of Possession</title>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘቅዱስ፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ በእንተ፡ ሆሳዕና፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān za-qǝddus Yoḥannǝs ʾafa warq baʾǝnta hosāʿnā</title>
+            <title xml:lang="en" corresp="#t1">Homily by St John Chrysostom on the Palm Sunday</title>
+            <title xml:lang="la" corresp="#t1">In ramos</title>
+            <title xml:lang="en" xml:id="t2">Against the Love of Possession</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +29,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="CPG">
+                  <ptr target="bm:CPG2"/>
+                  <citedRange unit="item">4602</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -43,23 +52,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="Homily"/>
                <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+               <term key="Homily"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-03"> Added keywords and fixed relation</change>
+         <change who="MV" when="2017-12-21">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:isAttributedAuthorOf" active="PRS5720JohnChr" passive="LIT3839Agains"></relation>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Pereira1910Homilias"/>
+                  <citedRange>8</citedRange>
+                  <citedRange unit="item">9</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Lusini1988patristica"/>
+                  <citedRange>483</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Bausi2007John"/>
+                  <citedRange>294a</citedRange>
+               </bibl>
             </listBibl>
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT3839Agains"
+                         passive="PRS5720JohnChr"/>
+            </listRelation>
          </div>
       </body>
    </text>

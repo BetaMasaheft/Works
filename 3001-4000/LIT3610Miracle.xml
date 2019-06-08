@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Miracle of a woman from Hartalom/Hartarom with broken legs</title>
+            <title xml:id="t1">Miracle of Mary: Miracle of a woman from Hartalom/Hartarom with broken legs</title>
+            <title xml:id="t2" xml:lang="en">A poor woman with a broken leg is healed by the icon of St Mary in the church of Ḥārat ar-Rūm</title>
+            <title xml:id="t3">The Virgin Mary and the woman from the town of Haltalrom with a broken foot</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +27,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -43,15 +42,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"/> 
+               <term key="ChristianLiterature"/>
                <term key="Miracle"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords and relations</change>
+         <change who="DR" when="2018-11-21">Added keyword, title and Macomber reference</change>
+         <change who="AM" when="2019-04-24">added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -63,18 +65,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">24</citedRange>
                </bibl>
             </listBibl>
-            <listBibl type="translation" xml:lang="en">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">112</citedRange></bibl>
+            </listBibl>
+            <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Budge1933Miracles"/>
+                  <citedRange unit="item">24</citedRange>
                   <citedRange unit="page">73-74</citedRange>
                </bibl>
+               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">31</citedRange><citedRange unit="page">87-88</citedRange></bibl>
             </listBibl>
-            <listBibl type="relations">
-               <bibl/>
+            <!-- The Virgin Mary and the woman from the town of
+                        Haltalrom with a broken foot (BMirMA 37-38; BHMirM 73-74; CerMaria<ref
+                           type="mss" corresp="ES495500">495-500</ref>// mss. O Etiop. 15, LöfUpp
+                        101, n<locus target="#32">32</locus>, I, D.-25; éth. 60, <locus from="38v"
+                           to="40">38v-40</locus>, ZotBNat 63, n°60-25; Orient. 8814, fols. 1<ref
+                           type="mss" corresp="ES44r146">44r-146</ref>r, StrBritLib 47, n<locus
+                           target="#32">32</locus>, 16.-24). -->
+            <listRelation>
                <relation name="saws:formsPartOf"
-                  active="LIT3610Miracle"
-                  passive="LIT2384Taamme"/>
-            </listBibl>
+                         active="LIT3610Miracle"
+                         passive="LIT2384Taamme"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                 <ab>
+                     ወሀለወት፡ አሐቲ፡ ቤተ፡ ክርስቲያን፡ በስመ፡ እግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
+                     በሀገረ፡ <choice resp="PRS6437Macomber"><corr>ሐርተልሮም</corr><sic>ሀልተርሎም</sic></choice>፣
+                     ወሥዕል፡ ዘሀሎ፡ ውስተ፡ ይእቲ፡ ቤተ፡ ክርስቲያን፡ ሥዕለ፡ እግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
+                     ወሰመይዋ፡ ስማ፡ ረዳኢት።
+                 </ab>
+             </div>
          </div>
       </body>
    </text>

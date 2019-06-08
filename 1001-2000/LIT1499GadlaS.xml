@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,14 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Gädlä Sǝbǝstyanos</title>
+            <title xml:id="t1" xml:lang="gez">ገድለ፡ ስብስትያኖስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Gadla Sǝbǝstyānos</title>
+            <title corresp="#t1" xml:lang="en">Life of Sǝbǝstyānos</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -27,6 +28,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
             <listWit>
                <witness corresp="BAVet48#ms_i3"/>
@@ -40,22 +44,76 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Hagiography"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2018-08-10">Added title, keywords and textparts</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-      <div type="bibliography">
-         <listBibl type="editions">
-            <bibl>
-               <ptr target="bm:ContiRossini1927Inediti"/><citedRange unit="page">500-511</citedRange>
-            </bibl>
-         </listBibl>
-      </div>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:ContiRossini1927Inediti"/>
+                  <citedRange unit="page">500-511</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="edition">
+            
+            <note>Preliminary division into textparts based on     <bibl>
+               <ptr target="bm:ContiRossini1927Inediti"/>
+               <citedRange unit="page">500-511</citedRange>
+            </bibl> and <ref type="mss" corresp="BLorient641"/>. The text is taken from <bibl>
+               <ptr target="bm:ContiRossini1927Inediti"/>
+               <citedRange unit="page">500-511</citedRange></bibl>.</note>
+            
+            <div type="textpart" subtype="title" xml:lang="gez" xml:id="title">
+               <label>Title</label>
+               <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ፡ ገድል፡ ወስምዕ፡ ዘብፁዕ፡ ወቅዱስ፡ ስብስትያኖስ፡ ዘፈጸመ፡ ገድሎ፡ አመ፡ ፳ወ<supplied resp="DR" reason="undefined">፭</supplied>፡ ለወርኀ፡ ጥር።</ab>
+            </div>
+            
+            <div type="textpart" subtype="supplicationBeginning" xml:lang="gez" xml:id="supplicationBeginning">
+               <label>Supplication</label>
+            </div>
+            
+            <div type="textpart" xml:lang="gez" subtype="mainText">
+               <label>Main Text</label>
+               
+               <div type="textpart" xml:lang="gez" subtype="incipit" xml:id="incipit">
+                  <label>Incipit</label>
+                  <ab>ወኮነ፡ ልደቱ፡ ለዝንቱ፡ ቅዱስ፡ በሀገረ፡ ናርቦና፡ ዘእም<choice resp="DR"><sic>ህ</sic><corr>ሀ</corr></choice>ገር፡ እምርት፡ እምአድባር፡ ኢጣርያ፡ ወተምህረ፡ መጻሕፍተ፡ በሀገረ፡ ሚላኖ።</ab>
+               </div>
+               
+               <div type="textpart" xml:lang="gez" subtype="explicit" xml:id="explicit">
+                  <label>Explicit</label>
+                  <ab>ወኮነ፡ ዕረፍቱ፡ አመ፳ወ፭፡ ለወርኃ፡ ጥር፡ ወሎቱ፡ ያብዕሉ፡ በሀገረ፡ ሮሜ፡ ሰብእ፡ መሃይምናን፡ በፍሥሐ፡ ወበሐሤት፡ ወአዕርጎ፡ መሥዋዕት፡ ወበምሂረ፡ ነዳያን፡ እንዘ፡ ይትአመኑ፡ በጸሎቱ፡ ማሕያዊት፡ </ab>
+               </div>
+            </div>
+            
+            <div type="textpart" xml:lang="gez" subtype="doxology" xml:id="doxology">
+            <label>Doxology</label>
+         </div>
+            
+            <div type="textpart" xml:lang="gez" subtype="supplicationEnd" xml:id="supplicationEnd">
+               <label>Supplication</label>
+            </div>
+            
+            <div type="textpart" xml:lang="gez" subtype="salam" xml:id="salam">
+               <label>Salām</label>
+               <note>Text taken from <ref type="mss" corresp="BLorient641"/>.</note>
+               <ab>ሰላም፡ ለርእስከ፡ እንተ፡ በዲቤሁ፡ ልኩዕ፨ አክሊለ፡ ሞገስ፡ ወግርማ። ወጌራ፡ መዊእ፨ ስብስትያኖስ፡ ብፁዕ፡ ሰማዕተ፡ እግዚእ፨ ተማኅፀንኩ፡ በስቃይከ፡ ወረድኤትከ፡ ባቍዕ፨ ኅብአኒ፡ እምብድብድ፡ ወደዌ፡ ካልእ፨</ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

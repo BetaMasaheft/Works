@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,16 +11,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ድርሳን፡ በእንተ፡ ሥላሴ፡ ፍክሬ፡</title>
-            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān ba-ʾǝnta śǝllāse fǝkre</title>
-            <title xml:lang="en" corresp="#t1">Homily on the Trinity</title> <!--delete record?-->
+            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān baʾǝnta Śǝllāse fǝkre</title>
+            <title xml:lang="en" corresp="#t1">Homily on the Trinity</title> 
+            <!--delete record?-->
             <author>Epiphanios of Salamis</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -65,7 +65,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Weischer1979QerellosIV2"/>
                </bibl>
             </listBibl>
-            <listBibl type="translation" xml:lang="de">
+            <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Weischer1979QerellosIV2"/>
                </bibl>
@@ -76,11 +76,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:formsPartOf" active="LIT1266Dersan" passive="LIT3309Qerellos"/>
-               <relation name="saws:isAttributedToAuthor" active="LIT1266Dersan" passive="PRS3828Epiphani"/>
-            </listBibl>
+            <listRelation>
+               <relation name="saws:formsPartOf"
+                         active="LIT1266Dersan"
+                         passive="LIT3309Qerellos"/>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT1266Dersan"
+                         passive="PRS3828Epiphani"/>
+            </listRelation>
          </div>
       </body>
    </text>

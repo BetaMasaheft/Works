@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Acts of Andrew and Bartholomew </title>
+            <title xml:lang="gez" xml:id="t1">ግብሮሙ፡ ለእንድርያስ፡ ወለበርተሎሜዎስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Sǝmʿomu la-ʾƎndrǝyās wa-la-Bartalomewos</title>
+            <title xml:lang="en" corresp="#t1" type="main">The Martyrdom of Sts Andrew and Bartholomew</title>
+            
+            <title xml:lang="gez" xml:id="t2">ገድለ፡ እንድርያስ፡ ወለበርተሎሜዎስ፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Gadla ʾƎndrǝyās wa-la-Bartalomewos</title>
+            <title xml:lang="en" corresp="#t2" type="main">The Acts of Sts Andrew and Bartholomew</title>
+            
+            <editor role="generalEditor" key="AB"/>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +33,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">56</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -44,25 +57,60 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
                <term key="Hagiography"/>
+               <term key="Translation"/>
+               <term key="Paks1"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-24">Added keywords</change>
+         <change who="MV" when="2017-11-28">Updated</change>
+         <change who="ES" when="2019-03-04">Updated bibl title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Bausi2000Osservazioni"/>
+                  <citedRange>AnB</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Budge1899ContendingsText"/>
+                  <citedRange>156-183</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Budge1901ContendingsTransl"/>
+                  <citedRange>183-214</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
                <relation name="saws:formsPartOf"
                          active="LIT3537Acts"
-                         passive="LIT1461Gadlah"></relation>
-            </listBibl>
+                         passive="LIT1461Gadlah"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  ወኮነ፡ እምድኅረ፡ ተንሥኦቱ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ እማእከለ፡ ምውታን፡ ንጉሥ፡ ውእቱ፡ ማእከለ፡ ሰማይ፡ ወምድር፡ <gap reason="omitted" extent="unknown"/> 
+                  በውስተ፡ ሀገረ፡ አሕዛብ፡ በውስተ፡ በሓውርተ፡ መቃጥራን፡
+               </ab>
+            </div>
+            <div type="textpart" subtype="explicit" xml:lang="gez">
+               <ab>
+                  ወጸንዑ፡ በሃይማኖተ፡ እግዚእነ፡ <gap reason="omitted" extent="unknown"/> ወወፅኡ፡ ሐዋርያት፡ እምኀቤሆሙ፡ እንዘ፡ ይባርክዎ፡ ወይሴብሕዎ፡ 
+                  ለእግዚአብሔር፡ <gap reason="omitted" extent="unknown"/> 
+               </ab>
+            </div>
          </div>
       </body>
    </text>

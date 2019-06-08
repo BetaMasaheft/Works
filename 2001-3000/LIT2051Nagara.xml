@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -12,23 +12,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">ነገረ፡ ማርያም፡</title>
             <title corresp="#t1" xml:lang="gez" type="normalized">Nagara Māryām</title>
-            <title corresp="#t1" xml:lang="en">Story of <persName ref="PRS6819Mary">Mary</persName></title>
+            <title corresp="#t1" xml:lang="en">Story of <persName ref="PRS6819Mary">Mary</persName>
+            </title>
             
             <title xml:id="t2" xml:lang="gez">ገድለ፡ ማርያም፡</title>
             <title corresp="#t2" xml:lang="gez" type="normalized">Gadla Māryām</title>
-            <title corresp="#t2" xml:lang="en">Life of <persName ref="PRS6819Mary">Mary</persName></title>
+            <title corresp="#t2" xml:lang="en">Life of <persName ref="PRS6819Mary">Mary</persName>
+            </title>
             
-            <title xml:id="t3amh" xml:lang="am">ነገረ፡ ማርያም፡</title>
-            <title corresp="#t3" xml:lang="am" type="normalized">Nagara Māryām</title>
-            <title corresp="#t3" xml:lang="en">Story of <persName ref="PRS6819Mary">Mary</persName></title>
+            <title xml:lang="gez" xml:id="t3">ዜናሃ፡ ለእግዝእትነ፡ ማርያም፡ </title>
+            <title xml:lang="gez" corresp="#t3" type="normalized">Zenāhā  la-ʾǝgzǝʾtǝna Māryām</title>
+            <title xml:lang="en" corresp="#t3">The Story of Our Lady Mary</title>
             
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -39,19 +40,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
             <listWit>
-               <witness corresp="BLorient602"></witness>
-               <witness corresp="BLorient603"></witness>
-               <witness corresp="BLorient604"></witness>
-               <witness corresp="BLorient605"></witness>
-               <witness corresp="BLorient607"></witness>
-               <witness corresp="BLorient790"></witness>
-               <witness corresp="BLorient13223" xml:lang="am"></witness>
-               <witness corresp="BLadd16193"></witness>
-               <witness corresp="BNFabb102"></witness>
-               <witness corresp="EMML2461" type="external"></witness>
-               <witness corresp="EMML4279" type="external"></witness>
-               <witness corresp="EMML4355" type="external"></witness>
+               <witness corresp="BLorient602"/>
+               <witness corresp="BLorient603"/>
+               <witness corresp="BLorient604"/>
+               <witness corresp="BLorient605"/>
+               <witness corresp="BLorient607"/>
+               <witness corresp="BLorient790"/>
+               <witness corresp="BLorient13223" xml:lang="am"/>
+               <witness corresp="BLadd16193"/>
+               <witness corresp="BNFabb102"/>
+               <witness corresp="EMML2461" type="external"/>
+               <witness corresp="EMML4279" type="external"/>
+               <witness corresp="EMML4355" type="external"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -61,12 +65,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="am">Amharic</language>
          </langUsage>
          
          <textClass>
             <keywords>
-               <term key="Apocrypha"></term>
-               <term key="ChristianLiterature"></term>
+               <term key="Apocrypha"/>
+               <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
          <abstract>
@@ -83,13 +88,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="ecrm:P129_is_about" active="LIT2051Nagara" passive="PRS6819Mary"></relation>
-         </listBibl>
+         <listRelation>
+            <relation name="ecrm:P129_is_about"
+                      active="LIT2051Nagara"
+                      passive="PRS6819Mary"/>
+         </listRelation>
          <listBibl type="secondary">
             <bibl>
-               <ptr target="bm:Witakowski2014NagaraMaryam"></ptr>
+               <ptr target="bm:Witakowski2014NagaraMaryam"/>
             </bibl>
          </listBibl>
          <ab/>

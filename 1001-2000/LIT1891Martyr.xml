@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,14 +10,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Martyrium Arethae</title>
+            <title xml:lang="gez" xml:id="t1">ዜናሆሙ፡ ለሰብአ፡ ናግራን፡ ወስምዖሙ፡ ለቅዱስ፡ ኂሩት፡ ወእለ፡ ምስሌሁ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Zenāhomu la-sabʾa Nāgrān wa-sǝmʿomu la-qǝddus Ḫirut wa-ʾǝlla mǝsle-hu</title>
+            <title xml:lang="en" corresp="#t1">History of the martyrs of Nāgrān</title>
+            <title xml:lang="gez" xml:id="t2">ገድለ፡ ኂሩት፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Gadla Ḫirut</title>
+            <title xml:lang="en" corresp="#t2">Vita of Ḫirut</title>
+            <title xml:lang="la" corresp="#t2">Martyrium Arethae</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -29,7 +35,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">105</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -43,6 +56,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Hagiography"/>
+               <term key="Translation"/>
+               <term key="Paks1"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -51,11 +66,47 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-03-17">Added keywords</change>
+         <change who="MV" when="2017-11-13">Additions</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Pereira1899Nagran"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Bausi2006Areta"/>
+                  <citedRange>116-306</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation">
+                  <bibl>
+                     <ptr target="bm:Bausi2006Areta"/>
+                     <citedRange>117-305</citedRange>
+                  </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="ecrm:CLP46i_may_form_part_of"
+                         active="LIT1891Martyr"
+                         passive="LIT1493Gadlas"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  ዝውእቱ፡ ዜናሆሙ፡ ለሰብኦ፡ ናግራን፡ ወስምዖሙ፡ ለቅዱስ፡ ኂሩት፡ ወእለ፡ ምስሌሁ፡ ዘኮነ፡ በኃምስ፡ ዓመተ፡ መንግሥቱ፡ ለቈስጥንጥኖስ፡ 
+                  ንጉሥ። <gap reason="omitted" extent="unknown"/> ወበውእቱ፡ መዋዕል፡ ሀሎ፡ ሊቀ፡ ጳጳሳት፡ በኢየሩሳሌም፡ አባ፡ ዮሐንስ፡
+               </ab>
+            </div>
+            <div type="textpart" subtype="explicit" xml:lang="gez">
+               <ab>
+                  ኢተናገረ፡ ወኢምስለ፡ መኑሂ፡ ወአሥመሮ፡ ለእግዚአብሔር፡ በሥነ፡ ምግባሩ፡ ወአዕረፈ፡ በሰላም። ወንሕነኒ፡ ንስአሎ፡ ለእግዚእነ፡ 
+                  <gap reason="omitted" extent="unknown"/> አሜን።
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

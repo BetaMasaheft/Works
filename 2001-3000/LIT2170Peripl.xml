@@ -1,55 +1,329 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2170Peripl">
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2170Peripl">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Periplus of the Erythraean Sea</title>
-            <title xml:id="t2">Períplous tês Erythrâs thalássēs</title>
+            <title corresp="#t2" type="normalized">Períplous tês Erythrâs thalássēs</title>
+            <title xml:id="t2" xml:lang="gr">ΠΕΡΙΠΛΟΥΣ ΤΗΣ ΕΡΥΘΡΑΣ ΘΑΛΑΣΣΗΣ</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="PL"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
+         <editionStmt>
+            <p>Text from the edition in Casson, which is Frisk text with some corrections <bibl><ptr target="bm:Casson1989Periplus"/><citedRange unit="page">5-6 and
+                  49</citedRange></bibl>.</p>
+            <p>Checked against the images with addition of transcription features, like the
+               annotations on the margin of the manuscripts.</p>
+         </editionStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+               Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
+                  <p> This file is licensed under the Creative Commons Attribution-ShareAlike 4.0.
+                  </p>
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+
+         </sourceDesc>
+         <sourceDesc>
+            <listWit>
+               <witness type="external" xml:id="P" corresp="Cod. Pal. graec. 398" facs="http://digi.ub.uni-heidelberg.de/diglit/cpgraec398/0569"><ptr target="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/manifest.json"/> Sammelhandschrift — Konstantinopel, letztes Viertel 9. Jh. </witness>
+               <witness type="external" xml:id="L" corresp="British Library Add MS 19391" facs="http://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_19391_f009r"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
+         <creation notBefore="0040" notAfter="0070" evidence="internal"><ref cRef="urn:cts:greekLit:tlg0071.tlg001:19">Periplus 19</ref></creation>
          <langUsage>
+            <language ident="grc">Greek</language>
             <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
-            <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract>
+            <p>A merchant account of the Red See ports and trade stops.</p>
+         </abstract>
+         <textClass>
+            <keywords>
+               <term key="Other"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
+         <change who="PL" when="2018-06-27"> updated bibliography, added pbs for muller, frisk and
+            casson</change>
+         <change who="PL" when="2018-06-24"> added witnesses, bibliography, translation 1-4 and text
+            in greek for chapter 1 </change>
+         <change who="PL" when="2016-03-21"> Created file from google spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl xml:id="frisk"><ptr target="bm:Frisk1927Periple"/></bibl>
+               <bibl xml:id="muller"><ptr target="bm:agatarchidesExcerpta"/></bibl>
+               <bibl><ptr target="bm:HuntingfordPeriplus"/></bibl>
+               <bibl xml:id="casson"><ptr target="bm:Casson1989Periplus"/></bibl>
+               <bibl><ptr target="bm:Fiaccadori2010Periplus"/></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="gr" resp="#frisk">
+            <head><surplus>ΑΡΡΙΑΝΟΥ</surplus> ΠΕΡΙΠΛΟΥΣ ΤΗΣ ΕΡΥΘΡΑΣ
+                  ΘΑΛΑΣΣΗΣ</head>
+            <div type="textpart" subtype="chapter" n="1" xml:id="chapter1">
+               <ab>
+                  <pb n="1" corresp="#frisk"/>
+                  <pb n="51" corresp="#casson"/>
+                  <pb n="257" corresp="#mueller"/>
+                  <pb n="9r" corresp="#L"/>
+                  <pb n="40v" corresp="#P" facs="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/canvas/0084.json"/> Τῶν ἀποδεδειγμένων ὅρμων τῆς <placeName ref="pleiades:39290">Ἐρυθρᾶς
+                     θαλάσσης</placeName> καὶ τῶν περὶ αὐτὴν ἐμπορίων πρῶτός ἐστιν λιμὴν <add place="margin">Μυὸς ὅρμος</add>
+                  <metamark>⸏</metamark> τῆς Αἰγύπτου <placeName ref="pleiades:786069">Μυὸς</placeName> ὅρμος, μετὰ δὲ αὐτὸν εἰσπλεόντων ἀπὸ χιλίων ὀκτακοσίων
+                  σταδίων ἐν δεξιᾷ <add place="margin">Βερ-νίκη</add> ἡ <placeName ref="pleiades:785986">Βερνίκη</placeName>· ἀμφοτέρων <supplied reason="omitted">δὲ</supplied> oἱ λιμένες ἐν τῷ ἐσχάτῳ <metamark>⸏</metamark>τῆς Αἰγύπτου
+                  κόλποι <surplus>δὲ</surplus> τῆς <placeName ref="pleiades:39290">Ἐρυθρᾶς
+                     θαλάσσης</placeName> κεῖνται. </ab>
+            </div>
+            <div type="textpart" subtype="chapter" n="2" xml:id="chapter2">
+               <ab> Τούτων ἐκ μὲν τῶν δεξιῶν ἀπὸ <placeName ref="pleiades:785986">Βερνίκη</placeName>ς συναφὴς ἡ Βαρβαρικὴ χώρα ἐστίν· τὰ μὲν
+                  παρὰ θάλασσαν <placeName type="ethnic" ref="pleiades:40028">Ἰχθυοφάγων</placeName> 
+                  μάνδραις οἰκοδομημέναις ἐν στενώμασιν καὶ σποράδην δὲ
+                  οἰκοῦνται, τὰ δὲ μεσόγεια Βαρβάρων καὶ τῶν μετ´ 
+                  αὐτοὺς Ἀγριοφάγων καὶ  
+                  Μοσχοφάγων
+                  κατὰ τυραννίδα νεμομένων, οἷς ἐπίκειται κατὰ νώτου μεσόγειος ἀπὸ τῶν πρὸς δύσιν
+                  μερῶν <supplied reason="omitted">μητρόπολις λεγομένη <placeName ref="pleiades:805630">Μερόη</placeName> </supplied></ab>
+            </div>
+
+            <div type="textpart" subtype="chapter" n="3" xml:id="chapter3">
+               <ab> Μετὰ δὲ τοὺς Μοσχοφάγους 
+                  ἐπὶ θαλάσσης μικρὸν ἐμπόριόν ἐστιν, ἀπέχον †τὸ πέρας
+                  τῆς ἀνακομιδῆς† σταδίους περὶ τετρακισχιλίους, <placeName ref="pleiades:39409">Πτολεμαῒς ἡ τῶν θηρῶν</placeName> λεγομένη, ἀφ
+                  ̓ ἧς οἱ ἐπὶ Πτολε<supplied reason="omitted">μαί</supplied>ων τῷ βασιλεῖ θηρεύοντες
+                  ἀνέβησαν. Ἔχει δὲ τὸ ἐμπόριον χελώνην ἀληθινὴν καὶ χερσαίαν ὀλίγην καὶ λευκὴν
+                  μικροτέραν τοῖς ὀστράκοις· εὑρίσκεται δὲ ἐν αὐτῇ ποτὲ μὲν ἐλέφας ὀλίγος, ὅμοιος τῷ
+                  Ἀδουλιτικῷ. Ὁ δὲ τόπος ἀλίμενος καὶ σκάφαις μόνον τὴν ἀποδρομὴν ἔχων. </ab>
+            </div>
+            <div type="textpart" subtype="chapter" n="4" xml:id="chapter4">
+               <ab>
+                  <pb n="41r" corresp="#P" facs="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/canvas/0085.json"/> Μετὰ δὲ τὴν <placeName ref="pleiades:39409">Πτολεμαΐδα τὴν τῶν θηρῶν</placeName> ἀπὸ σταδίων ὡς τρισχιλίων ἐμπόριόν ἐστιν
+                  νόμιμον ἡ <placeName ref="LOC1261Adulis">Ἄδουλι</placeName>, κείμενον ἐν κόλπῳ βαθεῖ κατ ̓ αὐτὸν τὸν νότον, οὗ πρό[σ]κειται
+                  νῆσος <placeName ref="pleiades:39404">Ὀρεινὴ</placeName> λεγομένη, τοῦ μὲν ἐσωτάτου κόλπου σταδίους ὡς εἰς πέλαγος ἔχουσα
+                  διακοσίους, ἐξ ἀμφοτέρων <supplied reason="omitted">δὲ</supplied> τῶν μερῶν
+                  παρακειμένην ἔχουσα τὴν ἤπειρον, ἐν ᾗ νῦν ὁρμεῖ τὰ καταγόμενα πλοῖα διὰ τὰς ἐκ τῆς
+                  γῆς καταδρομάς. Πρῶτον μὲν γὰρ ὥρμει κατ ̓ αὐτὸν τὸν ἐσώτατον κόλπον ἐν τῇ Διδώρου
+                  λεγομένῃ νήσῳ παρ ̓ αὐτὴν τὴν ἤπειρον, ἐχούσῃ πεζῇ τὴν διάβασιν, δι ̓ ἧς οἱ
+                  κατοικοῦντες Βάρβαροι κατέτρεχον τὴν νῆσον. Καὶ κατ ̓ αὐτὴν τὴν ἐν τῇ <placeName ref="pleiades:39404">Ὀρεινῇ</placeName>
+                  ἤπειρον ἀπὸ σταδίων εἴκοσι τῆς θαλάσσης ἐστὶν ἡ <placeName ref="LOC1261Adulis">Ἄδουλι</placeName>, κώμη σύμμετρος, ἀφ ̓ ἧς
+                  εἰς μὲν <placeName ref="LOC5232Qohayt">Κολόην</placeName> 
+
+                  μεσόγειον πόλιν καὶ πρῶτον ἐμπόριον τοῦ ἐλέφαντος ὁδός ἐστιν ἡμερῶν
+                  τριῶν· ἀπὸ δὲ ταύτης εἰς αὐτὴν <placeName ref="LOC1310Aksum">τὴν μητρόπολιν τὸν Ἀξωμίτην</placeName> λεγόμενον ἄλλων ἡμερῶν
+                  πέντε, εἰς ὅν ὁ πᾶς ἐλέφας ἀπὸ τοῦ πέρα<supplied reason="omitted">ν</supplied> τοῦ
+                  Νείλου φέρεται διὰ τοῦ λεγομένου <placeName ref="pleiades:40186">Κυηνείου</placeName>
+                  <listRelation><relation name="skos:closeMatch" active="https://pleiades.stoa.org/places/40186" passive="http://www.geonames.org/408669"/>
+                  </listRelation>, ἐκεῖθεν δὲ εἰς <placeName ref="LOC1261Adulis">Ἄδουλι</placeName>. Τὸ μὲν οὖν ὅλον
+                  πλῆθος τῶν φονευομένων ἐλεφάντων καὶ ῥινοκερώτων περὶ τοὺς ἄνω νέμεται τόπους,
+                  σπανίως δέ ποτε καὶ ἐν τῷ παρὰ θάλασσαν περὶ αὐτὴν τὴν <placeName ref="LOC1261Adulis">Ἄδουλι</placeName> θεωροῦνται.
+                  Πρόκεινται δὲ τοῦ ἐμπορίου καὶ κατὰ πέλαγος ἄλλαι νῆσοι μικραὶ ἐκ δεξιῶν ἄμμιναι
+                  πλείονες, <placeName ref="pleiades:39281">Ἀλαλαίου</placeName> λεγόμεναι, 
+                  χελώνην ἔχουσαι τὴν εἰς τὸ ἐμπόριον φερομένην ἀπὸ
+                  τῶν <placeName type="ethnic" ref="pleiades:40028">Ἰχθυοφάγων</placeName>. </ab>
+            </div>
+            <div type="textpart" subtype="chapter" n="5" xml:id="chapter5">
+               <ab> Καὶ ἀπὸ σταδίων ὡσεὶ ὀκτακοσίων κόλπος ἕτερος βαθύτατος, οὗ κατὰ τὴν εἰσβολὴν ἐν
+                  δεξιοῖς <placeName ref="wd:Q23940904">ἄμμος ἐστὶν πολλὴ κεχυμένη</placeName>, καθ᾽ ἧς ἐν βάθει κεχωσμένος εὑρίσκεται ὁ
+                  ὀψιανὸς λίθος, ἐν ἐκείνῃ μόνῃ τοπικῶς γεννώμενος. Βασιλεύει δὲ τῶν τόπων τούτων
+                  ἀπὸ τῶν Μοσχοφάγων μέχρι τῆς ἄλλης Βαρβαρίας Ζωσκάλης, ἀκριβὴς μὲν τοῦ βίου καὶ
+                  τοῦ πλείονος ἐξεχόμενος, γενναῖος δὲ περὶ τὰ λοιπὰ καὶ γραμμάτων Ἑλληνικῶν
+                  ἔμπειρος. </ab>
+            </div>
+            <div type="textpart" subtype="chapter" n="6" xml:id="chapter6">
+               <ab> Προχωρεῖ δὲ εἰς τοὺς τόπους τούτους ἱμάτια Βαρβαρικὰ ἄγναφα τὰ ἐν Αἰγύπτῳ
+                  γινόμενα, Ἀρσινοϊτικαὶ στολαὶ καὶ ἀβόλλαι νόθοι χρωμάτινοι καὶ λέντια καὶ
+                  δικρόσσια καὶ λιθίας ὑ<supplied reason="omitted">α</supplied>λῆς πλείονα γένη καὶ
+                  ἄλλης μορρίνης τῆς γινομένης ἐν Διοσπόλει, καὶ ὠρόχαλκος, ᾧ χρῶνται πρὸς κόσμον
+                  καὶ εἰς συγκοπὴν ἀντὶ νομίσματος, καὶ μελίεφθα χαλκᾶ εἴς τε ἕψησιν καὶ εἰς
+                  συγκοπὴν ψελίων καὶ περισκελίδων τισὶν τῶν γυναικῶν καὶ σίδηρος ὁ δαπανώμενος εἴς
+                  τε λόγχας πρὸς τοὺς ἐλέφαντας καὶ τὰ ἄλλα θηρία καὶ τοὺς πολέμους. Ὁμοίως δὲ καὶ
+                  πελύκια προχωρεῖ καὶ σκέπαρνα καὶ μάχαιραι καὶ ποτήρια χαλκᾶ στρούλα μεγάλα καὶ
+                  δηνάριον ὀλίγον πρὸς τοὺς ἐπιδημοῦντας καὶ οἶνος Λαδικηνὸς καὶ Ἰταλικὸς οὐ πολὺς
+                  καὶ ἔλαιον οὐ πολύ· τῷ δὲ βασιλεῖ ἀργυρώματα καὶ χρυσώματα τοπικῷ ῥυθμῷ
+                  κατεσκευασμένα καὶ ἱματίων ἀβόλλαι καὶ γαυνάκαι ἁπλοῖ, οὐ ποοῦ δὲ ταῦτα. Ὁμοίως δὲ
+                  καὶ ἀπὸ τῶν ἔσω τόπων τῆς Ἀριακῆς σίδηρος Ἰνδικὸς καὶ στόμωμα καὶ ὀθόνιον Ἰνδικὸν
+                  τὸ πλατύτερον ἡ λεγομένη μοναχὴ καὶ σαγματογῆναι καὶ περιζώματα καὶ γαυνάκαι καὶ
+                  μολόχινα καὶ σινδόναι ὀλίγαι καὶ λάκκος χρωμάτινος. Φέρεται δὲ ἀπὸ τῶν τόπων
+                  ἐλέφας καὶ χελώνη καὶ ῥινόκερως. Τὰ δὲ πλεῖστα ἐκ τῆς Αἰγύπτου φέρεται εἰς τὸ
+                  ἐμπόριον τοῦτο ἀπὸ μηνὸς Ἰανουαρίου μέχρι τοῦ Σεπτεμβρίου, ὅ ἐστιν ἀπὸ Τῦβι ἕως
+                  Θώθ· εὐκαίρως δὲ ἀπὸ Αἰγύπτου ἀνάγονται περὶ τὸν Σεπτέμβριον μῆνα. </ab>
+            </div>
+
+            <div type="textpart" subtype="chapter" n="7" xml:id="chapter7">
+               <ab> Ἤδη ἐπ ̓ ἀνατολὴν <placeName ref="pleiades:39290">ὁ Ἀραβικὸς κόλπος</placeName> 
+                  διατείνει καὶ κατὰ τὸν <placeName ref="pleiades:39305">Αὐαλίτην</placeName> μάλιστα
+                  στενοῦται. Μετὰ δὲ σταδίους ὡσεὶ τετρακισχιλίους, κατὰ τὴν αὐτὴν ἤπειρον εἰς
+                  ἀνατολὴν πλεόντων, ἔστιν ἄα ἐμπόρια Βαρβαρικά, τὰ πέρα<supplied reason="omitted">ν</supplied> λεγόμενα, κείμενα μὲν κατὰ τὸ ἑξῆς, ἀγκυροβολίοις δὲ καὶ σάλοις
+                  ἔχοντα τοὺς ὅρμους κατὰ καιροὺς ἐπιτηδείους. Πρῶτος μὲν ὁ λεγόμενος <placeName ref="pleiades:39305">Αὐαλίτης</placeName>, καθ  ̓
+                  ὃν καὶ στενότατός ἐστιν ἀπὸ τῆς <placeName ref="pleiades:29475">Ἀραβικῆς</placeName> 
+                  εἰς τὸ πέραν διάπλους. Κατὰ τοῦτον τὸν
+                  τόπον μικρὸν ἐμπόριόν ἐστιν ὁ <placeName ref="pleiades:39305">Αὐαλίτης</placeName>, σχεδίαις καὶ σκάφαις εἰς τὸ αὐτὸ
+                  προσερχομένων. Προχωρεῖ δὲ εἰς αὐτὴν ὑαλῆ λιθία σύμμικτος καὶ <supplied reason="omitted">χυλὸς</supplied> Διοπολιτικῆς ὄμφακος καὶ ἱμάτια Βαρβαρικὰ
+                  σύμμικτα γεγναμμένα καὶ σῖτος καὶ οἶνος καὶ κασσίτερος ὀλίγος. Φέρεται δ ̓ ἐξ
+                  αὐτῆς, ποτὲ καὶ τῶν Βαρβάρων ἐπὶ σχεδίαις διαπερώντων εἰς τὴν ἄντικρυς <supplied reason="omitted">Ὄ</supplied> κηλιν καὶ Μούζα, ἀρώματα καὶ ἐλέφας ὀλίγος καὶ
+                  χελώνη καὶ σμύρνα ἐλαχίστη, διαφέρουσα δὲ τῆς ἄλλης. Ἀτακτότεροι δὲ οἱ
+                  κατοικοῦντες τὸν τόπον Βάρβαροι. </ab>
+            </div>
+            <div type="textpart" subtype="chapter" n="8" xml:id="chapter8">
+               <ab> Μετὰ δὲ τὴν <placeName ref="pleiades:39305">Αὐαλίτην</placeName> ἕτερον 
+                  ἐμπόριόν ἐστιν τούτου διαφέρον ἡ λεγομένη <placeName ref="pleiades:39375">Μαλαώ</placeName>,
+                  πλοῦν ἀπέχουσα σταδίων ὡς ὀκτακοσίων· ὁ δὲ ὅρμος ἐπίσαλος, σκεπόμενος ἀκρωτηρίῳ τῷ
+                  ἐξ ἀνατολῆς ἀνατείνοντι· οἱ δὲ κατοικοῦντες εἰρηνικώτεροι. Προχωρεῖ δὲ εἰς τοῦτον
+                  τὸν τόπον τὰ προειρημένα καὶ πλείονες χιτῶνες, σάγοι Ἀρσινοϊτικοὶ γεγναμμένοι καὶ
+                  βεβαμμένοι, καὶ ποτήρια καὶ μελίεφθα ὀλίγα καὶ σίδηρος καὶ δηνάριον οὐ πολὺ, καὶ
+                  χρυσοῦν δὲ καὶ ἀργυροῦν. Ἐκφέρεται δὲ ἀπὸ τῶν τόπων τούτων καὶ σμύρνα καὶ λίβανος
+                  ὁ περατικὸς ὀλίγος καὶ κασ[σ]ία σκληροτέρα καὶ δουακα καὶ κάγκαμον καὶ μάκειρ, τὰ
+                  εἰς <placeName ref="pleiades:29475">Ἀραβίαν</placeName> προχωροῦντα, καὶ σώματα σπανίως. </ab>
+            </div>
+            <div type="textpart" subtype="chapter" n="9" xml:id="chapter9">
+               <ab> Ἀπὸ δὲ <placeName ref="pleiades:39375">Μαλαὼ</placeName> δύο δρόμοις ἐστὶν 
+                  ἐμπόριον ἡ <placeName ref="wd:Q35310689">Μούνδου</placeName>, ἐν ᾧ καὶ ἀσφαλέστερον ὁρμεῖ
+                  τὰ πλοῖα εἰς τὴν προκειμένην ἔιστα τῆς γῆς νῆσον. Προχωρεῖ δὲ εἰς αὐτὴν τὰ
+                  προειρημένα καὶ ἐκεῖθεν ὁμοίως ἐκφέρεται τὰ προειρημένα φορτία <supplied reason="omitted">καὶ</supplied> θυμίαμα τὸ λεγόμενον μοκροτου. Οἱ δὲ
+                  κατοικοῦντες ἔμποροι σκληρότεροι. </ab>
+            </div>
+            <div type="textpart" subtype="chapter" n="10" xml:id="chapter10">
+               <ab> Ἀπὸ δὲ τῆς <placeName ref="wd:Q35310689">Μούνδου</placeName>, πλεόντων εἰς τὴν ἀνατολήν, ὁμοίως μετὰ δύο δρόμους ἢ τρεῖς
+                  πλησίον 〈***〉 κεῖται τὸ <placeName ref="pleiades:39387">Μόσλλυον</placeName> ἐν αἰγιαλῷ δυσόρμῳ. 
+                  Προχωρεῖ δὲ εἰς αὐτὴν τὰ
+                  προειρημένα γένη καὶ σκεύη ἀργυρᾶ, σιδηρᾶ δὲ ἐλάσσω, καὶ λιθία. Ἐξάγεται δὲ ἀπὸ
+                  τῶν τόπων κασίας χῦμα πλεῖστον — <supplied reason="omitted">δι</supplied>ὸ καὶ
+                  μειζόνων πλοίων χρῄζει τὸ ἐμπόριον — καὶ ἄα εὔοσμα καὶ ἀρώματα καὶ χελωνάρια ὀλίγα
+                  καὶ μοκροτου, ἧττον τοῦ Μουνδιτικοῦ, καὶ λίβανος ὁ περατικός, ἐλέφας δὲ καὶ σμύρνα
+                  σπανίως. </ab>
+            </div>
+
+            <div type="textpart" subtype="chapter" n="11" xml:id="chapter11">
+               <ab> Ἀπὸ δὲ τοῦ <placeName ref="pleiades:39387">Μοσύλλου</placeName> †παραπλεύσαντα μετὰ δύο 
+<!--                  The following two placenames do not have a ref because there is no possible identification -->
+                  δρόμους τὸ λεγόμενον Νειλοπτολεμαίου
+                  καὶ ταπατηγη† καὶ δαφνῶνα μικρὸν <surplus>καὶ</surplus> 
+                  <placeName ref="pleiades:39340">ἀκρωτήριον Ἐλέφας</placeName>· [ἀπὸ Ὀπόνης εἰς νότον
+                  προχωρεῖ εἶτα εἰς λίβα ἡ χώρα] ποταμὸν ἔχει τὸν λεγόμενον Ἐλέφαντα καὶ δαφνῶνα
+                  <placeName ref="pleiades:40030">μέγαν λεγόμενον Ἀκάνναι</placeName>, ἐν ᾗ μονογενῶς λίβανος ὁ περατικὸς πλεῖστος καὶ διάφορος
+                  γίνεται. </ab>
+            </div>
+
+            <div type="textpart" subtype="chapter" n="12" xml:id="chapter12">
+               <ab> Καὶ μετὰ ταύτην, τῆς γῆς ὑποχωρούσης εἰς τὸν νότον ἤδη, τὸ τῶν <placeName ref="pleiades:39293">Ἀρωμάτων ἐμπόριον</placeName>
+                  καὶ ἀκρωτήριον τελευταῖον τῆς Βαρβαρικῆς ἠπείρου πρὸς ἀνατολὴν ἀπόκοπον· ὁ δὲ
+                  ὅρμος ἐπίσαλος κατὰ καιροὺς ἐπικίνδυνος διὰ τὸ προσεχῆ τὸν τόπον εἶναι τῷ βορέᾳ.
+                  Σημεῖον δὲ τοῦ μέοντος χειμῶνος τοπικὸν τὸ τὸν βυθὸν θολερώτερον γίνεσθαι καὶ τὴν
+                  χρόαν ἀλ<supplied reason="omitted">λ</supplied>άσσειν. Τούτου δὲ γενομένου πάντες
+                  ἀποφεύγουσιν εἰς τὸ μέγα ἀκρωτήριον, τόπον καὶ σκέπην, τὸ λεγόμενον Τάβαι.
+                  Προχωρεῖ δὲ εἰς τὸ ἐμπόριον ὁμοίως τὰ προειρημένα· γίνεται δὲ τὰ ἐν αὐτῷ κασία καὶ
+                  γιζειρ καὶ ἀσυφη καὶ ἄρωμα καὶ μαγλα καὶ μοτὼ καὶ λίβανος. </ab>
+            </div>
+<!--        13-18 saltati    -->
+            <div type="textpart" subtype="chapter" n="19" xml:id="chapter19">
+               <ab>Ἐκ δὲ τῶν εὐωνύμων Βερνίκης ἀπὸ Μυὸς ὅρμου δυσὶν δρόμοις ἢ τρισὶν 
+                  εἰς τὴν ἀνατολὴν διαπλεύσαντι τὸν παρακείμενον κόλπον ὅρμος ἐστὶν ἕτερος καὶ φρούριον, ὃ λέγεται 
+                  <placeName ref="pleiades:814698">Λευκὴ κώμη</placeName>, 
+                  δι ̓ ἧς <surplus>ὁδός</surplus> ἐστιν εἰς Πέτραν πρὸς Μαλίχαν, βασιλέα Ναβαταίων. 
+                  Ἔχει δὲ ἐμπορίου τινὰ καὶ αὐτὴ τάξιν τοῖς ἀπὸ τῆς Ἀραβίας ἐξαρτιζομένοις εἰς αὐτὴν 
+                  πλοίοις οὐ μεγάλοις. Διὸ καὶ παραφυλακῆς χάριν καὶ εἰς αὐτὴν παραλήπτης τῆς τετάρτης 
+                  τῶν εἰσφερομένων φορτίων καὶ ἑκατοντάρχης μετὰ στρατεύματος ἀποστέλλεται.</ab>
+            
+         </div>
+            
+<!--            added after annotations exported!! -->
+            <div type="textpart" subtype="chapter" n="20" xml:id="chapter20">
+               
+               <ab>Μετὰ δὲ ταύτην εὐθέως ἐστὶν συναφὴς Ἀραβικὴ χώρα, κατὰ μῆκος ἐπὶ πολὺ παρατείνουσα τῇ Ἐρυθρᾷ θαλάσσῃ. 
+                  Διάφορα δὲ ἐν αὐτῇ ἔθνη κατοικεῖ[ται], τινὰ μὲν ἐπὶ ποσόν, τινὰ δὲ καὶ τελείως τῇ γλώσσῃ διαλλάσσοντα. 
+                  Τούτων 〈τὰ〉 παρὰ θάλασσαν ὁμοίως Ἰχθυοφάγων μάνδραις διείληπται, τὰ δὲ ἐπάνω κατὰ κώμας καὶ 
+                  νομαδίας οἰκεῖται πονηροῖς ἀνθρώποις διφώνοις, οἷς παραπίπτοντες ἀπὸ τοῦ μέσου πλοὸς ὁτὲ μὲν διαρπάζονται, 
+                  οἱ δὲ καὶ ἀπὸ ναυαγίων σωθέντες ἀνδραποδίζονται. 
+               Διὸ καὶ συνεχῶς ἀπὸ τῶν τυράννων καὶ βασιλέων τῆς Ἀραβίας αἰχμαλωτίζονται· λέγονται δὲ Κανραῗται. 
+               Καθόλου μὲν οὗτος ὁ τῆς Ἀραβικῆς χώρας ἠπείρου παράπλους ἐστὶν ἐπισφαλής, καὶ ἀλίμενος ἡ χώρα καὶ 
+               δύσορμος καὶ ἀκάθαρτος ῥαχίαις καὶ σπίλοις81 ἀπρόσιτος καὶ κατὰ πάντα φοβερά. Διὸ καὶ εἰσπλεόντων 
+               〈τὸν〉 μέσον πλοῦν κατέχομεν [εἰς τὴν Ἀραβικὴν χώραν] 〈καὶ〉 μᾶλλον παροξύνομεν ἄχρι τῆς 
+               Κατακεκαυμένης νήσου, μεθ ̓ ἣν εὐθέως ἡμέρων ἀνθρώπων καὶ νομαδιαίων θρεμμάτων καὶ καμήλων συνεχεῖς 〈χῶραι〉.
+            </ab></div>
+            <div type="textpart" subtype="chapter" n="21" xml:id="chapter21">
+              <ab>Καὶ μετὰ ταύτας ἐν κόλπῳ τῷ τελευταιοτάτῳ τῶν εὐωνύμων τούτου τοῦ πελάγους ἐμπόριόν ἐστιν νόμιμον 
+                 παραθαλάσσιον Μούζα, σταδίους ἀπέχον τοὺς πάντας ἀπὸ Βερνίκης, 
+                 παρ ̓ αὐτὸν τὸν νότον πλεόντων, ὡς εἰς μυρίους δισχιλίους. Τὸ μὲν ὅλον Ἀράβων, ναυκληρικῶν ἀνθρώπων καὶ 
+                 ναυτικῶν, πλεονάζον [δὲ] καὶ τοῖς ἀπὸ ἐμπορίας πράγμασι κινεῖται· συγχρῶνται γὰρ τῇ τοῦ πέραν ἐργασίᾳ καὶ Βαρυγάζων ἰδίοις ἐξαρτισμοῖς.
+            </ab></div>
+            <div type="textpart" subtype="chapter" n="22" xml:id="chapter22">
+               <ab>Ὑπέρκειται δὲ αὐτῆς ἀπὸ τριῶν ἡμερῶν πόλις Σαυὴ89 τῆς περὶ αὐτὴν Μαφαρ〈ί〉τιδος λεγομένης χώρας· 
+                  ἔστιν δὲ τύραννος καὶ κατοικῶν αὐτὴν Χόλαιβος.
+           </ab></div>
+            <div type="textpart" subtype="chapter" n="23" xml:id="chapter23">
+              <ab>Καὶ μετ᾽ ἄλλας ἐννέα ἡμέρας 〈Σ〉αφὰρ μητρόπολις, ἐν ᾗ Χαριβαήλ[α], ἔνθεσμος βασιλεὺς 
+                 ἐθνῶν δύο, τοῦ τε <placeName ref="pleiades:39350">Ὁμηρίτου</placeName> καὶ τοῦ 
+                 παρακειμένου λεγομένου <placeName ref="LOC5395Saba">Σαβαίτου</placeName>, συνεχέσι 
+                 πρεσβείαις καὶ δώροις φίλος [δὲ] τῶν αὐτοκρατόρων.
+            </ab></div>
+         </div>
+
+         <div type="translation" resp="#casson">
+            <div type="textpart" subtype="chapter" n="1" corresp="#chapter1">
+               <ab> Of the designated ports on the Erythraean Sea, and the market-towns around it,
+                  the first is the Egyptian port of Mussel Harbor [=Myos Hormos]. To those sailing
+                  down from that place, on the right hand, after eighteen hundred stadia, there is
+                  Berenice. The harbors of both are at the boundary of Egypt, and are bays opening
+                  from the Erythraean Sea. </ab>
+            </div>
+            <div type="textpart" subtype="chapter" n="2" corresp="#chapter2">
+               <ab>On the right-hand coast next below Berenice is the country of the Berbers [or
+                  Barbaroi, “foreigners”: traditionally designating any non-Greek speaker]. Along
+                  the shore are the Fish-Eaters, living in scattered caves in the narrow valleys.
+                  Further inland are the Berbers, and beyond them the Wild-flesh-Eaters and
+                  Calf-Eaters [Casson: “shoot-eaters”, from Greek mosxophagoi: translatable as
+                  either “calf” or “shoot, twig”], each tribe governed by its chief; and behind
+                  them, further inland, in the country toward the west, there lies a city called
+                  Meroe. </ab>
+            </div>
+            <div type="textpart" subtype="chapter" n="3" corresp="#chapter3">
+               <ab> Below the Calf-Eaters there is a little market-town on the shore after sailing
+                  about four thousand stadia from Berenice, called Ptolemais of the Hunts, from
+                  which the hunters started for the interior under the dynasty of the Ptolemies.
+                  This market-town has the true land-tortoise in small quantity; it is white and
+                  smaller in the shells. And here also is found a little ivory, like that of Adulis.
+                  But the place has no harbor and is reached only by small boats. </ab>
+            </div>
+            <div type="textpart" subtype="chapter" n="4" corresp="#chapter4">
+               <ab> Below Ptolemais of the Hunts, at a distance of about three thousand stadia,
+                  there is Adulis, a port established by law, lying at the inner end of a bay that
+                  runs in toward the south. Before the harbor lies the so-called Mountain Island,
+                  about two hundred stadia sea-ward from the very head of the bay, with the shores
+                  of the mainland close to it on both sides. Ships bound for this port now anchor
+                  here because of attacks from the land. They used formerly to anchor at the very
+                  head of the bay, by an island called Diodorus, close to the shore, which could be
+                  reached on foot from the land; by which means the barbarous natives attacked the
+                  island. Opposite Mountain Island, on the mainland twenty stadia from shore, lies
+                  Adulis, a fair-sized village, from which there is a three-days' journey to Coloe,
+                  an inland town and the first market for ivory. From that place to the city of the
+                  people called Auxumites there is a five days' journey more; to that place all the
+                  ivory is brought from the country beyond the Nile through the district called
+                  Cyeneum, and thence to Adulis. Practically the whole number of elephants and
+                  rhinoceros that are killed live in the places inland, although at rare intervals
+                  they are hunted on the seacoast even near Adulis. Before the harbor of that
+                  market-town, out at sea on the right hand, there lie a great many little sandy
+                  islands called Alalaei, yielding tortoise-shell, which is brought to market there
+                  by the Fish-Eaters. </ab>
+            </div>
+
+         </div>
       </body>
    </text>
 </TEI>

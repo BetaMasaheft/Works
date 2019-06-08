@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,14 +10,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="en" xml:id="t1"><foreign xml:lang="gez">Dǝrsān</foreign> on Gabra Manfas Qǝddus and four miracles performed by him during life</title>
+            <title xml:lang="en" xml:id="t1">Dǝrsān on Gabra Manfas Qǝddus and four miracles performed by him during life</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -27,6 +26,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
            <listWit>
               <witness corresp="BNFet116#ms_i3"/>
@@ -60,6 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="DR" when="2016-10-31"> Created file </change>
          <change who="DR" when="2017-03-29">Added keywords</change>
+         <change who="DR" when="2017-06-13">Changes</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -67,45 +70,73 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <div type="bibliography">
            
            <listBibl type="secondary">
-              <bibl><ptr target="bm:Marrassini2005GabraManfasQeddus"/><citedRange unit="page">620b</citedRange></bibl>
+              <bibl>
+                  <ptr target="bm:Marrassini2005GabraManfasQeddus"/>
+                  <citedRange unit="page">620b</citedRange>
+               </bibl>
            </listBibl>
            
            <listBibl type="editions">
-              <bibl><ptr target="bm:Marrassini2003GabraManfasQeddusTextus"/><citedRange unit="page">273-320</citedRange></bibl>
+              <bibl>
+                  <ptr target="bm:Marrassini2003GabraManfasQeddusTextus"/>
+                  <citedRange unit="page">273-320</citedRange>
+               </bibl>
            </listBibl>
            
            <listBibl type="translation">
-              <bibl><ptr target="bm:Marrassini2003GabraManfasQeddusVersio"/><citedRange unit="page">89-116</citedRange></bibl>
+              <bibl>
+                  <ptr target="bm:Marrassini2003GabraManfasQeddusVersio"/>
+                  <citedRange unit="page">89-116</citedRange>
+               </bibl>
            </listBibl>
            
-           <listBibl type="relations">
-              <bibl/>
-              <relation name="saws:isAttributedToAuthor" active="LIT4077DersanG" passive="PRS10704ZenaGa"/>
-              <relation name="saws:isDifferentTo" active="LIT4077DersanG" passive="LIT3977Taammer"/>
-           </listBibl>
+           <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT4077DersanG"
+                         passive="PRS10704ZenaGa"/>
+               <relation name="saws:isDifferentTo"
+                         active="LIT4077DersanG"
+                         passive="LIT3977Taammer"/>
+            </listRelation>
            
         </div>
          
          <div type="edition">
-            <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT4079Dersan" xml:id="Homily">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 corresp="LIT4079Dersan"
+                 xml:id="HomilyEarlyChildhood">
                <label>Homily on the early childhood of Gabra Manfas Qǝddus</label>
             </div>
             
            <div type="textpart" xml:lang="gez" xml:id="Miracles"> 
               <label>Four miracles performed by Gabra Manfas Qǝddus during his life</label>
               
-              <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleSatan">
+              <div type="textpart"
+                    subtype="chapter"
+                    xml:lang="gez"
+                    xml:id="MiracleSatan">
                  <label>First Miracle: Satan tries to convince Gabra Manfas Qǝddus to go back home</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleHolyPlaces">
-               <label>Second Miracle: First education of Gabra Manfas Qǝddus in Nehisa and first trip to Jerusalem</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleGabaon">
-               <label>Third Miracle: Conversion of the inhabitants of Gabāʿon</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleEthiopia">
-               <label>Fourth Miracle: Arrival in Ethiopia, meetings with Garimā, Gubā and Lālibalā</label>
-            </div>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:lang="gez"
+                    xml:id="MiracleHolyPlaces">
+                  <label>Second Miracle: First education of Gabra Manfas Qǝddus in Nehisa and first trip to Jerusalem</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:lang="gez"
+                    xml:id="MiracleGabaon">
+                  <label>Third Miracle: Conversion of the inhabitants of Gabāʿon</label>
+               </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:lang="gez"
+                    xml:id="MiracleEthiopia">
+                  <label>Fourth Miracle: Arrival in Ethiopia, meetings with Garimā, Gubā and Lālibalā</label>
+               </div>
             </div>
          </div>
       </body>

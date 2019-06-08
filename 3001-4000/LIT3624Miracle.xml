@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1"> Miracle of a man cursed by another</title>
+            <title xml:id="t1">Miracle of Mary: Miracle of a man cursed by another</title>
+            <title xml:id="t2" xml:lang="en">A Jew is led to baptism by a dream about a lion and a monk; afterwards he curses a Jew at the latter's request</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -42,27 +40,53 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
-            <keywords> 
+            <keywords>
                <term key="Miracle"/>
                <term key="ChristianLiterature"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords</change>
+         <change who="DR" when="2018-11-26">Added keyword, title and Macomber reference</change>
+         <change who="AM" when="2019-05-21">added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:TasfaGiyorgis1956Taammera"/>
+                  <citedRange unit="item">50</citedRange>
+                  <citedRange unit="page">191-194</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">285</citedRange></bibl>
+            </listBibl>
+            <listBibl type="translation">
+               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">176</citedRange><citedRange unit="page">437-439</citedRange></bibl>
+            </listBibl>
+            <listRelation>
                <relation name="saws:formsPartOf"
                          active="LIT3624Miracle"
-                         passive="LIT2384Taamme"></relation>
-            </listBibl>
+                         passive="LIT2384Taamme"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                 <ab>
+                   ዘገብረት፡ ተአምረ፡ ወመንክረ፡ በአሐቲ፡ ንስቲት፡ ደወል፣ ወይነብሩ፡ ውስቴታ፡ መብዝኅቶሙ፡ አይሁድ፣
+                   ወይነብሩ፡ ህየ፡ ውሑዳን፡ ክርስቲያን።
+                   ወሶበ፡ ሰምዓ፡ እምኔሆሙ፡ አሐዱ፡ <choice resp="PRS6437Macomber"><corr>ወልድ፡</corr><sic>ወልደ፡</sic></choice> አይሁዳዊ፡ ትምህርተ፡ ክርስቲያን፣
+                   ወነበረ፡ እንዘ፡ ይብል፤ እሙንኑ፡ ሃይማኖተ፡ ክርስቲያን፣ ወሚመ፡ ሃይማኖተ፡ አይሁድኑ፡ እሙን።
+                 </ab>
+             </div>
          </div>
       </body>
    </text>

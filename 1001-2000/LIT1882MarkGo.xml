@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -13,25 +13,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">ወንጌል፡ ዘማርቆስ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Wangel za-Mārqos</title>
             <title xml:lang="en" corresp="#t1">Gospel of Mark</title>
-            <title type="short" corresp="#t1">Mk</title>
+            <!-- <title type="short" corresp="#t1">Mk</title> -->
+            <title type="short">Marc.</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
             <funder>ERC</funder>
             <respStmt>
                <resp>digitization</resp>
                <persName ref="WD" from="2015" to="2016"/>
-               
+
             </respStmt>
          </titleStmt>
-         
+
          <editionStmt>
-            <p>Digital text based on  <bibl><ptr target="bm:Zuurmond1989EvangeliumMarc"/></bibl>.</p>
+            <p>Digital text based on  <bibl>
+                  <ptr target="bm:Zuurmond1989EvangeliumMarc"/>
+               </bibl>.</p>
          </editionStmt>
-         
+
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -46,13 +48,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
-      
+
       <encodingDesc>
          <projectDesc>
             <p>Text prepared within the framework of the TraCES project.</p>
          </projectDesc>
          <editorialDecl>
-                        
+
             <normalization>
                <p>Original spelling and typography is retained.</p>
             </normalization>
@@ -60,9 +62,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <tagsDecl>
             <!-- the format for the tagsDecl to be specified -->
          </tagsDecl>
-         
+
       </encodingDesc>
-      
+
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -87,7 +89,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         
+
          <div type="bibliography">
             <listBibl type="editions">
                <bibl>
@@ -95,33 +97,48 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
          </div>
-         
-         
-      <div type="edition"> 
-         <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BiographyMark">
-            <label>Introduction and Biography of Mark</label>
-            <listBibl type="catalogue">
-               <bibl>
-                  <ptr target="bm:Dillmann1848Catalogus"/>
-                  <citedRange unit="page">14</citedRange>
-               </bibl>
-               <bibl>
-                  <ptr target="bm:Nicoll1821Bodleianae"/>
-                  <citedRange unit="page">17</citedRange>
-               </bibl>
-            </listBibl>
+
+
+         <div type="edition">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="BiographyMark">
+               <label>Introduction and Biography of Mark</label>
+               <listBibl type="secondary">
+                  <bibl>
+                     <ptr target="bm:Dillmann1848Catalogus"/>
+                     <citedRange unit="page">14</citedRange>
+                  </bibl>
+                  <bibl>
+                     <ptr target="bm:Nicoll1821Bodleianae"/>
+                     <citedRange unit="page">17</citedRange>
+                  </bibl>
+               </listBibl>
+            </div>
+
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="TituliMark">
+               <label>Tituli of the Gospel of Mark</label>
+            </div>
+
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 corresp="LIT2711Mark">
+               <label>Bǝsrāta Mārqos</label>
+            </div>
+
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="MarkPostscript">
+               <label>Postscript to the Gospel of Mark</label>
+            </div>
+
          </div>
-         
-         <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="TituliMark">
-            <label>Tituli of the Gospel of Mark</label>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT2711Mark">
-            <label>Bǝsrāta Mārqos</label>
-         </div>
-         
- 
-      </div>
       </body>
    </text>
 </TEI>

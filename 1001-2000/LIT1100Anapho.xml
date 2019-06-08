@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -12,15 +12,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">አኴቴተ፡ ቍርባን፡ ዘእግዚእነ፡ ኢየሱስ፡ ክርስቶስ።</title>
             <title xml:lang="gez" type="normalized" corresp="#t1">ʾAkkʷateta qʷǝrbān za-ʾǝgziʾǝna ʾIyasus Krǝstos</title>
-            <title xml:lang="en" xml:id="t2">Anaphora of Our Lord Jesus Christ</title>
+            <title xml:lang="en" corresp="#t1">Anaphora of Our Lord Jesus Christ</title>
             <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -32,10 +31,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="H">
+                  <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+                  <citedRange unit="item">2</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
+         <abstract><p></p></abstract>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
@@ -56,38 +63,62 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2016-08-30">Title updated</change>
          <change who="DR" when="2017-01-04">Bibliography added</change>
          <change who="DR" when="2017-02-09">Added keywords, bibliography</change>
+         <change who="MV" when="2017-12-18">Added clavis id</change>
+         <change when="2019-04-24" who="ES">added relations</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
             <listBibl type="editions">
-               <bibl><ptr target="bm:Petrus1548Test"/><citedRange unit="fol">168r-169v</citedRange>
+               <bibl>
+                  <ptr target="bm:Petrus1548Test"/>
+                  <citedRange unit="fol">168r-169v</citedRange>
                </bibl>
-               <bibl><ptr target="bm:Ludolf1691Commentarius"/><citedRange unit="page">341-345</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Ludolf1691Commentarius"/>
+                  <citedRange unit="page">341-345</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="translation">
-               <bibl><ptr target="bm:Rodwell1863Liturgies"/><citedRange unit="page">118-122</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Rodwell1863Liturgies"/>
+                  <citedRange unit="page">118-122</citedRange>
+               </bibl>
             </listBibl>
                <listBibl type="secondary">
                <bibl>
-                  <ptr target="bm:Hammerschmidt1987Anaphoras"/><citedRange unit="page">15</citedRange>
+                  <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+                  <citedRange unit="page">15</citedRange>
                </bibl>
-                     <bibl><ptr target="bm:Habtemichael2003EAEAnaphoras"/></bibl>
+                     <bibl>
+                  <ptr target="bm:Habtemichael2003EAEAnaphoras"/>
+               </bibl>
             </listBibl>
          </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit">
+            <div type="textpart"
+                 subtype="incipit"
+                 xml:lang="gez"
+                 xml:id="Incipit">
                <ab>
                   ነአኵተከ፡ አምላክ፡ ቅዱስ፡ ፈጻሜ፡ ነፍስነ፡
                </ab>
             </div>
-            <div type="textpart" subtype="incipit" xml:lang="gez" corresp="#Incipit">
+            <div type="textpart"
+                 subtype="incipit"
+                 xml:lang="gez"
+                 corresp="#Incipit">
                <ab>
                   Naʾakkʷǝtaka ʾamlāk qǝddus faṣṣāme nafsǝna
                </ab>
             </div>
          </div>
+         <listRelation>
+            <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1100Anapho" passive="LIT1960Mashaf"></relation>
+            <relation name="dcterms:hasPart" active="LIT1100Anapho" passive="LIT2461Testam"><desc>Inside the Missal manuscripts, it is often preceded by an by the excerpt from the <title ref="LIT2461Testam">Testamentum
+               domini</title> (cp. MQ, IV, Qǝddāse ʾǝgziʾ, §§1-17)</desc> </relation>
+         </listRelation>
       </body>
    </text>
 </TEI>

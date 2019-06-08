@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,14 +10,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Gädlä Ṗänṭälewon</title>
+            <title xml:lang="gez" xml:id="t1">ገድለ፡ ጰንጠሌዎን፡ ዘጾማዕት፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Ṗanṭalewon za-ṣomaʿt</title>
+            <title xml:lang="en" corresp="#t1">Vita of Ṗanṭalewon of the cell</title>
+            
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -29,7 +32,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="KRZ">
+                  <ptr target="bm:KRZ"/>
+                  <citedRange unit="item">124</citedRange>
+               </bibl>
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">838</citedRange>
+               </bibl>
+            </listBibl>
+            <listWit>
+               <witness corresp="BNFabb110"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -43,6 +60,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="Hagiography"/>
                <term key="ChristianLiterature"/>
+               <term key="Paks1"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -51,11 +69,48 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-03-14">Added keywords</change>
+         <change who="MV" when="2017-11-02">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl> 
+                  <ptr target="bm:ContiRossini1904YaredPantalewon"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl> 
+                  <ptr target="bm:Brita2010Pantelewon"/>
+               </bibl>
+               <bibl> 
+                  <ptr target="bm:Brita2010Christianization"/>
+                  <citedRange>145-187</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" xml:id="MainPart">
+               <label>Main part</label>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                   በከመ፡ ይቤ፡ መጽሐፍ፡ ይትፌሥሑ፡ አሕዛብ፡ በሰሚዐ፡ ዜናሆሙ፡ ለጻድቃን፡
+                  </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                     በመዋዕለ፡ አውግስጦስ፡ ንጉሥ፡ ዘሮሜ። ወበኢትዮጵያ፡ ሣህል፡ ንጉስ። ወእምዓመተ፡ ዲዮቅልጥያኖስ፡ በ፪፻፵ወ፮ዓመት።
+                  </ab>
+               </div>
+            </div>
+            <div type="textpart" xml:id="Epilogue">
+               <label>Epilogue</label>
+               <ab>
+                  ወዓለምክዋ፡ አነ፡ ይስሐቅ፡ <gap reason="omitted"/> ወአሜን።
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

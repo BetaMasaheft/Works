@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,16 +11,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Canons of the Council of Antioch</title>
-            <title xml:id="t2" xml:lang="gez">ሲኖዶስ፡ ዘማኀበረ፡ አንጾኪያ፡ </title>
+            <title xml:id="t2" xml:lang="gez">ሲኖዶስ፡ ዘማኀበረ፡ አንጾኪያ፡</title>
             <title corresp="#t2" xml:lang="gez" type="normalized">Sinodos za-maḫbara ʾAnṣokiya</title>
-            
+            <title type="short">Can. Ant.</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -31,9 +30,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
             <listWit>
                <witness corresp="BLorient481#ms_i3.13.9"/>
-               <witness corresp="BAVet1#ms_i6.12"></witness>
+               <witness corresp="BAVet1#ms_i6.12"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -46,13 +48,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               
+               <term key="ChristianLiterature"/>
+
                <term key="CanonLaw"/>
             </keywords>
          </textClass>
       </profileDesc>
-      
+
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change when="2017-04-24" who="ES">added keywords witnesses relation</change>
@@ -60,10 +62,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl></bibl>
-            <relation name="dcterms:isPartOf" active="LIT2653CanonsCouncils" passive="LIT2317Senodo"></relation>
-         </listBibl>
+         <listRelation>
+            <relation name="dcterms:isPartOf"
+                      active="LIT2653CanonsCouncils"
+                      passive="LIT2317Senodo"/>
+         </listRelation>
          <ab/>
       </body>
    </text>

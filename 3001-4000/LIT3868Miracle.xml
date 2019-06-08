@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">How a man forsook his wife and loved another woman who was a worshipper of the Virgin Mary and repented</title>
+            <title xml:id="t1">Miracle of Mary: How a man forsook his wife and loved another woman who was a worshipper of the Virgin Mary and repented</title>
+            <title xml:id="t2">The divorced wife who prayed for revenge against her rival</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -44,13 +42,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Miracle"/>
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-07">Added keywords and relations</change>
+         <change who="DR" when="2018-11-19">Added keyword, title and Macomber reference</change>
+         <change who="AM" when="2019-05-03">added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -61,19 +63,45 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Budge1923Miracles"/>
                   <citedRange unit="item">45</citedRange>
                </bibl>
+                  <bibl><ptr target="bm:TasfaGiyorgis1956Taammera"/>
+                     <citedRange unit="item">89</citedRange>
+                     <citedRange unit="page">301-304</citedRange>
+                  </bibl>
+
+                </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">150</citedRange></bibl>
             </listBibl>
-            <listBibl type="translation" xml:lang="en">
+            <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Budge1933Miracles"/>
+                  <citedRange unit="item">45</citedRange>
                   <citedRange unit="page">159-161</citedRange>
                </bibl>
+
             </listBibl>
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:formsPartOf"
-                  active="LIT3868Miracle"
-                  passive="LIT2384Taamme"/>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Cerulli1943Maria"/>
+                  <citedRange unit="page">486-494</citedRange>
+               </bibl>
+               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">21</citedRange><citedRange unit="page">64-65</citedRange></bibl>
             </listBibl>
+            <listRelation>
+               <relation name="saws:formsPartOf"  active="LIT3868Miracle"  passive="LIT2384Taamme"/>
+               <relation name="saws:isRelatedTo" active="LIT3868Miracle"  passive="LIT5003MiracleJonahWife">
+                  <desc>The miracle seems to be very close to the Miracle of Jonah who forsook his wife, but the name of the person and the name of the country,
+                  <country ref="LOC5068Palest)">Palestine</country>, are missing. </desc> </relation>
+            </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                 <ab>
+                  ወሀሎ፡ አሐዱ፡ ብእሲ፡ በሀገረ፡ ፍልስጥኤም፡ ዘስሙ፡ ዮናስ፡ ዘኃደገ፡ ብእሲቶ፡ ወአውሰበ፡ ካልእተ።
+                  ወሶበ፡ አእመረት፡ ብእሲቱ፡ ግብረ፡ ምታ፣ ተከዘት፡ ጥቀ፡ ወሐዘነት፡ ፈድፋደ።
+                 </ab>
+             </div>
          </div>
       </body>
    </text>

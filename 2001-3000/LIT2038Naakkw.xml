@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -13,17 +13,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:id="t1">The Second Anaphora of St Gregory</title>
             <title xml:id="t2">Christmas Liturgy of St Gregory</title>
             <title xml:id="t3" xml:lang="gez">ነአኩተከ፡ እግዚኦ፡ ወንስብሐከ፡ ወንዌድሰከ፡</title>
-            <title corresp="#t3" xml:lang="gez" type="normalized">Naʾakkwǝtaka ʾǝgziʾo wanǝsebbǝḥaka wanǝweddǝsaka...</title>
+            <title corresp="#t3" xml:lang="gez" type="normalized">Naʾakkwǝtaka ʾǝgziʾo wa-nǝsebbǝḥaka wa-nǝweddǝsaka...</title>
             <title corresp="#t3" xml:lang="en">We give thee Thanks, O Lord, we glorify Thee and praise Thee ...</title>
-            
-            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -35,7 +32,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="H">
+                  <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+                  <citedRange unit="item">9</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -45,11 +49,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
-         
+         <abstract>
+            <p>There are four anaphoras known under the name of Gregory: <ref type="work" corresp="LIT2040Naakkw"/>, <ref type="work" corresp="LIT2038Naakkw"/>,
+            <ref type="work" corresp="LIT2034Naakkw"/> and <ref type="work" corresp="LIT2037Naakkw"/>. They can be distinguished only by their incipit, content and use, as they
+            are indiscriminately ascribed to <persName ref="PRS4823Gregory"/>,
+            <persName ref="PRS4822Gregory"/>, <persName ref="PRS4824Gregory"/> and <persName ref="PRS4825Gregory"/>.</p>
+         </abstract>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Homily"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Liturgy"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -58,19 +67,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-13" who="ES">updated title keywords relation</change>
+         <change who="DR" when="2017-06-14">Additions</change>
+         <change who="MV" when="2017-12-18">Added clavis ID</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:isAttributedToAuthor" active="LIT2038Naakkw" passive="PRS4824Gregory"></relation>
-            <relation name="saws:formsPartOf" active="LIT2040Naakkw" passive="LIT3189Anapho"></relation>
-            
-         </listBibl>
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor"
+                      active="LIT2038Naakkw"
+                      passive="PRS4824Gregory"/>
+            <relation name="saws:formsPartOf"
+                      active="LIT2040Naakkw"
+                      passive="LIT3189Anapho"/>
+         </listRelation>
          <listBibl type="secondary">
             <bibl>
-               <ptr target="bm:Hammerschmidt1987Anaphoras"></ptr><citedRange>no. 9</citedRange>
+               <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+               <citedRange unit="page">24-25</citedRange>
             </bibl>
             
          </listBibl>

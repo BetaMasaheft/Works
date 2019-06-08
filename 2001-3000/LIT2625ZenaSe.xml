@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -13,16 +13,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">ዜና፡ ስክንድስ፡ ጠቢብ፡ ለእንድርያኖስ፡ ንጉሥ፡ ወትምህርታቲሁ፡ ወጥበቡ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Zenā Sǝkǝndǝs ṭabib la-ʾƎndǝryānos nǝguś wa-tǝmhǝrtātihu wa-ṭǝbabu
                wa-tasǝʾǝlotātihu</title>
-            <title xml:lang="en" corresp="#t1">The story of Secundus, King Hadrian's sage and of his teachings, his wisdom and his dialogue</title>
+            <title xml:lang="en" corresp="#t1" type="main">The story of Secundus, King Hadrian's sage and of his teachings, his wisdom and his dialogue</title>
             <title xml:lang="grc" xml:id="t2greek">Greek Secundus</title>
-            <title xml:lang="ar" xml:id="t3arabic">Arabic Secundus</title>
+            <title xml:lang="ar" xml:id="t3arabic">	سيرة سكندس الحكيم وحكمته ومسائله على تمامها وكمالها</title>
+            <title xml:lang="ar" corresp="#t3arabic">Sīratu Sakundusa l-ḥakīmi wa-ḥikmatuhu wa-masāʾiluhu ʿala tamāmihā wa-kamālihā</title>
+            <title xml:lang="syr" xml:id="t4syr">ܫܪܒܐ ܕܣܩܘܢܕܘܣ</title>
+            <title xml:lang="syr" corresp="#t4syr">šarbā dǝ-sqūndūs</title>
             <editor role="generalEditor" key="AB"/>
-            <funder>Akademie der Wissenschaften in Hamburg</funder>
+            <editor key="AE" role="encoder annotator"></editor>
+            <editor key="ES" role="metadata"></editor>
+            <funder>Akademie der Wissenschaften in Hamburg; European Research Council</funder>
+            <respStmt>
+               <resp>digitization</resp>
+               <persName ref="AE" from="2017" to="2018"/>
+               
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>The text was prepared by the TraCES project on the basis of <bibl>
+               <ptr target="bm:Heide2014Secundus"/>
+            </bibl>. </p>
+            
+         </editionStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -34,7 +49,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            
+            
+         </sourceDesc>
+         <sourceDesc>
+            <listWit>
+               
+               <listWit rend="edition">
+                  <witness corresp="BNFet123" xml:id="bnfet123"/>
+                 
+                  <witness corresp="BLorient827" xml:id="blor827"/>
+                  <witness corresp="BLorient818" xml:id="blor818"/>
+                  <witness corresp="EMML7919" xml:id="EMML7919"/>
+
+                  <witness corresp="BerOrP38" xml:id="berlinP38"/>
+               </listWit>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -44,13 +74,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
             <language ident="grc">Greek</language>
+            <language ident="syr">Syriac</language>
          </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="ChristianLiterature"/>
+               <term key="Translation"/>
+               <term key="Paks1"/>
+            </keywords>
+         </textClass>
+         <abstract><p>The Life of the Greek philosopher Secundus the Silent (Secundus the Taciturn) and the responses to king Hadrian's questions</p></abstract>
+         <creation notBefore="1300" notAfter="1400">Probably composed in the 14th century (<bibl><ptr target="bm:Weninger2010EAESecundus"/></bibl>).</creation>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-11-09">Title updated, bibliography and abstract added</change>
+         <change who="DR" when="2017-06-29">Added keywords</change>
+         <change who="ES" when="2018-06-25">Added titles, data</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -58,18 +100,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <div type="bibliography">
            
            <listBibl type="secondary">
-              <bibl><ptr target="bm:Weninger2010EAESecundus"/></bibl>
+              <bibl>
+                  <ptr target="bm:Weninger2010EAESecundus"/>
+               </bibl>
+              <bibl corresp="#t4syr"><ptr target="bm:Brock1978Secundus"/></bibl>
            </listBibl>
            
            <listBibl type="editions">
-              <bibl corresp="#t1 #t3arabic"><ptr target="bm:Heide2014Secundus"/></bibl>
+              <bibl corresp="#t1 #t3arabic #t4syr">
+                  <ptr target="bm:Heide2014Secundus"/>
+               </bibl>
+              <bibl corresp="#t2greek">
+                 <ptr target="bm:Perry1964Secundus"/>
+              </bibl>
            </listBibl>
            
-           <listBibl type="relations">
-              <bibl/>
-              <relation name="saws:isVersionInAnotherLanguageOf" active="#t3arabic" passive="#t2greek"/>
-              <relation name="saws:isVersionInAnotherLanguageOf" active="#t1" passive="#t3arabic"/>
-           </listBibl>
+           
+           
+           <listRelation>
+               <relation name="saws:isVersionInAnotherLanguageOf"
+                         active="LIT2625ZenaSe#t3arabic"
+                         passive="LIT2625ZenaSe#t2greek"/>
+               <relation name="saws:isVersionInAnotherLanguageOf"
+                         active="LIT2625ZenaSe#t1"
+                         passive="LIT2625ZenaSe#t3arabic LIT2625ZenaSe#t4syr"/>
+              <relation name="ecrm:P129_is_about" active="LIT2625ZenaSe" passive="PRS8679Secundus"></relation>
+            </listRelation>
         </div>
       </body>
    </text>

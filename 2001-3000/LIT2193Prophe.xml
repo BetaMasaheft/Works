@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -14,16 +14,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:id="t2" xml:lang="gez">ትንቢተ፡ ኤርምያስ፡ ለፋስኮር፡</title>
             <title corresp="#t2" xml:lang="gez" type="normalized">Tǝnbita ʾErmǝyās la-Fāskor</title>
             <title corresp="#t2">Prophecy of Jeremiah to Pashhur</title>
-            <title xml:id="t3" xml:lang="gez">ነገር፡ ዘኤርምያስ፡ </title>
-            <title corresp="#t3" xml:lang="gez" type="normalized">Nagar za-ʾErmǝyās </title>
+            <title xml:id="t3" xml:lang="gez">ነገር፡ ዘኤርምያስ፡</title>
+            <title corresp="#t3" xml:lang="gez" type="normalized">Nagar za-ʾErmǝyās</title>
             <title corresp="#t3">Words of Jeremiah</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -35,7 +34,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>  
+         </sourceDesc>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+               <listBibl type="clavis">
+                  <bibl type="CAVT">
+                     <ptr target="bm:CAVT"/>
+                     <citedRange unit="item">228</citedRange>
+                  </bibl>
+               </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -50,7 +60,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/>
                <term key="Bible"/>
                <term key="OldTestament"/>
-               
             </keywords>
          </textClass>
       </profileDesc>
@@ -63,11 +72,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:formsPartOf" active="LIT2193Prophe" passive="LIT2035Jerem"></relation>
+         <listRelation>
+            <relation name="saws:formsPartOf"
+                      active="LIT2193Prophe"
+                      passive="LIT2035Jerem"/>
+         </listRelation>
+         <listBibl type="editions">
+            <bibl>
+               <ptr target="bm:Dillmann1866Chrestomathia"/>
+               <citedRange unit="pages">viii-ix</citedRange>
+            </bibl>
          </listBibl>
-         <ab/>
       </body>
    </text>
 </TEI>

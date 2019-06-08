@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">How the painted figures of Christ and the Virgin Mary bled when a Jew cast the board into a pit, how the magistrate burned the Jew alive</title>
+            <title xml:id="t1">Miracle of Mary: How the painted figures of Christ and the Virgin Mary bled when a Jew cast the board into a pit, how the magistrate burned the Jew alive</title>
+            <title xml:id="t2">The Virgin Mary and her bleeding picture</title>
+            <title xml:id="t3">The Jew who attacked the icon of St Mary when he failed to obtain by litigation someone else's property</title>
+            <title xml:id="t4">Miracle of a Jew who destroyed an image of Mary and was given away by his bloodstained clothes</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,14 +28,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
          <abstract>
-            <p/>
+            <p>The miracles translated by Budge and Colin are distinct from each other in several aspects, the man who destroys the icon is described as either a Jew or a Muslim
+            and at the end of the miracle is burned or converted.</p>
          </abstract>
          <langUsage>
             <language ident="en">English</language>
@@ -43,14 +44,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="ChristianLiterature"/> 
+               <term key="Miracle"/> 
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-10">Added keywords and relations</change>
+         <change who="DR" when="2018-11-19">Added keyword, titles and Macomber reference</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -62,18 +66,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">68</citedRange>
                </bibl>
             </listBibl>
-            <listBibl type="translation" xml:lang="en">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">202</citedRange></bibl>
+            </listBibl>
+            <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Budge1933Miracles"/>
+                  <citedRange unit="item">68</citedRange>
                   <citedRange unit="page">262-263</citedRange>
                </bibl>
+               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">172</citedRange><citedRange unit="page">427-428</citedRange></bibl>
             </listBibl>
-            <listBibl type="relations">
-               <bibl/>
+            <listRelation>
                <relation name="saws:formsPartOf"
-                  active="LIT3888Miracle"
-                  passive="LIT2384Taamme"/>
-            </listBibl>
+                         active="LIT3888Miracle"
+                         passive="LIT2384Taamme"/>
+            </listRelation>
          </div>
       </body>
    </text>

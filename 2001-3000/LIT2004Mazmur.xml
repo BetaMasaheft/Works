@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -18,9 +18,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -45,13 +44,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
+               <term key="ChristianLiterature"/>
                <term key="Poetry"/>
             </keywords>
          </textClass>
          
-         <abstract><p>A <date notBefore="1900" notAfter="2000">20th century</date> composition in honour
-            of <persName ref="PRS5684JesusCh">Jesus Christ</persName> by <persName ref="PRS9347TayyaGa" role="author"/> </p>
+         <abstract>
+            <p>A <date notBefore="1900" notAfter="2000">20th century</date> composition in honour
+            of <persName ref="PRS5684JesusCh">Jesus Christ</persName> by <persName ref="PRS9347TayyaGa" role="author"/> 
+            </p>
          </abstract>
       </profileDesc>
       <revisionDesc>
@@ -63,10 +64,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations"><bibl/>
-            <relation name="saws:isAttributedToAuthor" active="LIT2004Mazmur" passive="PRS9347TayyaGa"></relation>
-            <relation name="ecrm:P129_is_about" active="LIT2004Mazmur" passive="PRS5684JesusCh"></relation>         
-         </listBibl>
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor"
+                      active="LIT2004Mazmur"
+                      passive="PRS9347TayyaGa"/>
+            <relation name="ecrm:P129_is_about"
+                      active="LIT2004Mazmur"
+                      passive="PRS5684JesusCh"/>
+         </listRelation>
          <ab/>
       </body>
    </text>

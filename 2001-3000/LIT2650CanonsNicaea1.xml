@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,13 +11,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Canons of the Council of Nicaea I</title>
+            <title type="short">Can. Nic.</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -28,9 +28,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
             <listWit>
                <witness corresp="BLorient481"/>
-               <witness corresp="BAVet1"></witness>
+               <witness corresp="BAVet1"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -56,33 +59,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl></bibl>
-            <relation name="dcterms:isPartOf" active="LIT2650CanonsNicaea1" passive="LIT2317Senodo"></relation>
-         </listBibl>
-         
-      <div type="edition">
-         <div type="textpart" subtype="chapter" xml:id="Canon1"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon2"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon3"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon4"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon5"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon6"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon7"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon8"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon9"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon10"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon11"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon12"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon13"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon14"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon15"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon16"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon17"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon18"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon19"/>
-         <div type="textpart" subtype="chapter" xml:id="Canon20"/>
-      </div>
+         <listRelation>
+            <relation name="dcterms:isPartOf"
+                      active="LIT2650CanonsNicaea1"
+                      passive="LIT2317Senodo"/>
+         </listRelation>
+
+         <div type="edition">
+            <div type="textpart" subtype="chapter" xml:id="Canon1"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon2"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon3"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon4"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon5"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon6"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon7"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon8"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon9"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon10"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon11"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon12"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon13"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon14"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon15"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon16"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon17"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon18"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon19"/>
+            <div type="textpart" subtype="chapter" xml:id="Canon20"/>
+         </div>
       </body>
    </text>
 </TEI>

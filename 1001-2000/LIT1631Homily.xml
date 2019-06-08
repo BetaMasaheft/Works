@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,18 +11,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt> 
             <title xml:lang="gez" xml:id="t1">ድርሳን፡ ቃሉ፡ ዘቅዱስ፡ ወብጹዕ፡ ያዕቆብ፡ ኤጲስ፡ ቆጶስ፡ ዘሥሩግ፡ በእንተ፡ መልአክ፡ ወፈያታዊ፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān qālu za-bǝṣuʿ Yāʿǝqob ʾeṗis qoṗos za-Śǝrug ba-ʾǝnta malʾak wa-fayyātāwi</title>
-            <title xml:lang="en" corresp="#t1">Homily by the blessed Yāʿǝqob, bishop of Śǝrug on the Angel and the Thief</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān qālu za-bǝṣuʿ Yāʿqob ʾeṗis qoṗos za-Śǝrug baʾǝnta malʾak wa-fayyātāwi</title>
+            <title xml:lang="en" corresp="#t1">Homily by the blessed Yāʿqob, bishop of Śǝrug on the Angel and the Thief</title>
             <title xml:lang="syr" xml:id="t2syriac"><!--Add Syriaca reference--></title>
-            <title xml:lang="ar" xml:id="t3arabic"></title>
+            <title xml:lang="ar" xml:id="t3arabic"/>
             <author>Jacob of Serug</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -32,6 +31,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
             <listWit>
                <witness corresp="BNFet146#ms_i16"/>
@@ -64,23 +66,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-      <div type="bibliography">
+         <div type="bibliography">
          
-         <listBibl type="secondary">
-            <bibl><ptr target="bm:Witakowski2007Jacob"/><citedRange unit="page">262b</citedRange></bibl>
-         </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Witakowski2007Jacob"/>
+                  <citedRange unit="page">262b</citedRange>
+               </bibl>
+               <bibl corresp="#t3arabic">
+                  <ptr target="bm:Zotenberg1874Catalogue"/>
+                  <citedRange unit="page">181b</citedRange>
+               </bibl>
+               <bibl corresp="#t2syriac">
+                  <ptr target="bm:Zotenberg1874Catalogue"/>
+                  <citedRange unit="page">136a; 143a</citedRange>
+               </bibl>
+            </listBibl>
          
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:isAttributedToAuthor" active="LIT1631Homily#2syriac" passive="PRS5655Jacobof"/>
-         </listBibl>
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT1631Homily#2syriac"
+                         passive="PRS5655Jacobof"/>
+            </listRelation>
          
-         <listBibl type="catalogue">
-            <bibl corresp="#t3arabic"><ptr target="bm:Zotenberg1874Catalogue"/><citedRange unit="page">181b</citedRange></bibl>
-            <bibl corresp="#t2syriac"><ptr target="bm:Zotenberg1874Catalogue"/><citedRange unit="page">136a; 143a</citedRange></bibl>
-         </listBibl>
-         
-      </div>
+         </div>
       </body>
    </text>
 </TEI>

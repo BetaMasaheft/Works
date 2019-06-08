@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,7 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ሃይማኖቱ፡ ለቅዱስ፡ ዓቢይ፡ ማሪ፡ ያዕቆብ፡ እልበራድዒ፡</title>
-            <title xml:lang="gez" type="normalized" corresp="#t1">Hāymānotu la-qǝddus ʿābiyy māri Yāʿǝqob ʾƎlbarādʿi</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Hāymānotu la-qǝddus ʿābiyy māri Yāʿqob ʾƎlbarādʿi</title>
             <title xml:lang="en" corresp="#t1">Creed of Jacob Baradaeus</title>
             <title xml:lang="ar" xml:id="t2arabic">Arabic Creed of Jacob Baradaeus</title>
             <editor key="DR"/>
@@ -19,9 +19,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -32,10 +31,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness corresp="BNFet11#ms_i2"/>
-               <witness corresp="BLadd24988"/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -49,32 +47,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Theology"/>
+               <term key="Translation"/>
+               <term key="Paks1"/>
+               <term key="Paks2"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="DR" when="2016-10-04">Record created</change>
          <change who="DR" when="2017-03-24">Added keywords</change>
+         <change who="DR" when="2017-06-29">Added keywords</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-      <div type="bibliography">
-         <listBibl type="editions">
-            <bibl><ptr target="bm:Cornill1876Glaubensbekenntnis"/></bibl>
-         </listBibl>
-         <listBibl type="translation">
-            <bibl><ptr target="bm:Cornill1876Glaubensbekenntnis"/></bibl>
-         </listBibl>
-         <listBibl type="secondary">
-            <bibl corresp="#t3arabic"><ptr target="bm:Assemanus1721Bibliotheca"/><citedRange unit="page">67</citedRange></bibl>
-         </listBibl>
-      <listBibl type="relations">
-         <bibl/>
-         <relation name="saws:isAttributedToAuthor" active="LIT4010Haymanotu" passive="PRS5651JacobBa"/>
-         <relation name="saws:isVersionInAnotherLanguageOf" active="LIT4010Haymanotu#t1" passive="LIT4010Haymanotu#t2arabic" cert="low"/>
-      </listBibl>
-      </div>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Cornill1876Glaubensbekenntnis"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Cornill1876Glaubensbekenntnis"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl corresp="#t3arabic">
+                  <ptr target="bm:Assemanus1721Bibliotheca"/>
+                  <citedRange unit="page">67</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Goldschmidt1893Bibliotheca"/>
+                  <citedRange unit="page">33-34</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT4010Haymanotu"
+                         passive="PRS5651JacobBa"/>
+               <relation name="saws:isVersionInAnotherLanguageOf"
+                         active="LIT4010Haymanotu#t1"
+                         passive="LIT4010Haymanotu#t2arabic"
+                         cert="low"/>
+            </listRelation>
+         </div>
       </body>
    </text>
 </TEI>

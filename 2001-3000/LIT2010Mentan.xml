@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,16 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">ምንታኑ፡ አዓስየኪ፡ </title>
+            <title xml:id="t1">ምንታኑ፡ አዓስየኪ፡</title>
             <title corresp="#t1" xml:lang="gez" type="normalized">Mǝntanu ʾaʿāssǝyakki</title>
             <title corresp="#t1" xml:lang="en">How can I Reward you?</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -44,13 +43,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          
          <textClass>
             <keywords>
-
+               <term key="ChristianLiterature"/>
                <term key="Poetry"/>
             </keywords>
          </textClass>
          
-         <abstract><p>A short invocation to <persName ref="PRS6819Mary">Mary</persName> attested in the <ref type="title" corresp="LIT1961Mashaf">Saʿātāt</ref>.</p>
-            <p> </p>
+         <abstract>
+            <p>A short invocation to <persName ref="PRS6819Mary">Mary</persName> attested in the <ref type="work" corresp="LIT1961Mashaf"/>.</p>
          </abstract>
          
       </profileDesc>
@@ -63,11 +62,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:formsPartOf" active="LIT2010Mentan" passive="LIT1961Mashaf"/>
-            <relation name="ecrm:P129_is_about" active="LIT2010Mentan" passive="PRS6819Mary"/>
-         </listBibl>
+         <listRelation>
+            <relation name="saws:formsPartOf"
+                      active="LIT2010Mentan"
+                      passive="LIT1961Mashaf"/>
+            <relation name="ecrm:P129_is_about"
+                      active="LIT2010Mentan"
+                      passive="PRS6819Mary"/>
+         </listRelation>
          <ab/>
       </body>
    </text>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -14,18 +14,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" corresp="#t1" type="normalized">Baralām wa-Yǝwāsǝf</title>
             <title xml:lang="en" corresp="#t1">Baralām and Yǝwāsǝf</title>
             <title xml:lang="en" xml:id="t2">Book of Barlaam and Josaphat</title>
-            <title xml:lang="pal" xml:id="t3pahlavi"></title>
+            <title xml:lang="pal" xml:id="t3pahlavi"/>
             <title xml:lang="ar" xml:id="t4arabic" type="normalized">Bilawhar wa-Būdāsaf</title>
             <title xml:lang="geo" xml:id="t5georgian"><!--add title--></title>
             <title xml:lang="grc" xml:id="t6greek"><!--add title--></title>
             <title xml:lang="ar" xml:id="t7arabic"><!--add title--></title>
+            <title xml:lang="gez" xml:id="t8">በስመ፡ እግዚአብሔር፡ መሓሪ፡ ወመስተሣህል፡
+               ወቦቱ፡ ረድኤትነ፤ ንቀድም፡ በረድኤተ፡ እግዚአብሔር፡ ወስነ፡ ስርሐቱ፡ በጽሒፈ፡ ዜና፡ ዘትበቍዕ፡ ለነፍስ፡ ወለሥጋ፡
+               ዘአምጽእዋ፡ እምሀገረ፡ ህንድ፡ እስከ፡ ቤተ፡ መቅደስ፡ ወጸሐፋ፡ ፩፡ መነኮስ፡ ቅዱስ፡ ዘእምጌቴሴማኒ፡ ዘስሙ፡ ዮሐንስ፡
+               በረከተ፡ ጸሎቱ፡ ወትንብልናሁ፡ ተሀሉ፡ ምስለ፡ ንጉሥነ፡ <persName ref="PRS5617IyasuII">
+                  <certainty locus="value" match=".../@ref" cert="unknown"/>ኢያሱ፡</persName>
+               ወምስለ፡ ፍቁሩ፡ <persName role="owner" ref="PRS11290Ebeselom">ኤቤሴሎም፡</persName> ለዓለመ፡ ዓለም፡
+               አሜን።</title>
+            <!--BNFet140-->
+            <title xml:lang="en" corresp="#t8">In the name of God, the merciful and compassionate, in whom our aid is,
+               we begin with the help of God and with his graceful generosity with the writing of a profitable story for the soul and body, which was brought from India to Jerusalem and
+               was written by a holy monk from Gethsemane, by the name of Yoḥannǝs.
+               May the blessing of his prayer and intercession be with our king <persName ref="PRS5617IyasuII">ʾIyāsu</persName>
+               and his beloved <persName ref="PRS11290Ebeselom">ʾEbeselom</persName>.</title>
+
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -36,9 +49,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-          <listWit>
-             <witness corresp="BNFet140"/>
-          </listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">144</citedRange>
+               </bibl>
+            </listBibl>
+            <listWit>
+               <witness corresp="BNFet140"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -57,15 +79,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Translation"/>
             </keywords>
          </textClass>
-         <abstract><p>Baralām wa-Yǝwāsǝf is a religious romance deriving from the traditional biography of <persName ref="PRS2933Buddha"/>.</p>
-            <p><bibl><ptr target="bm:Zotenberg1877Catalogue"/><citedRange unit="page">208a</citedRange></bibl> points out the following Arabic manuscripts at the <placeName ref="INS0303BNF"/>:
-            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89546b"/>, 
-            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89548t"/>, 
-            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc895453"/>, 
-            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc895492"/>, 
-            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89544v"/>, 
-            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89547k"/>, 
-            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc346502"/>, </p></abstract>
+         <abstract>
+            <p>Baralām wa-Yǝwāsǝf is a religious romance deriving from the traditional biography of <persName ref="PRS2933Buddha"/>.</p>
+            <p>
+               <bibl>
+                  <ptr target="bm:Zotenberg1877Catalogue"/>
+                  <citedRange unit="page">208a</citedRange>
+               </bibl> points out the following Arabic manuscripts at the <placeName ref="INS0303BNF"/>:
+            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89546b"/>,
+            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89548t"/>,
+            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc895453"/>,
+            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc895492"/>,
+            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89544v"/>,
+            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89547k"/>,
+            <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc346502"/>, </p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -73,32 +101,68 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-11-02">Title updated and information added</change>
          <change who="DR" when="2017-03-30">Added keywords</change>
+         <change when="2019-05-22" who="DE">Added bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Weninger2003EAEBaralam"/></bibl>
-               <bibl><ptr target="bm:Zotenberg1864Barlaam"/><citedRange unit="page">315-317</citedRange></bibl>
-               <bibl><ptr target="bm:Zotenberg1886Barlaam"/></bibl>
+               <bibl>
+                  <ptr target="bm:Weninger2003EAEBaralam"/>
+               </bibl>
+               <bibl>
+                 <ptr target="bm:1912Turaev"/>
+                 <citedRange>50-56</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Zotenberg1864Barlaam"/>
+                  <citedRange unit="page">315-317</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Zotenberg1886Barlaam"/>
+               </bibl>
             </listBibl>
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:isAttributedToAuthor" active="LIT1199Barala#t1" passive="PRS3779enbaqom"/>
-               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1199Barala#t1" passive="LIT1199Barala#t7arabic"/>
-               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1199Barala#t4arabic" passive="LIT1199Barala#t3pahlavi"/>
-               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1199Barala#t5georgian" passive="LIT1199Barala#t4arabic"/>
-               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1199Barala#t6greek" passive="LIT1199Barala#t5georgian"/>
-               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1199Barala#t7arabic" passive="LIT1199Barala#t6greek"/>
-            </listBibl>
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT1199Barala#t1"
+                         passive="PRS3779enbaqom"/>
+               <relation name="saws:isVersionInAnotherLanguageOf"
+                         active="LIT1199Barala#t1"
+                         passive="LIT1199Barala#t7arabic"/>
+               <relation name="saws:isVersionInAnotherLanguageOf"
+                         active="LIT1199Barala#t4arabic"
+                         passive="LIT1199Barala#t3pahlavi"/>
+               <relation name="saws:isVersionInAnotherLanguageOf"
+                         active="LIT1199Barala#t5georgian"
+                         passive="LIT1199Barala#t4arabic"/>
+               <relation name="saws:isVersionInAnotherLanguageOf"
+                         active="LIT1199Barala#t6greek"
+                         passive="LIT1199Barala#t5georgian"/>
+               <relation name="saws:isVersionInAnotherLanguageOf"
+                         active="LIT1199Barala#t7arabic"
+                         passive="LIT1199Barala#t6greek"/>
+            </listRelation>
             <listBibl type="editions">
-               <bibl corresp="#t1"><ptr target="bm:Budge1923BaralamText"/></bibl>
-               <bibl corresp="#t6greek"><ptr target="bm:Boissonade1832Anecdota"/></bibl>
+               <bibl corresp="#t1">
+                  <ptr target="bm:Budge1923BaralamText"/>
+               </bibl>
+               <bibl corresp="#t6greek">
+                  <ptr target="bm:Boissonade1832Anecdota"/>
+               </bibl>
             </listBibl>
             <listBibl type="translation">
-               <bibl corresp="#t1"><ptr target="bm:Budge1923BaralamTranslation"/></bibl>
+               <bibl corresp="#t1">
+                  <ptr target="bm:Budge1923BaralamTranslation"/>
+               </bibl>
             </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  ይቤ፡ ሐዋርያ፡ ወንጌላዊ፡ እስመ፡ ኵሎሙ፡ እለ፡ ይገብሩ፡ ግብረ፡ መንፈስ፡ ቅዱስ፡ እሙንቱ፡ ውሉደ፡ እግዚአብሔር፡
+               </ab>
+            </div>
          </div>
       </body>
    </text>

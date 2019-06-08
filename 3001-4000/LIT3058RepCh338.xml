@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,14 +10,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to Our Lady Mary</title>
+            <title xml:id="t1">Hymn to Our Lady Mary (ʾƎsaggǝd laki)</title>
+            
+            <title xml:id="t2" xml:lang="gez" type="main">እሰግድ፡ ለኪ፡ ወእዌድሰኪ፡
+            </title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">ʾƎsaggǝd laki waʾǝweddǝsaki</title>
+            <title corresp="#t2" xml:lang="en">I worship
+               Thee…</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -28,9 +33,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -46,10 +49,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
+         <abstract>
+            <p>This hymn is ascribed to John Chrysostom. The hymn itself begins with <foreign xml:lang="gez">ተፈሥሒ፡ ኦእግዝእትነ፡ ማርያም፡</foreign>, which is repeated after each stanza.
+            In most manuscripts it is preceded by a preamble varying in structure and length, which begins with <foreign xml:lang="gez">እሰግድ፡ ለኪ፡ ወእዌድሰኪ፡ ኦእግዝእትየ፡ ማርያም፡</foreign>.</p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
+         <change who="DR" when="2017-09-11">Added bibliography</change>
+         <change when="2019-03-25" who="ES">added title added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -60,15 +69,76 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">338</citedRange>
                </bibl>
+               <bibl>
+                  <ptr target="bm:Budge1900Miracles"/>
+                  <citedRange unit="page">6-7</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Budge1923Miracles"/>
+                  <citedRange unit="page">lvi-lvii</citedRange>
+               </bibl>
             </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Grohmann1919Marien"/>
+                  <citedRange unit="page">30</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Loefgren1974Katalog"/>
+                  <citedRange unit="page">88; 100</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT3058RepCh338"
+                         passive="PRS5720JohnChr"/>
+            </listRelation>
          </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit"  xml:lang="gez">
+            <div type="textpart"
+                 subtype="incipit"
+                 xml:lang="gez"
+                 xml:id="Preamble">
                <ab>
                   እሰግድ፡ ለኪ፡ ወእዌድሰኪ፡ ኦእግዝእትነ፡ ማርያም።
                </ab>
             </div>
+            <div type="textpart" xml:lang="gez" xml:id="Hymn">
+               <ab>
+                  ተፈሥሒ፡ ኦእግዝእትየ፡ ማርያም፡
+               </ab>
+            </div>
          </div>
+         
+         <div type="edition">
+            <note>text from <ref type="mss" corresp="ESam003"/></note>
+            
+            <div type="textpart"
+               subtype="incipit"
+               xml:lang="gez"
+               xml:id="incipit">
+               <ab>
+                  እሰግድ፡ ለኪ፡ እሰግድ፡ ለኪ፡ እሰግድ፡ ለኪ፡ ወእዌድሰኪ፡
+                  ኦእግዝእትየ፡ ቅድስት፡ ድንግል፡ በ፪ማርያም፡ ወላዲተ፡ አምላክ፡ ለፀሐየ፡ ጽድቅ፡ ሠረገላሁ። ...
+               </ab>
+            </div>
+            
+            <div type="textpart"
+               subtype="explicit"
+               xml:lang="gez"
+               xml:id="explicit">
+               <ab>
+                  ሰላም፡ ለኪ፡ ኦእግዝእትየ፡ ማርያም፡ ወላዲተ፡
+                  አምላክ፡ እስመ፡ ረከብኪ፡ ክብረ፡ ወሞገሰ፡ እግዚአብሔር፡ ምስሌኪ፡ ሰአሊ፡ ወጸልዪ፡ ኀበ፡ ፍቁር፡ ወልድኪ፡ ከመ፡
+                  ይሥረይ፡ ለነ፡ ኃጣውኢነ።።
+               </ab>
+            </div>
+            
+            
+            
+            
+         </div>
+         
       </body>
    </text>
 </TEI>

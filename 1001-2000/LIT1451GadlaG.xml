@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -13,13 +13,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">ገድለ፡ ገብረ፡ መንፈስ፡ ቅዱስ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Gabra Manfas Qǝddus (general record)</title>
             <title xml:lang="en" corresp="#t1">Vita of Gabra Manfas Qǝddus</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -31,7 +31,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="KRZ">
+                  <ptr target="bm:KRZ"/>
+                  <citedRange unit="item">62</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -45,7 +52,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Hagiography"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -55,6 +62,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-11-01">Added bibliography</change>
          <change who="DR" when="2017-03-09">Added keywords</change>
+         <change who="MV" when="2017-10-25">Edited</change>
+         <change who="SG" when="2019-03-04">Added to the content</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -66,9 +75,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             <listBibl type="translation">
-               <bibl><ptr target="bm:Marrassini2003GabraManfasQeddusVersio"/></bibl>
+               <bibl>
+                  <ptr target="bm:Marrassini2003GabraManfasQeddusVersio"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl> 
+                  <ptr target="bm:Marrassini1988GabraManfasQeddus"/>
+               </bibl>
+               <bibl> 
+                  <ptr target="bm:Marrassini2000Miracles"/>
+               </bibl>
+               <bibl> 
+                  <ptr target="bm:Marrassini2005GabraManfasQeddus"/>
+               </bibl>
             </listBibl>
          </div>
+                  <div type="edition">
+            <div type="textpart" subtype="hymn" xml:id="hymn">
+               <label>hymn</label>
+            </div>
+            
+         </div>
+         
       </body>
    </text>
 </TEI>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -16,23 +16,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:id="t3ethiopic" xml:lang="gez">መጽሐፍ፡ ቅዱስ፡</title>
             <title corresp="#t3ethiopic" xml:lang="gez" type="normalized">Maṣḥaf qǝddus</title>
             
-            <title xml:lang="syr" xml:id="t4syriac">ܦܫܝܛܬܐ</title><!--correctly displayed on the app?-->
+            <title xml:lang="syr" xml:id="t4syriac">ܦܫܝܛܬܐ</title>
+            <!--correctly displayed on the app-->
             <title corresp="#t4syriac" type="normalized">Pǝšiṭtā</title>
             <title corresp="#t4syriac" type="normalized">Pšīṭtā</title>
-            <title corresp="#t4syriac" type="main">Peshitta</title>
+            <title corresp="#t4syriac" xml:lang="en">Peshitta</title>
             
             <title xml:id="t5latin" xml:lang="la">Vulgata</title>
             
-            <title xml:id="t6greekLXX" type="main">Septuagint</title>
+            <title xml:id="t6greekLXX" xml:lang="en">Septuagint</title>
             <title corresp="#t6greekLXX">LXX</title>
             
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -53,12 +53,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="la">Latin</language>
+            <language ident="syr">Syriac</language>
          </langUsage>
          
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Bible"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Bible"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -68,14 +70,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-16" who="ES">added titles relations keywords</change>
          <change when="2017-03-06" who="DR">Added Syriac title</change>
+         <change when="2018-04-27" who="DR">Deleted superfluous values in title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl></bibl>
-            <relation name="saws:contains" active="LIT1219Bible" passive="LIT3530OldTes LIT2072NewTes"></relation>
-         </listBibl>
+         <listRelation>
+            <relation name="saws:contains" active="LIT1219Bible" passive="LIT3530OldTes"/>
+            <relation name="saws:contains" active="LIT1219Bible" passive="LIT2072NewTes"/>
+         </listRelation>
          <ab/>
       </body>
    </text>

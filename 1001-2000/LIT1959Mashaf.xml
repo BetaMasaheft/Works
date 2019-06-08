@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -13,16 +13,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ቄደር፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa qedar</title>
             <title xml:lang="en" corresp="#t1">Book of the Jar</title>
-            <!--OR <title xml:lang="gez" corresp="#t1" type="translated"></title>-->
             <title xml:lang="ar" xml:id="t2Arabic" type="normalized">Qidra</title>
             <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -33,10 +31,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-          <listWit>
-             <witness type="external" corresp="EMML1496"/>
-             <witness corresp="BNFet78#ms_i2"/>
-          </listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listWit>
+               <witness type="external" corresp="EMML1496"/>
+               <witness corresp="BNFet78#ms_i2"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -66,18 +67,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body>
          <div type="bibliography">
             <listBibl type="editions">
-            <bibl><ptr target="bm:Tasfa1962Qedar"/></bibl>
-            <bibl><ptr target="bm:Tasfa1993Mashafa"/></bibl>
-         </listBibl>
-         <listBibl type="secondary">
-            <bibl><ptr target="bm:Daniel2010EAEQedar"/></bibl>
-            <bibl><ptr target="bm:Wion2011Onction"/></bibl>
-            <bibl><ptr target="bm:Wansleben1677Histoire"/><citedRange unit="page">189-190</citedRange></bibl>
-         </listBibl>
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1959Mashaf" passive="#t2Arabic"/>
-         </listBibl>
+               <bibl>
+                  <ptr target="bm:Tasfa1962Qedar"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Tasfa1993Mashafa"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Daniel2010EAEQedar"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Wion2011Onction"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Wansleben1677Histoire"/>
+                  <citedRange unit="page">189-190</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:isVersionInAnotherLanguageOf"
+                         active="LIT1959Mashaf#t1"
+                         passive="LIT1959Mashaf#t2Arabic"/>
+            </listRelation>
          </div>
       </body>
    </text>

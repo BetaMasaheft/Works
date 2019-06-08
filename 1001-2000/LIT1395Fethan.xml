@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -17,14 +17,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="ar" type="normalized" corresp="#t2arabic">Maǧmūʿ al-qawānīn</title>
             <title xml:lang="en" corresp="#t2arabic">Collection of Canons</title>
             <title xml:lang="en" corresp="#t2arabic">Nomocanon</title>
+            <title type="short">F. N.</title>
             <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -35,13 +35,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
            <listWit>
               <witness type="external" corresp="BnF Syriaque 225">BnF Syriaque 225</witness>
-              <witness type="external" corresp="BnF Arabe 247">BnF Arabe 247, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc895236"/></witness>
-              <witness type="external" corresp="BnF Arabe 248">BnF Arabe 248, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89524f"/></witness>
-              <witness type="external" corresp="BnF Arabe 245">BnF Arabe 245, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89521q"/></witness>
-              <witness type="external" corresp="BnF Arabe 249">BnF Arabe 249, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89525p"/></witness>
-              <witness type="external" corresp="BnF Arabe 246">BnF Arabe 246, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89522z"/></witness>
+              <witness type="external" corresp="BnF Arabe 247">BnF Arabe 247, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc895236"/>
+               </witness>
+              <witness type="external" corresp="BnF Arabe 248">BnF Arabe 248, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89524f"/>
+               </witness>
+              <witness type="external" corresp="BnF Arabe 245">BnF Arabe 245, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89521q"/>
+               </witness>
+              <witness type="external" corresp="BnF Arabe 249">BnF Arabe 249, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89525p"/>
+               </witness>
+              <witness type="external" corresp="BnF Arabe 246">BnF Arabe 246, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89522z"/>
+               </witness>
            </listWit>
          </sourceDesc>
       </fileDesc>
@@ -57,15 +65,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/>
                <term key="CanonLaw"/>
                <term key="Translation"/>
+               <term key="Paks2"/>
             </keywords>
          </textClass>
          <creation corresp="#t2arabic" when="1238-09"/>
-         <abstract><p>The <foreign xml:lang="gez">Fǝtḥa nagaśt</foreign> is a book of law which was in use in Ethiopia from the <date>16th century</date> and was still referenced to in the Penal and Civil Codes of 1930, 1957 and 1960.</p>
-            <p>The date of its translation from the Arabic <ref target="#t2arabic"/> by <persName role="translator" ref="PRS7834PetrosA"/> is debated, possibly it was translated the <date>16th century</date>.</p>
-         <p><listBibl type="secondary">
-            <bibl><ptr target="bm:Guidi1901Senodos"/><citedRange unit="page">501-502</citedRange></bibl>
-            <bibl><ptr target="bm:Paulos2005EAEFetha"/></bibl>
-         </listBibl></p></abstract>
+         <abstract>
+            <p>The <foreign xml:lang="gez">Fǝtḥa nagaśt</foreign> is a book of law which was in use in Ethiopia from the <date>16th century</date>
+            and was still referenced to in the Penal and Civil Codes of <date>1930</date>, <date>1957</date> and <date>1960</date>.</p>
+            <p>The date of its translation from the Arabic <ref target="#t2arabic"/> by <persName role="translator" ref="PRS7834PetrosA"/> is debated, possibly it was translated in the <date>16th century</date>.</p>
+            <p>
+               <listBibl type="secondary">
+                  <bibl>
+                     <ptr target="bm:Guidi1901Senodos"/>
+                     <citedRange unit="page">501-502</citedRange>
+                  </bibl>
+                  <bibl>
+                     <ptr target="bm:Paulos2005EAEFetha"/>
+                  </bibl>
+               </listBibl>
+            </p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -78,233 +97,275 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         
+
          <div type="bibliography">
             <listBibl type="editions">
-            <bibl><ptr target="bm:Guidi1897FethaNagastEdition"/></bibl>
-         </listBibl>
-         
-         <listBibl type="translation">
-            <bibl><ptr target="bm:Guidi1899FethaNagastTranslation"/></bibl>
-            <bibl><ptr target="bm:Paulos1968FethaNagast"/></bibl>
-         </listBibl>
-         
-         <listBibl type="catalogue">
-            <bibl corresp="#t1"><ptr target="bm:Dillmann1848Catalogus"/><citedRange unit="page">24-30</citedRange></bibl>
-            <bibl corresp="#t2arabic"><ptr target="bm:Zotenberg1874Catalogue"/><citedRange unit="page">171-173</citedRange></bibl>
-            <bibl corresp="#t2arabic"><ptr target="bm:Assemani1742Mediceae"/><citedRange unit="page">98-101</citedRange></bibl>
-            <bibl corresp="#t2arabic"><ptr target="bm:Mai1831ScriptorumIV"/><citedRange unit="page">283-284</citedRange></bibl>
-         </listBibl>
-         
-         <listBibl type="secondary">
-            <bibl corresp="#t1"><ptr target="bm:Guidi1901Senodos"/><citedRange unit="page">501-502</citedRange></bibl>
-            <bibl corresp="#t1"><ptr target="bm:Paulos2005EAEFetha"/></bibl>
-            <bibl corresp="#t1"><ptr target="bm:Graf1947GCALII"/><citedRange unit="page">402-403</citedRange></bibl>
-            <bibl corresp="#t1"><ptr target="bm:Rueppell1840Reise"/><citedRange unit="page">185-188</citedRange></bibl>
-            <bibl corresp="#t2arabic"><ptr target="bm:Graf1947GCALII"/><citedRange unit="page">400-403</citedRange></bibl>
-         </listBibl>
-         
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:isAttributedToAuthor" active="LIT1395Fethan#t2arabic" passive="PRS1341AbulFa"/>
-            <relation name="saws:isAttributedToAuthor" active="IT1395Fethan#t1" passive="PRS7834PetrosA"/> 
-         </listBibl></div>
-         
-        
-      <div type="edition">
-         <div type="textpart" xml:id="Introduction"> 
-           <label>Introduction</label>
-           <div type="textpart" subtype="chapter" xml:id="EthiopicIntroduction">
-               <label>Ethiopic Introduction not present in the Arabic text, explaining that this work was
-                  composed by <persName ref="PRS1341AbulFa"/> on the demand made by <persName ref="PRS3175Constant"/> to the 318 Fathers of Nicaea.</label>
-            </div>
-         <div type="textpart" subtype="chapter" xml:id="IntroductionCanons">
-            <label> Introduction enumerating the canons used for this compilation</label>
-            <listBibl type="secondary" corresp="LIT1395Fethan#t2arabic">
-               <bibl><ptr target="bm:Dillmann1848Catalogus"/><citedRange unit="page">25-27</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Guidi1897FethaNagastEdition"/>
+               </bibl>
             </listBibl>
+
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Guidi1899FethaNagastTranslation"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Paulos1968FethaNagast"/>
+               </bibl>
+            </listBibl>
+
+            <listBibl type="secondary">
+               <bibl corresp="#t1">
+                  <ptr target="bm:Dillmann1848Catalogus"/>
+                  <citedRange unit="page">24-30</citedRange>
+               </bibl>
+               <bibl corresp="#t2arabic">
+                  <ptr target="bm:Zotenberg1874Catalogue"/>
+                  <citedRange unit="page">171-173</citedRange>
+               </bibl>
+               <bibl corresp="#t2arabic">
+                  <ptr target="bm:Assemani1742Mediceae"/>
+                  <citedRange unit="page">98-101</citedRange>
+               </bibl>
+               <bibl corresp="#t2arabic">
+                  <ptr target="bm:Mai1831ScriptorumIV"/>
+                  <citedRange unit="page">283-284</citedRange>
+               </bibl>
+               <bibl corresp="#t1">
+                  <ptr target="bm:Guidi1901Senodos"/>
+                  <citedRange unit="page">501-502</citedRange>
+               </bibl>
+               <bibl corresp="#t1">
+                  <ptr target="bm:Paulos2005EAEFetha"/>
+               </bibl>
+               <bibl corresp="#t1">
+                  <ptr target="bm:Graf1947GCALII"/>
+                  <citedRange unit="page">402-403</citedRange>
+               </bibl>
+               <bibl corresp="#t1">
+                  <ptr target="bm:Rueppell1840Reise"/>
+                  <citedRange unit="page">185-188</citedRange>
+               </bibl>
+               <bibl corresp="#t2arabic">
+                  <ptr target="bm:Graf1947GCALII"/>
+                  <citedRange unit="page">400-403</citedRange>
+               </bibl>
+            </listBibl>
+
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT1395Fethan#t2arabic"
+                         passive="PRS1341AbulFa"/>
+               <relation name="saws:isAttributedToAuthor"
+                         active="IT1395Fethan#t1"
+                         passive="PRS7834PetrosA"/>
+            </listRelation>
          </div>
-            <div type="textpart" subtype="chapter" xml:id="IndexPart1">
-               <label>Index of Part 1</label>
+
+
+         <div type="edition">
+            <div type="textpart" xml:id="Introduction">
+               <label>Introduction</label>
+               <div type="textpart" subtype="chapter" xml:id="EthiopicIntroduction">
+                  <label>Ethiopic Introduction not present in the Arabic text, explaining that this work was
+                  composed by <persName ref="PRS1341AbulFa"/> on the demand made by <persName ref="PRS3175Constant"/> to the 318 Fathers of Nicaea.</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="IntroductionCanons">
+                  <label> Introduction enumerating the canons used for this compilation</label>
+                  <listBibl type="secondary" corresp="LIT1395Fethan#t2arabic">
+                     <bibl>
+                        <ptr target="bm:Dillmann1848Catalogus"/>
+                        <citedRange unit="page">25-27</citedRange>
+                     </bibl>
+                  </listBibl>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="IndexPart1">
+                  <label>Index of Part 1</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="IndexPart2">
+                  <label>Index of Part 2</label>
+               </div>
             </div>
-         <div type="textpart" subtype="chapter" xml:id="IndexPart2">
-            <label>Index of Part 2</label>
+
+            <div type="textpart" subtype="chapter" xml:id="Part1">
+               <label>Part 1: On religious matters</label>
+
+               <div type="textpart" subtype="chapter" xml:id="Chapter1">
+                  <label>Chapter 1: On the Church</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter2">
+                  <label>Chapter 2: On the books of Scripture included in the canon</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter3">
+                  <label>Chapter 3: On baptism</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter4">
+                  <label>Chapter 4: On the patriarchs</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter5">
+                  <label>Chapter 5: On the bishops</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter6">
+                  <label>Chapter 6: On the priests</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter7">
+                  <label>Chapter 7: On the deacons</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter8">
+                  <label>Chapter 8: On underdeacons, lectors, etc.</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter9">
+                  <label>Chapter 9: On all priests, deacons, etc.</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter10">
+                  <label>Chapter 10: On monks and nuns</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter11">
+                  <label>Chapter 11: On discplining laymen</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter12">
+                  <label>Chapter 12: On the liturgy</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter13">
+                  <label>Chapter 13: On the eucharist</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter14">
+                  <label>Chapter 14: On prayer</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter15">
+                  <label>Chapter 15: On fasting</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter16">
+                  <label>Chapter 16: On almsgiving</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter17">
+                  <label>Chapter 17: On the distribution of the alms</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter18">
+                  <label>Chapter 18: On tithe, firstlings, vows and legacies</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter19">
+                  <label>Chapter 19: On Sundays and feasts</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter20">
+                  <label>Chapter 20: On the martyrs and confessors, on apostates</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter21">
+                  <label>Chapter 21: On the ill</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter22">
+                  <label>Chapter 22: On the dead</label>
+               </div>
+            </div>
+
+            <div type="textpart" subtype="chapter" xml:id="Part2">
+               <label>Part 2: On civil matters</label>
+               <div type="textpart" subtype="chapter" xml:id="Chapter23">
+                  <label>Chapter 23: On food, clothing, habitation and professions</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter24">
+                  <label>Chapter 24: On marriage</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter25">
+                  <label>Chapter 25: On concubinage</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter26">
+                  <label>Chapter 26: On donations</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter27">
+                  <label>Chapter 27: On exchanging, deposits, interest and lease</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter28">
+                  <label>Chapter 28: On lending</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter29">
+                  <label>Chapter 29: On depot</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter30">
+                  <label>Chapter 30: On authorisation</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter31">
+                  <label>Chapter 31: On freedom, slavery and manumission</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter32">
+                  <label>Chapter 32: On guardianship</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter33">
+                  <label>Chapter 33: On buying and selling</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter34">
+                  <label>Chapter 34: On association</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter35">
+                  <label>Chapter 35: On violence and oppression</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter36">
+                  <label>Chapter 36: On the salary</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter37">
+                  <label>Chapter 37: On constructions</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter38">
+                  <label>Chapter 38: On exchanging</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter39">
+                  <label>Chapter 39: On confessions</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter40">
+                  <label>Chapter 40: On the restitution of found objects</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter41">
+                  <label>Chapter 41: On testaments</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter42">
+                  <label>Chapter 42: On heritages</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter43">
+                  <label>Chapter 43: On judges and legal procedures</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter44">
+                  <label>Chapter 44: On kings</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Arnold1841Fetha"/>
+                     </bibl>
+                  </listBibl>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter45">
+                  <label>Chapter 45: On the precepts of the Old and New Testament</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter46">
+                  <label>Chapter 46: On the penalty for apostasy</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter47">
+                  <label>Chapter 47: On the penalty for homicide</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter48">
+                  <label>Chapter 48: On the penalty for fornication</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter49">
+                  <label>Chapter 49: On the penalty for stealing</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter50">
+                  <label>Chapter 50: On ebriety, usury, etc.</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Chapter51">
+                  <label>Chapter 51: On hair, circumcision, confession, etc.</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Appendix">
+                  <label>Appendix on heritages, not present in all Arabic manuscripts</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="ColophonTranslation">
+                  <label>Final note on the translation</label> 
+                  <listBibl type="secondary">
+                     <bibl>
+                        <ptr target="bm:Isenberg1841Dictionary"/>
+                        <citedRange unit="page">212</citedRange>
+                     </bibl>
+                  </listBibl>
+               </div>
+            </div>
          </div>
-        </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="Part1">
-            <label>Part 1: On religious matters</label>
-            
-            <div type="textpart" subtype="chapter" xml:id="Chapter1">
-               <label>Chapter 1: On the Church</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter2">
-               <label>Chapter 2: On the books of Scripture included in the canon</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter3">
-               <label>Chapter 3: On baptism</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter4">
-               <label>Chapter 4: On the patriarchs</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter5">
-               <label>Chapter 5: On the bishops</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter6">
-               <label>Chapter 6: On the priests</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter7">
-               <label>Chapter 7: On the deacons</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter8">
-               <label>Chapter 8: On underdeacons, lectors, etc.</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter9">
-               <label>Chapter 9: On all priests, deacons, etc.</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter10">
-               <label>Chapter 10: On monks and nuns</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter11">
-               <label>Chapter 11: On discplining laymen</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter12">
-               <label>Chapter 12: On the liturgy</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter13">
-               <label>Chapter 13: On the eucharist</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter14">
-               <label>Chapter 14: On prayer</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter15">
-               <label>Chapter 15: On fasting</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter16">
-               <label>Chapter 16: On almsgiving</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter17">
-               <label>Chapter 17: On the distribution of the alms</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter18">
-               <label>Chapter 18: On tithe, firstlings, vows and legacies</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter19">
-               <label>Chapter 19: On Sundays and feasts</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter20">
-               <label>Chapter 20: On the martyrs and confessors, on apostates</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter21">
-               <label>Chapter 21: On the ill</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter22">
-               <label>Chapter 22: On the dead</label>
-            </div>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="Part2">
-            <label>Part 2: On civil matters</label>
-            <div type="textpart" subtype="chapter" xml:id="Chapter23">
-               <label>Chapter 23: On food, clothing, habitation and professions</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter24">
-               <label>Chapter 24: On marriage</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter25">
-               <label>Chapter 25: On concubinage</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter26">
-               <label>Chapter 26: On donations</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter27">
-               <label>Chapter 27: On exchanging, deposits, interest and lease</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter28">
-               <label>Chapter 28: On lending</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter29">
-               <label>Chapter 29: On depot</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter30">
-               <label>Chapter 30: On authorisation</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter31">
-               <label>Chapter 31: On freedom, slavery and manumission</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter32">
-               <label>Chapter 32: On guardianship</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter33">
-               <label>Chapter 33: On buying and selling</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter34">
-               <label>Chapter 34: On association</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter35">
-               <label>Chapter 35: On violence and oppression</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter36">
-               <label>Chapter 36: On the salary</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter37">
-               <label>Chapter 37: On constructions</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter38">
-               <label>Chapter 38: On exchanging</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter39">
-               <label>Chapter 39: On confessions</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter40">
-               <label>Chapter 40: On the restitution of found objects</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter41">
-               <label>Chapter 41: On testaments</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter42">
-               <label>Chapter 42: On heritages</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter43">
-               <label>Chapter 43: On judges and legal procedures</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter44">
-               <label>Chapter 44: On kings</label>
-               <listBibl type="editions">
-                  <bibl><ptr target="bm:Arnold1841Fetha"/></bibl>
-               </listBibl>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter45">
-               <label>Chapter 45: On the precepts of the Old and New Testament</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter46">
-               <label>Chapter 46: On the penalty for apostasy</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter47">
-               <label>Chapter 47: On the penalty for homicide</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter48">
-               <label>Chapter 48: On the penalty for fornication</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter49">
-               <label>Chapter 49: On the penalty for stealing</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter50">
-               <label>Chapter 50: On ebriety, usury, etc.</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Chapter51">
-               <label>Chapter 51: On hair, circumcision, confession, etc.</label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:id="Appendix">
-               <label>Appendix on heritages, not present in all Arabic manuscripts</label>
-            </div>
-          <div type="textpart" subtype="chapter" xml:id="FinalNoteTranslation">
-             <label>Final note on the translation</label> <!--colophon?-->
-             <listBibl type="secondary">
-                <bibl><ptr target="bm:Isenberg1841Dictionary"/><citedRange unit="page">212</citedRange></bibl>
-             </listBibl>
-          </div>
-         </div></div>
       </body>
    </text>
 </TEI>

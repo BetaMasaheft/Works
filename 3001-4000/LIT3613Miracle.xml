@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Miracle of Anastasius, a deacon of Rome</title>
+            <title xml:id="t1">Miracle of Mary: Miracle of Anastasius, a deacon of Rome</title>
+            <title xml:id="t2" xml:lang="en">The deacon's prayer that contained five times "Rejoice"!</title>
+            <title xml:id="t3">Miracle of the deacon who recited the prayer tafaśśǝḥi and was healed by Our Lady Mary</title>
+            <title xml:id="t4">The Virgin Mary and the Deacon Anastasius of Constantinople (hagara Rome) </title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +28,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -43,38 +43,79 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"/> 
+               <term key="ChristianLiterature"/>
                <term key="Miracle"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords and relations</change>
+         <change who="DR" when="2018-11-14">Added keyword, Macomber reference and title</change>
+         <change who="DR" when="2018-12-07">Added title from deleted LIT4616Miracle</change>
+         <change who="AM" when="2019-04-30">added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
+
+            <listBibl type="secondary">
+
+               <bibl>
+                  <ptr target="bm:Cerulli1965Leningrado"/>
+                  <citedRange unit="page">7</citedRange>
+                  <citedRange unit="item">10</citedRange>
+               </bibl>
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">142</citedRange></bibl>
+            </listBibl>
+
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Budge1923Miracles"/>
                   <citedRange unit="item">27</citedRange>
                </bibl>
             </listBibl>
-            <listBibl type="translation" xml:lang="en">
+
+            <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Budge1933Miracles"/>
+                  <citedRange unit="item">27</citedRange>
                   <citedRange unit="page">85-86</citedRange>
                </bibl>
+               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">64</citedRange><citedRange unit="page">172-173</citedRange></bibl>
             </listBibl>
-            <listBibl type="relations">
-               <bibl/>
+            <!-- The Virgin Mary and the Deacon Anastasius of
+                        Constantinople (hagara Rome) (BMirMA 41-42; BHMirM 85-86; CerMaria<ref
+                           type="mss" corresp="ES172173">172-173</ref>; ColMirM 336 // mss. O Etiop.
+                        15, LöfUpp 101, n<locus target="#32">32</locus>, I, D.-27;  éth. 60, <locus
+                           from="44v" to="46">44v-46</locus>, ZotBNat 63, n°60-28; Orient. 8814,
+                        fols. 1<ref type="mss" corresp="ES50r153">50r-153</ref>r, StrBritLib 48,
+                           n<locus target="#32">32</locus>, 16.-27).  -->
+            <listRelation>
                <relation name="saws:formsPartOf"
-                  active="LIT3613Miracle"
-                  passive="LIT2384Taamme"/>
-            </listBibl>
+                         active="LIT3613Miracle"
+                         passive="LIT2384Taamme"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                 <ab>
+                     ወሀሎ፡ አሐዱ፡ ብእሲ፡ ዘስሙ፡ አንስጦስዮስ፡ በሀገረ፡ ሮሜ፡ <choice resp="PRS6437Macomber"><corr>ዘበራንስትስያ</corr><sic>ዘበራንጥያ</sic></choice>፣
+                     ፈራሄ፡ እግዚአብሔር፡ ወያፈቅራ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
+                     ወይገይስ፡ ኀበ፡ ቤተ፡ ክርስቲያን፡ ያቄርብ፡ ላቲ፡ አጰርጌ፡ ንጹሐ፡ ዘምስለ፡ ጸሎት፣ እንዘ፡ ይሴብሕ፡ ወድሶታ፡ ለማርያም።
+                 </ab>
+                 <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>This incipit is taken from <ref type="mss" corresp="EMML4618"/>.</note>
+                    <ab>
+                      ወሀሎ፡ አሐዱ፡ ብእሲ፡ ወይነብር፡ ውስተ፡ አሐዱ፡ መካን፡ ዘያፍቅሮ፡ ለእግዚአብሔር፡ ወለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
+                      ወይጼሊ፡ ዘንተ፡ ጸሎተ፡ እንተ፡ ውስቴታ፡ አእኵቶታ፡ ወወድሶታ፡ ለማርያም።
+                    </ab>
+                 </div>
+             </div>
          </div>
       </body>
    </text>

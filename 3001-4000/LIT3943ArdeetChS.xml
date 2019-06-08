@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -18,9 +18,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -30,6 +29,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
             <listWit>
                <listWit>
@@ -48,13 +50,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <abstract>
-            <p>Short version of <title ref="LIT3942ArdeetCh"/>. It includes a list of the secret names of Jesus Christ, thanks to which the apostles are able to perfom miracles.
+            <p>Short version of <ref type="work" corresp="LIT3942ArdeetCh"/>. It includes a list of the secret names of Jesus Christ, thanks to which the apostles are able to perfom miracles.
             </p>
          </abstract>
          <textClass>
             <keywords>
                <term key="Magic"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
                <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
@@ -72,19 +74,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Basset1896Enseign"/>
                </bibl>
             </listBibl>
-            <listBibl type="relations">
-               <bibl/>
+            <listRelation>
                <relation name="saws:isVersionOf"
-                  active="LIT3943ArdeetChS"
-                  passive="LIT3942ArdeetCh"/>
+                         active="LIT3943ArdeetChS"
+                         passive="LIT3942ArdeetCh"/>
                <relation name="saws:isShorterVersionOf"
-                  active="LIT3943ArdeetChS"
-                  passive="LIT3944ArdeetChL"/>
+                         active="LIT3943ArdeetChS"
+                         passive="LIT3944ArdeetChL"/>
                <relation name="saws:fallsWithin"
-                  active="LIT3943ArdeetChS"
-                  passive="LIT1931Mashaf"><desc>The Maṣḥafa ʾardǝʾǝt circulates both as an independent work and as a part of the Maṣḥafa gǝnzat</desc></relation>
-               
-               </listBibl>
+                         active="LIT3943ArdeetChS"
+                         passive="LIT1931Mashaf">
+                  <desc>The Maṣḥafa ʾardǝʾǝt circulates both as an independent work and as a part of the Maṣḥafa gǝnzat</desc>
+               </relation>
+            </listRelation>
          </div>
       </body>
    </text>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,20 +10,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ድርሳን፡ በእንተ፡ ልደቱ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān ba-ʾǝnta lǝdatu la-ʾǝgziʾǝna ʾIyasus Krǝstos</title>
-            <title xml:lang="en" corresp="#t1">On the Nativity of Jesus</title>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘቅዱስ፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ በእንተ፡ ልደቱ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān za-qǝddus Yoḥannǝs ʾafa warq baʾǝnta lǝdatu la-ʾǝgziʾǝna ʾIyasus Krǝstos</title>
+            <title xml:lang="en" corresp="#t1">Homily by St John Chrysostom on the Nativity of Jesus</title>
+            <title xml:lang="la" corresp="#t1">De nativitate</title>
             <title xml:lang="grc" xml:id="t2greek"/>
             <title xml:lang="la" xml:id="t3latin"/>
-            
-            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -35,7 +33,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="CPG">
+                  <ptr target="bm:CPG2"/>
+                  <citedRange unit="item">4560</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -44,12 +49,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="la">Latin</language>
+            <language ident="grc">Greek</language>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Theology"></term>
-               <term key="Homily"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+               <term key="Homily"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -59,17 +67,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-09-19">Title updated</change>
          <change when="2017-02-15" who="ES">keywords relation</change>
+         <change who="MV" when="2017-12-20">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl/>
-            
-            
-            <relation name="saws:isAttributedToAuthor" active="LIT2135OntheN" passive="PRS5720JohnChr"></relation>
-         </listBibl>
-         <ab/>
+         <div type="bibliography">
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT2135OntheN"
+                         passive="PRS5720JohnChr"/>
+            </listRelation>
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Petraeus1660Homilia"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Pereira1910Homilias"/>
+                  <citedRange>7</citedRange>
+                  <citedRange unit="item">2</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Lusini1988patristica"/>
+                  <citedRange>482-483</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>

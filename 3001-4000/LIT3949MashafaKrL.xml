@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -25,9 +25,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -37,6 +36,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc> 
             <listWit>        
                <witness corresp="BAVet4#ms_i3"/>
@@ -62,7 +64,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                The <foreign xml:lang="gez">Maṣḥafa krǝstǝnnā</foreign> is the service book for the administration of the Sacraments of Christian Initiation. It includes the preparatory rites and the threefold sercive
                of baptism, chrism and Eucharist. Its structure is the same as of the baptismal book of the Coptic Church.
             </p>
-              <p> It is sometimes grouped in manuscripts with <ref type="work" corresp="LIT1975Mashaf"/>. 
+              <p>It is sometimes grouped in manuscripts with <ref type="work" corresp="LIT1975Mashaf"/>. 
             </p>
             <p>The long version agrees with the short versions <ref type="work" corresp="LIT3948MashafaKrS"/> until the recitation of the Credo, then there are many added prayers. 
                The Psalms <ref type="work" corresp="LIT2000Mazmur#Ps61"> 61</ref> and <ref type="work" corresp="LIT2000Mazmur#Ps113">113, 20-end</ref> are absent.
@@ -78,426 +80,456 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body>
          <div type="bibliography">
             <listBibl type="editions">
-               <bibl><ptr target="bm:1973Krestenna"/></bibl>
-               <bibl><ptr target="bm:Chaine1913Bapteme"/></bibl>
+               <bibl>
+                  <ptr target="bm:1973Krestenna"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Chaine1913Bapteme"/>
+               </bibl>
             </listBibl>
             <listBibl type="editions" corresp="BAVet4">
-               <bibl><ptr target="bm:Grebaut1927Ordre"/></bibl>
+               <bibl>
+                  <ptr target="bm:Grebaut1927Ordre"/>
+               </bibl>
             </listBibl>
             <listBibl type="translation" corresp="BAVet4">
-               <bibl><ptr target="bm:Petrus1549Modus"/></bibl>
+               <bibl>
+                  <ptr target="bm:Petrus1549Modus"/>
+               </bibl>
             </listBibl>
             <listBibl type="secondary">
-               <bibl><ptr target="bm:FritschEtAl2007EAEKrestenna"/></bibl>
+               <bibl>
+                  <ptr target="bm:FritschEtAl2007EAEKrestenna"/>
+               </bibl>
             </listBibl>
-         <listBibl type="relations">
-            <bibl></bibl>
-            <relation name="saws:isLongerVersionOf" active="LIT3949MashafaKrL" passive="LIT1940Mashaf"></relation>
-         </listBibl>
+            <listRelation>
+               <relation name="saws:isLongerVersionOf"
+                         active="LIT3949MashafaKrL"
+                         passive="LIT1940Mashaf"/>
+            </listRelation>
          </div>
-      <div type="edition">
-         <div type="textpart" subtype="chapter" xml:id="BlessingMother">
-            <desc>Blessing of mother and child</desc>
+         <div type="edition">
+            <div type="textpart" subtype="chapter" xml:id="BlessingMother">
+               <desc>Blessing of mother and child</desc>
             
-            <div type="textpart" subtype="chapter" xml:id="BlessingPrayerThanksgiving">
-               <desc>Introduction, Prayer of thanksgiving and incense</desc>
-               <q xml:lang="gez"></q>
-            </div>
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:id="BlessingPrayerThanksgiving">
+                  <desc>Introduction, Prayer of thanksgiving and incense</desc>
+                  <q xml:lang="gez"/>
+               </div>
             
-            <div type="textpart" subtype="chapter" xml:id="BlessingPrayer">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
+               <div type="textpart" subtype="chapter" xml:id="BlessingPrayer">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
             
-            <div type="textpart" subtype="chapter" xml:id="BlessingAnointing">
-               <desc>The priest anoints mother and child</desc>
-               <q xml:lang="gez"></q>
-            </div>
+               <div type="textpart" subtype="chapter" xml:id="BlessingAnointing">
+                  <desc>The priest anoints mother and child</desc>
+                  <q xml:lang="gez"/>
+               </div>
             
-            <div type="textpart" subtype="chapter" xml:id="BlessingEucharistMother">
-               <desc>The mother receives the Eucharist</desc>
-               <q xml:lang="gez"></q>
-            </div>
-         </div>
-         
-         
-         <div type="textpart" subtype="chapter" xml:id="Baptism">
-            <desc>Rite of baptism</desc>
-            
-            <div type="textpart" subtype="chapter" xml:id="Introduction">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="FirstPrayer">
-               <desc></desc>
-               <q xml:lang="gez"></q>
+               <div type="textpart" subtype="chapter" xml:id="BlessingEucharistMother">
+                  <desc>The mother receives the Eucharist</desc>
+                  <q xml:lang="gez"/>
+               </div>
             </div>
          
-         <div type="textpart" subtype="chapter" xml:id="SecondPrayer">
-            <desc>Prayer over those to be baptised</desc>
-            <q xml:lang="gez"></q>
-         </div>
          
-         <div type="textpart" subtype="chapter" xml:id="PrayerOilVessel">
-            <desc>Prayer over the oil vessels</desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-            <div type="textpart" subtype="chapter" xml:id="PrayerOil">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="AnointingFrontShouldersForearmBreastHandFingers">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="PrayerAfterAnointing">
-            <desc>After anointing, the priest speaks a prayer of thanksgiving, bends the knees of those to be baptised and says another prayer</desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="Prayer">
-            <desc>Prayer</desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="PrayerNames">
-            <desc>Prayer for those who gave their names for baptism</desc>
-            <q xml:lang="gez"></q>
-         </div>
+            <div type="textpart" subtype="chapter" xml:id="Baptism">
+               <desc>Rite of baptism</desc>
             
-            <div type="textpart" subtype="chapter" xml:id="PrayerKnees">
-               <desc></desc>
-               <q xml:lang="gez"></q>
+               <div type="textpart" subtype="chapter" xml:id="Introduction">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="FirstPrayer">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="SecondPrayer">
+                  <desc>Prayer over those to be baptised</desc>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="PrayerOilVessel">
+                  <desc>Prayer over the oil vessels</desc>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="PrayerOil">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:id="AnointingFrontShouldersForearmBreastHandFingers">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="PrayerAfterAnointing">
+                  <desc>After anointing, the priest speaks a prayer of thanksgiving, bends the knees of those to be baptised and says another prayer</desc>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="Prayer">
+                  <desc>Prayer</desc>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="PrayerNames">
+                  <desc>Prayer for those who gave their names for baptism</desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="PrayerKnees">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="PrayerFeet">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="FurtherPrayer">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="SecondPrayerFeet">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="ThirdPrayerFeet">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="OtherPrayer">
+                  <desc>Prayer while putting the hand on those to be baptised</desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="ChangingClothes">
+                  <desc>Those to be baptised put off their clothes and reject Satan</desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="Confession">
+                  <desc>Confession of faith</desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:id="FirstPrayerAfterConfession">
+                  <desc>First Prayer after Confession of faith</desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:id="PrayerFeetAfterConfession">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:id="ThirdPrayerAfterConfession">
+                  <desc>Third Prayer after Confession of faith</desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="AnointingAfterConfession">
+                  <desc>Anointing of shoulders, breast, stomach, hands, knees, members</desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:id="FirstPrayerAfterAnointing">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:id="SecondPrayerAfterAnointing">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="SecretPrayer">
+                  <desc>Secret Prayer at the baptismal font, followed by the prayers of thanksgiving and incense</desc>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="Titus">
+                  <desc>Reading from Titus</desc>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="FirstJohn">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="Acts8">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="Ps31">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="John3">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="SickDeceased">
+                  <desc>From the prayers for the sick to the prayers for the deceased. The texts are not quoted.</desc>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="OnYourServants">
+                  <desc>Prayer over those to be baptised</desc>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="GodOfProphets">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:id="SecretPrayerBeforeBaptism">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="ForPeace2">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="ForBishop2">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="ForCongregation2">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="Confession2">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="CrossingBeforePrayers">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="PrayerOverBaptiserium">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="PrayerBlessingWater">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="BlessingJordan">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="OtherPrayer1">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="OtherPrayer2">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="OtherPrayer3">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="OtherPrayer4">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="Sanctus">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="OtherPrayer5">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="OtherPrayer6">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="OurFather">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="PrayerImpositionHands">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="Crossing">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="PrayerInBaptiserium">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="Ps131Ps28Ps33Ps65Ps50">
+                  <desc>Extracts from the Psalms</desc>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="PrayerBaptism">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+         
+               <div type="textpart" subtype="chapter" xml:id="PrayerAbsolutionWater">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="PrayerFeet">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="FurtherPrayer">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="SecondPrayerFeet">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="ThirdPrayerFeet">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="OtherPrayer">
-               <desc>Prayer while putting the hand on those to be baptised</desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="ChangingClothes">
-               <desc>Those to be baptised put off their clothes and reject Satan</desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="Confession">
-               <desc>Confession of faith</desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="FirstPrayerAfterConfession">
-               <desc>First Prayer after Confession of faith</desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="PrayerFeetAfterConfession">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="ThirdPrayerAfterConfession">
-               <desc>Third Prayer after Confession of faith</desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="AnointingAfterConfession">
-               <desc>Anointing of shoulders, breast, stomach, hands, knees, members</desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="FirstPrayerAfterAnointing">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="SecondPrayerAfterAnointing">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
          
-         <div type="textpart" subtype="chapter" xml:id="SecretPrayer">
-            <desc>Secret Prayer at the baptismal font, followed by the prayers of thanksgiving and incense</desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="Titus">
-            <desc>Reading from Titus</desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="FirstJohn">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="Acts8">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="Ps31">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="John3">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
+            <div type="textpart" subtype="chapter" xml:id="Confirmation">
+               <desc>Rite of Confirmation</desc>
             
-            <div type="textpart" subtype="chapter" xml:id="SickDeceased">
-               <desc>From the prayers for the sick to the prayers for the deceased. The texts are not quoted.</desc>
-               <q xml:lang="gez"></q>
+               <div type="textpart" subtype="chapter" xml:id="PrayerBeforeChrism">
+                  <desc>Prayer of thanksgiving</desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="PrayerSendingSpirit">
+                  <desc>Prayer for the Sending of the Holy Spirit</desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="PrayerThroughHolySpirit">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="AnointingFrontBackEyes">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="AnointingNoseLips">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="AnointingEars">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="AnointingBreastStomach">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:id="AnointingArmsKneesMembersFeetSpine">
+                  <desc/>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="PrayerBlessing">
+                  <desc>Prayer of Blessing while imposing the hands</desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="DressingCrowning">
+                  <desc>Those who were anointed are dressed in white clothes and crowned, dressed in red clothes and receiving palm branches  </desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+            
+               <div type="textpart" subtype="chapter" xml:id="PrayerCrown">
+                  <desc>Prayer over the crown</desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="PrayerAfterCrowning">
+                  <desc>Second prayer on the crowns</desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="PrayerImposition">
+                  <desc>AnotherPrayer over the crown, while imposing the hands</desc>
+                  <q xml:lang="gez"/>
+               </div>
             </div>
          
-         <div type="textpart" subtype="chapter" xml:id="OnYourServants">
-            <desc>Prayer over those to be baptised</desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="GodOfProphets">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="SecretPrayerBeforeBaptism">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="ForPeace2">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="ForBishop2">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="ForCongregation2">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="Confession2">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="CrossingBeforePrayers">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="PrayerOverBaptiserium">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="PrayerBlessingWater">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="BlessingJordan">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="OtherPrayer1">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="OtherPrayer2">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="OtherPrayer3">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="OtherPrayer4">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="Sanctus">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="OtherPrayer5">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="OtherPrayer6">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="OurFather">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="PrayerImpositionHands">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="Crossing">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="PrayerInBaptiserium">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="Ps131Ps28Ps33Ps65Ps50">
-            <desc>Extracts from the Psalms</desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="PrayerBaptism">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="PrayerAbsolutionWater">
-            <desc></desc>
-            <q xml:lang="gez"></q>
-         </div>
-      </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="Confirmation">
-            <desc>Rite of Confirmation</desc>
+            <div type="textpart" subtype="chapter" xml:id="Communion">
+               <desc>Rite of Communion</desc>
             
-            <div type="textpart" subtype="chapter" xml:id="PrayerBeforeChrism">
-               <desc>Prayer of thanksgiving</desc>
-               <q xml:lang="gez"></q>
+               <div type="textpart" subtype="chapter" xml:id="Eucharist">
+                  <desc>Receiving of the Eucharist and of milk and honey</desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="PrayerAfterEucharist">
+                  <desc>Prayer for the worthiness of those who have been baptised</desc>
+                  <q xml:lang="gez"/>
+               </div>
+            
+               <div type="textpart" subtype="chapter" xml:id="PrayerWisdom">
+                  <desc>Prayer for the growth of wisdom and supplications to Mary and Saints</desc>
+                  <q xml:lang="gez"/>
+               </div>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="PrayerSendingSpirit">
-               <desc>Prayer for the Sending of the Holy Spirit</desc>
-               <q xml:lang="gez"></q>
+         
+            <div type="textpart" subtype="chapter" xml:id="Infants">
+               <desc>Prayer for Infants</desc>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="PrayerThroughHolySpirit">
-               <desc></desc>
-               <q xml:lang="gez"></q>
+            <div type="textpart" subtype="chapter" xml:id="FinalBlessing">
+               <desc>Prayer of Blessing</desc>
             </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="AnointingFrontBackEyes">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="AnointingNoseLips">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="AnointingEars">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="AnointingBreastStomach">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="AnointingArmsKneesMembersFeetSpine">
-               <desc></desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="PrayerBlessing">
-               <desc>Prayer of Blessing while imposing the hands</desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="DressingCrowning">
-               <desc>Those who were anointed are dressed in white clothes and crowned, dressed in red clothes and receiving palm branches  </desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            
-            <div type="textpart" subtype="chapter" xml:id="PrayerCrown">
-               <desc>Prayer over the crown</desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="PrayerAfterCrowning">
-               <desc>Second prayer on the crowns</desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="PrayerImposition">
-               <desc>AnotherPrayer over the crown, while imposing the hands</desc>
-               <q xml:lang="gez"></q>
+            <div type="textpart" subtype="chapter" xml:id="Hymn">
+               <desc>Hymn of the new Christians</desc>
             </div>
          </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="Communion">
-            <desc>Rite of Communion</desc>
-            
-            <div type="textpart" subtype="chapter" xml:id="Eucharist">
-               <desc>Receiving of the Eucharist and of milk and honey</desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="PrayerAfterEucharist">
-               <desc>Prayer for the worthiness of those who have been baptised</desc>
-               <q xml:lang="gez"></q>
-            </div>
-            
-            <div type="textpart" subtype="chapter" xml:id="PrayerWisdom">
-               <desc>Prayer for the growth of wisdom and supplications to Mary and Saints</desc>
-               <q xml:lang="gez"></q>
-            </div>
-         </div>
-         
-         <div type="textpart" subtype="chapter" xml:id="Infants">
-            <desc>Prayer for Infants</desc>
-         </div>
-         <div type="textpart" subtype="chapter" xml:id="FinalBlessing">
-            <desc>Prayer of Blessing</desc>
-         </div>
-         <div type="textpart" subtype="chapter" xml:id="Hymn">
-            <desc>Hymn of the new Christians</desc>
-         </div></div>
       </body>
    </text>
 </TEI>

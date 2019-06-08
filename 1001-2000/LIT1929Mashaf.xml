@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -15,13 +15,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="en" corresp="#t1">Book of the Translation of Takla Hāymānot</title>
                <title xml:lang="en" corresp="#t2">Book of the History of the Translation of the Body of Takla Hāymānot</title>
             <editor role="generalEditor" key="AB"/>
-            <editor key="MV"></editor>
+            <editor key="MV"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -33,7 +32,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">1130</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -43,7 +49,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
-         <abstract><p>Homily for the feast of the Translation of the Body of Takla Hāymānot, <date>12th <foreign xml:lang="gez">Gǝnbot</foreign></date>.</p></abstract>
+         <abstract>
+            <p>Homily for the feast of the Translation of the Body of Takla Hāymānot, <date>12th <foreign xml:lang="gez">Gǝnbot</foreign>
+               </date>.</p>
+         </abstract>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -57,11 +66,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-11-29">Abstract added</change>
          <change who="DR" when="2017-03-21">Added keywords</change>
+         <change who="MV" when="2017-12-01">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Cerulli1944AbbotsDL"/>
+                  <citedRange>142</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Nosnitsin2003Felsatu"/>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT1929Mashaf"
+                         passive="PRS9162TaklaHa"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                 ስምዑ፡ ወለብዉ፡ ኦፍቁራንየ፡ መጽሐፈ፡ ዜናሁ፡ <gap reason="omitted"/> ዘይትነበብ፡ በዕለተ፡ ፍልሰተ፡ ሥጋሁ፡
+               </ab>
+            </div>
+            <div type="textpart" subtype="explicit" xml:lang="gez">
+               <ab>
+                  ወተርጐመ፡ ለነ፡ መንፈስ፡ ቅዱስ፡ አምላከ፡ ፍሥሓ። ዘሎቱ፡ <gap reason="omitted"/> እስከ፡ እስትንፋስ፡ ደኅሪት፡ <gap reason="omitted"/> አሜን።
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

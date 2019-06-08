@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -13,16 +13,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ሓዊ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa ḥāwi</title>
             <title xml:lang="en" corresp="#t1">Book of Ḥāwi</title>
-            <title xml:lang="ar" xml:id="t2arabic" type="normalized">Kitāb al-ḥāwi</title>
+            <title xml:lang="ar" xml:id="t2arabic">كتاب الحاوي</title>
+            <title xml:lang="ar" corresp="#t2arabic" type="normalized">Kitāb al-ḥāwi</title>
             <title xml:lang="grc" xml:id="t3greek">Πανδέκται τῶν ἑρμηνείον τῶν θείον ἐντολῶν τοῦ Κυρίου</title>
             <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -41,7 +41,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
             <language ident="grc">Greek</language>
          </langUsage>
@@ -51,6 +50,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Theology"/>
                <term key="MonasticLiterature"/>
                <term key="Translation"/>
+               <term key="Paks2"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -58,230 +58,244 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2017-08-30">Additions</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          
-       <div type="bibliography">
-          <listBibl type="secondary">
-           <bibl><ptr target="bm:Ezra2005Hawi"/></bibl>
-        </listBibl>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Ezra2005Hawi"/>
+               </bibl>
+            </listBibl>
          
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1933Mashaf#t1" passive="LIT1933Mashaf#t2arabic"/>
-            <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1933Mashaf#t2arabic" passive="LIT1933Mashaf#t3greek"/>
-            <relation name="saws:isAttributedToAuthor" active="LIT1933Mashaf#t1" passive="PRS8410Salikof"/>
-         </listBibl>
-       </div>
+            <listRelation>
+               <relation name="saws:isVersionInAnotherLanguageOf"
+                         active="LIT1933Mashaf#t1"
+                         passive="LIT1933Mashaf#t2arabic"/>
+               <relation name="saws:isVersionInAnotherLanguageOf"
+                         active="LIT1933Mashaf#t2arabic"
+                         passive="LIT1933Mashaf#t3greek"/>
+               <relation name="dcterms:creator"
+                         active="LIT1933Mashaf#t1"
+                         passive="PRS8410Salikof"/>
+            </listRelation>
+         </div>
          
         <div type="edition">
+           <note>The following division into textparts follows <ref type="mss" corresp="BNFet110"/> and <ref type="mss" corresp="FSUor13"/>.</note>
+           
            <div type="textpart" subtype="chapter" n="0" xml:id="Introduction">
-            <label>Introduction followed by the table of the 63 rubrics and a short explanation by the translator on his methods.</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="1" xml:id="Chapter1">
-            <label>On the work's subject</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="2" xml:id="Chapter2">
-            <label>Introduction, on the necessity of knowing scripture</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="3" xml:id="Chapter3">
-            <label>Summary of God's commandments, on suffering for the sake of
+               <label>Introduction followed by the table of the 63 rubrics and a short explanation by the translator on his methods.</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="1" xml:id="Chapter1">
+               <label>On the work's subject</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="2" xml:id="Chapter2">
+               <label>Introduction, on the necessity of knowing scripture</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="3" xml:id="Chapter3">
+               <label>Summary of God's commandments, on suffering for the sake of
             virtue, on the unhappiness resulting from sinning, on good reputation, 
             on false prophets and doctors</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="4" xml:id="Chapter4">
-            <label>On the monastic life</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="5" xml:id="Chapter5">
-            <label>On slaves</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="6" xml:id="Chapter6">
-            <label>On the abandoning of the monastic life</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="7" xml:id="Chapter7">
-            <label>On the necessity of keeping God's commandments without fear 
+            </div>
+            <div type="textpart" subtype="chapter" n="4" xml:id="Chapter4">
+               <label>On the monastic life</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="5" xml:id="Chapter5">
+               <label>On slaves</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="6" xml:id="Chapter6">
+               <label>On the abandoning of the monastic life</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="7" xml:id="Chapter7">
+               <label>On the necessity of keeping God's commandments without fear 
             of others</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="8" xml:id="Chapter8">
-            <label>On wrong and false doctors</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="9" xml:id="Chapter9">
-            <label>On anger which can be righteous</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="10" xml:id="Chapter10">
-            <label>On verbal injuries</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="11" xml:id="Chapter11">
-            <label>On reconciliations</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="12" xml:id="Chapter12">
-            <label>On fornication</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="13" xml:id="Chapter13">
-            <label>On fornication, adultery, abduction of women etc.</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="14" xml:id="Chapter14">
-            <label>On vows, lying and perjury</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="15" xml:id="Chapter15">
-            <label>On retaliation, pardon, homicide</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="16" xml:id="Chapter16">
-            <label>On simplicity, prudence and hability</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="17" xml:id="Chapter17">
-            <label>On obedience</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="18" xml:id="Chapter18">
-            <label>On the will</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="19" xml:id="Chapter19">
-            <label>On carrying out good intentions</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="20" xml:id="Chapter20">
-            <label>On alms</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="21" xml:id="Chapter21">
-            <label>On the preference of giving to the poor than to the Church</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="22" xml:id="Chapter22">
-            <label>On the use of wrongly earned money</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="23" xml:id="Chapter23">
-            <label>On alms</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="24" xml:id="Chapter24">
-            <label>On love and charity</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="25" xml:id="Chapter25">
-            <label>That one should offend or hate noone.</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="26" xml:id="Chapter26">
-            <label>That one should pray for everyone, and for apostates and heretics only
+            </div>
+            <div type="textpart" subtype="chapter" n="8" xml:id="Chapter8">
+               <label>On wrong and false doctors</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="9" xml:id="Chapter9">
+               <label>On anger which can be righteous</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="10" xml:id="Chapter10">
+               <label>On verbal injuries</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="11" xml:id="Chapter11">
+               <label>On reconciliations</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="12" xml:id="Chapter12">
+               <label>On fornication</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="13" xml:id="Chapter13">
+               <label>On fornication, adultery, abduction of women etc.</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="14" xml:id="Chapter14">
+               <label>On vows, lying and perjury</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="15" xml:id="Chapter15">
+               <label>On retaliation, pardon, homicide</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="16" xml:id="Chapter16">
+               <label>On simplicity, prudence and hability</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="17" xml:id="Chapter17">
+               <label>On obedience</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="18" xml:id="Chapter18">
+               <label>On the will</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="19" xml:id="Chapter19">
+               <label>On carrying out good intentions</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="20" xml:id="Chapter20">
+               <label>On alms</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="21" xml:id="Chapter21">
+               <label>On the preference of giving to the poor than to the Church</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="22" xml:id="Chapter22">
+               <label>On the use of wrongly earned money</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="23" xml:id="Chapter23">
+               <label>On alms</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="24" xml:id="Chapter24">
+               <label>On love and charity</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="25" xml:id="Chapter25">
+               <label>That one should offend or hate noone.</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="26" xml:id="Chapter26">
+               <label>That one should pray for everyone, and for apostates and heretics only
             during their lifetime and on the importance of charity towards everyone</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="27" xml:id="Chapter27">
-            <label>On almsgiving in secret</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="28" xml:id="Chapter28">
-            <label>On prayer</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="29" xml:id="Chapter29">
-            <label>On the different kinds of prayers and offices of anachoretes </label>
-         </div>
-         <div type="textpart" subtype="chapter" n="30" xml:id="Chapter30">
-            <label>On the different ways of prayer</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="31" xml:id="Chapter31">
-            <label>On the conditions of effective prayer, the necessity of fleeing temptation,
+            </div>
+            <div type="textpart" subtype="chapter" n="27" xml:id="Chapter27">
+               <label>On almsgiving in secret</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="28" xml:id="Chapter28">
+               <label>On prayer</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="29" xml:id="Chapter29">
+               <label>On the different kinds of prayers and offices of anachoretes </label>
+            </div>
+            <div type="textpart" subtype="chapter" n="30" xml:id="Chapter30">
+               <label>On the different ways of prayer</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="31" xml:id="Chapter31">
+               <label>On the conditions of effective prayer, the necessity of fleeing temptation,
             on hope, on the confessors and martyrs</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="32" xml:id="Chapter32">
-            <label>One the uselessness of making others pray for oneself
+            </div>
+            <div type="textpart" subtype="chapter" n="32" xml:id="Chapter32">
+               <label>One the uselessness of making others pray for oneself
             without working for one's own salvation, on the inefectiveness of baptism or the monastic
             life without personal sanctification, on the small number of the elected, on the mistake
             of those who pretend that God doesn't punish
          </label>
-         </div>
-         <div type="textpart" subtype="chapter" n="33" xml:id="Chapter33">
-            <label>On the importance of pleasing God, not men and on God's
+            </div>
+            <div type="textpart" subtype="chapter" n="33" xml:id="Chapter33">
+               <label>On the importance of pleasing God, not men and on God's
             judgement of intentions</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="34" xml:id="Chapter34">
-            <label>On abandoning wordly goods and on monastic poverty</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="35" xml:id="Chapter35">
-            <label>On poverty, remuneration of doctors and simony</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="36" xml:id="Chapter36">
-            <label>On the relations between monks and the world</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="37" xml:id="Chapter37">
-            <label>On the clothes and food which are suitable for monks, priests and laymen</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="38" xml:id="Chapter38">
-            <label>On richness and poverty</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="39" xml:id="Chapter39">
-            <label>That one should not judge others foolishly, that the one without sins should
+            </div>
+            <div type="textpart" subtype="chapter" n="34" xml:id="Chapter34">
+               <label>On abandoning wordly goods and on monastic poverty</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="35" xml:id="Chapter35">
+               <label>On poverty, remuneration of doctors and simony</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="36" xml:id="Chapter36">
+               <label>On the relations between monks and the world</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="37" xml:id="Chapter37">
+               <label>On the clothes and food which are suitable for monks, priests and laymen</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="38" xml:id="Chapter38">
+               <label>On richness and poverty</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="39" xml:id="Chapter39">
+               <label>That one should not judge others foolishly, that the one without sins should
             judge his subordinates, on the error of thinking that one should judge nobody</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="40" xml:id="Chapter40">
-            <label>That one should not judge priests</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="41" xml:id="Chapter41">
-            <label>On kingdom, tyranny and foreign domination</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="42" xml:id="Chapter42">
-            <label>On God's judgement</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="43" xml:id="Chapter43">
-            <label>On seers and visionaries</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="44" xml:id="Chapter44">
-            <label>On the works</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="45" xml:id="Chapter45">
-            <label>On the occuptaion of monks</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="46" xml:id="Chapter46">
-            <label>On trading and the prohibition of trading inside Churches </label>
-         </div>
-         <div type="textpart" subtype="chapter" n="47" xml:id="Chapter47">
-            <label>On the professions possible for laymen, on medicine and quacksalvers</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="48" xml:id="Chapter48">
-            <label>On eunuchs</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="49" xml:id="Chapter49">
-            <label>On humility and perfection</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="50" xml:id="Chapter50">
-            <label>On God's commandments and the prescriptions of the fathers, on the
+            </div>
+            <div type="textpart" subtype="chapter" n="40" xml:id="Chapter40">
+               <label>That one should not judge priests</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="41" xml:id="Chapter41">
+               <label>On kingdom, tyranny and foreign domination</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="42" xml:id="Chapter42">
+               <label>On God's judgement</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="43" xml:id="Chapter43">
+               <label>On seers and visionaries</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="44" xml:id="Chapter44">
+               <label>On the works</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="45" xml:id="Chapter45">
+               <label>On the occuptaion of monks</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="46" xml:id="Chapter46">
+               <label>On trading and the prohibition of trading inside Churches </label>
+            </div>
+            <div type="textpart" subtype="chapter" n="47" xml:id="Chapter47">
+               <label>On the professions possible for laymen, on medicine and quacksalvers</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="48" xml:id="Chapter48">
+               <label>On eunuchs</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="49" xml:id="Chapter49">
+               <label>On humility and perfection</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="50" xml:id="Chapter50">
+               <label>On God's commandments and the prescriptions of the fathers, on the
             different meanings of Scripture, on justice and sainthood</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="51" xml:id="Chapter51">
-            <label>On penitence and the confession of sins</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="52" xml:id="Chapter52">
-            <label>On confession, penitence and absolution of sins</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="53" xml:id="Chapter53">
-            <label>On the explanation of the divine mysteries</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="54" xml:id="Chapter54">
-            <label>On the danger of receiving confessions for those who have a weak spirit</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="55" xml:id="Chapter55">
-            <label>On confession and absolution</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="56" xml:id="Chapter56">
-            <label>On the penances imposed by priests</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="57" xml:id="Chapter57">
-            <label>On holidays, fasts and adorations. Why prayer is done facing eastwards</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="58" xml:id="Chapter58">
-            <label>On the insitution and goal of Christian holidays; on defilement
+            </div>
+            <div type="textpart" subtype="chapter" n="51" xml:id="Chapter51">
+               <label>On penitence and the confession of sins</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="52" xml:id="Chapter52">
+               <label>On confession, penitence and absolution of sins</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="53" xml:id="Chapter53">
+               <label>On the explanation of the divine mysteries</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="54" xml:id="Chapter54">
+               <label>On the danger of receiving confessions for those who have a weak spirit</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="55" xml:id="Chapter55">
+               <label>On confession and absolution</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="56" xml:id="Chapter56">
+               <label>On the penances imposed by priests</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="57" xml:id="Chapter57">
+               <label>On holidays, fasts and adorations. Why prayer is done facing eastwards</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="58" xml:id="Chapter58">
+               <label>On the institution and goal of Christian holidays; on defilement
                of the body</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="59" xml:id="Chapter59">
-            <label>On the obligation of fasting</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="60" xml:id="Chapter60">
-            <label>On the monks' food</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="61" xml:id="Chapter61">
-            <label>On the food of coenobites and anachoretes</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="62" xml:id="Chapter62">
-            <label>On the food of laymen</label>
-         </div>
-         <div type="textpart" subtype="chapter" n="63" xml:id="Chapter63">
-            <label>On the ordination and deposition of priests</label>
-         </div></div>
+            </div>
+            <div type="textpart" subtype="chapter" n="59" xml:id="Chapter59">
+               <label>On the obligation of fasting</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="60" xml:id="Chapter60">
+               <label>On the monks' food</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="61" xml:id="Chapter61">
+               <label>On the food of coenobites and anachoretes</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="62" xml:id="Chapter62">
+               <label>On the food of laymen</label>
+            </div>
+            <div type="textpart" subtype="chapter" n="63" xml:id="Chapter63">
+               <label>On the ordination and deposition of priests</label>
+            </div>
+           <div type="textpart" subtype="chapter" n="64" xml:id="ColophonTranslation">
+              <label>On the time of this work's composition</label>
+           </div>
+        </div>
       </body>
    </text>
 </TEI>

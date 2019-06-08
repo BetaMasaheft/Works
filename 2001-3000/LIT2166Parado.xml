@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,15 +10,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1" xml:lang="lat">Paradosis Pilati</title>
-            <title corresp="#t1">Handing over of Pilate</title>
+            <title xml:id="t1" xml:lang="la">Paradosis Pilati</title>
+            <title xml:lang="en" corresp="#t1">Handing over of Pilate</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -39,11 +38,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="la">Latin</language>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Apocrypha"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Apocrypha"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -52,14 +52,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-16" who="ES">title keywords relation</change>
+         <change when="2017-09-05" who="DR">Corrected title</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations"><bibl></bibl>
-            
-            <relation name="ecrm:P129_is_about" active="LIT2166Parado" passive="PRS7928Pontius"></relation>
-         </listBibl>
+         <listRelation>
+            <relation name="ecrm:P129_is_about"
+                      active="LIT2166Parado"
+                      passive="PRS7928Pontius"/>
+         </listRelation>
          <ab/>
       </body>
    </text>

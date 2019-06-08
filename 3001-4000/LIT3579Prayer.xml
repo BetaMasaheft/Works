@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,16 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1"> ጸሎት፡ ዘቆጵርያኖስ፡ በዘይሥዕር፡ መናፍስተ፡ ርኩሳን፡ ወበዘያወግዝ፡ ሰይጣናት፡</title>
+            <title xml:lang="gez" xml:id="t1">ጸሎት፡ ዘቆጵርያኖስ፡ በዘይሥዕር፡ መናፍስተ፡ ርኩሳን፡ ወበዘያወግዝ፡ ሰይጣናት፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalot za-Qoṗrǝyānos ba-za-yǝśǝʿʿǝr manāfǝst rǝkusān wa-ba-za-yāwaggǝz sayṭānāt</title>
             <title xml:lang="en" corresp="#t1">Prayer of Cyprian (short recension)</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -29,6 +28,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>      
             <listWit>
                <witness corresp="BNFet561"/>
@@ -53,7 +55,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <abstract>
             <p>
                The short recension of the <ref type="work" corresp="LIT2179Prayer">prayer of Cyprian</ref> is completely different from the 
-               <title ref="LIT3578Prayer">long recension of the Prayer of Cyprianus</title>. 
+               <ref type="work" corresp="LIT3578Prayer">long recension of the Prayer of Cyprianus</ref>. 
                It is found on the scroll <ref type="mss" corresp="BNFet561"/>
                and probably also on the scroll <!--<ref type="mss" corresp="LMaeth1373/12"/>-->. 
             </p>
@@ -78,11 +80,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <citedRange unit="page">XLIX-L</citedRange>
             </bibl>
          </listBibl>
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:isShorterVersionOf" active="LIT3579Prayer" passive="LIT2179Prayer"/>
-            
-         </listBibl>
+         <listRelation>
+            <relation name="saws:isShorterVersionOf"
+                      active="LIT3579Prayer"
+                      passive="LIT2179Prayer"/>
+         </listRelation>
       </body>
    </text>
 </TEI>

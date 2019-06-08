@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Apparition of Mary and St. Michael to the patriarch Timotewos at the Convent of Abbā Pachomius</title>
+            <title xml:id="t1">Miracle of Mary: Apparition of Mary and St Michael to the patriarch Timotewos at the Convent of ʾAbbā Pachomius</title>
+            <title xml:id="t2" xml:lang="en">St Mary appears to Timothy, Patriarch of Alexandria, in the church of St Pachomius in Alexandria</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -44,24 +42,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
+               <term key="Miracle"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-03">Added keywords</change>
+         <change who="DR" when="2018-11-26">Added keyword, title and Macomber reference</change>
+         <change who="AM" when="2019-05-14">added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">223</citedRange></bibl>
+            </listBibl>
+            <listRelation>
                <relation name="saws:formsPartOf"
                          active="LIT3701Miracle"
-                         passive="LIT2384Taamme"></relation>
-            </listBibl>
+                         passive="LIT2384Taamme"/>
+               <relation name="ecrm:P129_is_about" active="LIT3701Miracle" passive="PRS7049Michael"/>
+               <relation name="ecrm:P129_is_about" active="LIT3701Miracle" passive="PRS9523Timothy"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                 <ab>
+                   ዘከመ፡ አስተርአየቶ፡ ለጢሞቴዎስ፣ ሊቀ፡ ጳጳሳት፡ ዘእለስክንድርያ፣ በውስተ፡ ቤተ፡ ክርስቲያኑ፡ ለአባ፡ ጳኵሚስ።
+                   ጸሎታ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> ወሀለዉ፡ ብዙሃን፡ መነኮሳት፡ እምነ፡ ደቂቁ፡ ለአባ፡ ጳኵሚስ፣
+                   ወእሙንቱ፡ በአምሳለ፡ መላእክት።
+                 </ab>
+             </div>
          </div>
       </body>
    </text>

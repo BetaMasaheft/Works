@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,25 +10,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Martyrdom of Simon Judas</title>
+            <title xml:lang="gez" xml:id="t1">ስምዑ፡ ለቅዱስ፡ ስምዖን፡ ወልደ፡ ቀለዮጳ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Sǝmʿu la-qǝddus Sǝmʿon walda Qalayoṗā</title>
+            <title xml:lang="en" corresp="#t1" type="main">The Martyrdom of St Simon the son of Cleopas (surnamed Judas or Nathaniel)</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
                   <p>
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                     This file is licensed under the Creative Commons
+                     Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">1115</citedRange>
+               </bibl>
+               
+               <bibl type="CC">
+                  <ptr target="bm:CC"/>
+                  <citedRange unit="item">0570</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -44,25 +56,57 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
                <term key="Hagiography"/>
+               <term key="Translation"/>
+               <term key="Paks1"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-24">Added keywords</change>
+         <change who="MV" when="2017-12-01">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Budge1899ContendingsText"/>
+                  <citedRange>70-72</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Budge1901ContendingsTransl"/>
+                  <citedRange>62–64</citedRange>
+               </bibl>
+               <listBibl type="secondary">
+                  <bibl>
+                     <ptr target="bm:Bausi2000Osservazioni"/>
+                     <citedRange>Si2</citedRange>
+                  </bibl>
+               </listBibl>
+            </listBibl>
+            <listRelation>
                <relation name="saws:formsPartOf"
                          active="LIT3533Martyr"
-                         passive="LIT1461Gadlah"></relation>
-            </listBibl>
+                         passive="LIT1461Gadlah"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                 ወኮነ፡ እምድኅረ፡ ዕረፍቱ፡ ለቅዱስ፡ ያዕቆብ፡ ጻድቅ፡ ሤም፡ ለስምዖን፡ <gap reason="omitted"/> ወስሙ፡ ይሁዳ፡
+               </ab>
+            </div>
+            <div type="textpart" subtype="explicit" xml:lang="gez">
+               <ab>
+                  ወፈጸመ፡ ስምዑ፡ አመ፡ <gap reason="omitted"/> ለወርኀ፡ ሐምሌ፡ በሥምረቱ፡ ለእግዚአብሔር፡ አኃዜ፡ ኵሉ፡ ዘሎቱ፡ <gap reason="omitted"/> ወአሜን።
+               </ab>
+            </div>
          </div>
       </body>
    </text>

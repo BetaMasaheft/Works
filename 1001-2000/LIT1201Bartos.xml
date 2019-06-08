@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -13,22 +13,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">ባርቶስ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Bārtos</title>
             <title xml:lang="en" corresp="#t1">Prayer of Mary on Bārtos</title>
-            <title xml:lang="gez" xml:id="t2">ጸሎት፡ ዘእግዝእትነ፡ ማርያም፡ ዘጸለየት፡ ባቲ፡ በውስተ፡ ሀገረ፡ በርቶስ፡</title>
-            <title xml:lang="gez" corresp="#t2" type="normalized">Ṣalot za-ʾǝgzǝʾǝtna Māryam za-ṣallayat bātti ba-wǝsta hagara Bartos</title>
-            <title xml:lang="en" corresp="#t2">Prayer of Our Lady Mary which she prayed in the country of Bartos </title>
-            <title xml:lang="gez" xml:id="t3">ጸሎት፡ ዘእግዝእትነ፡ ማርያም፡ ዘጸለየት፡ ባቲ፡ በውስተ፡ ሀገረ፡ ባርቶስ፡</title>
-            <title xml:lang="gez" corresp="#t3" type="normalized">Ṣalot za-ʾǝgzǝʾǝtna Māryam za-ṣallayat bātti ba-wǝsta hagara Bārtos</title>
-            <title xml:lang="en" corresp="#t3">Prayer of Our Lady Mary which she prayed in the country of Bārtos </title>
-            <!--Could t2 and t3 be shown as variants, not different titles?-->
-            <title xml:lang="ar" xml:id="t4Arabic">Arabic Prayer of Mary at Bartos</title>
+            
+            <title xml:lang="gez" xml:id="t2">ጸሎት፡ ዘእግዝእትነ፡ ማርያም፡ ዘጸለየት፡ ባቲ፡ በውስተ፡ ሀገረ፡ ባርቶስ፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Ṣalot za-ʾǝgzǝʾǝtǝna Māryam za-ṣallayat bātti ba-wǝsta hagara Bārtos</title>
+            <title xml:lang="en" corresp="#t2">Prayer of Our Lady Mary which she prayed in the country of Bārtos</title>
+            <title xml:lang="ar" xml:id="t3Arabic">Arabic Prayer of Mary at Bartos</title>
             <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -39,8 +35,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">654</citedRange>
+               </bibl>
+            </listBibl>
            <listWit>
-              <witness type="external" corresp="BnF Arabe 155" facs="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89429g"/>
+              <witness corresp="BAVet42"/>
+              <witness corresp="BAVet50"/>
+              <witness corresp="BAVet60"/>
+              <witness corresp="BNFet56"/>
+              <witness corresp="BNFet57"/>
+              <witness type="external"
+                        corresp="BnF Arabe 155"
+                        facs="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89429g"/>
            </listWit>
          </sourceDesc>
       </fileDesc>
@@ -54,7 +66,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="ChristianLiterature"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
                <term key="Hagiography"/>
                <term key="Translation"/>
             </keywords>
@@ -76,10 +88,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-08-04">Added information</change>
          <change who="DR" when="2017-03-30">Added keywords</change>
+         <change who="MV" when="2017-11-20">Updated</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listRelation>
+            <relation name="saws:formsPartOf"
+               active="LIT1201Bartos"
+               passive="LIT1959Mashaf">
+               <desc>According to <bibl>
+                  <ptr target="bm:Basset1895Prieres"/>
+                  <citedRange unit="page">7-8</citedRange>
+               </bibl>,
+                  the Prayer of Mary on Bartos is contained in the <ref type="work" corresp="LIT1959Mashaf">Maṣḥafa qedar</ref>.</desc>
+            </relation>
+            <relation name="saws:formsPartOf"
+               active="LIT1201Bartos"
+               passive="LIT3557Salota">
+               <desc>According to <bibl>
+                  <ptr target="bm:Basset1895Prieres"/>
+                  <citedRange unit="page">7</citedRange>
+               </bibl>,
+                  the Prayer of Mary on Bartos is contained in the <ref type="work" corresp="LIT3557Salota">Ṣalota rǝqet</ref>.</desc>
+            </relation>
+            <relation name="saws:isVersionInAnotherLanguageOf"
+               active="LIT1201Bartos"
+               passive="t4Arabic">
+               <desc>The Arabic version is very different from the Ethiopic, it has more details in the principal narration but lacks the list of angels.</desc>
+            </relation>
+         </listRelation>
          <div type="bibliography">
             
             <listBibl type="editions">
@@ -130,33 +168,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:formsPartOf"
-                         active="LIT1201Bartos"
-                         passive="LIT1959Mashaf">
-                  <desc>According to <bibl>
-                        <ptr target="bm:Basset1895Prieres"/>
-                        <citedRange unit="page">7-8</citedRange>
-                     </bibl>,
-                     the Prayer of Mary on Bartos is contained in the <title ref="LIT1959Mashaf">Maṣḥafa qedar</title>.</desc>
-               </relation>
-               <relation name="saws:formsPartOf"
-                         active="LIT1201Bartos"
-                         passive="LIT3557Salota">
-                  <desc>According to <bibl>
-                        <ptr target="bm:Basset1895Prieres"/>
-                        <citedRange unit="page">7</citedRange>
-                     </bibl>,
-                     the Prayer of Mary on Bartos is contained in the <title ref="LIT3557Salota">Ṣalota rǝqet</title>.</desc>
-               </relation>
-               <relation name="saws:isVersionInAnotherLanguageOf"
-                         active="LIT1201Bartos"
-                         passive="t4Arabic">
-                  <desc>The Arabic version is very different from the Ethiopic, it has more details in the principal narration but lacks the list of angels.</desc>
-               </relation>
-            </listBibl>
-            
+         
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  ይቤ፡ እግዚእነ፡ ወአምላክነ፡ ወመድኀኒነ፡ <gap reason="omitted"/> ሰላእካኒሁ፡ ንጹሓን፡ ለአርዳኢሁ፡ <gap reason="omitted"/> 
+                  በእንተ፡ ዛቲ፡ ጸሎት።
+               </ab>
+            </div>
+            <div type="textpart" subtype="explicit" xml:lang="gez">
+               <ab>
+                  ወወሀባ፡ ሰላመ፡ ወዐርገ፡ ውስተ፡ ሰማያት፡ በዐቢይ፡ ስብሐት። ሎቱ፡ <gap reason="omitted"/> ወአሜን።
+               </ab>
+            </div>
          </div>
       </body>
    </text>

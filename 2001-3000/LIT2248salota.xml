@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,18 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1" xml:lang="gez">ጸሎተ፡ አኰቴት፡</title>
-            <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalota akkwatet</title>
-            <title corresp="#t1">Prayer of Thanksgiving</title>
-            
-            
+            <title xml:lang="gez" xml:id="t1">ጸሎተ፡ አኰቴት፡ ዘባስልዮስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalota ʾakkʷatet za-Bāsǝlyos</title>
+            <title xml:lang="en" corresp="#t1">Prayer of Thanksgiving by St Basil</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -32,10 +29,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
             <listWit>
-               <witness corresp="EMML74" type="external"></witness>
-               <witness corresp="EMML321" type="external"></witness>
-               <witness corresp="EMML4777" type="external"></witness>
+               <witness corresp="EMML74" type="external"/>
+               <witness corresp="EMML321" type="external"/>
+               <witness corresp="EMML4777" type="external"/>
+               <witness corresp="BAVet97"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -48,9 +49,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Prayers"></term>
-               <term key="Liturgy"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Prayers"/>
+               <term key="Liturgy"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -59,16 +60,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-27" who="ES">updated title keywords relation</change>
+         <change when="2017-08-04" who="MV">Updates</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl></bibl>
-            <relation name="saws:isAttributedToAuthor" active="IT2248salota" passive="PRS2546Basilth"></relation>
-            
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor"
+                      active="LIT2248salota"
+                      passive="PRS2546Basilth"/>
+         </listRelation>
+         <listBibl type="secondary">
+            <bibl>
+               <ptr target="bm:Witakowski2003Basil"/>
+               <citedRange>497b</citedRange>
+            </bibl>
          </listBibl>
-         <ab/>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  ናአኵቶ፡ ለገባሬ፡ ሠናያት፡ ላዕሌነ፡ እግዚአብሔር፡ መሓሪ፡ አቡሁ፡ ለእግዚእነ፡ <gap reason="omitted" extent="unknown"/> እስመ፡ ሠወረነ፡ ወረድአነ፡ ዓቀበነ፡ ወአቅረበነ፡ ወተወክፈነ፡ ኀቤሁ፡ 
+                  ወተማኅፀነነ፡ ወአጽንዓነ፡ ወአብጽሐነ፡ እስከ፡ ዛቲ፡ ሰዓት፨
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

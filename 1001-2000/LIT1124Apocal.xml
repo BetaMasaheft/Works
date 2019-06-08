@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,23 +11,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ራእየ፡ [እግዝእትነ፡] ማርያም፡</title>
-            <title xml:lang="gez" type="normalized" corresp="#t1">Rāʿǝya [ʾǝgzǝʾǝtǝna] Māryām</title>
-            <title xml:lang="en" corresp="#t1">The Vision of [our Lady] Mary</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Rāʾǝya [ʾǝgzǝʾǝtǝna] Māryām</title>
+            <title xml:lang="en" corresp="#t1">The Vision of [Our Lady] Mary</title>
+            
             <title xml:lang="en" xml:id="t2">Apocalypse of Mary</title>
-            <title xml:lang="grc" xml:id="t3greek">CANT 325</title> <!--add bibliography-->
+            <title xml:lang="grc" xml:id="t3greek">CANT 325</title> 
+            <!--add bibliography-->
             <title xml:lang="ar" xml:id="t4arabic">Arabic Vision of Paul</title>
             <title xml:lang="am" xml:id="t5amharic">Amharic Vision of Mary</title>
             <title xml:lang="syr" xml:id="t6syriac">Syriac Vision of Mary</title>
             <title xml:lang="gez" xml:id="t7">ድርሳን፡  በእንተ፡ ዕበየ፡ ክብራ፡ ለእግዝእትነ፡ ማርያም፡</title>
-            <title xml:lang="gez" type="normalized" corresp="#t7">Dǝrsān ba-ʾǝnta ʿǝbaya kǝbrā la-ʾǝgzǝʾǝtǝna Māryām</title>
-            <title xml:lang="en" corresp="#t7">Homily on the magnificence of the honour of our Lady Mary</title>
+            <title xml:lang="gez" type="normalized" corresp="#t7">Dǝrsān baʾǝnta ʿǝbaya kǝbrā la-ʾǝgzǝʾǝtǝna Māryām</title>
+            <title xml:lang="en" corresp="#t7">Homily on the magnificence of the honour of Our Lady Mary</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -38,10 +39,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-        <listWit>
-           <witness corresp="UTBaeth3"/>
-           <witness corresp="BLadd16222"/>
-        </listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">653</citedRange>
+               </bibl>
+               <bibl type="CANT">
+                  <ptr target="bm:CANT"/>
+                  <citedRange unit="item">325</citedRange>
+               </bibl>
+            </listBibl>
+            <listWit>
+               <witness corresp="UTBaeth3"/>
+               <witness corresp="BLadd16222"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -57,7 +71,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="ChristianLiterature"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
                <term key="Homily"/>
                <term key="Translation"/>
             </keywords>
@@ -69,37 +83,71 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-11-09">Bibliography added</change>
          <change who="DR" when="2017-02-10">Added keywords</change>
+         <change who="MV" when="2017-11-27">Updated</change>
+         <change who="MV" when="2017-12-15">Added CANT id</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listRelation>
+            <relation name="saws:isVersionInAnotherLanguageOf"
+               active="LIT1124Apocal#t4arabic"
+               passive="LIT1124Apocal#t3greek"/>
+            <relation name="saws:isVersionInAnotherLanguageOf"
+               active="LIT1124Apocal#t1"
+               passive="LIT1124Apocal#t4arabic">
+               <desc>The Arabic Apocalypse of Paul was translated into Gǝʿǝz, renamed, edited and developed. New visions were added. 
+                  <bibl>
+                     <ptr target="bm:Sokolinskaia2007EAEMary"/>
+                  </bibl>
+               </desc> 
+            </relation>
+            <relation name="saws:isVersionInAnotherLanguageOf"
+               active="LIT1124Apocal#t5amharic"
+               passive="LIT1124Apocal#t1"/>
+            <relation name="saws:isAttributedToAuthor"
+               active="LIT1124Apocal"
+               passive="PRS5695John"/>
+         </listRelation>
          <div type="bibliography">
             
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Sokolinskaia2007EAEMary"/></bibl>
-               <bibl corresp="#t3greek"><ptr target="bm:Tischendorf1866Apocalypses"/><citedRange unit="chapter">Prolegomena</citedRange>
-                  <citedRange unit="page">27</citedRange></bibl>
-               <bibl corresp="#t3greek"><ptr target="bm:Fabricius1795Bibliotheca"/> <citedRange unit="page">826</citedRange></bibl>
-               <bibl corresp="#t6syriac"> <ptr target="bm:Wright1865Departure"/> <citedRange unit="page">418</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Sokolinskaia2007EAEMary"/>
+               </bibl>
+               <bibl corresp="#t3greek">
+                  <ptr target="bm:Tischendorf1866Apocalypses"/>
+                  <citedRange unit="chapter">Prolegomena</citedRange>
+                  <citedRange unit="page">27</citedRange>
+               </bibl>
+               <bibl corresp="#t3greek">
+                  <ptr target="bm:Fabricius1795Bibliotheca"/> 
+                  <citedRange unit="page">826</citedRange>
+               </bibl>
+               <bibl corresp="#t6syriac"> 
+                  <ptr target="bm:Wright1865Departure"/> 
+                  <citedRange unit="page">418</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Ewald1844Tuebingen"/>
+                  <citedRange unit="page">193</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Dillmann1847BM"/>
+                  <citedRange unit="page">21-22</citedRange>
+               </bibl>
             </listBibl>
             
-            <listBibl type="catalogue">
-               <bibl><ptr target="bm:Ewald1844Tuebingen"/><citedRange unit="page">193</citedRange></bibl>
-               <bibl><ptr target="bm:Dillmann1847BM"/><citedRange unit="page">21-22</citedRange></bibl>
-            </listBibl>
-            
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1124Apocal#t4arabic" passive="LIT1124Apocal#t3greek"></relation>
-               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1124Apocal#t1" passive="LIT1124Apocal#t4arabic">
-                  <desc>The Arabic Apocalypse of Paul was translated into Gǝʿǝz, renamed, edited and developed. New visions were added. 
-                     <bibl><ptr target="bm:Sokolinskaia2007EAEMary"/></bibl>
-                  </desc> 
-               </relation>
-                  <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1124Apocal#t5amharic" passive="LIT1124Apocal#t1"/>
-               <relation name="saws:isAttributedToAuthor" active="LIT1124Apocal" passive="PRS5695John"/>
-            </listBibl>
-            
+           
+         </div>
+         
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  ይቤ፡ ዮሐንስ፡ ወልደ፡ ዘብዴዎስ፡ ዘያፈቅሮ፡ እግዚእነ፡ <gap reason="omitted"/> ወእግዝእትነ፡ ማርያም፡ <gap reason="omitted"/> 
+                  ወአውሥአቶ፡ ወትቤሎ፡ ስማዕ፡ ኦዮሐንስ፡
+               </ab>
+            </div>
          </div>
       </body>
    </text>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,16 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">አኰቴተ፡ ቍርባን፡ ዘሐዋርያት፡</title><!--to be completed-->
-            <title xml:lang="gez" type="normalized" corresp="#t1">ʾAkkʷateta qʷǝrbān za-ḥawāryāt</title><!--to be completed-->
+            <title xml:lang="gez" xml:id="t1">አኰቴተ፡ ቍርባን፡ ዘሐዋርያት፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">ʾAkkʷateta qʷǝrbān za-ḥawāryāt</title>
             <title xml:lang="en" corresp="#t1">Anaphora of the Apostles</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -31,7 +30,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="H">
+                  <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+                  <citedRange unit="item">1</citedRange>
+               </bibl>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -53,34 +59,53 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-02-09">Added keywords, title, incipit, bibliography</change>
+         <change who="MV" when="2017-12-18">Added clavis id</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-      <div type="bibliography">
-         <listBibl type="editions">
-            <bibl><ptr target="bm:Petrus1548Test"/><citedRange unit="page">164-</citedRange></bibl>
-         </listBibl>
-         <listBibl type="secondary">
-            <bibl><ptr target="bm:Habtemichael2003EAEAnaphoras"/></bibl>
-         </listBibl>
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:isAttributedToAuthor" active="LIT1104Anapho" passive="PRS11430Apostles"/> 
-               <relation name="saws:formsPartOf" active="LIT1104Anapho" passive="LIT3189Anapho"/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Petrus1548Test"/>
+                  <citedRange unit="page">164-</citedRange>
+               </bibl>
             </listBibl>
-      </div>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Habtemichael2003EAEAnaphoras"/>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor"
+                         active="LIT1104Anapho"
+                         passive="PRS11430Apostles"/>
+               <relation name="saws:formsPartOf"
+                         active="LIT1104Anapho"
+                         passive="LIT3189Anapho"/>
+               <relation name="saws:formsPartOf"
+                         active="LIT1104Anapho"
+                         passive="LIT1960Mashaf"/>
+            </listRelation>
+         </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit">
+            <div type="textpart"
+                 subtype="incipit"
+                 xml:lang="gez"
+                 xml:id="Incipit">
                <ab>
                   ነአኵተከ፡ እግዚኦ፡ [በፍቁር፡ ወልድከ፡ እግዚእነ፡ ኢየሱስ፡] ዘበደኃሪ፡ መዋዕል፡ 
                </ab>
             </div>
-            <div type="textpart" subtype="incipit" xml:lang="gez" corresp="#Incipit">
+            <div type="textpart"
+                 subtype="incipit"
+                 xml:lang="gez"
+                 corresp="#Incipit">
                <ab>
                   Naʾakkʷǝtaka ʾǝgziʾo [ba-fǝqur waldǝka ʾǝgziʾǝna ʾIyasus] za-ba-daḫāri mawāʿǝl
                </ab>
             </div>
+            <div type="textpart" subtype="chapter" xml:id="Bread"><ab>ጸሎተ፡ ፈትቶ፡ ፡ ዘቅዳሴ፡ ሐዋርያት፡</ab></div>
          </div>
       </body>
    </text>

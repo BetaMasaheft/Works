@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -13,14 +13,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ አርድእት፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa ʾardǝʾǝt</title>
             <title xml:lang="en" corresp="#t1">Book of the Disciples</title>
+            
             <editor role="generalEditor" key="AB"/>
             <editor key="MV"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -31,11 +31,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">86</citedRange>
+               </bibl>
+            </listBibl>
             <listWit>
-               <listWit>
                   <witness corresp="ESmy007"/>
                   <witness corresp="ESum019#a4"/>
-               </listWit>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -57,7 +64,7 @@ It is not known whether the work is a translation or an original composition.
          <textClass>
             <keywords>
                <term key="Magic"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
                <term key="ChristianLiterature"/>
                <term key="RitualsAndRites"/>
             </keywords>
@@ -76,33 +83,55 @@ It is not known whether the work is a translation or an original composition.
                   <ptr target="bm:Tasfa1988Ardeet"/>
                </bibl>
             </listBibl>
-            <listBibl type="relations">
-               <bibl/>
+            <listRelation>
                <relation name="saws:isVersionOf"
-                  active="LIT3942ArdeetCh"
-                  passive="LIT1915Mashaf"><desc>The work is the version used by Christians.</desc></relation>
-            </listBibl>
+                         active="LIT3942ArdeetCh"
+                         passive="LIT1915Mashaf">
+                  <desc>The work is the version used by Christians.</desc>
+               </relation>
+            </listRelation>
          </div>
          <div type="edition">
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Monday">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="Monday">
                <label>Prayers for Monday</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tuesday">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="Tuesday">
                <label>Prayers for Tuesday</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Wednesday">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="Wednesday">
                <label>Prayers for Wednesday</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Thursday">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="Thursday">
                <label>Prayers for Thursday</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Friday">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="Friday">
                <label>Prayers for Friday</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Saturday">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="Saturday">
                <label>Prayers for Saturday</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Sunday">
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="Sunday">
                <label>Prayers for Sunday</label>
             </div>
          </div>

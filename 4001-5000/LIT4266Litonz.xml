@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Liṭon za-nagh</title>
+            <title xml:id="t1">ጸሎተ፡ ነግህ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Ṣalota nagh</title>
+            <title corresp="#t1" xml:lang="en">Prayer for the morning</title>
+            
+            <title xml:id="t2" xml:lang="gez">ሊጦን፡ ዘነግህ፡ </title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Liṭon za-nagh</title>
+            <title corresp="#t2" xml:lang="en">Litany for the morning</title>
+            
+            
+            
+            <title xml:id="t3" xml:lang="gez">ሊጦን፡ ዘዓርብ፡ </title>
+            <title corresp="#t3" xml:lang="gez" type="normalized">Liṭon za-ʿarb</title>
+            <title corresp="#t3" xml:lang="en">Litany of Friday</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -25,6 +36,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
             <listWit>
                <witness corresp="BAVet22"/>
@@ -53,17 +67,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-12-16">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-04-03">Added keywords and adjustments</change>
+         <change when="2019-03-28" who="ES">updated title, added bibl</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
-            </listBibl>
+            <listBibl type="editions"><bibl><ptr target="bm:MashafaSalotaKidan1960"/><citedRange>12</citedRange></bibl></listBibl>
+            
          </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit" xml:id="Incipit" xml:lang="gez">
+            <div type="textpart"
+                 subtype="incipit"
+                 xml:id="Incipit"
+                 xml:lang="gez">
                <ab>ከመ፡ ታድኅነነ፡ እግዚኦ፡ እምዕለት፡ እኪት፡ ወእምሰዐታተ፡ መንሱት፡ ወእምኵሉ፡ ዘእኩያን፡ ትምይንት፡</ab>
             </div>
          </div>

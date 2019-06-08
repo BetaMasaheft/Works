@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,16 +11,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">ሰይፈ፡ ሥላሴ፡</title>
-            <title corresp="#t1" xml:lang="gez" type="normalized">Sayfa śǝllāse</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Sayfa Śǝllāse</title>
             <title corresp="#t1" xml:lang="en">Sword of the Trinity</title>
             
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -44,11 +43,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"></term>
-               <term key="Magic"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Magic"/>
             </keywords>
          </textClass>
-         <abstract><p></p></abstract>
+         <abstract>
+            <p/>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -59,16 +60,66 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body>
          <listBibl type="secondary">
-            <bibl><ptr target="bm:Lifchitz1940textes"/><citedRange unit="page">213-238</citedRange></bibl>
-            <bibl><ptr target="bm:Lusini2003EAEDersanaS"/></bibl>
+            <bibl>
+               <ptr target="bm:Lifchitz1940textes"/>
+               <citedRange unit="page">213-238</citedRange>
+            </bibl>
+            <bibl>
+               <ptr target="bm:Lusini2003EAEDersanaS"/>
+            </bibl>
          </listBibl>
-         <listBibl type="relations">
-            <bibl></bibl>
-            <relation name="saws:hasUsed" active="LIT2296Sayfas" passive="LIT1300Dersan"></relation>
-            <relation name="ecrm:P129_is_about" active="LIT1300Dersan" passive="PRS10775Trinity"></relation>
-            <relation name="syriaca:share-a-name" active="LIT2296Sayfas" passive="LIT2286ZenaSellase"></relation>
-         </listBibl>
+         <listRelation>
+            <relation name="saws:hasUsed" active="LIT2296Sayfas" passive="LIT1300Dersan"/>
+            <relation name="ecrm:P129_is_about"
+                      active="LIT1300Dersan"
+                      passive="PRS10775Trinity"/>
+            <relation name="syriaca:share-a-name"
+                      active="LIT2296Sayfas"
+                      passive="LIT2286ZenaSellase"/>
+         </listRelation>
          <ab/>
+         <div type="edition">
+            <!-- The following textparts based on weekdays are in accordance with BAVet89#ms_1 (MV - 2017-08-01) -->
+            <div type="textpart" xml:id="Monday">
+               <label>Praise for Monday</label>
+               
+               <div type="textpart" xml:id="SalamMonday"> <!--present in BLorient525 and ESktm012, probably also in other mss DR 2018-01-18-->
+                  <note>Part of the prayer for Monday, the first verse is identical in <ref type="mss" corresp="BLorient525"/>
+                     and <ref type="mss" corresp="ESktm012"/>, then possibly diverging.</note>
+                  <ab>ሰላም፡ ለአብ፡ ነቅዓ፡ ዘይት፡ ምሕርት፡ ጥሉል።</ab>
+               </div>
+               <div type="textpart" xml:id="PrayerMonday"> <!--present in BLorient525 and ESktm012, probably also in other mss DR 2018-01-18-->
+                  <note>Part of the prayer for Monday, following <ref target="#SalamMonday"/>. The beginning in <ref type="mss" corresp="BLorient525"/>
+                     and <ref type="mss" corresp="ESktm012"/> is not identical, but very similar.</note>
+                  <ab>በስመ፡ አብ፡ <gap reason="ellipsis" resp="PRS10171Wright"/>
+                     መለኮተ፡ ሥላሴ፡ ፍጽምት፡ አሐቲ፡ ስምረት፡ ወሠለስቱ፡ <del rend="erasure"/>
+                     አካል፡ በዋህድ፡ ጽምረት፡ ፩መንበር፡ በ፩ህላዌ፡</ab>
+               </div>
+              
+            </div>
+            <div type="textpart" xml:id="Tuesday">
+               <label>Praise for Tuesday</label>
+            </div>
+            <div type="textpart" xml:id="Wednesday">
+               <label>Praise for Wednesday</label>
+            </div>
+            <div type="textpart" xml:id="Thursday">
+               <label>Praise for Thursday</label>
+            </div>
+            <div type="textpart" xml:id="Friday">
+               <label>Praise for Friday</label>
+            </div>
+            <div type="textpart" xml:id="Saturday">
+               <label>Praise for Saturday</label>
+            </div>
+            <div type="textpart" xml:id="Daily">
+               <label>Praise for every day (<foreign xml:lang="gez">ዘዘወትር፡</foreign>
+               </label>
+            </div>
+            <div type="textpart" xml:id="Sunday">
+               <label>Praise for Sunday</label>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

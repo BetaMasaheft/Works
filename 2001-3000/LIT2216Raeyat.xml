@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,14 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Raʾǝyä täʾammǝr</title>
+            <title xml:id="t1" xml:lang="gez">ራእየ፡ ተአምር፡</title>
+            <title corresp="#t1" xml:lang="gez">Rāʾǝya taʾammǝr</title>
+            <title corresp="#t1" xml:lang="en">Vision of miracles</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -39,16 +40,49 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+               <term key="Paks2"/>
+               <term key="Liturgy"/>
+            </keywords>
+         </textClass>
+         <abstract><p>The <foreign xml:lang="gez">Rāʾǝya taʾammǝr</foreign> is a collection of four religious treatises, rarely copied together, designed to be read before the <ref type="work" corresp="LIT3585Taamme"/> during
+            church services. According to a warning at the end of the last part, they were composed by <persName ref="PRS10626ZaraY"/>. </p></abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2018-09-12">Updated title, added bibliography, abstract, keywords, textparts and relations</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <ab/>
+        <div type="bibliography">
+           <listBibl type="secondary">
+              <bibl><ptr target="bm:Getatchew2010EAERaya"/></bibl>
+           </listBibl>
+           <listRelation>
+              <relation name="saws:isAttributedToAuthor" active="LIT2216Raeyat" passive="PRS10626ZaraY"/>
+              <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2216Raeyat" passive="LIT2384Taamme"/>
+           </listRelation>
+        </div>
+         <div type="edition">
+            <div type="textpart" xml:id="Part1" xml:lang="gez">
+               <label><foreign xml:lang="gez">በእንተ፡ ክልኤ፡ ድንግልናሃ፡ ለማርያም፡</foreign></label>
+            </div>
+            <div type="textpart" xml:id="Part2" xml:lang="gez">
+               <label><foreign xml:lang="gez">በእንተ፡ ፹ወ፩፡ መጻሕፍት፡ ከመ፡ አሐዱ፡ ቃል፡ እማንቱ፡</foreign></label>
+            </div>
+            <div type="textpart" xml:id="Part3" xml:lang="gez">
+               <label><foreign xml:lang="gez">በእንተ፡ ምጽዋት፡</foreign></label>
+            </div>
+            <div type="textpart" xml:id="Part4" xml:lang="gez">
+               <label><foreign xml:lang="gez">በእንተ፡ ጥምቀተ፡ ክርስትና፡</foreign></label>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

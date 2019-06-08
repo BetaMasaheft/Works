@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:lang="en"
@@ -15,15 +11,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ገድል፡ ወስምዕ፡ ዘኪራኮስ፡ ጳጳስ፡ ዘኢየሩሳሌም፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Gadl wa-sǝmʿ za-Kirākos  ṗāṗās za-ʾIyarusālem</title>
-            <title xml:lang="en" corresp="#t1">Martyrdom of Cyriacus (Judas) bishop of Jerusalem</title>    
+            <title xml:lang="gez" corresp="#t1" type="normalized">Gadl wa-sǝmʿ za-Kirākos ṗāṗās za-ʾIyarusālem</title>
+            <title xml:lang="en" corresp="#t1">Martyrdom of Cyriacus (Judas) bishop of Jerusalem</title>   
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -34,9 +30,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl type="clavis">
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">235</citedRange>
+               </bibl>
+            </listBibl>
             <listWit>
-                              <witness corresp="BLorient686"/>
-               
+               <witness corresp="BLorient689"/>
+               <witness corresp="BNFabb110"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -51,11 +56,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Hagiography"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
-
          <change who="MV" when="2016-05-31">CREATED: text record</change>
          <change who="MV" when="2017-02-27">Added keywords and relation</change>
       </revisionDesc>
@@ -63,17 +68,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body>
          <div type="bibliography">
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:formsPartOf"
-                  active="LIT3157CyriacusJer"
-                  passive="LIT1493Gadlas">
+            <listRelation>
+               <relation name="ecrm:CLP46i_may_form_part_of"
+                         active="LIT3157CyriacusJer"
+                         passive="LIT1493Gadlas">
                </relation>
+            </listRelation>
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Guidi1906Cyriaque"/>
+                  <citedRange>340-351</citedRange>
+               </bibl>
             </listBibl>
          </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit"  xml:lang="gez">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
+                 ወእምድኅረ፡ ተፈጸመ፡ መንግሥቱ፡ ለመፍቀሬ፡ እግዚአብሔር፡ ቈስጠንጢኖስ፡ ዘነግሠ፡ እምድኅሬሁ፡ ኤልያኖስ፡ 
+               </ab>
+            </div>
+            <div type="textpart" subtype="explicit" xml:lang="gez">
+               <ab>
+                  ዘገነዙ፡ አኃዊነ፡ እለ፡ አምኑ፡ <gap reason="omitted" extent="unknown"/> ለእለ፡ ይገብሩ፡ ተዝካሮሙ፡ ከመ፡ ውስተ፡ መክፈልተ፡ ዚአሆሙ፡ 
+                  ንቅረብ፡ በእግዚእነ፡ <gap reason="omitted" extent="unknown"/> አሜን።
                </ab>
             </div>
          </div>

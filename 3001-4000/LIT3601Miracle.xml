@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Miracle of a rich man from Qʷalāsis who fought the Qʷǝz and whose eye was pierced by an arrow</title>
+            <title xml:id="t1">Miracle of Mary: Miracle of a rich man from Qʷalāsis who fought the Qʷǝz and whose eye was pierced by an arrow</title>
+            <title xml:id="t2">The rich man from Colosse who was wounded in the eye while fighting the Qʷǝz</title>
+            <title xml:id="t3">The Virgin Mary and the man of the island of Qʷalasyǝs who had a dart in his eye</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +27,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -43,15 +42,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"/> 
+               <term key="ChristianLiterature"/>
                <term key="Miracle"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords and relations</change>
+         <change who="DR" when="2018-11-20">Added keyword, title and Macomber reference</change>
+         <change who="AM" when="2019-04-16">added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -63,18 +65,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">15</citedRange>
                </bibl>
             </listBibl>
-            <listBibl type="translation" xml:lang="en">
+            <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Budge1933Miracles"/>
+                  <citedRange unit="item">15</citedRange>
                   <citedRange unit="page">50-52</citedRange>
                </bibl>
+               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">69</citedRange><citedRange unit="page">185-186</citedRange></bibl>
             </listBibl>
-            <listBibl type="relations">
-               <bibl/>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">48</citedRange></bibl>
+            </listBibl>
+            <!-- The
+                        Virgin Mary and the man of the island of Qʷalasyǝs
+                        who had a dart in his eye (BMirMA 28-29; BHMirM 53-55; ColMirM<ref
+                           type="mss" corresp="ES285286">285-286</ref>// mss. O Etiop. 15, LöfUpp
+                        100, n<locus target="#32">32</locus>, I, D.-6; éth. 60, <locus from="27"
+                           to="28">27-28</locus>, ZotBNat 63, n°60-16; Orient. 8814, fols. 1<ref
+                           type="mss" corresp="ES26r128">26r-128</ref>r, StrBritLib 47, n<locus
+                           target="#32">32</locus>, 16.-15).  -->
+            <listRelation>
                <relation name="saws:formsPartOf"
-                  active="LIT3601Miracle"
-                  passive="LIT2384Taamme"/>
-            </listBibl>
+                         active="LIT3601Miracle"
+                         passive="LIT2384Taamme"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML6938"/>.</note>
+                 <ab>
+                  ዘኮነ፡ በደሴተ፡ ቆላሲስ። ወሀሎ፡ አሐዱ፡ ብእሲ፡ ባዕል፡ ጥቀ፣ ወሖረ፡ ሀገረ፡ ትርኲ፡ ከመ፡ ይፅብኦሙ፡ ለቍዝ።
+                 </ab>
+             </div>
          </div>
       </body>
    </text>

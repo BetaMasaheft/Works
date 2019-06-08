@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Miracle of a fountain of water caused by Jesus in Māḫḍāb while returning to Palestine</title>
+            <title xml:id="t1">Miracle of Mary: Miracle of a fountain of water caused by Jesus in Māḫḍāb while returning to Palestine</title>
+            <title xml:id="t2" xml:lang="en">The miraculous spring of Meḫḍāb</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -43,38 +41,66 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"/> 
+               <term key="ChristianLiterature"/>
                <term key="Miracle"/>
-               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords and relations</change>
+         <change who="DR" when="2018-11-14">Added keyword, Macomber reference and title</change>
+         <change who="AM" when="2019-04-16">added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
+         <listRelation>
+            <relation name="saws:formsPartOf"
+               active="LIT3670Miracle"
+               passive="LIT2384Taamme"/>
+
+            <relation name="saws:formsPartOf"
+               active="LIT3670Miracle"
+               passive="LIT4032SenkessarS"><desc>According to <bibl><ptr target="bm:Cerulli1965Leningrado"/><citedRange>no. 19</citedRange></bibl>, the miracle is an excerpt from
+                  the Sǝnkǝssār, the commemoration on 8 Sane. </desc></relation></listRelation>
+
          <div type="bibliography">
+            <listBibl type="secondary">
+                  <bibl>
+                     <ptr target="bm:Cerulli1965Leningrado"/>
+                     <citedRange unit="page">8</citedRange>
+                     <citedRange unit="item">19</citedRange>
+                  </bibl>
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">40</citedRange></bibl>
+
+               </listBibl>
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Budge1923Miracles"/>
                   <citedRange unit="item">41</citedRange>
                </bibl>
+               <bibl><ptr target="bm:TasfaGiyorgis1956Taammera"/><citedRange unit="item">40</citedRange>
+                  <citedRange unit="page">161-164</citedRange></bibl>
             </listBibl>
-            <listBibl type="translation" xml:lang="en">
+            <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Budge1933Miracles"/>
+                  <citedRange unit="item">41</citedRange>
                   <citedRange unit="page">145-146</citedRange>
                </bibl>
             </listBibl>
-            <listBibl type="relations">
-               <bibl/>
-               <relation name="saws:formsPartOf"
-                  active="LIT3670Miracle"
-                  passive="LIT2384Taamme"/>
-            </listBibl>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML2058"/>.</note>
+                 <ab>
+                  ተአምሪሃ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> ዘገብረቶ፡ ምስለ፡ ፍቁር፡ ወልዳ፡ አመ፡ ፰፡ ለወርኀ፡ ሰኔ፡
+                  ውስተ፡ ቤተ፡ ምሕፃብ፡ ዘዕውቅት፡ ኀበ፡ መቅዐ፡ ማይ፡ ቡሩክ፡ ዘነቅዓ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ።
+                 </ab>
+             </div>
          </div>
       </body>
    </text>

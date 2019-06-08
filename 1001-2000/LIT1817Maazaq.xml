@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,16 +11,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">መዐዘ፡ ቅዳሴ፡ ውኩፍ፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Maʿaza qǝddāse wǝkuf</title>
-            <title xml:lang="en" corresp="#t1">A pleasant perfume of sanctity</title>
-            <title xml:lang="en" corresp="#t2">Anaphora to Our Lady Mary by Giyorgis</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maʿaza qǝddāse wǝkuf...</title>
+            <title xml:lang="en" corresp="#t1">A pleasant perfume of sanctity...</title>
+            <title xml:lang="en" xml:id="t2">Anaphora to Our Lady Mary by Giyorgis</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -31,13 +30,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+               <listBibl type="clavis">
+                  <bibl type="H">
+                     <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+                     <citedRange unit="item">20</citedRange>
+                  </bibl>
+               </listBibl>
                <listWit>
                   <witness corresp="BAVet15#p2_i1.4"/>
                   <witness corresp="BAVet18#ms_i1"/>
                   <witness corresp="BAVet24#ms_i.25"/>
                </listWit>
-            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -53,6 +59,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-03-14">Added keywords and Incipit</change>
+         <change who="MV" when="2017-12-18">Added clavis ID</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -65,18 +72,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>
             <listBibl type="secondary">
                <bibl>
-                  <ptr target="bm:Hammerschmidt1987Anaphoras"/><citedRange unit="page">33-34</citedRange>
+                  <ptr target="bm:Hammerschmidt1987Anaphoras"/>
+                  <citedRange unit="page">33-36</citedRange>
                </bibl>
-               <bibl><ptr target="bm:Habtemichael2003EAEAnaphoras"/></bibl>
+               <bibl>
+                  <ptr target="bm:Habtemichael2003EAEAnaphoras"/>
+               </bibl>
             </listBibl>
          </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit">
+            <div type="textpart"
+                 subtype="incipit"
+                 xml:lang="gez"
+                 xml:id="Incipit">
                <ab>
                   መዐዘ፡ ቅዳሴ፡ ውኩፍ፡ ስብሐት፡ ወግናይ፡ ናቄርብ፡ ለስምኪ፡ ማርያም፡
                </ab>
             </div>
-            <div type="textpart" subtype="incipit" xml:lang="gez" corresp="#Incipit">
+            <div type="textpart"
+                 subtype="incipit"
+                 xml:lang="gez"
+                 corresp="#Incipit">
                <ab>
                   Maʿaza qǝddāse wǝkuf za-mǝsla sǝbḥat wa-gǝnāy naqerrǝb la-sǝmki Māryām
                </ab>

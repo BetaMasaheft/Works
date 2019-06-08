@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,14 +10,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1" xml:lang="gez" type="normalized">ʿƎṭāna mogar</title>
-            <title xml:id="t2"  xml:lang="gez">ተረፈ፡ ነገሩ፡ ለኤልሳዕ፡ ቀሊል፡ ስረት፡ ዖፍ።</title>
-            <title xml:id="t3"  xml:lang="gez">እምሐቅለ፡ አኢርሞን፡ ጸውዕ፡ እጓለ፡ አንበሳ፡ ግሩመ።</title>
+            <title xml:id="t1" xml:lang="gez" type="normalized">ʿƎṭāna mogar</title> 
+            <!--fix-->
+            <title xml:id="t2" xml:lang="gez">ተረፈ፡ ነገሩ፡ ለኤልሳዕ፡ ቀሊል፡ ስረት፡ ዖፍ።</title>
+            <title xml:id="t3" xml:lang="gez">እምሐቅለ፡ አኢርሞን፡ ጸውዕ፡ እጓለ፡ አንበሳ፡ ግሩመ።</title>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -27,6 +27,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </licence>
             </availability>
          </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
          <sourceDesc>
             <listWit>
                <witness corresp="BNFet119#ms_i5"/>
@@ -51,7 +54,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Poetry"/> 
             </keywords>
          </textClass>
-         <abstract><p><foreign xml:lang="gez">ʿƎṭāna mogar</foreign> are various poems on the Nativity of Christ</p></abstract> <!--type of qǝne--> <!--is this a work or a genre?-->
+         <abstract>
+            <p>
+               <foreign xml:lang="gez">ʿƎṭāna mogar</foreign> are various poems on the Nativity of Christ</p>
+         </abstract> 
+         <!--type of qǝne--> 
+         <!--is this a work or a genre?-->
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
@@ -62,11 +70,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         <listBibl type="relations">
-            <bibl/>
-            <relation name="saws:isAttributedToAuthor" active="LIT4013EtanaM#t3" passive="PRS11371Marqos">
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor"
+                      active="LIT4013EtanaM#t3"
+                      passive="PRS11371Marqos">
             </relation>
-         </listBibl>
+         </listRelation>
          <ab/>
       </body>
    </text>

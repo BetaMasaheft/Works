@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,12 +10,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Miracle of Sophia, abbess of Mount Carmel</title>
+            <title xml:id="t1">Miracle of Mary: Miracle of Sophia, abbess of Mount Carmel</title>
+            <title xml:id="t2">The Pregnant Abbess</title>
+            <title xml:id="t3">How the Virgin Mary aided in the delivery of a child to an abbess before the bishop came to enquire into the matter</title>
+            <title xml:id="t4">The prioress who became pregnant after sinning with a servant</title>
+            <title xml:id="t5">The Virgin Mary and Sophia (Sofǝya), Abbess of Mount Carmel (Qermelos)</title>
+            <editor role="generalEditor" key="AB"/>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -26,9 +30,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+           <p></p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -44,14 +49,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
-               <term key="ApocryphaPseudoepigrapha"/> 
+               <term key="Apocrypha"/>
                <term key="Miracle"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords and relations</change>
+         <change who="DR" when="2018-11-21">Added keyword, title and Macomber reference</change>
+         <change who="AM" when="2019-05-06">added text</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -63,18 +71,48 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">25</citedRange>
                </bibl>
             </listBibl>
-            <listBibl type="translation" xml:lang="en">
+            <listBibl type="secondary">
+               <bibl type="Poncelet"><ptr target="bm:Poncelet"/><citedRange unit="item">4</citedRange></bibl>
+               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">158</citedRange></bibl>
+            </listBibl>
+            <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Budge1933Miracles"/>
+                  <citedRange unit="item">25</citedRange>
                   <citedRange unit="page">75-78</citedRange>
                </bibl>
+               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">125</citedRange><citedRange unit="page">325-327</citedRange></bibl>
             </listBibl>
-            <listBibl type="relations">
-               <bibl/>
+            <!-- The Virgin Mary and Sophia (Sofǝya), Abbess of Mount
+                        Carmel (Qermelos) (BMirMA 38-40; BHMirM 75-82; ColMirM<ref type="mss"
+                           corresp="ES325327">325-327</ref>// mss. éth. 60, <locus from="40"
+                           to="43v">40-43v</locus>, ZotBNat 63, n°60-26; Orient. 8814, fols. 1<ref
+                           type="mss" corresp="ES46r149">46r-149</ref>v, StrBritLib 48, n<locus
+                           target="#32">32</locus>, 16.-25) -->
+            <listRelation>
                <relation name="saws:formsPartOf"
+                         active="LIT3611Miracle"
+                         passive="LIT2384Taamme"/>
+               <relation name="skos:exactMatch"
                   active="LIT3611Miracle"
-                  passive="LIT2384Taamme"/>
-            </listBibl>
+                  passive="http://csm.mml.ox.ac.uk/index.php?p=poemdata_view&amp;rec=7"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                 <ab>
+                     ወነበረት፡ አሐቲ፡ እመ፡ ምኔት፡ በደብረ፡ <choice resp="PRS6437Macomber"><corr>ቀርሜሎስ፡</corr><sic>ቀርሜልዮስ፡</sic></choice> ዘስማ፡ ሶፍያ፣
+                     ብእሲት፡ ኅሪት፣ ጽሕቅት፡ ለምግባረ፡ ሠናይ፡ ወጸልዮ፣ ወትትለአክ፡ ለቤተ፡ እግዝእትነ፡ ማርያም፡ በብዙኅ፡ ጻማ፡ ወበዐቢይ፡ ቅኔ።
+                 </ab>
+                 <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>This incipit is taken from <ref type="mss" corresp="EMML7089"/>.</note>
+                    <ab>
+                      ተብህለ፡ ከመ፡ ሀለወት፡ አሐቲ፡ እመ፡ ምኔት፡ ውስተ፡ አሐቲ፡ ደብር፡ እምነ፡ አድባራት፣ ወሀለዋ፡ ውስተ፡ ይእቲ፡ ደብር፡ ብዙኃን፡ ደናግል፣ ወይትኤዘዛ፡ ላቲ።
+                      ወኮነት፡ ይእቲ፡ እመ፡ ምኔት፡ ዘሠናይ፡ ግዕዛ።
+                    </ab>
+                 </div>
+             </div>
          </div>
       </body>
    </text>

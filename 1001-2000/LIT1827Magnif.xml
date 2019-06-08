@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -10,30 +10,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1" type="main">Magnificat</title>
+            <title xml:id="t1" type="main" xml:lang="la">Magnificat</title>
             
-            <title xml:id="t2">Song of Mary</title>
+            <title xml:id="t2" xml:lang="en">Song of Mary</title>
             
-            <title xml:id="t3">Canticle of Mary</title>
+            <title xml:id="t3" xml:lang="en">Canticle of Mary</title>
             
-            <title xml:id="t4">Ode of the Theotokos</title>
+            <title xml:id="t4" xml:lang="en">Ode of the Theotokos</title>
             <title corresp="#t4" xml:lang="grc">Ἡ ᾨδὴ τῆς Θεοτόκου</title>
             
             <title xml:id="t5" xml:lang="gez">ጸሎተ፡ እግዝእትነ፡ ማርያም፡</title>
-            <title xml:lang="gez" type="normalized" corresp="#t5">ṣalota ʾǝgziʾǝtǝna Māryām</title>
+            <title xml:lang="gez" type="normalized" corresp="#t5">Ṣalota ʾǝgzǝʾǝtǝna Māryām</title>
             <title xml:lang="en" corresp="#t5">Prayer of Our Lady Mary</title>
             
             <title xml:lang="gez" xml:id="t6">ጸሎተ፡ ማርያም፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t6">Ṣalota Māryām</title>
-            <title xml:lang="en" corresp="t6">The Prayer of <persName ref="PRS6819Mary">Mary</persName></title>
+            <title xml:lang="en" corresp="#t6">The Prayer of <persName ref="PRS6819Mary">Mary</persName>
+            </title>
             
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -44,8 +44,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit><witness corresp="BNFet9"></witness>
-               </listWit>
+            <p>A Work part of Ethiopian Literature</p>
+            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -54,22 +54,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="grc">Greek</language>
          </langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Bible"/>
                <term key="OldTestament"/>
                <term key="ChristianLiterature"/>
-               <term key="Prayers"></term>
+               <term key="Prayers"/>
             </keywords>
          </textClass>
-         <abstract><p>Extract from <title ref="LIT1812GospelLuke"/> 1:46-55</p></abstract>
+         <abstract>
+            <p>Extract from <ref type="work" corresp="LIT1812GospelLuke"/> 1:46-55</p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="ES" when="2017-02-24">Added information</change>
+         <change who="DR" when="2017-08-15">Corrected transliteration and titles</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -79,16 +83,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <ptr target="bm:Devens2007Mahaleya"/>
             </bibl>
          </listBibl>
-         <listBibl type="relations">
-            <bibl/>
+         <listRelation>
             <relation name="saws:formsPartOf"
-               active="LIT1827Magnif"
-               passive="LIT1828Mahale"/>
+                      active="LIT1827Magnif"
+                      passive="LIT1828Mahale"/>
             <relation name="saws:formsPartOf"
-               active="LIT1827Magnif"
-               passive="LIT1812GospelLuke"/>
-            <relation name="ecrm:P129_is_about" active="LIT1827Magnif" passive="PRS6819Mary"></relation>
-         </listBibl>
+                      active="LIT1827Magnif"
+                      passive="LIT1812GospelLuke"/>
+            <relation name="ecrm:P129_is_about"
+                      active="LIT1827Magnif"
+                      passive="PRS6819Mary"/>
+         </listRelation>
          <ab/>
       </body>
    </text>

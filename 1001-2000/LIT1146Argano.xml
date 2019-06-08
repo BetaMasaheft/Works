@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -19,16 +19,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t3">አርጋኖነ፡ ድንግል፡</title>
             <title xml:lang="gez" corresp="#t3" type="normalized">ʾArgānona Dǝngǝl</title>
             <title xml:lang="en" corresp="#t3">The Organ of the Virgin</title>
-            <title xml:lang="lat" xml:id="t4latin" type="translated"></title>
-            <!-- See issue #85 on this topic, and see BLharl7629-->
+            <title type="short">Org.</title>
             <author>Giyorgis of Saglā</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -49,6 +47,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="la">Latin</language>
          </langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
@@ -56,6 +55,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Hagiography"/>
                <term key="Poetry"/>
                <term key="Prayers"/>
+               <term key="Paks1"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -70,30 +70,56 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body>
          <div type="bibliography">
-         <listBibl type="relations">
-            <bibl></bibl>
-            <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1146Argano#t1" passive="#t4latin"/>
-            <relation name="saws:isAttributedToAuthor" active="LIT1146Argano" passive="PRS4709Giyorgis"/>
-         </listBibl>
+            <listRelation>
+               <relation name="dcterms:creator"
+                         active="LIT1146Argano"
+                         passive="PRS4709Giyorgis"/>
+            </listRelation>
            <listBibl type="editions">
-              <bibl><ptr target="bm:Leander1922Arganona"/></bibl>
+              <bibl>
+                  <ptr target="bm:Leander1922Arganona"/>
+               </bibl>
            </listBibl>
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Getatchew2003Arganona"/></bibl>
-               <bibl><ptr target="bm:Ludolf1691Commentarius"/><citedRange unit="page">346</citedRange></bibl>
-               <bibl><ptr target="bm:Bruce1804TravelsII"/><citedRange unit="page">421</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Getatchew2003Arganona"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Ludolf1691Commentarius"/>
+                  <citedRange unit="page">346</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Bruce1804TravelsII"/>
+                  <citedRange unit="page">421</citedRange>
+               </bibl>
             </listBibl>
-            
-      </div>
+
+         </div>
+         
         <div type="edition">
-           <div type="textpart" subtype="chapter" xml:id="Monday"></div>
-           <div type="textpart" subtype="chapter" xml:id="Tuesday"></div>
-           <div type="textpart" subtype="chapter" xml:id="Wednesday"></div>
-           <div type="textpart" subtype="chapter" xml:id="Thursday"></div>
-           <div type="textpart" subtype="chapter" xml:id="Friday"></div>
-           <div type="textpart" subtype="chapter" xml:id="Saturday"></div>
-           <div type="textpart" subtype="chapter" xml:id="Sunday"></div>
+           <div type="textpart" subtype="chapter" n="1" xml:id="Monday">
+              <label>Monday</label>
+           </div>
+           <div type="textpart" subtype="chapter" n="2" xml:id="Tuesday">
+              <label>Tuesday</label>
+           </div>
+           <div type="textpart" subtype="chapter" n="3" xml:id="Wednesday">
+              <label>Wednesday</label>
+           </div>
+           <div type="textpart" subtype="chapter" n="4" xml:id="Thursday">
+              <label>Thursday</label>
+           </div>
+           <div type="textpart" subtype="chapter" n="5" xml:id="Friday">
+              <label>Friday</label>
+           </div>
+           <div type="textpart" subtype="chapter" n="6" xml:id="Saturday">
+              <label>Saturday</label>
+           </div>
+           <div type="textpart" subtype="chapter" n="7" xml:id="Sunday">
+              <label>Sunday</label>
+           </div>
         </div>
+         
       </body>
    </text>
 </TEI>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -14,19 +14,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" corresp="#t1" type="normalized">Sǝnkǝssār (Generic record)</title>
             <title xml:lang="en" corresp="#t1">Synaxarium</title>
             <title xml:lang="en" xml:id="t2">Synaxary</title>
+            <title type="short">Enc.</title>
+            <!-- <title type="short">Sx.</title> -->
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
+                  <p>This file is licensed under the Creative Commons Attribution-ShareAlike 4.0.
+                  </p>
                </licence>
             </availability>
          </publicationStmt>
@@ -36,6 +36,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
+         <creation notBefore="1375" notAfter="1425" corresp="#Psttanthony">The first translation of
+            the Sǝnkǝssār, <ref type="work" corresp="LIT4032SenkessarS"/> was carried out around
+               <date>1400</date> by <persName ref="PRS8743Semon"/>, a monk of <placeName ref="INS0320DAA" xml:id="Psttanthony"/>.</creation>
+         <creation notBefore="1375" notAfter="1400">The translation of <ref type="work" corresp="LIT4033Senkessar"/> goes back to the end of the end of the 14th
+            century.</creation>
+         <creation notBefore="1563" notAfter="1581" corresp="#Phayqestifanos">The first revision of
+            the Sǝnkǝssār was carried out between <date>1563</date> and <date>1581</date>, probably
+            at <placeName ref="INS0327DHE" xml:id="Phayqestifanos"/>.</creation>
+         <creation>Dabra Libānos</creation>
+         <creation>Arabic translation</creation>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
@@ -46,12 +56,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Hagiography"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
+         <change who="PL" when="2016-03-21"> Created file from google spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-10-19">Bibliography added</change>
          <change who="DR" when="2017-04-04">Added keywords</change>
@@ -59,31 +69,345 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body>
-         
+
          <div type="bibliography">
-            <listBibl type="secondary">
-               <bibl><ptr target="bm:Colin2010EAESenkessar"/></bibl>
-            </listBibl>
-         </div>
+               <listBibl type="secondary">
+                  <bibl>
+                     <ptr target="bm:Colin2010EAESenkessar"/>
+                  </bibl>
+               </listBibl>
+               <listBibl type="editions">
+                  <bibl>
+                     <ptr target="bm:Colin1986Maskaram"/>
+                  </bibl>
+               </listBibl>
          
-         <div type="edition">
-         
-            <div type="textpart" subtype="chapter" xml:id="Maskaram"/>
-         <div type="textpart" subtype="chapter" xml:id="Teqemt"/>
-         <div type="textpart" subtype="chapter" xml:id="Hedar"/>
-         <div type="textpart" subtype="chapter" xml:id="Tahsas"/>
-         <div type="textpart" subtype="chapter" xml:id="Terr"/>
-         <div type="textpart" subtype="chapter" xml:id="Yakkatit"/>
-         <div type="textpart" subtype="chapter" xml:id="Maggabit"/>
-         <div type="textpart" subtype="chapter" xml:id="Miyazya"/>
-         <div type="textpart" subtype="chapter" xml:id="Genbot"/>
-         <div type="textpart" subtype="chapter" xml:id="Sane"/>
-         <div type="textpart" subtype="chapter" xml:id="Hamle"/>
-         <div type="textpart" subtype="chapter" xml:id="Nahase"/>
-         <div type="textpart" subtype="chapter" xml:id="Pagwemen"/>
+
+            <div type="edition">
+
+               <div type="textpart" xml:id="FirstHalf">
+                  <label>First half of the year</label>
+
+               <div type="textpart" subtype="chapter" n="1" xml:id="Maskaram">
+                  <label>Commemorative notices for the month of <foreign xml:lang="gez">Maskaram</foreign>
+                  </label>
+               
+                  
+                  <!-- the following arrangement of the textparts and text of Maskaram is taken from
+               bm:Colin1986Maskaram when not indicated otherwise-->
+    
+                     
+                     <div type="textpart" subtype="chapter" xml:id="MaskIntroduction">
+                        <label>Introduction for <foreign xml:lang="gez">Maskaram</foreign>
+                        </label>
+                        <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ንወጥን፡ በረድኤተ፡ እግዚኣብሔር፡ ወሠናይ፡ ሀብቱ፡ በጽሒፈ፡
+                           መጽሐፈ፡ ስንክሳር፡ ዘበትርጓሜሁ፡ ጉባኤ፡ ዘቀድኅዎ፡ አበዊነ፡ ቅዱሳን፡ መምህራነ፡ ቤተ፡ ክርስቲያን። አብ፡ ክቡር፡ አባ፡
+                           ሚካኤል፡ ኤጲስ፡ ቆጶስ፡ ዘሀገረ፡ አትሪብ፡ ወመሊግ። ወአብ፡ ክቡር፡ አባ፡ ዮሐንስ፡ ኤጲስ፡ ቆጶስ፡ ዘሀገረ፡ ቡርልስ።
+                           ወካልኣን፡ አበው፡ ቅዱሳን፡ ወክቡራን፡ እለ፡ አስተጋብእዎ፡ ለዝንቱ፡ መጽሐፍ፡ እምኵሎሙ፡ ገድላት፡ ዘመላእክት፡ ወሐዋርያት፡
+                           ወነቢያት፡ ወሰማዕታት፡ ወሊቃነ፡ ጳጳሳት፡ ወጻድቃን፡ ወገዳማዊያን፡ ወመነኮሳት። ከመ፡ ይግበሩ፡ ተዝካሮሙ፡ ወያንብቡ፡
+                           ገድሎሙ፡ ኵሎ፡ አሚረ፡ እም፩ ለመስከረም፡ እስከ፡ ተፍጻሜተ፡ ዓመት። ወኮነ፡ አስተጋብኦቱ፡ በ፱፻፷ወ፫ዓመት፡ ለሰማዕታት፡
+                           ንጹሓን። ጸሎቶሙ፡ ወበረከቶሙ፡ የሀሉ፡ ምስሌነ፡ አሜን። </ab>
+                     </div>
+                     
+                     <div type="textpart" subtype="chapter" xml:id="Mask1">
+                        <label>
+                           <date>1st <foreign xml:lang="gez">Maskaram</foreign>
+                           </date>
+                        </label>
+                        
+                        <div type="textpart" xml:id="Mask1Beginning">
+                           <label>Beginning of the year</label>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask1Job">
+                           <label>
+                           <persName ref="PRS5691Job"/>'s washing in the river</label>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask1Bartolomewos">
+                           <label>Death of <persName ref="PRS2481Bartholo"/>
+                        </label>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask1Melyos">
+                           <label>Death of <persName ref="PRS11847Milyos"/>
+                        </label>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask1Melki">
+                           <label>Death of <persName ref="PRS11848Melki"/>
+                        </label>
+                        </div>
+                        
+                        <div type="textpart"
+                          subtype="commemoration"
+                          xml:id="Mask1JohnBaptistHenoch">
+                           <label>Commemoration of <persName ref="PRS5741Johnthe"/> and <persName ref="PRS3814Enoch"/>
+                        </label>
+                           <note>Described by in <ref type="mss" corresp="BNFet126"/>, but not in
+                             <listBibl type="editions"> <bibl>
+                                 <ptr target="bm:Colin1986Maskaram"/>
+                              </bibl></listBibl>.</note>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask1Raguel">
+                           <label>Feast of <persName ref="PRS8065Raguel"/>
+                        </label>
+                        </div>
+                        
+                     </div>
+                     
+                     <div type="textpart" subtype="chapter" xml:id="Mask2">
+                        <div type="textpart" subtype="commemoration" xml:id="Mask2JohnBaptist">
+                           <label>Decapitation of <persName ref="PRS5741Johnthe"/>
+                        </label>
+                        </div>
+                        <div type="textpart" subtype="commemoration" xml:id="Mask2Dasya">
+                           <label>Commemoration of <persName ref="PRS11851Dasya"/>
+                        </label>
+                        </div>
+                        <div type="textpart"
+                          subtype="commemoration"
+                          xml:id="Mask2DimasyosMarina">
+                           <label>Commemoration of <persName ref="PRS11852Dimasyos"/> and <persName ref="PRS6741Marina"/>
+                        </label>
+                        </div>
+                     </div>
+                     
+                     <div type="textpart" subtype="chapter" xml:id="Mask3">
+                        <div type="textpart"
+                          subtype="commemoration"
+                          xml:id="Mask3CouncilAlexandria">
+                           <label>Commemoration of the council of Alexandria under <persName ref="PRS11854Dionysios"/>
+                        </label>
+                        </div>
+                        <div type="textpart" subtype="commemoration" xml:id="Mask3Earthquake">
+                           <label>Commemoration of the earthquake in Egypt</label>
+                        </div>
+                        <div type="textpart" subtype="commemoration" xml:id="Mask3Dioscoros">
+                           <label>Commemoration of <persName ref="PRS11855Diyosqoros"/>, <persName ref="PRS11854Dionysios"/>,
+                           the martyrs of <foreign xml:lang="gez">Tǝnkǝl Yāqoton</foreign> and many martyrs of Persia</label>
+                        </div>
+                        <div type="textpart" subtype="commemoration" xml:id="Mask3Anbasa">
+                           <label>Commemoration of <persName ref="PRS11856Anbasa"/>
+                        </label>
+                        </div>
+                        <div type="textpart" subtype="commemoration" xml:id="Mask3MosesScetis">
+                           <label>Commemoration of <persName ref="PRS7186Mosesth"/>
+                        </label>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask3September">
+                           <label>Beginning of ʾaylul and šātabar in <ref type="mss" corresp="BNFabb1"/>
+                        </label>
+                        </div>
+                     </div>
+               
+                     <div type="textpart" subtype="chapter" xml:id="Mask4">
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask4Maqares">
+                           <label>Commemoration of <persName ref="PRS6425Macarius"/>
+                        </label>
+                        </div>
+                        <div type="textpart" subtype="commemoration" xml:id="Mask4Group">
+                           <label>Commemoration of Sǝmʿon of the cell, <persName ref="PRS5773Joshua"/>, ʾArdāse, 150 of Antioch, ʾAntǝyā,
+                           Tāʾodros bishop of the grave of ʾƎldānu, Tewogolos</label>
+                        </div>
+                     </div>
+               
+                     <div type="textpart" subtype="chapter" xml:id="Mask5">
+                        <div type="textpart" subtype="commemoration" xml:id="Mask5Sofya">
+                           <label>Commemoration of <persName ref="PRS11893Sofya"/>, different version in the second recension.</label>
+                        </div>
+                        <div type="textpart" subtype="commemoration" xml:id="Mask5Mamas">
+                           <label>Commemoration of <persName ref="PRS6620Mamas"/>
+                        </label>
+                        </div>
+                        <div type="textpart" subtype="commemoration" xml:id="Mask5LebnaD">
+                           <label>Commemoration of <persName ref="PRS6229LebnaDe"/>
+                        </label>
+                        </div>
+                        <div type="textpart" subtype="commemoration" xml:id="Mask5GabraMQ">
+                           <label>Commemoration of <persName ref="PRS4306GabraMa"/> in <ref type="mss" corresp="BNFabb1"/>
+                        </label>
+                        </div>
+                     </div>
+               
+               
+                     <div type="textpart" subtype="chapter" xml:id="Mask6">
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask6Isaiah">
+                           <label>Commemoration of <persName ref="PRS5584Isaiah"/>
+                        </label>
+                        </div>
+                        <div type="textpart" subtype="commemoration" xml:id="Mask6Bisilentiya">
+                           <label>Commemoration of <persName ref="PRS11894Bisilentiya"/>
+                        </label>
+                        </div>
+                        <div type="textpart" subtype="commemoration" xml:id="Mask6Group">
+                           <label>Commemoration of Yāʿqob the monk, ʾAtimos the bishop, Bāslis, ʾAronṭos, ʿĀdi, Rawǝrwā, Sawlās, Sawā</label>
+                        </div>
+                     </div>
+               
+               
+               
+                     <div type="textpart" subtype="chapter" xml:id="Mask7">
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask7Dioscorus">
+                           <label>Commemoration of <persName ref="PRS3591Dioscoru"/>
+                        </label>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask7Sawiryanos">
+                           <label>Commemoration of <persName ref="PRS8787Severian"/>
+                        </label>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask7Agatu">
+                           <label>Commemoration of ʾAgātu, Ṗeṭros, Yoḥannǝs, ʾAmon, ʾAmonā, Rafiqā</label>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask7Fasiladas">
+                           <label>Commemoration of 6 companions of Fāsiladas, in the second recension also of Dās, Gāgrā, Nāwlā, Ṗeṭros the monk and <persName ref="PRS1948Anne"/>
+                        </label>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask7Manaz">
+                           <label>Commemoration of the 12 of Manāz</label>
+                        </div>
+                        
+                     </div>
+               
+                     <div type="textpart" subtype="chapter" xml:id="Mask8">
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask8Zakaryas">
+                           <label>Commemoration of <persName ref="PRS10509Zachary"/>
+                        </label>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask8Muse">
+                           <label>Commemoration of <persName ref="PRS7181MosesM"/>
+                        </label>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask8Dimadyos">
+                           <label>Commemoration of <persName ref="PRS11931Dimadyos"/>
+                        </label>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask8Lukyanos">
+                           <label>Commemoration of <persName ref="PRS11932Lukyanos"/>
+                        </label>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask8Various">
+                           <label>Commemoration of <persName ref="PRS11933Ermeyas"/>, <persName ref="PRS11934Yohannes"/>, <persName ref="PRS11935Andiwa"/>,
+                              <persName ref="PRS11936Elyanos"/>, <persName ref="PRS1890Amon"/> and <persName ref="PRS11937Yaqob"/>
+                        </label>
+                        </div>
+                        
+                     </div>
+               
+                     <div type="textpart" subtype="chapter" xml:id="Mask9">
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask9Bisora">
+                           <label>Commemoration of <persName ref="PRS11938Bisora"/>
+                        </label>
+                        </div>
+                        
+                        <div type="textpart"
+                          subtype="commemoration"
+                          xml:id="Mask9ComradesFasiladas">
+                           <label>Commemoration of the 14 730 men and 7 women with <persName ref="PRS2548Basilide"/>.</label>
+                        </div>
+                        
+                        <div type="textpart" subtype="commemoration" xml:id="Mask9Miracle">
+                           <label>Commemoration of the miracle of <persName ref="PRS7049Michael"/>  in Fǝrugyā.</label>
+                        </div>
+                        
+                     </div>
+               
+                     <div type="textpart" subtype="chapter" xml:id="Mask10"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask11"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask12"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask13"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask14"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask15"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask16"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask17"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask18"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask19"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask20"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask21"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask22"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask23"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask24"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask25"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask26"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask27"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask28"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask29"/>
+                     <div type="textpart" subtype="chapter" xml:id="Mask30"/>
+                  </div>
+  
+            <div type="textpart" subtype="chapter" xml:id="Teqemt">
+               <label>Commemorative notices for the month of <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
+               </label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Hedar">
+               <label>Commemorative notices for the month of <foreign xml:lang="gez">Ḫǝdar</foreign>
+               </label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Tahsas">
+               <label>Commemorative notices for the month of <foreign xml:lang="gez">Tāḫśāś</foreign>
+               </label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Terr">
+               <label>Commemorative notices for the month of <foreign xml:lang="gez">Ṭǝrr</foreign>
+               </label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Yakkatit">
+               <label>Commemorative notices for the month of <foreign xml:lang="gez">Yakkātit</foreign>
+               </label>
+            </div>
             
          </div>
-         
+            <div type="textpart" xml:id="SecondHalf">
+               <label>Second half of the year</label>
+            
+            <div type="textpart" subtype="chapter" xml:id="Maggabit">
+               <label>Commemorative notices for the month of <foreign xml:lang="gez">Maggābit</foreign>
+               </label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Miyazya">
+               <label>Commemorative notices for the month of <foreign xml:lang="gez">Miyāzyā</foreign>
+               </label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Genbot">
+               <label>Commemorative notices for the month of <foreign xml:lang="gez">Gǝnbot</foreign>
+               </label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Sane">
+               <label>Commemorative notices for the month of <foreign xml:lang="gez">Sane</foreign>
+               </label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Hamle">
+               <label>Commemorative notices for the month of <foreign xml:lang="gez">Ḥamle</foreign>
+               </label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Nahase">
+               <label>Commemorative notices for the month of <foreign xml:lang="gez">Naḥāse</foreign>
+               </label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Pagwemen">
+               <label>Commemorative notices for the month of <foreign xml:lang="gez">Ṗagʷǝmen</foreign>
+               </label>
+            </div>
+            </div>
+            <!-- See BAVet111 and BAVet112 as examples of lists of commemoration entries -->
+            </div>
+         </div>
+
       </body>
    </text>
 </TEI>

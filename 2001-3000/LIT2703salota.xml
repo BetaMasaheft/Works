@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -11,16 +11,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ጸሎተ፡ ሙሴ፡ ዘሣልስ፡ ሕግ፡</title>
-            <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalota Muse za-śālǝs ḥǝgg </title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalota Muse za-śālǝs ḥǝgg</title>
             <title xml:lang="en" corresp="#t1" type="main">The Third Prayer of Moses</title>
             <title xml:lang="en" xml:id="t2">Third Song of Moses</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                            multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -31,7 +30,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <listWit><witness corresp="BNFet9"></witness></listWit>
+            <p>A Work part of Ethiopian Literature</p>
+         </sourceDesc>
+         <sourceDesc>
+            <listWit>
+               <witness corresp="BNFet9"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -49,7 +53,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </keywords>
          </textClass>
          <abstract>
-            <p>Extract from <title ref="LIT2637Deuteronomy"/> 32:22-43</p>
+            <p>Extract from <ref type="work" corresp="LIT2637Deuteronomy"/> 32:22-43</p>
          </abstract>
       </profileDesc>
       <revisionDesc>
@@ -65,16 +69,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <ptr target="bm:Devens2007Mahaleya"/>
             </bibl>
          </listBibl>
-         <listBibl type="relations">
-            <bibl/>
+         <listRelation>
             <relation name="saws:formsPartOf"
                       active="LIT2703salota"
                       passive="LIT1828Mahale"/>
             <relation name="saws:formsPartOf"
                       active="LIT2703salota"
                       passive="LIT2637Deuteronomy"/>
-            <relation name="ecrm:P129_is_about" active="LIT2703salota" passive="PRS7181MosesM"></relation>
-         </listBibl>
+            <relation name="ecrm:P129_is_about"
+                      active="LIT2703salota"
+                      passive="PRS7181MosesM"/>
+         </listRelation>
       </body>
    </text>
 </TEI>
