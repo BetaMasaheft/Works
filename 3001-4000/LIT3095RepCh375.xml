@@ -10,7 +10,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to St Qirqos and Julitta</title>
+            <title xml:id="t1">Hymn to St Cyricus and Julitta</title>
+            <title xml:id="t2">Malkǝʾa Qirqos</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -31,8 +32,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
          <sourceDesc>
             <listWit>
-               <witness/>
-            </listWit>
+               <witness corresp="ESum008"/>
+               <witness corresp="EMML486"></witness>
+               
+              </listWit>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -53,6 +56,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
+         <change when="2019-06-14" who="ES">expanded incipit from ESum008 , added relations</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -64,11 +68,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">375</citedRange>
                </bibl>
             </listBibl>
+            
+            <listRelation>
+               <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1488GadlaQ" passive="LIT5739GadlaQDossier"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT3095RepCh375" passive="PRS3249Cyriacus PRS5790Julitta"></relation>
+            </listRelation>
          </div>
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
-                  ኦክርስቶስ፡ ናዝራዊ፡ ዘተወከፍከ፡ ሕማመ።
+                  ኦክርስቶስ፡ ናዝራዊ፡ ዘተወከፍከ፡ ሕማመ። 
+                  ፀሐይ፡ ብሩህ፡ ወጽዱል፡ እስከ፡ ሡራሔሁ፡ አጽለመ፨ መጽሐፈ፡ ዜናሁ፡ ለቂርቆስ፡ መንፈሳዊ፡ ወዘመልክዑ፡ ሰላመ፨ ጸሐፍ፡ ውስተ፡
+                  ልብየ፡ እንዘ፡ ትገብር፡ ቀለመ። ደመከ፡ አምላካዊ፡ በመስቀል፡ ዘዘንመ፨
                </ab>
             </div>
          </div>
