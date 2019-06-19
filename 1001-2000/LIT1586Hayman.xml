@@ -94,15 +94,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </bibl> no evidence for this has been found in the
                   manuscripts.</desc>
             </relation>
-            <relation name="saws:contains" active="LIT1586Hayman" passive="LIT1978Mashaf">
+            <relation name="saws:follows" active="LIT1586Hayman" passive="LIT1978Mashaf">
                <desc>The <foreign xml:lang="gez">Maṣḥafa ṭomār</foreign> very often follows
                   Hāymānota ʾabaw and precedes the table of content.</desc>
             </relation>
-            <relation name="saws:contains" active="LIT1586Hayman" passive="LIT2444Temher">
+            <relation name="saws:follows" active="LIT1586Hayman" passive="LIT2444Temher">
                <desc>The <foreign xml:lang="gez">Tǝmhǝrta ḫǝbuʾāt</foreign> can be included at the
                   beginning of the <foreign xml:lang="gez">Hāymānota ʾabaw</foreign>, following the
                   introduction.</desc>
             </relation>
+            
+               <relation name="saws:formsPartOf" active="LIT1586Hayman" passive="LIT5769HaymanTomar"></relation>
+            
          </listRelation>
 
          <!--chapter distribution taken from various mss-->
@@ -348,7 +351,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </div>
                <div type="textpart" xml:id="GregoryNyssa3">
                   <label>
-                     <ref type="work" corresp="LIT1400FirstH"/>, extract on the Homily on the Epistle to the Philippians 2:5-7 by Gregory of
+                     <ref type="work" corresp="LIT1400FirstH"/>, extract from the Homily on the Epistle to the Philippians 2:5-7 by Gregory of
                      Nyssa</label>
                </div>
                <div type="textpart" xml:id="GregoryNyssa4">
@@ -382,6 +385,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             passive="PRS11175Julius"/>
                </listRelation>
                <label>Letters by Julius</label>
+               
                <div type="textpart" xml:id="Julius1">
                   <label>Extract from the letter to Dionysius, bishop of Cyprus</label>
                   <listRelation>
@@ -419,7 +423,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <label/>
                </div>
 
-
+            </div>
+            
+            <div type="textpart" xml:id="Celestine">
+               <label>Testimony by Celestine of Rome</label>
+            </div>
+            
                <div type="textpart" xml:id="Innocent">
                   <listRelation>
                      <relation name="saws:isAttributedToAuthor"
@@ -491,7 +500,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                </div>
 
-            </div>
+
             <div type="textpart" xml:id="Proclus" xml:lang="gez">
                <!--Heraclius-->
                <listRelation>
@@ -1488,6 +1497,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
 
             <div type="textpart" xml:id="MashafaTomar" corresp="LIT1978Mashaf">
+               
                <label>Maṣḥafa ṭomār</label>
                <desc>The <foreign xml:lang="gez">Maṣḥafa ṭomār</foreign> circulates also
                   independently and is not present in all manuscripts containing the <foreign xml:lang="gez">Hāymānota ʾabaw</foreign>. It can also follow the table of
@@ -1499,6 +1509,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
          </div>
 
+         
       </body>
    </text>
 </TEI>
