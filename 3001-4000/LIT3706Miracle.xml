@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3706Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: Miracle of a woman who receives a child after having prayed to Mary at her apparition in Maṭāriya</title>
@@ -29,6 +29,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -55,11 +63,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-04-16">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="secondary">
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">49</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">49</citedRange>
+               </bibl>
             </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf"
@@ -73,7 +84,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                  <ab>
                   ወሀለወት፡ በቅሩበ፡ ዓይነ፡ ማይ፡ ዘአንቅዐ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡
                   ዘትሰመይ፡ መጠርያ፡ <supplied resp="PRS6437Macomber" reason="omitted">ቤተ፡ ክርስቲያን</supplied>፡ በስመ፡ እግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>፡
-                  ወይብልዋ፡ ለይእቲ፡ ደወል፡ ምኔተ፡ <choice resp="PRS6437Macomber"><corr>ሰርድ</corr><sic>ስርድ</sic></choice>።
+                  ወይብልዋ፡ ለይእቲ፡ ደወል፡ ምኔተ፡ <choice resp="PRS6437Macomber">
+                     <corr>ሰርድ</corr>
+                     <sic>ስርድ</sic>
+                  </choice>።
                  </ab>
              </div>
          </div>

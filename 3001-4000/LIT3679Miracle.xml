@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3679Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: Miracle of the transmigration of the Virgin, meeting with St John</title>
@@ -29,6 +29,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -55,20 +63,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-05-14">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="secondary">
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">247</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">247</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="editions">
-               <bibl><ptr target="bm:Arras1974TransituText"/><citedRange unit="page">24</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Arras1974TransituText"/>
+                  <citedRange unit="page">24</citedRange>
+               </bibl>
             </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf"
                          active="LIT3679Miracle"
                          passive="LIT2384Taamme"/>
-               <relation name="ecrm:P129_is_about" active="LIT3679Miracle" passive="PRS5695John"/>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT3679Miracle"
+                         passive="PRS5695John"/>
             </listRelation>
          </div>
          <div type="edition">
@@ -76,7 +92,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
                  <ab>
                    ዘከመ፡ ርእያ፡ ዮሐንስ፡ ወልደ፡ ነጕድጓድ፡ በዕለተ፡ ፍልሰታ፣ በከመ፡ ተስእለ፡ በእንቲአሃ። ጸሎታ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
-                   ወአንሰ፡ እቤ፤ <choice resp="PRS6437Macomber"><corr>ኦእግዚእየ፣</corr><sic>ኦእግዝእትየ፣</sic></choice>
+                   ወአንሰ፡ እቤ፤ <choice resp="PRS6437Macomber">
+                     <corr>ኦእግዚእየ፣</corr>
+                     <sic>ኦእግዝእትየ፣</sic>
+                  </choice>
                    ውስተ፡ አይኑ፡ መካናት፡ ሀለወት፡ ወላዲትከ፡ ድንግል።
                  </ab>
              </div>

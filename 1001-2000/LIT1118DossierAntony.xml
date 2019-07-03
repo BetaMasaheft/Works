@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1118DossierAntony">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
 
@@ -34,8 +34,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
          
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
-         <abstract><ab>The collection consisiting Life, Miracles, and Hymns in honour of St Antony</ab></abstract>
+         <abstract>
+            <ab>The collection consisiting Life, Miracles, and Hymns in honour of St Antony</ab>
+         </abstract>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
@@ -54,22 +64,46 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             
             <listRelation>
-               <relation name="saws:contains" active="LIT1118DossierAntony" passive="LIT4857LifeofA"><desc>The dossier contains the Life of Antony (Acts)</desc></relation>
-               <relation name="saws:contains" active="LIT1118DossierAntony" passive="LIT2974RepCh255"><desc>The dossier may contain the Image of Antony</desc></relation>
-               <relation name="saws:contains" active="LIT1118DossierAntony" passive="LIT2868RepCh149"><desc>The dossier may contain the Image of Antony</desc></relation>
-               <relation name="saws:contains" active="LIT1118DossierAntony" passive="LIT4148SalamAntonii"><desc>The dossier may contain the Salām to Antony</desc></relation>
-               <relation name="saws:contains" active="LIT1118DossierAntony" passive="LIT2753RepCh37"><desc>The dossier may contain the Salām to Antony</desc></relation>
-               <relation name="saws:contains" active="LIT1118DossierAntony" passive="LIT4033Senkessar#Terr22Entonyos"><desc>The dossier may contain the Commemoration note on Antony</desc></relation>
+               <relation name="saws:contains"
+                         active="LIT1118DossierAntony"
+                         passive="LIT4857LifeofA">
+                  <desc>The dossier contains the Life of Antony (Acts)</desc>
+               </relation>
+               <relation name="saws:contains"
+                         active="LIT1118DossierAntony"
+                         passive="LIT2974RepCh255">
+                  <desc>The dossier may contain the Image of Antony</desc>
+               </relation>
+               <relation name="saws:contains"
+                         active="LIT1118DossierAntony"
+                         passive="LIT2868RepCh149">
+                  <desc>The dossier may contain the Image of Antony</desc>
+               </relation>
+               <relation name="saws:contains"
+                         active="LIT1118DossierAntony"
+                         passive="LIT4148SalamAntonii">
+                  <desc>The dossier may contain the Salām to Antony</desc>
+               </relation>
+               <relation name="saws:contains"
+                         active="LIT1118DossierAntony"
+                         passive="LIT2753RepCh37">
+                  <desc>The dossier may contain the Salām to Antony</desc>
+               </relation>
+               <relation name="saws:contains"
+                         active="LIT1118DossierAntony"
+                         passive="LIT4033Senkessar#Terr22Entonyos">
+                  <desc>The dossier may contain the Commemoration note on Antony</desc>
+               </relation>
 
                
                <relation name="ecrm:P129_is_about"
-                  active="LIT1118DossierAntony"
-                  passive="PRS1962Anthony"/>
+                         active="LIT1118DossierAntony"
+                         passive="PRS1962Anthony"/>
             </listRelation>
          </div>
          

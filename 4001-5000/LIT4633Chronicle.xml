@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="LIT4633Chronicle"
      xml:lang="en"
      type="work">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:id="t1">Chronicle of Bakāffā</title>
@@ -34,7 +34,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -58,7 +64,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="SG" when="2018-05-28">uploading  and encoing the text</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
          <!--<div type="edition">
             <div type="textpart" subtype="part" xml:id="Part1" n="1">
@@ -100,7 +106,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <note>The first part of the chronicle deals with the first four years of
                         <persName ref="PRS2377Bakaffa"/>'s reign. </note>
                     <ab>
-                        ዜናሁ፡ ለ<persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሠ፡ ነገሥት፡</roleName> መሢሕ፡ ሰገድ፡</persName> ገብረ፡ 
+                        ዜናሁ፡ ለ<persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሠ፡ ነገሥት፡</roleName> መሢሕ፡ ሰገድ፡</persName> ገብረ፡ 
                         ንጉሠ፡ ነገሥት፡ እግዚአብሔር፡ ዘይሤለስ፡ ወይትወሐድ።
                         ኦ፡ አምላክ፡ ዘለዓለም፡ ቀዳማይ፡ ወደኃራይ፡ ዘስውር፡ አንተ፡ እምነ፡ ኵሉ፡ ወክሡት፡ ለከ፡ ኵሉ።
                         ወአመ፡ ፈጠርከ፡ ዓለመ፡ አልቦ፡ ዘረድአከ፡ እስመ፡ ከሀሊ፡ አንተ። ወኢኮንከ፡ ከመ፡ 
@@ -116,7 +123,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         ወደይ፡ ውስተ፡ አፉየ፡ አፍሐመ፡ እሳት፡ ዘወደይከ፡ ውስተ፡ አፉሁ፡ ለኢሳይያስ።
                         ወጸውዓኒ፡ ከመ፡ ዕዝራ፡ እንዘ፡ ትብል፡ ፍታሕ፡ አፉከ፡ ከመ፡ ትስተይ፡ ጽዋዓ፡ ዘኅብሩ፡ ይመስል፡ እሳተ።
                         ወረስየኒ፡ ጥዕጡዐ፡ ንባብ፡ ከመ፡ እንብብ፡ ኅዳጠ፡ እምነገሩ፡ ለዝንቱ፡ ዐቢይ፡ 
-                        <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName> መሢሕ፡ ሰገድ፡</persName>
+                        <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName> መሢሕ፡ ሰገድ፡</persName>
                         ወልደ፡ <persName ref="PRS5616IyasuI">አድያም፡ ሰገድ፡</persName> ጻድቅ፡ ወሰማዕት፡ 
                         ወልደ፡ <persName ref="PRS10375Yohanne">አዕላፍ፡ ሰገድ፡</persName> ጻድቅ፡ ወልደ፡ <persName ref="PRS4015Fasilada">ዓለም፡ ሰገድ።</persName>
                         ወአስምዕ፡ ለሰማዕያን፡ ኵሎ፡ ዘገብረ፡ ሎቱ፡ እግዚአብሔር፡ መንክረ፡ በዲበ፡ ምድር።
@@ -129,19 +137,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </div>
                 <div type="textpart" subtype="3">
                     <ab>ክፍል፡ ፩ ። ይደልወኒኬ፡ ከመ፡ እጽሐፍ፡ ዘኮነ፡ እምቅድመዝ፡ ወእንዘ፡ ሀሎ፡ በ<placeName ref="LOC6376Yebaba">ይባባ፡</placeName>አቡሁ፡ 
-                        <persName ref="PRS5616IyasuI">ኢያሱ፡<roleName type="title">ንጉሠ፡ ነገሥት፡</roleName></persName>
+                        <persName ref="PRS5616IyasuI">ኢያሱ፡<roleName type="title">ንጉሠ፡ ነገሥት፡</roleName>
+                  </persName>
                         ዘሐጸበ፡ አልባሲሁ፡ በደም፡ ከመ፡ <persName ref="PRS4585Georgeo">ጊዮርጊስ።</persName> ወተረግዘ፡ በኵናት፡ ከመ፡
                         <persName ref="PRS3126Claudius">ገላውዴዎስ።</persName>
                         ወተወክፈ፡ ዋዕየ፡ እሳት፡ ከመ፡ <persName ref="PRS3249Cyriacus">ቂርቆስ።</persName> ወለብሰ፡ አስኬማ፡ ዘውእቱ፡ አርአያ፡ ዘመላእክት፡ ከመ፡ 
                         <persName ref="PRS1962Anthony">እንጦንዮስ።</persName>
                         ሖረ፡ ምድረ፡ <placeName ref="LOC5733Sima">ፂማ፡</placeName> ርስተ፡ እሙ፡ ለ<persName ref="PRS2377Bakaffa">በካፋ፡</persName> እንተ፡ ይእቲ፡
                         <persName ref="PRS6832Maryamaw">ማርያማዊት፡</persName> ወለተ፡ 
-                        <persName ref="PRS7093Mikael"><roleName type="title">አቤቶ፡ </roleName> 
+                        <persName ref="PRS7093Mikael">
+                     <roleName type="title">አቤቶ፡ </roleName> 
                             ሚካኤል፡</persName> ወልደ፡ 
-                        <persName ref="PRS9901WaldaGi"><roleName type="title">ራስ፡</roleName> ወልደ፡ ጊዮርጊስ፡</persName> 
+                        <persName ref="PRS9901WaldaGi">
+                     <roleName type="title">ራስ፡</roleName> ወልደ፡ ጊዮርጊስ፡</persName> 
                         ዐቢይ፡ ወግሩም፡ መኰንን፡ ዘበጽሐ፡ ስሙዓተ፡ ነገሩ፡ ውስተ፡ ኵሉ፡ ዓለም። 
-                        ወውእቱ፡ ወልደ፡ <roleName type="title">አዛዢ፡</roleName> <persName ref="PRS12298Fasiladas">ፋሲለደስ፡</persName>
-                        ወልደ፡ <persName ref="PRS2370Bahrey"><roleName type="title">ቄስ፡ ሐፄ፡ </roleName> ባሕርይ።</persName> 
+                        ወውእቱ፡ ወልደ፡ <roleName type="title">አዛዢ፡</roleName> 
+                  <persName ref="PRS12298Fasiladas">ፋሲለደስ፡</persName>
+                        ወልደ፡ <persName ref="PRS2370Bahrey">
+                     <roleName type="title">ቄስ፡ ሐፄ፡ </roleName> ባሕርይ።</persName> 
                         ወአፍቀራ፡ ለይእቲ፡ <persName ref="PRS6832Maryamaw">ማርያማዊት፡</persName>
                         በእንተ፡ ሥነ፡ ላህያ፡ ወንጽሐ፡ ሕሊናሃ፡ ወበእንተ፡ ጸሎታ፡ ወትሕርምታ፡ እስመ፡ ጠባብ፡ ወፈራሂተ፡ እግዚአብሔር። 
                         ከሠተት፡ አፉሃ፡ በሕግ፡ ወዓቀመት፡ ሥርዓተ፡ በልሳና፡ ኃይለ፡ ወላህየ፡ ለብሰት።
@@ -152,21 +165,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <ab>ወአሐተ፡ ዕለተ፡ አእመራ፡ እንዘ፡ ድንግልት፡ ይእቲ፡ ወዘእንበለ፡ ይትቃረቡ፡ 
                         ዳግመ፡ ተረክበት፡ ፅንስተ። ወሶበ፡ በጽሐ፡ ዕለተ፡ ወሊዶታ፡ ወለደቶ፡
                         ለ<persName ref="PRS2377Bakaffa">በካፋ።</persName> ወተፈሥሐ፡ 
-                        <persName ref="PRS5616IyasuI"><roleName type="title">ንጉሥ፡</roleName> </persName> 
+                        <persName ref="PRS5616IyasuI">
+                     <roleName type="title">ንጉሥ፡</roleName> 
+                  </persName> 
                         ወአእኰቶ፡ ለእግዚአብሔር፡ ወተነበየ፡ ወይቤ፡ 
                         ዝንቱ፡ ሕፃን፡ ሥዩም፡ ለድቀቶሙ፡ ወለተንሥኦቶሙ፡ ለደቂቀ፡ እስራኤል። 
                         ናሁ፡ ይነግሥ፡ በመንግሥትየ፡ ወይነብር፡ ዲበ፡ መንበርየ፡ ወየሐውር፡ በፍኖትየ፡ ወአሐተ፡ 
                         ዕለተ፡ አእመራ፡ እንዘ፡ ድንግልት፡ ይእቲ፡  ወዘእንበለ፡ ይትቃረቡ፡ ዳግመ፡ ተረክበት፡ ፅንስተ።
                         ወሶበ፡ በጽሐ፡ ዕለተ፡ ወሊዶታ፡ ወለደቶ፡ ለ<persName ref="PRS2377Bakaffa">በካፋ።</persName> 
-                        ወተፈሥሐ፡  <persName ref="PRS5616IyasuI"><roleName type="title">ንጉሥ፡</roleName> </persName> ወአእኰቶ፡ ለእግዚአብሔር፡ 
+                        ወተፈሥሐ፡  <persName ref="PRS5616IyasuI">
+                     <roleName type="title">ንጉሥ፡</roleName> 
+                  </persName> ወአእኰቶ፡ ለእግዚአብሔር፡ 
                         ወተነበየ፡ ወይቤ፡ ዝንቱ፡ ሕፃን፡ ሥዩም፡ ለድቀቶሙ፡ ወለተንሥኦቶሙ፡ ለደቂቀ፡ እስራኤል። ናሁ፡ ይነግሥ፡ 
                         በመንግሥትየ፡ ወይነብር፡ ዲበ፡ መንበርየ፡ ወየሐውር፡ በፍኖትየ። ወይከውን፡ ሰላም፡ ወሣህል፡ በመዋዕሊሁ፡ 
                         ባሕቱ፡ ኢይትዓወቅ፡ ጊዜሁ። እሙኒ፡ አስተብፅዓቶ፡ ለእግዚአብሔር፡ እስመ፡ ወለደት፡ ሎቱ፡ ወልደ፡ በአርአያሁ፡ 
-                        ወበአምሳሊሁ፡ ለ <persName ref="PRS5616IyasuI"><roleName type="title">ንጉሥ።</roleName> </persName>
+                        ወበአምሳሊሁ፡ ለ <persName ref="PRS5616IyasuI">
+                     <roleName type="title">ንጉሥ።</roleName> 
+                  </persName>
                         ወትቤ፡ ታዓብዮ፡ ነፍስየ፡ ለእግዚአብሔር፡ ዘርእየ፡ ትሕትናሃ፡ ለአመቱ፡
                         እምይእዜሰ፡ ያስተበፅዑኒ፡ ኵሉ፡ ትውልድ፡ እስመ፡ ገብረ፡ ሊተ፡ ኀይለ፡  ዓቢያተ። ወይከውን፡ ሰላም፡ 
                         ወሣህል፡ በመዋዕሊሁ፡ ባሕቱ፡ ኢይትዓወቅ፡ ጊዜሁ። እሙኒ፡ አስተብፅዓቶ፡ ለእግዚአብሔር፡ እስመ፡ ወለደት፡ ሎቱ፡
-                        ወልደ፡ በአርአያሁ፡ ወበአምሳሊሁ፡ ለ<persName ref="PRS5616IyasuI"><roleName type="title">ንጉሥ።</roleName> </persName>
+                        ወልደ፡ በአርአያሁ፡ ወበአምሳሊሁ፡ ለ<persName ref="PRS5616IyasuI">
+                     <roleName type="title">ንጉሥ።</roleName> 
+                  </persName>
                         ወትቤ፡ ታዓብዮ፡ ነፍስየ፡ ለእግዚአብሔር፡ ዘርእየ፡ ትሕትናሃ፡ ለአመቱ፡ እምይእዜሰ፡ 
                         ያስተበፅዑኒ፡ ኵሉ፡ ትውልድ፡ እስመ፡ ገብረ፡ ሊተ፡ ኀይለ፡  ዓቢያተ።</ab>
                 </div>
@@ -175,7 +196,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         ኮኑ፡ አዝማዲሁ፡ ያፈቅርዎ፡ ወሶበ፡ በዝኁ፡ ይትማሠጥዎ፡ እሙ፡
                         ትፈቱ፡ ሐቂፎቶ፡ ወትጽሕቅ፡ ከመ፡ ትርአዮ። ወእመቦ፡ ዘይጸውሮ፡ በእዴሁ፡ ኢይሁቦ፡
                         ለካልኡ፡ ዘእንበለ፡ ግብር። ወኵሉ፡ ዘየሐቅፎ፡ በሕፅኑ፡ ትነብር፡ መዓዛሁ፡ ውስተ፡ አልባሲሁ።
-                        ደናግልኒ፡ ወዕቤራት፡ በነጽሮቱ፡ ያስተብፅዓሃ፡ ለወላዲቱ። <persName ref="PRS5616IyasuI"><roleName type="title">ንጉሥ</roleName>ኒ፡ </persName>ምዕረ፡ ይስዕም፡
+                        ደናግልኒ፡ ወዕቤራት፡ በነጽሮቱ፡ ያስተብፅዓሃ፡ ለወላዲቱ። <persName ref="PRS5616IyasuI">
+                     <roleName type="title">ንጉሥ</roleName>ኒ፡ </persName>ምዕረ፡ ይስዕም፡
                         ከናፍሪሁ፡ እስመ፡ ይነድድ፡ በፍቅሩ። ወልሕቀ፡ ሕፃን፡ <persName ref="PRS2377Bakaffa">በካፋ፡</persName> በጥበብ፡ 
                         ወበጸጋ፡ ወአመ፡ ሖረ፡ አቡሁ፡ <persName ref="PRS5616IyasuI">ኢያሱ፡</persName> ምድረ፡ 
                         <placeName ref="LOC3457Gibe">ጊቤ፡</placeName> ወ<placeName ref="LOC2966Ennary">እናርያ፡</placeName> አትለዎ፡ 
@@ -189,10 +211,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <ab>ስምዑኒኬ፡ ኦዓቃብያነ፡ መንግሥት፡ ዘእነግረክሙ፡ <persName ref="PRS8871Sinoda">አነ፡ ጸሐፌ፡ ዝንቱ፡ 
                         ታሪክ፡ </persName> እስመ፡ ኮንኩ፡ እተልዎ፡ አቡሁ፡ በምድረ፡ <placeName ref="LOC3457Gibe" when="1704">ጊቤ።</placeName>
                      
-                        ወአመ፡ ግዕዘ፡ <persName ref="PRS5616IyasuI"><roleName type="title">ንጉሥ፡</roleName> </persName>
+                        ወአመ፡ ግዕዘ፡ <persName ref="PRS5616IyasuI">
+                     <roleName type="title">ንጉሥ፡</roleName> 
+                  </persName>
                         እምነ፡ ብሔር፡ እንተ፡ ትሰመይ፡ ቱሉ፡ ቁባ፡ ሉባ፡
                         ረከበኒ፡ <persName ref="ETH1973Oromo">ጋላ፡ </persName> ወተዘውዓኒ፡ ብዙኀ፡ 
-                        ነገረ። ወይቤለኒ፡ አርእየኒ፡ እስኩ፡ ወልደ፡ <persName ref="PRS5616IyasuI"><roleName type="title">ንጉሥ፡</roleName> </persName>
+                        ነገረ። ወይቤለኒ፡ አርእየኒ፡ እስኩ፡ ወልደ፡ <persName ref="PRS5616IyasuI">
+                     <roleName type="title">ንጉሥ፡</roleName> 
+                  </persName>
                         ዘይሰመይ፡ <persName ref="PRS2377Bakaffa">በካፋ፡</persName> ወአርአይክዎ። 
                         ወካዕበ፡ በሣልስ፡ ዕለት፡ ረከበኒ፡ ዝኩ፡ <persName ref="ETH1973Oromo">ጋላ፡</persName>
                         ወይቤለኒ፡ አእምርኬ፡ አንተ፡ ብእሲ፡
@@ -200,12 +226,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         ወይቀንዮሙ፡
                         ለ<persName ref="ETH2291Mecca">ሜጫ፡</persName> ወለ<persName ref="ETH2290Tulama">ቱለማ፡</persName> ኅቡረ። 
                         ወእቤሎ፡ በምንት፡ ተአምር፡ እንዘ፡ አረማዊ፡ አንተ። 
-                        ወይቤለኒ፡ በትእምርተ፡ አቡየ፡ አአምር። ወሶበ፡ ገባእነ፡ ውስተ፡ ትዕይንተ፡ <persName ref="PRS5616IyasuI"><roleName type="title">ንጉሥ፡</roleName> </persName>
-                        <placeName ref="LOC3577Gondar">ጐንደር፡</placeName>ነገርክዎ፡ ለ<persName ref="PRS5616IyasuI"><roleName type="title">ንጉሥ፡</roleName> </persName>
+                        ወይቤለኒ፡ በትእምርተ፡ አቡየ፡ አአምር። ወሶበ፡ ገባእነ፡ ውስተ፡ ትዕይንተ፡ <persName ref="PRS5616IyasuI">
+                     <roleName type="title">ንጉሥ፡</roleName> 
+                  </persName>
+                        <placeName ref="LOC3577Gondar">ጐንደር፡</placeName>ነገርክዎ፡ ለ<persName ref="PRS5616IyasuI">
+                     <roleName type="title">ንጉሥ፡</roleName> 
+                  </persName>
                         ዘንተ፡ ነገረ። ወአይዳዕክዎሙ፡ ለብዙኃን፡ ሰብእ፡ ከመ፡
                         ይኩኑኒ፡ ስምዐ፡ እስመ፡ በዘርኢኩ፡ ወዘሰማእኩ፡ ሰማዕተ፡ እከውን፡ ወጽድቅ፡ ውእቱ፡ 
                         ስምዕየ። ወቦ፡ እለ፡ ሰምዑ፡ ዘንተ፡ ይዕዜ፡ እንዘ፡ እነግሮ፡ ለ
-                        <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሠ፡ ነገሥት፡</roleName> በካፋ፡</persName>
+                        <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሠ፡ ነገሥት፡</roleName> በካፋ፡</persName>
                         ወኮኑኒ፡ ሰማዕተ፡ በዝንቱ፡ ከመ፡ ኢሐሰውኩ።</ab>
                 </div>
                 <div type="textpart" subtype="paragraph" n="7">
@@ -240,8 +271,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <div type="textpart" subtype="paragraph" n="9">
                     <ab>ወበሳኒታሃ፡ ለይእቲ፡ ዕለት፡ ዘውእቱ፡ በዓለ፡ ቅዱስ፡ ሩፋኤል፡ ወፅአ፡ ቃለ፡ ዓዋዲ፡ በትእዛዘ፡ ኵሉ፡ 
                         ዓለም፡ ወጠቀዓ፡ መጥቅዓ፡ ወይቤ፡ ናሁ፡ አዕረፈ፡ <roleName type="title">ንጉሥ</roleName>ነ፡
-                        <persName ref="PRS3430DawitII"><roleName type="title">ንጉሥ</roleName>ነ፡ ዳዊት፡</persName> ወነግሠ፡ 
-                        <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ</roleName>ነ፡  በካፋ፡</persName>  
+                        <persName ref="PRS3430DawitII">
+                     <roleName type="title">ንጉሥ</roleName>ነ፡ ዳዊት፡</persName> ወነግሠ፡ 
+                        <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ</roleName>ነ፡  በካፋ፡</persName>  
                         ጸላእትነ፡ ይትኃፈሩ፡ ወፍቁራኒነ፡ ይትፌሥሑ።
                         
                     </ab>
@@ -255,20 +288,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         በምድር፡ ሥምረቱ፡ ለሰብእ።ወበከመ፡ 
                         አብሠርዎሙ፡ መላእክት፡ ለኖሎት፡ እንዘ፡ ይብሉ፡ ዮም፡ ተወልደ፡ ለክሙ፡ መድኅን፡ በሀገረ፡ ዳዊት፡
                         ከማሁ፡ አብሰሮሙ፡ ቃለ፡ ዓዋዲ፡ ለሰብአ፡ ኵሉ፡ ዓለም፡ እንዘ፡ ይብል፡ ዮም፡ ነግሠ፡ እግዚእ፡
-                        <persName ref="PRS2377Bakaffa">በካፋ።</persName> </ab>
+                        <persName ref="PRS2377Bakaffa">በካፋ።</persName> 
+               </ab>
                 </div>
                 
                 <div type="textpart" subtype="paragraph" n="11">
                     <ab>እምቅድመ፡ ዝንቱሰ፡ ተጋብኡ፡ ውስተ፡ ቤተ፡ 
                         ራስ፡ ጊዮርጊስ፡ ኵሉ፡ መኳንንት፡ ወይቤሎሙ፡ 
                         መነ፡ ትፈቅዱ፡ ከመ፡ ናንግሥ፡ ለክሙ።ወነገርዎ፡ እሙንቱ፡ ዘይፈቅዱ፡ በበዘመዶሙ።
-                        ወድኅረ፡ ኵሉ፡ ይቤ፡ <persName ref="PRS4705Giyorgis"><roleName type="title">ራስ፡  </roleName>ጊዮርጊስ፡</persName>
+                        ወድኅረ፡ ኵሉ፡ ይቤ፡ <persName ref="PRS4705Giyorgis">
+                     <roleName type="title">ራስ፡  </roleName>ጊዮርጊስ፡</persName>
                         ናንግሦ፡ ለ<persName ref="PRS9901WaldaGi">ወልደ፡ ጊዮርጊስ፡ </persName> ወልደ፡ 
                         <persName ref="PRS12319NagalaMammit">ነገላ፡ ማሚት።</persName> 
                         ወቦ፡ እለ፡ ኀብሩ፡ ሎቱ፡ በዝንቱ። ወቦ፡ እለ፡ ኢሠምሩ፡ በልቦሙ፡ በአፉሆሙሰ፡ ይቤልዎ፡ 
                         ይኩን፡ በከመ፡ ፈቀድከ። ወእምዝ፡ አዘዘ፡ በቃለ፡ ቀርን።ባሕቱ፡ ኀየሉ፡ እለ፡ አፍቀርዎ፡
                         ለ<persName ref="PRS2377Bakaffa"> በካፋ፡</persName> ወአግብርተ፡ ቤቱ። ወአውፅኡ፡
-                        ቀርነ፡ ወነገሩ፡ እንዘ፡ ይብሉ፡  <persName ref="PRS2377Bakaffa"> <roleName type="title">ንጉሥ</roleName>ነ፡ በካፋ፡</persName>
+                        ቀርነ፡ ወነገሩ፡ እንዘ፡ ይብሉ፡  <persName ref="PRS2377Bakaffa"> 
+                     <roleName type="title">ንጉሥ</roleName>ነ፡ በካፋ፡</persName>
                         በከመ፡ እቤ፡ ቀዳሚ። ወኮኑ፡ ህየ፡ ብዙኃን፡ ሕዝብ፡ እለ፡ ይተግሁ፡ 
                         ለመንግሥቱ። እለሰ፡ ጸልዑ፡ መንግሥቶ፡ ተዘርዉ፡ ከመ፡ ጢስ። ወኮኑ፡ ዘይደነግፁ፡ በድምፀ፡ ቈፅል።</ab>
                 </div>
@@ -298,7 +334,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </div>
                 <div type="textpart" subtype="paragraph" n="14">
                     <ab>ወበዝንቱ፡ ኵሉ፡ ሁከት፡ ኢያንቀልቀለ፡ ልቡ፡ እምትውክልተ፡ እግዚአብሔር።
-                        ወአኀዘ፡ ይጼሊ፡  <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName> በካፋ፡</persName> 
+                        ወአኀዘ፡ ይጼሊ፡  <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName> በካፋ፡</persName> 
                         ወይቤ፡ ተዘከርኒኑ፡ እግዚአብሔር። ወካዕበ፡ ይቤ፡
                         አንሥእ፡ ኀይለከ፡ ወነዓ፡ አድኅነነ፡ አምላከ፡ ኀያላን፡ ሚጠነ። አብርህ፡ ገጸከ፡ ላዕሌነ፡ ወንድኃን። 
                         ወምዕረ፡ ይቤ፡ ኪያከ፡ ተወከልኩ፡ እግዚኦ፡ ወኢይትኃፈር፡ ለዓለም።ወበጽድቅከ፡ 
@@ -314,7 +351,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         ወአመ፡ ወ፮፡ ለዝንቱ፡ ወርኅ፡ በበዓለ፡ ኪዳነ፡ ምሕረት፡ ሰምዐ፡ እግዚአብሔር፡ ስእለቶ። ወበከመ፡ ገብረ፡ እግዚአብሔር፡ 
                         መንክረ፡ ለአበዊሁ፡ ጊዜ፡ መርሖሙ፡ መዓልተ፡ በደመና፡ ወኵሎ፡ ሌሊተ፡ በብርሃነ፡ እሳት፡
                         ገብረ፡ ሎቱ፡ መንክረ፡ ዐቢየ። ወአንጦልዓ፡ ደመና፡ ወሰወሮ፡ 
-                        ለ<persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName> በካፋ።</persName> 
+                        ለ<persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName> በካፋ።</persName> 
                         ወምሴተ፡ ከዊኖ፡ ወረደ፡ እም<placeName ref="LOC6157WahniA">ወህኒ፡</placeName>ወኀደረ፡ ታሕተ፡ እግረ፡ ደብር።</ab>
                 </div>
                 <div type="textpart" subtype="paragraph" n="16">
@@ -326,26 +364,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </div>
                 <div type="textpart" subtype="paragraph" n="17">
                     <ab> ክፍል፡ ፬። እምይእዜሰ፡ እነግር፡ ብዙኃ፡ መዓቱ፡ ለዝንቱ፡ 
-                        <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName> በካፋ፡</persName> 
+                        <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName> በካፋ፡</persName> 
                         መፍርህ፡ ወመደንግፅ፡ ወብዝኀ፡ ምሕረቱ፡ 
                         ዘኮነ፡ ላዕለ፡ <persName ref="ETH1534gawe">ጃዊ፡</persName> እስመ፡ በጥቃ፡ መዓቱ፡ ሀሎ፡ ብዙኀ፡ ምሕረቱ። 
                         ወአመ፡ ዓመተ፡ መንግሥቱ፡ ፩፡ ዓመተ፡ ወ፰፡ ዓውራኀ፡ መጽአ፡ ሎቱ፡ ዜና፡ ለንጉሥ፡ ከመ፡ 
                         አጽራረ፡ ጠለታ፡ <persName ref="ETH1534gawe">ጃዊ፡</persName> ዘአምጽኦ፡ አቡሁ፡ እምድረ፡ <placeName ref="LOC3457Gibe">ጊቤ፡</placeName> አንበሮ፡ በጽንፈ፡ 
-                        <placeName ref="LOC1022Abbay">አባዊ።</placeName></ab>
+                        <placeName ref="LOC1022Abbay">አባዊ።</placeName>
+               </ab>
                 </div>
                 <div type="textpart" subtype="paragraph" n="18">
-                    <ab>አሜሃ፡ አዘዞ፡ ለ<persName ref="PRS12299Eraqlis"><roleName type="title">ቢትወደድ፡</roleName>  ኤራቅሊስ፡</persName> 
+                    <ab>አሜሃ፡ አዘዞ፡ ለ<persName ref="PRS12299Eraqlis">
+                     <roleName type="title">ቢትወደድ፡</roleName>  ኤራቅሊስ፡</persName> 
                         ከመ፡ ይዕቀብ፡ ትዕይንተ፡ እስመ፡ ህየ፡ ሀሎ፡ አክሊለ፡ መንግሥቱ።  
-                        ወለ<roleName type="title">በጅሮንድ፡</roleName><persName ref="PRS6628Mammo">ማሞ፡ </persName>
+                        ወለ<roleName type="title">በጅሮንድ፡</roleName>
+                  <persName ref="PRS6628Mammo">ማሞ፡ </persName>
                         አማዕቀቦ፡ ኵሎ፡ ንዋየ፡ ቤቱ፡ እስመ፡ ምእመን፡ ውእቱ፡ ወተወክፈ፡ ስደተ፡  በእንቲአሁ። 
-                        ለጳጳስኒ፡ <persName ref="PRS6072Krestodo"><roleName type="title">አባ፡</roleName>  ክርስቶዶሉ፡</persName> 
+                        ለጳጳስኒ፡ <persName ref="PRS6072Krestodo">
+                     <roleName type="title">አባ፡</roleName>  ክርስቶዶሉ፡</persName> 
                         ወለመምህር፡ ዘ<placeName ref="INS0341DL">ደብረ፡ ሊባኖስ፡</placeName> 
-                        <persName ref="PRS12300TaklaHaymanot"> <roleName type="title">እጨጌ፡</roleName> ተክለ፡ ሃይማኖት፡</persName>
+                        <persName ref="PRS12300TaklaHaymanot"> 
+                     <roleName type="title">እጨጌ፡</roleName> ተክለ፡ ሃይማኖት፡</persName>
                         ወለዓቃቤ፡ ሰዓት፡ ወልደ፡ ሐዋርያት፡  ኀደጎሙ፡ 
                         ውስተ፡ ትዕይንት፡ ከመ፡ ይዘክርዎ፡ በጸሎቶሙ። ወኀደገ፡ እምነ፡ አግብርቲሁ፡ እለ፡ ይጸውሩ፡ ወላትወ፡ ወእምነ፡ ከኒሳ። 
-                        ወፈነወ፡ ሎቱ፡ ለ<roleName type="title">ደጅ፡ አዝማች፡</roleName> <persName ref="PRS6628Mammo">ማሞ፡</persName>
+                        ወፈነወ፡ ሎቱ፡ ለ<roleName type="title">ደጅ፡ አዝማች፡</roleName> 
+                  <persName ref="PRS6628Mammo">ማሞ፡</persName>
                         ዘ<placeName ref="LOC2488Damot">ዳሞት፡</placeName> መጠነ፡ ፶ነፍጥ። ወአዘዘ፡ 
-                        <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName> በካፋ፡</persName>  በቃለ፡ ዓዋዲ፡ ከመ፡ ይትልዎ፡ ኵሎ፡ ሐራዊ፡ 
+                        <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName> በካፋ፡</persName>  በቃለ፡ ዓዋዲ፡ ከመ፡ ይትልዎ፡ ኵሎ፡ ሐራዊ፡ 
                         እመኒ፡ ዘመድ፡ ወዘመደ፡ ዘመድ።</ab>
                 </div>
                 <div type="textpart" subtype="paragraph" n="19">
@@ -361,24 +407,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </ab>
                 </div>
                 <div type="textpart" subtype="paragraph" n="20">
-                    <ab>1ወአመ፡ ፳ወ፱፡ ለጥር፡ ዘውእቱ፡ በዓለ፡ እግዚእ፡ አዘዘ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName>
+                    <ab>1ወአመ፡ ፳ወ፱፡ ለጥር፡ ዘውእቱ፡ በዓለ፡ እግዚእ፡ አዘዘ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName>
                     </persName> በቃለ፡ ቀርን፡ ወይቤ፡ ይትጋብኡ፡ ኵሉ፡ ሠራዊት፡ ከመ፡ 
-                        እርአይ፡ ግብአቶሙ፡ በመርህበ፡  <placeName  ref="LOC1542Aringo">አሪንጎ።</placeName>ወሶበ፡ ተጋብኡ፡ ወፅአ፡ 
-                        <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName> </persName> 
+                        እርአይ፡ ግብአቶሙ፡ በመርህበ፡  <placeName ref="LOC1542Aringo">አሪንጎ።</placeName>ወሶበ፡ ተጋብኡ፡ ወፅአ፡ 
+                        <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName> 
+                  </persName> 
                         ዲበ፡ ፈረሱ፡ ዘይሰመይ፡ የብሳ።3 በይእቲ፡ 
-                        ዕለት፡ አንከረ፡ ኵሉ፡ ዓለም፡ እስመ፡ ተመሰለ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName> በካፋ፡</persName>
+                        ዕለት፡ አንከረ፡ ኵሉ፡ ዓለም፡ እስመ፡ ተመሰለ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName> በካፋ፡</persName>
                         መልአከ፡ ሰማይ፡ ወኢመሰለ፡ ለባሴ፡ ሥጋ። ወርእየ፡ ሠራዊቶ፡ 
                         እንዘ፡ ኢይወርድ፡ እምነ፡ ፈረሱ። ወሶበ፡ ለበወ፡ ውሕደተ፡ ሠራዊቱ፡ ኅዳጠ፡ ሐወጸቶ፡ መዓት።6 ወእምቅድመ፡ ይዕርብ፡ 
                         ፀሐይ፡ አቍረረ፡ መዓቶ።7 ወነገረ፡ በቃለ፡ ቀርን፡ ወይቤ፡ ዮምሰ፡ መሐርክዎሙ፡ ለሠራዊትየ፡ ወኵሉ፡ ዘተርፈ።8 ለእመ፡ ኢመጽአ፡ ጌሠመ፡
-                        ወሳኒታ፡ ያእምር፡ ከመ፡ አኃዝኖ2፡ በርስቱ፡ ወንብረቱ።9 ወነበረ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName> </persName> 
-                        በ<placeName  ref="LOC1542Aringo">አሪንጎ፡</placeName> ፲ወ፮፡ ዕለተ፡
+                        ወሳኒታ፡ ያእምር፡ ከመ፡ አኃዝኖ2፡ በርስቱ፡ ወንብረቱ።9 ወነበረ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName> 
+                  </persName> 
+                        በ<placeName ref="LOC1542Aringo">አሪንጎ፡</placeName> ፲ወ፮፡ ዕለተ፡
                         ወፈነዎ፡ ላእከ፡ ኀቤሁ፡ ደጅ፡ አዝማች፡  ማሞ፡  ዘ<placeName ref="LOC2488Damot">ዳሞት፡</placeName>ከመ፡ ጸብዖ፡ ወአሕለቆ፡ ለጠለታ፡ 
                         <persName ref="ETH1534gawe">ጃዊ።</persName>
                         
                     </ab>
                 </div>
                 <div type="textpart" subtype="paragraph" n="21">
-                    <ab>ክፍል፡ ፭። ወአመ፡ ፫፡ ለየካቲት፡ በዕለተ፡ ሰኑይ፡ አዘዘ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName> </persName>
+                    <ab>ክፍል፡ ፭። ወአመ፡ ፫፡ ለየካቲት፡ በዕለተ፡ ሰኑይ፡ አዘዘ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName> 
+                  </persName>
                         በቃለ፡ ቀርን፡ ወይቤ፡ ኵሉ፡ ይትልዎ፡ ለ<roleName type="title">ግራ፡ አዝማች፡ </roleName> 
                         <persName ref="PRS12302HellaweKrestos">ህላዌ፡ ክርስቶስ፡</persName>  እስመ፡
                         የሐውር፡ በሕገ፡ <roleName type="office">ፊት፡ አውራሪ።</roleName> ወተንሥአ፡ እምነ፡<placeName ref="LOC1542Aringo">አሪንጎ፡</placeName> 
@@ -386,43 +440,62 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         ወአዘዘ፡ ከመ፡ ኢይዝብጡ፡ አቅርንተ፡ ዘእንበለ፡ ዘይዘብጥ፡ <roleName type="office">ፊት፡ አውራሪ። </roleName>
                         ምዕረ፡ ለትእምርተ፡ ጒዕዞ። ወተድባቡ፡ ስፉሕ፡ ዲበ፡ ርእሱ።  
                         አግብርቲሁኒ፡ እለ፡ ይጸውሩ፡ ወላትወ፡ የሐውሩ፡ ቅድሜሁ። ወአግብርቲሁ፡ እለ፡ ይጸውሩ፡ ነፍጠ፡ የሐውሩ፡ ማእከለ፡ ወላትው፡ ወማእከሌሁ፡ 
-                        እንዘ፡ ያርሕቁ፡ ሰብአ፡ ከመ፡ ኢይግሥሥ፡ ጸዓድዒዳነ፡ አልባሲሁ፡ ለ<persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ።</roleName> </persName>
-                        ወ<roleName type="title">ሊቀ፡ መኳስ፡ </roleName><persName ref="PRS12303GabraLeul">ገብረ፡ ልዑል፡</persName> የሐውር፡ ቅድሜሁ፡ በከመ፡ ሥርዓቱ።
-                        ወመላህቀተ፡ አግብርቲሁ፡ ይከልኡ፡ ሰብአ፡ እምገጸ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ።</roleName> </persName>
+                        እንዘ፡ ያርሕቁ፡ ሰብአ፡ ከመ፡ ኢይግሥሥ፡ ጸዓድዒዳነ፡ አልባሲሁ፡ ለ<persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ።</roleName> 
+                  </persName>
+                        ወ<roleName type="title">ሊቀ፡ መኳስ፡ </roleName>
+                  <persName ref="PRS12303GabraLeul">ገብረ፡ ልዑል፡</persName> የሐውር፡ ቅድሜሁ፡ በከመ፡ ሥርዓቱ።
+                        ወመላህቀተ፡ አግብርቲሁ፡ ይከልኡ፡ ሰብአ፡ እምገጸ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ።</roleName> 
+                  </persName>
                         
                     </ab>
                 </div>
                 <div type="textpart" subtype="paragraph" n="22">
                     <ab>ወይእተ፡ ዕለተ፡ በጽሐ፡ <placeName ref="LOC7096Zemaha">ዝማሐ፡</placeName>ወኀደረ፡ ውስተ፡ ቤቱ፡ ለ
-                        <persName ref="PRS12321Yaqob"><roleName type="title">ባሻ፡</roleName> ያዕቆብ።</persName>
+                        <persName ref="PRS12321Yaqob">
+                     <roleName type="title">ባሻ፡</roleName> ያዕቆብ።</persName>
                         ወበዕለተ፡ ሠሉስ፡ ኀደረ፡ <placeName ref="LOC7098Zugara">ዙገራ።</placeName> ወበይእቲ፡ ዕለት፡
                         ኮነ፡ ጸብእ፡ ግብታዊ፡ በትዕይንት፡ ሞተ፡ ፩፡ እምነ፡ ዋኛታ። ወበዕለተ፡ ረቡዕ፡ ኀደረ፡  በቅሎ፡ ፍላጋ፡ ወበዕለተ፡ ሐሙስ፡ ኀደረ፡ <placeName ref="LOC7099Ganta">ገንታ።</placeName>
                         ወእንዘ፡ ሀሎ፡ ውስተ፡ ፍኖት፡ <placeName ref="LOC1669Azazo">አዘዞ፡</placeName> ለ<roleName type="title">ባሻ፡</roleName> 
                         <persName ref="PRS12323Arkalades">አርከሌድስ፡</persName> ኀያል፡ ወሬዛ፡ ይዕቀብ፡ ሙራደ፡ ዓቀባ፡ ለገመድ፡ በር፡ ወኢያኅልፍ፡ ሰብአ፡ እምቅድመ፡ ይኅልፍ፡
-                        <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName> </persName> እስመ፡ ፀባብ፡ ይእቲ፡ አንቀጽ።
+                        <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName> 
+                  </persName> እስመ፡ ፀባብ፡ ይእቲ፡ አንቀጽ።
                         ወተአዚዞ፡ ሖረ፡ ወተከለ፡ ሐይመቶ፡ ውስተ፡ ወግር፡ ዘርእሰ፡ ይእቲ፡ ፍኖት። 
-                        ወግዕዘ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ።</roleName> </persName> እምነ፡ ገንታ፡ 
+                        ወግዕዘ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ።</roleName> 
+                  </persName> እምነ፡ ገንታ፡ 
                         በዕለተ፡ ዓርብ፡ ወኀደረ፡ አንዳቤት።
                         
                     </ab>
                 </div>
                 <div type="textpart" subtype="paragraph" n="23">
-                    <ab>ወበቀዳሚት፡ ሰንበት፡ በጽሐ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName> </persName>
+                    <ab>ወበቀዳሚት፡ ሰንበት፡ በጽሐ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName> 
+                  </persName>
                         <placeName ref="LOC2515Danqar">ደንቆር፡</placeName>ምስለ፡ ትዕይንቱ፡ ወበቅጽበት፡ ተፅዕነ፡ ዲበ፡ ፈረሱ፡ ወሖረ፡ ምስለ፡ ኅዳጣን፡ አግብርቲሁ። 
-                        ወበጽሐ፡ ኀበ፡ ተተክለ፡ ሐይመቱ፡ ለ<roleName type="title">ባሻ፡</roleName> <persName ref="PRS12323Arkalades">አርከሌድስ፡</persName> 
+                        ወበጽሐ፡ ኀበ፡ ተተክለ፡ ሐይመቱ፡ ለ<roleName type="title">ባሻ፡</roleName> 
+                  <persName ref="PRS12323Arkalades">አርከሌድስ፡</persName> 
                         ወወረደ፡ እምነ፡ ፈረሱ፡ ወቦአ፡ ውስተ፡ ሐይመት። ወምስሌሁ፡ ሀለዉ፡ <roleName type="title">ግራ፡ አዝማች፡</roleName> 
                         እልፍዮስ፡ ጡጫ፡
-                        ወ<persName ref="PRS9901WaldaGi"><roleName type="title">ባሻ፡ </roleName> ወልደ፡ ጊዮርጊስ፡ </persName> ቈለኛ።
-                        ወሕቀ፡ ጐንዲዮሙ፡ በጽሑ፡ <persName ref="PRS12329Mammoye"><roleName type="title">ብላቴን፡ ጌታ፡</roleName> ማሞዬ፡</persName>
-                        ወ<persName ref="PRS12330GabraLeul"><roleName type="title">ሊቀ፡ መኳስ፡</roleName> ገብረ፡ ልዑል፡</persName> ወሊጋባ፡ ስምዖን።
+                        ወ<persName ref="PRS9901WaldaGi">
+                     <roleName type="title">ባሻ፡ </roleName> ወልደ፡ ጊዮርጊስ፡ </persName> ቈለኛ።
+                        ወሕቀ፡ ጐንዲዮሙ፡ በጽሑ፡ <persName ref="PRS12329Mammoye">
+                     <roleName type="title">ብላቴን፡ ጌታ፡</roleName> ማሞዬ፡</persName>
+                        ወ<persName ref="PRS12330GabraLeul">
+                     <roleName type="title">ሊቀ፡ መኳስ፡</roleName> ገብረ፡ ልዑል፡</persName> ወሊጋባ፡ ስምዖን።
                         
                     </ab>
                 </div>
                 <div type="textpart" subtype="paragraph" n="24">
                     <ab>ወእምድኅረ፡ አዕረፈ፡ 
-                        ሕቀ፡ ወፅአ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName>  </persName> 
+                        ሕቀ፡ ወፅአ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName>  
+                  </persName> 
                         እምነ፡ ሐይመት፡ ጊዜ፡ ቀትር። ወተቈልቈለ፡ በእግሩ፡ ይእተ፡ ፍኖተ፡ ኀያል፡
-                        <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName>በካፋ፡</persName> 
+                        <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName>በካፋ፡</persName> 
                         ወወልደ፡ ውርዝውት፡ ወኢይውኅዶ፡ ኀይል፡ 
                         እስመ፡ ወልደ፡ ነአስ፡ ውእቱ። ዘንተኒ፡ አመረነ፡ ሱቱኤል፡ ዕዝራ፡ ረዓዬ፡ ኅቡአት፡ በመጽሐፉ፡ እንዘ፡ ይብል፡ ካልእ፡ ዘበኃይለ፡ ነአስ፡ ተወልደ። ወካልእ፡ ዘተወልደ፡ 
                         በማሕፀነ፡ ርስዕ፡ ወለሊከ፡ ተአምር፡ ባሕቱ፡ ከመ፡ ታውኅዱ፡ ኀይለ፡ እምቀደምትክሙ፡ አንትሙ። 
@@ -431,15 +504,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </div>
                 
                 <div type="textpart" subtype="paragraph" n="25">
-                    <ab>ወእምዝ፡ አዘዞ፡ ለ<roleName type="title">ባሻ፡ </roleName><persName ref="PRS12323Arkalades">አርከሌድስ፡ </persName> 
+                    <ab>ወእምዝ፡ አዘዞ፡ ለ<roleName type="title">ባሻ፡ </roleName>
+                  <persName ref="PRS12323Arkalades">አርከሌድስ፡ </persName> 
                         ከመ፡ ይሑር፡ ወይኅድግ፡ ዓቂበ፡ ይእቲ፡ ፍኖት። ወኮነ፡ ኵሉ፡ የሐውር፡ በከመ፡ ፈቀደ።
-                        <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ</roleName>ሰ፡  </persName> 
+                        <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ</roleName>ሰ፡  </persName> 
                         ዓደወ፡ ፈለገ፡ <placeName ref="LOC1022Abbay">ዓባዊ፡</placeName>  
                         ወኀደረ፡ <placeName ref="LOC7105AgamWeha">አጋም፡ ወሀ።</placeName> 
                         በእሑድ፡ ሰንበት፡ ግዕዘ፡ እምህየ፡ ወእንዘ፡ ሀሎ፡ 
                         በፍኖት፡ ተቀበልዎ፡ ሐራሁ፡ ቤልማ፡ ወጋዲሳ፡ ሌንጮ፡ 
                         ወወሬዛ፡ እንዘ፡ ይዘፍኑ። ወመልአኮሙ፡ ወሬዛ፡ ፍትው፡ 
-                        አቡሊድስ፡ ያንሶሱ፡ ማእከሌሆሙ፡ ዲበ፡ ፈረሱ፡ ቀይሕ፡ እንዘ፡ ይለብስ፡ ግስላ። አሜሃ፡ በጽሐ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName> </persName>ደብረ፡ ፆት።
+                        አቡሊድስ፡ ያንሶሱ፡ ማእከሌሆሙ፡ ዲበ፡ ፈረሱ፡ ቀይሕ፡ እንዘ፡ ይለብስ፡ ግስላ። አሜሃ፡ በጽሐ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName> 
+                  </persName>ደብረ፡ ፆት።
                         
                     </ab>
                 </div>
@@ -447,7 +524,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <ab>1ክፍል፡ ፮።2ይእዜኒ፡ በኅዳጥ፡ እነግር፡ በእንተ፡ ኂሩቱ፡ ወፍቅሩ፡ ወትሕትናሁ፡ ለዝንቱ፡ ዐቢይ፡
                         <persName ref="PRS2377Bakaffa">በካፋ።</persName> ወበዊኦ፡ ውስተ፡ ቤት፡ አዘዘ፡ ይጥብሑ፡ አልህምተ፡
                         ስቡሐተ2፡ ዘአልቦ፡ ኍልቊ።4ወጸውዖሙ፡ ለመኳንንት፡ ወአንበሮሙ፡ ቅድሜሁ።5አሜሃ፡ አዘዘ፡ ያምጽኡ፡ ማዕደ።6ወሰሚዖሙ፡ መኳንንት፡ ዘንተ፡ ተንሥኡ፡ 
-                        ለወፂእ፡ ኀበ፡ ዴዴ፡ እስከ፡ ይሠራዕ፡ ማዕድ፡ በከመ፡ ልማዶሙ።<persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ</roleName>ሰ፡  </persName>
+                        ለወፂእ፡ ኀበ፡ ዴዴ፡ እስከ፡ ይሠራዕ፡ ማዕድ፡ በከመ፡ ልማዶሙ።<persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ</roleName>ሰ፡  </persName>
                         ይቤሎሙ፡ ኢትፃኡ። ወተሠርዐ፡ ማዕድ፡ በቅድሜሆሙ። ወአጽገቦሙ፡ መብልዐ፡ 
                         ወስቴ፡ በበመዓርጊሆሙ፡ ለእለ፡ ይነብሩ፡ ወለእለ፡ ይቀውሙ፡ ለእለሂ፡ ይቀድሙ፡ ወለእለሂ፡ ይዴኃሩ5፡ እስመ፡ ጠቢበ፡ ልብ፡ ወበሊሐ፡ ልሳን፡ ውእቱ፡ 
                         <persName ref="PRS2377Bakaffa">በካፋ።</persName>
@@ -462,8 +540,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <div type="textpart" subtype="paragraph" n="27">
                     <ab>ወበዕለተ፡ ሰኑይ፡ ዘውእቱ፡ በአተ፡ ጾመ፡ ነነዌ፡ ወዓለ፡ ንጉሥ፡ ህየ፡ እስከ፡ ይትጋባእ፡ ሰብእ። ህየኒ፡ መጽኡ፡ ደጃዝማች፡
                         ማሞ፡ ዘ<placeName ref="LOC2488Damot">ዳሞት፡</placeName>ወአዛዢ፡ ብንያም፡ ዘይባባ።
-                        ወተራኪቦሙ፡ ምስለ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName>  </persName>ገብኡ፡ ብሔሮሙ።4ወበሠሉስ፡ ዕለት1፡ 
-                        ግዐዘ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName>  </persName> 
+                        ወተራኪቦሙ፡ ምስለ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName>  
+                  </persName>ገብኡ፡ ብሔሮሙ።4ወበሠሉስ፡ ዕለት1፡ 
+                        ግዐዘ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName>  
+                  </persName> 
                         እምደብረ፡ ፆት፡ ወተፅዕነ፡ ዲበ፡ ፈረሱ፡ ወሖረ፡ ምስለ፡ ኅዳጣን፡ ሠራዊት።5ወበጺሖ፡ ውስተ፡ ቤተ፡ 
                         ክርስቲያን፡ ዘቅዱስ፡ ጊዮርጊስ፡ ኀደረ፡ ቻኵ።ወበዕለተ፡ ረቡዕ፡ ኀደረ3፡ ጀንስ።7ወበዕለተ፡ ሐሙስ፡ ዘውእቱ፡ 
                         ፋሲካ፡ ነነዌ፡ ኀደረ4፡ አረፋ።6ወበዕለተ፡ ዓርብ፡ ደርቅ፡ ወንዝ፡ ወበቀዳሚ፡ ሰንበት፡ በጽሐ፡ ወንዳ።</ab>
@@ -472,22 +554,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <div type="textpart" subtype="paragraph" n="28">
                     <ab>1ወበህየ፡ 
                         መጽኡ፡ ኅዳጣን፡ እምነ፡ <persName ref="ETH1534gawe">ጃዊ፡</persName> እለ፡ ይብልዎሙ፡ ቊፅር።
-                        ወይቤልዎ፡ ለ<persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName>  </persName>በቃለ፡ <persName ref="ETH1534gawe">ጃዊ፡</persName>  መሐረነ፡  
-                        ኦ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName>  </persName> 
+                        ወይቤልዎ፡ ለ<persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName>  
+                  </persName>በቃለ፡ <persName ref="ETH1534gawe">ጃዊ፡</persName>  መሐረነ፡  
+                        ኦ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName>  
+                  </persName> 
                         እስመ፡ ንሕነ፡ አግብርቲከ፡ ወአግብርተ፡ አቡከ።3እመኒ፡ አበስነ፡ እግዚኦ፡ እስመ፡ ለነ፡ አበሳ፡ ወለከ፡ ምሕረት።4ወይቤሎሙ፡ 
-                        <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡</roleName>  </persName> 
+                        <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡</roleName>  
+                  </persName> 
                         ሑሩኬ፡ መሐርኩክሙ2።5ባሕቱ፡ አምጽእዎሙ፡ ለሮጌ፡ ወለነጮ፡ እምዬ።6እመሰ፡ ኢያምጻእክምዎሙ፡ ትበልዑ፡ 
                         ኵስሐክሙ፡ ወትሰትዩ፡ ስንተክሙ።ወኢያመሠ (A156va)ጠኒ፡ ፩፡ እስከ፡ ዘያስተዓ(G4v)ዝብ፡ ዲበ፡ ዐረፍት3።8 
                         ወእሁብ፡ ሥጋክሙ፡ ለአዕዋፈ፡ ሰማይ፡ ለእመ፡ ኢመጻእክሙ፡ እስከ፡ ዕለተ፡ ረቡዕ፡ ኀበ፡ ሀሎኩ፡ አነ።9ወምሴተ፡ ከዊኖ፡ ዕለተ፡ እሑድ፡ 
-                        ተቈልቈለ፡<persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName>  </persName> 
+                        ተቈልቈለ፡<persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName>  
+                  </persName> 
                         እምይእቲ፡ ወግር፡ ምስለ፡ ኅዳጣን፡ ሠራዊት።10ወበጽሐ፡ ዋዳን፡ ዘይሰመይ፡ አባ፡ ጌራ።
                         ወበሰኑይ፡ ተንሥኡ፡ ሠራዊት፡ እምህየ፡ ወበጽሑ፡ ዋዳን፡ ኀበ፡ ሀሎ፡ <persName ref="PRS2377Bakaffa">
-                            <roleName type="title">ንጉሥ፡ </roleName>  </persName> </ab>
+                            <roleName type="title">ንጉሥ፡ </roleName>  
+                  </persName> 
+               </ab>
                 </div>
                 
                 <div type="textpart" subtype="paragraph" n="29">
-                    <ab>ወበዕለተ፡ ሠሉስ፡ አዘዘ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ 
-                    </roleName>  </persName> ከመ፡ ኢይበርብሩ፡ ቤተ፡ ወእክለ፡ ዘውእቱ፡ ብሔር።2ወሶበ፡ አስተሐቀሩ፡ ቃሎ፡ 
+                    <ab>ወበዕለተ፡ ሠሉስ፡ አዘዘ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ 
+                    </roleName>  
+                  </persName> ከመ፡ ኢይበርብሩ፡ ቤተ፡ ወእክለ፡ ዘውእቱ፡ ብሔር።2ወሶበ፡ አስተሐቀሩ፡ ቃሎ፡ 
                         ወበርበሩ፡ ፈነዎሙ፡ ለአግብርቲሁ፡ የአኀዝዎሙ1፡ ወያምጽእዎሙ።3ወሶበ፡ አምጽእዎሙ፡ ለእሉ፡ በርበር፡ አምተረ፡ አእዛኒሆሙ2።4
                         ባሕቱ፡ ተራኅርኃ፡ ሎቱ፡ ለጸሐፌ፡ ዝንቱ፡ ታሪክ፡ በእንተ፡ ድክትምናሁ፡ 
                         ከመ፡ ኢይምትር፡ እዝነ3፡ ወዓሊሁ።5ወይቤ፡ ኅድግዎ፡ ይሑር፡ ወኢትምትሩ፡ እዝኖ4።6እግዚአብሔር፡ ያግርር፡ ፀሮ፡ ወየሀቦ፡ ምሕረተ፡ ዘለዓለም።</ab>
@@ -496,7 +590,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <div type="textpart" subtype="paragraph" n="30">
                     <ab>1ወእንዘ፡ ሀሎ፡ ህየ፡ መጽአ፡ ደጅ፡ አዝማች፡ ማሞ፡ እንተ፡ ባሕቲቱ።2ወፊት፡ አውራሪ፡ አግናጥዮስ፡ ዘኀለፈ1፡ 
                         ቅድመ፡ በደንገል፡ በር፡ መጽአ ምስለ፡ ሠራዊት፡ እለ፡ ተሠይመ፡ ዲቤሆሙ።3ወበዕለተ፡ ረቡዕ፡ ሶበ፡ 
-                        አእመረ2፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName> 
+                        አእመረ2፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName> 
                         </persName>
                         ከመ፡ አልቦ፡ ዘመጽአ፡ እምነ፡ <persName ref="ETH1534gawe">ጃዊ፡</persName> አስተጋብኦሙ፡ ለመኳንንት፡ ሥዩማን3፡ ወስዑራን4፡ ወይ(A156vb)ቤሎሙ፡
                         ምንተ፡ ትመክሩ፡ በእንተ፡ <persName ref="ETH1534gawe">ጃዊ።</persName>
@@ -505,15 +600,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         ወቀተሉ፡ ብዙኀ5፡ እምነ፡ <persName ref="ETH1534gawe">ጃዊ።</persName> ወአውዓዩ፡ ቤቶ፡ በእሳት።8ወማኅረኩ፡ ንዋዮ፡ ወጥሪቶ፡ ብእሲቶ፡ ወውሉዶ፡ አልህምቲሁ፡ ወአባግዒሁ፡ ዘአልቦ፡ ኍልቊ።</ab>
                 </div>
                 <div type="textpart" subtype="paragraph" n="31">
-                    <ab> <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ
+                    <ab> 
+                  <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ
                     </roleName>ኒ፡   </persName> ተንሥአ፡ እምዋዳን፡ በዕለተ፡ ሐሙስ፡ እንዘ፡ ፊት፡ አውራሪ፡ አግናጥዮስ።
                         2እስከ፡ ዝየሰ፡ ኮነ፡ ፊት፡ አውራሪ፡ ግራ፡ አዝማች1፡ 
                         ህላዌ፡ ክርስቶስ፡ ወኀደረ2፡ ደገሞ። ወበዕለተ፡ ዓርብ፡  በጽሐ፡ <persName ref="PRS2377Bakaffa">
-                            <roleName type="title">ንጉሥ፡ </roleName>  </persName> እናሞራ፡ ዘይሰመይ፡ ገብሮ፡ አምባ።4ወበህየ፡ ተቀበልዎ፡ ሰብአ፡ 
+                            <roleName type="title">ንጉሥ፡ </roleName>  
+                  </persName> እናሞራ፡ ዘይሰመይ፡ ገብሮ፡ አምባ።4ወበህየ፡ ተቀበልዎ፡ ሰብአ፡ 
                         <placeName ref="LOC2488Damot">ዳሞት፡</placeName>
                             ወአገው፡ አቦሌ፡ ቡታ፡ እንዘ፡ ይትዋነዩ፡ በበአፍራሲሆሙ፡ ወይዌድስዎ፡ በእንተ፡ ውርዛዌሁ።5ወአዘዞሙ፡ 
                             <persName ref="PRS2377Bakaffa">
-                                <roleName type="title">ንጉሥ፡ </roleName> </persName>  ለደጅ፡ አዝማች፡ ማሞ፡ 
+                                <roleName type="title">ንጉሥ፡ </roleName> 
+                  </persName>  ለደጅ፡ አዝማች፡ ማሞ፡ 
                         ወለአዛዢ፡ ብንያም፡ ከመ፡ ይጽብእዎ3፡ ለ<persName ref="ETH1534gawe">ጃዊ።</persName>
                         ምስለ፡ <persName ref="ETH1083Agaw">አገው፡ </persName> ወመጫ። ወጌሡ፡ በቀዳሚት፡ ዕለት፡ 
                         ወኢተረክበ፡ <persName ref="ETH1973Oromo">ጋላ።</persName>
@@ -529,16 +628,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <persName ref="ETH1534gawe">ጃዊ።</persName> ኅቡአነ፡ በምድረ፡ ዳሞት።2
                         ሖሩ፡ ኵሎሙ፡ ወራዙተ፡ ትዕይንት፡ ወኵሎሙ፡ ሐራ፡ ጠንቀኛ፡ ወበሌንሳ።3ወማኅረኩ፡ ኵሎ፡ አልህምተ፡ ወአባግዐ2፡ ወኣጣሌ።
                         3ወቦ፡ ዘጠብሐ፡ ባሕቲቱ፡ ፲ተ3፡ ወእመ፡ አኮ፡ ፭ተ።4ኍልቈሰ፡ እመኒ፡ ፼ወ፪፼፡ እንዳኢ፡ ይኈልቆ፡ ቤቱ።5ወወዓለ፡ 
-                        <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName> </persName> ቀበላ፡ ጾም፡ ህየ።
+                        <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName> 
+                  </persName> ቀበላ፡ ጾም፡ ህየ።
                         
                     </ab>
                 </div>
                 
                 <div type="textpart" subtype="paragraph" n="33">
                     <ab>1ወበዕለተ፡ ሰኑይ፡ ዘውእቱ፡ በአተ፡ ጾም፡ ተንሥአ፡ 
-                        <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName> </persName> እምነ፡ እናሞራ፡ በብዙኅ፡ ሞገስ፡ ወበዐቢይ፡ ግርማ፡ ወድልቅልቅ፡ እስመ፡ አዘዘ፡
+                        <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName> 
+                  </persName> እምነ፡ እናሞራ፡ በብዙኅ፡ ሞገስ፡ ወበዐቢይ፡ ግርማ፡ ወድልቅልቅ፡ እስመ፡ አዘዘ፡
                         ይጥቅዑ፡ መጣቅዕተ፡ ወይንፍሑ፡ አቅርንተ።2ወኀደረ2፡ በምድረ፡ ጋፋት፡ ዘይሰመይ፡ አቦላ።3ወበእለተ፡ ሠሉስ፡ በጽሐ፡ 
-                        <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName> </persName> ፍጼበድኝ፡ እንዘ፡ 
+                        <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName> 
+                  </persName> ፍጼበድኝ፡ እንዘ፡ 
                         ያድለቀልቃ፡ ለምድር።ወሶበ፡ ሰምዐ3፡ <persName ref="ETH1973Oromo">ጋላ፡</persName> መጥቅዕ፡ ወርእየ፡ ብዝኀ፡ ሠራዊት፡ ደንገፀ።5ፍርሀት5፡ ወረዓድ፡ ወረደ፡ ላዕሌሁ። 6ወኀደገ6፡ ቤቶ፡ 
                         ወንብረቶ፡ ወእክሎ፡ ወጐየ፡ ምስለ፡ ብእሲቱ፡ ወደቂቁ፡ ወእንስሳሁ።7ወተኀብአ7፡ ውስተ፡ አድባር፡ ወበኣታት፡ ወግበበ፡ ምድር።8ወጸንዐ8፡ ቦቱ፡
                         ሐሩረ፡ ፀሐይ፡ ወድምፀ፡ አራዊት፡ ወንስከተ፡ አክይስት፡ ወአቃርብት።9ፀበበቶ፡ ዓለም፡ ለጃዊ፡ ወአኀዞ9፡ ማሕምም10፡ (A157rb) ከመ፡ ብእሲት፡ 
@@ -553,10 +658,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <div type="textpart" subtype="paragraph" n="34">
                     <ab>ወሰሚዖሙ፡ ዘንተ፡ ኵሎ፡ ጠለታ፡ ጃዊ፡ ተበሀሉ፡ በበይናቲሆሙ፡
                         ወይ፡ ለነ፡ አሌ፡ ለነ።2አይቴ፡ ንጐይይ፡ እምዝንቱ፡ <persName ref="PRS2377Bakaffa">
-                            <roleName type="title">ንጉሥ።</roleName> </persName> 
+                            <roleName type="title">ንጉሥ።</roleName> 
+                  </persName> 
                         3እመኒ፡ ነዓርግ፡ ውስተ፡ ሰማይ፡ ወእመኒ፡ ንወርድ፡ ውስተ፡ ቀላይ፡ ኢናመሥጥ፡ እምእዴሁ።4ወሶበ፡ ደለዎ፡ ፩፡ ለመቅሠፍትነ፡
                         እምኮነ፡ ክቡደ፡ ከመ፡ ኆፃ፡ ባሕር። 5ወእምዝ፡ ኀረዩ1፡ ዕደወ፡ ወለ(A157va)አክዎሙ2፡ 
-                        እንዘ፡ ይብሉ፡ መሐረነ፡ ኦ፡  <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName> 
+                        እንዘ፡ ይብሉ፡ መሐረነ፡ ኦ፡  <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName> 
                         </persName> ወተሠሃለነ፡ 
                         አበስነሂ፡ ወጌገይነ።6አንተሰ፡ መሐሪ፡ አቊርር፡ መዓተከ፡ እምኔነ፡ ወለዓለምሰ፡ ኢትትመዓነ3።7ወኢታንኅ፡ መዓተከ፡ ላዕለ፡ ትውልደ፡ ጃዊ።
                         8አኮኑ፡ አግብርተ፡ አቡከ፡ ንሕነ፡ ዘአውፅአነ፡ እም(N64r) ቀንየተ፡ አረሚ።9ወአውፅአነ፡ ወአግአዘነ፡ ወወሀበነ፡ ጥምቀተ፡ ወቁርባነ።10አንተኒ፡ 
@@ -564,20 +671,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </div>  
                 <div type="textpart" subtype="paragraph" n="35">
                     <ab>1ወሰሚዖሙ፡ ዘንተ፡ እሉ፡ ዕደው፡ ዘውእቶሙ1፡ ቊጽር፡ ሖሩ፡ ኀበ፡  
-                        <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName>  </persName> እንዘ፡ ይስእሉ፡ ሣህለ።2ወነገርዎ፡ እንዘ፡ ይርዕዱ፡ 
+                        <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName>  
+                  </persName> እንዘ፡ ይስእሉ፡ ሣህለ።2ወነገርዎ፡ እንዘ፡ ይርዕዱ፡ 
                         ወያንጸፈጽፉ፡ ሐፈ፡ ነጸፍጻፈ ደም።3ሮጌኒ፡ ወነጮ፡ እምዬ፡ መጽኡ፡ ህየ፡ በፍርሃት፡ ወበትሕትና።4ወለለ፩፡ ነስሐ፡ ንስሐ፡ ነነዌ፡ ወይቤ አበስኩ፡ 
                         እግዚኦ፡ አበስኩ።5ወኃጢአትየኒ፡ እትአመን፡ እትመሐለል፡ ወእስእለከ፡ ወኢይደግም፡ እንከ፡ አብሶ። 6መኳንንትኒ፡ ኀብሩ2፡ በዝንቱ፡
-                        ወሰአሉ፡ ሎሙ፡ ምሕረተ፡ ኀበ፡  <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ 
-                        </roleName> </persName> 
+                        ወሰአሉ፡ ሎሙ፡ ምሕረተ፡ ኀበ፡  <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ 
+                        </roleName> 
+                  </persName> 
                             ወይቤሉ፡ መሐክ፡ አግብርቲከ፡ እግዚኦ፡ ወኢትትበቀሎሙ። ወኅድግ፡ ሎሙ፡ አበሳሆሙ፡ እስመ፡
                         ሰብእ፡ ኵሉ፡ ኢኮነ፡ ንጹሐ፡ በቅድሜከ።8አንተሰ፡ 
                         መሐሪ፡ ወመስተሣህል፡ ርኁቀ፡ መዓት፡ ወብዙኀ3፡ 
                         ምሕረት፡ ከመ፡ አቡከ።9ወተራኅርኃ፡  <persName ref="PRS2377Bakaffa">
-                            <roleName type="title">ንጉሥ።</roleName> </persName>
+                            <roleName type="title">ንጉሥ።</roleName> 
+                  </persName>
                         10ወሰምዐ4፡ ስእለቶሙ፡ ለመኳንንት፡ ወምህላሆሙ5፡ ለጠለታ፡ ጃዊ። ወመሐሮሙ፡ ወሰረየ6፡ ዕዳሆሙ።12ወኮነ፡ 
                         ዐቢይ7፡ ፍሥሐ፡ በምድረ፡ ጃዊ።13ስብሐት፡ ለእግዚአብሔር፡ ዘወሀቦ፡ ኀይለ7፡ ወመዊአ፡ ለዝንቱ፡ 
                             
-                                <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName> በካፋ፡</persName> 
+                                <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName> በካፋ፡</persName> 
                         ዘሠጠቃ፡ ለጐዣም፡ ወዖደ፡ ኵሎ፡ አድያሚሃ፡ ወኀለፈ8፡ እንተ፡ ማእከላ፡ ለ<placeName ref="LOC2488Damot">ዳሞት፡</placeName> እንበለ፡ ይባእ፡ ፍርሃት፡
                         ውስተ፡ ልቡ፡ እንዘ፡ ይሰምዕ፡ ነገረ፡ መሰግላን፡ አፅራሪሁ፡ እለ፡ ያደነግፁ፡ ሰብአ፡ ወይሰብሩ፡ ልበ፡ በጒሥዓተ፡ ልቦሙ፡ ወፍልሐተ፡ ምክሮሙ። 
                     </ab>
@@ -588,17 +701,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         ወሞቱ፡ ፪።3፩፡ ኃያል4፡ ወሬዛ፡ ሞተ፡ ወለተ፡ እኅቱ፡ ለባሻ፡ አርከሌድስ።4ወ፩ሰ፡ ሕፃን፡ ሐፂር5፡  ሞተ፡ 
                         ድኅረ፡ ብዙኅ፡ መዋዕል።5ባሕቱ፡ ኀየሉ6፡ ወሞኡ፡ ወዓልቱ፡ ወሐራሁ፡ ለባሻ አርክሌድስ።6ወቀተሉ፡ 
                         ብዙኃነ፡ ኃያላነ7፡ እምነ፡ ዘዌ፡ በነፍጥ፡ እስመ፡ ንዋየ፡ ሐቅሉ፡ ለባሻ፡ ነፍጥ፡ ውእቱ።7ወሰሚዖ፡<persName ref="PRS2377Bakaffa">
-                            <roleName type="title">ንጉሥ፡ </roleName> </persName> 
+                            <roleName type="title">ንጉሥ፡ </roleName> 
+                  </persName> 
                         አዘዞ፡ ለደጅ፡ አዝማች፡ ማሞ፡ ዘ<placeName ref="LOC2488Damot">ዳሞት፡</placeName> ከመ፡ ያኅድግ፡ ጸብአ8።8ወቦአ፡ እንተ፡ ማእከሎሙ፡ ወፈለጦሙ፡ 
-                        ዘዘዚአሆሙ።9ወይቤሎሙ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName> </persName> ለብላቴን፡ ጌታ፡ ማሙዬ፡ ወለደጅ፡ አዝማች፡ ተስፋ፡ ዘቋራ፡ ሑሩኬ፡ 
+                        ዘዘዚአሆሙ።9ወይቤሎሙ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName> 
+                  </persName> ለብላቴን፡ ጌታ፡ ማሙዬ፡ ወለደጅ፡ አዝማች፡ ተስፋ፡ ዘቋራ፡ ሑሩኬ፡ 
                         ኅሥዎ፡ ለዘአንሥአ፡ ጸብአ9።10ወሐዊሮ(A158ra)ሙ፡ ረከቡ፡ ፪፡ ዕደወ፡ እለ፡ አንሥኡ፡ ጸብአ10፡ እምነ፡ 
                         ዘዌ።11ወአምጽእዎሙ፡ ወአሰርዎሙ11።
-                        12ድኅረሰ፡ መሐሮሙ12፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName> </persName>እስመ፡ መሐሪ፡ ውእቱ።
+                        12ድኅረሰ፡ መሐሮሙ12፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName> 
+                  </persName>እስመ፡ መሐሪ፡ ውእቱ።
                         
                     </ab>
-                </div>  <div type="textpart" subtype="paragraph" n="37">
+                </div>  
+            <div type="textpart" subtype="paragraph" n="37">
                     <ab> 1ክፍል፡ ፯።2ወአመ፡ ፳ወ፱፡ ለየካቲት፡ በበዓለ፡ እግዚእ፡ በዕለተ፡(G6r) ቅዳሚት፡ ሰንበት፡ ድኅረ፡ ከዓወ፡ 
-                        ምሕረተ፡ ላዕለ፡ ጃዊ፡ አንጸረ፡ ገጾ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName> </persName>
+                        ምሕረተ፡ ላዕለ፡ ጃዊ፡ አንጸረ፡ ገጾ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName> 
+                  </persName>
                             ድኅሬሁ።3ወተንሥአ፡ እምነ፡ ፈጼበድኝ፡ ወኀደረ1፡ ጕድላ።3
                         ወኮነ፡ አዛዢ፡ 
                         ብንያም፡ ጸራግ፡ ደዠን፡ ምስለ፡ ኤልማና፡ ወዴንሳ፡ ወሜጫ።4
@@ -606,7 +727,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         ዘውእቶሙ፡ ግራ፡ አዝማች፡ ህላዌ፡ ክርስቶስ፡ ወባሻ፡ አርከሌድስ፡ በጅሮንድ፡ ወልደ፡ ጊዮርጊስ፡ ባላምባራስ፡ ወልደ፡ 
                         ጊዮርጊስ፡ ደጅ፡ አዝማች፡ ዮሐንስ፡ ደጅ፡ አዝማች፡ አሞኔዎስ፡ በጅሮንድ፡ ጳውሎስ፡ በዢሮንድ2፡ ወልደ፡ ልዑል፡ እዱግ፡ ጴጥሮስ።5
                         ወካልአን፡ ኮኑ፡ እምነ፡ ሥዩማን3፡ ወስዑራን4።6ወይቤሎሙ፡ <persName ref="PRS2377Bakaffa">
-                            <roleName type="title">ንጉሥ፡ </roleName> </persName> ብንያም፡ ይቤለኒ፡ ይኄይሰከ፡ ሐዊር፡ ይባባ።7
+                            <roleName type="title">ንጉሥ፡ </roleName> 
+                  </persName> ብንያም፡ ይቤለኒ፡ ይኄይሰከ፡ ሐዊር፡ ይባባ።7
                         ተስፋ፡ ኢየሱስኒ፡ ይቤለኒ፡ በጺሐከ፡ ጎዣም፡ ወዓዲወከ፡ በገመድ፡ በር፡ ሑርኬ፡ አሪንጎ።8አንትሙ፡ መነ፡ ትኄይሱ፡ 
                         እም፪ሆሙ።9መኳንንትሰ፡ ተናፈቁ።10መንፈቆሙ፡ ይቤሉ፡ አሪንጎ፡ ወመንፈቆሙ፡ ይባባ።11ንጉሥሂ5፡ ይቤ፡ በጺሐነ፡ ሮቢት፡ ነአምሮ፡ ኵሎ።(A158rb)
                         
@@ -614,12 +736,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </div>
                 
                 <div type="textpart" subtype="paragraph" n="38">
-                    <ab>ወበዕለተ፡ ሰኑይ፡ ዘውእቱ፡ በአተ፡ መጋቢት፡ ግዕዘ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName> </persName>
+                    <ab>ወበዕለተ፡ ሰኑይ፡ ዘውእቱ፡ በአተ፡ መጋቢት፡ ግዕዘ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName> 
+                  </persName>
                         እም<placeName ref="LOC7112Dalma">ደልማ፡</placeName> ወኀደረ፡ 
                         <placeName ref="LOC7113Godeb">ጎዴብ፡</placeName>
                         ዘውእቱ፡ ወሰነ፡ <placeName ref="LOC2488Damot">ዳሞት፡ </placeName>ወ<placeName ref="LOC3549Gojjam">ጎዣም።</placeName> 
                         ወበእለተ፡ ሠሉስ፡ በጽሐ፡ አባዛዢ፡ ዘይሰመይ፡ ገልጥማ። ወሶበ፡ 
-                        ኢአደሞ፡ ቤት፡ ዘየኀድር፡ ቦቱ፡ ወፅአ፡ <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName> </persName> 
+                        ኢአደሞ፡ ቤት፡ ዘየኀድር፡ ቦቱ፡ ወፅአ፡ <persName ref="PRS2377Bakaffa">
+                     <roleName type="title">ንጉሥ፡ </roleName> 
+                  </persName> 
                         ምስለ፡ ኅዳጣን፡  አግብርቲሁ፡ ወኀደረ፡ 
                         ዳንጕሌ። ሰብአ፡ ትዕይንትሰ፡ ኀደሩ፡ ህየ። ወበዕለተ፡ ረቡዕ፡ ግዕዙ፡ መኳንንት፡ ወኀደሩ፡ ዳንጉሌ።
                         ንጉሥሰ፡ ተንሥአ፡ እምህየ፡ ምስለ፡ ኅዳጣን፡ ሠራዊት፡ እስመ፡ ደደክ፡ ወመካነ፡ በረድ፡ ይእቲ፡ ፍኖት፡ 

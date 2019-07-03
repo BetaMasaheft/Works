@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1399Filkes">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ፊልክስዮስ፡</title>
@@ -47,10 +47,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
-         <abstract><p>The text consists of a series of questions asked by monks (beginning
+         <abstract>
+            <p>The text consists of a series of questions asked by monks (beginning
             with ይቤሉ: አኃው) and answers given by an “interpreter” (starting with ይቤ:
-            መተርጕም). The questions are numbered.</p></abstract>
+            መተርጕም). The questions are numbered.</p>
+         </abstract>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
@@ -75,7 +85,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2017-03-30">Added keywords</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
         <div type="bibliography">
 
@@ -112,8 +122,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
         </div>
          <div type="edition">
-            <div type="textpart" xml:id="Content"><label>Table of Content</label></div>
-            <div type="textpart" subtype="explicit"><p>መልአ፡ ዘሕፁር፡ እመጽሐፈ፡ ትርጓሜ፡ ገነት፡ ዘተጽሕፈ፡ እስከ፡
+            <div type="textpart" xml:id="Content">
+               <label>Table of Content</label>
+            </div>
+            <div type="textpart" subtype="explicit">
+               <p>መልአ፡ ዘሕፁር፡ እመጽሐፈ፡ ትርጓሜ፡ ገነት፡ ዘተጽሕፈ፡ እስከ፡
                ተፍጻሜተ፡ መጽሐፍ፨ አኅጸረ፡ ውእቱ። ጽሕፈተ፡ ዘፅንስት፡ ጥቀ፡ አውጽኦታ፨ ዘአልቦቱ፡ ልማድ፡ ዘለዝላፉ፡ ለተናብቦ፡ በልሳነ፡
                ዓረባዊት፡ እም፡ ልሳነ፡ ሶርያዊት፡ ኀበ፡ ዓረቢ፨ ወኮነ፡ ፍጻሜ፡ እምኔሁ፡ በወርኃ፡ ሰኔ፡ በዓመተ፡ ፲፻፳ወ፩ እም፡ ዓመተ፡
                ሰማእታት፡ ንጹሐን፤ ትብልናሆሙ፡ ይዕቀበነ፡ አሜን፨ ወማኅሌት፡ ለእግዚአብሔር፡ ለዓለመ፡ ዓለም፡ አሜን፨ ወአሜን: ወተጋድሎትበአምጣነ ተክህሎ፤ ወማኅሌት ለእግዚአብሔር፡ ለዓለመ፡ ዓለም፡
@@ -125,7 +138,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <ptr target="bm:Witakowski2005EAEFilkesyos"/>
                   </bibl>
                   suggests that because Salāma was the metropolitan in the years <date>1348-1386</date>, the
-                  sign for 20 (፳) should be substituted by the sign for 80 (፹).</note></div>
+                  sign for 20 (፳) should be substituted by the sign for 80 (፹).</note>
+            </div>
          </div>
       </body>
    </text>

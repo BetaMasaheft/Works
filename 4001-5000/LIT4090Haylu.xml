@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT4090Haylu">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Ḫāylu Compilation (general record)</title>
@@ -32,6 +32,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <ab/>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p>The so-called "Ḫāylu Compilation" is a compilation of chronicles and other historiographic works begun by <persName ref="PRS5222haylaMi"/> by collecting manuscripts and commissioning copies after
@@ -65,7 +73,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2017-10-11">Added abstract, bibliography and textparts</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
         <div type="bibliography">
            <listBibl type="secondary">
@@ -284,10 +292,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </div>
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:id="Susenyos"
-                >
+            <div type="textpart" subtype="chapter" xml:id="Susenyos">
                <label>A short summary of the Chronicle of <persName ref="PRS9038Susenyos"/>
                </label>
             </div>

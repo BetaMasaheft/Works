@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:lang="en"
      xml:id="LIT1893Martyr"
      type="work">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ገድል፡ ወስምዕ፡ ዘቅዱስ፡ ሊቀ፡ ሐራ፡ ፋሲለደስ፡</title>
@@ -49,6 +49,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -76,7 +84,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="SG" when="2019-03-25">Additions</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
@@ -110,7 +118,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   ዝንቱ፡ ፋሲለደስ፡ ሊቀ፡ ሐራ፡ ወልደ፡ አውዶኪዮስ፡ እኍሁ፡ ለሲድራኮስ፡
                   </ab>
                </div>
-               <div type="textpart" subtype="explicit" xml:lang="gez" xml:id="Taamer">
+               <div type="textpart"
+                    subtype="explicit"
+                    xml:lang="gez"
+                    xml:id="Taamer">
                   <label>Taamer</label>
                   <ab>
                      ወኮነ፡ እምኔሃ፡ ተአምራት፡ ዐበይት። ወይእዜኒ፡ ናሁ፡ አጠየቁክሙ፡ ኦአሕዛብ፡ <gap reason="omitted" extent="unknown"/> ውስተ፡ በተ፡ 

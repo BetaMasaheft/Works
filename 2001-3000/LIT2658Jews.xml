@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT2658Jews">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Discourse of Gregory of Armenia against the Jews</title>
@@ -31,6 +31,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
          
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -38,26 +46,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="it">Italiano</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
-         <textClass><keywords>
-            <term key="ChristianLiterature"/>
-            <term key="CanonLaw"/>
-            <term key="Translation"/>
-            <term key="Homily"/>
-         </keywords></textClass>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="CanonLaw"/>
+               <term key="Translation"/>
+               <term key="Homily"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change when="2019-03-22" who="ES">added titles keywords author</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>
       <listRelation>
          <relation name="saws:isAttributedToAuthor"
-            active="LIT2658Jews"
-            passive="PRS4825Gregory"/>
+                   active="LIT2658Jews"
+                   passive="PRS4825Gregory"/>
       </listRelation>
    </text>
 </TEI>

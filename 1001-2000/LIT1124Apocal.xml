@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1124Apocal">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ራእየ፡ [እግዝእትነ፡] ማርያም፡</title>
@@ -58,6 +58,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -87,15 +95,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="MV" when="2017-12-15">Added CANT id</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
             <relation name="saws:isVersionInAnotherLanguageOf"
-               active="LIT1124Apocal#t4arabic"
-               passive="LIT1124Apocal#t3greek"/>
+                      active="LIT1124Apocal#t4arabic"
+                      passive="LIT1124Apocal#t3greek"/>
             <relation name="saws:isVersionInAnotherLanguageOf"
-               active="LIT1124Apocal#t1"
-               passive="LIT1124Apocal#t4arabic">
+                      active="LIT1124Apocal#t1"
+                      passive="LIT1124Apocal#t4arabic">
                <desc>The Arabic Apocalypse of Paul was translated into Gǝʿǝz, renamed, edited and developed. New visions were added. 
                   <bibl>
                      <ptr target="bm:Sokolinskaia2007EAEMary"/>
@@ -103,11 +111,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </desc> 
             </relation>
             <relation name="saws:isVersionInAnotherLanguageOf"
-               active="LIT1124Apocal#t5amharic"
-               passive="LIT1124Apocal#t1"/>
+                      active="LIT1124Apocal#t5amharic"
+                      passive="LIT1124Apocal#t1"/>
             <relation name="saws:isAttributedToAuthor"
-               active="LIT1124Apocal"
-               passive="PRS5695John"/>
+                      active="LIT1124Apocal"
+                      passive="PRS5695John"/>
          </listRelation>
          <div type="bibliography">
             

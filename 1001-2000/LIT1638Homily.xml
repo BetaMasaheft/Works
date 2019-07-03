@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1638Homily">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">ድርሳነ፡ ፍልሰታ፡</title>
@@ -35,6 +35,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -58,21 +66,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2018-08-20" who="DR">Added keywords and bibliography</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
          <listRelation>
             <relation name="saws:isAttributedToAuthor"
-               active="LIT1638Homily"
-               passive="PRS3251Cyriacus"/>
+                      active="LIT1638Homily"
+                      passive="PRS3251Cyriacus"/>
             
-            <relation name="syriaca:different-from" active="LIT1638Homily" passive="LIT1640Homily LIT1639Homily LIT4971MalkeaErgata LIT2932RepCh213"></relation>
+            <relation name="syriaca:different-from"
+                      active="LIT1638Homily"
+                      passive="LIT1640Homily LIT1639Homily LIT4971MalkeaErgata LIT2932RepCh213"/>
          </listRelation>
          <listBibl type="editions">
-            <bibl><ptr target="bm:Arras1974TransituText"/><citedRange unit="page">34-55</citedRange></bibl>
+            <bibl>
+               <ptr target="bm:Arras1974TransituText"/>
+               <citedRange unit="page">34-55</citedRange>
+            </bibl>
          </listBibl>
          <listBibl type="translation">
-            <bibl><ptr target="bm:Arras1974TransituVersio"/><citedRange unit="page">26-42</citedRange></bibl>
+            <bibl>
+               <ptr target="bm:Arras1974TransituVersio"/>
+               <citedRange unit="page">26-42</citedRange>
+            </bibl>
          </listBibl>
       </body>
    </text>

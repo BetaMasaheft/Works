@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT4054Gadl">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ገድሎ፡ ለኤልያስ፡ ነቢይ፡</title>
@@ -41,6 +41,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -62,12 +70,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2017-06-29">Added keywords</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
             <relation name="saws:isAttributedToAuthor"
-               active="LIT4054Gadl"
-               passive="PRS3827Ephrem">
+                      active="LIT4054Gadl"
+                      passive="PRS3827Ephrem">
                <desc>The text is transmitted anonymously in Ethiopic
                   and ascribed to <persName ref="PRS3827Ephrem"/> in the Arabic tradition.  
                   <bibl>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1113Anqasa">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">አንቀጸ፡ ብርሃን፡</title>
@@ -44,6 +44,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -82,7 +90,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2017-02-09" who="ES">added relations and keywords</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          
          
@@ -91,12 +99,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="bibliography">
             <listBibl type="editions">
                <bibl>
-                  <ptr target="bm:Grohmann1919Marien"/><citedRange unit="page">384-388</citedRange>
+                  <ptr target="bm:Grohmann1919Marien"/>
+                  <citedRange unit="page">384-388</citedRange>
                </bibl>
             </listBibl>
             <listBibl type="translation">
                <bibl>
-                  <ptr target="bm:Grohmann1919Marien"/><citedRange unit="page">385-389</citedRange>
+                  <ptr target="bm:Grohmann1919Marien"/>
+                  <citedRange unit="page">385-389</citedRange>
                </bibl>
             </listBibl>
             <listBibl type="text">

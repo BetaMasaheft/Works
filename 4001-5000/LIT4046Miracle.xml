@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT4046Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: Miracle of the widow and her son, a thief saved by Mary</title>
@@ -33,6 +33,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -60,11 +68,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-05-03">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="secondary">
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">152</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">152</citedRange>
+               </bibl>
             </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf"
@@ -73,8 +84,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <relation name="saws:isRelatedTo"
                          active="LIT4046Miracle"
                          passive="LIT3616Miracle"/>
-               <relation name="saws:isRelatedTo" active="LIT4046Miracle" passive="LIT3692Miracle"/>
-               <relation name="saws:isRelatedTo" active="LIT4046Miracle" passive="LIT3864Miracle"/>
+               <relation name="saws:isRelatedTo"
+                         active="LIT4046Miracle"
+                         passive="LIT3692Miracle"/>
+               <relation name="saws:isRelatedTo"
+                         active="LIT4046Miracle"
+                         passive="LIT3864Miracle"/>
             </listRelation>
          </div>
          <div type="edition">

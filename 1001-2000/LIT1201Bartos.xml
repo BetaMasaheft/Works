@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1201Bartos">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ባርቶስ፡</title>
@@ -56,6 +56,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -91,30 +99,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="MV" when="2017-11-20">Updated</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
             <relation name="saws:formsPartOf"
-               active="LIT1201Bartos"
-               passive="LIT1959Mashaf">
+                      active="LIT1201Bartos"
+                      passive="LIT1959Mashaf">
                <desc>According to <bibl>
-                  <ptr target="bm:Basset1895Prieres"/>
-                  <citedRange unit="page">7-8</citedRange>
-               </bibl>,
+                     <ptr target="bm:Basset1895Prieres"/>
+                     <citedRange unit="page">7-8</citedRange>
+                  </bibl>,
                   the Prayer of Mary on Bartos is contained in the <ref type="work" corresp="LIT1959Mashaf">Maṣḥafa qedar</ref>.</desc>
             </relation>
             <relation name="saws:formsPartOf"
-               active="LIT1201Bartos"
-               passive="LIT3557Salota">
+                      active="LIT1201Bartos"
+                      passive="LIT3557Salota">
                <desc>According to <bibl>
-                  <ptr target="bm:Basset1895Prieres"/>
-                  <citedRange unit="page">7</citedRange>
-               </bibl>,
+                     <ptr target="bm:Basset1895Prieres"/>
+                     <citedRange unit="page">7</citedRange>
+                  </bibl>,
                   the Prayer of Mary on Bartos is contained in the <ref type="work" corresp="LIT3557Salota">Ṣalota rǝqet</ref>.</desc>
             </relation>
             <relation name="saws:isVersionInAnotherLanguageOf"
-               active="LIT1201Bartos"
-               passive="t4Arabic">
+                      active="LIT1201Bartos"
+                      passive="t4Arabic">
                <desc>The Arabic version is very different from the Ethiopic, it has more details in the principal narration but lacks the list of angels.</desc>
             </relation>
          </listRelation>

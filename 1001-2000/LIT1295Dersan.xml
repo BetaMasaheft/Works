@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1295Dersan">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ድርሳነ፡ ሚካኤል፡</title>
@@ -60,6 +60,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -97,7 +105,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2019-03-26" who="ES">bits of data from ESam004 added + relation</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          
          <div type="bibliography">
@@ -139,7 +147,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                  subtype="chapter"
                  xml:lang="gez"
                  xml:id="Introduction"><!-- Added after BAVet82 (MV - 2017-05-17); text of incipit from ESam004 -->
-               <div type="textpart" subtype="incipit"><ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩ዱ፡ አምላክ፡ ንቀድም፡ በረድኤተ፡ እግዚአብሔር፡ ልዑል፡ ጺሒፈ፡ ዜና፡ ዕበዩ፡ ወክብሩ፡ ወልዕልሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ይስአል፡ ለነ፡ እምኀበ፡ እግዚአብሔር፡ አምላኩ፡ መሐሪ፡ ምሕረት፡ ወሣህል።</ab></div>
+               <div type="textpart" subtype="incipit">
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩ዱ፡ አምላክ፡ ንቀድም፡ በረድኤተ፡ እግዚአብሔር፡ ልዑል፡ ጺሒፈ፡ ዜና፡ ዕበዩ፡ ወክብሩ፡ ወልዕልሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ይስአል፡ ለነ፡ እምኀበ፡ እግዚአብሔር፡ አምላኩ፡ መሐሪ፡ ምሕረት፡ ወሣህል።</ab>
+               </div>
             </div>
             
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Hedar">
@@ -685,13 +695,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </label>
                </div>
                
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Prayer"><label>Za-ʾaqrabku māḥleta… </label>
-                  <div type="textpart" subtype="inplicit"><ab>ዘአቅረብኩ፡ ማሕሌተ፡<foreign xml:lang="en">The song I am offering</foreign></ab></div></div><!-- from ESnsm006 -->
-               <div type="textpart" subtype="explicit"><ab>ተፈጸመ፡ ድርሳነ፡ ሚካኤል፡ በሰላመ፡ እግዚአብሔር፡ ወበጸሎተ፡ ሚካኤል፡ ወስብሐት፡ ለእግዚአብሔር፡ ዘአፈጸመነ፡ በዳህና፡ ወበሰላም፡ አሜን።</ab><!-- from ESam004 --></div>
+               <div type="textpart"
+                    subtype="chapter"
+                    xml:lang="gez"
+                    xml:id="Prayer">
+                  <label>Za-ʾaqrabku māḥleta… </label>
+                  <div type="textpart" subtype="inplicit">
+                     <ab>ዘአቅረብኩ፡ ማሕሌተ፡<foreign xml:lang="en">The song I am offering</foreign>
+                     </ab>
+                  </div>
+               </div>
+               <!-- from ESnsm006 -->
+               <div type="textpart" subtype="explicit">
+                  <ab>ተፈጸመ፡ ድርሳነ፡ ሚካኤል፡ በሰላመ፡ እግዚአብሔር፡ ወበጸሎተ፡ ሚካኤል፡ ወስብሐት፡ ለእግዚአብሔር፡ ዘአፈጸመነ፡ በዳህና፡ ወበሰላም፡ አሜን።</ab>
+                  <!-- from ESam004 -->
+               </div>
             </div>
             
          </div>
-         <listRelation><relation name="ecrm:P129_is_about" active="LIT1295Dersan" passive="PRS7049Michael"/></listRelation>
+         <listRelation>
+            <relation name="ecrm:P129_is_about"
+                      active="LIT1295Dersan"
+                      passive="PRS7049Michael"/>
+         </listRelation>
       </body>
    </text>
 </TEI>

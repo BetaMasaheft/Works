@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1718Kidana">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ኪዳነ፡ ምሕረት፡</title>
@@ -33,6 +33,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p>V. ARRAS (ed., tr.), De transitu Mariae apocrypha aethiopice, II, Louvain 1974 (CSCO 351, 352 [SAe 68, 69]), 73-85 (text) = 56-67 (tr.)</p>
@@ -56,14 +64,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <listRelation>
          <relation name="ecrm:P129_is_about"
                    active="LIT1718Kidana"
                    passive="CovenantMercy"/>
          <relation name="ecrm:P129_is_about"
-            active="LIT1718Kidana"
-            passive="PRS6819Mary"/>
+                   active="LIT1718Kidana"
+                   passive="PRS6819Mary"/>
          <relation name="dcterms:isPartOf"
                    active="LIT1718Kidana"
                    passive="LIT1290Dersan"/>

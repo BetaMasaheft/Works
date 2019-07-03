@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1938Mashaf">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ኪዳን፡</title>
@@ -33,6 +33,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -48,11 +56,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2019-03-26">added relation</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
-         <listRelation><relation name="dcterms:hasPart" active="LIT1938Mashaf" passive="LIT1716Kidanz"></relation>
-            <relation name="dcterms:hasPart" active="LIT1938Mashaf" passive="LIT1717Kidanz"></relation>
+         <listRelation>
+            <relation name="dcterms:hasPart"
+                      active="LIT1938Mashaf"
+                      passive="LIT1716Kidanz"/>
+            <relation name="dcterms:hasPart"
+                      active="LIT1938Mashaf"
+                      passive="LIT1717Kidanz"/>
          </listRelation>
       </body>
    </text>

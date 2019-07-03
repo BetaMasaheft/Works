@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="LIT4851greekRoyal"
      xml:lang="en"
      type="work">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">Pseudo-trilingual royal inscriptions, RIÉ
@@ -42,7 +42,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -67,14 +73,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 encoding</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 <listBibl type="editions">
-                    <bibl xml:id="EBernand"><ptr target="bm:BernandRIEIIIA"/><citedRange unit="page">7</citedRange></bibl>
-                    <bibl xml:id="Dillmann"><ptr target="bm:Dillmann1878Anfange"/></bibl>
-                    <bibl xml:id="salt"><ptr target="bm:Salt1809III"/><citedRange unit="page">179-201</citedRange></bibl>
-                    <bibl xml:id="littmann"><ptr target="bm:Littmann1913DAEIV"/></bibl>
+                    <bibl xml:id="EBernand">
+                  <ptr target="bm:BernandRIEIIIA"/>
+                  <citedRange unit="page">7</citedRange>
+               </bibl>
+                    <bibl xml:id="Dillmann">
+                  <ptr target="bm:Dillmann1878Anfange"/>
+               </bibl>
+                    <bibl xml:id="salt">
+                  <ptr target="bm:Salt1809III"/>
+                  <citedRange unit="page">179-201</citedRange>
+               </bibl>
+                    <bibl xml:id="littmann">
+                  <ptr target="bm:Littmann1913DAEIV"/>
+               </bibl>
                 </listBibl>
             </div>
             <div type="edition" xml:lang="grc">
@@ -84,28 +100,68 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     τοῦ <placeName ref="LOC5333Raydan">Ῥαειδᾶν</placeName> καὶ 
                     <placeName ref="LOC3843HBS" resp="#EBernand">Αἰθιόπων<!--this is supported by the other copies, which have Habashat--></placeName> καὶ 
                     <placeName ref="LOC5395Saba">Σαβαειτῶν</placeName> καὶ 
-                    τοῦ <placeName ref="LOC5491Salhen" resp="Dillmann"><certainty 
-                        locus="value" match="../@ref" assertedValue="http://dare.ht.lu.se/places/42554" resp="salt"><desc>Zeyla<cit><bibl><ptr target="bm:Salt1809III"/><citedRange unit="page">188</citedRange></bibl><quote>The same Zeila is in all modern charts.</quote></cit></desc></certainty>
+                    τοῦ <placeName ref="LOC5491Salhen" resp="Dillmann">
+                  <certainty locus="value"
+                             match="../@ref"
+                             assertedValue="http://dare.ht.lu.se/places/42554"
+                             resp="salt">
+                     <desc>Zeyla<cit>
+                           <bibl>
+                              <ptr target="bm:Salt1809III"/>
+                              <citedRange unit="page">188</citedRange>
+                           </bibl>
+                           <quote>The same Zeila is in all modern charts.</quote>
+                        </cit>
+                     </desc>
+                  </certainty>
                         <listRelation>
-                            <relation name="skos:closeMatch" active="http://dare.ht.lu.se/places/42554" passive="https://pleiades.stoa.org/places/39304"/>
+                            <relation name="skos:closeMatch"
+                               active="http://dare.ht.lu.se/places/42554"
+                               passive="https://pleiades.stoa.org/places/39304"/>
                         </listRelation>Σιλεῆ</placeName> καὶ 
                     τοῦ <placeName ref="pleiades:40338">
-                        <certainty 
-                            locus="value" match="../@ref" resp="salt"><desc><cit><bibl><ptr target="bm:Salt1809III"/><citedRange unit="page">188</citedRange></bibl><quote>the Tehama of Arabia</quote></cit></desc></certainty>
-                        <certainty 
-                        locus="value" match="../@ref" assertedValue="pleiades:39399" resp="littmann"/>
-                        <certainty 
-                            locus="value" match="../@ref" assertedValue="pleiades:39307" resp="littmann"/>Τιαμῶ</placeName> καὶ
+                        <certainty locus="value" match="../@ref" resp="salt">
+                     <desc>
+                        <cit>
+                           <bibl>
+                              <ptr target="bm:Salt1809III"/>
+                              <citedRange unit="page">188</citedRange>
+                           </bibl>
+                           <quote>the Tehama of Arabia</quote>
+                        </cit>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value"
+                             match="../@ref"
+                             assertedValue="pleiades:39399"
+                             resp="littmann"/>
+                        <certainty locus="value"
+                             match="../@ref"
+                             assertedValue="pleiades:39307"
+                             resp="littmann"/>Τιαμῶ</placeName> καὶ
                     <placeName ref="pleiades:40079">
-                        <certainty locus="value" match="../@ref"><desc><cit><quote>I consider to be the Bogenses of Edrisi; I conceive the g, to have been pronounced soft like j; hence to be the same as the Modern Beja tribe near Suakin.</quote><bibl><ptr target="bm:Salt1809III"/>
-                            <citedRange unit="page">188</citedRange>"/></bibl></cit></desc></certainty>Βουγαειτῶν</placeName> <expan>
+                        <certainty locus="value" match="../@ref">
+                     <desc>
+                        <cit>
+                           <quote>I consider to be the Bogenses of Edrisi; I conceive the g, to have been pronounced soft like j; hence to be the same as the Modern Beja tribe near Suakin.</quote>
+                           <bibl>
+                              <ptr target="bm:Salt1809III"/>
+                              <citedRange unit="page">188</citedRange>"/&gt;</bibl>
+                        </cit>
+                     </desc>
+                  </certainty>Βουγαειτῶν</placeName> 
+               <expan>
                   <abbr>κ</abbr>
                   <ex>αὶ</ex>
                     </expan> τοῦ <placeName ref="pleiades:805630">Κάσου</placeName>, 
                     βασιλεὺς
                     βασιλέων, υἱὸς θεοῦ ἀνικήτου Ἄρεως, ἀτακτησάντων κατὰ καιρὸν τοῦ ἔθνους τῶν
-                    <placeName type="ethnic" ref="pleiades:40079"><listRelation>
-                        <relation name="skos:closeMatch" active="https://pleiades.stoa.org/places/795790" passive="https://pleiades.stoa.org/places/40079" cert="low"/>
+                    <placeName type="ethnic" ref="pleiades:40079">
+                  <listRelation>
+                        <relation name="skos:closeMatch"
+                               active="https://pleiades.stoa.org/places/795790"
+                               passive="https://pleiades.stoa.org/places/40079"
+                               cert="low"/>
                     </listRelation>Βουγαειτῶν</placeName> ἀπεστίλαμεν τοὺς ἡμετέρους ἀδελφοὺς Σαϊαζανᾶ καὶ τὸν Ἀδηφᾶν τούτους
                     πολεμῆσαι, καὶ παραδεδωκότων αὐτῶν ὑποτάξαντες αὐτοὺς ἤγαγον πρὸς ἡμᾶς μετὰ καὶ
                     τῶν θρεμμάτων αὐτῶν, βοῶν τέ γριβ καὶ πρ<supplied reason="lost">ο</supplied>βάτων ςσκδ καὶ κτηνῶν νωτοφόρω<supplied reason="lost">ν</supplied>,

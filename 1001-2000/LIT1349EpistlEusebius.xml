@@ -1,17 +1,19 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1349EpistlEusebius">
-   <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="work"
+     xml:lang="en"
+     xml:id="LIT1349EpistlEusebius">
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Epistle of Eusebius to Carpianus (generic record)</title>
             <editor role="generalEditor" key="AB"/>
-            <editor key="AE" role="encoder annotator"></editor>
-            <editor key="ES" role="metadata"></editor>
+            <editor key="AE" role="encoder annotator"/>
+            <editor key="ES" role="metadata"/>
             <respStmt>
                <resp>digitization</resp>
                <persName ref="AB" from="2015" to="2017"/>
@@ -25,10 +27,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                
             </respStmt>
          </titleStmt>
-<editionStmt>
+         <editionStmt>
             <p>Digital text based on  <bibl>
-               <ptr target="bm:Bausi2015Carpiano"/>
-            </bibl>.</p>
+                  <ptr target="bm:Bausi2015Carpiano"/>
+               </bibl>.</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -94,6 +96,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <!-- the format for the tagsDecl to be specified -->
          </tagsDecl>
          
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google spreadsheet </change>
@@ -104,15 +112,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2018-11-27">Specified clavis</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
 
          <div type="edition" xml:lang="gez">
-            <ab><l n="1"/>
+            <ab>
+               <l n="1"/>
                <!--1G1: 1rG3: 1rHa: 2rE1832: 7rOr481: 94rP32: 2rRont: 6bEthnt: 41bUm027: 7r-->ኤውሴብስ፡
                ለቃርጲያኖስ፡ ለዘ፡ ኣፈቅር፡ እኁየ፡ ፍሥሓ፡ ወዳኅና፡ ለከ፡ እምኃ|ቤ፡<!--Ront: 7a--> እግዚአ፡ ብሔር፡ <!--2-->
                <l n="2"/>አሞኒስ፡ እንከ፡ አሌክሰንድርያዊ፡ በብዙኅ፡ ኣስተሐምሞ፡ ወጽሂቅ፡ ገብረ፡ ወኀደገ፡ ለነ፡ ቃለ፡ ዘከመ፡
-               ኀበሩ፡ አርባዕቱ፡ ወንጌል፡ ወእምዝሰ፡ አርእስተ፡ ምንባባት፡ <l n="3"/><!--3-->|EthNT: 42a ወበእንተዝ፡
+               ኀበሩ፡ አርባዕቱ፡ ወንጌል፡ ወእምዝሰ፡ አርእስተ፡ ምንባባት፡ <l n="3"/>
+               <!--3-->|EthNT: 42a ወበእንተዝ፡
                እንከ፡ መፍትው፡ ጥንቶ፡ ይትልውዎ፡ ከመ፡ ሙስና፡ ኢይኩን፡ ሠለስቱኒ፡ በተልወ፡ ንበቱ፡ ኢይትኀደግ፡ ከመ፡ እሉንቱኒ፡ እንከ፡
                ይድኀኑ፡ እምተፀርዖ፡ በንበቱ፡ ፍጹመ፡ ሥጋ፡ ወመለያልየ፡ ይኩኑ፡ ወተአምር፡ ለለ፡ አሐዱ፡ ወንጌል፡ መካነ፡ ትእምርት፡ <!--4-->
                <l n="4"/>ወባሕቱ፡ አማነ፡ በዘህልው፡ እምጻማሁ፡ ለቀዳማዊ፡ ብእሲ፡ ዘነገረነ፡ ስሞ፡ ረከብኩ፡ አነሂ፡ ምክንያተ፡
@@ -167,9 +177,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>
          </div>
          <listRelation>
-            <relation name="saws:isAttributedToAuthor" active="LIT1349EpistlEusebius" passive="PRS3912Eusebius"></relation>
-            <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1349EpistlEusebius" passive="LIT1560Gospel#IntroductionGospels"></relation>
-            <relation name="saws:hasMember" active="LIT1349EpistlEusebius" passive="LIT4876LetterCanons"></relation>
+            <relation name="saws:isAttributedToAuthor"
+                      active="LIT1349EpistlEusebius"
+                      passive="PRS3912Eusebius"/>
+            <relation name="ecrm:CLP46i_may_form_part_of"
+                      active="LIT1349EpistlEusebius"
+                      passive="LIT1560Gospel#IntroductionGospels"/>
+            <relation name="saws:hasMember"
+                      active="LIT1349EpistlEusebius"
+                      passive="LIT4876LetterCanons"/>
             
          </listRelation>
 

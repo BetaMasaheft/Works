@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3625Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: Homily on the founding of the Convent of Mǝṭmāq</title>
@@ -29,6 +29,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -48,8 +56,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Homily"/>
             </keywords>
          </textClass>
-         <abstract><p>This miracle story also occurs without the initial promises made by Christ at the time of the visit of the Holy
-            Family, see <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">35</citedRange></bibl>.</p></abstract>
+         <abstract>
+            <p>This miracle story also occurs without the initial promises made by Christ at the time of the visit of the Holy
+            Family, see <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">35</citedRange>
+               </bibl>.</p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
@@ -58,17 +71,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-04-10">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
-               <bibl><ptr target="bm:TasfaGiyorgis1956Taammera"/>
+               <bibl>
+                  <ptr target="bm:TasfaGiyorgis1956Taammera"/>
                   <citedRange unit="item">18</citedRange>
                   <citedRange unit="page">84-97</citedRange>
                </bibl>
             </listBibl>
             <listBibl type="secondary">
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">35</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">35</citedRange>
+               </bibl>
             </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf"

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3614Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: Miracle of a monk of the Monastery of St Samuel of Kalamon</title>
@@ -30,6 +30,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -57,7 +65,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-06-24">added relation</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
@@ -74,8 +82,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             <listBibl type="secondary">
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">7</citedRange></bibl>
-               <bibl><ptr target="bm:Cerulli1943Maria"/><citedRange unit="page">166-168</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">7</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Cerulli1943Maria"/>
+                  <citedRange unit="page">166-168</citedRange>
+               </bibl>
             </listBibl>
             <!-- The Virgin Mary and the monk of the
                         Monastery Qalamun (Qalmon) (BMirMA 42-46; BHMirM 87-93; CerMaria<ref
@@ -86,17 +100,79 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            corresp="ES53r156">53r-156</ref>v, StrBritLib 48, n<locus target="#32"
                            >32</locus>, 16.-28).  -->
             <listRelation>
-               <relation name="saws:formsPartOf" active="LIT3614Miracle" passive="LIT2384Taamme"/>
-               <relation name="lawd:hasAttestation" active="LIT3614Miracle" passive="EMML6938"><desc><locus corresp="EMML6938" target="#29v"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3614Miracle" passive="EMML5520"><desc><locus corresp="EMML5520" target="#31v"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3614Miracle" passive="EMML2275"><desc><locus corresp="EMML2275" target="#194r"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3614Miracle" passive="EMML2378"><desc><locus corresp="EMML2378" target="#20v"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3614Miracle" passive="EMML6640"><desc><locus corresp="EMML6640" target="#49r"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3614Miracle" passive="EMML2060"><desc><locus corresp="EMML2060" target="#195r"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3614Miracle" passive="EMML2066"><desc><locus corresp="EMML2066" target="#31v,135v"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3614Miracle" passive="EMML2802"><desc><locus corresp="EMML2802" target="#22v"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3614Miracle" passive="EMML6196"><desc><locus corresp="EMML6196" target="#81r"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3614Miracle" passive="EMML7543"><desc><locus corresp="EMML7543" target="#17v"/></desc></relation>
+               <relation name="saws:formsPartOf"
+                         active="LIT3614Miracle"
+                         passive="LIT2384Taamme"/>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3614Miracle"
+                         passive="EMML6938">
+                  <desc>
+                     <locus corresp="EMML6938" target="#29v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3614Miracle"
+                         passive="EMML5520">
+                  <desc>
+                     <locus corresp="EMML5520" target="#31v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3614Miracle"
+                         passive="EMML2275">
+                  <desc>
+                     <locus corresp="EMML2275" target="#194r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3614Miracle"
+                         passive="EMML2378">
+                  <desc>
+                     <locus corresp="EMML2378" target="#20v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3614Miracle"
+                         passive="EMML6640">
+                  <desc>
+                     <locus corresp="EMML6640" target="#49r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3614Miracle"
+                         passive="EMML2060">
+                  <desc>
+                     <locus corresp="EMML2060" target="#195r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3614Miracle"
+                         passive="EMML2066">
+                  <desc>
+                     <locus corresp="EMML2066" target="#31v,135v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3614Miracle"
+                         passive="EMML2802">
+                  <desc>
+                     <locus corresp="EMML2802" target="#22v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3614Miracle"
+                         passive="EMML6196">
+                  <desc>
+                     <locus corresp="EMML6196" target="#81r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3614Miracle"
+                         passive="EMML7543">
+                  <desc>
+                     <locus corresp="EMML7543" target="#17v"/>
+                  </desc>
+               </relation>
             </listRelation>
          </div>
          <div type="edition">

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT2215RaeyaS">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ራእየ፡ ሲኖዳ፡</title>
@@ -33,6 +33,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -55,12 +63,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2016-11-09">Title updated and bibliography added</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
             <relation name="saws:isAttributedToAuthor"
-               active="LIT2215RaeyaS"
-               passive="PRS8823Shenute">
+                      active="LIT2215RaeyaS"
+                      passive="PRS8823Shenute">
                <desc>The Vision is attributed to <persName ref="PRS8823Shenute">Shenute of Atripe</persName>
                   in the Ethiopic tradition, but since it shows no affinity with either the Coptic Vision or the vision quoted in an Arabic homily by <persName ref="PRS3255CyrilI">Cyril</persName>, it might
                   be an original composition.

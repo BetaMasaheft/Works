@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5507MiracleStephanites" xml:lang="en" type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5507MiracleStephanites"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" xml:id="t1">Miracle of Mary: The Stephanites in Egypt and Palestine</title>
@@ -26,7 +31,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -52,24 +63,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2019-04-02">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 <listBibl type="editions">
-                    <bibl><ptr target="bm:Cerulli1970Stefaniti"/><citedRange unit="page">244-245</citedRange></bibl>
+                    <bibl>
+                  <ptr target="bm:Cerulli1970Stefaniti"/>
+                  <citedRange unit="page">244-245</citedRange>
+               </bibl>
                 </listBibl>
                 <listBibl type="translation">
-                    <bibl><ptr target="bm:Cerulli1970Stefaniti"/><citedRange unit="page">246-247</citedRange></bibl>
+                    <bibl>
+                  <ptr target="bm:Cerulli1970Stefaniti"/>
+                  <citedRange unit="page">246-247</citedRange>
+               </bibl>
                 </listBibl>
                 <listBibl type="secondary">
-                    <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">535</citedRange></bibl>
-                    <bibl><ptr target="bm:Cerulli1970Stefaniti"/></bibl>
+                    <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">535</citedRange>
+               </bibl>
+                    <bibl>
+                  <ptr target="bm:Cerulli1970Stefaniti"/>
+               </bibl>
                 </listBibl>
                 <listRelation>
                     <relation name="saws:formsPartOf"
-                        active="LIT5507MiracleStephanites"
-                        passive="LIT2384Taamme"/>
-                    <relation name="ecrm:P129_is_about" active="LIT5507MiracleStephanites" passive="PRS11211Stephanites"/>
+                         active="LIT5507MiracleStephanites"
+                         passive="LIT2384Taamme"/>
+                    <relation name="ecrm:P129_is_about"
+                         active="LIT5507MiracleStephanites"
+                         passive="PRS11211Stephanites"/>
                 </listRelation>
             </div>
         </body>

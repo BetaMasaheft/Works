@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5101MiracleRaphael" xml:lang="en" type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5101MiracleRaphael"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" xml:id="t1">Miracle of Mary: Qommos Raphael from Dabra ʾƎnṣǝnā and the sacrament of confession</title>
@@ -26,7 +31,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -54,24 +65,75 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="AM" when="2019-06-24">added relation</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 <listBibl type="secondary">
-                    <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">10</citedRange></bibl>
+                    <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">10</citedRange>
+               </bibl>
                 </listBibl>
                 <listBibl type="translation">
-                    <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">175</citedRange><citedRange unit="page">434-436</citedRange></bibl>
+                    <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">175</citedRange>
+                  <citedRange unit="page">434-436</citedRange>
+               </bibl>
                 </listBibl>
                 <listRelation>
-                    <relation name="saws:formsPartOf" active="LIT5101MiracleRaphael" passive="LIT2384Taamme"/>
-                    <relation name="lawd:hasAttestation" active="LIT5101MiracleRaphael" passive="EMML6938"><desc><locus corresp="EMML6938" target="#35v"/></desc></relation>
-                    <relation name="lawd:hasAttestation" active="LIT5101MiracleRaphael" passive="EMML2058"><desc><locus corresp="EMML2058" target="#30r"/></desc></relation>
-                    <relation name="lawd:hasAttestation" active="LIT5101MiracleRaphael" passive="EMML4205"><desc><locus corresp="EMML4205" target="#22r"/></desc></relation>
-                    <relation name="lawd:hasAttestation" active="LIT5101MiracleRaphael" passive="EMML7543"><desc><locus corresp="EMML7543" target="#20v"/></desc></relation>
-                    <relation name="lawd:hasAttestation" active="LIT5101MiracleRaphael" passive="EMML2999"><desc><locus corresp="EMML2999" target="#194r"/></desc></relation>
-                    <relation name="lawd:hasAttestation" active="LIT5101MiracleRaphael" passive="EMML2968"><desc><locus corresp="EMML2968" target="#64r"/></desc></relation>
-                    <relation name="lawd:hasAttestation" active="LIT5101MiracleRaphael" passive="EMML2550"><desc><locus corresp="EMML2550" target="#96v"/></desc></relation>
+                    <relation name="saws:formsPartOf"
+                         active="LIT5101MiracleRaphael"
+                         passive="LIT2384Taamme"/>
+                    <relation name="lawd:hasAttestation"
+                         active="LIT5101MiracleRaphael"
+                         passive="EMML6938">
+                  <desc>
+                     <locus corresp="EMML6938" target="#35v"/>
+                  </desc>
+               </relation>
+                    <relation name="lawd:hasAttestation"
+                         active="LIT5101MiracleRaphael"
+                         passive="EMML2058">
+                  <desc>
+                     <locus corresp="EMML2058" target="#30r"/>
+                  </desc>
+               </relation>
+                    <relation name="lawd:hasAttestation"
+                         active="LIT5101MiracleRaphael"
+                         passive="EMML4205">
+                  <desc>
+                     <locus corresp="EMML4205" target="#22r"/>
+                  </desc>
+               </relation>
+                    <relation name="lawd:hasAttestation"
+                         active="LIT5101MiracleRaphael"
+                         passive="EMML7543">
+                  <desc>
+                     <locus corresp="EMML7543" target="#20v"/>
+                  </desc>
+               </relation>
+                    <relation name="lawd:hasAttestation"
+                         active="LIT5101MiracleRaphael"
+                         passive="EMML2999">
+                  <desc>
+                     <locus corresp="EMML2999" target="#194r"/>
+                  </desc>
+               </relation>
+                    <relation name="lawd:hasAttestation"
+                         active="LIT5101MiracleRaphael"
+                         passive="EMML2968">
+                  <desc>
+                     <locus corresp="EMML2968" target="#64r"/>
+                  </desc>
+               </relation>
+                    <relation name="lawd:hasAttestation"
+                         active="LIT5101MiracleRaphael"
+                         passive="EMML2550">
+                  <desc>
+                     <locus corresp="EMML2550" target="#96v"/>
+                  </desc>
+               </relation>
                 </listRelation>
             </div>
             <div type="edition">

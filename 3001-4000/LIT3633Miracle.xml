@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3633Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: Five Pains of the Virgin, Conversation of the Virgin and Jesus Christ; promise of salvation to those who recite the Paternoster and Ave Maria</title>
@@ -35,6 +35,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -47,7 +55,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="Paks2"></term>
+               <term key="Paks2"/>
                <term key="ChristianLiterature"/>
                <term key="Miracle"/>
                <term key="Apocrypha"/>
@@ -62,18 +70,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-05-29">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
-               <bibl><ptr target="bm:TasfaGiyorgis1956Taammera"/>
+               <bibl>
+                  <ptr target="bm:TasfaGiyorgis1956Taammera"/>
                   <citedRange unit="item">49</citedRange>
                   <citedRange unit="page">190-191</citedRange>
               </bibl>
             </listBibl>
             <listBibl type="secondary">
-               <bibl><ptr target="bm:Cerulli1943Maria"/><citedRange unit="page">336-337</citedRange></bibl>
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">400</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Cerulli1943Maria"/>
+                  <citedRange unit="page">336-337</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">400</citedRange>
+               </bibl>
             </listBibl>
 
             <listRelation>

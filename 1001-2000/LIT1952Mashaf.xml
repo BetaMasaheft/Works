@@ -7,16 +7,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1952Mashaf">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ምሥጢር፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa mǝśṭir</title>
             <title xml:lang="en" corresp="#t1">Book of Mystery</title>
             <editor role="generalEditor" key="AB"/>
-            <editor key="HE" role="encoder annotator"></editor>
-            <editor key="ES" role="metadata"></editor>
-            <editor key="DR" role="metadata"></editor>
+            <editor key="HE" role="encoder annotator"/>
+            <editor key="ES" role="metadata"/>
+            <editor key="DR" role="metadata"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
             <funder>ERC</funder>
             <respStmt>
@@ -29,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          
          <editionStmt>
             <p>Digital text based on  <bibl>
-               <ptr target="bm:Hiruie2007MM"/>
-            </bibl>.</p>
+                  <ptr target="bm:Hiruie2007MM"/>
+               </bibl>.</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -59,10 +59,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <encodingDesc>
          <projectDesc>
             <p>The text of TraCES edition was prepared within the framework of the TraCES project on the basis of <bibl>
-               <ptr target="bm:Hiruie2007MM"/>
-            </bibl>. The edition collages the mss listed in addition to using the existing edition, <bibl>
-               <ptr target="bm:Yaqob1990MestirTextus"/>
-            </bibl>.</p>
+                  <ptr target="bm:Hiruie2007MM"/>
+               </bibl>. The edition collages the mss listed in addition to using the existing edition, <bibl>
+                  <ptr target="bm:Yaqob1990MestirTextus"/>
+               </bibl>.</p>
          </projectDesc>
          <editorialDecl>
             
@@ -75,6 +75,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <!-- the format for the tagsDecl to be specified -->
          </tagsDecl>
          
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -84,7 +90,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          
-         <creation  when="1424">The work is said to have been authored by <persName ref="PRS4709Giyorgis"></persName> in 1424.</creation>
+         <creation when="1424">The work is said to have been authored by <persName ref="PRS4709Giyorgis"/> in 1424.</creation>
          
          <textClass>
             <keywords>
@@ -103,7 +109,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2018-07-02" who="ES">TraCES metadata added</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="secondary">

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1488GadlaQ">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ገድለ፡ ቂርቆስ፡</title>
@@ -56,7 +56,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   (EMML V, 420; Monastery of Ḥāyq ʾƎsṭifānos, ʾAmbāssal, Wallo).</witness>
                <witness corresp="EMML2514">               EMML no. 2514 (1382/88), fols. 126r-133r (in the “Gadla Samāʿtāt”): “Martyrdom of Cyriacus and his mother, Julitta [Qirqos wa-emmu Iyyaluṭā]
                   (EMML VII, 10; Church of Astit Kidāna Mǝḥrat, ʾAnkobarr, Shoa).</witness>
-<witness corresp="EMML3469">               EMML no. 3469 (19th cent.), 
+               <witness corresp="EMML3469">               EMML no. 3469 (19th cent.), 
                fols. 2r-20r: “Martyrdom [Gadl wa-semʿ] of Cyriacus and his mother Julitta”;
                fols. 42r-61v: “Martyrdom [Gadl wa-samāʿt] of Cyriacus and his mother Julitta”;
                (EMML VIII, 283-284; Church of Šawā Medā Qirqos, Gubbālāfto, Yaǧǧu, Wallo).</witness>
@@ -95,6 +95,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
              -->
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -122,7 +130,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2019-06-13" who="ES">added sources + relation</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="secondary">
@@ -130,10 +138,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Pisani2015GadlaQirqos"/>
                </bibl>
                <bibl>
-                  <ptr target="bm:Budge1976Saints"></ptr><citedRange>II, 1130-1131</citedRange>
+                  <ptr target="bm:Budge1976Saints"/>
+                  <citedRange>II, 1130-1131</citedRange>
                </bibl>
                <bibl>
-                  <ptr target="bm:Colin1990SynaxYakk"/><citedRange>106-111</citedRange>
+                  <ptr target="bm:Colin1990SynaxYakk"/>
+                  <citedRange>106-111</citedRange>
                </bibl>
             </listBibl>
             <listRelation>
@@ -142,10 +152,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                          passive="LIT1493Gadlas">
                   
                </relation>
-               <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1488GadlaQ" passive="LIT5739GadlaQDossier"></relation>
+               <relation name="ecrm:CLP46i_may_form_part_of"
+                         active="LIT1488GadlaQ"
+                         passive="LIT5739GadlaQDossier"/>
                
-               <relation name="ecrm:P129_is_about" active="LIT1488GadlaQ" passive="PRS3249Cyriacus"></relation>
-               <relation name="ecrm:P129_is_about" active="LIT1488GadlaQ" passive="PRS5790Julitta"></relation>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT1488GadlaQ"
+                         passive="PRS3249Cyriacus"/>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT1488GadlaQ"
+                         passive="PRS5790Julitta"/>
         
             </listRelation>
          </div>

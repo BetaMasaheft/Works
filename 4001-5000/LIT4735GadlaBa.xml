@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT4735GadlaBa">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ገድለ፡ በትረ፡ ግላ፡ ማርያም፡</title>
@@ -41,6 +41,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -56,16 +64,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Apocrypha"/>
             </keywords>
          </textClass>
-         <abstract><p>The acts of <persName ref="PRS2536BatraGe"/> are only preserved as three miracles within the 
+         <abstract>
+            <p>The acts of <persName ref="PRS2536BatraGe"/> are only preserved as three miracles within the 
             <ref type="work" corresp="LIT2384Taamme"/>: <ref type="work" corresp="LIT5255MiracleBatergela1"/>,<ref type="work" corresp="LIT5256MiracleBatergela2"/> 
-            and <ref type="work" corresp="LIT5257MiracleBatergela3"/>.</p></abstract>
+            and <ref type="work" corresp="LIT5257MiracleBatergela3"/>.</p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="MV" when="2017-10-20">Created text record</change>
          <change who="DR" when="2019-03-07">Added information from Macomber</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
@@ -77,16 +87,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <bibl>
                   <ptr target="bm:Getachew1982Betragelamaryam"/>
                </bibl>
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">287-289</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">287-289</citedRange>
+               </bibl>
                <bibl> 
                   <ptr target="bm:Raineri2003Betragelamaryam"/>
                </bibl>
             </listBibl>
             <listRelation>
-               <relation name="ecrm:P129_is_about" active="LIT4735GadlaBa" passive="PRS2536BatraGe"/>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT4735GadlaBa"
+                         passive="PRS2536BatraGe"/>
                <relation name="saws:formsPartOf"
-                  active="LIT4735GadlaBa"
-                  passive="LIT2384Taamme"/>
+                         active="LIT4735GadlaBa"
+                         passive="LIT2384Taamme"/>
             </listRelation>
          </div>
       </body>

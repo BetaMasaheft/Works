@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1931Mashaf">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ግንዘት፡</title>
@@ -103,6 +103,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <creation notAfter="1500"/>
          <langUsage>
@@ -131,12 +139,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2017-04-04">Added keywords</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
             <relation name="saws:contains"
-               active="LIT1931Mashaf"
-               passive="LIT2042Nagarb                   LIT3843BookTh            LIT2177Prayer       LIT3841Homily                   LIT1644Homily                   LIT4500Mashaf"/>
+                      active="LIT1931Mashaf"
+                      passive="LIT2042Nagarb                   LIT3843BookTh            LIT2177Prayer       LIT3841Homily                   LIT1644Homily                   LIT4500Mashaf"/>
             <relation name="saws:contains" active="LIT1931Mashaf" passive="LIT1629Homily">
                <desc>The <foreign xml:lang="gez">Dǝrsān baʾǝnta ʾǝlla nomu kāhǝnāt wa-diyāqonāt</foreign> is contained in most manuscripts of the <foreign xml:lang="gez">Maṣḥafa gǝnzat</foreign>.
                   <bibl>
@@ -148,13 +156,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <desc>The Ṣalot baʾǝnta ʾǝlla nomu circulates independently in <ref type="mss" corresp="BAVet18"/>.</desc>
             </relation>
             <relation name="saws:contains"
-               active="LIT1931Mashaf"
-               passive="LIT1758Lefafa                LIT1915Mashaf">
+                      active="LIT1931Mashaf"
+                      passive="LIT1758Lefafa                LIT1915Mashaf">
                <desc>The Lǝfāfa ṣǝdǝq and the Maṣḥafa ʾardǝʾǝt circulate both as independent works and as parts of the Maṣḥafa gǝnzat</desc>
             </relation>
             <relation name="saws:contains"
-               active="LIT1931Mashaf"
-               passive="LIT3957SalotaB">
+                      active="LIT1931Mashaf"
+                      passive="LIT3957SalotaB">
                <desc>The Ṣalota burāke za-Bāsǝlyos is also part of <ref type="work" corresp="LIT1960Mashaf"/> and occurs at least once independently
                   in <ref type="mss" corresp="BNFet71"/>.</desc>
             </relation>

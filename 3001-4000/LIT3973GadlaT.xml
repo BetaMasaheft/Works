@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3973GadlaT">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ገድለ፡ ተክለ፡ ሃይማኖት፡</title>
@@ -42,9 +42,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
-         <abstract><ab>The text of the Life of St Takla Haymanot, unspecified recension. Several recensions exist, including <title ref="LIT3969GadlaTHW">Wāldǝbbā recension</title> (the earliest and shortest), <title ref="LIT3970GadlaTHH">Ḥayq recension</title>, 
-            and the most widely spread <title ref="LIT1507GadlaT">Dabra Libānos recension</title>, which in its turn exists in at least two sub-recensions, <title ref="LIT4114GadlaT">first Dabra Libānos sub-recension</title> and <title ref="LIT4115GadlaT">second Dabra Libānos sub-recension</title>.</ab></abstract>
+         <abstract>
+            <ab>The text of the Life of St Takla Haymanot, unspecified recension. Several recensions exist, including <title ref="LIT3969GadlaTHW">Wāldǝbbā recension</title> (the earliest and shortest), <title ref="LIT3970GadlaTHH">Ḥayq recension</title>, 
+            and the most widely spread <title ref="LIT1507GadlaT">Dabra Libānos recension</title>, which in its turn exists in at least two sub-recensions, <title ref="LIT4114GadlaT">first Dabra Libānos sub-recension</title> and <title ref="LIT4115GadlaT">second Dabra Libānos sub-recension</title>.</ab>
+         </abstract>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
@@ -66,7 +76,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="SG" when="2019-04-02">Addition to content</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="secondary">
@@ -79,14 +89,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <listRelation>
                <relation name="saws:isRelatedTo"
                          active="LIT3973GadlaT"
-                         passive="LIT3969GadlaTHW"><desc>Vita of Takla Hāymānot exists in several recensions, one of them being the Wāldǝbbā recension</desc></relation>
+                         passive="LIT3969GadlaTHW">
+                  <desc>Vita of Takla Hāymānot exists in several recensions, one of them being the Wāldǝbbā recension</desc>
+               </relation>
                <relation name="saws:isRelatedTo"
-                  active="LIT3973GadlaT"
-                  passive="LIT3970GadlaTHH"><desc>Vita of Takla Hāymānot exists in several recensions, one of them being the Ḥayq recension</desc></relation>
+                         active="LIT3973GadlaT"
+                         passive="LIT3970GadlaTHH">
+                  <desc>Vita of Takla Hāymānot exists in several recensions, one of them being the Ḥayq recension</desc>
+               </relation>
                <relation name="saws:isRelatedTo"
-                  active="LIT3973GadlaT"
-                  passive="LIT1507GadlaT"><desc>Vita of Takla Hāymānot exists in several recensions, one of them being the Dabra Libānos recension</desc></relation>
-               <relation name="dcterms:isPartOf" active="LIT3973GadlaT" passive="LIT1008DossierTH"><desc>Vita of Takla Hāymānot is part of a hagiographic dossier of Takla Hāymānot</desc></relation>
+                         active="LIT3973GadlaT"
+                         passive="LIT1507GadlaT">
+                  <desc>Vita of Takla Hāymānot exists in several recensions, one of them being the Dabra Libānos recension</desc>
+               </relation>
+               <relation name="dcterms:isPartOf"
+                         active="LIT3973GadlaT"
+                         passive="LIT1008DossierTH">
+                  <desc>Vita of Takla Hāymānot is part of a hagiographic dossier of Takla Hāymānot</desc>
+               </relation>
                
             </listRelation>
          </div>
