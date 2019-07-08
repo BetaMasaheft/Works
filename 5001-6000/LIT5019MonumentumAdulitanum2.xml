@@ -1,9 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5019MonumentumAdulitanum2" xml:lang="en"
-    type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5019MonumentumAdulitanum2"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">Monumentum Adulitanum Inscription of unknown
@@ -24,7 +28,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </publicationStmt>
             <sourceDesc>
                 <listWit>
-                    <witness xml:id="VatGr699" type="external"
+                    <witness xml:id="VatGr699"
+                        type="external"
                         facs="https://digi.vatlib.it/view/MSS_Vat.gr.699"
                         corresp="https://digi.vatlib.it/view/MSS_Vat.gr.699">Vat. Gr. 699</witness>
                 </listWit>
@@ -32,7 +37,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -56,7 +67,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="PL" when="2018-07-21">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 <listBibl type="secondary">
@@ -67,7 +78,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <bibl xml:id="vivien">
                         <ptr target="bm:VivienDeSaintMartin1863"/>
                     </bibl>
-                    <bibl xml:id="dillmann"><ptr target="bm:Dillmann1878Anfange"/><citedRange unit="page">195-205</citedRange></bibl>
+                    <bibl xml:id="dillmann">
+                  <ptr target="bm:Dillmann1878Anfange"/>
+                  <citedRange unit="page">195-205</citedRange>
+               </bibl>
                     <bibl xml:id="OGIS">
                         <ptr target="bm:OGIS"/>
                         <citedRange unit="item">199</citedRange>
@@ -87,14 +101,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <ptr target="bm:Huntingford1987Historicalgeo"/>
                         <citedRange unit="page">40-47</citedRange>
                     </bibl>
-                    <bibl xml:id="DAE"><ptr target="bm:DAE2"/><citedRange unit="page">66</citedRange></bibl>
-                    <bibl xml:id="Fauvelle-Aymar"><ptr target="bm:fauvelleAymar2009"/></bibl>
-                    <bibl xml:id="Cosma"><ptr target="bm:WolskaConusCosma"/><citedRange
-                            unit="volume">II</citedRange>
+                    <bibl xml:id="DAE">
+                  <ptr target="bm:DAE2"/>
+                  <citedRange unit="page">66</citedRange>
+               </bibl>
+                    <bibl xml:id="Fauvelle-Aymar">
+                  <ptr target="bm:fauvelleAymar2009"/>
+               </bibl>
+                    <bibl xml:id="Cosma">
+                  <ptr target="bm:WolskaConusCosma"/>
+                  <citedRange unit="volume">II</citedRange>
                         <citedRange unit="page">60-63</citedRange>
                     </bibl>
-                    <bibl xml:id="fiaccadori"><ptr target="bm:Fiaccadori2007Adulitanum"/></bibl>
-                    <bibl xml:id="speidel"><ptr target="bm:Speidel2016Adulis"/></bibl>
+                    <bibl xml:id="fiaccadori">
+                  <ptr target="bm:Fiaccadori2007Adulitanum"/>
+               </bibl>
+                    <bibl xml:id="speidel">
+                  <ptr target="bm:Speidel2016Adulis"/>
+               </bibl>
                 </listBibl>
             </div>
             <div type="edition" xml:lang="grc" resp="#Cosma">
@@ -107,13 +131,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             
                             <placeName ref="pleiades:39303" type="ethnic" xml:id="gaze">
                                 <certainty locus="value" match="../@ref" resp="#salt">
-                                    <desc><quote>Adegada, or Gaza; (Ade simply meaning a town or district)</quote>
+                                    <desc>
+                        <quote>Adegada, or Gaza; (Ade simply meaning a town or district)</quote>
                                         <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#3d068ad0-8e24-424f-a5ce-e481770d60fd">Ludolf map 1683</ref>
-                                    </desc></certainty>
-                                <certainty locus="value" match="../@ref" resp="#Fauvelle-Aymar"><desc>plaine d'altitude (1000 à 1800 m) appelée Akkälä Guzay, en surplomb du golfe de Zula.</desc></certainty>
+                                    </desc>
+                  </certainty>
+                                <certainty locus="value" match="../@ref" resp="#Fauvelle-Aymar">
+                     <desc>plaine d'altitude (1000 à 1800 m) appelée Akkälä Guzay, en surplomb du golfe de Zula.</desc>
+                  </certainty>
                                 <certainty locus="value" match="../@ref" resp="#Bernand">
-                                        <desc><foreign xml:lang="fr">le peuple des Agaʿâzê ou Geʿez assimilés aux Axoumites à l'époque de Cosmas</foreign>
-                                        </desc></certainty>Γάζη</placeName>
+                                        <desc>
+                        <foreign xml:lang="fr">le peuple des Agaʿâzê ou Geʿez assimilés aux Axoumites à l'époque de Cosmas</foreign>
+                                        </desc>
+                  </certainty>Γάζη</placeName>
                             <!--                  pleiades:39303=aksum    -->
                     <app corresp="#gaze">
                         <note xml:lang="en">Identified with Aksum, because the Scholion to
@@ -124,92 +154,199 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      ἔθνος ἐπολέμησα, ἔπειτα 
                     
                     <placeName ref="LOC1236Agama" resp="#salt">
-                        <certainty locus="value" match="../@ref" resp="#Fauvelle-Aymar" cert="high"><desc>est du Tigré, immédiatement au sud de l'Akkälä Guzay.</desc></certainty>
+                        <certainty locus="value"
+                             match="../@ref"
+                             resp="#Fauvelle-Aymar"
+                             cert="high">
+                     <desc>est du Tigré, immédiatement au sud de l'Akkälä Guzay.</desc>
+                  </certainty>
                         Ἄγαμε</placeName>
                     
                     καὶ <placeName ref="pleiades:40308" xml:id="siguene">
-                        <certainty locus="value" match="../@ref" resp="#salt"><desc><quote>province of Sigue or Siré (as Dr. Vincent says)</quote>
+                        <certainty locus="value" match="../@ref" resp="#salt">
+                     <desc>
+                        <quote>province of Sigue or Siré (as Dr. Vincent says)</quote>
                             <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#6c70dbe8-ee0f-40fb-bc96-f356b50a853b">
-                                <q>Sire.P.</q> on Ludolf map (1683) above <q>Axum</q></ref></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#Huntingford"><desc><quote>The Sigyēnĕ are unidentifiable even with the help of alternative name Suskinitas given in scholion</quote></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#DAE"><desc><quote>Soguet</quote></desc></certainty>
+                                <q>Sire.P.</q> on Ludolf map (1683) above <q>Axum</q>
+                        </ref>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#Huntingford">
+                     <desc>
+                        <quote>The Sigyēnĕ are unidentifiable even with the help of alternative name Suskinitas given in scholion</quote>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#DAE">
+                     <desc>
+                        <quote>Soguet</quote>
+                     </desc>
+                  </certainty>
                         Σιγύηνε</placeName> 
                     <app corresp="#siguene">
                             <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 Scholion says
-                                <foreign xml:lang="grc"><placeName ref="pleiades:40308">Σιγύηνε</placeName> τοῦς <placeName ref="pleiades:40308">Σουσκινίτας</placeName> καλεῖ καὶ τὰ ἐγγὺς αὐτῶν ἔθνη.</foreign></note>
+                                <foreign xml:lang="grc">
+                        <placeName ref="pleiades:40308">Σιγύηνε</placeName> τοῦς <placeName ref="pleiades:40308">Σουσκινίτας</placeName> καλεῖ καὶ τὰ ἐγγὺς αὐτῶν ἔθνη.</foreign>
+                  </note>
                         </app>
                     
                     νικήσας τὴν ἡμίσειαν
                     πάντων τῶν παρ᾽ αὐτοῖς καὶ αὐτῶν ἐμερισάμην. 
                     <seg type="interpretation" n="1" ana="#Huntingford"/>
                     <seg type="interpretation" n="A" ana="#Fauvelle-Aymar"/>
-<!--                    END OF FIRST GROUP for HUNTINGFORD
+               <!--                    END OF FIRST GROUP for HUNTINGFORD
                     
                     End of group A for Fauvelle-Aymar-->
                     
                     <placeName ref="pleiades:40063">
-                        <certainty locus="value" match="../@ref" resp="#salt"><desc><quote>Awa or AVA, which is Ade-Awa, or 
-                            Adawi, a considerable district bordering on Axum.</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#1da1a3eb-cc39-4850-bb58-0fa084e469d8">
-                                <q>Adawa</q> on Ludolf map (1683) south of <q>Axum</q></ref></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#Huntingford"><desc><quote>Cannot be satisfactorily identified</quote></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#Bent" assertedValue="LOC6384Yeha"></certainty>
-                        <certainty locus="value" match="../@ref" assertedValue="LOC1264Adwa" resp="#vivien"/>
-                        <certainty locus="value" match="../@ref" resp="#OGIS"><desc>Same as <foreign xml:lang="grc">Αὒη</foreign> in Nonnosos (	
-                            Photios, Bibliotheca, 3, 2-20)</desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#dillmann"><desc>Somewhere between Adwa and Yeha.</desc></certainty>Αὔα</placeName> καὶ 
+                        <certainty locus="value" match="../@ref" resp="#salt">
+                     <desc>
+                        <quote>Awa or AVA, which is Ade-Awa, or 
+                            Adawi, a considerable district bordering on Axum.</quote>
+                        <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#1da1a3eb-cc39-4850-bb58-0fa084e469d8">
+                                <q>Adawa</q> on Ludolf map (1683) south of <q>Axum</q>
+                        </ref>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#Huntingford">
+                     <desc>
+                        <quote>Cannot be satisfactorily identified</quote>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value"
+                             match="../@ref"
+                             resp="#Bent"
+                             assertedValue="LOC6384Yeha"/>
+                        <certainty locus="value"
+                             match="../@ref"
+                             assertedValue="LOC1264Adwa"
+                             resp="#vivien"/>
+                        <certainty locus="value" match="../@ref" resp="#OGIS">
+                     <desc>Same as <foreign xml:lang="grc">Αὒη</foreign> in Nonnosos (	
+                            Photios, Bibliotheca, 3, 2-20)</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#dillmann">
+                     <desc>Somewhere between Adwa and Yeha.</desc>
+                  </certainty>Αὔα</placeName> καὶ 
 <!--                    Here Salt reconstruction has Tiama and Gambela-->
                     
                     <placeName ref="pleiades:40351">
-                        <certainty locus="value" match="../@ref" resp="#salt"><desc><quote>the province of Bugné, inhabited by blacks (or Galla)</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#">
-                        <q>Bugna R.</q> on Ludolf map (1683) south of <q>Axum</q></ref></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#Huntingford"><desc><quote>Cannot be satisfactorily identified. [...] It is possible that may be scribe's error
-                            for Ζιγγαρηνὲ and thus, as suggested in <bibl><ptr target="bm:DAE1"/><citedRange unit="page">43</citedRange></bibl>, it might be Zängären</quote></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#dillmann"><desc>Zängären</desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#DAE"><desc>Zängären</desc></certainty>Ζινγαβηνὲ</placeName> καὶ 
+                        <certainty locus="value" match="../@ref" resp="#salt">
+                     <desc>
+                        <quote>the province of Bugné, inhabited by blacks (or Galla)</quote>
+                        <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#">
+                           <q>Bugna R.</q> on Ludolf map (1683) south of <q>Axum</q>
+                        </ref>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#Huntingford">
+                     <desc>
+                        <quote>Cannot be satisfactorily identified. [...] It is possible that may be scribe's error
+                            for Ζιγγαρηνὲ and thus, as suggested in <bibl>
+                              <ptr target="bm:DAE1"/>
+                              <citedRange unit="page">43</citedRange>
+                           </bibl>, it might be Zängären</quote>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#dillmann">
+                     <desc>Zängären</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#DAE">
+                     <desc>Zängären</desc>
+                  </certainty>Ζινγαβηνὲ</placeName> καὶ 
                     
                     <placeName ref="ETH1085Aggabe" xml:id="aggabe">
                         <certainty locus="value" match="../@ref" resp="#salt">
-                        <desc><quote>Angabet or Andabet in Begemder</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#bfaa74d2-f350-4f3e-a072-019a9c811eab">
-                            <q>Andabet</q> on Ludolf map (1683) south of <q>Axum</q></ref></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#Huntingford"><desc><quote>a place called Angäba in the chiefdom of Sedya between ʿAdwa and the river Bäläsa NW of Entäṣĕw;  
-                            Angabĕ may also be the same as the Angao of DAE 9.</quote></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#DAE"><desc>Angabo in DAE 9</desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#dillmann"><desc>Angot a sud du Tigré</desc></certainty><!--from Bernand-->
+                        <desc>
+                        <quote>Angabet or Andabet in Begemder</quote>
+                        <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#bfaa74d2-f350-4f3e-a072-019a9c811eab">
+                            <q>Andabet</q> on Ludolf map (1683) south of <q>Axum</q>
+                        </ref>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#Huntingford">
+                     <desc>
+                        <quote>a place called Angäba in the chiefdom of Sedya between ʿAdwa and the river Bäläsa NW of Entäṣĕw;  
+                            Angabĕ may also be the same as the Angao of DAE 9.</quote>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#DAE">
+                     <desc>Angabo in DAE 9</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#dillmann">
+                     <desc>Angot a sud du Tigré</desc>
+                  </certainty>
+                  <!--from Bernand-->
                         Ἀγγαβὲ</placeName> 
                     <app corresp="#aggabe">
                         <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 Scholion says
-                                <foreign xml:lang="grc">Τὰ ἐγγὺς Ἀδυλέως λέγει ἔθνη τῶν <placeName
-                                    ref="LOC6569Tegray">Τιγρητῶν</placeName>.</foreign></note>
+                                <foreign xml:lang="grc">Τὰ ἐγγὺς Ἀδυλέως λέγει ἔθνη τῶν <placeName ref="LOC6569Tegray">Τιγρητῶν</placeName>.</foreign>
+                  </note>
                     </app>   καὶ 
                     
                     <placeName ref="pleiades:40338" xml:id="tzama">
                         <certainty locus="value" match="../@ref" resp="#salt">
-                            <desc><quote>Tziama, or Tzama.</quote>
+                            <desc>
+                        <quote>Tziama, or Tzama.</quote>
                             <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#9c534774-5f1d-48e7-a04c-cb76e18f39a8">
-                                <q>Tzama</q> on Ludolf map (1683) south of <q>Axum</q></ref></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#Huntingford"><desc><quote>Ṣĕyamo-Tziamo-Tiama the kingdom over which Ezana claimed sovereignity in this area.</quote></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#DAE"><desc>les peuples établis dans les régions basses au sud-est des plateaux éthiopien.</desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#dillmann"><desc>Vallée fertile dans la région de l'Enderta</desc></certainty><!--from Bernand-->
+                                <q>Tzama</q> on Ludolf map (1683) south of <q>Axum</q>
+                        </ref>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#Huntingford">
+                     <desc>
+                        <quote>Ṣĕyamo-Tziamo-Tiama the kingdom over which Ezana claimed sovereignity in this area.</quote>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#DAE">
+                     <desc>les peuples établis dans les régions basses au sud-est des plateaux éthiopien.</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#dillmann">
+                     <desc>Vallée fertile dans la région de l'Enderta</desc>
+                  </certainty>
+                  <!--from Bernand-->
                         Τιάμαα</placeName> καὶ 
                     <app corresp="tzama">
                         <note xml:lang="en">Vaticanus Graecus 699
-                            <foreign xml:lang="grc">Τίαμα τοῦς λεγουμένος Τζιαμῶ καὶ τοὺς Γαμβελὰ καὶ τὰ ἐγγὺς αὐτῶν λέγει ἔθνη τὰ πέραν τοῦ Νείλου.</foreign></note>
+                            <foreign xml:lang="grc">Τίαμα τοῦς λεγουμένος Τζιαμῶ καὶ τοὺς Γαμβελὰ καὶ τὰ ἐγγὺς αὐτῶν λέγει ἔθνη τὰ πέραν τοῦ Νείλου.</foreign>
+                  </note>
                     </app>
                     <placeName ref="pleiades:40059">
                         <certainty locus="value" match="../@ref" resp="#salt">
-                        <desc><quote>Ath-Agaws or the Agaws</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#bb8b7f1d-26a8-4c1d-94a6-ba4639fb90fd">
-                            <q>Agaw G.</q> on Ludolf map (1683) south of <q>Axum</q></ref></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#vivien"><desc>Addago</desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#DAE"><desc>Sud of Aksum</desc></certainty><!--from Bernand-->Ἀθαγαοὺς</placeName> καὶ 
+                        <desc>
+                        <quote>Ath-Agaws or the Agaws</quote>
+                        <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#bb8b7f1d-26a8-4c1d-94a6-ba4639fb90fd">
+                            <q>Agaw G.</q> on Ludolf map (1683) south of <q>Axum</q>
+                        </ref>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#vivien">
+                     <desc>Addago</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#DAE">
+                     <desc>Sud of Aksum</desc>
+                  </certainty>
+                  <!--from Bernand-->Ἀθαγαοὺς</placeName> καὶ 
                     
                     <seg type="interpretation" n="1" ana="#salt"/>
                     <placeName ref="pleiades:40169">
                         <certainty locus="value" match="../@ref" resp="#salt">
-                        <desc><quote>Halaat or Salait</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#c6ac3700-eecf-4d44-8e17-b30d59e444b7">
-                            <q>Salait</q> on Ludolf map (1683) west of <q>Axum</q></ref></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#OGIS" assertedValue="LOC5232Qohayt"/>
-                        <certainty locus="value" match="../@ref" resp="#dillmann"><desc>la peuplade Kelau</desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#vivien"><desc>Kalaoué, district de la rive gauche du Takazzé, au-dessous des montagnes du Semen</desc></certainty>Καλαὰ</placeName>
+                        <desc>
+                        <quote>Halaat or Salait</quote>
+                        <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#c6ac3700-eecf-4d44-8e17-b30d59e444b7">
+                            <q>Salait</q> on Ludolf map (1683) west of <q>Axum</q>
+                        </ref>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value"
+                             match="../@ref"
+                             resp="#OGIS"
+                             assertedValue="LOC5232Qohayt"/>
+                        <certainty locus="value" match="../@ref" resp="#dillmann">
+                     <desc>la peuplade Kelau</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#vivien">
+                     <desc>Kalaoué, district de la rive gauche du Takazzé, au-dessous des montagnes du Semen</desc>
+                  </certainty>Καλαὰ</placeName>
                     <!--                  Bernand E. 2000 p. 37 
                         Dillmann : Kelau people,
                   Dittenberger OGIS Koloé in the Aksum region = LOC5232Qohayt ==> Κολόην in PME 4 + Cl. Ptol. 4.7.8
@@ -220,17 +357,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     καὶ <placeName ref="LOC5671Semen" resp="#salt">
                         <certainty locus="value" match="../@ref" resp="#salt">
-                        <desc><quote>Sembre or Samen</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#637e1a03-303e-4fa7-b7ea-9f79fa445b9f">
-                            <q>Samen R.</q> on Ludolf map (1683) west of <q>Axum</q></ref></desc></certainty>
+                        <desc>
+                        <quote>Sembre or Samen</quote>
+                        <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#637e1a03-303e-4fa7-b7ea-9f79fa445b9f">
+                            <q>Samen R.</q> on Ludolf map (1683) west of <q>Axum</q>
+                        </ref>
+                     </desc>
+                  </certainty>
                         Σαμῆνε</placeName> ἔθνος
                     
                     
                     <!--                    crawford Itineraria in his gazetteer of Fra Mauro Map says p. simi is the same place-->
                     πέραν τοῦ <placeName ref="LOC6850Takkaze" cert="low" resp="#salt">
-                        <certainty locus="value" match="../@ref" assertedValue="pleiades:727172"
-                            resp="#LIT5019MonumentumAdulitanum2"/>
-                        <certainty locus="value" match="../@ref" assertedValue="LOC4560Marab"
-                            resp="#Fauvelle-Aymar"/>
+                        <certainty locus="value"
+                             match="../@ref"
+                             assertedValue="pleiades:727172"
+                             resp="#LIT5019MonumentumAdulitanum2"/>
+                        <certainty locus="value"
+                             match="../@ref"
+                             assertedValue="LOC4560Marab"
+                             resp="#Fauvelle-Aymar"/>
                         Νείλου</placeName>
                     <!--             pleiades:727172 is a generic label for the Nile, not for blue Nile or a specific part of it.
                     but in here it seams more to refer to the Tekeze river which is between Aksum and the semen mountains. -->
@@ -242,62 +388,116 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     γονάτων καταδύειν τὸν ἄνδρα, τὸν ποταμὸν διαβὰς ὑπέταξα, 
                     
                     <seg type="interpretation" n="1" ana="#Bernand"/>
-<!--                    beginning second expedition for Bernand-->
+               <!--                    beginning second expedition for Bernand-->
                     ἔπειτα 
                     <placeName ref="pleiades:40192">
-                        <certainty locus="value" match="../@ref" resp="#salt" assertedValue="LOC4259Lasta">
-                        <desc><quote>Lasta</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#fa572b5b-8bfc-469d-ae3e-26604f851019">
-                            <q>Lasta M. hinc Lastenses</q> on Ludolf map (1683) west of <q>Axum</q></ref></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#Bernand"><desc>Nord d'Axoum</desc></certainty>Λασινὲ</placeName> καὶ 
+                        <certainty locus="value"
+                             match="../@ref"
+                             resp="#salt"
+                             assertedValue="LOC4259Lasta">
+                        <desc>
+                        <quote>Lasta</quote>
+                        <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#fa572b5b-8bfc-469d-ae3e-26604f851019">
+                            <q>Lasta M. hinc Lastenses</q> on Ludolf map (1683) west of <q>Axum</q>
+                        </ref>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#Bernand">
+                     <desc>Nord d'Axoum</desc>
+                  </certainty>Λασινὲ</placeName> καὶ 
                     
                     <seg type="interpretation" n="2" ana="#salt"/>
                     <placeName ref="pleiades:40347">
-                        <certainty locus="value" match="../@ref" resp="#salt" assertedValue="LOC5597Sawa">
-                        <desc><quote>Shawa or Zaa</quote><ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#6e5f1b0d-e73c-40d8-a896-59320539ca67">
-                            <q>Sewa</q> or <q>Shawada P.</q> on Ludolf map (1683) south-west of <q>Axum</q></ref></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#Bernand"><desc>Nord d'Axoum</desc></certainty>
-                        <certainty locus="value" match="../@ref"
-                            resp="#Fauvelle-Aymar"><desc>Mount Zaad</desc></certainty>Ζαὰ</placeName> καὶ 
+                        <certainty locus="value"
+                             match="../@ref"
+                             resp="#salt"
+                             assertedValue="LOC5597Sawa">
+                        <desc>
+                        <quote>Shawa or Zaa</quote>
+                        <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#6e5f1b0d-e73c-40d8-a896-59320539ca67">
+                            <q>Sewa</q> or <q>Shawada P.</q> on Ludolf map (1683) south-west of <q>Axum</q>
+                        </ref>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#Bernand">
+                     <desc>Nord d'Axoum</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#Fauvelle-Aymar">
+                     <desc>Mount Zaad</desc>
+                  </certainty>Ζαὰ</placeName> καὶ 
                     
                     <placeName ref="pleiades:40144" xml:id="gabala">
-                        <certainty locus="value" match="../@ref" resp="#Huntingford"><desc><quote>Gäbäle near Ĕnṭälo</quote></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#Bernand"><desc>Nord d'Axoum</desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#dillmann"><desc>Mänsa et Habâb</desc></certainty>Γαβαλὰ</placeName>
+                        <certainty locus="value" match="../@ref" resp="#Huntingford">
+                     <desc>
+                        <quote>Gäbäle near Ĕnṭälo</quote>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#Bernand">
+                     <desc>Nord d'Axoum</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#dillmann">
+                     <desc>Mänsa et Habâb</desc>
+                  </certainty>Γαβαλὰ</placeName>
                     <app corresp="#gabala">
                         <note xml:lang="en">Vaticanus Graecus 699
-                            <foreign xml:lang="grc">Ταῦτα ἔθνη ἕως τῆς σήμερον οὕτως καλοῦνται.</foreign></note>
+                            <foreign xml:lang="grc">Ταῦτα ἔθνη ἕως τῆς σήμερον οὕτως καλοῦνται.</foreign>
+                  </note>
                     </app>
                     
                     οἰκοῦντας παρ᾽ ὄρεει θερμῶν ὑδάτων βλύοντι καὶ καταρρύτῳ. <!--                        where are these hot water springs? hot springs famous in Ethiopia are all areound Addis or towards Kenya-->
                     
                     <seg type="interpretation" n="C" ana="#Fauvelle-Aymar"/>
-<!--                    END of group C for Fauvelle-Aymar 
+               <!--                    END of group C for Fauvelle-Aymar 
                     -->
                     <placeName ref="pleiades:40058">Ἀταλμῶ</placeName> καὶ 
                     
                     <placeName ref="pleiades:40079" xml:id="bega">
-                        <listRelation><relation 
-                            active="https://pleiades.stoa.org/places/40079"
-                            name="skos:exactMatch" passive="https://pleiades.stoa.org/places/795790">
+                        <listRelation>
+                     <relation active="https://pleiades.stoa.org/places/40079"
+                               name="skos:exactMatch"
+                               passive="https://pleiades.stoa.org/places/795790">
                             <desc>The scholion already makes this identification, supported by all commentators.</desc>
                         </relation>
                         </listRelation>
-                        <certainty locus="value" match="../@ref" resp="#salt"><desc><quote>Bega or Bega Midra</quote>
+                        <certainty locus="value" match="../@ref" resp="#salt">
+                     <desc>
+                        <quote>Bega or Bega Midra</quote>
                             <ref target="https://recogito.pelagios.org/document/t7e6q1bznco148#75c919ae-9ad1-49a3-9c0b-b4b450062b42">
-                            <q>Midra Bahr</q> on Ludolf map (1683) East of <q>Axum</q></ref></desc></certainty>
-                        <certainty locus="value" match="../@ref" assertedValue="pleiades:795790" resp="#Bernand"><desc></desc></certainty>
+                            <q>Midra Bahr</q> on Ludolf map (1683) East of <q>Axum</q>
+                        </ref>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value"
+                             match="../@ref"
+                             assertedValue="pleiades:795790"
+                             resp="#Bernand">
+                     <desc/>
+                  </certainty>
                         Βεγὰ</placeName>
                     
                     <seg type="interpretation" n="3" ana="#salt"/>
                     καὶ τὰ σὺν αὐτοῖς ἔθνη πάντα
                     
                     <placeName ref="ETH2303Tangaitai" xml:id="tangaitai">
-                        <certainty locus="value" match="../@ref" resp="#Huntingford" assertedValue="LOC5862Taka"><desc><quote>This may be a nasalized form of Taka, a place-name which occurs
-                            close to Kassala in the Sudan</quote></desc></certainty>
-                        <certainty locus="value" match="../@ref" assertedValue="LOC5862Taka" resp="#Bernand"><desc>Letronne, approuvé par A. Dillmann, a reconnu dans set ethnique les Taka qui vivent entre le fleuve Atbara et Sauakin sur la Mer Rouge.</desc></certainty>Ταγγαϊτῶν</placeName>, 
+                        <certainty locus="value"
+                             match="../@ref"
+                             resp="#Huntingford"
+                             assertedValue="LOC5862Taka">
+                     <desc>
+                        <quote>This may be a nasalized form of Taka, a place-name which occurs
+                            close to Kassala in the Sudan</quote>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value"
+                             match="../@ref"
+                             assertedValue="LOC5862Taka"
+                             resp="#Bernand">
+                     <desc>Letronne, approuvé par A. Dillmann, a reconnu dans set ethnique les Taka qui vivent entre le fleuve Atbara et Sauakin sur la Mer Rouge.</desc>
+                  </certainty>Ταγγαϊτῶν</placeName>, 
                     <app corresp="#bega #tangaitai">
                         <note xml:lang="en">Vaticanus Graecus 699
-                            <foreign xml:lang="grc">τοὺς Βλέμμυας οὕτως καλοῦσιν οὶ Αἰθίοπες. τοῦς Ταγγαίτας καλεῖ τοὺς Ἀτταβιτη καὶ τοὺς Ἀδρα..ς</foreign></note>
+                            <foreign xml:lang="grc">τοὺς Βλέμμυας οὕτως καλοῦσιν οὶ Αἰθίοπες. τοῦς Ταγγαίτας καλεῖ τοὺς Ἀτταβιτη καὶ τοὺς Ἀδρα..ς</foreign>
+                  </note>
                     </app>
                     
                     <seg type="interpretation" n="2" ana="#Huntingford"/>
@@ -314,36 +514,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <!--                    beginning of third expedition for Bernand-->
                     
                     <placeName ref="pleiades:40040" xml:id="annene">
-                        <certainty locus="value" match="../@ref" resp="#vivien"><desc>dans la region des Bega</desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#dillmann"><desc>sud et à l'ouest du royaume d'Axoum, dans la région montagneuse qui s'abaisse vers la plaine de Samhara.
-                        </desc></certainty>Ἀννήνε</placeName> καὶ 
+                        <certainty locus="value" match="../@ref" resp="#vivien">
+                     <desc>dans la region des Bega</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#dillmann">
+                     <desc>sud et à l'ouest du royaume d'Axoum, dans la région montagneuse qui s'abaisse vers la plaine de Samhara.
+                        </desc>
+                  </certainty>Ἀννήνε</placeName> καὶ 
                     
                     
                     <placeName ref="pleiades:40223" xml:id="metine">
-                        <certainty locus="value" match="../@ref" resp="#vivien"><desc>dans la region des Bega</desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#littmann"><desc>versant est des montagnes abruptes qui dominent la plaine littorale de la Mer Rouge.
-                        </desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#Bernand"><desc>Yuri M. Kobishchanov Axum, les localise dans les montagnes â l'ouest d'Axoum, entre les vallées du Takazzé et du Mareb</desc></certainty>Μετίνε</placeName>
+                        <certainty locus="value" match="../@ref" resp="#vivien">
+                     <desc>dans la region des Bega</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#littmann">
+                     <desc>versant est des montagnes abruptes qui dominent la plaine littorale de la Mer Rouge.
+                        </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#Bernand">
+                     <desc>Yuri M. Kobishchanov Axum, les localise dans les montagnes â l'ouest d'Axoum, entre les vallées du Takazzé et du Mareb</desc>
+                  </certainty>Μετίνε</placeName>
                     <app corresp="#annene #metine">
                         <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 Scholion says
-                            <foreign xml:lang="grc">[Ἀννίνε] καὶ Μετίνε ἕως τοῦ νῦν ταῦτα τὰ ἔθνη οὕτω καλοῦνται</foreign></note>
+                            <foreign xml:lang="grc">[Ἀννίνε] καὶ Μετίνε ἕως τοῦ νῦν ταῦτα τὰ ἔθνη οὕτω καλοῦνται</foreign>
+                  </note>
                     </app> 
-                    ἐν ἀποκρήμνοις οἰκοῦντας ὄρεσι. <pb
-                        corresp="#Cosma" n="61"/>
+                    ἐν ἀποκρήμνοις οἰκοῦντας ὄρεσι. <pb corresp="#Cosma" n="61"/>
                     
                     <seg type="interpretation" n="D" ana="#Fauvelle-Aymar"/>
-<!--                    END OF GROUP D for Fauvelle-Aymar -->
+               <!--                    END OF GROUP D for Fauvelle-Aymar -->
                     
                     <seg type="interpretation" n="3" ana="#Huntingford"/>
                     <placeName ref="pleiades:40306" xml:id="sesea">
-                        <certainty locus="value" match="../@ref" resp="#vivien"><desc>Somali</desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#littmann" assertedValue="ETH2021Saho"><desc>Saho ou Schoho et estime que la description de la région convient a Kohaito</desc></certainty>
-                        <certainty locus="value" match="../@ref" 
-                        resp="#Bernand"><desc>Yuri M. Kobishchanov Axum, les localise 
-                            dans les montagnes â l'ouest d'Axoum</desc></certainty>Σεσέα</placeName>
+                        <certainty locus="value" match="../@ref" resp="#vivien">
+                     <desc>Somali</desc>
+                  </certainty>
+                        <certainty locus="value"
+                             match="../@ref"
+                             resp="#littmann"
+                             assertedValue="ETH2021Saho">
+                     <desc>Saho ou Schoho et estime que la description de la région convient a Kohaito</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#Bernand">
+                     <desc>Yuri M. Kobishchanov Axum, les localise 
+                            dans les montagnes â l'ouest d'Axoum</desc>
+                  </certainty>Σεσέα</placeName>
                     <app corresp="#sesea">
                         <note xml:lang="en">Vaticanus Graecus 699
-                            <foreign xml:lang="grc">Τὰ τῆς Βαρβαρίας ἔθνη ἐνταῦθα δηλοῖ</foreign></note>
+                            <foreign xml:lang="grc">Τὰ τῆς Βαρβαρίας ἔθνη ἐνταῦθα δηλοῖ</foreign>
+                  </note>
                     </app>
                     
                     ἔθνος 
@@ -356,15 +575,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     καὶ πᾶσαν τὴν ὑπάρχουσαν αὐτοῖς κτῆσιν. 
                     
                     <seg type="interpretation" n="E" ana="#Fauvelle-Aymar"/>
-<!--                    End of group E for Fauvelle-Aymar 
+               <!--                    End of group E for Fauvelle-Aymar 
                     -->
-                    <placeName ref="pleiades:40270" xml:id="rauso"><certainty locus="value" match="../@ref" resp="#Huntingford"><desc><quote>Almost anywhere in northern Somalia</quote></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#dillmann" assertedValue="pleiades:39414"/>
-                        <certainty locus="value" match="../@ref" 
-                            resp="#Bernand"><desc>Yuri M. Kobishchanov Axum, pense qu'il s'agit d'une peuplade du désert de Somalie</desc></certainty>Ῥαυσῶ</placeName> ἔθνη 
+                    <placeName ref="pleiades:40270" xml:id="rauso">
+                  <certainty locus="value" match="../@ref" resp="#Huntingford">
+                     <desc>
+                        <quote>Almost anywhere in northern Somalia</quote>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value"
+                             match="../@ref"
+                             resp="#dillmann"
+                             assertedValue="pleiades:39414"/>
+                        <certainty locus="value" match="../@ref" resp="#Bernand">
+                     <desc>Yuri M. Kobishchanov Axum, pense qu'il s'agit d'une peuplade du désert de Somalie</desc>
+                  </certainty>Ῥαυσῶ</placeName> ἔθνη 
                     <app corresp="rauso">
                         <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 Scholion says
-                            <foreign xml:lang="grc">Βαρ.[οὕτω]σι Βαρβαρίας ἔθνη λέγει</foreign></note>
+                            <foreign xml:lang="grc">Βαρ.[οὕτω]σι Βαρβαρίας ἔθνη λέγει</foreign>
+                  </note>
                     </app> 
                     
                     μεσόγεια 
@@ -373,23 +602,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                    
                    καὶ <placeName ref="pleiades:40316" xml:id="solate">
-                       <certainty locus="value" match="../@ref" resp="#littmann"><desc>Seltagé</desc></certainty>
-                       <certainty locus="value" match="../@ref" 
-                           resp="#Bernand"><desc>Yuri M. Kobishchanov Axum, les localiser dans la région de Bab el-Mandeb</desc></certainty>Σολάτε</placeName>
+                       <certainty locus="value" match="../@ref" resp="#littmann">
+                     <desc>Seltagé</desc>
+                  </certainty>
+                       <certainty locus="value" match="../@ref" resp="#Bernand">
+                     <desc>Yuri M. Kobishchanov Axum, les localiser dans la région de Bab el-Mandeb</desc>
+                  </certainty>Σολάτε</placeName>
                     <app corresp="solate">
-                        <note xml:lang="en">Vaticanus Graecus 699 note says that <foreign
-                                xml:lang="grc">Σολὰτε οἱ λεγόμενοι Τιγρῆται οἱ παραθαλλάσσιοι ἐπὶ
-                                τὴν Βαρβαρίαν.</foreign></note>
+                        <note xml:lang="en">Vaticanus Graecus 699 note says that <foreign xml:lang="grc">Σολὰτε οἱ λεγόμενοι Τιγρῆται οἱ παραθαλλάσσιοι ἐπὶ
+                                τὴν Βαρβαρίαν.</foreign>
+                  </note>
                         <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 has a scholion
                             saying <foreign xml:lang="grc">Σολὰτε: Σολὰτε γὰρ τοὺς ἐπὶ τὴν Βαρβαρίαν
-                                Τιγρῆτας τοὺς παραλίους λέγει.</foreign></note>
+                                Τιγρῆτας τοὺς παραλίους λέγει.</foreign>
+                  </note>
                     </app>
                     
                     ἔθνος ὑπέταξα, οἶς καὶ
                     τοὺς αἰγιαλοὺς τῆς θαλάσσης φυλάσσειν ἐκέλευσα. 
                     
                     <seg type="interpretation" n="F" ana="#Fauvelle-Aymar"/>
-<!--                    End of group F foe Fauvell-Aymar -->
+               <!--                    End of group F foe Fauvell-Aymar -->
                     
                     <seg type="interpretation" n="5" ana="#salt"/>
                     <seg type="interpretation" n="4" ana="#Huntingford"/>
@@ -399,11 +632,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     φόροις. 
                     <app corresp="#solate">
                         <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 has a scholion
-                            saying <foreign xml:lang="grc">Μέχρι τοῦ νῦν ὅλοι οἱ Τιγρῆται τὰ παράλια οἰκοῦσι μέρη ἀπὸ Ἀδουλέως μέχρι τῶν τῆς Βαρβαρίας τόπων.</foreign></note>
+                            saying <foreign xml:lang="grc">Μέχρι τοῦ νῦν ὅλοι οἱ Τιγρῆται τὰ παράλια οἰκοῦσι μέρη ἀπὸ Ἀδουλέως μέχρι τῶν τῆς Βαρβαρίας τόπων.</foreign>
+                  </note>
                     </app>
                     
                     <seg type="interpretation" n="4" ana="#Bernand"/>
-<!--                    last expedition (fifth) for Bernand-->
+               <!--                    last expedition (fifth) for Bernand-->
                     Καὶ πέραν δὲ τῆς<placeName ref="pleiades:39290">Ἐρυθρᾶς θαλάσσης</placeName> οἰκοῦντα 
                     
                     
@@ -411,81 +645,116 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <placeName ref="pleiades:40050" xml:id="arabitas">Ἀραβίτας</placeName> καὶ
                     <app corresp="#arabitas">
                         <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 has a scholion
-                            saying <foreign xml:lang="grc">Ἀραβίτας ἐνταῦθα τοὺς Ὁμηρίτας καλεῖ καὶ Κιναιδοκολπίτας τοὺς παραλίους Ἀδονίτας καλεῖ</foreign></note>
+                            saying <foreign xml:lang="grc">Ἀραβίτας ἐνταῦθα τοὺς Ὁμηρίτας καλεῖ καὶ Κιναιδοκολπίτας τοὺς παραλίους Ἀδονίτας καλεῖ</foreign>
+                  </note>
                     </app>
                     <placeName ref="pleiades:39360" xml:id="kinaidokolpitas">
-                        <certainty locus="value" match="../@ref" resp="#dillmann"><desc>Haouara</desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#Bernand"><desc>Les Kinâna du nord de la Tihama et du sud de Hedjaz. Yuri M. Kobishchanov Axum: Tihama</desc></certainty>Κιναιδοκολπίτας</placeName>,
+                        <certainty locus="value" match="../@ref" resp="#dillmann">
+                     <desc>Haouara</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#Bernand">
+                     <desc>Les Kinâna du nord de la Tihama et du sud de Hedjaz. Yuri M. Kobishchanov Axum: Tihama</desc>
+                  </certainty>Κιναιδοκολπίτας</placeName>,
                     <!--                    Ostrakon O.Max. inv 81 
                     TOPOI 6 1996
                     I have added to http://papyri.info/ddbdp/sb;24;16187
                     the annotation https://hyp.is/QeBujJmgEeiKtVfF3yG2gg
                     -->
                     <app corresp="#arabitas #kinaidokolpitas">
-                        <note xml:lang="en">Vaticanus Graecus 699 note says that <foreign
-                            xml:lang="grc">Ἀρραβίτας καὶ Κιναιδοκολπίτας τοὺς εἰς τὸν Ὁμηρίτην σημαίνει, τουτέστι τοὺς ἐν τῇ Εὐδαίμονι Ἀρραβίᾳ</foreign></note>
+                        <note xml:lang="en">Vaticanus Graecus 699 note says that <foreign xml:lang="grc">Ἀρραβίτας καὶ Κιναιδοκολπίτας τοὺς εἰς τὸν Ὁμηρίτην σημαίνει, τουτέστι τοὺς ἐν τῇ Εὐδαίμονι Ἀρραβίᾳ</foreign>
+                  </note>
                     </app>
                     στράτευμα ναυτικὸν καὶ πεζικὸν διαπεμψάμενος, καὶ ὐποτάξας αὐτῶν τοὺς βασιλέας,
                     φόρους τῆς γῆς τελεῖν ἐκέλευσα καὶ ὁδεύεσθαι μετ᾽εἰρήνης καὶ πλέεσθαι, ἀπὸ τε
                     
                     
                     <placeName ref="pleiades:814698" xml:id="leuke">
-                        <certainty locus="value" match="../@ref" resp="#dillmann"><desc>Haouara</desc></certainty>Λευκῆς κώμης</placeName> 
+                        <certainty locus="value" match="../@ref" resp="#dillmann">
+                     <desc>Haouara</desc>
+                  </certainty>Λευκῆς κώμης</placeName> 
                     <app corresp="#leuke">
                         <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 has a scholion
-                            saying <foreign xml:lang="grc">Λευκῆν κώμην καλεῖ τὸ λεγόμενον Λευκόγην ἐπὶ τὰ μέρη τῶν Βλεμμύων ὂν παρὰ θάλασσαν.</foreign></note>
+                            saying <foreign xml:lang="grc">Λευκῆν κώμην καλεῖ τὸ λεγόμενον Λευκόγην ἐπὶ τὰ μέρη τῶν Βλεμμύων ὂν παρὰ θάλασσαν.</foreign>
+                  </note>
                     </app>
                     
-                    ἕως τῶν <placeName xml:id="sabaion"
-                        ref="LOC5395Saba">Σαβαίων</placeName> χώρας ἐπολέμησα. 
+                    ἕως τῶν <placeName xml:id="sabaion" ref="LOC5395Saba">Σαβαίων</placeName> χώρας ἐπολέμησα. 
                     <app corresp="#sabaion">
-                        <note xml:lang="en">Vaticanus Graecus 699 note says that <foreign
-                            xml:lang="grc">Εἰς τὰ μέρη τῶν Βλεμμύων ἐστιν κώμη καλουμένη τὸ Λευκόγην.</foreign></note>
+                        <note xml:lang="en">Vaticanus Graecus 699 note says that <foreign xml:lang="grc">Εἰς τὰ μέρη τῶν Βλεμμύων ἐστιν κώμη καλουμένη τὸ Λευκόγην.</foreign>
+                  </note>
                     </app>
                     
                     <seg type="interpretation" n="5" ana="#Huntingford"/>
                     
                     <seg type="interpretation" n="6" ana="#salt"/>
                     <seg type="interpretation" n="5" ana="#Bernand"/>
-                    <pb corresp="#Cosma"
-                        n="63"/> Πάντα δὲ ταῦτα τὰ ἔθνη πρῶτος καὶ μόνος βασιλέων τῶν πρὸ ἐμοῦ
+                    <pb corresp="#Cosma" n="63"/> Πάντα δὲ ταῦτα τὰ ἔθνη πρῶτος καὶ μόνος βασιλέων τῶν πρὸ ἐμοῦ
                     ὑπέταξα, δι᾽ἣν ἔχω πρὸς τὸν μέγιστον θεόν μου Ἄρην εὐχαριστίαν, 
                     <app corresp="#sabaion">
-                        <note xml:lang="en">Vaticanus Graecus 699 note says that <foreign
-                            xml:lang="grc">Σαβαίων χώρα πάλιν εἰς τὸν Ὁμηρίτην ἐστίν</foreign></note>
+                        <note xml:lang="en">Vaticanus Graecus 699 note says that <foreign xml:lang="grc">Σαβαίων χώρα πάλιν εἰς τὸν Ὁμηρίτην ἐστίν</foreign>
+                  </note>
                         <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 has a scholion
-                            saying <foreign xml:lang="grc">Σαβέων χώραν τὸν Ὁμηρίτην λέγει</foreign></note>
+                            saying <foreign xml:lang="grc">Σαβέων χώραν τὸν Ὁμηρίτην λέγει</foreign>
+                  </note>
                     </app>
                     ὅς με καὶ
                     ἐγέννησε, <pb corresp="#VatGr699" n="17r"/> δι᾽οὗ πάντα τὰ ἔθνη δι᾽οὗ πάντα τὰ
                     ἔθνη <cb n="a"/> τὰ ὁμοροῦντα τῇ ἐμῇ γῇ ἀπὸ μὲν ἀνατολῆς
                     <!--                    coloro che confinano con la mia terra da est fino ai portatori di incenso-->
-                    μέχρι τῆς <placeName ref="pleiades:39370"><certainty locus="value" match="../@ref" resp="#Bernand"><desc>Somalie</desc></certainty>λιβανωτοφόρου</placeName>,
+                    μέχρι τῆς <placeName ref="pleiades:39370">
+                  <certainty locus="value" match="../@ref" resp="#Bernand">
+                     <desc>Somalie</desc>
+                  </certainty>λιβανωτοφόρου</placeName>,
 <!--                    qui gia bernand sbaglia e vuole identificare la terra dei libanotoforoi con quella dei cinnanomoforoi, ma le altre fonti sono unanimi nell'identificare i libanotoforoi con popoli produttori di incenso della costa dell'arabia.-->
                     <!--                    Fiaccadori dice che questa è la Somalia, ma non può essere. stesso luogo nominato in Periplus-->
                     
                     
                     ἀπὸ δὲ δύσεως μέχρι τῶν τῆς <placeName ref="LOC7053Aithiopia">
-                        <certainty
-                        locus="value" match="../@ref" assertedValue="pleiades:39274" resp="#Fauvelle-Aymar"
-                    ><desc><quote>l'immédiat arrière-pays de la Trogodytique où les Ptolémées venaint chasser les éléphants.</quote></desc></certainty><certainty locus="value" match="../@ref" assertedValue="LOC5017Nubia"
-                            resp="#speidel"/>Αἰθιοπίας</placeName>
-<!--                    Ethiopia is not discussed by Salt-->
-                    καὶ <placeName xml:id="sasou"
-                        ref="pleiades:40296"><certainty locus="value" match="../@ref" resp="#Huntingford" assertedValue="ETH2070Sidaam"><desc><quote>Sidama country</quote></desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#Cosma"><desc><quote>Sud sud-ouest d'Axoum</quote> see Cosma II, 51 who says that the aksumites sent via the governor og agau people to commerce in gold</desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#Bernand"><desc>région de l' éthiopie qui produit de l'or, le Ouollega, au sud du Nil Bleu</desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#vivien"><desc>Kaffa, plus loin vers le sud, qui aurait été anciennement dénommée Sousa.</desc></certainty>
-                        <certainty locus="value" match="../@ref" resp="#littmann"><desc>Sasô-gê sud de l'Ethiopie</desc></certainty> Σάσου</placeName>
+                        <certainty locus="value"
+                             match="../@ref"
+                             assertedValue="pleiades:39274"
+                             resp="#Fauvelle-Aymar">
+                     <desc>
+                        <quote>l'immédiat arrière-pays de la Trogodytique où les Ptolémées venaint chasser les éléphants.</quote>
+                     </desc>
+                  </certainty>
+                  <certainty locus="value"
+                             match="../@ref"
+                             assertedValue="LOC5017Nubia"
+                             resp="#speidel"/>Αἰθιοπίας</placeName>
+               <!--                    Ethiopia is not discussed by Salt-->
+                    καὶ <placeName xml:id="sasou" ref="pleiades:40296">
+                  <certainty locus="value"
+                             match="../@ref"
+                             resp="#Huntingford"
+                             assertedValue="ETH2070Sidaam">
+                     <desc>
+                        <quote>Sidama country</quote>
+                     </desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#Cosma">
+                     <desc>
+                        <quote>Sud sud-ouest d'Axoum</quote> see Cosma II, 51 who says that the aksumites sent via the governor og agau people to commerce in gold</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#Bernand">
+                     <desc>région de l' éthiopie qui produit de l'or, le Ouollega, au sud du Nil Bleu</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#vivien">
+                     <desc>Kaffa, plus loin vers le sud, qui aurait été anciennement dénommée Sousa.</desc>
+                  </certainty>
+                        <certainty locus="value" match="../@ref" resp="#littmann">
+                     <desc>Sasô-gê sud de l'Ethiopie</desc>
+                  </certainty> Σάσου</placeName>
                     <!--                    coloro che confinano con la mia terra da ovest fino all etiopia e a sasu -->
-<!--                    Salt says Sasou is 'opposite Aden' and 'can only apply to an abyssinian kingdom' which I do not understand-->
+               <!--                    Salt says Sasou is 'opposite Aden' and 'can only apply to an abyssinian kingdom' which I do not understand-->
                     
                     <app corresp="#sasou">
                         <note xml:lang="en">Vaticanus Graecus 699 has a note in the text saying
                                 <foreign xml:lang="grc">Αὕτη ἡ Σάσου χώρα ὑστάτη ἐστὶν τῶν Αἰθιόπων
                                 ἔνθα καὶ πολὺ χρυσίον ἐστίν, τὸ λεγόμενον ταγχάρας. Ἐπέκεινα δὲ
                                 ταύτης ὁ Ὡκεανὸς παράκειται, ὥσπερ καὶ τῶν βαρβαρεωτῶν τῶν καὶ τὸν
-                                λίβανον ἐμπορευομένων.</foreign></note>
+                                λίβανον ἐμπορευομένων.</foreign>
+                  </note>
                         <note xml:lang="en">Florentinus Laurentianus Plut. IX.28 has a note in the
                             text saying <foreign xml:lang="grc">Σάσου καὶ λιβανωτοφόρον καλεῖ τὰς
                                 πέραν τῶν Αἰθιόπων χώρας, τὴν μὲν Σάσου εἰς νότον καὶ δύσιν
@@ -493,7 +762,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 δέ ἐστιν ἡ τὸν λίβανον ποιοῦσα γῆ. Ἡ δὲ Σάσου χώρα ὑστάτη ἐστὶ τῶν
                                 Αἰθιόπων ἔνθα καὶ πολὺ χρυσίον ἐστίν, τὸ λεγόμενον ταγχάρας.
                                 Ἐπέκεινα δὲ ταύτης ὁ Ὡκεανὸς παράκειται, ὥσπερ καὶ τῶν βαρβαρεωτῶν
-                                τῶν καὶ τὸν λίβανον ἐμπορευομένων. </foreign></note>
+                                τῶν καὶ τὸν λίβανον ἐμπορευομένων. </foreign>
+                  </note>
 
                     </app> τόπων, ὑπ᾽ἐμαυτὸν ἐποίησα, ἃ μὲν αὐτὸς ἐγὼ ἐλθὼν καὶ νικήσας, ἃ δὲ
                     διαπεμπόμενος, καὶ ἐν εἰρήνῃ καταστήσας πάντα τὸν ὑπ᾽ἐμοὶ κόσμον κατῆλθον εἰς
@@ -501,8 +771,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     Ποσειδῶνι θυσιάσαι ὑπὲρ τῶν πλοϊζομένων· ἀθροίσας δὲ μου τὰ στρατεύματα καὶ
                     ἐφ᾽ἓν ποιήσας, ἐπὶ τούτῳ τῷ τόπῳ καθίσας τόνδε τὸν δίφρον παραθήκην τῷ Ἄρεει
                     ἐποίησα <date>ἔτει τῆς ἐμῆς βασιλείας
-                            <expan><abbr>κ</abbr><ex>εἰκοστῷ</ex></expan>
-                        <expan><abbr>ζ</abbr><ex>ἑβδόμῳ</ex></expan></date>. </ab>
+                            <expan>
+                     <abbr>κ</abbr>
+                     <ex>εἰκοστῷ</ex>
+                  </expan>
+                        <expan>
+                     <abbr>ζ</abbr>
+                     <ex>ἑβδόμῳ</ex>
+                  </expan>
+               </date>. </ab>
             </div>
         </body>
     </text>

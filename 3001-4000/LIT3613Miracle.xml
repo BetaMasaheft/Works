@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3613Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: Miracle of Anastasius, a deacon of Rome</title>
@@ -31,6 +31,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -38,7 +46,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -58,7 +66,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-04-30">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
 
@@ -69,7 +77,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="page">7</citedRange>
                   <citedRange unit="item">10</citedRange>
                </bibl>
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">142</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">142</citedRange>
+               </bibl>
             </listBibl>
 
             <listBibl type="editions">
@@ -85,7 +96,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">27</citedRange>
                   <citedRange unit="page">85-86</citedRange>
                </bibl>
-               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">64</citedRange><citedRange unit="page">172-173</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">64</citedRange>
+                  <citedRange unit="page">172-173</citedRange>
+               </bibl>
             </listBibl>
             <!-- The Virgin Mary and the Deacon Anastasius of
                         Constantinople (hagara Rome) (BMirMA 41-42; BHMirM 85-86; CerMaria<ref
@@ -104,7 +119,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
              <div type="textpart" subtype="incipit" xml:lang="gez">
                <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
                  <ab>
-                     ወሀሎ፡ አሐዱ፡ ብእሲ፡ ዘስሙ፡ አንስጦስዮስ፡ በሀገረ፡ ሮሜ፡ <choice resp="PRS6437Macomber"><corr>ዘበራንስትስያ</corr><sic>ዘበራንጥያ</sic></choice>፣
+                     ወሀሎ፡ አሐዱ፡ ብእሲ፡ ዘስሙ፡ አንስጦስዮስ፡ በሀገረ፡ ሮሜ፡ <choice resp="PRS6437Macomber">
+                     <corr>ዘበራንስትስያ</corr>
+                     <sic>ዘበራንጥያ</sic>
+                  </choice>፣
                      ፈራሄ፡ እግዚአብሔር፡ ወያፈቅራ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
                      ወይገይስ፡ ኀበ፡ ቤተ፡ ክርስቲያን፡ ያቄርብ፡ ላቲ፡ አጰርጌ፡ ንጹሐ፡ ዘምስለ፡ ጸሎት፣ እንዘ፡ ይሴብሕ፡ ወድሶታ፡ ለማርያም።
                  </ab>

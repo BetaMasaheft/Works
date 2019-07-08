@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5182MiracleParable" xml:lang="en" type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5182MiracleParable"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" xml:id="t1">Miracle of Mary: Patriarch Abraham and the interpretation of the parable of the mustard seed</title>
@@ -26,7 +31,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -51,35 +62,44 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2019-01-31">Created entity</change>
             <change who="AM" when="2019-04-24">added text</change>
+            <change who="AM" when="2019-06-24">correction by Jeremy Brown</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 <listBibl type="editions">
-                    <bibl><ptr target="bm:TasfaGiyorgis1956Taammera"/>
+                    <bibl>
+                  <ptr target="bm:TasfaGiyorgis1956Taammera"/>
                         <citedRange unit="item">46</citedRange>
                         <citedRange unit="page">177-182</citedRange>
                     </bibl>
                 </listBibl>
                 <listBibl type="secondary">
-                    <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">108</citedRange></bibl>
+                    <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">108</citedRange>
+               </bibl>
                 </listBibl>
                 <listBibl type="translation">
-                    <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">161</citedRange><citedRange unit="page">397-400</citedRange></bibl>
+                    <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">161</citedRange>
+                  <citedRange unit="page">397-400</citedRange>
+               </bibl>
                 </listBibl>
                 <listRelation>
                     <relation name="saws:formsPartOf"
-                        active="LIT5182MiracleParable"
-                        passive="LIT2384Taamme"/>
+                         active="LIT5182MiracleParable"
+                         passive="LIT2384Taamme"/>
                 </listRelation>
             </div>
             <div type="edition">
                 <div type="textpart" subtype="incipit" xml:lang="gez">
                   <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
                     <ab>
-                        ወሀሎ፡ አሐዱ፡ አብ፡ ቅዱስ፣ አባ፡ አብርሃንም፡ ሶርያዊ፣ ሊቀ፡ ጳጳሳት፡ ዘሀገረ፡ እለ፡ ስክንድርያ፣
-                        ወውእቱ፡ እምኍልቆሙ፡ ለአበው፡ ሊቃነ፡ ጳጳሳት፡ ፷፡ ወ፪።
+                        ወሀሎ፡ አሐዱ፡ አብ፡ ቅዱስ፣ አባ፡ አብርሃንም፡ ሶርያዊ፣ ሊቀ፡ ጳጳሳት፡ ዘሀገረ፡ እለ፡ <supplied resp="PRS6437Macomber" reason="omitted">እ</supplied>ስክንድርያ፣
+                        ወውእቱ፡ እምኍልቆሙ፡ ለአበው፡ ሊቃነ፡ ጳጳሳት፡ ፷ወ፪።
                         ዝንቱ፡ አብ፡ ኮነ፡ እምነ፡ ክርስቲያን፡ ዘብሔረ፡ ምሥራቅ፡ ወኮነ፡ ነጋዴ።
                     </ab>
                 </div>

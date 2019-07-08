@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:id="LIT2698Sam"
      xml:lang="en"
      type="work">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
 
             <titleStmt>
@@ -63,7 +63,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         </fileDesc>
         <encodingDesc>
                 <p>A digital born TEI file</p>
-            </encodingDesc>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <langUsage>
                 <language ident="en">English</language>
@@ -88,7 +94,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change when="2017-07-13" who="DE">added short title</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <listRelation>
             <relation name="saws:formsPartOf" active="LIT2698Sam" passive="LIT1719Bookso"/>

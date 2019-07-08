@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1940Mashaf">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ክርስትና፡</title>
@@ -76,11 +76,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
             <language ident="cop">Coptic</language>
          </langUsage>
@@ -108,12 +116,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2017-03-10">Keywords</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
             <relation name="saws:isRelatedTo"
-               active="LIT1940Mashaf#t1"
-               passive="LIT1940Mashaf#t1coptic">
+                      active="LIT1940Mashaf#t1"
+                      passive="LIT1940Mashaf#t1coptic">
                <desc>According to  <persName ref="PRS10747Zotenbe"/>, the recension of the Maṣḥafa krǝstǝnnā in <ref type="mss" corresp="BNFet78"/> 
                   agrees nearly entirely to the Coptic baptismal rite edited by Assemani in <bibl>
                      <ptr target="bm:Assemani1749Catechumenis"/>

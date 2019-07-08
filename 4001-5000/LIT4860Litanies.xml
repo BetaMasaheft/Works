@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="LIT4860Litanies"
      xml:lang="en"
      type="work">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:id="t1">Litanies for the days of the week</title>
@@ -33,7 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -58,7 +64,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2017-12-19">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
            <div type="edition">
                <div type="textpart"
@@ -104,7 +110,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                    <label>Litany for Sunday</label>
                </div>
            </div>
-            <div type="bibliography"><listBibl type="editions"><bibl><ptr target="bm:MashafaSalotaKidan1960"/><citedRange>8-17</citedRange>(from Liṭon za-sanuy to Liṭon za-qadām śǝʿur)</bibl></listBibl></div>
+            <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:MashafaSalotaKidan1960"/>
+                  <citedRange>8-17</citedRange>(from Liṭon za-sanuy to Liṭon za-qadām śǝʿur)</bibl>
+            </listBibl>
+         </div>
             
         </body>
     </text>

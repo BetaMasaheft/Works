@@ -7,10 +7,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3095RepCh375">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to St Qirqos and Julitta</title>
+            <title xml:id="t1">Hymn to St Cyricus and Julitta</title>
+            <title xml:id="t2">Malkǝʾa Qirqos</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -31,15 +32,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
          <sourceDesc>
             <listWit>
-               <witness/>
-            </listWit>
+               <witness corresp="ESum008"/>
+               <witness corresp="EMML486"/>
+               
+              </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -53,9 +64,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
+         <change when="2019-06-14" who="ES">expanded incipit from ESum008 , added relations</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
@@ -64,11 +76,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">375</citedRange>
                </bibl>
             </listBibl>
+            
+            <listRelation>
+               <relation name="ecrm:CLP46i_may_form_part_of"
+                         active="LIT1488GadlaQ"
+                         passive="LIT5739GadlaQDossier"/>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT3095RepCh375"
+                         passive="PRS3249Cyriacus"/>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT3095RepCh375"
+                         passive="PRS5790Julitta"/>
+            </listRelation>
          </div>
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
-                  ኦክርስቶስ፡ ናዝራዊ፡ ዘተወከፍከ፡ ሕማመ።
+                  ኦክርስቶስ፡ ናዝራዊ፡ ዘተወከፍከ፡ ሕማመ። 
+                  ፀሐይ፡ ብሩህ፡ ወጽዱል፡ እስከ፡ ሡራሔሁ፡ አጽለመ፨ መጽሐፈ፡ ዜናሁ፡ ለቂርቆስ፡ መንፈሳዊ፡ ወዘመልክዑ፡ ሰላመ፨ ጸሐፍ፡ ውስተ፡
+                  ልብየ፡ እንዘ፡ ትገብር፡ ቀለመ። ደመከ፡ አምላካዊ፡ በመስቀል፡ ዘዘንመ፨
                </ab>
             </div>
          </div>

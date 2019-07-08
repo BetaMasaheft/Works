@@ -7,10 +7,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT4675MiracleQi">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of St Cyricus on the thief who took a garment and died</title>
+            <title xml:id="t2">St Cyricus and the thief who stole cloths and was punished</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -27,15 +28,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+
+            <listWit>
+               <witness corresp="EMML3469"/>
+               <witness corresp="ESum008"/>
+               <witness corresp="BAVet86"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -50,13 +63,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="MV" when="2017-07-24">Created entity</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listRelation>
                <relation name="saws:formsPartOf"
                          active="LIT4675MiracleQi"
                          passive="LIT4669TaammeQi"/>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT4675MiracleQi"
+                         passive="PRS3249Cyriacus"/>
             </listRelation>
             <listBibl type="editions">
                <bibl>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1586Hayman">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ሃይማኖተ፡ አበው፡</title>
@@ -42,11 +42,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
             <language ident="grc">Greek</language>
          </langUsage>
@@ -74,7 +82,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2018-11-27">Specified clavis</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
             <relation name="saws:isVersionInAnotherLanguageOf"
@@ -94,15 +102,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </bibl> no evidence for this has been found in the
                   manuscripts.</desc>
             </relation>
-            <relation name="saws:contains" active="LIT1586Hayman" passive="LIT1978Mashaf">
+            <relation name="saws:follows" active="LIT1586Hayman" passive="LIT1978Mashaf">
                <desc>The <foreign xml:lang="gez">Maṣḥafa ṭomār</foreign> very often follows
                   Hāymānota ʾabaw and precedes the table of content.</desc>
             </relation>
-            <relation name="saws:contains" active="LIT1586Hayman" passive="LIT2444Temher">
+            <relation name="saws:follows" active="LIT1586Hayman" passive="LIT2444Temher">
                <desc>The <foreign xml:lang="gez">Tǝmhǝrta ḫǝbuʾāt</foreign> can be included at the
                   beginning of the <foreign xml:lang="gez">Hāymānota ʾabaw</foreign>, following the
                   introduction.</desc>
             </relation>
+            
+               <relation name="saws:formsPartOf"
+                      active="LIT1586Hayman"
+                      passive="LIT5769HaymanTomar"/>
+            
          </listRelation>
 
          <!--chapter distribution taken from various mss-->
@@ -348,7 +361,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </div>
                <div type="textpart" xml:id="GregoryNyssa3">
                   <label>
-                     <ref type="work" corresp="LIT1400FirstH"/>, extract on the Homily on the Epistle to the Philippians 2:5-7 by Gregory of
+                     <ref type="work" corresp="LIT1400FirstH"/>, extract from the Homily on the Epistle to the Philippians 2:5-7 by Gregory of
                      Nyssa</label>
                </div>
                <div type="textpart" xml:id="GregoryNyssa4">
@@ -382,6 +395,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             passive="PRS11175Julius"/>
                </listRelation>
                <label>Letters by Julius</label>
+               
                <div type="textpart" xml:id="Julius1">
                   <label>Extract from the letter to Dionysius, bishop of Cyprus</label>
                   <listRelation>
@@ -419,12 +433,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <label/>
                </div>
 
-
+            </div>
+            
+            <div type="textpart" xml:id="Celestine">
+               <label>Testimony by Celestine of Rome</label>
+            </div>
+            
                <div type="textpart" xml:id="Innocent">
                   <listRelation>
                      <relation name="saws:isAttributedToAuthor"
-                               active="LIT1586Hayman#Innocent"
-                               passive="PRS5568Innocent"/>
+                            active="LIT1586Hayman#Innocent"
+                            passive="PRS5568Innocent"/>
                   </listRelation>
                   <label>Extract from the letter of <persName ref="PRS5568Innocent"/> to <persName ref="PRS8787Severian"/>
                   </label>
@@ -433,8 +452,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" xml:id="Sylvester">
                   <listRelation>
                      <relation name="saws:isAttributedToAuthor"
-                               active="LIT1586Hayman#Sylvester"
-                               passive="PRS11177Sylvester"/>
+                            active="LIT1586Hayman#Sylvester"
+                            passive="PRS11177Sylvester"/>
                   </listRelation>
                   <label>Extract from the controversy of <persName ref="PRS11177Sylvester"/> with
                      the Jews.</label>
@@ -443,8 +462,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" xml:id="Vitalian">
                   <listRelation>
                      <relation name="saws:isAttributedToAuthor"
-                               active="LIT1586Hayman#Vitalian"
-                               passive="PRS11176Wetalyos"/>
+                            active="LIT1586Hayman#Vitalian"
+                            passive="PRS11176Wetalyos"/>
                   </listRelation>
                   <label>Testimony by <persName ref="PRS11176Wetalyos"/>, bishop of Rome</label>
                </div>
@@ -452,8 +471,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" xml:id="Ephrem">
                   <listRelation>
                      <relation name="saws:isAttributedToAuthor"
-                               active="LIT1586Hayman#Ephrem"
-                               passive="PRS3827Ephrem"/>
+                            active="LIT1586Hayman#Ephrem"
+                            passive="PRS3827Ephrem"/>
                   </listRelation>
                   <label>Testimonies by Ephrem</label>
 
@@ -491,7 +510,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                </div>
 
-            </div>
+
             <div type="textpart" xml:id="Proclus" xml:lang="gez">
                <!--Heraclius-->
                <listRelation>
@@ -1488,6 +1507,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
 
             <div type="textpart" xml:id="MashafaTomar" corresp="LIT1978Mashaf">
+               
                <label>Maṣḥafa ṭomār</label>
                <desc>The <foreign xml:lang="gez">Maṣḥafa ṭomār</foreign> circulates also
                   independently and is not present in all manuscripts containing the <foreign xml:lang="gez">Hāymānota ʾabaw</foreign>. It can also follow the table of
@@ -1499,6 +1519,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
          </div>
 
+         
       </body>
    </text>
 </TEI>

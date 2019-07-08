@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:lang="en"
      xml:id="LIT3122Galaw"
      type="work">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Chronicle of Galāwdewos</title>
@@ -51,6 +51,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <projectDesc>
             <p>Text prepared within the framework of the Beta Maṣāḥǝft project.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <creation notBefore="1559" notAfter="1560">7052 A.M., completed on 23 Maggābit (19 March)
@@ -80,12 +86,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </revisionDesc>
 
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
             <relation name="saws:isAttributedToAuthor"
-               active="LIT3122Galaw"
-               passive="PRS3779enbaqom">
+                      active="LIT3122Galaw"
+                      passive="PRS3779enbaqom">
                <desc>
                   <bibl>
                      <ptr target="bm:Solomon2016Galawdewos"/>
@@ -94,8 +100,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </desc>
             </relation>
             <relation name="ecrm:P129_is_about"
-               active="LIT3122Galaw"
-               passive="PRS4428Galawdew"/>
+                      active="LIT3122Galaw"
+                      passive="PRS4428Galawdew"/>
          </listRelation>
          
          <div type="bibliography">
@@ -1009,7 +1015,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="textpart" subtype="paragraph" n="21">
                <ab> ምዕራፍ፡ ፱።1 aወእምዝ፡2 ዓደወ፡ <persName ref="PRS4428Galawdew">
                      <roleName type="title">ማር፡</roleName>
-                   ገላውዴዎስ፡ </persName>ማዕዶተ፡ <placeName ref="LOC6850Takkaze" notBefore="1540" notAfter="1541"> </placeName> <placeName ref="LOC1022Abbay" notBefore="1540" notAfter="1541">ክልኤቱ፡ አፍላግ፡</placeName>መንገለ፡
+                   ገላውዴዎስ፡ </persName>ማዕዶተ፡ <placeName ref="LOC6850Takkaze" notBefore="1540" notAfter="1541"> </placeName> 
+                  <placeName ref="LOC1022Abbay" notBefore="1540" notAfter="1541">ክልኤቱ፡ አፍላግ፡</placeName>መንገለ፡
                   ምድረ፡ <placeName ref="LOC5597Sawa" notBefore="1540" notAfter="1541">ሼዋ፡</placeName>a3 እመንገለ፡4
                   ምድረ፡5 <placeName ref="LOC6569Tegray" notBefore="1540" notAfter="1541">ትግራይ፡</placeName>6 ከመ፡7 
                   ይርአይ፡ መርዔቶ፡ bእለ፡8 ህየ፡b9 በጽድቅ፡ ወይዋሄ፡10 cሕዝቦ፡11 በርትዕ። c12 ወበጽሐ፡

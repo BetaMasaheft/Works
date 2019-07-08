@@ -7,12 +7,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3843BookTh">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">መጽሐፍ፡ ዘወጽአት፡ እምኢየሩሳሌም፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa za-waṣʾa ʾǝm-ʾIyarusālem</title>
-            <title xml:lang="en" corresp="#t1">Book the came from Jerusalem</title>
+            <title xml:lang="en" corresp="#t1">The Book that Came from Jerusalem</title>
+            <title xml:lang="gez" xml:id="t2">መጽሐፍ፡ ዘወፅዓት፡ እምኢየሩሳሌም፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Maṣḥāf za-waḍʾāt ʾǝm-ʾIyarusālem</title>
             <editor role="generalEditor" key="AB"/>
             <editor key="MV"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -34,11 +36,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -53,8 +63,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="MV" when="2017-04-03"> Added keywords</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
+         <ab/>
          <listRelation>
             <relation name="saws:formsPartOf"
                       active="LIT3843BookTh"

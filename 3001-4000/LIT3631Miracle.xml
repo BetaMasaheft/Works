@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3631Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: Homily on a European man who stole the door of the cave in Bethlehem</title>
@@ -35,6 +35,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -42,12 +50,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="Paks2"></term>
+               <term key="Paks2"/>
                <term key="ChristianLiterature"/>
                <term key="Miracle"/>
                <term key="Apocrypha"/>
@@ -63,24 +71,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-04-08">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
 
             <listBibl type="secondary">
 
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">26</citedRange></bibl>
-               <bibl><ptr target="bm:Cerulli1943Maria"/><citedRange unit="page">141-147</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">26</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Cerulli1943Maria"/>
+                  <citedRange unit="page">141-147</citedRange>
+               </bibl>
             </listBibl>
 
             <listBibl type="editions">
-               <bibl><ptr target="bm:Cerulli1943Maria"/><citedRange unit="page">142-144</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Cerulli1943Maria"/>
+                  <citedRange unit="page">142-144</citedRange>
+               </bibl>
             </listBibl>
 
-         <listBibl type="translation">
-            <bibl><ptr target="bm:Cerulli1943Maria"/><citedRange unit="page">145-146</citedRange></bibl>
-            <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="page">107-109</citedRange><citedRange unit="item">38</citedRange></bibl>
-         </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Cerulli1943Maria"/>
+                  <citedRange unit="page">145-146</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="page">107-109</citedRange>
+                  <citedRange unit="item">38</citedRange>
+               </bibl>
+            </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf"
                          active="LIT3631Miracle"
@@ -92,8 +116,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <note>This incipit is taken from <ref type="mss" corresp="EMML6938"/>.</note>
                   <ab>
                      ወኮነ፡ በበዐላ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> አመ፡ ፲፡ ወ፮፡ ለወርኀ፡ ነሐሴ፣
-                      ዕርገተ፡ ሥጋሃ፡ ቅዱስ፡ ውስተ፡ ሰማያት፣
-                      ወይትገበር፡ ባቲ፡ በዐል፡ ዐቢይ፡ በቤተ፡ ልሔም።
+                      ዕርገተ፡ ሥጋሃ፡ ቅዱስ፡ ውስተ፡ ሰማያት፣ ወይትገበር፡ ባቲ፡ በዐል፡ ዐቢይ፡ በቤተ፡ ልሔም።
                   </ab>
               </div>
           </div>

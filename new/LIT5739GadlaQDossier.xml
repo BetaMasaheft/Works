@@ -6,12 +6,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
      xml:lang="en"
-     xml:id="LIT4147GadlaAntonii">
-   <teiHeader>
+     xml:id="LIT5739GadlaQDossier">
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">LIT4147GadlaAntonii</title>
-      
+
+            <title xml:lang="en" corresp="#t1">Hagiographic Dossier of Sts Cyricus and Julitta</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,35 +29,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <p/>
          </sourceDesc>
+         
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Hagiography"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
-         <change who="SG" when="2016-11-18">CREATED: text record</change>
-         <change who="DR" when="2017-04-02">Added keywords and adjustments</change>
+         <change who="ES" when="2019-06-14"> Created file</change>
       </revisionDesc>
-   
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="bibliography">
+            
+            <listRelation>
+               <relation name="ecrm:F16_Container_Work"
+                         active="LIT5739GadlaQDossier"
+                         passive="LIT1488GadlaQ LIT4669TaammeraQi LIT3095RepCh375 LIT5752HymnCyriacus">
+               </relation>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT1488GadlaQ"
+                         passive="PRS3249Cyriacus PRS5790Julitta"/>
+               
+        
+            </listRelation>
+         </div>
+            
+
       </body>
    </text>
 </TEI>

@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5075MagicPrayer" xml:lang="en" type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5075MagicPrayer"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
               <title xml:id="t1" xml:lang="gez">ጸሎት፡ በእንተ፡ ሕማመ፡ ባርያ፡ ወለጌዎን፡ ወአጋንንት፡</title>
@@ -28,7 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -38,7 +49,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Magic"/>
-                    <term key="Prayers"></term>
+                    <term key="Prayers"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -53,12 +64,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DE" when="2018-12-03">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
-          <ab></ab>
-          <div type="edition"><div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit"><ab>
+          <ab/>
+          <div type="edition">
+            <div type="textpart"
+                 subtype="incipit"
+                 xml:lang="gez"
+                 xml:id="Incipit">
+               <ab>
                       በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ጸሎት፡ በእንተ፡ ሕማመ፡ ባርያ፡ ወለጌዎን፡ ወአጋንንት፡ ጸዋጋን፡ ወመናፍሥተ፡ ርኲሳን፡ ወሰብእ፡ ወሠርያን፡
-                  </ab></div>
+                  </ab>
+            </div>
                   </div>
         </body>
     </text>

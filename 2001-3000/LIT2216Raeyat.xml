@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT2216Raeyat">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">ራእየ፡ ተአምር፡</title>
@@ -33,11 +33,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -48,8 +56,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Liturgy"/>
             </keywords>
          </textClass>
-         <abstract><p>The <foreign xml:lang="gez">Rāʾǝya taʾammǝr</foreign> is a collection of four religious treatises, rarely copied together, designed to be read before the <ref type="work" corresp="LIT3585Taamme"/> during
-            church services. According to a warning at the end of the last part, they were composed by <persName ref="PRS10626ZaraY"/>. </p></abstract>
+         <abstract>
+            <p>The <foreign xml:lang="gez">Rāʾǝya taʾammǝr</foreign> is a collection of four religious treatises, rarely copied together, designed to be read before the <ref type="work" corresp="LIT3585Taamme"/> during
+            church services. According to a warning at the end of the last part, they were composed by <persName ref="PRS10626ZaraY"/>. </p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -58,29 +68,43 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2018-09-12">Updated title, added bibliography, abstract, keywords, textparts and relations</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
         <div type="bibliography">
            <listBibl type="secondary">
-              <bibl><ptr target="bm:Getatchew2010EAERaya"/></bibl>
+              <bibl>
+                  <ptr target="bm:Getatchew2010EAERaya"/>
+               </bibl>
            </listBibl>
            <listRelation>
-              <relation name="saws:isAttributedToAuthor" active="LIT2216Raeyat" passive="PRS10626ZaraY"/>
-              <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2216Raeyat" passive="LIT2384Taamme"/>
+              <relation name="saws:isAttributedToAuthor"
+                         active="LIT2216Raeyat"
+                         passive="PRS10626ZaraY"/>
+              <relation name="ecrm:CLP46i_may_form_part_of"
+                         active="LIT2216Raeyat"
+                         passive="LIT2384Taamme"/>
            </listRelation>
         </div>
          <div type="edition">
             <div type="textpart" xml:id="Part1" xml:lang="gez">
-               <label><foreign xml:lang="gez">በእንተ፡ ክልኤ፡ ድንግልናሃ፡ ለማርያም፡</foreign></label>
+               <label>
+                  <foreign xml:lang="gez">በእንተ፡ ክልኤ፡ ድንግልናሃ፡ ለማርያም፡</foreign>
+               </label>
             </div>
             <div type="textpart" xml:id="Part2" xml:lang="gez">
-               <label><foreign xml:lang="gez">በእንተ፡ ፹ወ፩፡ መጻሕፍት፡ ከመ፡ አሐዱ፡ ቃል፡ እማንቱ፡</foreign></label>
+               <label>
+                  <foreign xml:lang="gez">በእንተ፡ ፹ወ፩፡ መጻሕፍት፡ ከመ፡ አሐዱ፡ ቃል፡ እማንቱ፡</foreign>
+               </label>
             </div>
             <div type="textpart" xml:id="Part3" xml:lang="gez">
-               <label><foreign xml:lang="gez">በእንተ፡ ምጽዋት፡</foreign></label>
+               <label>
+                  <foreign xml:lang="gez">በእንተ፡ ምጽዋት፡</foreign>
+               </label>
             </div>
             <div type="textpart" xml:id="Part4" xml:lang="gez">
-               <label><foreign xml:lang="gez">በእንተ፡ ጥምቀተ፡ ክርስትና፡</foreign></label>
+               <label>
+                  <foreign xml:lang="gez">በእንተ፡ ጥምቀተ፡ ክርስትና፡</foreign>
+               </label>
             </div>
          </div>
       </body>

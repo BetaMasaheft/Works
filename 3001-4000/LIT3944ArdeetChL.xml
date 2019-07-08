@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3944ArdeetChL">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ አርድእት፡</title>
@@ -46,6 +46,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <creation notBefore="1400" notAfter="1500"/>
          <langUsage>
@@ -69,36 +77,52 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2017-03-23" who="DR">Keywords added</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          
          <div type="edition">
-            <div type="textpart" subtype="incipit"><p>በስመ፡“… ነገረ፡ ዘ፲ወ፪አርድእት…</p></div>
-            <div type="textpart" subtype="chapter" xml:id="Monday"><label>za-sanuy</label></div>
-            <div type="textpart" subtype="chapter" xml:id="Tuesday"><label>za-salus</label></div>
-            <div type="textpart" subtype="chapter" xml:id="Wednesday"><label>za-rabuʾǝ</label></div>
-            <div type="textpart" subtype="chapter" xml:id="Thursday"><label>za-ḥamus</label></div>
-            <div type="textpart" subtype="chapter" xml:id="Friday"><label>za-ʾarb</label></div>
-            <div type="textpart" subtype="chapter" xml:id="Saturday"><label>za-qadām</label></div>
-            <div type="textpart" subtype="chapter" xml:id="Sunday"><label>za-ʾǝhud</label></div>
+            <div type="textpart" subtype="incipit">
+               <p>በስመ፡“… ነገረ፡ ዘ፲ወ፪አርድእት…</p>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Monday">
+               <label>za-sanuy</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Tuesday">
+               <label>za-salus</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Wednesday">
+               <label>za-rabuʾǝ</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Thursday">
+               <label>za-ḥamus</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Friday">
+               <label>za-ʾarb</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Saturday">
+               <label>za-qadām</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Sunday">
+               <label>za-ʾǝhud</label>
+            </div>
          </div>
          <div type="bibliography">
             <listBibl type="editions">
-            <bibl>
-               <ptr target="bm:Littmann1904Ardeet"/>
-            </bibl>
-         </listBibl>
+               <bibl>
+                  <ptr target="bm:Littmann1904Ardeet"/>
+               </bibl>
+            </listBibl>
          </div>
             <listRelation>
                <relation name="saws:isVersionOf"
-                         active="LIT3944ArdeetChL"
-                         passive="LIT3942ArdeetCh"/>
+                      active="LIT3944ArdeetChL"
+                      passive="LIT3942ArdeetCh"/>
                <relation name="saws:isLongerVersionOf"
-                         active="LIT3944ArdeetChL"
-                         passive="LIT3943ArdeetChS"/>
+                      active="LIT3944ArdeetChL"
+                      passive="LIT3943ArdeetChS"/>
                <relation name="saws:fallsWithin"
-                         active="LIT3944ArdeetChL"
-                         passive="LIT1931Mashaf">
+                      active="LIT3944ArdeetChL"
+                      passive="LIT1931Mashaf">
                   <desc>The Maṣḥafa ʾardǝʾǝt circulates both as an independent work and as a part of the Maṣḥafa gǝnzat</desc>
                </relation>
             </listRelation>

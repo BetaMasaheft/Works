@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5404MiracleArk" xml:lang="en" type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5404MiracleArk"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" xml:id="t1">Miracle of Mary: When Israel sins against the Law, the Philistines defeat them and carry off the Ark of Zion, which then chastizes them</title>
@@ -26,7 +31,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -47,23 +58,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <language ident="am">Amharic</language>
                 <language ident="gez">Gǝʿǝz</language>
             </langUsage>
-            <abstract><p>This miracle also occurs divided in parts: <ref type="work" corresp="LIT5408MiracleEli"/> and <ref type="work" corresp="LIT5409MiracleAzotus"/>.</p></abstract>
+            <abstract>
+            <p>This miracle also occurs divided in parts: <ref type="work" corresp="LIT5408MiracleEli"/> and <ref type="work" corresp="LIT5409MiracleAzotus"/>.</p>
+         </abstract>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2019-03-19">Created entity</change>
             <change who="AM" when="2019-06-05">added text</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 <listBibl type="secondary">
-                    <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">460</citedRange></bibl>
+                    <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">460</citedRange>
+               </bibl>
                 </listBibl>
                 <listRelation>
                     <relation name="saws:formsPartOf"
-                        active="LIT5404MiracleArk"
-                        passive="LIT2384Taamme"/>
+                         active="LIT5404MiracleArk"
+                         passive="LIT2384Taamme"/>
                 </listRelation>
             </div>
             <div type="edition">
@@ -77,7 +93,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <note>This incipit is taken from <ref type="mss" corresp="EMML642"/>.</note>
                       <ab>
                         ንግባዕኬ፡ ኀበ፡ ኅዳገ፡ ነገር፡ ዘጽኑሕ፡ ለነ፡ በእንተ፡ ዜናሃ፡ ለጽዮን፣
-                        ዘገብረት፡ ተአምረ፡ ወመንክረ፡ አመ፡ ኮነ፡ <choice resp="PRS6437Macomber"><corr>፬፻፡</corr><sic>፲፻፡</sic></choice>
+                        ዘገብረት፡ ተአምረ፡ ወመንክረ፡ አመ፡ ኮነ፡ <choice resp="PRS6437Macomber">
+                     <corr>፬፻፡</corr>
+                     <sic>፲፻፡</sic>
+                  </choice>
                         ዓመት፡ እምአመ፡ ወጽኡ፡ እምግብጽ፡ ደቂቀ፡ እስራኤል፡ በመዋዕለ፡ ትንቢቱ፡ ለሳሙኤል።
                       </ab>
                    </div>

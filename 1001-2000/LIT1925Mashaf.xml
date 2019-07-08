@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1925Mashaf">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ፈላስፋ፡ ጠቢባን፡</title>
@@ -46,11 +46,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <abstract>
@@ -85,15 +93,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2017-03-17">Added keywords</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
             <relation name="saws:isVersionInAnotherLanguageOf"
-               active="LIT1925Mashaf#t1"
-               passive="LIT1925Mashaf#t2arabic"/>
+                      active="LIT1925Mashaf#t1"
+                      passive="LIT1925Mashaf#t2arabic"/>
             <relation name="saws:isAttributedToAuthor"
-               active="LIT1925Mashaf#t2arabic"
-               passive="PRS7509Nasralla">
+                      active="LIT1925Mashaf#t2arabic"
+                      passive="PRS7509Nasralla">
                <desc>It is not clear whether <persName ref="PRS7509Nasralla"/>, who is otherwise unknown, is the compiler or author.
                   <bibl>
                      <ptr target="bm:Pietruschka2005EAEFalasfa"/>
@@ -101,8 +109,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </desc>
             </relation>
             <relation name="saws:isAttributedToAuthor"
-               active="LIT1925Mashaf#t1"
-               passive="PRS7077Mikael"/>
+                      active="LIT1925Mashaf#t1"
+                      passive="PRS7077Mikael"/>
          </listRelation>
          <div type="bibliography">
             <listBibl type="secondary">
