@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3897Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: How the Virgin Mary kept alive miners buried in a fall of earth</title>
@@ -29,6 +29,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -36,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -55,7 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-04-10">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
@@ -65,7 +73,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             <listBibl type="secondary">
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">30</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">30</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="translation">
                <bibl>
@@ -73,7 +84,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">78</citedRange>
                   <citedRange unit="page">291-294</citedRange>
                </bibl>
-                  <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">68</citedRange><citedRange unit="page">182-184</citedRange></bibl>
+                  <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">68</citedRange>
+                  <citedRange unit="page">182-184</citedRange>
+               </bibl>
             </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf"

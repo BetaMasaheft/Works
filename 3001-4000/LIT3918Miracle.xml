@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3918Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: How a bishop removed a priest from his office and how the Virgin Mary rebuked the bishop</title>
@@ -30,6 +30,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -37,7 +45,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -57,7 +65,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-05-03">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
@@ -65,7 +73,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Budge1923Miracles"/>
                   <citedRange unit="item">102</citedRange>
                </bibl>
-                  <bibl><ptr target="bm:TasfaGiyorgis1956Taammera"/>
+                  <bibl>
+                  <ptr target="bm:TasfaGiyorgis1956Taammera"/>
                      <citedRange unit="item">78</citedRange>
                      <citedRange unit="page">276-278</citedRange>
                   </bibl>
@@ -76,10 +85,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">102</citedRange>
                   <citedRange unit="page">332-333</citedRange>
                </bibl>
-               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">157</citedRange><citedRange unit="page">386-387</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">157</citedRange>
+                  <citedRange unit="page">386-387</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="secondary">
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">145</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">145</citedRange>
+               </bibl>
             </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf"
@@ -93,7 +109,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                  <ab>
                   ወሀሎ፡ አሐዱ፡ ካህን፡ ቀሲስ፡ በሀገረ፡ ቂሳርያ፡ ዘስሙ፡ እንድርያስ፣ ወሀሎ፡ በህየ፡ ቤተ፡ ክርስቲያን፡ ዘተሐንጸ፡ በስማ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
                   ወብዙኅ፡ ሰብእ፣ ካህናት፡ ወዲያቆናት፡ ይትጋብኡ፡ ውስቴታ፡ ወይነግሩ፡ በእንተ፡ ዕበየ፡ ተአምሪሃ፡ ዘትገብር፣
-                  እስመ፡ ውእቱ፡ ቀሲስ፡ ዘስሙ፡ እንድርያስ፡ <choice resp="PRS6437Macomber"><corr>ኢየአምር፡</corr><sic>ዘኢየአምር፡</sic></choice> ካልአ፡ ቅዳሴ፡ ዘእንበለ፡ ቅዳሴሃ፡ ለእግዝእትነ፡ ማርያም።
+                  እስመ፡ ውእቱ፡ ቀሲስ፡ ዘስሙ፡ እንድርያስ፡ <choice resp="PRS6437Macomber">
+                     <corr>ኢየአምር፡</corr>
+                     <sic>ዘኢየአምር፡</sic>
+                  </choice> ካልአ፡ ቅዳሴ፡ ዘእንበለ፡ ቅዳሴሃ፡ ለእግዝእትነ፡ ማርያም።
                  </ab>
              </div>
          </div>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3622Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: Homily on a potter from Syria</title>
@@ -29,6 +29,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -36,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -56,7 +64,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-06-24">added relation</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
@@ -64,10 +72,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Budge1923Miracles"/>
                   <citedRange unit="item">35</citedRange>
                </bibl>
-               <bibl><ptr target="bm:Cerulli1943Maria"/><citedRange unit="page">290-293</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Cerulli1943Maria"/>
+                  <citedRange unit="page">290-293</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="secondary">
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">14</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">14</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="translation">
                <bibl>
@@ -75,7 +89,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">35</citedRange>
                   <citedRange unit="page">129-132</citedRange>
                </bibl>
-               <bibl><ptr target="bm:Cerulli1943Maria"/><citedRange unit="page">293-294</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Cerulli1943Maria"/>
+                  <citedRange unit="page">293-294</citedRange>
+               </bibl>
                   <bibl>
                      <ptr target="bm:Colin2004TaamraMaryam"/>
                      <citedRange unit="item">150</citedRange>
@@ -85,25 +102,94 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>
             <listBibl type="secondary">
                <bibl>
-                  <ptr target="bm:Grohmann1919Marien"/><citedRange unit="page">31</citedRange>
+                  <ptr target="bm:Grohmann1919Marien"/>
+                  <citedRange unit="page">31</citedRange>
                </bibl>
             </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf"
                          active="LIT3622Miracle"
                          passive="LIT2384Taamme"/>
-               <relation name="ecrm:P129_is_about" active="LIT3622Miracle" passive="LIT2509Weddas"/>
-               <relation name="lawd:hasAttestation" active="LIT3622Miracle" passive="EMML2275"><desc><locus corresp="EMML2275" target="#198r"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3622Miracle" passive="EMML6938"><desc><locus corresp="EMML6938" target="#70r"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3622Miracle" passive="EMML4618"><desc><locus corresp="EMML4618" target="#58r"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3622Miracle" passive="EMML5520"><desc><locus corresp="EMML5520" target="#4r"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3622Miracle" passive="EMML2378"><desc><locus corresp="EMML2378" target="#3r"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3622Miracle" passive="EMML2059"><desc><locus corresp="EMML2059" target="#111r"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3622Miracle" passive="EMML2060"><desc><locus corresp="EMML2060" target="#154v"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3622Miracle" passive="EMML2066"><desc><locus corresp="EMML2066" target="#38v"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3622Miracle" passive="EMML2772"><desc><locus corresp="EMML2772" target="#190r"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3622Miracle" passive="EMML2802"><desc><locus corresp="EMML2802" target="#31v"/></desc></relation>
-               <relation name="lawd:hasAttestation" active="LIT3622Miracle" passive="EMML7543"><desc><locus corresp="EMML7543" target="#23r"/></desc></relation>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT3622Miracle"
+                         passive="LIT2509Weddas"/>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3622Miracle"
+                         passive="EMML2275">
+                  <desc>
+                     <locus corresp="EMML2275" target="#198r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3622Miracle"
+                         passive="EMML6938">
+                  <desc>
+                     <locus corresp="EMML6938" target="#70r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3622Miracle"
+                         passive="EMML4618">
+                  <desc>
+                     <locus corresp="EMML4618" target="#58r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3622Miracle"
+                         passive="EMML5520">
+                  <desc>
+                     <locus corresp="EMML5520" target="#4r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3622Miracle"
+                         passive="EMML2378">
+                  <desc>
+                     <locus corresp="EMML2378" target="#3r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3622Miracle"
+                         passive="EMML2059">
+                  <desc>
+                     <locus corresp="EMML2059" target="#111r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3622Miracle"
+                         passive="EMML2060">
+                  <desc>
+                     <locus corresp="EMML2060" target="#154v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3622Miracle"
+                         passive="EMML2066">
+                  <desc>
+                     <locus corresp="EMML2066" target="#38v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3622Miracle"
+                         passive="EMML2772">
+                  <desc>
+                     <locus corresp="EMML2772" target="#190r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3622Miracle"
+                         passive="EMML2802">
+                  <desc>
+                     <locus corresp="EMML2802" target="#31v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3622Miracle"
+                         passive="EMML7543">
+                  <desc>
+                     <locus corresp="EMML7543" target="#23r"/>
+                  </desc>
+               </relation>
             </listRelation>
          </div>
 

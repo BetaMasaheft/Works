@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5064HEpA" xml:lang="en" type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5064HEpA"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" corresp="#t1">History of the Episcopate of Alexandria</title>
@@ -27,17 +32,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <sourceDesc>
                 <listWit>
                     <witness corresp="ESum039" xml:id="Σ"/>
-                    <witness type="external" xml:id="V" corresp="MS Verona, Biblioteca Capitolare, Codex LX (58).">MS Verona, Biblioteca Capitolare, Codex LX (58).</witness>
+                    <witness type="external"
+                        xml:id="V"
+                        corresp="MS Verona, Biblioteca Capitolare, Codex LX (58).">MS Verona, Biblioteca Capitolare, Codex LX (58).</witness>
                 </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-                <variantEncoding method="parallel-segmentation" location="internal" />
-        </encodingDesc>
+                <variantEncoding method="parallel-segmentation" location="internal"/>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation notBefore="0450" notAfter="0550">Probably arranged after the middle of the fifth century and 
-                probably no later than the end of that century or the first half of the sixth century (<bibl><ptr target="bm:HEpA"/><citedRange unit="page">250</citedRange></bibl>)</creation>
+                probably no later than the end of that century or the first half of the sixth century (<bibl>
+               <ptr target="bm:HEpA"/>
+               <citedRange unit="page">250</citedRange>
+            </bibl>)</creation>
             <abstract>
                 <p/>
             </abstract>
@@ -59,12 +75,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="PL" when="2018-09-27">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 <listBibl type="editions">
-                    <bibl><ptr target="bm:HEpA"/></bibl>
-      <!--                    <bibl xml:id="Batiffol"><ptr target="bm:?"/></bibl>
+                    <bibl>
+                  <ptr target="bm:HEpA"/>
+               </bibl>
+               <!--                    <bibl xml:id="Batiffol"><ptr target="bm:?"/></bibl>
                     <bibl xml:id="Bravo"><ptr target="bm:?"/></bibl>
                     <bibl xml:id="Kettler"><ptr target="bm:?"/></bibl>
                     <bibl xml:id="Maffei"><ptr target="bm:?"/></bibl>
@@ -78,34 +96,70 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="edition" xml:lang="gez" xml:id="etiopica">
                 <div type="textpart" subtype="chapter" n="30" xml:id="chapter30Eth">
                     <ab>ወእንዘ፡ ያንጐርጐሩ፡ ብዙኃን፡ በእንተ፡ 
-                        <app><lem wit="#Σ">ዘኢይባቍዕ፡</lem>
-                        <note><foreign xml:lang="la">fortasse in</foreign> ዘኢይበቍዕ፡ <foreign xml:lang="la">emendandum</foreign></note>
+                        <app>
+                     <lem wit="#Σ">ዘኢይባቍዕ፡</lem>
+                        <note>
+                        <foreign xml:lang="la">fortasse in</foreign> ዘኢይበቍዕ፡ <foreign xml:lang="la">emendandum</foreign>
+                     </note>
                         </app> 
-                        ሢመ<app><lem wit="#Σ"><choice><corr resp="AB">ት፡</corr><sic>ተ፡</sic></choice></lem></app> 
-                        ቦእለ፡ ሮጹ፡ <app><lem wit="#Σ"><choice><orig>ሰብእ፡</orig><reg>ሰብአ፡</reg></choice></lem></app> 
+                        ሢመ<app>
+                     <lem wit="#Σ">
+                        <choice>
+                           <corr resp="AB">ት፡</corr>
+                           <sic>ተ፡</sic>
+                        </choice>
+                     </lem>
+                  </app> 
+                        ቦእለ፡ ሮጹ፡ <app>
+                     <lem wit="#Σ">
+                        <choice>
+                           <orig>ሰብእ፡</orig>
+                           <reg>ሰብአ፡</reg>
+                        </choice>
+                     </lem>
+                  </app> 
                         ቤተ፡ ክርስቲያን፡ እለ፡ አለክስንድርያ፡ ወነገ ርዎሙ፡ ለኤጲስቆጶሳት፡ በቤተ፡ ሞቅሕ፡ ድፍረቶ፡ ለሜሊጢስ። ወሰሚ ዖሙ፡ 
-                        <app><lem wit="#Σ">አፈድ<choice><corr resp="AB">ፈ</corr><sic>ፋ</sic></choice>ዱ፡</lem></app> 
+                        <app>
+                     <lem wit="#Σ">አፈድ<choice>
+                           <corr resp="AB">ፈ</corr>
+                           <sic>ፋ</sic>
+                        </choice>ዱ፡</lem>
+                  </app> 
                         ሐዚነ፡ በእንተ፡ እከየ፡ ትዝልፍቱ፡ ወሐሊዮሙ፡ ዘ ንተ፡ ከመ፡ ኢሀሎ፡ 
                         ለበቍዔት፡ ይብጻሕ፡ ጸሐፉ፡ ሎቱ፡ መጽሐፍ፡ እን ተ፡ ትብል፡ ከመዝ፡</ab>
                 </div>
                 
                 <div type="textpart" subtype="chapter" n="31" xml:id="chapter31Eth">
                     <label>Ep. episcop.</label>
-                    <ab><app type="testes"><lem>አስኪስ፡</lem><note><foreign xml:lang="la">inc. La</foreign></note></app> 
+                    <ab>
+                  <app type="testes">
+                     <lem>አስኪስ፡</lem>
+                     <note>
+                        <foreign xml:lang="la">inc. La</foreign>
+                     </note>
+                  </app> 
                         ወጳኩሜ፡ ወቴዎድሮስ፡ ወፈልያስ፡ ለሜሊጢስ፡ ለፍቁር፡ እ ኁነ፡ ለዘ፡ አሐዱ፡ ቅኔነ፡ በእግዚ እ፡ ፍሥሓ። </ab>
                 </div>
                 
                 <div type="textpart" subtype="chapter" n="32" xml:id="chapter32Eth">
                     <ab>ቅድመ፡ እንከ፡ ነገ ረ፡ ሐሰተ፡ ወቃለ፡ <app>
-                        <lem wit="#Σ"><choice><corr resp="AB">ም</corr><sic>መ</sic></choice>ኑነ፡</lem>
+                        <lem wit="#Σ">
+                        <choice>
+                           <corr resp="AB">ም</corr>
+                           <sic>መ</sic>
+                        </choice>ኑነ፡</lem>
                     </app> እን ዘ፡ 
                         ይመስለነ፡ እለ፡ እምኀቤከ፡ 
                         <app>
-                            <lem wit="#Σ">በ<choice><orig>ጸ</orig><reg>ጽ</reg></choice>ሑ፡</lem>
+                            <lem wit="#Σ">በ<choice>
+                           <orig>ጸ</orig>
+                           <reg>ጽ</reg>
+                        </choice>ሑ፡</lem>
                         </app>
                         ኀቤነ፡ ወዜነዉነ፡ ዘኢይ<pb n="8vb" corresp="#Σ"/>ደሉ፡ ለሕገ፡ 
                         <app>
-                            <lem wit="#Σ">መለኮ<supplied reason="lost" resp="AB">ት፡</supplied></lem>
+                            <lem wit="#Σ">መለኮ<supplied reason="lost" resp="AB">ት፡</supplied>
+                     </lem>
                         </app> ድፍረተ፡ 
                         <app>
                             <lem wit="#Σ">ለሥርዓ<supplied reason="lost" resp="AB">ተ፡ ቤ</supplied>ተ፡</lem>
@@ -116,19 +170,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </app> 
                         ተገብረ፡ እምኀቤከ፡ ወበእዘ ኒነ፡ ኢፈቀድነ፡ ንስምዖ፡ እንዘ፡ ን ኔጽር፡ ውስተ፡ ዕበየ፡ ድፍረት፡ ወ ውስተ፡ <app>
                             <lem wit="#Σ">‡ እለ፡ ይፈርሁ፡ ይሠየ ሙ። ‡</lem>
-                            <note><foreign xml:lang="la">corruptum videtur, cf. <hi rendition="simple:italic">connatus incertos</hi> La</foreign></note>
-                        </app></ab>
+                            <note>
+                        <foreign xml:lang="la">corruptum videtur, cf. <hi rendition="simple:italic">connatus incertos</hi> La</foreign>
+                     </note>
+                        </app>
+               </ab>
                 </div>
                 
                 <div type="textpart" subtype="chapter" n="33" xml:id="chapter33Eth">
                     <ab>
                         ወእስመ፡ መዜንዋን፡ በጽ ሑ፡ ኀቤነ፡ ብዙኃን፡ አጠየቅናሆ ሙ፡ በአሀይምኖ፡ ወስምዕ፡ ኮኑ፡ ዘ ተገብረ፡ 
                         <app>
-                            <lem wit="#Σ">ወኢክ<choice><orig>ሓ</orig><reg>ሕ</reg></choice>ዱ።</lem>
+                            <lem wit="#Σ">ወኢክ<choice>
+                           <orig>ሓ</orig>
+                           <reg>ሕ</reg>
+                        </choice>ዱ።</lem>
                         </app> 
                         ወበእንተዝ፡ 
                         <app>
-                            <lem wit="#Σ">አስተድሚ<choice><orig>ም</orig><reg>መ</reg></choice>ነ፡</lem>
+                            <lem wit="#Σ">አስተድሚ<choice>
+                           <orig>ም</orig>
+                           <reg>መ</reg>
+                        </choice>ነ፡</lem>
                         </app> ግብረ፡ ረሰይነ፡ ዘን ተ፡ መጽሐፍ፡
                     </ab>
                 </div>
@@ -136,7 +199,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <ab>
                          ንጽሐፍ፡ ኀቤከ፡ ዘ ከመ፡ እፎ፡ ነገሥጋሥ፡ ወሐዛን፡ ለ ኵልነ፡ ወለለ፡ አሐዱ፡ 
                         አሐዱ፡ ኮ ነ፡ <app>
-                            <lem wit="#Σ"><choice><corr resp="AB">ዘ</corr><sic>ዝ</sic></choice>ኮነ፡</lem>
+                            <lem wit="#Σ">
+                        <choice>
+                           <corr resp="AB">ዘ</corr>
+                           <sic>ዝ</sic>
+                        </choice>ኮነ፡</lem>
                         </app> 
                         ሢመተ፡ እምኀቤከ፡ በ ደወል፡ ኀበ፡ ኢኮነ፡ ምህላዊከ፡ ወዘ እንበለ፡ ኀጣእነ፡ ወሕዳጠስ፡ እንዘ፡
                         ከመዝስ፡ ብነ፡ ለዘሊፎት፡ ወኢንት ዓቀብ።
@@ -217,8 +284,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </div>
                 </div>
           -->  
-            <div type="translation" xml:lang="en" xml:id="translationEthio" corresp="#etiopica">
-                <div type="textpart" subtype="chapter" n="30" xml:id="transchapter30Eth">
+            <div type="translation"
+              xml:lang="en"
+              xml:id="translationEthio"
+              corresp="#etiopica">
+                <div type="textpart"
+                 subtype="chapter"
+                 n="30"
+                 xml:id="transchapter30Eth">
                 <ab>While many murmured for the fact that the appointment was not
                         useful, there were people of the church of ʾAlaksǝndǝryā 
                         who run and reported to the bishops in prison the insolence of Meliṭis. 
@@ -226,15 +299,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         his obstinacy and considering that this would not have resulted 
                         for usefulness, they wrote him a letter that said as follows:</ab>
                 </div>
-                <div type="textpart" subtype="chapter" n="31" xml:id="transchapter31Eth">
+                <div type="textpart"
+                 subtype="chapter"
+                 n="31"
+                 xml:id="transchapter31Eth">
                     <ab>
-                        <app type="loci"><lem>ʾAsǝkis, Ṗākume, Tewodros and Falyās</lem>
-                            <note>GUAR., MartPetLat, c. 458D: <foreign xml:lang="la">ubi quattuor episcopi nominantur</foreign></note></app> 
+                        <app type="loci">
+                     <lem>ʾAsǝkis, Ṗākume, Tewodros and Falyās</lem>
+                            <note>GUAR., MartPetLat, c. 458D: <foreign xml:lang="la">ubi quattuor episcopi nominantur</foreign>
+                     </note>
+                  </app> 
                         to Meliṭis, our beloved brother with 
                         whom we share our service, greeting in the Lord.
                     </ab>
                 </div>
-                <div type="textpart" subtype="chapter" n="32" xml:id="transchapter32Eth">
+                <div type="textpart"
+                 subtype="chapter"
+                 n="32"
+                 xml:id="transchapter32Eth">
                     <ab>
                         At first since it seemed to us an account of falsehood and a neglectable word, what those 
                         who arrived from you had told us, contrary to the divine [Law], an insolence towards the rule 
@@ -242,14 +324,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         not want to listen to it, looking at the enormity of the insolence and at the ‡ fearful who were being appointed; ‡
                     </ab>
                 </div>
-                <div type="textpart" subtype="chapter" n="33" xml:id="transchapter33Eth">
+                <div type="textpart"
+                 subtype="chapter"
+                 n="33"
+                 xml:id="transchapter33Eth">
                     <ab>
                         and since many had come to us, we ascertained their reliability and they 
                         witnessed to what had been done and they did not deny. For this reason, being surprised, we deemed it necessary
                         to write this letter to you:
                     </ab>
                 </div>
-                <div type="textpart" subtype="chapter" n="34" xml:id="transchapter34Eth">
+                <div type="textpart"
+                 subtype="chapter"
+                 n="34"
+                 xml:id="transchapter34Eth">
                     <ab>
                         of what agitation and pain for all of us and everyone was any appointment 
                         (carried out) by you in a diocese where is not your see, although we are not 

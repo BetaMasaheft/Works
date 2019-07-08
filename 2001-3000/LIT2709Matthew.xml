@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT2709Matthew">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ብስራተ፡ ማቴዎስ፡</title>
@@ -32,11 +32,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -53,7 +61,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2018-12-03" who="DR">Added relation and keyword</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listRelation>
@@ -61,9 +69,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                          active="LIT2709Matthew"
                          passive="LIT1558Matthew">
                </relation>
-               <relation name="skos:broadMatch" 
-                  active="https://corpuscoranicum.de/kontexte/index/sure/4/vers/61/intertext/977"
-                  passive="LIT2709Matthew"/>
+               <relation name="skos:broadMatch"
+                         active="https://corpuscoranicum.de/kontexte/index/sure/4/vers/61/intertext/977"
+                         passive="LIT2709Matthew"/>
             </listRelation>
          </div>
       </body>

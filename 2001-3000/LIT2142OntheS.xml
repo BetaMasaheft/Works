@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT2142OntheS">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="en" xml:id="t1">On the Saying of Christ "If it be Possible, Let this Cup Pass from Me"</title>
@@ -39,16 +39,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
-         <abstract><p>Homily attributed to John Chrysostom on the words of Jesus in a passage of the Gospel of Matthew (“Father, if it is possible, let this chalice pass away from me”, Mt. 26:39),  
+         <abstract>
+            <p>Homily attributed to John Chrysostom on the words of Jesus in a passage of the Gospel of Matthew (“Father, if it is possible, let this chalice pass away from me”, Mt. 26:39),  
             CPG 4654, cp. also D.V. PROVERBIO, La recensione etiopica dell’omelia pseudocrisostomica de ficu exarata ed il suo tréfonds orientale, Wiesbaden 1998 (AeF 50), p.71ff. and 104. 
             The homily is included in Maṣḥafa gǝbra ḥǝmāmāt among the readings for Good Friday.
             This is probably the oldest known witness of the homily, which is attested in Ms. EMML 1763, ff. 204v-209r
-            (dating to 1336/37 or 1339/40).</p></abstract>
+            (dating to 1336/37 or 1339/40).</p>
+         </abstract>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -69,7 +79,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2019-04-01" who="ES">added bibl relations</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
  
       <body>
          <div type="bibliography">
@@ -84,8 +94,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             <listBibl type="editions">
-<bibl>               <ptr target="bm:Proverbio1998Recensione"></ptr>
-               <citedRange>71-73, 104</citedRange></bibl>
+               <bibl>               
+                  <ptr target="bm:Proverbio1998Recensione"/>
+                  <citedRange>71-73, 104</citedRange>
+               </bibl>
                <bibl>
                   <ptr target="bm:TasfaGebraHamamat"/>
                   <citedRange>257a–262a</citedRange>
@@ -95,8 +107,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <relation name="saws:isAttributedToAuthor"
                          active="LIT2142OntheS"
                          passive="PRS5720JohnChr"/>
-               <relation name="ecrm:P129_is_about" active="LIT2142OntheS" passive="PRS5684JesusCh"></relation>
-               <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2142OntheS" passive="LIT1544Gebrah"></relation>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT2142OntheS"
+                         passive="PRS5684JesusCh"/>
+               <relation name="ecrm:CLP46i_may_form_part_of"
+                         active="LIT2142OntheS"
+                         passive="LIT1544Gebrah"/>
             </listRelation>
          </div>
       </body>

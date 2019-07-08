@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5657MMMilk" xml:lang="en" type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5657MMMilk"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" xml:id="t1">Miracle of Mary: A sinful priest possessed by a demon afflicts wounds on himself and his healed by Mary's milk after two visions</title>
@@ -26,12 +31,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
                 <p>This miracle might be related to <ref type="work" corresp="LIT3693Miracle"/> or <ref type="work" corresp="LIT5396MiracleErmeyas"/>, but the information provided
-                    in    <bibl><ptr target="bm:MacomberMiracles"/></bibl>  does not allow a certain identification.</p>
+                    in    <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+               </bibl>  does not allow a certain identification.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -53,14 +66,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2019-04-26">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
                 <div type="bibliography">
                     <listBibl type="translation">
-                        <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">17</citedRange><citedRange unit="page">56-57</citedRange></bibl>
+                        <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">17</citedRange>
+                  <citedRange unit="page">56-57</citedRange>
+               </bibl>
                     </listBibl>
                     <listRelation>
-                        <relation name="saws:formsPartOf" active="LIT5657MMMilk" passive="LIT2384Taamme"/>
+                        <relation name="saws:formsPartOf"
+                         active="LIT5657MMMilk"
+                         passive="LIT2384Taamme"/>
                     </listRelation>
                 </div>
         </body>

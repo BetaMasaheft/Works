@@ -1,15 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4986GadlaAkalaKrestos" xml:lang="en" type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT4986GadlaAkalaKrestos"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">ገድለ፡ አባ፡ አካለ፡ ክርስቶስ፡ አበ፡ ምኔት፡ ዘምድረ፡ ዞጋ።</title>
                 <title xml:lang="gez" corresp="#t1">Gadla ʾabbā ʾAkāla Krəstos ʾAbbā Mǝnet za-Mǝdra Zoga</title>
                 <editor role="generalEditor" key="AB"/>
-                <editor key="ES" role="metadata"></editor>
-                <editor key="WD" role="editor annotator"></editor>
+                <editor key="ES" role="metadata"/>
+                <editor key="WD" role="editor annotator"/>
                 <respStmt>
                     <resp>Text encoded for the TraCES project by</resp>
                     <persName from="2017" to="2018" ref="WD"/>
@@ -19,7 +24,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <editionStmt>
                 <p>The text was prepared by the TraCES project on the basis of <bibl>
                     <ptr target="bm:Getatchew2017AK"/>
-                </bibl>. The corrections and modifications are described in <bibl><ptr target="bm:Dickhut2018Akala"/></bibl></p>
+                </bibl>. The corrections and modifications are described in <bibl>
+                  <ptr target="bm:Dickhut2018Akala"/>
+               </bibl>
+            </p>
                 
             </editionStmt>
             <publicationStmt>
@@ -36,16 +44,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <listWit>
                     
                     <listWit rend="edition">
-                        <witness corresp="EMML7589"></witness>
+                        <witness corresp="EMML7589"/>
                     </listWit>
                 </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
-            <creation notBefore="1600" notAfter="1700"></creation>
+            <creation notBefore="1600" notAfter="1700"/>
             <abstract>
                 <p>The Life of <persName ref="PRS12143AkalaKr">ʾabbā ʾAkāla Krəstos</persName>, a 17th century Gondarine prince who entered monastic life and in time became a great ascetic.</p>
             </abstract>
@@ -64,16 +78,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="ES" when="2018-06-28">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <bibl type="edition">
                 <ptr target="bm:Getatchew2017AK"/>
             </bibl>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="saws:isAttributedToAuthor" active="LIT4986GadlaAkalaKrestos" passive="PRS12142Isayeyyas"/>
+                    <relation name="saws:isAttributedToAuthor"
+                         active="LIT4986GadlaAkalaKrestos"
+                         passive="PRS12142Isayeyyas"/>
                 </listRelation>
-            </div><!---->
+            </div>
+         <!---->
         </body>
     </text>
 </TEI>

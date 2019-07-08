@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5070Reading" xml:lang="en" type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5070Reading"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">On the Reading of Psalter and Gospels</title>
@@ -26,11 +31,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
-                <p>Text on the fruits of reading of <ref type="work" corresp="LIT2701Dawit"></ref> and <ref type="work" corresp="LIT1560Gospe">the Gospels</ref>.</p>
+                <p>Text on the fruits of reading of <ref type="work" corresp="LIT2701Dawit"/> and <ref type="work" corresp="LIT1560Gospe">the Gospels</ref>.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -49,14 +60,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DE" when="2018-12-03">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography"/>
+         <!---->
           <div type="edition">
             <div type="textpart" xml:lang="gez">
-              <note>This incipit is taken from <ref type="mss" corresp="RNBspbdaBIII18"></ref></note>
+              <note>This incipit is taken from <ref type="mss" corresp="RNBspbdaBIII18"/>
+               </note>
               <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ይቤሉ፡ አበዊነ፡ ቅዱሳን፡ እለ፡ አርአዮሙ፡ እግዚአብሔር፡ አምላኮሙ፡ ኀቡዓቲሁ፡ ወምሥጢራቲሁ፡ ከመዝ፡ ፍሬሁ፡ ለ፩ዳዊት፡ ፺፼፷ ብእሲ፡ መዝሙረ፡ በአንብዕ፡ ወበፈሪሃ፡ እግዚአብሔር፡ ወበሠናይ፡
-              መልእክት፡ ወይጸሊ፡ ውስተ፡ ቤተ፡ ክርስቲያን፡ ዘእንበለ፡ ነጐርጓር፡ የዓቅብዎ፡ መላእክት፡ ፳፼ወ፲፻ በምሥራቅ፡ <gap reason="ellipsis" resp="PRS9602Turaev"></gap> ወዘሰ፡ ያነብብ፡ ወንጌለ፡ በበበእለቱ፡ ብእሲ፡
+              መልእክት፡ ወይጸሊ፡ ውስተ፡ ቤተ፡ ክርስቲያን፡ ዘእንበለ፡ ነጐርጓር፡ የዓቅብዎ፡ መላእክት፡ ፳፼ወ፲፻ በምሥራቅ፡ <gap reason="ellipsis" resp="PRS9602Turaev"/> ወዘሰ፡ ያነብብ፡ ወንጌለ፡ በበበእለቱ፡ ብእሲ፡
             ንጹሕ፡ ዘቦ፡ መንፈስ፡ እመ፡ ኮነ፡ ፍጹም፡ በበዕለቱ፡ ፼ ነፍሳተ፡ ሰብእ፡ ያወጽእ፡ እምባሕረ፡ ሲኦ። ወኊልቈ፡ ፍሬሁሰ፡ ለወንጌል፡ አልቦ፡ ዘየአምሮ፡ ጥቀ፡ ሰብእ፡ ወመላእክትኒ፡ ኢይክሉ፡ አእምሮቶ፡ ዘእንበለ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡</ab>
             </div>
           </div>

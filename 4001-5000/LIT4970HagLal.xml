@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="LIT4970HagLal"
      xml:lang="en"
      type="work">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" xml:id="t1">‘Gadla Lālibalā collection of textual units’  </title>
@@ -34,7 +34,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -58,23 +64,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="NV" when="2018-05-24">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="saws:hasPart" active="LIT4970HagLal" passive="LIT5080TUoneLal"/>
-                      <relation name="saws:hasPart" active="LIT4970HagLal"  passive="LIT5081SoterLal"/>
-                        <relation name="saws:hasPart" active="LIT4970HagLal"  passive="LIT5082TUthreeLal" />
-                          <relation name="saws:hasPart" active="LIT4970HagLal"  passive="LIT5083TUfourLal"/>
-                            <relation name="saws:hasPart" active="LIT4970HagLal"  passive="LIT5084TUfiveLal" />
-                              <relation name="saws:hasPart" active="LIT4970HagLal"  passive="LIT5085TUsixLal" />
+                    <relation name="saws:hasPart"
+                         active="LIT4970HagLal"
+                         passive="LIT5080TUoneLal"/>
+                      <relation name="saws:hasPart"
+                         active="LIT4970HagLal"
+                         passive="LIT5081SoterLal"/>
+                        <relation name="saws:hasPart"
+                         active="LIT4970HagLal"
+                         passive="LIT5082TUthreeLal"/>
+                          <relation name="saws:hasPart"
+                         active="LIT4970HagLal"
+                         passive="LIT5083TUfourLal"/>
+                            <relation name="saws:hasPart"
+                         active="LIT4970HagLal"
+                         passive="LIT5084TUfiveLal"/>
+                              <relation name="saws:hasPart"
+                         active="LIT4970HagLal"
+                         passive="LIT5085TUsixLal"/>
                                 <relation name="saws:hasPart" active="LIT4970HagLal" passive="LIT4922HagVit"/>
-                                  <relation name="saws:hasPart"  active="LIT4970HagLal" passive="LIT4924HagMir1" />
-                                    <relation name="saws:hasPart" active="LIT4970HagLal" passive="LIT4925HagMir2" />
-                                    <relation name="saws:hasPart"  active="LIT4970HagLal" passive="LIT4926HagMir3" />
-                                    <relation name="saws:hasPart" active="LIT4970HagLal" passive="LIT4927HagMir4" />
-                                       <relation name="saws:hasPart"  active="LIT4970HagLal" passive="LIT4928HagMir5" />
-                                    <relation name="saws:hasPart"  active="LIT4970HagLal" passive="LIT4930HagVirt" />
+                                  <relation name="saws:hasPart" active="LIT4970HagLal" passive="LIT4924HagMir1"/>
+                                    <relation name="saws:hasPart" active="LIT4970HagLal" passive="LIT4925HagMir2"/>
+                                    <relation name="saws:hasPart" active="LIT4970HagLal" passive="LIT4926HagMir3"/>
+                                    <relation name="saws:hasPart" active="LIT4970HagLal" passive="LIT4927HagMir4"/>
+                                       <relation name="saws:hasPart" active="LIT4970HagLal" passive="LIT4928HagMir5"/>
+                                    <relation name="saws:hasPart" active="LIT4970HagLal" passive="LIT4930HagVirt"/>
                 </listRelation>
             </div>
         </body>

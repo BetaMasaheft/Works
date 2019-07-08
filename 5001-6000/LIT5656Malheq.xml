@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5656Malheq" xml:lang="en" type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5656Malheq"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">መልሕቅ፡</title>
@@ -24,13 +29,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </publicationStmt>
             <sourceDesc>
               <listWit>
-                <witness corresp="IVorlov33" xml:id="L"></witness>
+                <witness corresp="IVorlov33" xml:id="L"/>
                 </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation> Not before <date>1563</date>, not after <date>1597</date>.
             </creation>
@@ -60,16 +71,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DN" when="2019-04-25">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="lawd:hasAttestation" active="LIT5656Malheq" passive="IVorlov33"/>
+                    <relation name="lawd:hasAttestation"
+                         active="LIT5656Malheq"
+                         passive="IVorlov33"/>
                 </listRelation>
 
                 <div type="edition">
                    <note>This division into textparts follows
-                     <ref type="mss" corresp="IVorlov33"></ref>.</note>
+                     <ref type="mss" corresp="IVorlov33"/>.</note>
 
                      <div type="textpart" corresp="LIT5656Malheq#ColophonWork">
                         <label>Colophon of the work</label>
@@ -98,11 +111,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#Zechariah">
                       <label>Chants for <persName ref="PRS10691Zechari">
-                      Prophet Zechariah</persName></label>
+                      Prophet Zechariah</persName>
+                  </label>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#WazemaFere">
                       <label>Chants for the Period of the Fruits,
-                        <foreign xml:lang="gez">ዋዜማ፡ ዘፍሬ፡</foreign></label>
+                        <foreign xml:lang="gez">ዋዜማ፡ ዘፍሬ፡</foreign>
+                  </label>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#Stephan">
                       <label>Chants for St Stephan</label>
@@ -115,11 +130,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#Michael">
                       <label>Chants for <persName ref="PRS7049Michael">St Michael the Archangel
-                      </persName></label>
+                      </persName>
+                  </label>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#PeterPaul">
                       <label>Chants for <persName ref="PRS12538PeterPaul">Peter and Paul
-                      </persName></label>
+                      </persName>
+                  </label>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#CrossRitual">
                       <label>Chants for the Feast of the Cross</label>
@@ -143,7 +160,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                    </div>
 
                    <div type="textpart" corresp="LIT5656Malheq#Pantalewon">
-                      <label>Chants for <persName ref="PRS7720Pantalew">Ṗanṭalewon</persName></label>
+                      <label>Chants for <persName ref="PRS7720Pantalew">Ṗanṭalewon</persName>
+                  </label>
                    </div>
 
                    <div type="textpart" corresp="LIT5656Malheq#WazemaZaSanabet">
@@ -182,15 +200,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                    <div type="textpart" corresp="LIT5656Malheq#Michael2">
                       <label>Chants for <persName ref="PRS7049Michael">St Michael the Archangel
-                      </persName></label>
+                      </persName>
+                  </label>
                    </div>
 
                    <div type="textpart" corresp="LIT5656Malheq#Menas">
-                      <label>Hymn to St <persName ref="PRS7000MenasM">Menās</persName></label>
+                      <label>Hymn to St <persName ref="PRS7000MenasM">Menās</persName>
+                  </label>
                    </div>
 
                    <div type="textpart" corresp="LIT5656Malheq#MesbakZaSeyon">
-                      <label>Chants for <foreign xml:lang="gez">ምስባክ፡ ዘጽዮን᎓</foreign></label>
+                      <label>Chants for <foreign xml:lang="gez">ምስባክ፡ ዘጽዮን᎓</foreign>
+                  </label>
                    </div>
 
                    <div type="textpart" corresp="LIT5656Malheq#HeavenlyElders">
@@ -198,14 +219,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                    </div>
 
                    <div type="textpart" corresp="LIT5656Malheq#Mercury">
-                      <label>Chants for <persName ref="PRS7025Mercury">St Mercury</persName></label>
+                      <label>Chants for <persName ref="PRS7025Mercury">St Mercury</persName>
+                  </label>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#Nagran">
                       <label>Chants for the martyrs of <placeName ref="LOC4955Najran">
-                      Naǧrān</placeName></label>
+                      Naǧrān</placeName>
+                  </label>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#PeterAlexandria">
-                      <label>Chants for <persName ref="PRS7806PeterI">St Peter of Alexandria</persName></label>
+                      <label>Chants for <persName ref="PRS7806PeterI">St Peter of Alexandria</persName>
+                  </label>
                    </div>
 
                    <div type="textpart" corresp="LIT5656Malheq#Blessed">
@@ -221,18 +245,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                    </div>
 
                    <div type="textpart" corresp="LIT5656Malheq#wazemaZaAstamhero">
-                      <label>Chants for <foreign xml:lang="gez">ዋዜማ፡ ዘአስተምህሮ᎓ ዘሰንበት፡</foreign></label>
+                      <label>Chants for <foreign xml:lang="gez">ዋዜማ፡ ዘአስተምህሮ᎓ ዘሰንበት፡</foreign>
+                  </label>
                    </div>
 
                    <div type="textpart" corresp="LIT5656Malheq#MountOlives">
-                      <label>Chants for <placeName ref="LOC4878Mounto">the Mount of Olives</placeName></label>
+                      <label>Chants for <placeName ref="LOC4878Mounto">the Mount of Olives</placeName>
+                  </label>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#Elijah">
-                      <label>Chants for <persName ref="PRS3723Elisha">Prophet Elisha</persName></label>
+                      <label>Chants for <persName ref="PRS3723Elisha">Prophet Elisha</persName>
+                  </label>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#ThreeYouth">
                       <label>Chants for <persName ref="PRS11288AnAzMi">Three Youths in the Furnace
-                      </persName></label>
+                      </persName>
+                  </label>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#MesbakZaSabakat">
                       <label>Chants for <foreign xml:lang="gez">ምስባክ፡ ዘስባካት᎓</foreign>,
@@ -243,20 +271,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#Berhan">
                       <label>Chants for the feast of the Light,
-                        <foreign xml:lang="gez">ብርሃን᎓</foreign></label>
+                        <foreign xml:lang="gez">ብርሃን᎓</foreign>
+                  </label>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#Nolawi">
                       <label>Chants for the feast of the Sheperd,
-                    <foreign xml:lang="gez">ኖላዊ᎓</foreign></label>
+                    <foreign xml:lang="gez">ኖላዊ᎓</foreign>
+                  </label>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#Marawi">
                       <label>Chants for the Bridegroom
-                        <foreign xml:lang="gez">ዋዜማ፡ ዘመርዓዊ፡</foreign></label>
+                        <foreign xml:lang="gez">ዋዜማ፡ ዘመርዓዊ፡</foreign>
+                  </label>
                    </div>
 
                    <div type="textpart" corresp="LIT5656Malheq#ChristmasEve">
                       <label>Chants for the Christmas Eve
-                        <foreign xml:lang="gez">ዘጌና፡</foreign></label>
+                        <foreign xml:lang="gez">ዘጌና፡</foreign>
+                  </label>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#Christmas">
                       <label>Chants for Christmas</label>
@@ -337,10 +369,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#George">
                       <label>Chants for <persName ref="PRS4585Georgeo">St George the Martyr
-                      </persName></label>
+                      </persName>
+                  </label>
                     </div>
                    <div type="textpart" corresp="LIT5656Malheq#ZaRakeb">
-                      <label>Chants for Mid-Pentacost, <foreign xml:lang="gez">ዘረክብ፡</foreign></label>
+                      <label>Chants for Mid-Pentacost, <foreign xml:lang="gez">ዘረክብ፡</foreign>
+                  </label>
                    </div>
                   <div type="textpart" corresp="LIT5656Malheq#BirthOfMary">
                   <label>Chants for the feast of the Birth of St Mary</label>
@@ -358,30 +392,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                      <div type="textpart" corresp="LIT5656Malheq#JohnBaptist2">
                         <label>Chants for <persName ref="PRS5741Johnthe">
-                          John the Baptist</persName></label>
+                          John the Baptist</persName>
+                     </label>
                      </div>
                      <div type="textpart" corresp="LIT5656Malheq#HolySpirit">
                         <label>Chants for <persName ref="PRS10774Paraq">
-                          the Holy Spirit</persName></label>
+                          the Holy Spirit</persName>
+                     </label>
                      </div>
                      <div type="textpart" corresp="LIT5656Malheq#Michael3">
                         <label>Chants for <persName ref="PRS7049Michael">St Michael the Archangel
-                        </persName></label>
+                        </persName>
+                     </label>
                      </div>
 
                      <div type="textpart" corresp="LIT5656Malheq#DamianCosmas">
                         <label>Chants for <persName ref="PRS3315Damian">Damian
-                        </persName> and <persName ref="PRS3202Cosmas">Cosmas</persName></label>
+                        </persName> and <persName ref="PRS3202Cosmas">Cosmas</persName>
+                     </label>
                      </div>
                      <div type="textpart" corresp="LIT5656Malheq#PeterPaul2">
                         <label>Chants for the Apostles <persName ref="PRS12538PeterPaul">
-                        Peter and Paul</persName></label>
+                        Peter and Paul</persName>
+                     </label>
                      </div>
                      <div type="textpart" corresp="LIT5656Malheq#Apostles2">
                         <label>Chants for the 12 Apostles</label>
                      </div>
                      <div type="textpart" corresp="LIT5656Malheq#Besoy">
-                        <label>Chants for <persName ref="PRS12651Pishoy">Bǝsoy</persName></label>
+                        <label>Chants for <persName ref="PRS12651Pishoy">Bǝsoy</persName>
+                     </label>
                      </div>
                      <div type="textpart" corresp="LIT5656Malheq#CyriacusJulitta">
                         <label>Chants to <persName ref="PRS11366Qirqos">St Cyriacus</persName>
@@ -390,20 +430,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
 
                      <div type="textpart" corresp="LIT5656Malheq#Salama">
-                        <label>Chants for <persName ref="PRS8386SalamaI">ʾabbā Salāma</persName></label>
+                        <label>Chants for <persName ref="PRS8386SalamaI">ʾabbā Salāma</persName>
+                     </label>
                      </div>
                      <div type="textpart" corresp="LIT5656Malheq#Virgins">
                         <label>Chants for the Virgins</label>
                      </div>
                    <div type="textpart" corresp="LIT5656Malheq#MaryamMagdalawit">
-                      <label>Chants for <persName ref="PRS6820MaryMag"></persName></label>
+                      <label>Chants for <persName ref="PRS6820MaryMag"/>
+                     </label>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#Firstborn">
                       <label>Chants for the gathering of the firstborn,<foreign xml:lang="gez">
-                        ዘማኅበር፡</foreign></label>
+                        ዘማኅበር፡</foreign>
+                     </label>
                    </div>
 
-                <div type="textpart" corresp="LIT5656Malheq#Transfiguration">
+                  <div type="textpart" corresp="LIT5656Malheq#Transfiguration">
                       <label>Chants for the Transfiguration of Christ on Mount Tabor</label>
                    </div>
 
@@ -411,14 +454,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                    <div type="textpart" corresp="LIT5656Malheq#GatheringApostles">
                       <label>Chants for the gathering of the Apostles at the
                       funeral of St Mary,<foreign xml:lang="gez">
-                        ምስካብ፡ ዘጉባዕ᎓</foreign> </label>
+                        ምስካብ፡ ዘጉባዕ᎓</foreign> 
+                     </label>
                    </div>
 
                    <div type="textpart" corresp="LIT5656Malheq#Dormition">
                       <label>Chants for the Dormition of St Mary</label>
                    </div>
                    <div type="textpart" corresp="LIT5656Malheq#Abraham">
-                      <label>Chants for <persName ref="PRS1269Abraham"></persName></label>
+                      <label>Chants for <persName ref="PRS1269Abraham"/>
+                     </label>
                    </div>
 
                    <div type="textpart" corresp="LIT5656Malheq#Sabbath">
@@ -432,11 +477,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                    <div type="textpart" corresp="LIT5656Malheq#BeheadingJohn">
                       <label>Сhants for the feast of Beheading of
-                        <persName ref="PRS5741Johnthe">John the Baptist</persName></label>
+                        <persName ref="PRS5741Johnthe">John the Baptist</persName>
+                     </label>
                    </div>
 
                    <div type="textpart" corresp="LIT5656Malheq#Raphael">
-                      <label>Chants for the feast of <persName ref="PRS8083Raphael">St Raphael</persName></label>
+                      <label>Chants for the feast of <persName ref="PRS8083Raphael">St Raphael</persName>
+                     </label>
                    </div>
 
                    </div>

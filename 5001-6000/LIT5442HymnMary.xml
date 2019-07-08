@@ -1,14 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5442HymnMary" xml:lang="en" type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5442HymnMary"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" xml:id="t1">Hymn to Virgin Mary</title>
                 <title xml:lang="gez" xml:id="t2">ኦእግዝእትየ፡ ቅድስት፡ ድንግል፡ በክልኤ፡ ማርያም፡ ወላዲተ፡ አምላክ፡</title>
-                <title  xml:lang="gez" type="normalized" corresp="#t2">ʾo-ʾǝgzǝʾtǝya qǝddǝst dǝngǝl ba-kǝlʾe Māryām walādita ʾamlāk</title>
-                <title  xml:lang="en" corresp="#t2">O my Holy Lady Mary, Two-fold Virgin,
+                <title xml:lang="gez" type="normalized" corresp="#t2">ʾo-ʾǝgzǝʾtǝya qǝddǝst dǝngǝl ba-kǝlʾe Māryām walādita ʾamlāk</title>
+                <title xml:lang="en" corresp="#t2">O my Holy Lady Mary, Two-fold Virgin,
                     Godbearing...</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="ES"/>
@@ -30,7 +35,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -54,9 +65,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="ES" when="2019-03-25">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography"/>
+         <!---->
         </body>
     </text>
 </TEI>

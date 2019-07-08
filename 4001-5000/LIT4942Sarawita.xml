@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="LIT4942Sarawita"
      xml:lang="en"
      type="work">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">ሠራዊተ፡ መላእክቲሁ፡ ለመድኃኔ፡ ዓለም፡ </title>
@@ -36,7 +36,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -63,13 +69,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="ES" when="2018-04-04">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="edition">
-                <div type="textpart" subtype="incipit"><ab>ሠራዊተ፡ መላእክቲሁ፡ ለመድኃኔ፡ ዓለም፡ ይቀውሙ፡ ቅድሜሁ፡ ለመድኃኔ፡ ዓለም፡ ወይኬልልዎ፡</ab></div>
+                <div type="textpart" subtype="incipit">
+               <ab>ሠራዊተ፡ መላእክቲሁ፡ ለመድኃኔ፡ ዓለም፡ ይቀውሙ፡ ቅድሜሁ፡ ለመድኃኔ፡ ዓለም፡ ወይኬልልዎ፡</ab>
+            </div>
             </div>
             <div type="bibliography"/>
-            <listRelation><relation name="dcterms:isPartOf" active="LIT4942Sarawita" passive="LIT1103Anapho"></relation></listRelation>
+            <listRelation>
+            <relation name="dcterms:isPartOf"
+                      active="LIT4942Sarawita"
+                      passive="LIT1103Anapho"/>
+         </listRelation>
          <!---->
         </body>
     </text>

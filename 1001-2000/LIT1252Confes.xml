@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:lang="en"
      xml:id="LIT1252Confes"
      type="work">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="la" xml:id="t1">Confessio Claudii</title>
@@ -43,6 +43,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <creation notBefore="1555" notAfter="1555">23 Sane (17 June) 1555 in <placeName ref="LOC2488Damot">Damot</placeName>
          </creation>
@@ -66,7 +74,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2018-05-08" who="SG">Uploading the text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
@@ -104,12 +112,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   
                </relation>
             </listRelation>
-            <div type="edition" xml:lang="gez"><div type="textpart" subtype="paragraph" n="1">
-               <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ዝንቱ፡ ውእቱ፡ ሃይማኖትየ፡ ወሃይማኖተ፡ አበውየ፡ 
+            <div type="edition" xml:lang="gez">
+               <div type="textpart" subtype="paragraph" n="1">
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ዝንቱ፡ ውእቱ፡ ሃይማኖትየ፡ ወሃይማኖተ፡ አበውየ፡ 
                 ነገሥት፡ እሥራኤላውያን፡ ወሃይማኖተ፡ መርዔትየ፡ እለ፡ ሀለዉ፡ በዐፀደ፡ መንግሥትየ።</ab>
-            </div>
-            <div type="textpart" n="paragraph" next="2">
-               <ab>ንሕነ፡ ነአምን፡ በ፩አምላክ፡ ወበወልድ፡ ዋሕድ፡ <persName ref="PRS5684JesusCh">ኢየሱስ፡ ክርስቶስ፡</persName> ውእቱ፡ ቃሉ፡ ወውእቱ፡ ኀይሉ።
+               </div>
+               <div type="textpart" n="paragraph" next="2">
+                  <ab>ንሕነ፡ ነአምን፡ በ፩አምላክ፡ ወበወልድ፡ ዋሕድ፡ <persName ref="PRS5684JesusCh">ኢየሱስ፡ ክርስቶስ፡</persName> ውእቱ፡ ቃሉ፡ ወውእቱ፡ ኀይሉ።
                   ውእቱ፡ ምክሩ፡ ወውእቱ፡ ጥበቡ። ዘሀለወ፡ ምስሌሁ፡ እምቅድመ፡ ይትፈጠር፡ ዓለም። 
                   ወበደኃሪ፡ ማዋዕል፡ መጽአ፡ ኀቤነ፡ እንዘ፡ ኢየዐርቅ፡ እመንበረ፡ መለኮቱ። 
                   ወተሰብአ፡ እመንፈስ፡ ቅዱስ፡ ወእ<persName ref="PRS6819Mary">ማርያም፡</persName> እምቅድስት፡ ድንግል።
@@ -120,32 +129,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   ወካዕበ፡ ይመጽእ፡ በስብሐት፡ ይኰንን፡ ሕያዋነ፡ ወሙታነ፡ ወአልቦ፡ ማኀለቅተ፡ ለመንግሥቱ። ወነአምን፡
                በመንፈስ፡ ቅዱስ፡ እግዚእ፡ ማሕያዊ፡ ዘሠረፀ፡  እምአብ። ወነአምን፡ በአሐቲ፡ ጥምቀት፡ ለስርየተ፡ ኃጢያት። ወን
                ሴፎ፡ ትንሣኤ፡ ሙታን፡ ለሕይወት፡ ዘይመጽእ፡ ለዓለም። አሜን።</ab>
-            </div>
-            <div type="textpart" subtype="paragraph" n="3">
-               <ab>ንሕነሰ፡ ነሐውር፡ በፍኖተ፡ ንጉሥ፡ ጽዩሕ፡ አማናዊ፡ ወኢናጸንን፡ ኢለየማን፡
+               </div>
+               <div type="textpart" subtype="paragraph" n="3">
+                  <ab>ንሕነሰ፡ ነሐውር፡ በፍኖተ፡ ንጉሥ፡ ጽዩሕ፡ አማናዊ፡ ወኢናጸንን፡ ኢለየማን፡
                   ወኢለፀጋም፡ እምትምህርተ፡ አበዊነ፡ ፲ወ፪ሐዋርያት፡ ወ<persName ref="PRS7743Paul">ጳውሎስ፡</persName> ፈልፈለ፡ 
                   ጥበብ፡ ወ፸ወ፪አርድእት፡ ወ፫፻፲ወ፰፡ ርቱዓነ፡ ሃይማኖት፡ ዘተጋብኡ፡ 
                   በ<placeName ref="LOC4993Nicaea">ኒቅያ፡ </placeName> ወ፻ወ፶፡ በ<placeName ref="LOC2196Consta">ቍስጥንጥንያ፡</placeName>
                   ወ፪፻በ<placeName ref="LOC2985Ephesu">ኤፌሶን።</placeName> ከመዝ፡ እሰብክ፡ ወከመዝ፡
                   እሜህር፡ አነ፡ <persName ref="PRS4428Galawdew">ገላውዴዎስ፡</persName>
-                  <persName ref="PRS4428Galawdew">
-                     <roleName type="title">ንጉሥ፡</roleName> 
-                  </persName>
+                     <persName ref="PRS4428Galawdew">
+                        <roleName type="title">ንጉሥ፡</roleName> 
+                     </persName>
                   ዘ<placeName ref="LOC3010Ethiop">ኢትዮጵያ፡</placeName> ወስመ፡ መንግስትየ፡ 
                   <persName ref="PRS4428Galawdew"> አጽናፍ፡ ሰገድ፡</persName>  
-                  <persName ref="PRS6229LebnaDe">ወልደ፡ ወናግ፡ ሰገድ፡</persName> ወልደ፡ 
+                     <persName ref="PRS6229LebnaDe">ወልደ፡ ወናግ፡ ሰገድ፡</persName> ወልደ፡ 
                   <persName ref="PRS7481NaodA">ናኦድ።</persName>
-               </ab>
-            </div>
-            <div type="textpart" subtype="paragraph" n="4">
-               <ab>ወበእንተ፡ ምክንያተ፡ አክብሮትነ፡ ዕለተ፡ ቀዳሚት፡ ሰንበት፡ አኮ፡ ዘናከብራ፡ 
+                  </ab>
+               </div>
+               <div type="textpart" subtype="paragraph" n="4">
+                  <ab>ወበእንተ፡ ምክንያተ፡ አክብሮትነ፡ ዕለተ፡ ቀዳሚት፡ ሰንበት፡ አኮ፡ ዘናከብራ፡ 
                   ከመ፡ አይሁድ፡ እለ፡ ሰቀልዎ፡ ለ<persName ref="PRS5684JesusCh">ክርስቶስ፡</persName> እንዘ፡ ይብሉ፡ ደሙ፡ ላዕሌነ፡ ወላዕለ፡ ውሉድነ።
                   እስመ፡ እሙንቱሰ፡ አይሁድ፡ ኢይቀድሑ፡
                   ማየ፡ ወኢያነድዱ፡ እሳተ፡ ወኢያበስሉ፡ ጸብሐ፡ ወኢይሐብዙ፡ ኅብስተ፡ 
                   ወኢይትፈለሱ፡ እምቤት፡ ውስተ፡ ቤት። </ab>
-            </div>
-            <div type="textpart" subtype="paragraph" n="5">
-               <ab>ወባሕቱ፡ ንሕነሰ፡ ናከብራ፡ እንዘ፡ ናዓርግ፡ ባቲ፡ ቍርባን፡ ወንገብር፡ ባቲ፡ ምሳሐ፡
+               </div>
+               <div type="textpart" subtype="paragraph" n="5">
+                  <ab>ወባሕቱ፡ ንሕነሰ፡ ናከብራ፡ እንዘ፡ ናዓርግ፡ ባቲ፡ ቍርባን፡ ወንገብር፡ ባቲ፡ ምሳሐ፡
                   በከመ፡ አዘዙነ፡ አበዊነ፡ ሐዋርያት፡ በ<title ref="LIT1309Didesq">ዲድስቅልያ።</title> አኮ፡ ዘናከብራ፡ ከመ፡ ሰንበተ፡
                   እሑድ፡ እንተ፡ ይእቲ፡ ዕለተ፡ ሐደስ፡ ዘይቤ፡ <persName ref="PRS3417David">ዳዊት፡</persName> በእንቲአሃ፡ ዛቲ፡ ዕለት፡ እንተ፡ 
                   ገብረ፡ <persName ref="PRS3697egziabe">እግዚአብሔር፡</persName>ንትፈሣሕ፡ ወንትኀሠይ፡ ባቲ። 
@@ -153,9 +162,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <persName ref="PRS5684JesusCh">ኢየሱስ፡ ክርስቶስ፡</persName> ወባቲ፡ ወረደ፡ መንፈስ፡ ቅዱስ፡ ላዕለ፡ ሐዋርያት፡ በጽርሐ፡ ጽዮን። 
                   ወባቲ፡ ተሰብአ፡ ውስተ፡ ከርሠ፡ ቅድስት፡ 
                   <persName ref="PRS6819Mary">ማርያም፡</persName> ድንግል፡ በኵሉ፡ ጊዜ። ወባቲ፡ ይመጽእ፡ ዳግመ፡ ለዕሤተ፡ ጻድቃን፡ ወለፍዳ፡ ኃጥአን።</ab>
-            </div>
-            <div type="textpart" subtype="paragraph" n="6">
-               <ab>ወበእንት፡ ሥርዓተ፡ ግዝረትኒ፡ አኮ፡ ዘንትገዘር፡ ከመ፡ አይሁድ፡ እስመ፡ ንሕነ፡ ናአምር፡ ቃለ፡ ምህሮሁ፡ 
+               </div>
+               <div type="textpart" subtype="paragraph" n="6">
+                  <ab>ወበእንት፡ ሥርዓተ፡ ግዝረትኒ፡ አኮ፡ ዘንትገዘር፡ ከመ፡ አይሁድ፡ እስመ፡ ንሕነ፡ ናአምር፡ ቃለ፡ ምህሮሁ፡ 
                   ለ<persName ref="PRS7743Paul">ጳውሎስ፡</persName> ፈልፈለ፡ ጥበብ፡ ዘይቤ፡ ተገዝሮሂ፡ ኢይበቍዕ፡ ወኢተገዝሮሂ፡ ኢያሠልጥ፡ ዘእንበለ፡ ዳእሙ፡ 
                   ሐደስ፡ ፍጥረት፡ ዝውእቱ፡ አሚን፡ በእግዚእነ፡ <persName ref="PRS5684JesusCh">ኢየሱስ፡ ክርስቶስ።</persName>
                   ወካዕበ፡ ይቤ፡ ለሰብአ፡ ቆሮንቶስ፡ ዘሂ፡ ነሥአ፡ ግዝረተ፡ ኢይንሣእ፡ ቍልፈተ።
@@ -165,9 +174,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <placeName ref="LOC5004Noba">ኖባ።</placeName>
                   ወከመ፡ ስቍረተ፡ እዝን፡ ዘሰብአ፡ <placeName ref="pleiades:50004">ህንድ።</placeName>
                   ዘንተሰ፡ ዘንገብር፡ አኮ፡ በዐቂበ፡ ሕገገ፡ ኦሪት፡ ዳእሙ፡ በልማደ፡ ሰብእ።</ab>
-            </div>
-            <div type="textpart" subtype="paragraph" n="7">
-               <ab> ወበእንተ፡ በሊዐ፡ ሐራውያኒ፡ አኮ፡ ዘንትከላእ፡ በዐቂበ፡ ሕገገ፡ ኦሪት፡ ከመ፡ አይሁድ፡ 
+               </div>
+               <div type="textpart" subtype="paragraph" n="7">
+                  <ab> ወበእንተ፡ በሊዐ፡ ሐራውያኒ፡ አኮ፡ ዘንትከላእ፡ በዐቂበ፡ ሕገገ፡ ኦሪት፡ ከመ፡ አይሁድ፡ 
                   ለዘኒ፡ በልዐ፡ ኢናስቆርሮ፡ ወኢናረኵሶ፡ ወለዘኒ፡ ኢበልዐ፡ ከመ፡ ይብላዕ፡ ኢናጌብሮ።
                   በከመ፡ ፀሐፈ፡ አቡነ፡ <persName ref="PRS7743Paul">ጳውሎስ፡</persName> ለብሔረ፡ <placeName ref="wd:Q801">ሮሜ፡</placeName>እንዘ፡ ይብል፡ ዘኒ፡ በልዐ፡ ኢይመንኖ፡
                   ለዘኢይበልዕ፡ ወለኵሎሙ፡ <persName ref="PRS3697egziabe">እግዚአብሔር፡</persName>ተወክፎሙ። 
@@ -177,35 +186,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   ዘእንበለ፡ ዘይወፅእ፡ እምአፉሁ። ወዘሰ፡ ውስተ፡ ከርሥ፡ ይበውእ፡ ወይትገመር፡ ጽመ፡ 
                   ወይትገደፍ፡ ወይትከዐው፡ ወያነጽሕ፡ ኵሉ፡ መባልዕት። 
                   ወበብሂለ፡ ዝንቱ፡ ቃሉ፡ ነሰተ፡ ኵሎ፡ ሕንጻ፡ ስሕተቶሙ፡ ለአይሁድ፡ እለ፡ ተምህሩ፡ እመጽሐፈ፡ ኦሪት።</ab>
-            </div>
-            <div type="textpart" subtype="paragraph" n="8">
-               <ab>ሊተሰ፡ ሃይማኖትየ፡ ወሃይማኖተ፡ ካህናት፡ ማእምራን፡ እለ፡ ይሜህሩ፡ በትእዛዝየ፡
+               </div>
+               <div type="textpart" subtype="paragraph" n="8">
+                  <ab>ሊተሰ፡ ሃይማኖትየ፡ ወሃይማኖተ፡ ካህናት፡ ማእምራን፡ እለ፡ ይሜህሩ፡ በትእዛዝየ፡
                   በዐፀደ፡ መንግስትየ፡ ወኢይትገኅሡ፡ እምፍኖተ፡ ወንጌል፡ ወእምትህምርተ፡ 
                   አቡነ፡ <persName ref="PRS7743Paul">ጳውሎስ፡</persName> ኢለየማን፡ ወኢለፀጋም። ወበመጽሐፈ፡ ታሪክኒ፡ ጽሑፍ፡ 
                   ሀሎ፡ በመጽሐፈ፡ ዚአነ፡ እስመ፡ <persName ref="PRS10626ZaraY">ቆስጠንጢኖስ፡<roleName type="title">ንጉሥ፡ </roleName>
-                  </persName> አዘዘ፡ በመዋዕለ፡ መንግሥቱ፡ ለኵሎሙ፡ እለ፡
+                     </persName> አዘዘ፡ በመዋዕለ፡ መንግሥቱ፡ ለኵሎሙ፡ እለ፡
                   ተጠምቁ፡ አይሁድ፡ ከመ፡ ያብልዕዎሙ፡ ሥጋ፡
                   ሐራውያ፡ በዕለተ፡ ትንሣኤሁ፡ ለእግዚእነ፡ <persName ref="PRS5684JesusCh">ኢየሱስ፡ ክርስቶስ።</persName>
-               </ab>
-            </div>
-            <div type="textpart" subtype="paragraph" n="9">
-               <ab>ወባሕቱ፡ በከመ፡ አደሞ፡ ልቡ፡ ለሰብእ፡ ይትኄረም፡ እምበሊዐ፡ ሥጋ፡ እንስሳ ።
+                  </ab>
+               </div>
+               <div type="textpart" subtype="paragraph" n="9">
+                  <ab>ወባሕቱ፡ በከመ፡ አደሞ፡ ልቡ፡ ለሰብእ፡ ይትኄረም፡ እምበሊዐ፡ ሥጋ፡ እንስሳ ።
                   ቦዘያፈቅር፡ ሥጋ፡ ዓሣ፡ ወቦ፡ ዘያፈቅር፡ በሊዐ፡ ሥጋ፡ ዶርሆ። ወቦ፡ ዘይትኄረም፡
                   እምበሊዐ፡ ሥጋ፡ በግዕ፡ ወኵሉ፡ ዘከመ፡ አደሞ፡ ልቡ፡ ይተሉ።
                   ከመዝ፡ ውእቱ፡ ሥምረቱ፡ ወፈቃዱ፡ ለሰብእ። 
                   በእንተ፡ መብልዐ፡ ሥጋ፡ እንስሳሰ፡ አልቦ፡ ሕገ፡ ወአልቦ፡
                   ቀኖና፡ ውስተ፡ መጽሐፍ፡ ሐደስ፤ ኵሉ፡ ንጹሕ፡ ለንጹሐን። 
                   ወ <persName ref="PRS7743Paul">ጳውሎስ፡</persName>ኒ፡ ዘሰ፡ የአምን፡ ኵሎ፡ ለይብላዕ።</ab>
-            </div>
-            <div type="textpart">
-               <ab>ዘንተ፡ ኵሎ፡ ዘጽህቁ፡ ለጽሒፍ፡ ከመ ፡ ታአምር፡ ጽድቀ፡ ሃይማኖትየ። 
+               </div>
+               <div type="textpart">
+                  <ab>ዘንተ፡ ኵሎ፡ ዘጽህቁ፡ ለጽሒፍ፡ ከመ ፡ ታአምር፡ ጽድቀ፡ ሃይማኖትየ። 
                   ተጽሕፈ፡ በ፲ወ፻፶ወ፭ዐመት፡ እምልደተ፡ እግዚእነ፡ <persName ref="PRS5684JesusCh">ኢየሱስ፡ ክርስቶስ፡</persName> አመ፡ ፳ወ፫ለሰኔ፡ በሀገረ፡、、
                   <placeName ref="LOC2488Damot">ዳሞት።</placeName> 
                   
-               </ab>
+                  </ab>
+               </div>
             </div>
          </div>
-</div>
       </body>
    </text>
 </TEI>

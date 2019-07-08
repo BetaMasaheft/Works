@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="LIT4876LetterCanons"
      xml:lang="en"
      type="work">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">Letter to Carpianus and Eusebian Canons: 2 pages of letter + 8 pages of canons</title>
@@ -33,7 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -59,12 +65,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change when="2018-07-01" who="ES">added relations</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <listRelation>
-                <relation name="saws:isVariantOf" active="LIT4876LetterCanons" passive="LIT1349EpistlEusebius"></relation>
-                <relation name="saws:isAttributedToAuthor" active="LIT4876LetterCanons" passive="PRS3912Eusebius"></relation>
-                <relation name="ecrm:CLP46i_may_form_part_of" active="LIT4876LetterCanons" passive="LIT1560Gospel#IntroductionGospels"></relation>
+                <relation name="saws:isVariantOf"
+                      active="LIT4876LetterCanons"
+                      passive="LIT1349EpistlEusebius"/>
+                <relation name="saws:isAttributedToAuthor"
+                      active="LIT4876LetterCanons"
+                      passive="PRS3912Eusebius"/>
+                <relation name="ecrm:CLP46i_may_form_part_of"
+                      active="LIT4876LetterCanons"
+                      passive="LIT1560Gospel#IntroductionGospels"/>
             </listRelation>
             <div type="bibliography"/>
          <!---->

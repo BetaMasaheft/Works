@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT4115GadlaT">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ገድለ፡ ተክለ፡ ሃይማኖት፡</title>
@@ -33,11 +33,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -52,7 +60,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2017-04-01">Added keywords</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             
@@ -69,18 +77,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             
             <listRelation>
                <relation name="saws:isVersionOf"
-                  active="LIT4115GadlaT"
-                  passive="LIT1507GadlaT"><desc>The sub-recension of the Dabra Libānos of the Gadla Takla Haymānot</desc></relation>
+                         active="LIT4115GadlaT"
+                         passive="LIT1507GadlaT">
+                  <desc>The sub-recension of the Dabra Libānos of the Gadla Takla Haymānot</desc>
+               </relation>
                <relation name="saws:isVersionOf"
-                  active="LIT4115GadlaT"
-                  passive="LIT3973GadlaT"><desc>The sub-recension of the Dabra Libānos of the Gadla Takla Haymānot</desc></relation>
+                         active="LIT4115GadlaT"
+                         passive="LIT3973GadlaT">
+                  <desc>The sub-recension of the Dabra Libānos of the Gadla Takla Haymānot</desc>
+               </relation>
                <relation name="saws:contains"
                          active="LIT4115GadlaT"
                          passive="LIT3854KingList"/>
                <relation name="saws:contains" active="LIT4115GadlaT" passive="LIT3971Taamme"/>
                <relation name="ecrm:P129_is_about"
-                  active="LIT4115GadlaT"
-                  passive="PRS9162TaklaHa"/>
+                         active="LIT4115GadlaT"
+                         passive="PRS9162TaklaHa"/>
             </listRelation>
             
          </div>

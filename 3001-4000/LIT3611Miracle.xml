@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3611Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: Miracle of Sophia, abbess of Mount Carmel</title>
@@ -33,9 +33,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
          <sourceDesc>
-           <p></p>
+           <p/>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -43,7 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -62,7 +70,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-05-06">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
@@ -72,8 +80,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             <listBibl type="secondary">
-               <bibl type="Poncelet"><ptr target="bm:Poncelet"/><citedRange unit="item">4</citedRange></bibl>
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">158</citedRange></bibl>
+               <bibl type="Poncelet">
+                  <ptr target="bm:Poncelet"/>
+                  <citedRange unit="item">4</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">158</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="translation">
                <bibl>
@@ -81,7 +95,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">25</citedRange>
                   <citedRange unit="page">75-78</citedRange>
                </bibl>
-               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">125</citedRange><citedRange unit="page">325-327</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">125</citedRange>
+                  <citedRange unit="page">325-327</citedRange>
+               </bibl>
             </listBibl>
             <!-- The Virgin Mary and Sophia (Sofǝya), Abbess of Mount
                         Carmel (Qermelos) (BMirMA 38-40; BHMirM 75-82; ColMirM<ref type="mss"
@@ -94,15 +112,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                          active="LIT3611Miracle"
                          passive="LIT2384Taamme"/>
                <relation name="skos:exactMatch"
-                  active="LIT3611Miracle"
-                  passive="http://csm.mml.ox.ac.uk/index.php?p=poemdata_view&amp;rec=7"/>
+                         active="LIT3611Miracle"
+                         passive="http://csm.mml.ox.ac.uk/index.php?p=poemdata_view&amp;rec=7"/>
             </listRelation>
          </div>
          <div type="edition">
              <div type="textpart" subtype="incipit" xml:lang="gez">
                <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
                  <ab>
-                     ወነበረት፡ አሐቲ፡ እመ፡ ምኔት፡ በደብረ፡ <choice resp="PRS6437Macomber"><corr>ቀርሜሎስ፡</corr><sic>ቀርሜልዮስ፡</sic></choice> ዘስማ፡ ሶፍያ፣
+                     ወነበረት፡ አሐቲ፡ እመ፡ ምኔት፡ በደብረ፡ <choice resp="PRS6437Macomber">
+                     <corr>ቀርሜሎስ፡</corr>
+                     <sic>ቀርሜልዮስ፡</sic>
+                  </choice> ዘስማ፡ ሶፍያ፣
                      ብእሲት፡ ኅሪት፣ ጽሕቅት፡ ለምግባረ፡ ሠናይ፡ ወጸልዮ፣ ወትትለአክ፡ ለቤተ፡ እግዝእትነ፡ ማርያም፡ በብዙኅ፡ ፃማ፡ ወበዐቢይ፡ ቅኔ።
                  </ab>
                  <div type="textpart" subtype="incipit" xml:lang="gez">

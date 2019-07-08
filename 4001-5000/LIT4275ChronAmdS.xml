@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:lang="en"
      xml:id="LIT4275ChronAmdS"
      type="work">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
 
@@ -17,7 +17,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <editor role="generalEditor" key="AB"/>
             <editor key="ES" role="metadata"/>
-            <editor key="VP" role="encoder annotator"></editor>
+            <editor key="VP" role="encoder annotator"/>
 
             <respStmt>
                <resp>Digitized by</resp>
@@ -99,6 +99,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <!-- the format for the tagsDecl to be specified -->
          </tagsDecl>
 
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
 
       <profileDesc>
@@ -110,8 +116,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <ptr target="bm:Marrassini1993AmdaSeyon"/>
                <citedRange unit="page">39-43</citedRange>
             </bibl>. A second redaction (<title xml:id="t2Haylu">Redaction Ḫaylu</title>) was
-            promoted by  <persName ref="PRS5222haylaMi"><roleName type="title">daǧǧāzmāč</roleName> Ḫāylu</persName> around the year
-            <date>1785</date> (after <persName ref="PRS7091Mikael"><roleName type="title">rās</roleName> Mikāʾēl</persName> set the
+            promoted by  <persName ref="PRS5222haylaMi">
+               <roleName type="title">daǧǧāzmāč</roleName> Ḫāylu</persName> around the year
+            <date>1785</date> (after <persName ref="PRS7091Mikael">
+               <roleName type="title">rās</roleName> Mikāʾēl</persName> set the
             historical archives of <placeName ref="LOC3577Gondar">Gondar</placeName> on fire) </creation>
          <langUsage>
             <language ident="gez">Gǝʿǝz</language>
@@ -144,7 +152,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2018-08-02" who="ES">added relation, corrected spelling, marked rolenames</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="edition" xml:lang="gez">
             <div n="1" type="textpart" subtype="sentence" xml:id="sentence1">
@@ -3111,7 +3119,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             </listBibl>
          </div>
-         <div type="bibliography"><listRelation><relation name="ecrm:P129_is_about" active="LIT4275ChronAmdS" passive="PRS1854Amdase"></relation></listRelation></div>
+         <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT4275ChronAmdS"
+                         passive="PRS1854Amdase"/>
+            </listRelation>
+         </div>
 
       </body>
    </text>

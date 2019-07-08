@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1120Apocal">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Apocalypse of Baruch</title> 
@@ -39,11 +39,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -71,22 +79,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2017-02-09">Added keywords, title, bibliography, abstract</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
             <relation name="saws:isAttributedToAuthor"
-               active="LIT1120Apocal"
-               passive="PRS2516Baruch"/>
+                      active="LIT1120Apocal"
+                      passive="PRS2516Baruch"/>
             <relation name="saws:isDifferentTo"
-               active="LIT1120Apocal"
-               passive="LIT2167Parali"/>
+                      active="LIT1120Apocal"
+                      passive="LIT2167Parali"/>
             <relation name="saws:isShorterVersionOf"
-               active="LIT1120Apocal"
-               passive="LIT1127Apocal"><!-- or LIT1128Apocal?-->
+                      active="LIT1120Apocal"
+                      passive="LIT1127Apocal"><!-- or LIT1128Apocal?-->
                <desc>according to <bibl>
-                  <ptr target="bm:Leslau1951Falasha"/>
-                  <citedRange unit="page">63</citedRange>
-               </bibl>
+                     <ptr target="bm:Leslau1951Falasha"/>
+                     <citedRange unit="page">63</citedRange>
+                  </bibl>
                </desc> 
             </relation>
          </listRelation>
