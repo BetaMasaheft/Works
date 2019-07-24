@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT4323SalotaHa">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ጸሎተ፡ ሃይማኖት፡</title>
@@ -37,6 +37,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
 
         <abstract>
@@ -47,7 +55,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
       </profileDesc>
@@ -56,7 +64,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2019-03-26" who="ES">added relation</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
@@ -66,7 +74,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </ab>
             </div>
          </div>
-         <listRelation> <relation name="saws:isUnrelatedTo" active="LIT4323SalotaHa" passive="LIT3308Nicene"></relation></listRelation>
+         <listRelation> 
+            <relation name="saws:isUnrelatedTo"
+                      active="LIT4323SalotaHa"
+                      passive="LIT3308Nicene"/>
+         </listRelation>
       </body>
    </text>
 </TEI>

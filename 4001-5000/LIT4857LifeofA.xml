@@ -7,14 +7,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT4857LifeofA">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ዜናሁ፡ ለአቡነ፡ ቅዱስ፡ አባ፡ እንጦንስ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Zenāhu la-ʾabuna qǝddus ʾabbā ʾƎnṭonǝs</title>
             <title xml:lang="gez" xml:id="t2">ዜናሁ፡ ለአቡነ፡ ቅዱስ፡ አባ፡ እንጦንዮስ፡</title>
             <title xml:lang="gez" corresp="#t2" type="normalized">Zenāhu la-ʾabuna qǝddus ʾabbā ʾƎnṭonyos</title>
-            <title xml:lang="en" corresp="#t1">Vita of St Antony</title>
+            <title xml:lang="en" corresp="#t1" type="main">Vita of St Antony</title>
             <title xml:lang="la" corresp="#t1">Vita Antonii</title>
             <editor key="MV"/>
             <editor role="generalEditor" key="AB"/>
@@ -44,11 +44,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -63,9 +71,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="MV" when="2017-12-18">Created text record</change>
          <change who="DR" when="2018-11-27">Specified clavis</change>
+         <change when="2019-06-26" who="ES">added relation removed edition</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="secondary">
@@ -78,19 +87,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                          active="LIT4857LifeofA"
                          passive="PRS2209Athanasi">
                </relation>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT4857LifeofA"
+                         passive="PRS1962Anthony"/>
             </listRelation>
          </div>
-         <div type="edition">
-            <label>Gale</label>
-            <div type="textpart" subtype="Gadle" xml:id="Gadle"></div>
-            <div type="textpart" subtype="miracle" xml:id="Taamer">
-               <label>Taʾamǝr</label>
-            </div>
-            <div type="textpart" subtype="Hymn" xml:id="hymn">
-               <label>Hymn</label>
-            </div>
-            
-         </div>
+         
          
       </body>
    </text>

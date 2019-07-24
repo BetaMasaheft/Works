@@ -1,7 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2170Peripl">
-   <teiHeader>
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="work"
+     xml:lang="en"
+     xml:id="LIT2170Peripl">
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Periplus of the Erythraean Sea</title>
@@ -12,8 +18,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <editionStmt>
-            <p>Text from the edition in Casson, which is Frisk text with some corrections <bibl><ptr target="bm:Casson1989Periplus"/><citedRange unit="page">5-6 and
-                  49</citedRange></bibl>.</p>
+            <p>Text from the edition in Casson, which is Frisk text with some corrections <bibl>
+                  <ptr target="bm:Casson1989Periplus"/>
+                  <citedRange unit="page">5-6 and
+                  49</citedRange>
+               </bibl>.</p>
             <p>Checked against the images with addition of transcription features, like the
                annotations on the margin of the manuscripts.</p>
          </editionStmt>
@@ -36,13 +45,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </sourceDesc>
          <sourceDesc>
             <listWit>
-               <witness type="external" xml:id="P" corresp="Cod. Pal. graec. 398" facs="http://digi.ub.uni-heidelberg.de/diglit/cpgraec398/0569"><ptr target="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/manifest.json"/> Sammelhandschrift — Konstantinopel, letztes Viertel 9. Jh. </witness>
-               <witness type="external" xml:id="L" corresp="British Library Add MS 19391" facs="http://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_19391_f009r"/>
+               <witness type="external"
+                        xml:id="P"
+                        corresp="http://digi.ub.uni-heidelberg.de/diglit/cpgraec398/0569"
+                        facs="http://digi.ub.uni-heidelberg.de/diglit/cpgraec398/0569">
+                  <idno>Cod. Pal. graec. 398</idno>
+                  <ptr target="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/manifest.json"/> Sammelhandschrift — Konstantinopel, letztes Viertel 9. Jh. </witness>
+               <witness type="external"
+                        xml:id="L"
+                        corresp="http://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_19391_f009r"
+                        facs="http://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_19391_f009r"><idno>British Library Add MS 19391</idno></witness>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
-         <creation notBefore="0040" notAfter="0070" evidence="internal"><ref cRef="urn:cts:greekLit:tlg0071.tlg001:19">Periplus 19</ref></creation>
+         <creation notBefore="0040" notAfter="0070" evidence="internal">
+            <ref cRef="urn:cts:greekLit:tlg0071.tlg001:19">Periplus 19</ref>
+         </creation>
          <langUsage>
             <language ident="grc">Greek</language>
             <language ident="en">English</language>
@@ -65,19 +92,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
-               <bibl xml:id="frisk"><ptr target="bm:Frisk1927Periple"/></bibl>
-               <bibl xml:id="muller"><ptr target="bm:agatarchidesExcerpta"/></bibl>
-               <bibl><ptr target="bm:HuntingfordPeriplus"/></bibl>
-               <bibl xml:id="casson"><ptr target="bm:Casson1989Periplus"/></bibl>
-               <bibl><ptr target="bm:Fiaccadori2010Periplus"/></bibl>
+               <bibl xml:id="frisk">
+                  <ptr target="bm:Frisk1927Periple"/>
+               </bibl>
+               <bibl xml:id="muller">
+                  <ptr target="bm:agatarchidesExcerpta"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:HuntingfordPeriplus"/>
+               </bibl>
+               <bibl xml:id="casson">
+                  <ptr target="bm:Casson1989Periplus"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Fiaccadori2010Periplus"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:belfiorePeriplus"/>
+               </bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="gr" resp="#frisk">
-            <head><surplus>ΑΡΡΙΑΝΟΥ</surplus> ΠΕΡΙΠΛΟΥΣ ΤΗΣ ΕΡΥΘΡΑΣ
+            <head>
+               <surplus>ΑΡΡΙΑΝΟΥ</surplus> ΠΕΡΙΠΛΟΥΣ ΤΗΣ ΕΡΥΘΡΑΣ
                   ΘΑΛΑΣΣΗΣ</head>
             <div type="textpart" subtype="chapter" n="1" xml:id="chapter1">
                <ab>
@@ -85,7 +126,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <pb n="51" corresp="#casson"/>
                   <pb n="257" corresp="#mueller"/>
                   <pb n="9r" corresp="#L"/>
-                  <pb n="40v" corresp="#P" facs="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/canvas/0084.json"/> Τῶν ἀποδεδειγμένων ὅρμων τῆς <placeName ref="pleiades:39290">Ἐρυθρᾶς
+                  <pb n="40v"
+                      corresp="#P"
+                      facs="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/canvas/0084.json"/> Τῶν ἀποδεδειγμένων ὅρμων τῆς <placeName ref="pleiades:39290">Ἐρυθρᾶς
                      θαλάσσης</placeName> καὶ τῶν περὶ αὐτὴν ἐμπορίων πρῶτός ἐστιν λιμὴν <add place="margin">Μυὸς ὅρμος</add>
                   <metamark>⸏</metamark> τῆς Αἰγύπτου <placeName ref="pleiades:786069">Μυὸς</placeName> ὅρμος, μετὰ δὲ αὐτὸν εἰσπλεόντων ἀπὸ χιλίων ὀκτακοσίων
                   σταδίων ἐν δεξιᾷ <add place="margin">Βερ-νίκη</add> ἡ <placeName ref="pleiades:785986">Βερνίκη</placeName>· ἀμφοτέρων <supplied reason="omitted">δὲ</supplied> oἱ λιμένες ἐν τῷ ἐσχάτῳ <metamark>⸏</metamark>τῆς Αἰγύπτου
@@ -100,7 +143,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   αὐτοὺς Ἀγριοφάγων καὶ  
                   Μοσχοφάγων
                   κατὰ τυραννίδα νεμομένων, οἷς ἐπίκειται κατὰ νώτου μεσόγειος ἀπὸ τῶν πρὸς δύσιν
-                  μερῶν <supplied reason="omitted">μητρόπολις λεγομένη <placeName ref="pleiades:805630">Μερόη</placeName> </supplied></ab>
+                  μερῶν <supplied reason="omitted">μητρόπολις λεγομένη <placeName ref="pleiades:805630">Μερόη</placeName> 
+                  </supplied>
+               </ab>
             </div>
 
             <div type="textpart" subtype="chapter" n="3" xml:id="chapter3">
@@ -114,7 +159,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </div>
             <div type="textpart" subtype="chapter" n="4" xml:id="chapter4">
                <ab>
-                  <pb n="41r" corresp="#P" facs="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/canvas/0085.json"/> Μετὰ δὲ τὴν <placeName ref="pleiades:39409">Πτολεμαΐδα τὴν τῶν θηρῶν</placeName> ἀπὸ σταδίων ὡς τρισχιλίων ἐμπόριόν ἐστιν
+                  <pb n="41r"
+                      corresp="#P"
+                      facs="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/canvas/0085.json"/> Μετὰ δὲ τὴν <placeName ref="pleiades:39409">Πτολεμαΐδα τὴν τῶν θηρῶν</placeName> ἀπὸ σταδίων ὡς τρισχιλίων ἐμπόριόν ἐστιν
                   νόμιμον ἡ <placeName ref="LOC1261Adulis">Ἄδουλι</placeName>, κείμενον ἐν κόλπῳ βαθεῖ κατ ̓ αὐτὸν τὸν νότον, οὗ πρό[σ]κειται
                   νῆσος <placeName ref="pleiades:39404">Ὀρεινὴ</placeName> λεγομένη, τοῦ μὲν ἐσωτάτου κόλπου σταδίους ὡς εἰς πέλαγος ἔχουσα
                   διακοσίους, ἐξ ἀμφοτέρων <supplied reason="omitted">δὲ</supplied> τῶν μερῶν
@@ -129,7 +176,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   τριῶν· ἀπὸ δὲ ταύτης εἰς αὐτὴν <placeName ref="LOC1310Aksum">τὴν μητρόπολιν τὸν Ἀξωμίτην</placeName> λεγόμενον ἄλλων ἡμερῶν
                   πέντε, εἰς ὅν ὁ πᾶς ἐλέφας ἀπὸ τοῦ πέρα<supplied reason="omitted">ν</supplied> τοῦ
                   Νείλου φέρεται διὰ τοῦ λεγομένου <placeName ref="pleiades:40186">Κυηνείου</placeName>
-                  <listRelation><relation name="skos:closeMatch" active="https://pleiades.stoa.org/places/40186" passive="http://www.geonames.org/408669"/>
+                  <listRelation>
+                     <relation name="skos:closeMatch"
+                               active="https://pleiades.stoa.org/places/40186"
+                               passive="http://www.geonames.org/408669"/>
                   </listRelation>, ἐκεῖθεν δὲ εἰς <placeName ref="LOC1261Adulis">Ἄδουλι</placeName>. Τὸ μὲν οὖν ὅλον
                   πλῆθος τῶν φονευομένων ἐλεφάντων καὶ ῥινοκερώτων περὶ τοὺς ἄνω νέμεται τόπους,
                   σπανίως δέ ποτε καὶ ἐν τῷ παρὰ θάλασσαν περὶ αὐτὴν τὴν <placeName ref="LOC1261Adulis">Ἄδουλι</placeName> θεωροῦνται.
@@ -231,7 +281,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   Προχωρεῖ δὲ εἰς τὸ ἐμπόριον ὁμοίως τὰ προειρημένα· γίνεται δὲ τὰ ἐν αὐτῷ κασία καὶ
                   γιζειρ καὶ ἀσυφη καὶ ἄρωμα καὶ μαγλα καὶ μοτὼ καὶ λίβανος. </ab>
             </div>
-<!--        13-18 saltati    -->
+            <!--        13-18 saltati    -->
             <div type="textpart" subtype="chapter" n="19" xml:id="chapter19">
                <ab>Ἐκ δὲ τῶν εὐωνύμων Βερνίκης ἀπὸ Μυὸς ὅρμου δυσὶν δρόμοις ἢ τρισὶν 
                   εἰς τὴν ἀνατολὴν διαπλεύσαντι τὸν παρακείμενον κόλπον ὅρμος ἐστὶν ἕτερος καὶ φρούριον, ὃ λέγεται 
@@ -241,9 +291,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   πλοίοις οὐ μεγάλοις. Διὸ καὶ παραφυλακῆς χάριν καὶ εἰς αὐτὴν παραλήπτης τῆς τετάρτης 
                   τῶν εἰσφερομένων φορτίων καὶ ἑκατοντάρχης μετὰ στρατεύματος ἀποστέλλεται.</ab>
             
-         </div>
+            </div>
             
-<!--            added after annotations exported!! -->
+            <!--            added after annotations exported!! -->
             <div type="textpart" subtype="chapter" n="20" xml:id="chapter20">
                
                <ab>Μετὰ δὲ ταύτην εὐθέως ἐστὶν συναφὴς Ἀραβικὴ χώρα, κατὰ μῆκος ἐπὶ πολὺ παρατείνουσα τῇ Ἐρυθρᾷ θαλάσσῃ. 
@@ -256,23 +306,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                δύσορμος καὶ ἀκάθαρτος ῥαχίαις καὶ σπίλοις81 ἀπρόσιτος καὶ κατὰ πάντα φοβερά. Διὸ καὶ εἰσπλεόντων 
                〈τὸν〉 μέσον πλοῦν κατέχομεν [εἰς τὴν Ἀραβικὴν χώραν] 〈καὶ〉 μᾶλλον παροξύνομεν ἄχρι τῆς 
                Κατακεκαυμένης νήσου, μεθ ̓ ἣν εὐθέως ἡμέρων ἀνθρώπων καὶ νομαδιαίων θρεμμάτων καὶ καμήλων συνεχεῖς 〈χῶραι〉.
-            </ab></div>
+            </ab>
+            </div>
             <div type="textpart" subtype="chapter" n="21" xml:id="chapter21">
               <ab>Καὶ μετὰ ταύτας ἐν κόλπῳ τῷ τελευταιοτάτῳ τῶν εὐωνύμων τούτου τοῦ πελάγους ἐμπόριόν ἐστιν νόμιμον 
                  παραθαλάσσιον Μούζα, σταδίους ἀπέχον τοὺς πάντας ἀπὸ Βερνίκης, 
                  παρ ̓ αὐτὸν τὸν νότον πλεόντων, ὡς εἰς μυρίους δισχιλίους. Τὸ μὲν ὅλον Ἀράβων, ναυκληρικῶν ἀνθρώπων καὶ 
                  ναυτικῶν, πλεονάζον [δὲ] καὶ τοῖς ἀπὸ ἐμπορίας πράγμασι κινεῖται· συγχρῶνται γὰρ τῇ τοῦ πέραν ἐργασίᾳ καὶ Βαρυγάζων ἰδίοις ἐξαρτισμοῖς.
-            </ab></div>
+            </ab>
+            </div>
             <div type="textpart" subtype="chapter" n="22" xml:id="chapter22">
                <ab>Ὑπέρκειται δὲ αὐτῆς ἀπὸ τριῶν ἡμερῶν πόλις Σαυὴ89 τῆς περὶ αὐτὴν Μαφαρ〈ί〉τιδος λεγομένης χώρας· 
                   ἔστιν δὲ τύραννος καὶ κατοικῶν αὐτὴν Χόλαιβος.
-           </ab></div>
+           </ab>
+            </div>
             <div type="textpart" subtype="chapter" n="23" xml:id="chapter23">
               <ab>Καὶ μετ᾽ ἄλλας ἐννέα ἡμέρας 〈Σ〉αφὰρ μητρόπολις, ἐν ᾗ Χαριβαήλ[α], ἔνθεσμος βασιλεὺς 
                  ἐθνῶν δύο, τοῦ τε <placeName ref="pleiades:39350">Ὁμηρίτου</placeName> καὶ τοῦ 
                  παρακειμένου λεγομένου <placeName ref="LOC5395Saba">Σαβαίτου</placeName>, συνεχέσι 
                  πρεσβείαις καὶ δώροις φίλος [δὲ] τῶν αὐτοκρατόρων.
-            </ab></div>
+            </ab>
+            </div>
          </div>
 
          <div type="translation" resp="#casson">

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1640Homily">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">ድርሳነ፡ ፍልሰታ፡</title>
@@ -33,11 +33,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -56,18 +64,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2018-08-20" who="DR">Added keywords and bibliography</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
          <listRelation>
             <relation name="saws:isAttributedToAuthor"
-               active="LIT1640Homily"
-               passive="PRS8121RetuaH"/>
+                      active="LIT1640Homily"
+                      passive="PRS8121RetuaH"/>
             
-            <relation name="syriaca:different-from" active="LIT1640Homily" passive="LIT1638Homily LIT1639Homily LIT4971MalkeaErgata LIT2932RepCh213"></relation>
+            <relation name="syriaca:different-from"
+                      active="LIT1640Homily"
+                      passive="LIT1638Homily LIT1639Homily LIT4971MalkeaErgata LIT2932RepCh213"/>
          </listRelation>
          <listBibl type="secondary">
-            <bibl><ptr target="bm:Getachew2010RetuaHaymanot"/><citedRange unit="page">383a</citedRange></bibl>
+            <bibl>
+               <ptr target="bm:Getachew2010RetuaHaymanot"/>
+               <citedRange unit="page">383a</citedRange>
+            </bibl>
          </listBibl>
       </body>
    </text>

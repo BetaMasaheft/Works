@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3686Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: Narration of St Basil on the apparition of the Virgin</title>
@@ -29,6 +29,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -36,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -55,21 +63,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-05-14">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="secondary">
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">256</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">256</citedRange>
+               </bibl>
             </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf"
                          active="LIT3686Miracle"
                          passive="LIT2384Taamme"/>
-               <relation name="ecrm:P129_is_about" active="LIT3686Miracle" passive="PRS2546Basilth"/>
-               <relation name="ecrm:P129_is_about" active="LIT3686Miracle" passive="PRS8930Sophia"/>
-               <relation name="saws:isRelatedTo" active="LIT3686Miracle" passive="LIT5202MiracleBasilIcon"/>
-               <relation name="saws:isRelatedTo" active="LIT3686Miracle" passive="LIT5203MiracleBasilPillars"/>
-               <relation name="saws:isRelatedTo" active="LIT3686Miracle" passive="LIT5204MiracleBasilSpring"/>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT3686Miracle"
+                         passive="PRS2546Basilth"/>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT3686Miracle"
+                         passive="PRS8930Sophia"/>
+               <relation name="saws:isRelatedTo"
+                         active="LIT3686Miracle"
+                         passive="LIT5202MiracleBasilIcon"/>
+               <relation name="saws:isRelatedTo"
+                         active="LIT3686Miracle"
+                         passive="LIT5203MiracleBasilPillars"/>
+               <relation name="saws:isRelatedTo"
+                         active="LIT3686Miracle"
+                         passive="LIT5204MiracleBasilSpring"/>
             </listRelation>
          </div>
          <div type="edition">

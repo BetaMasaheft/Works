@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="LIT4952History"
      xml:lang="en"
      type="work">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">ዜና፡ ልደቶሙ፡ ለነገሥታት፡ እምአዳም፡ እስከ፡ ይእዜ፡</title>
@@ -36,7 +36,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -60,7 +66,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="MV" when="2018-04-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
             <!---->
@@ -72,16 +78,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         ወሄኖክ፡ ወለዶ፡ ለማቱሳላ፡
                     </ab>
                 </div>
-                <div type="textpart" subtype="paragraph " n="1" xml:id="AdamtoDelnaad">
+                <div type="textpart"
+                 subtype="paragraph "
+                 n="1"
+                 xml:id="AdamtoDelnaad">
                     <label>Genealogy of the Kings of Ethiopia from <persName ref="PRS1386Adam">ʾAdām</persName>
-                        to <persName ref="PRS3493Delnaod">Dǝl Naʾad</persName> </label>
+                        to <persName ref="PRS3493Delnaod">Dǝl Naʾad</persName> 
+               </label>
                 </div>
                 <div type="textpart" subtype="paragraph" n="2" xml:id="Zagwe">
                     <label>
                         The line of Zāgwe</label>
                 </div>
-                <div type="textpart" subtype="paragraph" n="3" xml:id="DelnaadToWedemRaad">
-                    <label>The line of <persName ref="PRS3493Delnaod">Dǝl Naʾad</persName>, from <persName ref="PRS10111WedemR">Wǝdǝm Raʿad</persName></label>
+                <div type="textpart"
+                 subtype="paragraph"
+                 n="3"
+                 xml:id="DelnaadToWedemRaad">
+                    <label>The line of <persName ref="PRS3493Delnaod">Dǝl Naʾad</persName>, from <persName ref="PRS10111WedemR">Wǝdǝm Raʿad</persName>
+               </label>
                 </div>
                 <div type="textpart" subtype="explicit">
                     <ab>

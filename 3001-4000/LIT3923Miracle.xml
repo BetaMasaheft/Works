@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3923Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" xml:lang="en">Miracle of Mary: How the Virgin Mary and her Son appeared in a beehive</title>
@@ -29,6 +29,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -36,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -55,7 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-05-06">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
 
@@ -65,7 +73,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="page">12</citedRange>
                   <citedRange unit="item">39</citedRange>
                </bibl>
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">160</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">160</citedRange>
+               </bibl>
             </listBibl>
 
             <listBibl type="editions">
@@ -101,15 +112,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
              <div type="textpart" subtype="incipit" xml:lang="gez">
                <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
                  <ab>
-                     ወሀሎ፡ አሐዱ፡ ብእሲ፡ ዕብራዊ፡ ይነብር፡ በሀገረ፡ አክሚም፣ እስመ፡ ፈድፋደ፡ ያፈቅራ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
-                     እምስርወ፡ ልቡ፡ በፍርሃት፡ ወበረዓድ፣ ወኢይጸርዕ፡ እምአፉሁ፡ ዝክረ፡ ስማ፡ ዘምስለ፡ ሰጊድ፡ ወግናይ።
+                     ወሀሎ፡ አሐዱ፡ ብእሲ፡ ሀያብ፡ መዓር፡ ዘይለምድ፡ ንህበ፡ ብዙኃ፡ ረከቦ፡ ፈድፋደ፡ እምኵሉ፡ ሰብእ።
+                     ወእምዝ፡ ኄጦ፡ ሰይጣን፡ በምክረ፡ እኩይ፡ ወረሰዮ፡ ይሑር፡ ኀበ፡ ብእሲት፡ አሐቲ፡ መሠሪት።
                  </ab>
                  <div type="textpart" subtype="incipit" xml:lang="gez">
                     <note>This incipit is taken from <ref type="mss" corresp="EMML7089"/>.</note>
                     <ab>
-                      ተብህለ፡ ከመ፡ ሀሎ፡ አሐዱ፡ መነኮስ፡ ውስተ፡ ደብር፡ እምነ፡ <choice resp="PRS6437Macomber"><corr>አድባራተ፡</corr><sic>አድባራት፡</sic></choice> እስክንድርያ፣
-                      ወኮነ፡ ያፈቅራ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> በኵሉ፡ ልቡ፣ ወሶበ፡ ይዜክሩ፡ ስማ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
-                      ወኮነ፡ ይገርር፡ ላቲ፣ ወከማሁ፡ ውእቱኒ፣ ሶበ፡ ይዜክር፡ ስማ፣ ኮነ፡ ይደንን፡ በገጹ።
+                      ተብህለ፡ ከመ፡ ሀሎ፡ አሐዱ፡ ብእሲ፡ ውስተ፡ ሀገረ፡ እፍልንድር፣ ወኮነ፡ ይፈቅድ፡ ከመ፡ ይኩን፡ ሎቱ፡ መዐረ፡ ወስምዓ፡ ብዙኃ፡ ፈድፋደ፡ እምኵሉ፡ አግዋሪሁ።
                     </ab>
                  </div>
              </div>

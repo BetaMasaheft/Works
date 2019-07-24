@@ -7,10 +7,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT4148SalamAntonii">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Salām to Antony</title>
+            <title xml:id="t1">Salām hymn to St Antony</title>
 
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -32,6 +32,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -46,15 +54,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
-         <change who="SG" when="2016-11-18">CREATED: text record</change>
-         <change who="DR" when="2017-04-02">Added keywords and adjustments</change>
+
+         <change who="SG" when="2019-04-18">CREATED: text record</change>
+         <!-- Is it the same as LIT2753RepCh37 ? -->
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
-         <listRelation/>
+         <listRelation>
+            <relation name="ecrm:P129_is_about"
+                      active="LIT4148SalamAntonii"
+                      passive="PRS1962Anthony"/>
+         </listRelation>
          <ab/>
       </body>
    </text>

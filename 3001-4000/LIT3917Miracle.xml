@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
      xml:lang="en"
      xml:id="LIT3917Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: How the Virgin Mary obtained forgiveness for a monk who mutilated himself after he had defiled himself</title>
@@ -30,6 +30,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p>There seem to be several versions of miracles related to the subject of a man mutilating himself after commiting a sexual sin, not allowing for a clear identification
@@ -38,13 +46,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"/> 
-               <term key="Miracle"/> 
+               <term key="ChristianLiterature"/>
+               <term key="Miracle"/>
                <term key="Apocrypha"/>
                <term key="Hagiography"/>
             </keywords>
@@ -55,13 +63,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="MV" when="2017-04-11">Added keywords and relations</change>
          <change who="DR" when="2018-11-19">Added keyword, title and Macomber reference</change>
          <change who="DR" when="2018-12-07">Added title and references from deleted LIT4999MiracleBardeyos</change>
+         <change who="AM" when="2019-04-30">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="secondary">
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">144</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">144</citedRange>
+               </bibl>
                <bibl>
                   <ptr target="bm:Cerulli1965Leningrado"/>
                   <citedRange unit="item">7</citedRange>
@@ -69,7 +81,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
                <bibl>
                   <ptr target="bm:Cerulli1963Maria"/>
-                  <citedRange>395 398</citedRange>                    
+                  <citedRange>395 398</citedRange>
                </bibl>
             </listBibl>
             <listBibl type="editions">
@@ -89,8 +101,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <relation name="saws:formsPartOf"
                          active="LIT3917Miracle"
                          passive="LIT2384Taamme"/>
-               <relation name="ecrm:P129_is_about" active="LIT3917Miracle" passive="PRS11330Devil"/>
+               <relation name="ecrm:P129_is_about"
+                         active="LIT3917Miracle"
+                         passive="PRS11330Devil"/>
             </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                 <ab>
+                  ወሀሎ፡ አሐዱ፡ መነኮስ፡ ዘስሙ፡ በርድዮስ፡ በሀገረ፡ ባኖስ፣ ወእንዘ፡ ሀለወ፡ ውስተ፡ ዓለም፣
+                  ነበረ፡ ይሐውር፡ ኀበ፡ አባ፡ ያዕቆብ።
+                 </ab>
+                 <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>This incipit is taken from <ref type="mss" corresp="EMML1573"/>.</note>
+                    <ab>
+                      ወሀሎ፡ አሐዱ፡ መነኮስ፡ ዘይፈርሆ፡ ለእግዚአብሔር፣ ወበኵሉ፡ ግብር፡ ሠናይ፡ ግዕዙ፣
+                      ወመሥመሬ፡ አኃው፡ ውእቱ።
+                      ወአሐተ፡ ዕለተ፡ ረከቦ፡ ድቀተ፡ ሥጋ፡ ዘአምጽአ፡ ሎቱ፡ ጸላኢ፣ ርእዮ፡ ትግሀታቲሁ።
+                    </ab>
+                 </div>
+             </div>
          </div>
       </body>
    </text>

@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5216MiracleVisionTimothy" xml:lang="en" type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5216MiracleVisionTimothy"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" xml:id="t1">Miracle of Mary: Vision of Timothy of Alexandria: The life of St Mary to the birth of Christ</title>
@@ -26,7 +31,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -53,7 +64,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="AM" when="2019-05-14">added text</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 <listBibl type="editions">
@@ -64,21 +75,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </bibl>
                 </listBibl>
                 <listBibl type="secondary">
-                    <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">231</citedRange></bibl>
+                    <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">231</citedRange>
+               </bibl>
                 </listBibl>
                 <listRelation>
                     <relation name="saws:formsPartOf"
-                        active="LIT5216MiracleVisionTimothy"
-                        passive="LIT2384Taamme"/>
-                    <relation name="ecrm:P129_is_about" active="LIT5216MiracleVisionTimothy" passive="PRS9523Timothy"/>
-                    <relation name="saws:isRelatedTo" active="LIT5216MiracleVisionTimothy" passive="LIT5217MiracleVisionTimothy2"/>
-                    <relation name="saws:isRelatedTo" active="LIT5216MiracleVisionTimothy" passive="LIT5218MiracleVisionTimothy3"/>
-                    <relation name="saws:isRelatedTo" active="LIT5216MiracleVisionTimothy" passive="LIT5219MiracleVisionTimothy4"/>
-                    <relation name="saws:isRelatedTo" active="LIT5216MiracleVisionTimothy" passive="LIT5220MiracleVisionTimothy5"/>
-                    <relation name="saws:isRelatedTo" active="LIT5216MiracleVisionTimothy" passive="LIT5221MiracleVisionTimothy6"/>
-                    <relation name="saws:isRelatedTo" active="LIT5216MiracleVisionTimothy" passive="LIT5222MiracleVisionTimothy7"/>
-                    <relation name="saws:isRelatedTo" active="LIT5216MiracleVisionTimothy" passive="LIT5223MiracleVisionTimothy8"/>
-                    <relation name="saws:isRelatedTo" active="LIT5216MiracleVisionTimothy" passive="LIT5224MiracleVisionTimothy9"/>
+                         active="LIT5216MiracleVisionTimothy"
+                         passive="LIT2384Taamme"/>
+                    <relation name="ecrm:P129_is_about"
+                         active="LIT5216MiracleVisionTimothy"
+                         passive="PRS9523Timothy"/>
+                    <relation name="saws:isRelatedTo"
+                         active="LIT5216MiracleVisionTimothy"
+                         passive="LIT5217MiracleVisionTimothy2"/>
+                    <relation name="saws:isRelatedTo"
+                         active="LIT5216MiracleVisionTimothy"
+                         passive="LIT5218MiracleVisionTimothy3"/>
+                    <relation name="saws:isRelatedTo"
+                         active="LIT5216MiracleVisionTimothy"
+                         passive="LIT5219MiracleVisionTimothy4"/>
+                    <relation name="saws:isRelatedTo"
+                         active="LIT5216MiracleVisionTimothy"
+                         passive="LIT5220MiracleVisionTimothy5"/>
+                    <relation name="saws:isRelatedTo"
+                         active="LIT5216MiracleVisionTimothy"
+                         passive="LIT5221MiracleVisionTimothy6"/>
+                    <relation name="saws:isRelatedTo"
+                         active="LIT5216MiracleVisionTimothy"
+                         passive="LIT5222MiracleVisionTimothy7"/>
+                    <relation name="saws:isRelatedTo"
+                         active="LIT5216MiracleVisionTimothy"
+                         passive="LIT5223MiracleVisionTimothy8"/>
+                    <relation name="saws:isRelatedTo"
+                         active="LIT5216MiracleVisionTimothy"
+                         passive="LIT5224MiracleVisionTimothy9"/>
                 </listRelation>
             </div>
             <div type="edition">

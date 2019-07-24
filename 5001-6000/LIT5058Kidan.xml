@@ -7,10 +7,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT5058Kidan">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title  xml:id="t1">Testamentum Domini Collection</title>
+            <title xml:id="t1">Testamentum Domini Collection</title>
 
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -32,11 +32,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <abstract>
@@ -55,19 +63,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2018-11-13"> added listBibl elements </change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="translation">
-            <bibl>
-               <ptr target="bm:Peres1999Epitre"/>
-            </bibl>
+               <bibl>
+                  <ptr target="bm:Peres1999Epitre"/>
+               </bibl>
             </listBibl>
             
             <listBibl type="secondary">
-            <bibl>
-               <ptr target="bm:DickhutEllwardt2018Dillmann"/>
-            </bibl>
+               <bibl>
+                  <ptr target="bm:DickhutEllwardt2018Dillmann"/>
+               </bibl>
             </listBibl>
          </div>
          
@@ -82,32 +90,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
                
                <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="TDG"
-                    corresp="LIT2462Testam">
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="TDG"
+                 corresp="LIT2462Testam">
                   <label>Testamentum Domini in Galilea</label>
                   
                </div>
                
                <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="EpAp"
-                    corresp="LIT1354Epistu">
+                 subtype="chapter"
+                 xml:lang="gez"
+                 xml:id="EpAp"
+                 corresp="LIT1354Epistu">
                   <label>Epistula Apostolorum</label>
                </div>
                
                
             </div>
          <listRelation>
-            <relation name="ecrm:F16_Container_Work" active="LIT5058Kidan" passive="LIT2461Testam"/>
+            <relation name="ecrm:F16_Container_Work"
+                      active="LIT5058Kidan"
+                      passive="LIT2461Testam"/>
          </listRelation>
          <listRelation>
-            <relation name="ecrm:F16_Container_Work" active="LIT5058Kidan" passive="LIT2462Testam"/>
+            <relation name="ecrm:F16_Container_Work"
+                      active="LIT5058Kidan"
+                      passive="LIT2462Testam"/>
          </listRelation>
          <listRelation>
-            <relation name="ecrm:F16_Container_Work" active="LIT5058Kidan" passive="LIT1354Epistu"></relation>
+            <relation name="ecrm:F16_Container_Work"
+                      active="LIT5058Kidan"
+                      passive="LIT1354Epistu"/>
          </listRelation>
          
       </body>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="LIT4668Prayer"
      xml:lang="en"
      type="work">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" xml:id="t1">Protective prayers for the seven weekdays</title>
@@ -35,7 +35,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -60,7 +66,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change when="2018-11-13" who="DE">Added text division</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="edition">
                 <div type="textpart" xml:id="Monday">
@@ -85,8 +91,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <label>Another prayer for Wednesday</label>
             </div>
             <div type="textpart" xml:id="Wednesday3">
-           <label>Another prayer for Wednesday</label>
-        </div>
+               <label>Another prayer for Wednesday</label>
+            </div>
                 <div type="textpart" xml:id="Thursday">
                <label>Prayer for Thursday</label>
             </div>

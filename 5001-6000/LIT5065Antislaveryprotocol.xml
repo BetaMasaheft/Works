@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5065Antislaveryprotocol" xml:lang="en" type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5065Antislaveryprotocol"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">Anti-slavery Protocol</title>
@@ -26,7 +31,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -50,7 +61,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="SG" when="2018-10-23">encoded the text</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 <listBibl type="editions">
@@ -63,18 +74,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="edition" xml:lang="am"> 
                 <listRelation>
                     <relation name="saws:isAttributedToAuthor"
-                        active="LIT5065Antislaveryprotocol"
-                        passive="PRS10378Yohanne">
+                         active="LIT5065Antislaveryprotocol"
+                         passive="PRS10378Yohanne">
                         
                     </relation>
                 </listRelation>
                 <div type="textpart" subtype="paragraph" n="1">
-                    <ab><persName ref="PRS9745Victoria">ቢክቶርያ፡</persName> በጸጋ፡ <persName ref="PRS3697egziabe">እግዚአብሔር፡</persName> 
+                    <ab>
+                  <persName ref="PRS9745Victoria">ቢክቶርያ፡</persName> በጸጋ፡ <persName ref="PRS3697egziabe">እግዚአብሔር፡</persName> 
                         የታላቋ፡ <placeName ref="wd:Q23666">ብርታንያና፡</placeName>
-                        <placeName ref="wd:Q1672441">የአይርለንድ፡</placeName> <roleName type="title">ንግሥት፡ </roleName>የ
+                        <placeName ref="wd:Q1672441">የአይርለንድ፡</placeName> 
+                  <roleName type="title">ንግሥት፡ </roleName>የ
                         <placeName ref="pleiades:50004">ህንደኬ፡</placeName> ቂሳርይት፡ 
-                        ሥዩመ፡ <persName ref="PRS3697egziabe">እግዚአብሔር፡</persName><persName ref="PRS10378Yohanne"> ዮሐንስ፡</persName>
-                        ንጉሠ፡ ጽዮን፡ <persName ref="PRS10378Yohanne"><roleName type="title">ንጉሠ፡  ነገሥት፡ </roleName> </persName>ዘ
+                        ሥዩመ፡ <persName ref="PRS3697egziabe">እግዚአብሔር፡</persName>
+                  <persName ref="PRS10378Yohanne"> ዮሐንስ፡</persName>
+                        ንጉሠ፡ ጽዮን፡ <persName ref="PRS10378Yohanne">
+                     <roleName type="title">ንጉሠ፡  ነገሥት፡ </roleName> 
+                  </persName>ዘ
                         <placeName ref="LOC3010Ethiop">ኢትዮጵያ፡</placeName> ወኵሉ፡ አድያሚሃ፡</ab>
                 </div>
                 <div type="textpart" subtype="paragraph" n="2">
@@ -83,26 +99,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         ውል፡ አድርገናል፡ ለዘለዓለም፡ በ<placeName ref="LOC3010Ethiop">ኢትዮጵያ</placeName>ና፡ በ<placeName ref="wd:Q23666">እንግሊዝ፡</placeName> መንግሥት፡ ለነገሠ፡ ይህን፡ ነገር፡ ሊጨርስ፡ የመጣ፡ ምስለኔአችን፡
                         <persName ref="PRS5320Hewett">ሪየር፡ አድሚራል፡ ሰር፡ ውሌም፡ ሕወት፡</persName> 
                         የ<placeName ref="pleiades:50004">ህንደኬ፡</placeName> ጦር፡ መርከብ፡ ደምሳሺ፡ ነው፡ ከታላቋ፡ <placeName ref="wd:Q23666">ብርታንያና፡</placeName>
-                        ከ<persName ref="wd:Q1672441">የአይርለንድ፡</persName> <roleName type="title">ንግሥት፡ </roleName> የ<placeName ref="pleiades:50004">ህንደኬ፡ </placeName>
+                        ከ<persName ref="wd:Q1672441">የአይርለንድ፡</persName> 
+                  <roleName type="title">ንግሥት፡ </roleName> የ<placeName ref="pleiades:50004">ህንደኬ፡ </placeName>
                         ቂሳርይት፡ የተላከ፡ መቅድም፡ </ab>
                 </div>
                 <div type="textpart" subtype="paragraph" n="3">
-                    <ab>[፩] <persName ref="PRS10378Yohanne"><roleName type="title">ጃንሆይ፡ </roleName> </persName> በግዛትዎ፡  ባሪያ፡ እንዳይሼጥ፡ እንዳይለወጥ፡ ሊከለክሉ፡ 
-                        [፪] <persName ref="PRS10378Yohanne"><roleName type="title">ጃንሆይ፡ </roleName><roleName type="title">ንጉሠ፡ ነገሥት፡ </roleName> </persName> 
+                    <ab>[፩] <persName ref="PRS10378Yohanne">
+                     <roleName type="title">ጃንሆይ፡ </roleName> 
+                  </persName> በግዛትዎ፡  ባሪያ፡ እንዳይሼጥ፡ እንዳይለወጥ፡ ሊከለክሉ፡ 
+                        [፪] <persName ref="PRS10378Yohanne">
+                     <roleName type="title">ጃንሆይ፡ </roleName>
+                     <roleName type="title">ንጉሠ፡ ነገሥት፡ </roleName> 
+                  </persName> 
                         ዘ<placeName ref="LOC3010Ethiop">ኢትዮጵያ፡</placeName> ባሪያ፡ ከሌላ፡ አገርም፡
                         መጥቶ፡ ካገ[ር]ዎ፡  ከግዛ[ት]ዎም፡  እንዳይሼጥ፡ እንዳይለወጥ፡ ወደ፡ ሌላ፡ አገርም፡ ወጥቶም፡ እንዳይሼጥ፡ ይህን፡ ወደው፡  ውል፡ አድርገናል
-                        [፫] <persName ref="PRS10378Yohanne"><roleName type="title">ጃንሆይ፡ </roleName><roleName type="title">ንጉሠ፡ ነገሥት፡ </roleName> </persName>
+                        [፫] <persName ref="PRS10378Yohanne">
+                     <roleName type="title">ጃንሆይ፡ </roleName>
+                     <roleName type="title">ንጉሠ፡ ነገሥት፡ </roleName> 
+                  </persName>
                         ዘ<placeName ref="LOC3010Ethiop">ኢትዮጵያ፡</placeName> ነጣ፡ የወጣ፡ ባሪያ፡ ወደ፡ ባርነት፡ እመልሰዋለሁ፡ ብሎ ፡ የያዘው፡ እንደሆን፡ በብርቱ፡ ቅጣት፡ ሊቀጣ፡ ፈቅደዋል፡
-                        [፬] የ<placeName ref="wd:Q23666">ብርታንያና፡</placeName><persName ref="PRS9745Victoria"><roleName type="title">ንግሥት፡ </roleName> 
+                        [፬] የ<placeName ref="wd:Q23666">ብርታንያና፡</placeName>
+                  <persName ref="PRS9745Victoria">
+                     <roleName type="title">ንግሥት፡ </roleName> 
                         </persName> ከሌሎች፡ ነገሥታት፡ ጋራ፡ ሁሉ፡ ባርያ፡ እንዳይሼጥ፡ ቀድሞ፡ ውል፡ አድርጋለች፡ ስለዚህ፡ በባሕር፡ ያሉ፡ ሹማምቶችዋን፡ ጠብቁ፡ ብላ፡ አዛለች፡ በመርከብ፡ ሲሄድ፡ ባርያ፡ ቢያገኙ፡ እንዲይዙ፡ 
-                        ደግሞ፡ በመርከብ፡ ላይ፡ የሀበሻ፡ ሰው፡ ባርያ፡ ተብሎ፡ ቢያዝ፡ ወደ፡ <persName ref="PRS10378Yohanne"><roleName type="title">ንጉሠ፡ ነገሥት፡ </roleName> </persName> 
+                        ደግሞ፡ በመርከብ፡ ላይ፡ የሀበሻ፡ ሰው፡ ባርያ፡ ተብሎ፡ ቢያዝ፡ ወደ፡ <persName ref="PRS10378Yohanne">
+                     <roleName type="title">ንጉሠ፡ ነገሥት፡ </roleName> 
+                  </persName> 
                         ወደ፡ አገሩ፡ ይመለስ፡ ብላ፡ ንግሥት፡ አዛለች
                         [፭] ይህ፡ የእርቅ፡  ውል፡ ቶሎ፡ ብሎ፡ ታትሞ፡ <placeName ref="LOC1264Adwa" when="1884">አድዋ፡</placeName> ድረስ፡ ይመጣል፡ ደግሞ፡ ስለ፡ ምስክርነት፡
                         <persName ref="PRS5320Hewett">ሪየር፡ አድሚራል፡ ሰር፡ ውሌም፡ ሕወት፡</persName> 
-                        የ<placeName ref="wd:Q23666">ብርታንያና፡</placeName> <persName ref="wd:Q1672441">የአይርለንድ፡</persName> ንግሥት፡
+                        የ<placeName ref="wd:Q23666">ብርታንያና፡</placeName> 
+                  <persName ref="wd:Q1672441">የአይርለንድ፡</persName> ንግሥት፡
                         የ<placeName ref="pleiades:50004">ህንደኬ፡</placeName> ቂሳርይት፡ ምስለኔና፡
                         ሥዩመ፡ እግዚአብሔር፡ <persName ref="PRS10378Yohanne"> ዮሐንስ፡</persName>
-                        ንጉሠ፡ ጽዮን፡ <persName ref="PRS10378Yohanne"><roleName type="title">ንጉሠ፡ ነገሥት፡</roleName> </persName>ዘ
+                        ንጉሠ፡ ጽዮን፡ <persName ref="PRS10378Yohanne">
+                     <roleName type="title">ንጉሠ፡ ነገሥት፡</roleName> 
+                  </persName>ዘ
                         <placeName ref="LOC3010Ethiop">ኢትዮጵያ፡</placeName> ለዚህ፡ ውል፡ ሁለቱም፡ በገዛ፡ እጃቼው፡ ማኅተማቼውን፡ አትመዋል፡ </ab>
                 </div>
                 <div type="textpart" subtype="paragraph" n="4">
@@ -118,5 +150,3 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </body>
     </text>
 </TEI>
-
-      

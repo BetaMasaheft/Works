@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3619Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: Miracle of the preservation of the Church of the Virgin in ʾAṯrīb</title>
@@ -29,6 +29,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p>This miracle occurs also divided into several miracles, see <ref type="work" corresp="LIT5641MMAtrib1"/>, <ref type="work" corresp="LIT5642MMAtrib2"/>,
@@ -37,7 +45,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -56,7 +64,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-05-08">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
@@ -76,18 +84,45 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">34</citedRange>
                   <citedRange unit="page">113-128</citedRange>
                </bibl>
-               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">162</citedRange><citedRange unit="page">401-402</citedRange></bibl>
-               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">163</citedRange><citedRange unit="page">403-406</citedRange></bibl>
-               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">164</citedRange><citedRange unit="page">407-409</citedRange></bibl>
-               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">165</citedRange><citedRange unit="page">410-411</citedRange></bibl>
-               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">166</citedRange><citedRange unit="page">412-414</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">162</citedRange>
+                  <citedRange unit="page">401-402</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">163</citedRange>
+                  <citedRange unit="page">403-406</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">164</citedRange>
+                  <citedRange unit="page">407-409</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">165</citedRange>
+                  <citedRange unit="page">410-411</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">166</citedRange>
+                  <citedRange unit="page">412-414</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="secondary">
                <bibl>
-                  <ptr target="bm:Grohmann1919Marien"/><citedRange unit="page">35</citedRange>
+                  <ptr target="bm:Grohmann1919Marien"/>
+                  <citedRange unit="page">35</citedRange>
                </bibl>
-                  <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">207</citedRange></bibl>
-               <bibl><ptr target="bm:Cerulli1943Maria"/><citedRange unit="page">216</citedRange></bibl>
+                  <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">207</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Cerulli1943Maria"/>
+                  <citedRange unit="page">216</citedRange>
+               </bibl>
             </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf"
@@ -102,7 +137,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ab>
                      ንወጥን፡ በረድኤተ፡ እግዚአብሔር፡ ወበአኳቴተ፡ ስብሐቲሁ፡ ወንዜንወክሙ፣ ኦአኃው፡ ፍቁራን፣ ሕዝበ፡ ክርስቲያን፣
                      ዘንተ፡ ዐቢየ፡ ተአምረ፡ ወመንክረ፡ ዘገብረት፡ እግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
-                     በሀገረ፡ <choice resp="PRS6437Macomber"><corr>አትሪብ።</corr><sic>ዐትራብ።</sic></choice>
+                     በሀገረ፡ <choice resp="PRS6437Macomber">
+                     <corr>አትሪብ።</corr>
+                     <sic>ዐትራብ።</sic>
+                  </choice>
                      ወሀሎ፡ ንጉሥ፡ በውእቱ፡ መዋዕል፡ ዘስሙ፡ ከሊፋ፣ ወዝብሂል፡ ዘነግሠ፡ እምድኅረ፡ አቡሁ፣ ረስዲድ፣ ወትርጓሜሁ፡ ድሩክ፡ ብእሲ፡ ብሂል።
                      ወኮነ፡ እምቅድመ፡ ይትወፈይ፡ መንግሥተ፣ ይትቃወሞሙ፡ ለክርስቲያን፡ ወይሰድዶሙ፡ ወይደቢ፡ አብያተ፡ ክርስቲያናት።
                   </ab>

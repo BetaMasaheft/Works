@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT2505Weddas">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ውዳሴ፡ አምላክ፡</title>
@@ -44,11 +44,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -67,7 +75,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="MV" when="2017-05-26">Added witness and textpart</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
 
          <div type="bibliography">
@@ -152,6 +160,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             passive="PRS8823Shenute">
                      <desc>Attributed to <persName ref="PRS8823Shenute">Shenute of
                         Atripe</persName>.</desc>
+                  </relation>
+                  <relation name="saws:isAttributedToAuthor"
+                            active="LIT2505Weddas#Friday"
+                            passive="PRS7696Pachomiu">
+                     <desc>A text by <persName ref="PRS7696Pachomiu">Pachomius</persName> is inserted in the prayer.</desc>
                   </relation>
                </listRelation>
             </div>

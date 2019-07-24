@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT2509Weddas">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ውዳሴ፡ ማርያም</title>
@@ -42,6 +42,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p>The Wǝddāse Māryām is the short title of a famous office of the Ethiopian Orthodox
@@ -77,7 +85,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </revisionDesc>
    </teiHeader>
 
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
 
          <div type="bibliography">
@@ -145,8 +153,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 
          <div type="edition">
-            <div type="textpart" subtype="chapter" xml:id="Sunday" corresp="LIT3019RepCh299">
-               <div type="textpart" subtype="incipit" xml:lang="gez"><ab>ተሰመይኪ፡ ፍቅርተ፡ ኦቡርክት፡ እምአንስት፡ አንቲ፡ ውእቱ፡ ዳግሚት፡ ቀመር፡</ab></div>
+            <div type="textpart"
+                 subtype="chapter"
+                 xml:id="Sunday"
+                 corresp="LIT3019RepCh299">
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>ተሰመይኪ፡ ፍቅርተ፡ ኦቡርክት፡ እምአንስት፡ አንቲ፡ ውእቱ፡ ዳግሚት፡ ቀመር፡</ab>
+               </div>
                
             </div>
             <div type="textpart" subtype="chapter" xml:id="Monday"/>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT2730RepCh14">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Hymn to Our Lady Mary</title>
@@ -30,11 +30,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -50,7 +58,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2018-11-09">Added incipit from catalogue</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
@@ -63,14 +71,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
-                  <note><foreign xml:lang="gez">ስጣሕት፡</foreign> probably is an error by Chaîne.</note>
+                  <note>
+                     <foreign xml:lang="gez">ስጣሕት፡</foreign> probably is an error by Chaîne.</note>
                   ማርያም፡ ስጣሕት፡ ቀስተ፡ መሐላሁ፡ ለኖኅ።
                </ab>
                <ab>
                   <note>The following incipit is according to    <bibl>
-                     <ptr target="bm:Wright1877BM"/>
-                     <citedRange unit="page">78b</citedRange>
-                  </bibl></note>
+                        <ptr target="bm:Wright1877BM"/>
+                        <citedRange unit="page">78b</citedRange>
+                     </bibl>
+                  </note>
                   ማርያም፡ ስጣሕት፡ ቀስተ፡ መሐላሁ፡ ለኖኅ።
                </ab>
             </div>

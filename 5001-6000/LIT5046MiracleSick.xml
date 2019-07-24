@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5046MiracleSick" xml:lang="en" type="work">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5046MiracleSick"
+     xml:lang="en"
+     type="work">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" xml:id="t1">Miracle of Mary: Miracle of sick people </title>
@@ -27,7 +32,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -54,7 +65,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2018-12-07">Added Macomber reference and title</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 
@@ -65,15 +76,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <citedRange unit="item">1</citedRange>
                 </bibl> 
                 
-                <bibl xml:id="Macomber"><ptr target="bm:MacomberMiracles"/><citedRange unit="item">603</citedRange></bibl>
+                <bibl xml:id="Macomber">
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">603</citedRange>
+               </bibl>
                 </listBibl>
                 
                 <listRelation>
-                    <relation name="saws:formsPartOf" active="LIT5046MiracleSick" passive="LIT2384Taamme"/>
-                    <relation name="syriaca:possibly-identical" active="LIT5046MiracleSick" passive="LIT3674Miracle"><desc><ref target="#Macomber"/> identifies the miracle
+                    <relation name="saws:formsPartOf"
+                         active="LIT5046MiracleSick"
+                         passive="LIT2384Taamme"/>
+                    <relation name="syriaca:possibly-identical"
+                         active="LIT5046MiracleSick"
+                         passive="LIT3674Miracle">
+                  <desc>
+                     <ref target="#Macomber"/> identifies the miracle
                         occurring in <ref type="mss" corresp="IVsuhtelen255#ms_i1.1"/> with <ref type="work" corresp="LIT3674Miracle"/>, 
                         however the description and incipit provided do not a allow a certain identification before consultation of the manuscript.
-                    </desc></relation>
+                    </desc>
+               </relation>
                 </listRelation>
             </div>
         </body>

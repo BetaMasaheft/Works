@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT2625ZenaSe">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ዜና፡ ስክንድስ፡ ጠቢብ፡ ለእንድርያኖስ፡ ንጉሥ፡ ወትምህርታቲሁ፡ ወጥበቡ፡</title>
@@ -20,8 +20,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="syr" xml:id="t4syr">ܫܪܒܐ ܕܣܩܘܢܕܘܣ</title>
             <title xml:lang="syr" corresp="#t4syr">šarbā dǝ-sqūndūs</title>
             <editor role="generalEditor" key="AB"/>
-            <editor key="AE" role="encoder annotator"></editor>
-            <editor key="ES" role="metadata"></editor>
+            <editor key="AE" role="encoder annotator"/>
+            <editor key="ES" role="metadata"/>
             <funder>Akademie der Wissenschaften in Hamburg; European Research Council</funder>
             <respStmt>
                <resp>digitization</resp>
@@ -31,8 +31,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </titleStmt>
          <editionStmt>
             <p>The text was prepared by the TraCES project on the basis of <bibl>
-               <ptr target="bm:Heide2014Secundus"/>
-            </bibl>. </p>
+                  <ptr target="bm:Heide2014Secundus"/>
+               </bibl>. </p>
             
          </editionStmt>
          <publicationStmt>
@@ -67,11 +67,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
             <language ident="grc">Greek</language>
             <language ident="syr">Syriac</language>
@@ -83,8 +91,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Paks1"/>
             </keywords>
          </textClass>
-         <abstract><p>The Life of the Greek philosopher Secundus the Silent (Secundus the Taciturn) and the responses to king Hadrian's questions</p></abstract>
-         <creation notBefore="1300" notAfter="1400">Probably composed in the 14th century (<bibl><ptr target="bm:Weninger2010EAESecundus"/></bibl>).</creation>
+         <abstract>
+            <p>The Life of the Greek philosopher Secundus the Silent (Secundus the Taciturn) and the responses to king Hadrian's questions</p>
+         </abstract>
+         <creation notBefore="1300" notAfter="1400">Probably composed in the 14th century (<bibl>
+               <ptr target="bm:Weninger2010EAESecundus"/>
+            </bibl>).</creation>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -95,7 +107,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2018-06-25">Added titles, data</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
         <div type="bibliography">
            
@@ -103,7 +115,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <bibl>
                   <ptr target="bm:Weninger2010EAESecundus"/>
                </bibl>
-              <bibl corresp="#t4syr"><ptr target="bm:Brock1978Secundus"/></bibl>
+              <bibl corresp="#t4syr">
+                  <ptr target="bm:Brock1978Secundus"/>
+               </bibl>
            </listBibl>
            
            <listBibl type="editions">
@@ -124,7 +138,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <relation name="saws:isVersionInAnotherLanguageOf"
                          active="LIT2625ZenaSe#t1"
                          passive="LIT2625ZenaSe#t3arabic LIT2625ZenaSe#t4syr"/>
-              <relation name="ecrm:P129_is_about" active="LIT2625ZenaSe" passive="PRS8679Secundus"></relation>
+              <relation name="ecrm:P129_is_about"
+                         active="LIT2625ZenaSe"
+                         passive="PRS8679Secundus"/>
             </listRelation>
         </div>
       </body>

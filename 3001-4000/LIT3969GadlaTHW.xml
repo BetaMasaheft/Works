@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3969GadlaTHW">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ገድለ፡ ተክለ፡ ሃይማኖት፡</title>
@@ -44,11 +44,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <abstract>
@@ -73,7 +81,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="MV" when="2017-12-01">Updated</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
@@ -92,14 +100,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Nosnitsin2010TaklaHaymanot"/>
                </bibl>
             </listBibl>
-               <listRelation>
-               <relation name="saws:formsPartOf"
+            
+            <listRelation>
+               <relation name="saws:isVersionOf"
                          active="LIT3969GadlaTHW"
-                         passive="LIT3973GadlaT"/>
+                         passive="LIT1507GadlaT">
+                  <desc>The Wāldǝbbā recension is the earliest version of the Gadla Takla Haymānot</desc>
+               </relation>
+               
                <relation name="ecrm:P129_is_about"
                          active="LIT3969GadlaTHW"
                          passive="PRS9162TaklaHa"/>
             </listRelation>
+               
          </div>
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">

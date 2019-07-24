@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
      xml:lang="en"
      xml:id="LIT3916Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: How a wealthy lady who dressed in mean attire to give alms was carried to Church by the Virgin Mary</title>
@@ -30,6 +30,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -37,14 +45,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
-               <term key="Apocrypha"/> 
-               <term key="Miracle"/> 
+               <term key="Apocrypha"/>
+               <term key="Miracle"/>
                <term key="Hagiography"/>
             </keywords>
          </textClass>
@@ -53,13 +61,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-11">Added keywords and relations</change>
          <change who="DR" when="2018-11-15">Added title, keyword and Macomber reference</change>
+         <change who="AM" when="2019-05-06">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="secondary">
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">168</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">168</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="editions">
                <bibl>
@@ -79,6 +91,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                          active="LIT3916Miracle"
                          passive="LIT2384Taamme"/>
             </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                 <ab>
+                     ወሀለወት፡ አሐቲ፡ ብእሲት፡ ዘስማ፡ ሶፍያ፣ ክብርት፡ ዘትነብር፡ ውስተ፡ ደሴት፡ ማእከለ፡ ባሕር፡ ዘሰመናዊ፣
+                     ወይእቲ፡ እምዐበይተ፡ ሀገር፣ ወለተ፡ ክቡራነ፡ ዘመድ፣ እምደቂቀ፡ እስራኤል፡ አቡሃ፡ ወእማ፡ እምቤተ፡ አሮን።
+                 </ab>
+                 <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>This incipit is taken from <ref type="mss" corresp="EMML7089"/>.</note>
+                    <ab>
+                      ተብህለ፡ ከመ፡ ሀለወት፡ አሐቲ፡ ብእሲት፡ ክብርት፡ እምዘመደ፡ ክቡራን፡ ውስተ፡ አሐቲ፡ ሀገር፡ በጽንፈ፡ ባሕር፡ ዘየዐቢ፣
+                      ወዘመዳ፡ ለይእቲ፡ ብእሲት፡ ይከብሩ፡ እምሰብአ፡ ይእቲ፡ ሀገር፣ ወባቲ፡ ምታ፡ እምክቡራነ፡ ሰብእ፡ ወሊቃውንት፡ ዐበይት።
+                    </ab>
+                 </div>
+             </div>
          </div>
       </body>
    </text>

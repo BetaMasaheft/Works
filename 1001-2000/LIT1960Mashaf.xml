@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1960Mashaf">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ቅዳሴ፡</title>
@@ -34,11 +34,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -58,7 +66,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2018-03-27" who="ES">added prayers/textparts from the Maṣḥāfa nәfq in ESagm009</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
 
@@ -98,7 +106,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="textpart" xml:id="Daily">
                <label>Daily Office Prayers and Litanies</label>
                
-               <!-- <listBibl type="mss">
+               <!-- from ESam007
+                  <listBibl type="mss">
                         <bibl>CRAbb 70 (17th cent.), <locus target="#18v">18v</locus> : “prières de l’encens pour le matin (ጸሎተ፡ ዕጣን፡ ዘነግህ፡)” (CRAbb 110, n<locus target="#72">72</locus>).</bibl>
                         <bibl>EMML n<locus target="#475">475</locus> (1881/89), <locus from="96r" to="97v">96r-97v</locus>: “Schematic rite of Incense [Ṣalota ‘eṭān]” (EMML II, 203).</bibl>
                         <bibl>EMML n<locus target="#1434">1434</locus> (1680), <locus from="3r" to="10r">3r-10r</locus>: “Prayer of Incense [Ṣalota ‘eṭān]”: <locus target="#3v">3v</locus>: “[Ṣalota ‘eṭān]”.</bibl>
@@ -107,32 +116,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <!-- some prayers taken from ESam007 -->
                <!-- more textparts to be taken from ESam007 -->
                
-               <div type="textpart" xml:id="Incense"><label>Prayers of the Incense</label>
-                  <div type="textpart" xml:id="Incense1" corresp="LIT5449Salotaetanmorning">
+               <div type="textpart" xml:id="Incense">
+                  <label>Prayers of the Incense</label>
+                  <div type="textpart"
+                       xml:id="Incense1"
+                       corresp="LIT5449Salotaetanmorning">
                
-                  <label>Morning Prayer of the Incense, from Egypt</label>
-               </div>
+                     <label>Morning Prayer of the Incense, from Egypt</label>
+                  </div>
                
-               <div type="textpart" xml:id="Incense2" corresp="LIT5450Salotaetaneve">
+                  <div type="textpart" xml:id="Incense2" corresp="LIT5450Salotaetaneve">
                   
-                  <label>Evening Prayer of the Incense, from Egypt</label>
+                     <label>Evening Prayer of the Incense, from Egypt</label>
+                  </div>
+               
+               
                </div>
                
                
-            </div>
-               
-               
             
             
             
-            <!--This is a preliminary outline following bm:Bausi2010EAEQeddase and bm:1951Qeddase -->
+               <!--This is a preliminary outline following bm:Bausi2010EAEQeddase and bm:1951Qeddase -->
 
-            <div type="textpart" subtype="chapter" xml:id="SerataQeddase">
-               <label xml:lang="gez" type="normalized">Śǝrʿāta qǝddāse</label>
-               <label xml:lang="gez">ሥርዓተ፡ ቅዳሴ፡</label>
+               <div type="textpart" subtype="chapter" xml:id="SerataQeddase">
+                  <label xml:lang="gez" type="normalized">Śǝrʿāta qǝddāse</label>
+                  <label xml:lang="gez">ሥርዓተ፡ ቅዳሴ፡</label>
                
                
-               <!-- Manuscripts of Serata Qeddase (list copied from ESam007)
+                  <!-- Manuscripts of Serata Qeddase (list copied from ESam007)
                Aeth. 114 (18th cent.), fols. 4ra-152vb: “መጽሐፈ፡ ቅዳሴ፡ [= Buch der eucharistischen Liturgie]”
 (SixBay 159-61, no. 109).
 CRAbb 70 (17th cent.), fols. 1r-191v : “Liturgies”
@@ -344,321 +356,470 @@ ZotBNat éth. 64 (17th cent.), fols. 1-66: “Liturgies”
                -->
                
                
-               <div type="textpart" subtype="chapter" xml:id="SerataQeddaseChapter1">
-                  <label>Śǝrʿāta qǝddāse, Chapter 1: Prayer over new vessels</label>
+                  <div type="textpart" subtype="chapter" xml:id="SerataQeddaseChapter1">
+                     <label>Śǝrʿāta qǝddāse, Chapter 1: Prayer over new vessels</label>
                   
-                  <div type="textpart" subtype="chapter" xml:id="Paten">
-                     <label>
-                        <foreign xml:lang="gez">ጸሎት፡ ሶበ፡ ትሠይሞ፡ ለጻሕል፡</foreign>
-                     </label>
+                     <div type="textpart" subtype="chapter" xml:id="Paten">
+                        <label>
+                           <foreign xml:lang="gez">ጸሎት፡ ሶበ፡ ትሠይሞ፡ ለጻሕል፡</foreign>
+                        </label>
+                     </div>
+                     <div type="textpart" subtype="chapter" xml:id="Chalice">
+                        <label>
+                           <foreign xml:lang="gez">ጸሎት፡ ሶበ፡ ትሠይሞ፡ ለጽዋዕ፡ ቅዱስ፡</foreign>
+                        </label>
+                     </div>
+                     <div type="textpart" subtype="chapter" xml:id="CrossSpoon">
+                        <label>
+                           <foreign xml:lang="gez">ጸሎት፡ ሶበ፡ ትሠይሞ፡ ለዕርፈ፡ መስቀል፡</foreign>
+                        </label>
+                     </div>
                   </div>
-                  <div type="textpart" subtype="chapter" xml:id="Chalice">
-                     <label>
-                        <foreign xml:lang="gez">ጸሎት፡ ሶበ፡ ትሠይሞ፡ ለጽዋዕ፡ ቅዱስ፡</foreign>
-                     </label>
-                  </div>
-                  <div type="textpart" subtype="chapter" xml:id="CrossSpoon">
-                     <label>
-                        <foreign xml:lang="gez">ጸሎት፡ ሶበ፡ ትሠይሞ፡ ለዕርፈ፡ መስቀል፡</foreign>
-                     </label>
-                  </div>
-               </div>
-               <div type="textpart" subtype="chapter" xml:id="SerataQeddaseChapter2">
-                  <label>Śǝrʿāta qǝddāse, Chapter 2: Beginning of the Mass, Preparation of the
+                  <div type="textpart" subtype="chapter" xml:id="SerataQeddaseChapter2">
+                     <label>Śǝrʿāta qǝddāse, Chapter 2: Beginning of the Mass, Preparation of the
                      ministers and the altar</label>
-               </div>
-               <div type="textpart" subtype="chapter" xml:id="SerataQeddaseChapter3">
-                  <label>Śǝrʿāta qǝddāse, Chapter 3: Liturgy of Catechumen, Liturgy of the Word</label>
-                  <div type="textpart" xml:id="Catechumen">
-                     <label>Liturgy of Catechumen</label>              
-                     <div type="textpart" xml:id="SerataQeddaseProthesis">
-                        <label>Liturgy of Catechumen: Prayer by the assistant priest receiving the host during the Prothesis</label>
-                        <note>MQ, SQ ch. III, §§ 22-25</note>
-                     </div>
-                     <div type="textpart" xml:id="SerataQeddaseOblation">
-                        <label>Liturgy of Catechumen: Prayer of oblation</label>
-                        <note>MQ, SQ ch. III, §§ 41-44</note>
-                     </div>
-                     <div type="textpart"
-                          xml:id="SerataQeddaseFethat"
-                          corresp="LIT1398Fethat">
-                        <label>Liturgy of Catechumen: Absolution of the son</label>
-                        <note>MQ, SQ ch. III, §§ 56-60</note>
-                     </div>
-                     <div type="textpart" xml:id="SerataQeddaseAbsolution">
-                        <label>Liturgy of Catechumen: General absolution</label>
-                        <note>MQ, SQ ch. III, §§ 61-65</note>
-                     </div>
                   </div>
+                  <div type="textpart" subtype="chapter" xml:id="SerataQeddaseChapter3">
+                     <label>Śǝrʿāta qǝddāse, Chapter 3: Liturgy of Catechumen, Liturgy of the Word</label>
+                     <div type="textpart" xml:id="Catechumen">
+                        <label>Liturgy of Catechumen</label>              
+                        <div type="textpart" xml:id="SerataQeddaseProthesis">
+                           <label>Liturgy of Catechumen: Prayer by the assistant priest receiving the host during the Prothesis</label>
+                           <note>
+                              <bibl>
+                                 <ptr target="bm:1962Qeddase"/>
+                                 <citedRange>Śǝrʿāta qǝddāse ch. III, §§ 22-25</citedRange>
+                              </bibl>
+                           </note>
+                        </div>
+                        <div type="textpart" xml:id="SerataQeddaseOblation">
+                           <label>Liturgy of Catechumen: Prayer of oblation</label>
+                           <note>
+                              <bibl>
+                                 <ptr target="bm:1962Qeddase"/>
+                                 <citedRange>Śǝrʿāta qǝddāse ch. III, §§ 41-44</citedRange>
+                              </bibl>
+                           </note>
+                        </div>
+                        <div type="textpart"
+                             xml:id="SerataQeddaseFethat"
+                             corresp="LIT1398Fethat">
+                           <label>Liturgy of Catechumen: Absolution of the son</label>
+                           <note>
+                              <bibl>
+                                 <ptr target="bm:1962Qeddase"/>
+                                 <citedRange>Śǝrʿāta qǝddāse ch. III, §§ 56-60</citedRange>
+                              </bibl>
+                           </note>
+                        </div>
+                        <div type="textpart" xml:id="SerataQeddaseAbsolution">
+                           <label>Liturgy of Catechumen: General absolution</label>
+                           <note>
+                              <bibl>
+                                 <ptr target="bm:1962Qeddase"/>
+                                 <citedRange>Śǝrʿāta qǝddāse ch. III, §§ 61-65</citedRange>
+                              </bibl> 
+                           </note>
+                        </div>
+                     </div>
                   
                   
-                  <div type="textpart" xml:id="Word">
-                     <label>Liturgy of the Word</label>               
-                     <div type="textpart" xml:id="SerataQeddaseChant">
-                        <label>Liturgy of the Word: Concluding chant after the reading from the Pauline Epistles</label>
-                        <note>MQ, SQ ch. III, §§ 132-135</note>
-                     </div>
-                     <div type="textpart" xml:id="SerataQeddaseMonition">
-                        <label>Monition from the Liturgy of the Word (MQ, Śǝrʿāta qǝddāse, ch. III, §§ 148)</label>
-                     </div>
-                     <div type="textpart" xml:id="SerataQeddaseUniversal">
-                        <label>Liturgy of the Word: Universal prayer by the assistant priest</label>
-                        <note>MQ, SQ ch. III, §§ 194-209</note>
-                     </div>
+                     <div type="textpart" xml:id="Word">
+                        <label>Liturgy of the Word</label>               
+                        <div type="textpart" xml:id="SerataQeddaseChant">
+                           <label>Liturgy of the Word: Concluding chant after the reading from the Pauline Epistles</label>
+                           <note>
+                              <bibl>
+                                 <ptr target="bm:1962Qeddase"/>
+                                 <citedRange>Śǝrʿāta qǝddāse ch. III, §§ 132-135</citedRange>
+                              </bibl>
+                           </note>
+                        </div>
+                        <div type="textpart" xml:id="SerataQeddaseMonition">
+                           <label>Monition from the Liturgy of the Word</label>
+                           <note>(<bibl>
+                                 <ptr target="bm:1962Qeddase"/>
+                                 <citedRange>Śǝrʿāta qǝddāse, ch. III, §§ 148</citedRange>
+                              </bibl>)</note>
+                        </div>
+                        <div type="textpart" xml:id="SerataQeddaseUniversal">
+                           <label>Liturgy of the Word: Universal prayer by the assistant priest</label>
+                           <note>
+                              <bibl>
+                                 <ptr target="bm:1962Qeddase"/>
+                                 <citedRange>Śǝrʿāta qǝddāse ch. III, §§ 194-209</citedRange>
+                              </bibl>
+                           </note>
+                        </div>
                      
-                  </div>
-               </div>
-               <div type="textpart" subtype="chapter" xml:id="SerataQeddaseChapter4">
-                  <label>Śǝrʿāta qǝddāse, Chapter 4: Liturgy of the Word</label>
-                  <div type="textpart" xml:id="SerataQeddasePeace">
-                     <label>Liturgy of the Word: Supplication for peace, the hierarchy and the assembly</label>
-                     <note>MQ, SQ ch. ch. IV, §§ 15-20</note>
-                  </div>
-               </div>
-            </div>
-
-            <div type="textpart" xml:id="LiturgyEucharist">
-               <label>Liturgy of the Eucharist</label>
-               <div type="textpart" xml:id="Anaphoras">
-
-                  <div type="textpart" corresp="LIT3189Anapho" xml:id="FourteenAnaphoras">
-
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT1104Anapho"
-                          xml:id="AnaphoraApostles">
-                        <label>Anaphora of the Apostles</label>
-                        <label xml:lang="gez">ቅዳሴ፡ ዘሐዋርያት፡</label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT1570habeka"
-                          xml:id="AnaphoraJohn">
-                        <label>Anaphora by John, son of Thunder</label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT1100Anapho"
-                          xml:id="AnaphoraLord">
-                        <label>Anaphora of Our Lord </label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT1099Anapho"
-                          xml:id="AnaphoraMary">
-                        <label>Anaphora of Mary by St Cyriacus of Behnesa</label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT1103Anapho"
-                          xml:id="Anaphora318">
-                        <label>Anaphora of the 318</label>
-                        <div type="textpart" corresp="LIT3308Nicene" xml:id="NiceneCreed"><label>Nicene Creed</label></div>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT1162Athana"
-                          xml:id="AnaphoraAthanasius">
-                        <label>Anaphora by Athanasius</label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT1098Anapho"
-                          xml:id="AnaphoraBasil">
-                        <label>Anaphora by Basil</label>
-                        <note>Prayer of blessing of St Basil, see MQ, Qәddase za-ḥawāryāt, §§ 10-21</note>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT2040Naakkw"
-                          xml:id="AnaphoraFirstGregoryNyssa">
-                        <label>Hosanna-Liturgy of St Gregory</label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT1347Epipha"
-                          xml:id="AnaphoraEpiphanius">
-                        <label>Anaphora by Epiphanius of Cyprus</label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT3120Anapho"
-                          xml:id="AnaphoraJohnChrysostom">
-                        <label>Anaphora by John Chrysostom</label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT1569habeka"
-                          xml:id="AnaphoraCyril">
-                        <label>Anaphora by Cyril of Alexandria</label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT2404Tanseu"
-                          xml:id="AnaphoraJacobSerug">
-                        <label>Anaphora by Jacob of Serug</label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT3180Anapho"
-                          xml:id="AnaphoraDioscorus">
-                        <label>Anaphora by Dioscorus</label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT2038Naakkw"
-                          xml:id="AnaphoraSecondGregory">
-                        <label>Christmas-Liturgy of St Gregory</label>
                      </div>
                   </div>
-
-                  <div type="textpart" xml:id="AdditionalAnaphoras">
-                     <label>Additional Anaphoras</label>
-
-                     <div type="textpart" subtype="chapter" xml:id="AnaphoraGiyorgis">
-                        <label>Anaphora Our Lady Mary by Giyorgis </label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT1101Anapho"
-                          xml:id="AnaphoraJames">
-                        <label>Anaphora of James, the Brother of the Lord </label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT1102Anapho"
-                          xml:id="AnaphoraMark">
-                        <label>Anaphora of Mark the Evangelist</label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT2034Naakkw"
-                          xml:id="AnaphoraGregoryMary">
-                        <label>Anaphora Our Lady Mary by Gregory</label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT2037Naakkw"
-                          xml:id="AnaphoraGregoryNathanael">
-                        <label>Anaphora Our Lady Mary by Gregory or Nathanael </label>
-                     </div>
-                     <div type="textpart"
-                          subtype="chapter"
-                          corresp="LIT2039Naakkw"
-                          xml:id="AnaphoraSecondCyril">
-                        <label>Second Anaphora of Cyril</label>
+                  <div type="textpart" subtype="chapter" xml:id="SerataQeddaseChapter4">
+                     <label>Śǝrʿāta qǝddāse, Chapter 4: Liturgy of the Word</label>
+                     <div type="textpart" xml:id="SerataQeddasePeace">
+                        <label>Liturgy of the Word: Supplication for peace, the hierarchy and the assembly</label>
+                        <note>
+                           <bibl>
+                              <ptr target="bm:1962Qeddase"/>
+                              <citedRange>Śǝrʿāta qǝddāse ch. ch. IV, §§ 15-20</citedRange>
+                           </bibl>
+                        </note>
                      </div>
                   </div>
                </div>
 
-               <div type="textpart" xml:id="MQPrayers">
+               <div type="textpart" xml:id="LiturgyEucharist">
+                  <label>Liturgy of the Eucharist</label>
+                  <div type="textpart" xml:id="Anaphoras">
 
-                  <div type="textpart"
-                       subtype="chapter"
-                       corresp="LIT2260salota"
-                       xml:id="PrayerKidan">
-                     <label>Prayer of the Covenant</label>
-                     <div type="textpart" xml:id="Kidan1" corresp="LIT1716Kidanz">
+                     <div type="textpart" corresp="LIT3189Anapho" xml:id="FourteenAnaphoras">
+
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT1104Anapho"
+                             xml:id="AnaphoraApostles">
+                           <label>Anaphora of the Apostles</label>
+                           <label xml:lang="gez">ቅዳሴ፡ ዘሐዋርያት፡</label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT1570habeka"
+                             xml:id="AnaphoraJohn">
+                           <label>Anaphora by John, son of Thunder</label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT1100Anapho"
+                             xml:id="AnaphoraLord">
+                           <label>Anaphora of Our Lord </label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT1099Anapho"
+                             xml:id="AnaphoraMary">
+                           <label>Anaphora of Mary by St Cyriacus of Behnesa</label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT1103Anapho"
+                             xml:id="Anaphora318">
+                           <label>Anaphora of the 318</label>
+                           <div type="textpart" corresp="LIT3308Nicene" xml:id="NiceneCreed">
+                              <label>Nicene Creed</label>
+                           </div>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT1162Athana"
+                             xml:id="AnaphoraAthanasius">
+                           <label>Anaphora by Athanasius</label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT1098Anapho"
+                             xml:id="AnaphoraBasil">
+                           <label>Anaphora by Basil</label>
+                           <note>Prayer of blessing of St Basil, see <bibl>
+                                 <ptr target="bm:1962Qeddase"/>
+                                 <citedRange>Qәddase za-ḥawāryāt, §§ 10-21</citedRange>
+                              </bibl> 
+                           </note>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT2040Naakkw"
+                             xml:id="AnaphoraFirstGregoryNyssa">
+                           <label>Hosanna-Liturgy of St Gregory</label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT1347Epipha"
+                             xml:id="AnaphoraEpiphanius">
+                           <label>Anaphora by Epiphanius of Cyprus</label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT3120Anapho"
+                             xml:id="AnaphoraJohnChrysostom">
+                           <label>Anaphora by John Chrysostom</label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT1569habeka"
+                             xml:id="AnaphoraCyril">
+                           <label>Anaphora by Cyril of Alexandria</label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT2404Tanseu"
+                             xml:id="AnaphoraJacobSerug">
+                           <label>Anaphora by Jacob of Serug</label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT3180Anapho"
+                             xml:id="AnaphoraDioscorus">
+                           <label>Anaphora by Dioscorus</label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT2038Naakkw"
+                             xml:id="AnaphoraSecondGregory">
+                           <label>Christmas-Liturgy of St Gregory</label>
+                        </div>
+                     </div>
+
+                     <div type="textpart" xml:id="AdditionalAnaphoras">
+                        <label>Additional Anaphoras</label>
+
+                        <div type="textpart" subtype="chapter" xml:id="AnaphoraGiyorgis">
+                           <label>Anaphora Our Lady Mary by Giyorgis </label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT1101Anapho"
+                             xml:id="AnaphoraJames">
+                           <label>Anaphora of James, the Brother of the Lord </label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT1102Anapho"
+                             xml:id="AnaphoraMark">
+                           <label>Anaphora of Mark the Evangelist</label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT2034Naakkw"
+                             xml:id="AnaphoraGregoryMary">
+                           <label>Anaphora Our Lady Mary by Gregory</label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT2037Naakkw"
+                             xml:id="AnaphoraGregoryNathanael">
+                           <label>Anaphora Our Lady Mary by Gregory or Nathanael </label>
+                        </div>
+                        <div type="textpart"
+                             subtype="chapter"
+                             corresp="LIT2039Naakkw"
+                             xml:id="AnaphoraSecondCyril">
+                           <label>Second Anaphora of Cyril</label>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div type="textpart" xml:id="MQPrayers">
+
+                     <div type="textpart"
+                          subtype="chapter"
+                          corresp="LIT2260salota"
+                          xml:id="PrayerKidan">
+                        <label>Prayer of the Covenant</label>
+                        <div type="textpart" xml:id="Kidan1" corresp="LIT1716Kidanz">
                         
-                        <label>Testament of the Morning</label>
-                     </div>
+                           <label>Testament of the Morning</label>
+                        </div>
                      
-                     <div type="textpart" xml:id="Kidan2" corresp="LIT1717Kidanz">
+                        <div type="textpart" xml:id="Kidan2" corresp="LIT1717Kidanz">
                         
-                        <label>Testament of the Evening</label>
+                           <label>Testament of the Evening</label>
+                        </div>
                      </div>
-                  </div>
                   
-                  <div type="textpart"
-                       subtype="chapter"
-                       corresp="LIT1807Litonz"
-                       xml:id="LitonZanagh">
-                     <label>Litany for morning and evening, and litany for the Saturday of the
+                     <div type="textpart"
+                          subtype="chapter"
+                          corresp="LIT1807Litonz"
+                          xml:id="LitonZanagh">
+                        <label>Litany for morning and evening, and litany for the Saturday of the
                      Victory</label>
-                  </div>
-                  <div type="textpart"
-                     subtype="chapter"
-                     corresp="LIT1808Litonz"
-                     xml:id="LitonZasarq">
-                     <label>Litany for the evening</label>
-                  </div>
-                  <div type="textpart" subtype="chapter" xml:id="Before">
-                     <label>Prayer before the congregation receives the Eucharist</label>
-                     <note>from the Liturgy of the Eucharist, Anaphora of the Apostles (MQ, Qәddāse za-ḥawāryāt, §§ 110-112)</note>
-                  </div>
-                  <div type="textpart" subtype="chapter" xml:id="Imposition">
-                     <label>Prayer of intercession following the imposition of the celebrant‘s hand </label>
-                     <note>from the Liturgy of the Eucharist, Anaphora of the Apostles (MQ, Qәddāse za-ḥawāryāt, §§ 154-158)</note>
-                  </div>
-                  <div type="textpart" subtype="chapter" xml:id="Intercessions">
-                     <label>Intercessions</label>
-                  </div>
-                  <div type="textpart"
-                       subtype="chapter"
-                       corresp="LIT2605Zayena"
-                       xml:id="Zayenagges">
-                     <label>Za-yǝnaggǝś</label>  
-                     <!--same as LIT4084Salota?-->
-                  </div>
-                  <div type="textpart" subtype="chapter" xml:id="OtherIntercessions">
-                     <label>Other intercessions</label>
-                     <div type="textpart" xml:id="Supplications" corresp="LIT4711Mastabqwe"><label>Supplications</label>
-                        <div type="textpart" xml:id="SupplicationNight" corresp="LIT4711Mastabqwe#SupplicationNight"><label>Mastabqʷǝʿ za-lelit “Supplication of the Night”</label>
-                           <div type="textpart" subtype="incipit"><ab>መስተብቍዐን፡ ዘይበቍዑ፡ ለጸሎት፡ በእንተ፡ ኵሉ፡ ግብር፡</ab></div></div>
-                        <div type="textpart" xml:id="SupplicationApostles" corresp="LIT4711Mastabqwe#SupplicationApostles"><label>ጸዋትው፡ ዘአበዊነ፡ ሐዋርያት፡  ṣawātǝw zaʾabawina ḥawāryāt “Series (of Supplications) of our Fathers the Apostles”</label>
-                           <div type="textpart" subtype="supplication"><ab>ስተብቍዕ፡ በእንተ፡ ዱየን፡ (mastabqʷǝʿ baʾǝnta duyan)</ab></div>
-                           <div type="textpart" subtype="supplication"><ab></ab></div>
-                           <div type="textpart" subtype="supplication"><ab></ab></div>
-                           <div type="textpart" subtype="supplication"><ab></ab></div>
-                           <div type="textpart" subtype="supplication"><ab></ab></div>
-                           <div type="textpart" subtype="supplication"><ab>ስተብቍዕ፡ በእንተ፡ ሰላም፡ (mastabqʷǝʿ baʾǝnta salām)</ab></div>
-                           <note><bibl><ptr target="bm:MashafaSalotaKidan1960"/><citedRange>18-26</citedRange></bibl></note></div>
-                        <div type="textpart" subtype="supplication" xml:id="BaendaEllaNomu" corresp="LIT4711Mastabqwe#BaendaEllaNomu"><label>መስተብቍዕ፡ በእንተ፡ እለ፡ ኖሙ፡ (mastabqʷǝʿ baʾǝnta ʾǝlla nomu) - part 1</label>
+                     </div>
+                     <div type="textpart"
+                          subtype="chapter"
+                          corresp="LIT1808Litonz"
+                          xml:id="LitonZasarq">
+                        <label>Litany for the evening</label>
+                     </div>
+                     <div type="textpart" subtype="chapter" xml:id="Before">
+                        <label>Prayer before the congregation receives the Eucharist</label>
+                        <note>from the Liturgy of the Eucharist, Anaphora of the Apostles (<bibl>
+                              <ptr target="bm:1962Qeddase"/>
+                              <citedRange>Qәddase za-ḥawāryāt, §§  110-112</citedRange>
+                           </bibl>)</note>
+                     </div>
+                     <div type="textpart" subtype="chapter" xml:id="Imposition">
+                        <label>Prayer of intercession following the imposition of the celebrant‘s hand </label>
+                        <note>from the Liturgy of the Eucharist, Anaphora of the Apostles (<bibl>
+                              <ptr target="bm:1962Qeddase"/>
+                              <citedRange>Qәddase za-ḥawāryāt, §§ 154-158</citedRange>
+                           </bibl>)</note>
+                     </div>
+                     <div type="textpart" subtype="chapter" xml:id="Intercessions">
+                        <label>Intercessions</label>
+                     </div>
+                     <div type="textpart"
+                          subtype="chapter"
+                          corresp="LIT2605Zayena"
+                          xml:id="Zayenagges">
+                        <label>Za-yǝnaggǝś</label>  
+                        <!--same as LIT4084Salota?-->
+                     </div>
+                     <div type="textpart" subtype="chapter" xml:id="OtherIntercessions">
+                        <label>Other intercessions</label>
+                        <div type="textpart" xml:id="Supplications" corresp="LIT4711Mastabqwe">
+                           <label>Supplications</label>
+                           <div type="textpart"
+                                xml:id="SupplicationNight"
+                                corresp="LIT4711Mastabqwe#SupplicationNight">
+                              <label>Mastabqʷǝʿ za-lelit “Supplication of the Night”</label>
+                              <div type="textpart" subtype="incipit">
+                                 <ab>መስተብቍዐን፡ ዘይበቍዑ፡ ለጸሎት፡ በእንተ፡ ኵሉ፡ ግብር፡</ab>
+                              </div>
+                           </div>
+                           <div type="textpart"
+                                xml:id="SupplicationApostles"
+                                corresp="LIT4711Mastabqwe#SupplicationApostles">
+                              <label>ጸዋትው፡ ዘአበዊነ፡ ሐዋርያት፡  ṣawātǝw zaʾabawina ḥawāryāt “Series (of Supplications) of our Fathers the Apostles”</label>
+                              <div type="textpart" subtype="supplication">
+                                 <ab>ስተብቍዕ፡ በእንተ፡ ዱየን፡ (mastabqʷǝʿ baʾǝnta duyan)</ab>
+                              </div>
+                              <div type="textpart" subtype="supplication">
+                                 <ab/>
+                              </div>
+                              <div type="textpart" subtype="supplication">
+                                 <ab/>
+                              </div>
+                              <div type="textpart" subtype="supplication">
+                                 <ab/>
+                              </div>
+                              <div type="textpart" subtype="supplication">
+                                 <ab/>
+                              </div>
+                              <div type="textpart" subtype="supplication">
+                                 <ab>ስተብቍዕ፡ በእንተ፡ ሰላም፡ (mastabqʷǝʿ baʾǝnta salām)</ab>
+                              </div>
+                              <note>
+                                 <bibl>
+                                    <ptr target="bm:MashafaSalotaKidan1960"/>
+                                    <citedRange>18-26</citedRange>
+                                 </bibl>
+                              </note>
+                           </div>
+                           <div type="textpart"
+                                subtype="supplication"
+                                xml:id="BaendaEllaNomu"
+                                corresp="LIT4711Mastabqwe#BaendaEllaNomu">
+                              <label>መስተብቍዕ፡ በእንተ፡ እለ፡ ኖሙ፡ (mastabqʷǝʿ baʾǝnta ʾǝlla nomu) - part 1</label>
                            
-                           <div type="textpart" subtype="supplication" xml:id="BaendaEllaNomu1"><label>ወካዕባ፡ ናስተብቍዕ፡ በእንተ፡ እለ፡ ኖሙ፡ አኀዊነ፡ ከመ፡ ነፍሶሙ፡ የግዕዝ፡ ውስተ፡ መካን፡ ሥዑር፡ ኀባ፡ ማየ፡ ዕረፍት፡ 
+                              <div type="textpart" subtype="supplication" xml:id="BaendaEllaNomu1">
+                                 <label>ወካዕባ፡ ናስተብቍዕ፡ በእንተ፡ እለ፡ ኖሙ፡ አኀዊነ፡ ከመ፡ ነፍሶሙ፡ የግዕዝ፡ ውስተ፡ መካን፡ ሥዑር፡ ኀባ፡ ማየ፡ ዕረፍት፡ 
                               (wakāʿǝbā nāstabǝqqʷǝʿ baʾǝnta ʾǝlla nomu ʾaḫawina kama nafsomu yagʿǝz wǝsta makān śǝʿur ḫabā māya ʿǝraft)</label>
-                              <note><bibl><ptr target="bm:MashafaSalotaKidan1960"/><citedRange>36-38</citedRange></bibl></note></div>
+                                 <note>
+                                    <bibl>
+                                       <ptr target="bm:MashafaSalotaKidan1960"/>
+                                       <citedRange>36-38</citedRange>
+                                    </bibl>
+                                 </note>
+                              </div>
                            
                       
-                           <div type="textpart"><label>mastabqʷǝʿ baʾǝnta ʾǝlla nomu - part 2</label>
-   <div type="textpart" subtype="supplication"  xml:id="BaendaEllaNomu2"><label>ወካዕባ፡ ናስተብቍዕ፡ (wakāʿǝbā nāstabǝqqʷǝʿ)</label></div>
-                           <div type="textpart" subtype="supplication"  xml:id="BaendaEllaNomu3"><label>በል፡ (bal)</label></div>
-                           <div type="textpart" subtype="supplication"  xml:id="BaendaEllaNomu4"><label>እግዚአ፡ ሕይወተ፡ ሙታን፡ ተስፋ፡ ቅቡፃን፡ ረዳኤ፡ ምንዱባን፡ (ʾǝgziʾa ḥǝywata mutān tasfā qǝbuḍān radāʾe mǝndubān)</label></div>
-   <note><bibl><ptr target="bm:MashafaSalotaKidan1960"/><citedRange>38-40</citedRange></bibl></note>
-</div>
-                        </div>
-                        <div type="textpart" subtype="supplication" xml:id="Egziabher" corresp="LIT4711Mastabqwe#Egziabher"><label>እግዚአብሔር፡ እግዚአብሔር፡ ኢየሱስ፡ ክርስቶስ፡ አምላክነ፡ ዘትቤሎ፡ ለፍቁርከ፡ ዮሐንስ፡ (ʾǝgziʾabǝḥer ʾǝgziʾabǝḥer ʾiyasus krǝstos ʾamlākǝna za-tǝbelo la-fǝqurǝka yoḥannǝs)</label>
-                           <note><bibl><ptr target="bm:MashafaSalotaKidan1960"/><citedRange>40-41</citedRange></bibl></note></div>
-                        <div type="textpart" subtype="supplication" xml:id="Maryam" corresp="LIT4711Mastabqwe#Maryam"><label>መስተበቍዕ፡ ዘግዝእትነ፡ ማርያም፡ (mastabaqʷǝʿ za-ǝgzǝʾtǝna māryām)</label></div>
-                        <div type="textpart" subtype="supplication" xml:id="Maryam2" corresp="LIT4711Mastabqwe#Maryam2"><label>ወካዕባ፡ ናስተብቍዕ፡ ለግዝእትነ፡ ኵልነ፡ ርያም፡ ምነ፡ ወሙ፡ ለግዚእነ፡ (wakāʿǝbā nāstabǝqqʷǝʿ la-ǝgzǝʾtǝna kʷǝllǝna Māryām ǝmmǝna wa-ǝmu la-ǝgziʾǝna)</label></div>
-                        <div type="textpart" subtype="supplication" xml:id="SuppMasqal" corresp="LIT4711Mastabqwe#SuppMasqal"><label>Supplication to the Cross</label>
-                           <ab>ወካዕባ፡ ናስተብቍዕ፡ ለዕፀ፡ ቅዱስ፡ መስቀል፡ ጽኑዓ፡ ሥልታን፡ ወኃይል፡፡ (wakāʿǝbā nāstabǝqqʷǝʿ la-ʿǝḍa qǝddus masqal ṣǝnuʿā śǝltān wa-ḫāyl)</ab></div>
-                        <div type="textpart" xml:id="SupplicationNightJesus" corresp="LIT4711Mastabqwe#SupplicationNightJesus"><label>መስተብቍዕ፡ ዘሌሊት፡ mastabqʷǝʿ za-lelit “Supplication of the Night”</label>
-                           <div type="textpart" subtype="incipit"><ab>ናስተብቍዕ፡ ዘኵሎ፡ ይእኅዝ፡ ግዚአብሔር፡ አብ፡ ለእግዚ፡ ወ፡ መድኀኒነ፡ ኢየሱስ፡ ክርስቶስ፡፡ እስማ፡ ረሰየነ፡ ተድለ፡ (Nāstabǝqqʷǝʿ za-kʷǝllo yǝʾǝḫḫǝz ǝgziʾabǝḥer ʾab la-ʾǝgzi wa madḫanina ʾIyasus Krǝstos. ʾƎsmā rasayanna tadla)</ab></div>
+                              <div type="textpart">
+                                 <label>mastabqʷǝʿ baʾǝnta ʾǝlla nomu - part 2</label>
+                                 <div type="textpart" subtype="supplication" xml:id="BaendaEllaNomu2">
+                                    <label>ወካዕባ፡ ናስተብቍዕ፡ (wakāʿǝbā nāstabǝqqʷǝʿ)</label>
+                                 </div>
+                                 <div type="textpart" subtype="supplication" xml:id="BaendaEllaNomu3">
+                                    <label>በል፡ (bal)</label>
+                                 </div>
+                                 <div type="textpart" subtype="supplication" xml:id="BaendaEllaNomu4">
+                                    <label>እግዚአ፡ ሕይወተ፡ ሙታን፡ ተስፋ፡ ቅቡፃን፡ ረዳኤ፡ ምንዱባን፡ (ʾǝgziʾa ḥǝywata mutān tasfā qǝbuḍān radāʾe mǝndubān)</label>
+                                 </div>
+                                 <note>
+                                    <bibl>
+                                       <ptr target="bm:MashafaSalotaKidan1960"/>
+                                       <citedRange>38-40</citedRange>
+                                    </bibl>
+                                 </note>
+                              </div>
+                           </div>
+                           <div type="textpart"
+                                subtype="supplication"
+                                xml:id="Egziabher"
+                                corresp="LIT4711Mastabqwe#Egziabher">
+                              <label>እግዚአብሔር፡ እግዚአብሔር፡ ኢየሱስ፡ ክርስቶስ፡ አምላክነ፡ ዘትቤሎ፡ ለፍቁርከ፡ ዮሐንስ፡ (ʾǝgziʾabǝḥer ʾǝgziʾabǝḥer ʾiyasus krǝstos ʾamlākǝna za-tǝbelo la-fǝqurǝka yoḥannǝs)</label>
+                              <note>
+                                 <bibl>
+                                    <ptr target="bm:MashafaSalotaKidan1960"/>
+                                    <citedRange>40-41</citedRange>
+                                 </bibl>
+                              </note>
+                           </div>
+                           <div type="textpart"
+                                subtype="supplication"
+                                xml:id="Maryam"
+                                corresp="LIT4711Mastabqwe#Maryam">
+                              <label>መስተበቍዕ፡ ዘግዝእትነ፡ ማርያም፡ (mastabaqʷǝʿ za-ǝgzǝʾtǝna māryām)</label>
+                           </div>
+                           <div type="textpart"
+                                subtype="supplication"
+                                xml:id="Maryam2"
+                                corresp="LIT4711Mastabqwe#Maryam2">
+                              <label>ወካዕባ፡ ናስተብቍዕ፡ ለግዝእትነ፡ ኵልነ፡ ርያም፡ ምነ፡ ወሙ፡ ለግዚእነ፡ (wakāʿǝbā nāstabǝqqʷǝʿ la-ǝgzǝʾtǝna kʷǝllǝna Māryām ǝmmǝna wa-ǝmu la-ǝgziʾǝna)</label>
+                           </div>
+                           <div type="textpart"
+                                subtype="supplication"
+                                xml:id="SuppMasqal"
+                                corresp="LIT4711Mastabqwe#SuppMasqal">
+                              <label>Supplication to the Cross</label>
+                              <ab>ወካዕባ፡ ናስተብቍዕ፡ ለዕፀ፡ ቅዱስ፡ መስቀል፡ ጽኑዓ፡ ሥልታን፡ ወኃይል፡፡ (wakāʿǝbā nāstabǝqqʷǝʿ la-ʿǝḍa qǝddus masqal ṣǝnuʿā śǝltān wa-ḫāyl)</ab>
+                           </div>
+                           <div type="textpart"
+                                xml:id="SupplicationNightJesus"
+                                corresp="LIT4711Mastabqwe#SupplicationNightJesus">
+                              <label>መስተብቍዕ፡ ዘሌሊት፡ mastabqʷǝʿ za-lelit “Supplication of the Night”</label>
+                              <div type="textpart" subtype="incipit">
+                                 <ab>ናስተብቍዕ፡ ዘኵሎ፡ ይእኅዝ፡ ግዚአብሔር፡ አብ፡ ለእግዚ፡ ወ፡ መድኀኒነ፡ ኢየሱስ፡ ክርስቶስ፡፡ እስማ፡ ረሰየነ፡ ተድለ፡ (Nāstabǝqqʷǝʿ za-kʷǝllo yǝʾǝḫḫǝz ǝgziʾabǝḥer ʾab la-ʾǝgzi wa madḫanina ʾIyasus Krǝstos. ʾƎsmā rasayanna tadla)</ab>
+                              </div>
+                           </div>
                         </div>
                      </div>
-                  </div>
                   
-                  <div type="textpart" xml:id="Litanies" corresp="LIT3188Liton"><label>Litanies</label>
-                     <div type="textpart" xml:id="LitaniesWeek" corresp="LIT4860Litanies"><label>Litanies for the days of the week</label>
+                     <div type="textpart" xml:id="Litanies" corresp="LIT3188Liton">
+                        <label>Litanies</label>
+                        <div type="textpart" xml:id="LitaniesWeek" corresp="LIT4860Litanies">
+                           <label>Litanies for the days of the week</label>
                      
-                        <div type="textpart" xml:id="LitanyMonday" corresp="LIT1807Litonz"><label>ሊጦን፡ ዘሰኑይ፡ Liṭon za-sanuy “Litany of Monday”</label></div>
-                        <div type="textpart" xml:id="LitanyTuesday" corresp="LIT4858Litany"><label>ሊጦን፡ ዘሠሉስ፡ Liṭon za-śallus “Litany of Tuesday”</label></div>
-                        <div type="textpart" xml:id="LitanyWednesday" corresp="LIT4859Litany"><label>ሊጦን፡ ዘረቡዕ፡ Liṭon za-rabuʿ “Litany of Wednesday"</label></div>
-                        <div type="textpart" xml:id="LitanyThursday" corresp="LIT4264Salota"><label>ሊጦን፡ ዘሐሙስ፡ Liṭon za-ḥamus “Litany of Thursday”</label></div>
-                        <div type="textpart" xml:id="LitanyFriday" corresp="LIT4266Litonz"><label>ሊጦን፡ ዘዓርብ፡ Litany of Friday</label></div>
-                        <div type="textpart" xml:id="LitanySaturday" corresp="LIT4265Litonz"><label>ሊጦን፡ ዘቀዳም፡ Liṭon za-qadām“Litany of Saturday”</label></div>           
-                        <div type="textpart" xml:id="LitanySunday" corresp="LIT4268Tazakkar"><label>ሊጦን፡ ዘእኁድ፡ Liṭon za-ʾǝhud “Litany of Sunday</label></div>
+                           <div type="textpart" xml:id="LitanyMonday" corresp="LIT1807Litonz">
+                              <label>ሊጦን፡ ዘሰኑይ፡ Liṭon za-sanuy “Litany of Monday”</label>
+                           </div>
+                           <div type="textpart" xml:id="LitanyTuesday" corresp="LIT4858Litany">
+                              <label>ሊጦን፡ ዘሠሉስ፡ Liṭon za-śallus “Litany of Tuesday”</label>
+                           </div>
+                           <div type="textpart" xml:id="LitanyWednesday" corresp="LIT4859Litany">
+                              <label>ሊጦን፡ ዘረቡዕ፡ Liṭon za-rabuʿ “Litany of Wednesday"</label>
+                           </div>
+                           <div type="textpart" xml:id="LitanyThursday" corresp="LIT4264Salota">
+                              <label>ሊጦን፡ ዘሐሙስ፡ Liṭon za-ḥamus “Litany of Thursday”</label>
+                           </div>
+                           <div type="textpart" xml:id="LitanyFriday" corresp="LIT4266Litonz">
+                              <label>ሊጦን፡ ዘዓርብ፡ Litany of Friday</label>
+                           </div>
+                           <div type="textpart" xml:id="LitanySaturday" corresp="LIT4265Litonz">
+                              <label>ሊጦን፡ ዘቀዳም፡ Liṭon za-qadām“Litany of Saturday”</label>
+                           </div>           
+                           <div type="textpart" xml:id="LitanySunday" corresp="LIT4268Tazakkar">
+                              <label>ሊጦን፡ ዘእኁድ፡ Liṭon za-ʾǝhud “Litany of Sunday</label>
+                           </div>
                       
-                  </div>
-                     <div type="textpart" xml:id="LitanyEaster" corresp="LIT3571Litonz"><label>ሊጦን፡ ዘመኃትወ፡ ፋሲካ፡ Liṭon za-maḫatǝwa fāsikā “Litany of Easter Eve”</label>
-                     </div>
+                        </div>
+                        <div type="textpart" xml:id="LitanyEaster" corresp="LIT3571Litonz">
+                           <label>ሊጦን፡ ዘመኃትወ፡ ፋሲካ፡ Liṭon za-maḫatǝwa fāsikā “Litany of Easter Eve”</label>
+                        </div>
                      
-                  </div>
+                     </div>
                   
+                  </div>
                </div>
             </div>
-         </div>
          </div>        
       </body>
    </text>

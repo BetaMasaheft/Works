@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="work"
+     xml:lang="en"
+     xml:id="LIT1008DossierTH">
+   <teiHeader xml:base="https://betamasaheft.eu/">
+      <fileDesc>
+         <titleStmt>
+
+            <title xml:lang="en" corresp="t1">Hagiographic Dossier of St Takla Hāymānot</title>
+            
+            <editor role="generalEditor" key="AB"/>
+            <funder>Akademie der Wissenschaften in Hamburg</funder>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+            <pubPlace>Hamburg</pubPlace>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
+                  <p>
+                This file is licensed under the Creative Commons
+                Attribution-ShareAlike 4.0. </p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>A Work part of Ethiopian Literature</p>
+            
+         </sourceDesc>
+         
+      </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
+      <profileDesc>
+         <abstract>
+            <ab>The collection consisiting Life, Miracles, Translation, Commemoration, Genealogy, and Hymns in honour of St Takla Haymanot</ab>
+         </abstract>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="ar">Arabic</language>
+            <language ident="it">Italian</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Hagiography"/>
+               <term key="ChristianLiterature"/>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change who="ES" when="2019-06-26">CREATED record</change>
+
+      </revisionDesc>
+   </teiHeader>
+   <text xml:base="https://betamasaheft.eu/">
+      <body>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Nosnitsin2003Felsatu"/>
+                  <citedRange unit="page">145</citedRange>
+                  <citedRange unit="note">30</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:contains"
+                         active="LIT1008DossierTH"
+                         passive="LIT3973GadlaT">
+                  <desc>The dossier contains the Gadla Takla Haymānot (Acts)</desc>
+               </relation>
+               <relation name="saws:contains"
+                         active="LIT1008DossierTH"
+                         passive="LIT3971Taamme">
+                  <desc>The dossier may contain the Taʾammǝra Takla Hāymānot (Miracles)</desc>
+               </relation>
+               <relation name="saws:contains"
+                         active="LIT1008DossierTH"
+                         passive="LIT1929Mashaf">
+                  <desc>The dossier may contain the Maṣḥafa fǝlsatu la-Takla Hāymānot (Translation)</desc>
+               </relation>
+               <relation name="saws:contains"
+                         active="LIT1008DossierTH"
+                         passive="LIT2930RepCh211">
+                  <desc>The dossier may contain the Malkǝʾa ʾabuna Takla Hāymānot (Hymn)</desc>
+               </relation>
+               <relation name="saws:contains"
+                         active="LIT1008DossierTH"
+                         passive="LIT2774RepCh58">
+                  <desc>The dossier may contain the Salam to ʾabuna Takla Hāymānot (Hymn)</desc>
+               </relation>
+               <relation name="saws:contains"
+                         active="LIT1008DossierTH"
+                         passive="LIT3972Mashaf">
+                  <desc>The dossier may contain the Maṣḥafa lǝdatu la-ʾabuna Takla Hāymānot (Genealogy)</desc>
+               </relation>
+               <relation name="saws:contains"
+                         active="LIT1008DossierTH"
+                         passive="LIT5774ZenaTH">
+                  <desc>The dossier may contain the Maṣḥafa zenahu ʾabuna Takla Hāymānot (Commemoration)</desc>
+               </relation>
+               
+               <relation name="ecrm:P129_is_about"
+                         active="LIT1008DossierTH"
+                         passive="PRS9162TaklaHa"/>
+            </listRelation>
+         </div>
+         
+      </body>
+   </text>
+</TEI>

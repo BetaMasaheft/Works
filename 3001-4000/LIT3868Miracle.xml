@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3868Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: How a man forsook his wife and loved another woman who was a worshipper of the Virgin Mary and repented</title>
@@ -29,6 +29,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -36,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -55,7 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-05-03">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
@@ -63,14 +71,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Budge1923Miracles"/>
                   <citedRange unit="item">45</citedRange>
                </bibl>
-                  <bibl><ptr target="bm:TasfaGiyorgis1956Taammera"/>
+                  <bibl>
+                  <ptr target="bm:TasfaGiyorgis1956Taammera"/>
                      <citedRange unit="item">89</citedRange>
                      <citedRange unit="page">301-304</citedRange>
                   </bibl>
 
                 </listBibl>
             <listBibl type="secondary">
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">150</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">150</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="translation">
                <bibl>
@@ -85,13 +97,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Cerulli1943Maria"/>
                   <citedRange unit="page">486-494</citedRange>
                </bibl>
-               <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">21</citedRange><citedRange unit="page">64-65</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">21</citedRange>
+                  <citedRange unit="page">64-65</citedRange>
+               </bibl>
             </listBibl>
             <listRelation>
-               <relation name="saws:formsPartOf"  active="LIT3868Miracle"  passive="LIT2384Taamme"/>
-               <relation name="saws:isRelatedTo" active="LIT3868Miracle"  passive="LIT5003MiracleJonahWife">
+               <relation name="saws:formsPartOf"
+                         active="LIT3868Miracle"
+                         passive="LIT2384Taamme"/>
+               <relation name="saws:isRelatedTo"
+                         active="LIT3868Miracle"
+                         passive="LIT5003MiracleJonahWife">
                   <desc>The miracle seems to be very close to the Miracle of Jonah who forsook his wife, but the name of the person and the name of the country,
-                  <country ref="LOC5068Palest)">Palestine</country>, are missing. </desc> </relation>
+                  <country ref="LOC5068Palest)">Palestine</country>, are missing. </desc> 
+               </relation>
             </listRelation>
          </div>
          <div type="edition">

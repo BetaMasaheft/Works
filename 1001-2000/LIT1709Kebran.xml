@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1709Kebran">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ክብረ፡ ነገሥት፡</title>
@@ -19,7 +19,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <editor role="generalEditor" key="AB"/>
             <editor key="SH" role="encoder annotator"/>
             <editor key="RHC" role="encoder"/>
-            <editor key="ES" role="metadata"></editor>
+            <editor key="ES" role="metadata"/>
             <respStmt>
                <resp>Digitized by</resp>
                <persName from="1995" to="1995">Michal Jerabek (<ref target="#RHC">edition 1</ref>)</persName>
@@ -33,12 +33,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </titleStmt>
          <editionStmt>
             <p>The text currently reproduced as <ref target="#RHC">edition 1</ref> is that copied by Michal Jerabek from <bibl>
-               <ptr target="bm:Bezold1905KebraN"/>
-            </bibl>.</p>
+                  <ptr target="bm:Bezold1905KebraN"/>
+               </bibl>.</p>
             <p>The non-unicode encoded text of <ref target="#RHC">edition 1</ref> was saved from the website by Ran HaCohen and converted to Unicode.</p>
             <p>The text of <ref target="#traces">TraCES edition</ref> was prepared by the TraCES project on the basis of <bibl>
-               <ptr target="bm:Bezold1905KebraN"/>
-            </bibl>.</p>
+                  <ptr target="bm:Bezold1905KebraN"/>
+               </bibl>.</p>
             
          </editionStmt>
          <publicationStmt>
@@ -113,6 +113,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <!-- the format for the tagsDecl to be specified -->
          </tagsDecl>
 
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
 
       <profileDesc>
@@ -155,13 +161,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </revisionDesc>
       
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
             <relation name="saws:isVersionInAnotherLanguageOf"
-               active="LIT1709Kebran#t1"
-               passive="LIT1709Kebran#t2arabic"
-               cert="low">
+                      active="LIT1709Kebran#t1"
+                      passive="LIT1709Kebran#t2arabic"
+                      cert="low">
                <desc>The relation between <ref type="work" corresp="LIT1709Kebran#t1"/> and <ref type="work" corresp="LIT1709Kebran#t2arabic"/> is still not fully investigated. A derivation of the Gǝʿǝz version from
                   the Arabic or vice versa and a dependence on a common source have all been proposed.
                   <bibl>
@@ -171,8 +177,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </desc>
             </relation>
             <relation name="saws:isAttributedToAuthor"
-               active="LIT1709Kebran"
-               passive="PRS4823Gregory">
+                      active="LIT1709Kebran"
+                      passive="PRS4823Gregory">
                <desc>The <ref type="work" corresp="LIT1709Kebran"/> is composed as an exposition of <persName role="author" ref="PRS4823Gregory"/>, but actually alludes
                   to <persName ref="PRS4825Gregory"/>.
                   <bibl>
@@ -182,22 +188,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </desc>
             </relation>
             <relation name="saws:isAttributedToAuthor"
-               active="LIT1709Kebran#t2arabic"
-               passive="PRS1013Abalfara">
+                      active="LIT1709Kebran#t2arabic"
+                      passive="PRS1013Abalfara">
                <desc>The colophon states that <ref type="work" corresp="LIT1709Kebran#t2arabic"/> was translated from Coptic to Arabic by <persName role="translator" ref="PRS1013Abalfara"/>
                   and <persName role="translator" ref="PRS1012Abalez"/>.</desc>
             </relation>
             
             <relation name="saws:isAttributedToAuthor"
-               active="LIT1709Kebran#t2arabic"
-               passive="PRS1012Abalez">
+                      active="LIT1709Kebran#t2arabic"
+                      passive="PRS1012Abalez">
                <desc>The colophon states that <ref type="work" corresp="LIT1709Kebran#t2arabic"/> was translated from Coptic to Arabic by <persName role="translator" ref="PRS1013Abalfara"/>
                   and <persName role="translator" ref="PRS1012Abalez"/>.</desc>
             </relation>
             
             <relation name="saws:isAttributedToAuthor"
-               active="LIT1709Kebran#t1"
-               passive="PRS10351Yeshaq">
+                      active="LIT1709Kebran#t1"
+                      passive="PRS10351Yeshaq">
                <desc>The colophon  states that <ref type="work" corresp="LIT1709Kebran#t1"/> was translated from Arabic to Gǝʿǝz by <persName role="translator" ref="PRS10351Yeshaq"/>
                   at the order of <persName role="patron" ref="PRS10190Yaebik"/>.</desc>
             </relation>

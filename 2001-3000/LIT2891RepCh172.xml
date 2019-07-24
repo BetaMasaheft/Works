@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT2891RepCh172">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Malkǝʾ-hymn to Our Lady Mary</title>
@@ -30,14 +30,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
          <sourceDesc>
-      <ab/>
+            <ab/>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -46,10 +54,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
-         <abstract><p>The hymns listed by Chaîne as items 172 and 220 seem to be identical, apart from a slight variance, the repetition of the word
+         <abstract>
+            <p>The hymns listed by Chaîne as items 172 and 220 seem to be identical, apart from a slight variance, the repetition of the word
             <foreign xml:lang="gez">ሰላም፡</foreign> in the first verse. Another variant is witnessed by <ref type="mss" corresp="BAVet18"/>, <ref type="mss" corresp="BAVet24"/>, 
             <ref type="mss" corresp="BAVet56"/> and <ref type="mss" corresp="EMIP00028"/>, which instead of the
-            repeated <foreign xml:lang="gez">ሰላም፡</foreign> have <foreign xml:lang="gez">ካልእ፡</foreign> in the first verse. </p></abstract>
+            repeated <foreign xml:lang="gez">ሰላም፡</foreign> have <foreign xml:lang="gez">ካልእ፡</foreign> in the first verse. </p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
@@ -57,7 +67,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2018-07-04">Added abstract, incipit variants</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">

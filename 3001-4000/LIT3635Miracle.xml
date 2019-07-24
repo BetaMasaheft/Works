@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT3635Miracle">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Miracle of Mary: Miracle of a European man who cut a piece of a miraculous picture in Ṣeʾednāyā</title>
@@ -29,6 +29,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <abstract>
             <p/>
@@ -36,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -55,11 +63,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="AM" when="2019-06-04">added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
-               <bibl><ptr target="bm:Cerulli1943Maria"/><citedRange unit="page">280-281</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Cerulli1943Maria"/>
+                  <citedRange unit="page">280-281</citedRange>
+               </bibl>
                <bibl>
                   <ptr target="bm:TasfaGiyorgis1956Taammera"/>
                   <citedRange unit="item">31</citedRange>
@@ -67,11 +78,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             <listBibl type="translation">
-               <bibl><ptr target="bm:Cerulli1943Maria"/><citedRange unit="page">281-282</citedRange></bibl>
-                  <bibl><ptr target="bm:Colin2004TaamraMaryam"/><citedRange unit="item">35</citedRange><citedRange unit="page">100-101</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Cerulli1943Maria"/>
+                  <citedRange unit="page">281-282</citedRange>
+               </bibl>
+                  <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">35</citedRange>
+                  <citedRange unit="page">100-101</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="secondary">
-               <bibl><ptr target="bm:MacomberMiracles"/><citedRange unit="item">439</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">439</citedRange>
+               </bibl>
             </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf"
@@ -84,8 +105,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <note>This incipit is taken from <ref type="mss" corresp="EMML3051"/>.</note>
                  <ab>
                    ስምዑ፡ ተአምረ፡ ዘገብረት፡ እምሥዕለ፡ እግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
-                   <choice resp="PRS6437Macomber"><corr>ወሀሎ፡</corr><sic>ወዬብላ፡</sic></choice> አሐዱ፡ ነጋዲ፡ ብእሲ፡
-                   እምብሔረ፡ <choice resp="PRS6437Macomber"><corr>አፍርንጊያ፣</corr><sic>አፍራጊያ፣</sic></choice>
+                   <choice resp="PRS6437Macomber">
+                     <corr>ወሀሎ፡</corr>
+                     <sic>ወዬብላ፡</sic>
+                  </choice> አሐዱ፡ ነጋዲ፡ ብእሲ፡
+                   እምብሔረ፡ <choice resp="PRS6437Macomber">
+                     <corr>አፍርንጊያ፣</corr>
+                     <sic>አፍራጊያ፣</sic>
+                  </choice>
                    ወባዕል፡ ጥቀ፡ በወርቅ፡ ወበብሩር፡ ወበአልባስ፡ ክቡር። ወውእቱ፡ ብእሲ፣
                    ሶበ፡ ሰምዓ፡ ዜናሃ፡ ለሥዕል፡ ዘእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> ተፈሥሐ።
                  </ab>

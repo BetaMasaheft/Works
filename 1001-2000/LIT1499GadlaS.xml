@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="work"
      xml:lang="en"
      xml:id="LIT1499GadlaS">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">ገድለ፡ ስብስትያኖስ፡</title>
@@ -37,11 +37,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
+            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -58,7 +66,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2018-08-10">Added title, keywords and textparts</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
@@ -71,40 +79,59 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="edition">
             
             <note>Preliminary division into textparts based on     <bibl>
-               <ptr target="bm:ContiRossini1927Inediti"/>
-               <citedRange unit="page">500-511</citedRange>
-            </bibl> and <ref type="mss" corresp="BLorient641"/>. The text is taken from <bibl>
-               <ptr target="bm:ContiRossini1927Inediti"/>
-               <citedRange unit="page">500-511</citedRange></bibl>.</note>
+                  <ptr target="bm:ContiRossini1927Inediti"/>
+                  <citedRange unit="page">500-511</citedRange>
+               </bibl> and <ref type="mss" corresp="BLorient641"/>. The text is taken from <bibl>
+                  <ptr target="bm:ContiRossini1927Inediti"/>
+                  <citedRange unit="page">500-511</citedRange>
+               </bibl>.</note>
             
             <div type="textpart" subtype="title" xml:lang="gez" xml:id="title">
                <label>Title</label>
                <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ፡ ገድል፡ ወስምዕ፡ ዘብፁዕ፡ ወቅዱስ፡ ስብስትያኖስ፡ ዘፈጸመ፡ ገድሎ፡ አመ፡ ፳ወ<supplied resp="DR" reason="undefined">፭</supplied>፡ ለወርኀ፡ ጥር።</ab>
             </div>
             
-            <div type="textpart" subtype="supplicationBeginning" xml:lang="gez" xml:id="supplicationBeginning">
+            <div type="textpart"
+                 subtype="supplicationBeginning"
+                 xml:lang="gez"
+                 xml:id="supplicationBeginning">
                <label>Supplication</label>
             </div>
             
             <div type="textpart" xml:lang="gez" subtype="mainText">
                <label>Main Text</label>
                
-               <div type="textpart" xml:lang="gez" subtype="incipit" xml:id="incipit">
+               <div type="textpart"
+                    xml:lang="gez"
+                    subtype="incipit"
+                    xml:id="incipit">
                   <label>Incipit</label>
-                  <ab>ወኮነ፡ ልደቱ፡ ለዝንቱ፡ ቅዱስ፡ በሀገረ፡ ናርቦና፡ ዘእም<choice resp="DR"><sic>ህ</sic><corr>ሀ</corr></choice>ገር፡ እምርት፡ እምአድባር፡ ኢጣርያ፡ ወተምህረ፡ መጻሕፍተ፡ በሀገረ፡ ሚላኖ።</ab>
+                  <ab>ወኮነ፡ ልደቱ፡ ለዝንቱ፡ ቅዱስ፡ በሀገረ፡ ናርቦና፡ ዘእም<choice resp="DR">
+                        <sic>ህ</sic>
+                        <corr>ሀ</corr>
+                     </choice>ገር፡ እምርት፡ እምአድባር፡ ኢጣርያ፡ ወተምህረ፡ መጻሕፍተ፡ በሀገረ፡ ሚላኖ።</ab>
                </div>
                
-               <div type="textpart" xml:lang="gez" subtype="explicit" xml:id="explicit">
+               <div type="textpart"
+                    xml:lang="gez"
+                    subtype="explicit"
+                    xml:id="explicit">
                   <label>Explicit</label>
                   <ab>ወኮነ፡ ዕረፍቱ፡ አመ፳ወ፭፡ ለወርኃ፡ ጥር፡ ወሎቱ፡ ያብዕሉ፡ በሀገረ፡ ሮሜ፡ ሰብእ፡ መሃይምናን፡ በፍሥሐ፡ ወበሐሤት፡ ወአዕርጎ፡ መሥዋዕት፡ ወበምሂረ፡ ነዳያን፡ እንዘ፡ ይትአመኑ፡ በጸሎቱ፡ ማሕያዊት፡ </ab>
                </div>
             </div>
             
-            <div type="textpart" xml:lang="gez" subtype="doxology" xml:id="doxology">
-            <label>Doxology</label>
-         </div>
+            <div type="textpart"
+                 xml:lang="gez"
+                 subtype="doxology"
+                 xml:id="doxology">
+               <label>Doxology</label>
+            </div>
             
-            <div type="textpart" xml:lang="gez" subtype="supplicationEnd" xml:id="supplicationEnd">
+            <div type="textpart"
+                 xml:lang="gez"
+                 subtype="supplicationEnd"
+                 xml:id="supplicationEnd">
                <label>Supplication</label>
             </div>
             
