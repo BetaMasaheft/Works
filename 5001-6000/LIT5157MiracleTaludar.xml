@@ -62,6 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2019-01-30">Created entity</change>
             <change who="AM" when="2019-04-17">added text</change>
+            <change who="AM" when="2019-08-05">added relation</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -75,8 +76,57 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </listBibl>
                 <listRelation>
                     <relation name="saws:formsPartOf"
-                         active="LIT5156MiracleConstruction"
-                         passive="LIT5157MiracleTaludar"/>
+                         active="LIT5157MiracleTaludar"
+                         passive="LIT2384Taamme"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5157MiracleTaludar"
+                                 passive="EMML6938">
+                          <desc>
+                             <locus corresp="EMML6938" target="#96r"/>
+                          </desc>
+                       </relation>
+                       <relation name="lawd:hasAttestation"
+                               active="LIT5157MiracleTaludar"
+                               passive="EMML7543">
+                        <desc>
+                           <locus corresp="EMML7543" target="#53r"/>
+                        </desc>
+                     </relation>
+                     <relation name="lawd:hasAttestation"
+                             active="LIT5157MiracleTaludar"
+                             passive="EMML2952">
+                      <desc>
+                         <locus corresp="EMML2952" target="#44r"/>
+                      </desc>
+                   </relation>
+                 <relation name="lawd:hasAttestation"
+                         active="LIT5157MiracleTaludar"
+                         passive="EMML2058">
+                  <desc>
+                     <locus corresp="EMML2058" target="#66r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                       active="LIT5157MiracleTaludar"
+                       passive="EMML642">
+                <desc>
+                   <locus corresp="EMML642" target="#80r"/>
+                </desc>
+             </relation>
+             <relation name="lawd:hasAttestation"
+                     active="LIT5157MiracleTaludar"
+                     passive="EMML3378">
+              <desc>
+                 <locus corresp="EMML3378" target="#117v"/>
+              </desc>
+           </relation>
+             <relation name="lawd:hasAttestation"
+                     active="LIT5157MiracleTaludar"
+                     passive="EMML22">
+              <desc>
+                 <locus corresp="EMML22" target="#43v, #152v"/>
+              </desc>
+           </relation>
                 </listRelation>
             </div>
             <div type="edition">
@@ -84,12 +134,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <note>This incipit is taken from <ref type="mss" corresp="EMML6938"/>.</note>
                     <ab>
                       ተአምሪሃ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> እንተ፡ ገብረቶ፡ በላዕለ፡ መሠርይት፡
-                      ጣውሉዳር፡ <choice resp="PRS6437Macomber">
-                     <corr>ወጣማር፡</corr>
-                     <sic>ጦማር፡</sic>
-                  </choice> መርዓታ፡ ለድምሳሴሆን፡ በጽንዐ፡ መዝራዕታ።
-                      ነገረ፡ ተአምሪሃ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> ዘነገረቶ፡ ለጢሞቴዎስ፣
-                      ሊቀ፡ ጳጳሳት፡ ዘእለስክንድርያ፣ ወልደ፡ ዲዮስቆሮስ፣ ወትቤ፤ ስማዕ፣ እንግርከ፡ ዘረከበነ፡ አመ፡ ናንሶሱ፡ ውስተ፡ ምድረ፡ ግብጽ።
+                      ጣውሉዳር፡ <choice><corr resp="PRS6437Macomber">ወጣማር፡</corr><sic>ጦማር፡</sic></choice> መርዓታ፡ ለድምሳሴሆን፡ በጽንዐ፡ መዝራዕታ።
+                      ነገረ፡ ተአምሪሃ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> ዘነገረቶ፡ ለጢሞቴዎስ፡
+                      ሊቀ፡ ጳጳሳት፡ ዘእለስክንድርያ፡ ወልደ፡ ዲዮስቆሮስ፡ ወትቤ፡ ስማዕ፡ እንግርከ፡ ዘረከበነ፡ አመ፡ ናንሶሱ፡ ውስተ፡ ምድረ፡ ግብጽ።
                     </ab>
                 </div>
             </div>
