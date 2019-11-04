@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Book of Ezekiel</title>
+            <title xml:id="t1">Book of Ezekiel (General record)</title>
             <title type="short">Hez.</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -41,6 +41,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </xi:include>
       </encodingDesc>
       <profileDesc>
+         <abstract><p>The Book of Ezekiel exists in two versions, the unrevised text <ref type="work" corresp="LIT5801EzekI"/> and
+            the revision <ref type="work" corresp="LIT5802EzekII"/>.</p></abstract>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
@@ -61,11 +63,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-02-09">Added keywords</change>
+         <change who="DR" when="2019-11-04">Added edition bibliography and abstract</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="bibliography">
+         <listBibl type="editions">
+            <bibl><ptr target="bm:Knibb2015Ezekiel"/></bibl>
+         </listBibl>         </div>
       </body>
    </text>
 </TEI>
