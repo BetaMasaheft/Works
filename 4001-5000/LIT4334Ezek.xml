@@ -7,13 +7,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:lang="en"
      xml:id="LIT4334Ezek"
      type="work">
-   
-   <!-- related to LIT1373Bookof -->
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Account of Ezekiel</title>
-
+            <title xml:id="t1" xml:lang="en">Life of Ezekiel</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -32,13 +29,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
-         <sourceDesc>
-            
-            <listWit>
-               <witness corresp="BLorient501#ms_i4.1"/> 
-
-            </listWit>
-         </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -54,26 +44,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <abstract>
-            <p/>
+            <p>The Life of Ezekiel belongs to the Lives of the Prophets, originally Jewish writings probably composed in Greek, which have then been adopted by the Church. The 
+            Ethiopic text has been translated from the Greek.</p>
          </abstract>
         <textClass>
            <keywords>
-
-                 <term key="Bible"/>
-              
-
-              
+              <term key="Apocrypha"/>
+<term key="Translation"/>
+              <term key="ChristianLiterature"/>
            </keywords>
         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="ES" when="2017-02-01">Created record</change>
+         <change who="DR" when="2019-11-04">Added bibliography and relation and updated keywords and title</change>
       </revisionDesc>
       
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <div type="bibliography">
+           <listBibl type="editions">
+              <bibl><ptr target="bm:Knibb1980LivesProphets1"/></bibl>
+           </listBibl>
+        </div>
+         <listRelation>
+            <relation name="ecrm:P129_is_about" active="LIT4334Ezek" passive="PRS3942Ezekiel"/>
+         </listRelation>
       </body>
    </text>
 </TEI>
