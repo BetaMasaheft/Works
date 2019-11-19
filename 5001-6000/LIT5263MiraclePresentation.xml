@@ -62,6 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2019-03-08">Created entity</change>
             <change who="AM" when="2019-05-22">added text</change>
+            <change who="AM" when="2019-11-11">added relation</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -100,21 +101,64 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:isRelatedTo"
                          active="LIT5263MiraclePresentation"
                          passive="LIT5262MiracleBirth"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5263MiraclePresentation"
+                                 passive="EMML1581">
+                          <desc>
+                             <locus corresp="EMML1581" target="#35r"/>
+                          </desc>
+                       </relation>
+                       <relation name="lawd:hasAttestation"
+                               active="LIT5263MiraclePresentation"
+                               passive="EMML3378">
+                        <desc>
+                           <locus corresp="EMML3378" target="#53r"/>
+                        </desc>
+                     </relation>
+                     <relation name="lawd:hasAttestation"
+                             active="LIT5263MiraclePresentation"
+                             passive="EMML683">
+                      <desc>
+                         <locus corresp="EMML683" target="#35v"/>
+                      </desc>
+                   </relation>
+                   <relation name="lawd:hasAttestation"
+                           active="LIT5263MiraclePresentation"
+                           passive="EMML760">
+                    <desc>
+                       <locus corresp="EMML760" target="#60r"/>
+                    </desc>
+                 </relation>
+                 <relation name="lawd:hasAttestation"
+                         active="LIT5263MiraclePresentation"
+                         passive="EMML3805">
+                  <desc>
+                     <locus corresp="EMML3805" target="#154v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                       active="LIT5263MiraclePresentation"
+                       passive="EMML682">
+                <desc>
+                   <locus corresp="EMML682" target="#30r"/>
+                </desc>
+             </relation>
+             
                 </listRelation>
             </div>
             <div type="edition">
                 <div type="textpart" subtype="incipit" xml:lang="gez">
                   <note>This incipit is taken from <ref type="mss" corresp="EMML3378"/>.</note>
                     <ab>
-                      ወነበሩ፡ ኢያቄም፡ ወሐና፡ እንዘ፡ የሐፅኑ፡ ወለቶሙ፡ ማርያም፡ ፫፡ ዓመተ፣ እንዘ፡ ይሴብሕዎ፡ ወየአኵትዎ፡ ለእግዚአብሔር።
+                      ወነበሩ፡ ኢያቄም፡ ወሐና፡ እንዘ፡ የሐፅኑ፡ ወለቶሙ፡ ማርያም፡ ፫፡ ዓመተ፡ እንዘ፡ ይሴብሕዎ፡ ወየአኵትዎ፡ ለእግዚአብሔር።
                     </ab>
                  </div>
                  <div type="textpart" subtype="incipit" xml:lang="gez">
                    <note>This incipit is taken from <ref type="mss" corresp="VLVE298"/>.</note>
                      <ab>
                        ወካዕበ፡ ንነግረክሙ፡ ቅድስናሃ፡ ወንጽሕናሃ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
-                       ዘከመ፡ አብእዋ፡ ውስተ፡ ቤተ፡ መቅደስ፣ ሶበ፡ ፈጸመ፡ ሀፂነ፡ <choice resp="PRS6437Macomber">
-                     <corr>፫፡</corr>
+                       ዘከመ፡ አብእዋ፡ ውስተ፡ ቤተ፡ መቅደስ፡ ሶበ፡ ፈጸመ፡ ሀፂነ፡ <choice>
+                     <corr resp="PRS6437Macomber">፫፡</corr>
                      <sic> </sic>
                   </choice> ዓመተ።
                      </ab>

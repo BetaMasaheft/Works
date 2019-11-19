@@ -62,6 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2019-03-08">Created entity</change>
             <change who="AM" when="2019-05-22">added text</change>
+            <change who="AM" when="2019-11-11">added relation</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -100,13 +101,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:isRelatedTo"
                          active="LIT5262MiracleBirth"
                          passive="LIT5263MiraclePresentation"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5262MiracleBirth"
+                                 passive="EMML1799">
+                          <desc>
+                             <locus corresp="EMML1799" target="#22v"/>
+                          </desc>
+                       </relation>
+                       <relation name="lawd:hasAttestation"
+                               active="LIT5262MiracleBirth"
+                               passive="EMML22">
+                        <desc>
+                           <locus corresp="EMML22" target="#127r"/>
+                        </desc>
+                     </relation>
                 </listRelation>
             </div>
             <div type="edition">
                 <div type="textpart" subtype="incipit" xml:lang="gez">
                   <note>This incipit is taken from <ref type="mss" corresp="EMML1799"/>.</note>
                     <ab>
-                      ንግባእኬ፡ ሀበ፡ ጥንተ፡ ነገር። ወሶበ፡ ተፈጸመ፡ መዋዕለ፡ ፅነሳ፣ ወለደት፡ ወለተ፡ አመ፡ ፩፡ ለግንቦት፣
+                      ንግባእኬ፡ ሀበ፡ ጥንተ፡ ነገር። ወሶበ፡ ተፈጸመ፡ መዋዕለ፡ ፅነሳ፡ ወለደት፡ ወለተ፡ አመ፡ ፩፡ ለግንቦት፡
                       እንዘ፡ ትበርህ፡ እምነ፡ ፀሐይ።
                     </ab>
                  </div>
