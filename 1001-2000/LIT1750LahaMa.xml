@@ -12,7 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Lāḥā Māryām</title>
             <title xml:id="t2">Lāḥā Dǝngǝl</title>
-            <author>Cyriacus of Behnesa</author>
+            <author ref="PRS3251Cyriacus">Cyriacus of Behnesa</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -53,11 +53,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2019-11-21" who="ES">added explicit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" subtype="incipit"></div>
+            <div type="textpart" subtype="explicit subscriptio" xml:id="colophon">
+               <ab>ዛቲ፡ መጽሐፍ፡ ዘተርጐማ፡ ብፁዕ፡ ወርቱዐ፡ ሃይማኖት፡ አቡነ፡ አባ፡ ሰላማ፡ ይጽሐፍ፡ ስሞ፡ ውስተ፡ መጽሐፈ፡
+               ሕይወት፡ በመንግሥተ፡ ሰማያት፡ ምስለ፡ ጸሐፊሃ፡ ወአጽሐፊሃ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
+               <note>Embedded colophon on
+                  the translation of the homily by <persName ref="PRS8387SalamaI">ʾabbā Salāma</persName>. </note>
+               </div>
+         </div>
+         <listRelation><relation name="lawd:hasAttestation" active="LIT1750LahaMa#colophon" passive="ESgmg001"></relation>
+            <relation name="saws:isAttributedToAuthor" active="LIT1750LahaMa" passive="PRS3251Cyriacus"></relation>
+            <relation name="betmas:isAuthorOfEthiopicTranslation" active="LIT1750LahaMa" passive="PRS8387SalamaI"></relation>
+         </listRelation>
       </body>
    </text>
 </TEI>
