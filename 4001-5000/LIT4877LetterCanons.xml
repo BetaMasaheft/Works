@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">3 pages of letter + 7 pages of canons</title>
+                <title xml:lang="en" xml:id="t1">Letter to Carpianus and Eusebian Canons: 3 pages of letter + 7 pages of canons</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -62,12 +62,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2018-01-11">Created entity</change>
+            <change who="DR" when="2019-11-25">Corrected title and added relations</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography"/>
-         <!---->
+         <div type="bibliography">
+            <listRelation>
+                <relation name="saws:isVersionOf"
+                    active="LIT4877LetterCanons"
+                    passive="LIT1349EpistlEusebius"/>
+                <relation name="saws:isAttributedToAuthor"
+                    active="LIT4877LetterCanons"
+                    passive="PRS3912Eusebius"/>
+                <relation name="ecrm:CLP46i_may_form_part_of"
+                    active="LIT4877LetterCanons"
+                    passive="LIT1560Gospel#IntroductionGospels"/>
+            </listRelation>
+         </div>
         </body>
     </text>
 </TEI>
