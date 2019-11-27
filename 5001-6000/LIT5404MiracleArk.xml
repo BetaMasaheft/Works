@@ -65,6 +65,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2019-03-19">Created entity</change>
             <change who="AM" when="2019-06-05">added text</change>
+            <change who="AM" when="2019-11-26">added relation</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -80,21 +81,62 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:formsPartOf"
                          active="LIT5404MiracleArk"
                          passive="LIT2384Taamme"/>
+                         <relation name="saws:isRelatedTo"
+                              active="LIT5404MiracleArk"
+                              passive="LIT5408MiracleEli"/>
+                         <relation name="saws:isRelatedTo"
+                              active="LIT5404MiracleArk"
+                              passive="LIT5409MiracleAzotus"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5404MiracleArk"
+                                 passive="EMML834">
+                          <desc>
+                             <locus corresp="EMML834" target="#182v"/>
+                          </desc>
+                       </relation>
+                     <relation name="lawd:hasAttestation"
+                             active="LIT5404MiracleArk"
+                             passive="EMML642">
+                      <desc>
+                         <locus corresp="EMML642" target="#71v"/>
+                      </desc>
+                   </relation>
+                   <relation name="lawd:hasAttestation"
+                           active="LIT5404MiracleArk"
+                           passive="EMML22">
+                    <desc>
+                       <locus corresp="EMML22" target="#160v"/>
+                    </desc>
+                 </relation>
+             <relation name="lawd:hasAttestation"
+                     active="LIT5404MiracleArk"
+                     passive="EMML683">
+              <desc>
+                 <locus corresp="EMML683" target="#146v"/>
+              </desc>
+           </relation>
+           <relation name="lawd:hasAttestation"
+                   active="LIT5404MiracleArk"
+                   passive="EMML682">
+            <desc>
+               <locus corresp="EMML682" target="#61r"/>
+            </desc>
+         </relation>
                 </listRelation>
             </div>
             <div type="edition">
                 <div type="textpart" subtype="incipit" xml:lang="gez">
                   <note>This incipit is taken from <ref type="mss" corresp="EMML834"/>.</note>
                     <ab>
-                      ወአመ፡ ሀለወት፡ ጽዮን፡ ታቦተ፡ ሕጉ፡ ለእግዚአብሔር፣ ዘትከውኖሙ፡ ኀይለ፡ ለእስራኤል፡ ወተሐውር፡ ቅድሜሆሙ።
+                      ወአመ፡ ሀለወት፡ ጽዮን፡ ታቦተ፡ ሕጉ፡ ለእግዚአብሔር፡ ዘትከውኖሙ፡ ኀይለ፡ ለእስራኤል፡ ወተሐውር፡ ቅድሜሆሙ።
                     </ab>
                  </div>
                   <div type="textpart" subtype="incipit" xml:lang="gez">
                     <note>This incipit is taken from <ref type="mss" corresp="EMML642"/>.</note>
                       <ab>
                         ንግባዕኬ፡ ኀበ፡ ኅዳገ፡ ነገር፡ ዘጽኑሕ፡ ለነ፡ በእንተ፡ ዜናሃ፡ ለጽዮን፣
-                        ዘገብረት፡ ተአምረ፡ ወመንክረ፡ አመ፡ ኮነ፡ <choice resp="PRS6437Macomber">
-                     <corr>፬፻፡</corr>
+                        ዘገብረት፡ ተአምረ፡ ወመንክረ፡ አመ፡ ኮነ፡ <choice>
+                     <corr resp="PRS6437Macomber">፬፻፡</corr>
                      <sic>፲፻፡</sic>
                   </choice>
                         ዓመት፡ እምአመ፡ ወጽኡ፡ እምግብጽ፡ ደቂቀ፡ እስራኤል፡ በመዋዕለ፡ ትንቢቱ፡ ለሳሙኤል።

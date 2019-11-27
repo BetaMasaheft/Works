@@ -62,6 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2019-03-20">Created entity</change>
             <change who="AM" when="2019-06-05">added text</change>
+            <change who="AM" when="2019-11-26">added relation</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -83,6 +84,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:isRelatedTo"
                          active="LIT5408MiracleEli"
                          passive="LIT5409MiracleAzotus"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5408MiracleEli"
+                                 passive="EMML683">
+                          <desc>
+                             <locus corresp="EMML683" target="#146v"/>
+                          </desc>
+                       </relation>
+                       <relation name="lawd:hasAttestation"
+                               active="LIT5408MiracleEli"
+                               passive="EMML682">
+                        <desc>
+                           <locus corresp="EMML682" target="#61v"/>
+                        </desc>
+                     </relation>
                 </listRelation>
             </div>
             <div type="edition">

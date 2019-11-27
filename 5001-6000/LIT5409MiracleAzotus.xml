@@ -62,6 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2019-03-20">Created entity</change>
             <change who="AM" when="2019-06-05">added text</change>
+            <change who="AM" when="2019-11-26">added relation</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -83,14 +84,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:isRelatedTo"
                          active="LIT5409MiracleAzotus"
                          passive="LIT5404MiracleArk"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5409MiracleAzotus"
+                                 passive="EMML22">
+                          <desc>
+                             <locus corresp="EMML22" target="#160v"/>
+                          </desc>
+                       </relation>
                 </listRelation>
             </div>
             <div type="edition">
                 <div type="textpart" subtype="incipit" xml:lang="gez">
                   <note>This incipit is taken from <ref type="mss" corresp="EMML22"/>.</note>
                     <ab>
-                      ሕዝበ፡ ክርስቲያን፣ ንንግርክሙ፡ ዜናሃ፡ ለታቦተ፡ ሕጉ፡ ለልዑል፡ ዘተረክበ፡ እምመጽሐፈ፡ ነገሥት።
-                      ወነሥአዋ፡ ኤሎፍሊ፡ ለታቦተ፡ እግዚአብሔር፣ ሥዮን፣ እምኣቤኔዜር፣ ወወሰድዋ፡ ውስተ፡ አዛጦን።
+                      ሕዝበ፡ ክርስቲያን፡ ንንግርክሙ፡ ዜናሃ፡ ለታቦተ፡ ሕጉ፡ ለልዑል፡ ዘተረክበ፡ እምመጽሐፈ፡ ነገሥት።
+                      ወነሥአዋ፡ ኤሎፍሊ፡ ለታቦተ፡ እግዚአብሔር፡ ጽዮን፡ እምኣቤኔዜር፡ ወወሰድዋ፡ ውስተ፡ አዛጦን።
                     </ab>
                  </div>
              </div>

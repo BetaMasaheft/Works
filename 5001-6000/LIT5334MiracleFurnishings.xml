@@ -63,6 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2019-03-14">Created entity</change>
             <change who="AM" when="2019-05-28">added text</change>
+            <change who="AM" when="2019-11-20">added relation</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -78,13 +79,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:formsPartOf"
                          active="LIT5334MiracleFurnishings"
                          passive="LIT2384Taamme"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5334MiracleFurnishings"
+                                 passive="EMML3872">
+                          <desc>
+                             <locus corresp="EMML3872" target="#90r"/>
+                          </desc>
+                       </relation>
                 </listRelation>
             </div>
             <div type="edition">
                 <div type="textpart" subtype="incipit" xml:lang="gez">
                   <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
                     <ab>
-                      ወሶበ፡ ትጽሕፈ፡ ዝተአምሪሃ፡ ዘገብረት፣ በፀራ፡ መቅሠፍተ፡ ወበፍቁራኒሃ፡ ትፍሥሕተ፣
+                      ወሶበ፡ ትጽሕፈ፡ ዝተአምሪሃ፡ ዘገብረት፡ በፀራ፡ መቅሠፍተ፡ ወበፍቁራኒሃ፡ ትፍሥሕተ፡
                       በበአሐዱ፡ እምኔሆሙ፡ አኅበርክዎ፡ በአሐዱ፡ ርእሰ፡ መጽሐፍ፡ ወበዋሕድ፡ ተፍጻሚተ፡ ምዕራፍ፡ በእንተ፡ ፍቅረ፡ ተአምሪሃ፡ ለእግዝእትነ፡ ማርያም።
                       ጸሎታ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
                      </ab>

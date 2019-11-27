@@ -63,6 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2019-03-18">Created entity</change>
             <change who="AM" when="2019-06-04">added text</change>
+            <change who="AM" when="2019-11-26">added relation</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -85,17 +86,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:formsPartOf"
                          active="LIT5374MiracleTribute"
                          passive="LIT2384Taamme"/>
+                              <relation name="lawd:hasAttestation"
+                                      active="LIT5374MiracleTribute"
+                                      passive="EMML2060">
+                               <desc>
+                                  <locus corresp="EMML2060" target="#101r"/>
+                               </desc>
+                            </relation>
+
                 </listRelation>
             </div>
             <div type="edition">
                 <div type="textpart" subtype="incipit" xml:lang="gez">
                   <note>This incipit is taken from <ref type="mss" corresp="EMML2060"/>.</note>
                     <ab>
-                      ዘገብረት፡ ይእዜ፡ በደብረ፡ ቍስቋም፡ <choice resp="PRS6437Macomber">
-                     <corr>በዘመነ፡</corr>
+                      ዘገብረት፡ ይእዜ፡ በደብረ፡ ቍስቋም፡ <choice>
+                     <corr resp="PRS6437Macomber">በዘመነ፡</corr>
                      <sic>በዘበነ፡</sic>
                   </choice> ስልጣነ፡ ምስት፡ ቃይታባይ።
-                      ወበአሐቲ፡ እምመዋዕል፡ ወፅአ፡ መቋንን፡ ዘእምታሕቴሁ፡ ለንጉሥ፣ ከመ፡ ይዑድ፡ በሀገረ፡ ጽዒድ፡ ያስተገብእ፡ ጸብሐተ፡ ለንጉሥ።
+                      ወበአሐቲ፡ እምመዋዕል፡ ወፅአ፡ መኰንን፡ ዘእምታሕቴሁ፡ ለንጉሥ፡ ከመ፡ ይዑድ፡ በሀገረ፡ ፅዒድ፡ ያስተገብእ፡ ጸብሐተ፡ ለንጉሥ።
                     </ab>
                 </div>
             </div>

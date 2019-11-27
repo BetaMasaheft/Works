@@ -62,6 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2019-03-19">Created entity</change>
             <change who="AM" when="2019-06-05">added text</change>
+            <change who="AM" when="2019-11-26">added relation</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -77,13 +78,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:formsPartOf"
                          active="LIT5403MiracleChariot"
                          passive="LIT2384Taamme"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5403MiracleChariot"
+                                 passive="EMML2999">
+                          <desc>
+                             <locus corresp="EMML2999" target="#182v"/>
+                          </desc>
+                       </relation>
+                       <relation name="lawd:hasAttestation"
+                               active="LIT5403MiracleChariot"
+                               passive="EMML3014">
+                        <desc>
+                           <locus corresp="EMML3014" target="#154r"/>
+                        </desc>
+                     </relation>
                 </listRelation>
             </div>
             <div type="edition">
                 <div type="textpart" subtype="incipit" xml:lang="gez">
                   <note>This incipit is taken from <ref type="mss" corresp="EMML2999"/>.</note>
                     <ab>
-                      ወሀሎ፡ አሐዱ፡ ደብር፡ ዘመነኮሳት፣ ወያፈቅርዋ፡ ለእግዝእትነ፡ ጥቀ፡ ፈድፋደ፣
+                      ወሀሎ፡ አሐዱ፡ ደብር፡ ዘመነኮሳት፡ ወያፈቅርዋ፡ ለእግዝእትነ፡ ጥቀ፡ ፈድፋደ፡
                       ወይገብሩ፡ ተዝካራ፡ በዐቢይ፡ ተጠንቅቆ፡ አመ፡ ፳፡ ወ፩፡ ለወርኃ፡ ጥር።
                     </ab>
                  </div>
