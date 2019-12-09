@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="LIT5426MiracleDogs"
@@ -61,6 +61,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2019-03-20">Created entity</change>
+            <change who="AM" when="2019-12-02">added relation</change>
+            <change who="AM" when="2019-12-02">added incipit by Jeremy Brown</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -76,7 +78,65 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:formsPartOf"
                          active="LIT5426MiracleDogs"
                          passive="LIT2384Taamme"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5426MiracleDogs"
+                                 passive="EMML3031">
+                          <desc>
+                             <locus corresp="EMML3031" target="#179v"/>
+                          </desc>
+                       </relation>
+                       <relation name="lawd:hasAttestation"
+                               active="LIT5426MiracleDogs"
+                               passive="EMML2461">
+                        <desc>
+                           <locus corresp="EMML2461" target="#223v"/>
+                        </desc>
+                     </relation>
+                     <relation name="lawd:hasAttestation"
+                             active="LIT5426MiracleDogs"
+                             passive="EMML2563">
+                      <desc>
+                         <locus corresp="EMML2563" target="#148v"/>
+                      </desc>
+                   </relation>
+             <relation name="lawd:hasAttestation"
+                     active="LIT5426MiracleDogs"
+                     passive="EMML296">
+              <desc>
+                 <locus corresp="EMML296" target="#81v"/>
+              </desc>
+           </relation>
+           <relation name="lawd:hasAttestation"
+                   active="LIT5426MiracleDogs"
+                   passive="EMML142">
+            <desc>
+               <locus corresp="EMML142" target="#110v"/>
+            </desc>
+         </relation>
+         <relation name="lawd:hasAttestation"
+                 active="LIT5426MiracleDogs"
+                 passive="EMML730">
+          <desc>
+             <locus corresp="EMML730" target="#290r"/>
+          </desc>
+       </relation>
+       <relation name="lawd:hasAttestation"
+               active="LIT5426MiracleDogs"
+               passive="EMML168">
+        <desc>
+           <locus corresp="EMML168" target="#61v"/>
+        </desc>
+     </relation>
                 </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <note>This incipit is taken from <ref type="mss" corresp="EMML3031"/>.</note>
+                    <ab>
+                      እንዘ፡ ትወርድ፡ እግዝእትነ፡ ማርያም፡ ውስተ፡ ምድረ፡ ግብጽ፡ ኀበ፡ ኃደረት፡ ገዳመ፡ ምስለ፡ ፍቁር፡ ወልዳ፡ ምስለ፡ ዮሴፍ፡ ወሰሎሜ፡ መጽአ፡ ነአዌ፡ ዓረዊት፡ ምስለ፡ አክልብቲሁ፡
+                      ወመጽኡ፡ አክልብት፡ እንዘ፡ ይሴብሕዋ፡ ወይብልዋ፡ ስብሐት፡ ለኪ፡ እመ፡ እግዚአ፡ ኵሉ፡ ፍጥረት።
+                    </ab>
+                </div>
             </div>
         </body>
     </text>

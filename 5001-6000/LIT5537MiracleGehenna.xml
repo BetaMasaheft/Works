@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="LIT5537MiracleGehenna"
@@ -61,6 +61,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2019-04-03">Created entity</change>
+            <change who="AM" when="2019-12-04">added relation</change>
+            <change who="AM" when="2019-12-04">added incipit by Jeremy Brown</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -79,7 +81,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:isRelatedTo"
                          active="LIT5537MiracleGehenna"
                          passive="LIT5536MiracleBread"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5537MiracleGehenna"
+                                 passive="EMML329">
+                          <desc>
+                             <locus corresp="EMML329" target="#163r"/>
+                          </desc>
+                       </relation>
                 </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <note>This incipit is taken from <ref type="mss" corresp="EMML329"/>.</note>
+                    <ab>
+                      ወካዕበ፡ ትቤሎሙ፡ እግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> ለእለ፡ ተንሥኡ፡ እምምውታን፡ እፎ፡ ነበርክሙ፡ ውስተ፡ ገሃነም።
+                    </ab>
+                </div>
             </div>
         </body>
     </text>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="LIT5502MiraclePregnancy"
@@ -61,6 +61,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2019-04-02">Created entity</change>
+            <change who="AM" when="2019-12-04">added relation</change>
+            <change who="AM" when="2019-12-04">added incipit by Jeremy Brown</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -76,7 +78,67 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:formsPartOf"
                          active="LIT5502MiraclePregnancy"
                          passive="LIT2384Taamme"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5502MiraclePregnancy"
+                                 passive="EMML839">
+                          <desc>
+                             <locus corresp="EMML839" target="#22v"/>
+                          </desc>
+                       </relation>
+                       <relation name="lawd:hasAttestation"
+                               active="LIT5502MiraclePregnancy"
+                               passive="EMML2800">
+                        <desc>
+                           <locus corresp="EMML2800" target="#37v"/>
+                        </desc>
+                     </relation>
+                     <relation name="lawd:hasAttestation"
+                             active="LIT5502MiraclePregnancy"
+                             passive="EMML3378">
+                      <desc>
+                         <locus corresp="EMML3378" target="#40r"/>
+                      </desc>
+                   </relation>
+                     <relation name="lawd:hasAttestation"
+                             active="LIT5502MiraclePregnancy"
+                             passive="EMML76">
+                      <desc>
+                         <locus corresp="EMML76" target="#149r"/>
+                      </desc>
+                   </relation>
+                   <relation name="lawd:hasAttestation"
+                           active="LIT5502MiraclePregnancy"
+                           passive="EMML22">
+                    <desc>
+                       <locus corresp="EMML22" target="#127v"/>
+                    </desc>
+                 </relation>
+             <relation name="lawd:hasAttestation"
+                     active="LIT5502MiraclePregnancy"
+                     passive="EMML730">
+              <desc>
+                 <locus corresp="EMML730" target="#44r"/>
+              </desc>
+           </relation>
+           <relation name="lawd:hasAttestation"
+                   active="LIT5502MiraclePregnancy"
+                   passive="EMML1156">
+            <desc>
+               <locus corresp="EMML1156" target="#101r"/>
+            </desc>
+         </relation>
                 </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <note>This incipit is taken from <ref type="mss" corresp="EMML839"/>.</note>
+                    <ab>
+                      ወይእዜኒ፡ ንነግረክሙ፡ ከመ፡ ዘኮነ፡ ለእግዝእትነ፡ ማርያም፡ ሶበ፡ ኃደረ፡ ውስቴታ፡ ቃለ፡
+                      መለኮት፡ ወእንዘ፡ ትትፌሣሕ፡ ወትትሐሠይ፡ በጸጋ፡ እግዚአብሔር፡ ወመንፈስ፡ ቅዱስ፡ መልዓ፡
+                      ውስተ፡ ኵለ፡ አባላ። ወእምድኅሬሁ፡ ተዓውቀ፡ ፅንሳ፡ ወሰምዑ፡ ሕዝብ፡ ወሰብአ፡ ቤተ፡
+                      መቅደስ፡ ወኃዘኑ፡ ወተከዙ።
+                    </ab>
+                </div>
             </div>
         </body>
     </text>

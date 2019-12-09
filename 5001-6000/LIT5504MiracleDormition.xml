@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="LIT5504MiracleDormition"
@@ -61,6 +61,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2019-04-02">Created entity</change>
+            <change who="AM" when="2019-12-04">added relation</change>
+            <change who="AM" when="2019-12-04">added incipit by Jeremy Brown</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -76,7 +78,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:formsPartOf"
                          active="LIT5504MiracleDormition"
                          passive="LIT2384Taamme"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5504MiracleDormition"
+                                 passive="EMML3378">
+                          <desc>
+                             <locus corresp="EMML3378" target="#68r"/>
+                          </desc>
+                       </relation>
+                       <relation name="lawd:hasAttestation"
+                               active="LIT5504MiracleDormition"
+                               passive="EMML3805">
+                        <desc>
+                           <locus corresp="EMML3805" target="#172r"/>
+                        </desc>
+                     </relation>
                 </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <note>This incipit is taken from <ref type="mss" corresp="EMML3378"/>.</note>
+                    <ab>
+                      ወአመ፡ ዕረፍታ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> ተጋብኡ፡ ኵሎሙ፡ ሐዋርያት፡ እለ፡ ተዘርዉ፡ ውስተ፡
+                      ኵሉ፡ በሐውርት፡ ዘእንበለ፡ ቶማስ፡ ባሕቲቱ፡ ወእለኒ፡ እምሐዋርያት፡ ዘሞቱ፡ ተንሥኡ፡ ወመጽኡ፡ ወአኮ፡ በሥምረተ፡ ርእሶሙ፡ ዘተጋብኡ፡ አላ፡ ሶበ፡ ፈቀደት፡ እግዝእትነ።
+                    </ab>
+                </div>
             </div>
         </body>
     </text>

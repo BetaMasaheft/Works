@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="LIT5425MiracleMosque"
@@ -61,6 +61,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2019-03-20">Created entity</change>
+            <change who="AM" when="2019-12-02">added relation</change>
+            <change who="AM" when="2019-12-02">added incipit by Jeremy Brown</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -76,7 +78,58 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:formsPartOf"
                          active="LIT5425MiracleMosque"
                          passive="LIT2384Taamme"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5425MiracleMosque"
+                                 passive="EMML2968">
+                          <desc>
+                             <locus corresp="EMML2968" target="#116r"/>
+                          </desc>
+                       </relation>
+                       <relation name="lawd:hasAttestation"
+                               active="LIT5425MiracleMosque"
+                               passive="EMML1965">
+                        <desc>
+                           <locus corresp="EMML1965" target="#20r"/>
+                        </desc>
+                     </relation>
+                     <relation name="lawd:hasAttestation"
+                             active="LIT5425MiracleMosque"
+                             passive="EMML296">
+                      <desc>
+                         <locus corresp="EMML296" target="#85v"/>
+                      </desc>
+                   </relation>
+             <relation name="lawd:hasAttestation"
+                     active="LIT5425MiracleMosque"
+                     passive="EMML22">
+              <desc>
+                 <locus corresp="EMML22" target="#162v"/>
+              </desc>
+           </relation>
+           <relation name="lawd:hasAttestation"
+                   active="LIT5425MiracleMosque"
+                   passive="EMML2913">
+            <desc>
+               <locus corresp="EMML2913" target="#66r"/>
+            </desc>
+         </relation>
+         <relation name="lawd:hasAttestation"
+                 active="LIT5425MiracleMosque"
+                 passive="EMML1606">
+          <desc>
+             <locus corresp="EMML1606" target="#164v"/>
+          </desc>
+       </relation>
                 </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <note>This incipit is taken from <ref type="mss" corresp="EMML2968"/>.</note>
+                    <ab>
+                      ወሀለዉ፡ ፫፡ መነኮሳት፡ ቀሳውስት፡ በሀገረ፡ ጥልጥልያ፡ ዘያፈቅርዋ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> ወሖሩ፡
+                      እምይእቲ፡ ሀገር፡ መጠነ፡ ፲፡ ምህዋረ፡ ዕለት፡ ወረከቡ፡ ምስጋዶሙ፡ ለአረሚ። 
+                    </ab>
+                </div>
             </div>
         </body>
     </text>

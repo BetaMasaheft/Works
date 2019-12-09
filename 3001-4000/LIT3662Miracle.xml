@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -50,7 +50,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
-               <term key="Apocrypha"/> 
+               <term key="Apocrypha"/>
                <term key="Miracle"/>
                <term key="Hagiography"/>
             </keywords>
@@ -60,6 +60,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords</change>
          <change who="DR" when="2018-11-26">Added keyword, title and Macomber reference</change>
+         <change who="AM" when="2019-12-02">added relation</change>
+         <change who="AM" when="2019-12-02">added incipit by Jeremy Brown</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -75,7 +77,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <relation name="saws:formsPartOf"
                          active="LIT3662Miracle"
                          passive="LIT2384Taamme"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT3662Miracle"
+                                 passive="EMML2968">
+                          <desc>
+                             <locus corresp="EMML2968" target="#114r"/>
+                          </desc>
+                       </relation>
+                       <relation name="lawd:hasAttestation"
+                               active="LIT3662Miracle"
+                               passive="EMML22">
+                        <desc>
+                           <locus corresp="EMML22" target="#97r"/>
+                        </desc>
+                     </relation>
+                     <relation name="lawd:hasAttestation"
+                             active="LIT3662Miracle"
+                             passive="EMML453">
+                      <desc>
+                         <locus corresp="EMML453" target="#75r"/>
+                      </desc>
+                   </relation>
             </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML2968"/>.</note>
+                 <ab>
+                   ወሀለወት፡ አሐቲ፡ ብእሲት፡ ዘታፈቅራ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> ወትፈርሆ፡ ለእግዚአብሔር፡ ወምታሰ፡
+                   እኩይ፡ ጥቀ፡ ወነዳይት፡ ይእቲ፡ በእሲት። ወሶበ፡ አጽንዓታ፡ ንዴት፡ ቦአት፡ ውስተ፡ አሐዱ፡ መኰንን፡ ወኮነት፡ ሐፃኒተ።
+                 </ab>
+             </div>
          </div>
       </body>
    </text>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="LIT5540MiracleSabela"
@@ -61,6 +61,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2019-04-03">Created entity</change>
+            <change who="AM" when="2019-12-04">added relation</change>
+            <change who="AM" when="2019-12-04">added incipit by Jeremy Brown</change>
+            <change who="AM" when="2019-12-04">correction by Jeremy Brown</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -76,7 +79,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:formsPartOf"
                          active="LIT5540MiracleSabela"
                          passive="LIT2384Taamme"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5540MiracleSabela"
+                                 passive="EMML1156">
+                          <desc>
+                             <locus corresp="EMML1156" target="#82r"/>
+                          </desc>
+                       </relation>
+                       <relation name="lawd:hasAttestation"
+                               active="LIT5540MiracleSabela"
+                               passive="EMML329">
+                        <desc>
+                           <locus corresp="EMML329" target="#40r"/>
+                        </desc>
+                     </relation>
                 </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <note>This incipit is taken from <ref type="mss" corresp="EMML1156"/>.</note>
+                    <ab>
+                      ወሀለወት፡ አሐቲ፡ መበለት፡ በደወለ፡ ቂሳርያ፡ ዘስማ፡ ሳቤላ፡ ዘትፈርሆ፡ ለእግዚአብሔር፡
+                      ወታፈቅራ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
+                      ወትገብር፡ በዓላ፡ <choice><corr>ለለወርኁ፡</corr><sic resp="PRS6437Macomber">ለልልወርኁ፡</sic></choice>
+                      ወትሁብ፡ ጸሪቀ፡ እምዘባ።
+                    </ab>
+                </div>
             </div>
         </body>
     </text>
