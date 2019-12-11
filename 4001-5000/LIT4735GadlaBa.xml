@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="work"
@@ -65,14 +65,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </keywords>
          </textClass>
          <abstract>
-            <p>The acts of <persName ref="PRS2536BatraGe"/> are only preserved as three miracles within the 
-            <ref type="work" corresp="LIT2384Taamme"/>: <ref type="work" corresp="LIT5255MiracleBatergela1"/>,<ref type="work" corresp="LIT5256MiracleBatergela2"/> 
+            <p>The acts of <persName ref="PRS2536BatraGe"/> are only preserved as three miracles within the
+            <ref type="work" corresp="LIT2384Taamme"/>: <ref type="work" corresp="LIT5255MiracleBatergela1"/>,<ref type="work" corresp="LIT5256MiracleBatergela2"/>
             and <ref type="work" corresp="LIT5257MiracleBatergela3"/>.</p>
          </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="MV" when="2017-10-20">Created text record</change>
          <change who="DR" when="2019-03-07">Added information from Macomber</change>
+         <change who="AM" when="2019-12-11">added relation</change>
+         <change who="AM" when="2019-12-11">added incipits by Jeremy Brown</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -91,7 +93,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:MacomberMiracles"/>
                   <citedRange unit="item">287-289</citedRange>
                </bibl>
-               <bibl> 
+               <bibl>
                   <ptr target="bm:Raineri2003Betragelamaryam"/>
                </bibl>
             </listBibl>
@@ -102,7 +104,94 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <relation name="saws:formsPartOf"
                          active="LIT4735GadlaBa"
                          passive="LIT2384Taamme"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT4735GadlaBa"
+                                 passive="EMML3872">
+                          <desc>
+                             <locus corresp="EMML3872" target="#164v, #167r, #168r"/>
+                          </desc>
+                       </relation>
+                       <relation name="lawd:hasAttestation"
+                               active="LIT4735GadlaBa"
+                               passive="EMML7543">
+                        <desc>
+                           <locus corresp="EMML7543" target="#157r, #158v, #159r"/>
+                        </desc>
+                     </relation>
+                     <relation name="lawd:hasAttestation"
+                             active="LIT4735GadlaBa"
+                             passive="EMML2058">
+                      <desc>
+                         <locus corresp="EMML2058" target="#175v, #177r, #177v"/>
+                      </desc>
+                   </relation>
+                   <relation name="lawd:hasAttestation"
+                           active="LIT4735GadlaBa"
+                           passive="EMML876">
+                    <desc>
+                       <locus corresp="EMML876" target="#193r, #195r"/>
+                    </desc>
+                 </relation>
+             <relation name="lawd:hasAttestation"
+                     active="LIT4735GadlaBa"
+                     passive="EMML22">
+              <desc>
+                 <locus corresp="EMML22" target="#146r"/>
+              </desc>
+           </relation>
+           <relation name="lawd:hasAttestation"
+                   active="LIT4735GadlaBa"
+                   passive="EMML3051">
+            <desc>
+               <locus corresp="EMML3051" target="#141r"/>
+            </desc>
+         </relation>
+         <relation name="lawd:hasAttestation"
+                 active="LIT4735GadlaBa"
+                 passive="EMML3031">
+          <desc>
+             <locus corresp="EMML3031" target="#144r"/>
+          </desc>
+       </relation>
+       <relation name="lawd:hasAttestation"
+               active="LIT4735GadlaBa"
+               passive="EMML2424">
+        <desc>
+           <locus corresp="EMML2424" target="#104v"/>
+        </desc>
+     </relation>
+     <relation name="lawd:hasAttestation"
+             active="LIT4735GadlaBa"
+             passive="EMML642">
+      <desc>
+         <locus corresp="EMML642" target="#175r"/>
+      </desc>
+   </relation>
             </listRelation>
+         </div>
+         <div type="edition">
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                 <ab>
+                   ዘገብረት፡ ተአምረ፡ ወመንክረ፡ ለአሐቲ፡ ብእሲተ፡ መስፍን፡ በኃይለ፡ ወልዳ፡ ፍቁር። ጸሎታ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
+                   ወሀሎ፡ አሐዱ፡ ብእሲ፡ መስፍን፡ በአሐቲ፡ ሀገር፡ ዐባይ፡ እምአህጉረ፡ ክርስቲያን፡ ወቦቱ፡ ብእሲተ፡ እምዘመደ፡ ኄራን፡ ወስፉቀ፡ ፍቅረ፡ ያፈቅራ።
+                 </ab>
+             </div>
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                 <ab>
+                   ዘገብረት፡ ተአምረ፡ ወመንክረ፡ ለዝኩ፡ ወልድ፡ በተርጌላ፡ ማርያም። ጸሎታ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
+                   ወኮነ፡ ሶበ፡ ልህቀ፡ ዝኩ፡ ሕፃን፡ በቴርጌላ፡ ማርያም፡ ይጸመድ፡ ወትረ፡ በዴዴ፡ መስፍን።
+                 </ab>
+             </div>
+             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
+                 <ab>
+                   ዘገብረት፡ ሎቱ፡ ተአምረ፡ ወመንክረ፡ ለገብረ፡ ዚአሃ፡ በቴርጌላ፡ ማርያም። ጸሎታ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
+                   ወኮነ፡ ሶበ፡ በዝኃ፡ ሕማመ፡ ብድብድ፡ ላዕለ፡ ኵሉ፡ ምድር፡ በዴዴ፡ መስፍን፡ አዘዞሙ፡ መስፍን፡
+                   ለወልዱ፡ ወለአዋልዲሁ፡ ወለኵሉ፡ ዕድ፡ ወአንስት፡ አዘዞሙ፡ ይትማህለሉ፡ ኀበ፡ እግዚአብሔር፡ ልዑል፡ ወኀበ፡ እግዝእትነ።
+                 </ab>
+             </div>
          </div>
       </body>
    </text>

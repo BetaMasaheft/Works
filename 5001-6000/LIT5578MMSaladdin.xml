@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="LIT5578MMSaladdin"
@@ -61,6 +61,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2019-04-05">Created entity</change>
+            <change who="AM" when="2019-12-10">added relation</change>
+            <change who="AM" when="2019-12-10">added incipit by Jeremy Brown</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -79,7 +81,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="ecrm:P129_is_about"
                          active="LIT5578MMSaladdin"
                          passive="PRS8384salahal"/>
+                         <relation name="lawd:hasAttestation"
+                                 active="LIT5578MMSaladdin"
+                                 passive="EMML3841">
+                          <desc>
+                             <locus corresp="EMML3841" target="#90r"/>
+                          </desc>
+                       </relation>
+                       <relation name="lawd:hasAttestation"
+                               active="LIT5578MMSaladdin"
+                               passive="EMML329">
+                        <desc>
+                           <locus corresp="EMML329" target="#175v"/>
+                        </desc>
+                     </relation>
                 </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <note>This incipit is taken from <ref type="mss" corresp="EMML329"/>.</note>
+                    <ab>
+                      ወኮነ፡ እምልደተ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ በ፮፻፳፡ ወ፯፡ ዓመት፡ በመዋዕለ፡ ሰላዲኖስ፡ ንጉሠ፡ ምስር፡ እስላም፡ ሀለወት፡ አሐቲ፡ ቤት፡
+                      ዘናሕስ፡ <choice><corr resp="PRS6437Macomber">ግምብ፡</corr><sic>ግብ፡</sic></choice> ዘተወልደት፡
+                      ባቲ፡ እግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> ለውእቱ፡ ንጉሥ፡ ሐራሁ፡ አምጽኡ፡
+                      <choice><corr resp="PRS6437Macomber">አፍራሰ፡</corr><sic>አፍራስ፡</sic></choice> ወይቤሉ፡ ናበውእ፡ ውስተ፡ ዝንቱ፡ ቤት።
+                    </ab>
+                </div>
             </div>
         </body>
     </text>
