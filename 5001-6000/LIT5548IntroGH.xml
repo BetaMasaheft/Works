@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Introduction to Gadla ḥawāryāt</title>
+                <title xml:lang="en" xml:id="t1">Introduction to Gadla ḥawāryāt</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="ES"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -26,7 +26,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+             <listWit>
+                 <witness corresp="EMML1482" xml:id="A"/>
+                 <witness corresp="EMML1767" xml:id="B"/>
+                 <witness corresp="EMML1825" xml:id="C"/>
+                 <witness corresp="EMML6839" xml:id="F"/>
+                 <witness corresp="EMML7604" xml:id="G"/>
+                 <witness corresp="BNFet52" xml:id="H"/>
+                 <witness corresp="BNFabb58" xml:id="J"/>
+                 <witness corresp="BNFabb64" xml:id="K"/>
+                 <witness corresp="BLorient678 BLorient683" xml:id="Z"/> <!--The primary reference would better be to the edition than to the manuscripts, I think bm:Budge1899ContendingsText-->
+             </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -46,6 +56,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="Apocrypha"/>
+                    <term key="Hagiography"/>
+                    <term key="Translation"/>
+                    <term key="Paks1"/>
                     <term key="ChristianLiterature"/>
                 </keywords>
             </textClass>
@@ -59,6 +72,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="ES" when="2019-04-03">Created entity</change>
+            <change who="DR" when="2019-12-18">Added keywords and witness list from A. Bausi's edition</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -68,7 +82,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <listBibl type="secondary">
                     <bibl>
                         <ptr target="bm:Bausi2000Osservazioni"/>
-                        <citedRange>Int</citedRange>
                     </bibl>
                 </listBibl>
                 <listBibl type="editions">
@@ -89,7 +102,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                          passive="LIT1461Gadlah"/>
                 </listRelation>
             </div>
-         <!---->
         </body>
     </text>
 </TEI>
