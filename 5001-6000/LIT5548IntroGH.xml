@@ -3,10 +3,7 @@
 schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT5548IntroGH"
-     xml:lang="en"
-     type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5548IntroGH" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
@@ -18,36 +15,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
                 <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
-                            Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                    Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
-                                licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                        licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-             <listWit>
-                 <witness corresp="EMML1482" xml:id="A"/>
-                 <witness corresp="EMML1767" xml:id="B"/>
-                 <witness corresp="EMML1825" xml:id="C"/>
-                 <witness corresp="EMML6839" xml:id="F"/>
-                 <witness corresp="EMML7604" xml:id="G"/>
-                 <witness corresp="BNFet52" xml:id="H"/>
-                 <witness corresp="BNFabb58" xml:id="J"/>
-                 <witness corresp="BNFabb64" xml:id="K"/>
-                 <witness corresp="BLorient678 BLorient683" xml:id="Z"/> <!--The primary reference would better be to the edition than to the manuscripts, I think bm:Budge1899ContendingsText-->
-             </listWit>
+                <listWit>
+                    <witness corresp="EMML1482" xml:id="A"/>
+                    <witness corresp="EMML1767" xml:id="B"/>
+                    <witness corresp="EMML1825" xml:id="C"/>
+                    <witness corresp="EMML6839" xml:id="F"/>
+                    <witness corresp="EMML7604" xml:id="G"/>
+                    <witness corresp="BNFet52" xml:id="H"/>
+                    <witness corresp="BNFabb58" xml:id="J"/>
+                    <witness corresp="BNFabb64" xml:id="K"/>
+                    <listWit xml:id="Z" corresp="#budge">
+                        <witness corresp="BLorient683"/>
+                        <witness corresp="BLorient678"/>
+                    </listWit>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
-            <xi:fallback>
-               <p>Definitions of prefixes used.</p>
-            </xi:fallback>
-         </xi:include>
-      </encodingDesc>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+                <xi:fallback>
+                    <p>Definitions of prefixes used.</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -72,20 +72,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="ES" when="2019-04-03">Created entity</change>
-            <change who="DR" when="2019-12-18">Added keywords and witness list from A. Bausi's edition</change>
+            <change who="DR" when="2019-12-18">Added keywords and witness list from A. Bausi's
+                edition</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
+            <div type="edition" xml:lang="gez">
+                <div type="textpart" subtype="sentence" xml:id="sentence1">
+                    <ab> በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ዝንቱ፡ መጽሐፈ፡ ሥርዓቶሙ፡ ለሐዋርያት፡ ወባዕዳንሂ፡ እም፸ወ፪፡ አርድእት፡
+                        ንኡሳን፡ ወዘኮነ፡ ኵሉ፡ እምዜናሆሙ፡ ውስተ፡ ኵሉ፡ ብሔር፡ ወተዝካረ፡ ስምዐ፡ እለ፡ ኮኑ፡ እምኔሆሙ፡ ወእለ፡ አዕረፉ፡
+                        እምኔሆሙ፡ ጸሎቶሙ፡ ወበረከቶሙ፡ ትዕቀበነ፡ ለዓለመ፡ ዓለም፡ አሜን። </ab>
+                </div>
+                <div type="textpart" subtype="sentence" xml:id="sentence2">
+                    <ab> በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ዛቲ፡ መጽሐፍ፡ ዘአስተጋብኡ፡ ቦቱ፡ ግብረ፡ አርድእት፡ ኅሩያን፡ አርድእቱ፡
+                        ለእግዚእነ፡ ወአምላክነ፡ ኢየሱስ፡ ክርስቶስ፡ ቃለ፡ እግዚአብሔር፡ ሕያው፡ ዘ፲ወ፪፡ ሐዋርያት፡ ቅዱሳን፡ ወንጹሓን፡
+                        ወአንሶስዎቶሙ፡ እለ፡ ሰበኩ፡ ውስተ፡ ዓለም፡ ወዜናሆሙ፡ ወስብከቶሙ፡ ውስተ፡ ኵሉ፡ አሕዛብ፡ በኵሉ፡ አጽናፍ፡
+                        ወበሓውርት፡ ወትምህርቶሙ፡ ሎሙኒ፡ አእሚነ፡ በሥላሴ፡ ቅድስት፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ እግዚአብሔር፡
+                        ወበአሐዱ፡ ዘእምሥሉስ፡ ዘተሠገወ፡ እምድንግል፡ ቅድስት፡ ማርያም፡ ወላዲተ፡ አምላክ፡ ለአድኅኖቱ፡ ለአዳም፡ ወለውሉዱ፡
+                        ወቦቱ፡ ግብረ፡ ዘገብሩ፡ ተአምራተ፡ ወመንክራተ፡ በስመ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ወበኀይለ፡ መስቀሉ፡ ክቡር፡
+                        በአውፅኦተ፡ አጋንንት፡ ወበአንሥኦቶሙ፡ ምዉታነ፡ ወፈውሶቶሙ፡ ድዉያነ፡ እምኵሉ፡ ደዌ። ወዘገብሩ፡ እመንክራተ፡ ግብር፡
+                        ዘያበርህ፡ አልባበ፡ በረድኤተ፡ መንፈስ፡ ቅዱስ፡ ሎሙ፡ ዘኮነ፡ ለአውሥኦቶሙ፡ ለነገሥት፡ ኀያላን፡ ወትዕግሥቶሙ፡ ላዕለ፡
+                        ብዙኅ፡ መቅሠፍት፡ ወኑኀ፡ ትዕግሥቶሙ፡ ላዕለ፡ አሕዛብ፡ ጠዋያን፡ እስከ፡ ይመይጥዎሙ፡ ኀበ፡ አሚነ፡ እግዚአብሔር፡
+                        እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ወልደ፡ እግዚአብሔር፡ ቀዳማዊ፡ ወበዘ፡ ኮነት፡ ዕረፍቶሙ፡ ወስምዖሙ፡ ለለ፡ ብሔሩ፡
+                        ላዕለ፡ እደዊሆሙ፡ እለ፡ ኮኑ፡ ነገሥተ፡ በአይ፡ ጊዜ፡ ወበአይ፡ መዋዕል፡ እምአውራኅ። ጸሎቶሙ፡ ወጸሎተ፡ እግዝእትነ፡
+                        ማርያም፡ ወማኅበረ፡ ቅዱሳን፡ ትዕቀበነ፡ ለዓለመ፡ ዓለም፡ አሜን። </ab>
+                </div>
+            </div>
             <div type="bibliography">
-                
+
                 <listBibl type="secondary">
                     <bibl>
                         <ptr target="bm:Bausi2000Osservazioni"/>
                     </bibl>
                 </listBibl>
                 <listBibl type="editions">
-                    <bibl>
+                    <bibl xml:id="budge">
                         <ptr target="bm:Budge1899ContendingsText"/>
                         <citedRange>3-6</citedRange>
                     </bibl>
@@ -97,9 +119,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </bibl>
                 </listBibl>
                 <listRelation>
-                    <relation name="saws:formsPartOf"
-                         active="LIT5548IntroGH"
-                         passive="LIT1461Gadlah"/>
+                    <relation name="saws:formsPartOf" active="LIT5548IntroGH"
+                        passive="LIT1461Gadlah"/>
                 </listRelation>
             </div>
         </body>
