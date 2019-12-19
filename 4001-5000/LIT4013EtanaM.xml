@@ -10,10 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1" xml:lang="gez" type="normalized">ʿƎṭāna mogar</title> 
-            <!--fix-->
-            <title xml:id="t2" xml:lang="gez">ተረፈ፡ ነገሩ፡ ለኤልሳዕ፡ ቀሊል፡ ስረት፡ ዖፍ።</title>
-            <title xml:id="t3" xml:lang="gez">እምሐቅለ፡ አኢርሞን፡ ጸውዕ፡ እጓለ፡ አንበሳ፡ ግሩመ።</title>
+            <title xml:id="t1" xml:lang="gez">ዕጣነ፡ ሞገር፡</title> 
+            <title corresp="#t1" xml:lang="gez" type="normalized">ʿƎṭāna mogar (General record)</title> 
+            <title corresp="#t1" xml:lang="en">Throwing of the incense</title> 
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -29,13 +28,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-         </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness corresp="BNFet119#ms_i5"/>
-               <witness corresp="BLorient492#a1"> <!--<title ref="#t2"></title>--></witness>
-               <witness corresp="BLorient492#a2"> <!--<title ref="#t3"></title>--></witness>
-            </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -60,31 +52,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Poetry"/> 
+               <term key="Liturgy"/>
             </keywords>
          </textClass>
          <abstract>
             <p>
-               <foreign xml:lang="gez">ʿƎṭāna mogar</foreign> are various poems on the Nativity of Christ</p>
+               The <foreign xml:lang="gez">ʿƎṭāna mogar</foreign> is a poetic mode of qǝne hymns, performed in the liturgy, consisting of a compound of two strophes with
+               different content or reference. See  <bibl><ptr target="bm:Habtemichael2005EAEEtanam"/></bibl>.</p>
+            <p>This record is used in cases where only the presence of a ʿƎṭāna mogar text is given in a manuscript, while individual records are created for identifiable texts.</p>
          </abstract> 
-         <!--type of qǝne--> 
-         <!--is this a work or a genre?-->
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2016-12-05">Adjustments</change>
          <change when="2017-01-09" who="ES">added two subtexts</change>
          <change who="DR" when="2017-03-28">Updated and added keywords</change>
+         <change who="DR" when="2019-12-16">Added keyword and bibliography, edited abstract</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <listRelation>
-            <relation name="saws:isAttributedToAuthor"
-                      active="LIT4013EtanaM#t3"
-                      passive="PRS11371Marqos">
-            </relation>
-         </listRelation>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Habtemichael2005EAEEtanam"/></bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
