@@ -33,10 +33,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
-         <sourceDesc>
-                <p/>
-                
-            </sourceDesc>
         </fileDesc>
         <encodingDesc>
                 <p>A digital born TEI file</p>
@@ -54,18 +50,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <language ident="it">Italian</language>
                 <language ident="gez">Gǝʿǝz</language>
             </langUsage>
-            
-            <textClass>
+            <abstract><p>The Ethiopic Psalter is one of the most widespread works of Ethiopic literature. In the overwhelming majority of manuscripts, it is composed of the 
+                fixed sequence of the <ref type="work" corresp="LIT2000Mazmur"/>, <ref type="work" corresp="LIT1233Cantic"/>, 
+                <ref type="work" corresp="LIT2509Weddas"/> and 
+                <ref type="work" corresp="LIT1113Anqasa"/>. It is characterized furthermore by its layout of one column for the 
+                <ref type="work" corresp="LIT2000Mazmur"/> and <ref type="work" corresp="LIT1233Cantic"/> 
+                and two columns for the <ref type="work" corresp="LIT2509Weddas"/> and 
+                <ref type="work" corresp="LIT1113Anqasa"/>.</p></abstract>
+            <textClass> 
                 <keywords scheme="#ethioauthlist">
                     <term key="Bible"/>
                     <term key="OldTestament"/>
                     <term key="ChristianLiterature"/>
+                    <term key="Liturgy"/>
+                    <term key="Poetry"/>
                 </keywords>
             </textClass>
         </profileDesc>
         <revisionDesc>
             <change who="MV" when="2016-04-26">Created work</change>
             <change when="2017-02-09" who="ES">updated keywords and relations</change>
+            <change who="DR" when="2020-03-11">Added abstract, reference and keywords</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -79,6 +84,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </bibl>
             </listBibl>
             
+            <listBibl type="secondary">
+                <bibl><ptr target="bm:Heldman2010Psalter"/></bibl>
+            </listBibl>
+            
             <listRelation>
             <relation name="saws:contains"
                       active="LIT2701Dawit"
@@ -86,9 +95,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <relation name="saws:contains"
                     active="LIT2701Dawit"
                     passive="LIT1233Cantic"/>
-                <relation name="saws:contains"
-                    active="LIT2701Dawit"
-                    passive="LIT2362Songof"/>
                 <relation name="saws:contains"
                     active="LIT2701Dawit"
                     passive="LIT2509Weddas"/>
