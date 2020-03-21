@@ -34,17 +34,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianContent"/>
+               <term key="ChristianLiterature"/>
+               <term key="Homily"/>
+               <term key="Translation"/>
+            </keywords>
+         </textClass>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2020-03-20" who="ES">added incipit relation</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" subtype="incipit"><ab>ዘከመ፡ ተወክፎ፡ ስምዖን፡ ካህን፡ ለእግዚእነ፡ በቤተ፡ መቅደስ፡ ሕፃን፡ ዘተወልደ፡ እምብፅዕት፡ ድንግል፡</ab></div>
+            <note>After BL Orient 774</note>
+         </div>
+         <listRelation>
+            <relation name="ecrm:P129_is_about" active="LIT1630Homily" passive="PRS8854Simeon"></relation>
+            <relation name="ecrm:P129_is_about" active="LIT1630Homily" passive="PRS5684JesusCh"></relation>
+            <relation name="saws:isAttributedToAuthor" active="LIT1630Homily" passive="PRS5655Jacobof"/></listRelation>
       </body>
    </text>
 </TEI>
