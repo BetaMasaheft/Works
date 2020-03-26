@@ -45,10 +45,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-03-17">Created entity</change>
+            <change who="DR" when="2020-03-26">Added relation to LIT3575Mashaf and reference to edition thanks to
+            Denis Nosnitsin's review</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="saws:formsPartOf" active="LIT5854HymnMary" passive="LIT3575Mashaf"/>
+                </listRelation>
+                <listBibl type="editions">
+                    <bibl><ptr target="bm:Tasfa1955Saatat"/><citedRange unit="page">70</citedRange></bibl>
+                </listBibl>
+            </div>
             <div type="edition">
                 <note>The following incipit and explicit are taken from <ref type="mss" corresp="BLorient1378"/>.</note>
                 <div type="textpart" subtype="incipit" xml:lang="gez">
