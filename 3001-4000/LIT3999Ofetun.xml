@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3999Ofetun">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3999Ofetun">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ኦፍጡነ፡ ረድኤት፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">ʾO-fǝṭuna radʾet</title>
+            <title xml:lang="en" corresp="#t1">Oh you, quick of help</title>
+            
+            <title xml:lang="en" xml:id="t2">Prayer to St George</title>
+            
             <editor role="generalEditor" key="AB"/>
          </titleStmt>
          <publicationStmt>
@@ -38,7 +43,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p/>
+            <p>A prayer to St George in several stanzas beginning with <foreign xml:lang="gez">ኦፍጡነ፡ ረድኤት፡</foreign>. The number of stanzas
+            varies in the manuscripts. In several manuscripts, this prayer is followed immediately by a prayer to St Mary. </p>
          </abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
@@ -55,7 +61,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-        <ab/>
+        <div type="bibliography">
+           <listRelation>
+              <relation name="ecrm:P129_is_about" active="LIT3999Ofetun" passive="PRS4585Georgeo"/>
+           </listRelation>
+        </div>
       </body>
    </text>
 </TEI>
