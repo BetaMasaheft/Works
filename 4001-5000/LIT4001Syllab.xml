@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4001Syllab">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4001Syllab">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" xml:lang="en">Ethiopic Syllabarium</title>
-            <title xml:id="t2" xml:lang="en">Syllabary of the Ethiopic alphabet</title>
-            <title xml:id="t3" xml:lang="am">Ya-fidal gabatā</title>
+
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -33,17 +33,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p/>
+            <p>Tables of the Ethiopic syllabary exist in two different orders of representation: 
+               <ref type="work" corresp="LIT5913Abugida"/> follows the most widely used ordering system of the Semitic consonants, while
+               <ref type="work" corresp="LIT5914Hahu"/> is inherited from the South Arabian tradition. Both tables are used in traditional schools
+               for teaching reading, together with <ref type="work" corresp="LIT5905FidalaHawarya"/>.
+            </p>
          </abstract>
+         <textClass>
+            <keywords>
+               <term key="Other"/>
+               <term key="DidacticMaterial"/>
+            </keywords>
+         </textClass>
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="DR" when="2020-05-08">Added abstract and bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <div type="bibliography"><!----></div>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Chernetsov2003EAEAbugida"/></bibl>
+            </listBibl>
+         </div>
       </body>
    </text>
 </TEI>
