@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Taʾammǝra Ḥannā</title>
+                <title xml:lang="ti" xml:id="t1">ተኣምረ፡ ሐና፡</title>
+                <title xml:lang="ti" corresp="#t1" type="normalized">Taʾammǝra Ḥannā</title>
+                <title xml:lang="en" corresp="#t1" >Miracles of Anne</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -51,7 +53,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="ecrm:P129i_is_subject_of" active="PRS1948Anne" passive="LIT5917TaammeraHa"></relation>
+                </listRelation>
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:Budge1900Miracles"/>
+                        <citedRange>104-105</citedRange>
+                    </bibl>
+                </listBibl>
+                <listBibl type="translation" xml:lang="en">
+                    <bibl>
+                        <ptr target="bm:Budge1900Miracles"/>
+                        <citedRange>207-209</citedRange>
+                    </bibl>
+                </listBibl>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <ab>
+                        ወሀሎ፡ ፩፡ ብእሲ፡ እምዘመደ፡ ይሁዳ፡ ወይሰመይ፡ ኢያቄም፡ ወአውሰበ፡ ብእሲተ፡ እምአዋልደ፡ 
+                        ካህናት፡ ወትሰመይ፡ ሐና፡ ወክልዔሆሙ፡ ኄራን፡ ወሥሙራን፡ ወይሄልዉ፡ በሕገ፡ እግዚአብሔር።
+                    </ab>
+                </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <ab>
+                        ወይቤልዋ፡ ማርያም፡ ሰላም፡ ለኪ፡ ኦብፅዕት፡ ወኅሪት፡ ለእግዚአብሔር፡ 
+                        ወነሥእዋ፡ ወሐቀፍዋ፡ ወአብዕዋ፡ ውስተ፡ ቤተ፡ መቅደስ፡ አመ፡ ሠሉሱ፡ ለታኅሣሥ፡ በሰላመ፡ እግዚአብሔር። 
+                    </ab>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>
