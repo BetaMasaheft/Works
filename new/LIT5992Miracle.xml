@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Taʾāmmǝra ʾIyasus Krǝstos</title>
+                <title xml:lang="gez" xml:id="t1">ተአምረ፡ ኢየሱስ፡ ክርስቶስ፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Taʾammǝra ʾIyasus Krǝstos</title>
+                <title xml:lang="en" corresp="#t1">Miracle of Jesus Christ</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -28,10 +30,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A digital born TEI file</p>
         </encodingDesc>
         <profileDesc>
-            <creation/>
-            <abstract>
-                <p/>
-            </abstract>
             <textClass>
                 <keywords>
                     <term key="Apocrypha"/>
@@ -50,7 +48,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="ecrm:P129i_is_subject_of" active="PRS5684JesusCh" passive="LIT5992Miracle"/>
+                    <relation name="ecrm:P129i_is_subject_of" active="PRS12983GabraMa" passive="LIT5992Miracle"/>
+                </listRelation>
+                <div type="edition">
+                    <div type="textpart" subtype="incipit" xml:lang="gez">
+                        <note>The incipit is provided after <ref type="mss" corresp="BDLaethe38#a3"/>.</note>
+                        <ab>
+                            ተአምረ፡ ዘገብረ፡ እግዚእነ፡ ወአምላክነ፡ ኢየሱስ፡ ክርስቶስ፡ በኃይለ፡ ሞቱ፡ ማኅየዊ፡ ይምሐሮ፡ ለገብሩ፡ ገብረ፡ ማርያም፡ 
+                            ወሀሎ፡ ፩ድውይ፡ እንዘ፡ ይግዕር፡ ወየአውዩ፡ ፲፪ዓመተ፡ ወዘረከቦ፡ በብዝኃ፡ ኃጢአቱ፡ ወተፈትነ፡ በእሳት፡ ከመ፡ ወርቅ፡ ወብሩር፡ መዓልተ፡ ወሌሊተ፡ 
+                        </ab>
+                    </div>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>
