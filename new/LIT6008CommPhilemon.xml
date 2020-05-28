@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5629AndemtaCreed" xml:lang="en" type="work">
-    <teiHeader xml:base="https://betamasaheft.eu/">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6008CommPhilemon" xml:lang="en" type="work">
+    <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Commentary on the Nicene Creed</title>
+                <title xml:lang="en" xml:id="t1">Amharic Commentary on the Epistle to Philemon</title>
                 <editor role="generalEditor" key="AB"/>
-                <editor key="ES"/>
+                <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
                             Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
@@ -20,17 +21,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>As in  EMML no. 1271 (3)</p>
+                <p/>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
-            <xi:fallback>
-               <p>Definitions of prefixes used.</p>
-            </xi:fallback>
-         </xi:include>
-      </encodingDesc>
+        </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -43,20 +39,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     <term key="Commentary"/>
                 </keywords>
             </textClass>
-            <langUsage><language ident="en">English</language><language ident="am">Amharic</language></langUsage>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="gez">Gǝʿǝz</language>
+            </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="ES" when="2019-04-10">Created entity</change>
+            <change who="DR" when="2020-05-28">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:base="https://betamasaheft.eu/">
+    <text>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="saws:isDifferentTo" active="LIT5629AndemtaCreed" passive="LIT5628CommCreed"/>
+                    <relation name="saws:isCommentOn" active="LIT6008CommPhilemon" passive="LIT3528Epistle"/>
                 </listRelation>
             </div>
-         <!---->
         </body>
     </text>
 </TEI>
