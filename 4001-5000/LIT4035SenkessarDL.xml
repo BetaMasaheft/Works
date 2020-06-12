@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4035SenkessarDL">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4035SenkessarDL">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -41,6 +42,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+         <abstract><p>This record refers to the most widespread recension of the so-called "Second Recension" of the 
+            <ref type="work" corresp="LIT2375Synaxa">Sǝnkǝssār</ref>, characterised by inclusion of short "salām"-hymns after the commemorations.</p></abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
@@ -69,13 +72,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Colin1986Maskaram"/>
                </bibl>
             </listBibl>
+            
+            <listRelation>
+               <relation name="saws:isVersionOf" active="LIT4035SenkessarDL" passive="LIT2375Synaxa"/>
+            </listRelation>
          </div>
 
          <div type="edition">
-
-            <!-- the following arrangement of the textparts and text of Maskaram is taken from
-               bm:Colin1986Maskaram when not indicated otherwise-->
-
+            <note>The following division into textparts is taken from <bibl><ptr target="bm:Colin1986Maskaram"/></bibl>
+            when not indicated otherwise.</note>
+            
+            <div type="textpart" subtype="chapter" xml:id="FirstHalf">
+               <label>First half of the year</label>
+            
             <div type="textpart" subtype="chapter" n="1" xml:id="Maskaram">
                <label>
                   <foreign xml:lang="gez">Maskaram</foreign>
@@ -126,7 +135,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <div type="textpart" subtype="commemoration" xml:id="Mask1JohnBaptistHenoch">
                      <label>Commemoration of <persName ref="PRS5741Johnthe"/> and <persName ref="PRS3814Enoch"/>
                      </label>
-                     <note>Described by in <ref type="mss" corresp="BNFet126"/>, but not in
+                     <note>Described <!--by whom??--> in <ref type="mss" corresp="BNFet126"/>, but not in
                               <bibl>
                            <ptr target="bm:Colin1986Maskaram"/>
                         </bibl>.</note>
@@ -341,6 +350,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <div type="textpart" subtype="chapter" xml:id="Yak30"/>
             </div>
 
+            </div>
+            
+            <div type="textpart" subtype="chapter" xml:id="SecondHalf">
+               <label>Second half of the year</label>
+            
             <div type="textpart" subtype="chapter" n="7" xml:id="Maggabit">
                <div type="textpart" subtype="chapter" xml:id="MaggIntroduction"/>
                <div type="textpart" subtype="chapter" xml:id="Magg1"/>
@@ -554,7 +568,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <div type="textpart" subtype="chapter" xml:id="Pag5"/>
                <div type="textpart" subtype="chapter" xml:id="Pag6"/>
             </div>
-
+            </div>
          </div>
       </body>
    </text>
