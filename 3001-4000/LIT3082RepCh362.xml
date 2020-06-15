@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3082RepCh362">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3082RepCh362">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Hymn to Our Lady Mary</title>
+            <title xml:lang="gez" xml:id="t2">መልክአ፡ ማርያም፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Malkǝʾa Māryām</title>
+            <title xml:lang="en" corresp="#t2">Image of Mary</title>
+            <title xml:lang="gez" xml:id="t3">መልክአ፡ ኪዳነ፡ ምሕረት፡</title>
+            <title xml:lang="gez" corresp="#t3" type="normalized">Malkǝʾa kidāna mǝḥrat</title>
+            <title xml:lang="en" corresp="#t3">Image of the covenant of mercy</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -22,11 +29,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </publicationStmt>
          <sourceDesc>
             <p>A Work part of Ethiopian Literature</p>
-         </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -48,22 +50,45 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
+         <change who="DR" when="2020-06-15">Added information from deleted LIT3080RepCh360</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
-            <listBibl type="editions">
+            <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">362</citedRange>
                </bibl>
+               <bibl>
+                  <ptr target="bm:Chaine1913Rep"/>
+                  <citedRange unit="item">360</citedRange>
+               </bibl>
             </listBibl>
+            
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Dillmann1866Chrestomathia"/>
+                  <citedRange unit="page">136-146</citedRange>
+               </bibl>
+            </listBibl>
+            
+            <listRelation>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT3082RepCh362" passive="LIT3080RepCh360"/>
+            </listRelation>
          </div>
+         
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
                 እግዚአብሔር፡ ወሃቤ፡ ብርሃን፡ ዘይሤለስ፡ በአካሉ።
+               </ab>
+            </div>
+            
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  እግዚአብሔር፡ አብ፡ ወሃቤ፡ ብርሃን፡ ዘይሤለስ፡ በአካሉ።
                </ab>
             </div>
          </div>
