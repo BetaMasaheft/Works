@@ -7,7 +7,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <title xml:id="t1" xml:lang="gez">መዝሙረ፡ ክርስቶስ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Mazmura Krǝstos</title>
             <title xml:lang="en" corresp="#t1">Psalter of Jesus Christ</title>
-            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -61,11 +60,54 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div type="bibliography">
          <listRelation>
             <relation name="saws:isAttributedToAuthor" active="LIT2003Mazmur" passive="PRS6956Mazmura"/>
             <relation name="ecrm:P129_is_about" active="LIT2003Mazmur" passive="PRS5684JesusCh"/>
          </listRelation>
-         <ab/>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Getatchew2007EAEMazmuraKr"/></bibl>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <note>The following division into textparts follows the description in <bibl><ptr target="bm:Getatchew2007EAEMazmuraKr"/></bibl>.</note>
+            
+            <div type="textpart" xml:id="Intro">
+               <label>Introduction</label>
+            </div>
+            
+            <div type="textpart" subtype="Psalms" xml:id="Psalms">
+               <label>Psalms</label>
+               
+               <div type="textpart" subtype="section" xml:id="Book1">
+                  <label>Book 1 of the Psalter</label>
+               </div>
+               
+               <div type="textpart" subtype="section" xml:id="Book2">
+                  <label>Book 2 of the Psalter</label>
+               </div>
+               
+               <div type="textpart" subtype="section" xml:id="Book3">
+                  <label>Book 3 of the Psalter</label>
+               </div>
+               
+               <div type="textpart" subtype="section" xml:id="Book4">
+                  <label>Book 4 of the Psalter</label>
+               </div>
+               
+               <div type="textpart" subtype="section" xml:id="Book5">
+                  <label>Book 5 of the Psalter</label>
+               </div>
+            </div>
+            
+            <div type="textpart" xml:id="Canticles">
+               <label>Canticles</label>
+            </div>
+            
+            <div type="textpart" xml:id="Concl">
+               <label>Conclusion</label>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
