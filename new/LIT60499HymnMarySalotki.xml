@@ -1,17 +1,16 @@
-
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6046InvocationMary" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6055HymnMarySalotki" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-
-                <title xml:lang="gez" xml:id="t1">Short Invocation to Our Lady Mary</title>
-
+                <title xml:lang="en" xml:id="t1">Hymn to the Virgin Mary</title>
+                <title xml:lang="gez" xml:id="t2">ኦእግዝእትየ፡ ቅድስት፡ ድንግል፡ በክልኤ፡ ማርያም፡ ጸሎትኪ፡ ወበረከትኪ።</title>
+                <title xml:lang="gez" type="normalized" corresp="#t2">ʾO-ʾǝgzǝʾtǝya qǝddǝst dǝngǝl ba-kǝlʾe Māryām ṣalotǝki wa-barakatǝki  ...</title>
+                
                 <editor role="generalEditor" key="AB"/>
-                <editor key="DN"/>
+                <editor key="ES"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -39,9 +38,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
-                    <term key="Liturgy"/>
+                    <term key="Hagiography"/>
+                    <term key="Poetry"/>
                     <term key="Prayers"/>
-                    <term key="Rituals"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -50,24 +49,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DN" when="2020-07-01">Created entity</change>
+            <change who="ES" when="2020-07-02">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
-
-          <body>
-              <div type="edition" xml:lang="gez">
-                  <div type="textpart" subtype="incipit"><ab>በሰላመ᎓ ገብርኤል፡ መልአክ። ኦእግዝእትየ፡ ማርያም፡ ሰላም፡ ለኪ፡
-                    ድንግልት፡ በኅሊናኪ፡ ወድንግልት፡ በሥጋኪ፡ እመ፡ እግዚአብሔር፡ ጸባዖት፡ ሰላም፡ ለኪ፡ ቡርክት፡ አንቲ፡ እማንስት።</ab></div>
-                  <note>Quoted after <ref type="mss" corresp="BNFabb202"/></note>
-              </div>
-              <div type="bibliography">
-                  <listRelation>
-                      <relation name="lawd:hasAttestation" active="LIT6046InvocationMary" passive="BNFabb202"/>
-                      <relation name="lawd:hasAttestation" active="LIT6046InvocationMary" passive="BAVet88"/>
-                  </listRelation>
-              </div><!---->
-          </body>
+        <body>
+            <listRelation>
+                <relation name="saws:isDifferentTo" active="LIT6055HymnMarySalotki" passive="LIT3093RepCh373"></relation>
+            </listRelation>
+            <div type="bibliography"/><!---->
+        </body>
     </text>
 </TEI>
-
