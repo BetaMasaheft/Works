@@ -1,12 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5067Hymn" xml:lang="en" type="work">
-    <teiHeader xml:base="https://betamasaheft.eu/">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5832BooksSalomon" xml:lang="en" type="work">
+    <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Hymn to Jesus Christ</title>
+
+                <title xml:lang="gez" xml:id="t1">Books of Solomon</title>
+
                 <editor role="generalEditor" key="AB"/>
-                <editor key="DE"/>
+                <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -25,12 +27,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
-            <xi:fallback>
-               <p>Definitions of prefixes used.</p>
-            </xi:fallback>
-         </xi:include>
-      </encodingDesc>
+        </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -38,19 +35,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </abstract>
             <textClass>
                 <keywords>
+                    <term key="Bible"/>
                     <term key="ChristianLiterature"/>
+                    <term key="OldTestament"/>
+                    <term key="Religion"/>
                 </keywords>
             </textClass>
             <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DE" when="2018-11-13">Created entity</change>
+            <change who="DN" when="2020-02-20">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:base="https://betamasaheft.eu/">
+    <text>
         <body>
-            <div type="bibliography"/>
-         <!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="saws:contains" active="LIT5832BooksSalomon" passive="LIT2195Prover LIT2396Tagsas                       LIT1320Eccles LIT2516Wisdom"/>
+                </listRelation>
+            </div><!---->
         </body>
     </text>
 </TEI>

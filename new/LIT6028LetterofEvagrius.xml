@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5832BooksSalomon" xml:lang="en" type="work">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6028LetterofEvagrius" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-
-                <title xml:lang="gez" xml:id="t1">Books of Salomon</title>
-
+                <title xml:lang="en" xml:id="t1">Letter of Evagrius to Lucius</title>
                 <editor role="generalEditor" key="AB"/>
-                <editor key="DN"/>
+                <editor key="DE"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine multimediale
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
                             Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
@@ -35,24 +34,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </abstract>
             <textClass>
                 <keywords>
-                    <term key="Bible"/>
                     <term key="ChristianLiterature"/>
-                    <term key="OldTestament"/>
-                    <term key="Religion"/>
+                    <term key="Letter"/>
+                    <term key="Theology"/>
+                    <term key="Translation"/>
                 </keywords>
             </textClass>
-            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="gez">Gǝʿǝz</language>
+            </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DN" when="2020-02-20">Created entity</change>
+            <change who="DE" when="2020-06-15">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
-                <listRelation>
-                    <relation name="saws:contains" active="LIT5832BooksSalomon" passive="LIT2195Prover LIT2396Tagsas                       LIT1320Eccles LIT2516Wisdom"/>
-                </listRelation>
+              <listRelation>
+                <relation name="saws:isAttributedToAuthor" active="LIT6028LetterofEvagrius" passive="PRS3921Evagrius"></relation>
+                <relation name="ecrm:P129_is_about" active="LIT6028LetterofEvagrius" passive="PRS6375Lucius"></relation>
+              </listRelation>
             </div><!---->
         </body>
     </text>
