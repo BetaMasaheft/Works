@@ -1,12 +1,14 @@
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6058Ladder" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Ladder of Paradise</title>
+                <title xml:lang="eng" xml:id="t1">Ladder of Paradise</title>
+                <title xml:lang="la" xml:id="t2">Scala Paradisi</title>
+                <title xml:lang="gez" xml:id="t3">ድርሳን፡ ኀምስ፡ ዘአቡነ፡ ቅዱስ፡ ዮሐንስ፡ በዐለ፡ መዓርግ፡ በእንተ፡ ሰብእ፡ እለ፡ ውስተ፡ ንስሓ፡</title>
                 <editor role="generalEditor" key="AB"/>
-                <editor key="DE"/>
+                <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -20,7 +22,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listBibl type="clavis">
+                 <bibl type="CPG">
+                    <ptr target="bm:CPG3"/>
+                    <citedRange unit="item">7852</citedRange>
+                 </bibl>
+              </listBibl>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -45,13 +52,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         </profileDesc>
         <revisionDesc>
             <change who="DE" when="2020-07-05">Created entity</change>
+            <change who="MKr" when="2020-07-09">Added title in Ge'ez</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+              <listBibl type="editions">
+                  <bibl><ptr target="bm:Beylot2009JeanClimaque"/></bibl>
+              </listBibl>
                 <listRelation>
-                    <relation name="saws:isAttributedToAuthor" active="LIT6.050132E6Ladder" passive=""/>
+                    <relation name="saws:isAttributedToAuthor" active="LIT6058Ladder" passive="PRS5721JohnCli"/>
                 </listRelation>
             </div><!---->
         </body>
