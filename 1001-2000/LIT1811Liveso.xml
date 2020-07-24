@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1811Liveso">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Lives of the Prophets [and the Tribes of the Origin]</title>
+            <title xml:id="t1">Lives of the Prophets and the Tribes of their Origin</title>
             <title xml:id="t2">Vitae Prophetarum</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -38,6 +38,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      <ptr target="bm:BHO"/>
                      <citedRange unit="item">437</citedRange>
                   </bibl>
+                  <bibl type="edition">
+                     <ptr target="bm:Knibb1980LivesProphets1"/>
+                  </bibl>
+                  <bibl type="edition">
+                     <ptr target="bm:Knibb1985LivesProphets2"/>
+                  </bibl>
+
                </listBibl>
          </sourceDesc>
       </fileDesc>
@@ -59,7 +66,57 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <div type="bibliography">
+            <listRelation>
+                <relation name="lawd:hasAttestation" active="LIT6156OriginProphets" passive="BNFabb195"/>
+            </listRelation>
+               </div>
+            <div type="edition">
+              <note>The division into text parts follows <ref type="mss" corresp="BNFabb195"/>.</note>
+               <div type="textpart" subtype="chapter" xml:id="Chronology">
+                  <label>On the chronology of the Prophets</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Isaiah">
+                  <label>On Prophet Isaiah</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="LIT1762Legend">
+               <label>On Prophet Jeremiah</label>
+         </div>
+
+         <div type="textpart" subtype="chapter" xml:id="Haggai">
+            <label>On Prophet Haggai</label>
+      </div>
+
+      <div type="textpart" subtype="chapter" xml:id="Zechariah">
+         <label>On Prophet Zechariah</label>
+   </div>
+
+   <div type="textpart" subtype="chapter" xml:id="Malachi">
+      <label>On Prophet Malachi</label>
+</div>
+
+<div type="textpart" subtype="chapter" xml:id="Elijah">
+   <label>On Prophet Elijah</label>
+</div>
+
+
+<div type="textpart" subtype="chapter" xml:id="Elisha" cert="low">
+<label>On Prophet Elisha</label>
+</div>
+
+<div type="textpart" subtype="chapter" xml:id="Nathan" cert="low">
+<label>On Prophet Nathan</label>
+</div>
+
+<div type="textpart" subtype="chapter" xml:id="Ahijah" cert="low">
+<label>On Prophet Ahijah</label>
+</div>
+<div type="textpart" subtype="chapter" xml:id="Joel" cert="low">
+<label>On Prophet Joel</label>
+</div>
+
+        </div>
       </body>
+
    </text>
 </TEI>
