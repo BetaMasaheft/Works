@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mäṣḥafä baḥrǝy</title>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ባሕርይ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Maṣḥafa bāḥrǝy</title>
+            <title xml:lang="en" corresp="#t1">The Book of the Pearl</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,7 +35,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+         <abstract><p>The <foreign xml:lang="gez">Maṣḥafa bāḥrǝy</foreign> is an anonymous homily, which can be attributed to 
+            <persName ref="PRS8121RetuaH"/>.</p></abstract>
          <langUsage><language ident="en">English</language></langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Homily"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -43,7 +53,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <div type="bibliography">
+           <listBibl type="secondary">
+              <bibl><ptr target="bm:Bausi2007John"/></bibl>
+           </listBibl>
+        </div>
       </body>
    </text>
 </TEI>
