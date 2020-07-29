@@ -8,7 +8,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <fileDesc>
             <titleStmt>
 
-                <title xml:lang="gez" xml:id="t1">Short Invocation to Our Lady Mary</title>
+                <title xml:lang="en" xml:id="t1">Short Invocation to Our Lady Mary</title>
 
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
@@ -51,6 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DN" when="2020-07-01">Created entity</change>
+            <change who="DR" when="2020-07-09">Added relation to LIT3023RepCh303</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -65,8 +66,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <listRelation>
                       <relation name="lawd:hasAttestation" active="LIT6046InvocationMary" passive="BNFabb202"/>
                       <relation name="lawd:hasAttestation" active="LIT6046InvocationMary" passive="BAVet88"/>
+                      <relation name="saws:formsPartOf" active="LIT6046InvocationMary" passive="LIT3023RepCh303">
+                          <desc><ref type="work" corresp="IT6046InvocationMary"/> seems to constitute the last stanza of 
+                              <ref type="work" corresp="LIT3023RepCh303"/>, see <ref type="mss" corresp="BLorient645"/>.</desc></relation>
                   </listRelation>
-              </div><!---->
+              </div>
           </body>
     </text>
 </TEI>
