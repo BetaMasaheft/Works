@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4013EtanaM">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4013EtanaM">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1" xml:lang="gez" type="normalized">ʿƎṭāna mogar</title> 
-            <!--fix-->
+            <title xml:id="t1" xml:lang="gez">ዕጣነ፡ ሞገር፡</title> 
+            <title corresp="#t1" xml:lang="gez" type="normalized">ʿƎṭāna mogar</title> 
+            <title corresp="#t1" xml:lang="en">Throwing of the incense</title> 
+            
             <title xml:id="t2" xml:lang="gez">ተረፈ፡ ነገሩ፡ ለኤልሳዕ፡ ቀሊል፡ ስረት፡ ዖፍ።</title>
             <title xml:id="t3" xml:lang="gez">እምሐቅለ፡ አኢርሞን፡ ጸውዕ፡ እጓለ፡ አንበሳ፡ ግሩመ።</title>
          </titleStmt>
@@ -41,36 +44,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p/>
+            <p>A mode of qǝne, whose hymns are composed of two strophes, 
+               the total consisting of seven or eleven verses, sung during the Communion.</p>
          </abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Poetry"/> 
+               <term key="Liturgy"/>
             </keywords>
          </textClass>
-         <abstract>
-            <p>
-               <foreign xml:lang="gez">ʿƎṭāna mogar</foreign> are various poems on the Nativity of Christ</p>
-         </abstract> 
-         <!--type of qǝne--> 
-         <!--is this a work or a genre?-->
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2016-12-05">Adjustments</change>
          <change when="2017-01-09" who="ES">added two subtexts</change>
          <change who="DR" when="2017-03-28">Updated and added keywords</change>
+         <change who="DR" when="2020-06-15">Updated title, changed abstract and reference</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Habtemichael2005EAEEtanam"/></bibl>
+            </listBibl>
+         </div>
          <listRelation>
             <relation name="saws:isAttributedToAuthor" active="LIT4013EtanaM#t3" passive="PRS11371Marqos">
             </relation>
          </listRelation>
-         <ab/>
       </body>
    </text>
 </TEI>
