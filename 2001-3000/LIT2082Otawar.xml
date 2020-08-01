@@ -18,8 +18,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
                   <p>
-                This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
+                     This file is licensed under the Creative Commons
+                     Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
          </publicationStmt>
@@ -52,19 +52,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-14" who="ES">updated title keywords relation</change>
          <change when="2020-07-03" who="DR">Added reference and relation to deleted LIT5067Hymn</change>
+         <change who="DR" when="2020-07-27">Added edition reference</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
-         <listRelation>
-            <relation name="saws:formsPartOf" active="LIT2082Otawar" passive="LIT2300Sebhat"/>
-            <relation name="ecrm:P129_is_about" active="LIT2082Otawar" passive="PRS5684JesusCh"/>
-            <relation name="betmas:formerlyAlsoListedAs" active="LIT2082Otawar" passive="LIT5067Hymn"/>
-         </listRelation>
             <listBibl type="editions">
                <bibl><ptr target="bm:Hammerschmidt1960Texte"/><citedRange unit="page">20-27</citedRange></bibl>
             </listBibl>
+            <listBibl type="translation">
+               <bibl><ptr target="bm:Hammerschmidt1960Texte"/><citedRange unit="page">20-27</citedRange></bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:formsPartOf" active="LIT2082Otawar" passive="LIT2300Sebhat"/>
+               <relation name="ecrm:P129_is_about" active="LIT2082Otawar" passive="PRS5684JesusCh"/>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT2082Otawar" passive="LIT5067Hymn"/>
+            </listRelation>
          </div>
       </body>
    </text>
