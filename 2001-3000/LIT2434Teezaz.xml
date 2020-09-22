@@ -39,16 +39,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2020-09-22">Added relations, Ethiopic title, bibliography.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
-      </body>
+     <body>
+        <div type="bibliography">
+              <listRelation>
+
+              <relation name="ecrm:P129_is_about" active="LIT4857LifeofA" passive="PRS1962Anthony"/>
+              <relation name="ecrm:CLP46i_may_form_part_of" active="LIT4857LifeofA" passive="LIT1493Gadlas"></relation>
+              <relation name="saws:isDifferentTo" active="LIT4857LifeofA" passive="LIT2442Temher"></relation>
+           </listRelation>
+        </div>
+
+
+     </body>
    </text>
 </TEI>
