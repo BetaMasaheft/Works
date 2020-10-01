@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3082RepCh362">
    <teiHeader xml:base="https://betamasaheft.eu/">
@@ -51,6 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
          <change who="DR" when="2020-06-15">Added information from deleted LIT3080RepCh360</change>
+         <change who="AD" when="2020-10-01">Merged with LIT 1854Malkea and LIT1855Malkea</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -66,7 +67,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">360</citedRange>
                </bibl>
             </listBibl>
-            
+
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Dillmann1866Chrestomathia"/>
@@ -74,18 +75,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             
+            <!-- Malkǝʾa gubāʾe, ʾAśmarā 1974 E.C., 112-122 -->
+
             <listRelation>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT3082RepCh362" passive="LIT1854Malkea"/>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT3082RepCh362" passive="LIT1855Malkea"/>
                <relation name="betmas:formerlyAlsoListedAs" active="LIT3082RepCh362" passive="LIT3080RepCh360"/>
             </listRelation>
          </div>
-         
+
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
                 እግዚአብሔር፡ ወሃቤ፡ ብርሃን፡ ዘይሤለስ፡ በአካሉ።
                </ab>
             </div>
-            
+
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
                   እግዚአብሔር፡ አብ፡ ወሃቤ፡ ብርሃን፡ ዘይሤለስ፡ በአካሉ።
