@@ -50,14 +50,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-03-17">Added keywords</change>
-         <change who="MKr" when="2020-10-28">Added Ethiopic title</change>
+         <change who="MKr" when="2020-10-28">Added Ethiopic title and relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+        <div type="bibliography">
+            <listRelation>
+                <relation name="ecrm:P129_is_about" active="LIT1903Martyr" passive="PRS9460Theocrit"/>
+            </listRelation>
+
+            <listRelation>
+                <relation name="saws:formsPartOf" active="LIT1903Martyr" passive="LIT1493Gadlas"/>
+            </listRelation>
+
+        </div>
+
          <div type="edition">
           <note>The Gǝʿǝz title is taken from <ref type="mss" corresp="BNFabb152"/>.</note>
-          </div> 
+          </div>
       </body>
    </text>
 </TEI>
