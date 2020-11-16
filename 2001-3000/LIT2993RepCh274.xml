@@ -5,7 +5,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to Jesus Christ</title>
+            <title xml:lang="gez" xml:id="t1">በስመ፡ እግዚአብሔር፡ ቀዳማዊ፡ ዘእንበለ፡ ትማልም፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Ba-sǝma ʾƎgziʾabǝḥer qadāmāwi za-ʾǝnbala tǝmālǝm</title>
+            <title xml:lang="en" corresp="#t1">In the name of God, the First One without yesterday, the Middle One without today, the Last One without tomorrow</title>
+            <title xml:id="t2" xml:lang="en">Hymn to Jesus Christ</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -24,7 +27,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -43,6 +45,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <keywords scheme="#ethioauthlist">
                <term key="Poetry"/>
                <term key="ChristianLiterature"/>
+               <term key="Prayers"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -51,12 +54,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet</change>
          <change who="MV" when="2017-06-23">Added keywords and incipit</change>
          <change who="SH" when="2020-11-13">Added full text and relation</change>
+         <change when="2020-11-16" who="DR">Added information and relations of deleted doublets LIT3940Prayer and LIT4962Basema</change>
+
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
     
          <div type="bibliography">
+            <listRelation>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT2993RepCh274" passive="LIT3940Prayer"/>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT2993RepCh274" passive="LIT4962Basema"/>
+            </listRelation>
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
