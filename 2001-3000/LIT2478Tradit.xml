@@ -4,8 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Traditio Apostolica</title>
-            <author>Apostolic Tradition Hippolytus</author>
+            <title xml:id="t1" xml:lang="la">Traditio Apostolica</title>
+            <title corresp="#t1" xml:lang="en">Apostolic Tradition</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -34,17 +35,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="la">Latin</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2020-11-09" who="ES">added biblio and author</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Bausi2009TradAp"/>
+               </bibl>
+               <bibl><ptr target="bm:Bausi2010TradAp"/></bibl>
+               <bibl><ptr target="bm:Eshetu1988ApostolicTradition"/></bibl>
+            </listBibl>
+            <listBibl type="editions">
+               <bibl><ptr target="bm:Bausi2011TradAp"/></bibl>
+            </listBibl>
+         </div>
+         <listRelation><relation name="saws:isAttributedToAuthor" active="LIT2478Tradit" passive="PRS5349Hippolyt"></relation></listRelation>
+ 
       </body>
    </text>
 </TEI>
