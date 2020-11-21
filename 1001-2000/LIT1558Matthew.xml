@@ -50,6 +50,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-04-04">Added keywords</change>
+         <change who="ABr" when="2020-11-20">Added incipits and explicits and statement about Eusebian sections</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -68,22 +69,41 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      <ptr target="bm:Nicoll1821Bodleianae"/>
                      <citedRange unit="page">17</citedRange>
                   </bibl>
+                  <bibl>
+                     <ptr target="bm:Zuurmond1989EvangeliumMarc"/>
+                     <citedRange unit="page">22-23, 26-27, 29</citedRange>
+                  </bibl>
                </listBibl>
+               <note>The incipit and explicit are taken from
+               <ref type="mss" corresp="GCA001"/>
+               </note>
 
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BiographyMatthew">
-                  <label>Biography of Matthew</label>
-               </div>
-            </div>
+             <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="BiographyMatthew">
+               <label>Biography of Matthew</label>
+               <div type="textpart" subtype="incipit"><ab>ወለማቴዎስ፡ ስሙ፡ ሌዊ፡ ወትርጓሜሁ፡ ኅሩይ፡ ወውእቱ፡
+               እምነገደ፡ ይሳኮር፡ እምሁገር፡ ናዝሬት። ስመ፡ አቡሁ፡ ዲቁ፡ ወስመ፡ እሙ፡ ካሩይታስ።</ab></div>
+               <div type="textpart" subtype="explicit"><ab>ወሰበከ፡ ባቲ፡ በህንድ፡ ወበኢየሩሳሌም።</ab></div>
+             </div>
+             <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="MatthewEusebianSections">
+               <label>Statement about Eusebian Sections in the Gospel of Matthew</label>
+               <div type="textpart" subtype="incipit"><ab>ወኍልቈ፡ ምዕራፋቲሁ፡ ንኡሳን፡ ፫፻፶፭፡</ab></div>
+               <div type="textpart" subtype="explicit"><ab>ወምዕራፉ፡ በልሳነ፡ ሮሜ። ፷፰፡</ab></div>
+             </div>
 
             <!--Is the Note on the division of the Gospel of Matthew part of the Biography or the Tituli or is it an own textpart?-->
 
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="TituliMatthew">
+             <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="TituliMatthew">
                <label>Tituli of the Gospel of Matthew</label>
+               <div type="textpart" subtype="incipit"><ab>፩፡ ሰብአ፡ ሰገል። ፪፡ ቅትለተ፡ ሕፃናት። ፫፡ ስብከተ፡ ዮሓንስ።</ab></div>
+               <div type="textpart" subtype="explicit"><ab>፷፮፡ ክሕደተ፡ ጴጥሮስ። ፷፯፡ ነስሖተ፡ ይሁዳ። ፮፰፡ ዘከመ፡ ነሥአ፡ ዮሴፍ፡
+               ራማዊ፡ ሥጋሁ፡ ለእግዚእ።</ab></div>
+               <!-- <note>The layout of the tituli is arranged in the shape of a numberd list</note> -->
+              </div>
             </div>
             <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT2709Matthew">
                <label>Bǝsrāta Mātewos</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="PostscriptMatthew">
+            <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="PostscriptMatthew">
                <label>Postscript to the Gospel of Matthew</label>
             </div>
 
