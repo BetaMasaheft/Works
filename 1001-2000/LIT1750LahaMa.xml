@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1750LahaMa">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Lāḥā Māryām</title>
-            <title xml:id="t2">Lāḥā Dǝngǝl</title>
+            <title xml:id="t1" xml:lang="gez">ላሐ፡ ማርያም፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Lāḥā Māryām</title>
+            <title xml:lang="gez" type="normalized" xml:id="t2">Lāḥā Dǝngǝl</title>
             <author ref="PRS3251Cyriacus">Cyriacus of Behnesa</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -23,7 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
@@ -36,16 +37,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <textClass>
+         <keywords>
+             <term key="Apocrypha"/>
+         </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2019-11-21" who="ES">added explicit</change>
+         <change when="2020-09-13" who="MKr">added bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <body>
+     <body>
+       <div type="bibliography">
+<listBibl type="editions">
+<bibl><ptr target="bm:Oudenrijn1959Gamaliel"/>
+<citedRange unit="page">2-83</citedRange></bibl>
+</listBibl>
+
+
+       </div>
+
          <div type="edition" xml:lang="gez">
             <div type="textpart" subtype="incipit"/>
             <div type="textpart" subtype="explicit subscriptio" xml:id="colophon">
