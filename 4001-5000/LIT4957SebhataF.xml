@@ -48,27 +48,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     <term key="Hagiography"/>
                     <term key="Poetry"/>
                 </keywords>
+
             </textClass>
-            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+            <langUsage><language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
+
         <revisionDesc>
             <change who="DR" when="2018-04-20">Created entity</change>
             <change who="MV" when="2018-05-02">Added incipit</change>
+              <change who="DN" when="2020-11-20">Added text</change>
         </revisionDesc>
     </teiHeader>
+
     <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography">
-              <listRelation>
-                     <relation name="lawd:hasAttestation" active="LIT4957SebhataF" passive="DSEthiop10"/>
-                     <relation name="saws:formsPartOf" active="LIT4957SebhataF" passive="LIT1961Mashaf"/>
-                 </listRelation>
-                <div type="edition">
-                    <bibl>
-                  <ptr target="bm:Mogas1983Saatat"/>
-                  <citedRange unit="page">223-229</citedRange>
-               </bibl>
-                </div>
+            <div type="edition">
+                <note><bibl>The text follows the edition <ptr target="bm:Mogas1983Saatat"/>
+            </note>
                 <div type="textpart" subtype="incipit" xml:lang="gez">
                     <ab>
                         ስብሐተ፡ ፍቁር፡ ዘጊዮርጊስ።
@@ -88,6 +85,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     </ab>
                 </div>
             </div>
+
+            <div type="bibliography">
+              <listRelation>
+                     <relation name="lawd:hasAttestation" active="LIT4957SebhataF" passive="DSEthiop10"/>
+                     <relation name="lawd:hasAttestation" active="LIT4957SebhataF" passive="DSEthiop12"/>
+                     <relation name="lawd:hasAttestation" active="LIT4957SebhataF" passive="DSEthiop7"/>
+                     <relation name="saws:formsPartOf" active="LIT4957SebhataF" passive="LIT1961Mashaf"/>
+                 </listRelation>
+
+                </div>
         </body>
     </text>
 </TEI>
