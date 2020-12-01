@@ -54,7 +54,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-04-04">Added keywords</change>
          <change who="ES" when="2018-05-09">added main type</change>
-         <change who="ABr" when="2020-11-27">added Preface to the Gospel of John,statement about Eusebian sections, tituli, headline, incipits and explicits from GCA001</change>
+         <change who="ABr" when="2020-11-27">added Preface to the Gospel of John (with title inscriptio),
+           Eusebian sections, tituli, headline (with title inscriptio), colophon (with title subscriptio),
+           incipits and explicits from GCA001</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -74,6 +76,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <!--<div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="BiographyJohn">
                <label>Introduction and Biography of John</label>
 
+               THIS IS ALREADY PRESENT BELOW, IT IS NOT NEEDED. CAN I DELETE IT?
+                IF YES I WOULD USE THE xml:id "BiographyJohn" BELOW, TO REPLACE
+                THE xml:id "BioJohn" IN ORDER TO HAVE THE SAME FORMULATION FOR THE
+                BIOGRAPHIES OF THE FOUR EVANGELISTS (ABr)
+
               <listBibl type="secondary">
                   <bibl>
                      <ptr target="bm:Dillmann1848Catalogus"/>
@@ -86,16 +93,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </listBibl>
             </div>
 
+            CAN THIS BIBLIOGRAPHY BE MOVED UP OR BELOW? (ABr)
+
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="TituliJohn">
                <label>Tituli of the Gospel of John</label>
-            </div>-->
+            </div>
+
+          AGAIN THIS IS ALREADY PRESENT BELOW. CAN I DELETE IT? (ABr)-->
 
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroJohn">
-               <label>Introduction to the Gospel of John</label>
-            <div type="textpart" subtype="title expanded" xml:id="TitleIntroJohn"><ab>በስመ፡
+              <!-->HERE I WOULD SUBSTITUTE THE xml:id= "IntroJohn" WITH "JohnGospelPreface"
+              LIKE IN LUKE. IN FACT THIS IS TECHNICALLY A PREFACE (መቅድመ) AND NOT AN INTRODUCTION (ABr)<-->
+               <label>Preface to the Gospel of John</label>
+            <div type="textpart" subtype="title expanded" xml:id="TitlePrefaceJohn"><ab>በስመ፡
              እግዚአብሔር፡ ዘይትዋሓድ፡ በመለኮት፡ ወይሤለስ፡ በአካላት፡ መቅድመ፡ ወንጌሉ፡ ለዮሐንስ፡ ፈጻሜ፡ ብስራት።</ab></div>
             <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="BioJohn">
                <label>Biography of John</label>
+               <!-->CONCERNING THE xml:id="BioJohn" SEE ABOVE<-->
                <div type="textpart" subtype="incipit"><ab>ዝንቱሰ፡ ዮሓንስ፡ ፩፡ እም፲ወ፪፡ ሓዋርያት። ስማ፡ ለእሙ፡
                ባውፍልያ፡ ወካዕበ፡ ተሰምየት፡ ማርያም። ወውእቱ፡ እምነገደ፡ ዛብሎን፡ ወእምነ፡ ቤተ፡ ሳይዳ፡ ጸሓፈ፡ ወንጌሎ፡ በልሳነ፡ ዮናናውያን፡
                በ፰፡ ዓመት፡ እመንግሥተ፡ ኔሮን፡ ወልደ፡ አቅሎንድዮስ፡ ዘቀተሎሙ፡ ለጴጥሮስ፡ ወለጳውሎስ። በ፲ወ፫፡ ዓመተ፡ መንግሥቱ፡ እምድኅረ፡
@@ -105,7 +119,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="EusebianSectionsJohn">
               <label>Statement about Eusebian Sections in the Gospel of John</label>
               <div type="textpart" subtype="incipit"><ab>ወኍልቈ፡ ምዕራፈ፡ ወንጌሉ፡ ንኡሳን። ፪፻፡ ፴ወ፪፡</ab></div>
-              <div type="textpart" subtype="explicit"><ab>ወምዕራፋቲሁ፡ በልሳነ፡ ቅብጢ። ፵ወ፭፡ ወምዕራፋቲሁ፡ በልሳነ፡ ሮሜ። ፳</ab></div>
+              <div type="textpart" subtype="explicit"><ab>ወምዕራፋቲሁ፡ በልሳነ፡ ሮሜ። ፳</ab></div>
             </div>
             <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="TituliJohn">
               <label>Tituli of the Gospel of John</label>
@@ -123,7 +137,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </div>
             <div type="textpart" subtype="subtextunit coretext" xml:lang="gez" xml:id="JohnGospel">
                <label>Gospel of John</label>
-               <div type="textpart" subtype="incipit"><ab>መልአ፡ ስብከተ፡ ዮሓንስ፡ ወልደ፡ ዘብዴዎስ፡ ሓዋርያ፡ ፩፡ እም፲ወ፪፡</ab></div>
+               <div type="textpart" subtype="incipit"><ab>ቀዳሚሁ፡ ውእቱ፡ ቃል፡ ወውእቱ፡ ቃል፡ ኀበ፡ እግዚኣብሔር፡ ሀለወ፡ ወእግዚኣብሔር፡ ውእቱ፡
+                ቃል፡ ዝንቱ፡ እምቀዲሙ፡ ሀሎ፡ ኀበ፡ እግዚኣብሔር። ኵሉ፡ ቦቱ፡ ኮነ፡ ወዘእንበሌሁሰ፡ አልቦ፡ ዘኮነ፡፡</ab></div>
                <div type="textpart" subtype="explicit"><ab>ወሶበ፡ ተጽሕፈ፡ ኵሉ፡ በበ፡ ኣሓዱ፡ እምኢያግመረ፡ ጥቀ፡ መጻሕፍቲሁ፡ ዘተጽሕፈ፡ አሜን፡ ወአሜን፡</ab></div>
             </div>
             <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="JohnGospelColophon">
