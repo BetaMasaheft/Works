@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1664Homily">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Homily on the three youths in the fiery furnace</title>
-            <author>Theophilos of Alexandria</author>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘአንበሮ፡ አብ፡ ቅዱስ፡ ቴዎፍሎስ፡ ሊቀ፡ ጳጳሳት፡ ዘእለስክንድርያ፡ ዘይቤ፡ በእንተ፡ ቤተ፡ ክርስቲያኖሙ፡ ለ፫ደቂቅ፡ ለአናንያ፡
+            ወአዛርያ፡ ወሚሳኤል፡ በዕለተ፡ ተዝካሮሙ፡ ቅዱስ፡ አመ፡ ፲ለግንቦት፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān za-ʾanbaro ʾab qǝddus Tewoflos liqa ṗāṗṗāsāt za-ʾƎlaskǝndǝryā
+            za-yǝbe baʾǝnta beta krǝstiyānomu la-3daqiq la-ʾAnānyā wa-ʾAzāryā wa-Misāʾel ba-ʿǝlata tazkāromu qǝddus ʾama 10la-gǝnbot</title>
+            <title xml:lang="en" xml:id="t2">Homily on the Church of Three Youths in the Fiery Furnace in Alexandria</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -22,8 +25,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+           <listBibl type="clavis">
+            <bibl type="CPG">
+               <ptr target="bm:CPG2"/>
+               <citedRange unit="item">2626</citedRange>
+            </bibl>
+         </listBibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -34,17 +41,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2020-12-05">Added clavis, bibliography and relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
-      </body>
+     <body>
+         <div type="bibliography">
+           <listBibl type="secondary">
+               <bibl><ptr target="bm:Crum1915Papyruscodex"/>
+               <citedRange unit="page">XVII</citedRange>
+             </bibl>
+           </listBibl>
+             <listRelation>
+                 <relation name="saws:isAttributedToAuthor" active="LIT1664Homily" passive="PRS9486Theophil"/>
+                 <relation name="ecrm:P129_is_about" active="LIT1664Homily" passive="PRS11288AnAzMi"></relation>
+                 <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1664Homily" passive="LIT1493Gadlas"></relation>
+             </listRelation>
+         </div><!---->
+     </body>
    </text>
 </TEI>
