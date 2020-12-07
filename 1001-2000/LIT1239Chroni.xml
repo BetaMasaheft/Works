@@ -4,12 +4,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ዮሐንስ፡ መደበር፡</title>
+            <title xml:lang="en" xml:id="t1" type="main"> Chronicle of John of Nikiu</title>
                <title xml:lang="gez" xml:id="t2">ዮሐንስ፡ መደብር፡</title>
-                 <title xml:lang="gez" corresp="#t2">Yoḥannǝs Madabbǝr</title>
-            <title xml:lang="gez" corresp="#t1">Yoḥannǝs Madabbar</title>
-            <title xml:lang="en" corresp="#t1"> Chronicle of John of Nikiu</title>
-            <author>John of Nikiu</author>
+                 <title xml:lang="gez" corresp="#t2" type="normalized">Yoḥannǝs Madabbǝr</title>
+
+
+
             <editor key="DE"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -64,6 +64,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="DR" when="2017-03-30">Added keywords</change>
         <change who="DR" when="2018-04-25">Added xml:lang to label</change>
         <change when="2018-06-06" who="DE">Added witnesses</change>
+        <change when="2020-09-11" who="DE">Added relation to the Chronicle of Malalas.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -99,15 +100,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
 
          <div type="edition">
 
-            <div type="textpart" subtype="chapter" n="1" xml:lang="gez" xml:id="Preface">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Preface">
                <label xml:lang="en">Preface</label>
             </div>
 
-            <div type="textpart" subtype="chapter" n="1" xml:lang="gez" xml:id="ChapterTable">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="ChapterTable">
                <label xml:lang="en">Chapter table</label>
             </div>
 
-            <div type="textpart" subtype="chapter" n="1" xml:lang="gez" xml:id="PrefaceTranslator">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="PrefaceTranslator">
                <label xml:lang="en">Translator's preface</label>
             </div>
 
@@ -125,6 +126,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
 
             <div type="textpart" subtype="chapter" n="4" xml:lang="gez" xml:id="Chapter4">
                <label xml:lang="en">Chapter 4</label>
+               <listRelation>
+               <relation name="skos:broadMatch"
+                         active="https://malalas.hadw-bw.de/kommentar/1/5"
+                         passive="betmas:LIT1239Chroni.4">
+                         <desc>Parallel transmission in John Malalas 1.5.</desc>
+                       </relation>
+              </listRelation>
             </div>
 
             <div type="textpart" subtype="chapter" n="5" xml:lang="gez" xml:id="Chapter5">
@@ -531,8 +539,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <label xml:lang="en">Chapter 105</label>
             </div>
 
-            <div type="textpart" subtype="chapter" n="6" xml:lang="gez" xml:id="Chapter106">
-               <label xml:lang="en">Chapter 6</label>
+            <div type="textpart" subtype="chapter" n="106" xml:lang="gez" xml:id="Chapter106">
+               <label xml:lang="en">Chapter 106</label>
             </div>
 
             <div type="textpart" subtype="chapter" n="107" xml:lang="gez" xml:id="Chapter107">

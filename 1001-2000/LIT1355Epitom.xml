@@ -4,7 +4,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Epitome of the Apostolical Constitutions</title>
+            <title xml:id="t1">Parallel section to Apostolic Constitutions VIII</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -38,12 +38,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
-         <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="ES" when="2020-11-19">updated text record with biblio and relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Bausi2006CollezioneA"/><citedRange unit="page">54-55</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:formsPartOf" active="LIT6239EcclCanQ" passive="LIT1047Aksumi"/>
+               <relation name="saws:isDifferentTo" active="LIT6239EcclCanQ" passive="LIT2667Statut71Title"></relation>
+            </listRelation>
+         </div>
       </body>
    </text>
 </TEI>
