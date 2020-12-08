@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">ስብሐተ፡ ፍቁር፡ ዘጊዮርጊስ፡</title>
-                <title xml:lang="gez" corresp="#t1">Sǝbḥāta fǝqur za-Giyorgis</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Sǝbḥāta fǝqur za-Giyorgis</title>
                 <title xml:lang="en" corresp="#t1">‘Sǝbḥata fǝqur’ of St George</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
@@ -40,7 +40,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <creation/>
             <abstract>
                 <p>Sǝbḥata fǝqur-hymn to St George of Lydda.
-                  The manuscript tradition seems to differ in varying degrees from the printed edition.</p>
+                  The manuscript tradition seems to differ in varying degrees from the printed edition.
+                In some of the modern editions of <ref type="work" corresp="LIT1961Mashaf">Maṣḥafa saʿātāt</ref>,
+              it is one of a few sǝbḥata fǝqur-hymns dedicated to various saints.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -48,33 +50,56 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     <term key="Hagiography"/>
                     <term key="Poetry"/>
                 </keywords>
+
             </textClass>
-            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+            <langUsage><language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
+
         <revisionDesc>
             <change who="DR" when="2018-04-20">Created entity</change>
             <change who="MV" when="2018-05-02">Added incipit</change>
+              <change who="DN" when="2020-11-20">Added text</change>
         </revisionDesc>
     </teiHeader>
+
     <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography">
-              <listRelation>
-                     <relation name="lawd:hasAttestation" active="LIT4957SebhataF" passive="DSEthiop10"/>
-                     <relation name="saws:formsPartOf" active="LIT4957SebhataF" passive="LIT1961Mashaf"/>
-                 </listRelation>
-                <div type="edition">
-                    <bibl>
-                  <ptr target="bm:Mogas1983Saatat"/>
-                  <citedRange unit="page">223-229</citedRange>
-               </bibl>
-                </div>
+            <div type="edition">
+
+                <note>The text follows the edition <bibl><ptr target="bm:Mogas1983Saatat"/></bibl>.
+
+            </note>
                 <div type="textpart" subtype="incipit" xml:lang="gez">
                     <ab>
-                        ሃሌ፡ ሉያ፡ ሃሌ፡ ሉያ፡ ነዓ፡ ነዓ፡ ጊዮርጊስ፡ እንዘ፡ ትሰርር፡ በፈረስ፡
+                        ስብሐተ፡ ፍቁር፡ ዘጊዮርጊስ።
+                          ትባርኮ፡ ነፍስየ፡ ለእግዚአብሔር፡ ፫ተጊዜ፡ በል።
+                        ነዓ፡ ነዓ፡ ነዓ፡ ጊዮርጊስ፡ እንዘ፡ ትሠርር፡ በፈረስ፡ ወነዓ፡ ፍቁርየ፡ ዘልዳ፡ ንጉሥ።
+                        ለለምዕራፉ፡ ሰአል፡ ለነ፡ ጊዮርጊስ፡ ሰ፡ ለነ፡ ጊዮርጊስ፡ ሰማዕተ፡ ኢየሱስ፡ ክርስቶስ፡ በል።
+                        ናቄርብ፡ ለከ፡ ስብሐተ፡ ወጋዳ፡ ጊዮርጊስ፡ ኮከበ፡ ልዳ፡ ለጥበበ፡ ሕንጻ፡ ማኅፈዳ።
+                        ጊዮርጊስ፡ ዘርብ፡ ፍልጥኤማዊ፡ ኮከብ፡ እስእለከ፡ በአብ፡ እምበረከትከ፡ ለኵልነ፡ ተሀብ። ጊዮርጊስ፡
+                        ኅሩይ፡ ተላዌ፡ ፀሐይ፧ ንስእለከ፡ በአዶናይ፡ ምህላነ፡ ትስምዕ፡ እምብካይ፡ ጊዮርጊስ፡ ዓምደ፡ በቅብዐ፡ በለሶን፡ ጽሑድ፡ ናምሕለከ፡
+                        በወልድ፡ ከመ፡ ትናዝዘነ፡ ነዓ፡ እምኀዘን፡ ክቡድ።
+                    </ab>
+                </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <ab>
+                        በእንተ፡ ጊዮርጊስ፡ ምእመንከ፡ ምህላነ፡ አዕርግ፡ አርያምከ።
+                        አምላከ፡ ጊዮርጊስ፡ መሐረነ፡ አምላከ፡ ጊዮርጊስ፡ መሀከነ፡ አምላከ፡ ጊዮርጊስ፡ ተሣሃለነ።
                     </ab>
                 </div>
             </div>
+
+            <div type="bibliography">
+              <listRelation>
+                     <relation name="lawd:hasAttestation" active="LIT4957SebhataF" passive="DSEthiop10"/>
+                     <relation name="lawd:hasAttestation" active="LIT4957SebhataF" passive="DSEthiop12"/>
+                     <relation name="lawd:hasAttestation" active="LIT4957SebhataF" passive="DSEthiop7"/>
+                     <relation name="saws:formsPartOf" active="LIT4957SebhataF" passive="LIT1961Mashaf"/>
+                     <relation name="saws:isDifferentTo" active="LIT4957SebhataF" passive="LIT2300Sebhat"/>
+                 </listRelation>
+
+                </div>
         </body>
     </text>
 </TEI>

@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2093OnHero">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="en" xml:id="t1">On Herodias</title>
-            <title xml:lang="en" xml:id="t2">On Decapitation of John the Baptist</title>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘዮሐንስ፡ ጳጳስ፡ ዘቈስጠንጥኖስ፡ ጶሊስ፡ ሀገር፡ በእንተ፡ ሄሮድያዳ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān za-Yoḥannǝs ṗāṗṗās za-Qʷasṭanṭǝnos Ṗolis hagar baʾǝnta Herodǝyādā</title>
+            <title xml:lang="en" xml:id="t2">On Herodias</title>
+            <title xml:lang="en" xml:id="t3">On Decapitation of John the Baptist</title>
             <!-- possibly the same as LIT2112OntheB? -->
             <editor role="generalEditor" key="AB"/>
+            <editor role="editor" key="MKr"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -26,6 +29,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
+         <sourceDesc>
+             <listBibl type="clavis">
+              <bibl type="CPG">
+                 <ptr target="bm:CPG2"/>
+                 <citedRange unit="item">4570</citedRange>
+              </bibl>
+           </listBibl>
+         </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -35,8 +46,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
-         
+         <langUsage>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
+
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -52,6 +66,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-15" who="ES">keywords relation</change>
          <change who="MV" when="2017-12-21">Updated</change>
+         <change who="MKr" when="2020-11-21"></change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -65,6 +80,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </listBibl>
             <listRelation>
                <relation name="saws:isAttributedToAuthor" active="LIT2093OnHero" passive="PRS5720JohnChr"/>
+               <relation name="ecrm:P129_is_about" active="LIT2093OnHero" passive="PRS5741Johnthe"/>
             </listRelation>
          </div>
       </body>

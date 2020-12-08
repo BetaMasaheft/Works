@@ -1,49 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1047Aksumi">
-   <teiHeader xml:base="https://betamasaheft.eu/">
-      <fileDesc>
-         <titleStmt>
-            <title xml:id="t1">Aksumite collection</title>
-            <editor role="generalEditor" key="AB"/>
-            <funder>Akademie der Wissenschaften in Hamburg</funder>
-         </titleStmt>
-         <publicationStmt>
-            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
-            <pubPlace>Hamburg</pubPlace>
-            <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
-               </licence>
-            </availability>
-         </publicationStmt>
-         <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
-         </sourceDesc>
-      </fileDesc>
-      <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
-            <xi:fallback>
-               <p>Definitions of prefixes used.</p>
-            </xi:fallback>
-         </xi:include>
-      </encodingDesc>
-      <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
-      </profileDesc>
-      <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
-         <change who="ES" when="2016-02-09">CREATED: text record</change>
-      </revisionDesc>
-   </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
-      </body>
-   </text>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title xml:lang="en" xml:id="t1">Sinodos of Qǝfrǝyā</title>
+               <title xml:lang="en" xml:id="t2">Aksumite Collection</title>
+               <editor role="generalEditor" key="AB"/>
+               <editor key="ES"/>
+               <funder>Akademie der Wissenschaften in Hamburg</funder>
+            </titleStmt>
+            <publicationStmt>
+               <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+               <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+                  Forschungsumgebung / Beta maṣāḥǝft</publisher>
+               <pubPlace>Hamburg</pubPlace>
+               <availability>
+                  <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                     licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+               </availability>
+            </publicationStmt>
+            <sourceDesc>
+               <p/>
+            </sourceDesc>
+         </fileDesc>
+         <encodingDesc>
+            <p>A digital born TEI file</p>
+         </encodingDesc>
+         <profileDesc>
+            <creation/>
+            <abstract>
+               <p>The Aksumite Collection is a term introduced to define a specific canonical-liturgical collection of the late antique and early medieval Ethiopian Church 
+                  and the so far codex unicus that attests it. 
+                  The Aksumite Collection contains a set of translations from Greek to Gǝʿǝz (Ethiopic) that on linguistic and philological evidence are datable to the Aksumite period, 
+                  to a time range between the fifth and the sixth or at the latest the seventh century CE, 
+                  while the codex is not precisely dated, but datable to the thirteenth century or earlier. </p>
+            </abstract>
+            <textClass>
+               <keywords>
+                  <term key="CanonLaw"/>
+                  <term key="Liturgy"/>
+                  <term key="ChristianLiterature"/>
+                  <term key="Translation"/>
+               </keywords>
+            </textClass>
+            <langUsage>
+               <language ident="en">English</language>
+               <language ident="gez">Gǝʿǝz</language>
+            </langUsage>
+         </profileDesc>
+         <revisionDesc>
+            <change who="ES" when="2020-11-19">Created entity</change>
+         </revisionDesc>
+      </teiHeader>
+      <text>
+         <body>
+            <div type="edition">
+               <div type="textpart" n="1" xml:id="EcclCan" corresp="LIT6239EcclCanQ"><label>Ecclesiastical canons</label></div> 
+               <div type="textpart"  n="2" xml:id="HEpA" corresp="LIT5064HEpA"><label>History of the Episcopate of Alexandria</label></div>
+               <div type="textpart"  n="3" xml:id="Ep70" corresp="LIT1348Epistl"><label>Epistle 70 of Cyprian of Carthage</label></div>
+               <div type="textpart"  n="4" xml:id="ApTrad" corresp="LIT6240EcclCanQ"><label>Apostolic Tradition</label></div>
+               <div type="textpart"  n="5" xml:id="ApConst" corresp="LIT1355Epitom"><label>Parallel section to Apostolic Constitutions VIII</label></div>
+               <div type="textpart"  n="6" xml:id="Charisms" corresp="LIT2114OntheC"><label>On the charisms</label></div>
+               <div type="textpart"  n="7" xml:id="ListAp" corresp="LIT6241EpAlQ"><label>List of Apostles and disciples</label></div>
+               <div type="textpart"  n="8" xml:id="NameMonths" corresp="LIT6251Months"><label>Names of the months</label></div>
+               <div type="textpart"  n="9" xml:id="Baptism" corresp="LIT6254Baptism"><label>Baptismal ritual</label></div>
+               <div type="textpart"  n="10" xml:id="Euchologion" corresp="LIT6255Euchologion"><label>Euchologion</label></div>
+               <div type="textpart" n="11" xml:id="ApCanons" corresp="LIT2675AC81"><label>81 Apostolic canons</label></div>
+               <div type="textpart" n="12" xml:id="Nicaea" corresp="LIT6256Nicaea"><label>Council and the names of the fathers of Nicaea</label></div>
+               <div type="textpart" n="13" xml:id="CanonsNicaea" corresp="LIT6257Nicaea"><label>Canons of the Council of Nicaea</label></div>
+               <div type="textpart" n="14" xml:id="LetterConstantine1" corresp="LIT6258Alexandrinians"><label>Epistle of <persName ref="PRS3175Constant">Constantine</persName> to the Alexandrinians</label></div>
+               <div type="textpart" n="15" xml:id="LetterConstantine2" corresp="LIT6259Arius"><label>Epistle of <persName ref="PRS3175Constant">Constantine</persName> on <persName ref="PRS2033AriusA">Arius</persName></label></div>
+               <div type="textpart" n="16" xml:id="LetterAthanasius" corresp="LIT1780Letter"><label>Epistle of Athanasius to Epictetus</label></div>
+               <div type="textpart" n="17" xml:id="Judge" corresp="LIT6260Judge"><label>On the Only Judge</label></div>
+               <div type="textpart" n="18" xml:id="Serdica" corresp="LIT6249Serdica"><label>Council and the names of the fathers of Serdica</label></div> 
+               <div type="textpart" n="19" xml:id="CanonsSerdica" corresp="LIT6250Serdica"><label>Canons of the council of Serdica</label></div>
+               
+               <div type="textpart" xml:id="AntColl" corresp="LIT6238AksColl"><label>Antiochene Collection</label>
+                  <div type="textpart" n="20" xml:id="CanonsNeocesarea1" corresp="LIT6242Neocesarea#Canons1"><label>Canons of the council of Neocaesarea</label></div>
+                  <div type="textpart" n="21" xml:id="CanonsAncyra" corresp="LIT6243Ancyra"><label>Canons of the council of Ancyra</label></div>
+                  <div type="textpart" n="22" xml:id="CanonsNeocesarea2" corresp="LIT6242Neocesarea#Canons2"><label>Canons of the council of Neocaesarea</label></div>
+                  <div type="textpart" n="23" xml:id="Gangra" corresp="LIT6244Gangra"><label>Council of Gangra</label></div>
+                  <div type="textpart" n="24" xml:id="CanonsGangra" corresp="LIT6245Gangra"><label>Canons of the council of Gangra</label></div>
+                  <div type="textpart" n="25" xml:id="Antioch" corresp="LIT6246Antioch"><label>Council of Antioch</label></div>
+                  <div type="textpart" n="26" xml:id="CanonsAntioch" corresp="LIT6247Antioch"><label>Canons of the council of Antioch</label></div>
+                  <div type="textpart" n="27" xml:id="Laodicea" corresp="LIT6248Laodicea"><label>Council and canons of Laodicea</label></div>
+               </div>
+               
+               <div type="textpart" n="28" xml:id="Chalcedon" corresp="LIT6261Chalcedon"><label>Canons of the council of Chalcedon</label></div>
+               <div type="textpart" n="29" xml:id="Constantinople" corresp="LIT6262Constantinople"><label>Canons of the council of Constantinople</label></div>
+               <div type="textpart" n="30" xml:id="Ephesus" corresp="LIT6263Ephesus"><label>Council of Ephesus</label></div>
+               <div type="textpart" xml:id="Sylloge" corresp="LIT2372Syllog"><label>Sylloge of Timotheus Aelurus</label>
+                  <div type="textpart" n="31" xml:id="Timotheus1" corresp="LIT1785Letter"><label>Epistle to the Alexandrinians</label></div>
+                  <div type="textpart" n="32" xml:id="Timotheus2" corresp="LIT1786Letter"><label>Epistle to the Constantinopolitans</label></div>
+                  <div type="textpart" n="33" xml:id="Timotheus3" corresp="LIT6252TimothyCyril"><label>Twelve chapters of Cyril of Alexandria</label></div>
+                  <div type="textpart" n="34" xml:id="Timotheus4" corresp="LIT2220Refuta"><label>Refutation of the council of Chalcedon</label></div>
+                  <div type="textpart" n="35" xml:id="Timotheus5" corresp="LIT6253TimothyGregory"><label>Treatises of Gregory of Nazianzus</label></div>
+               </div>
+               <div type="textpart" n="36" xml:id="Peter" corresp="LIT2693CanR"><label>Canonical answers of Peter of Alexandria</label></div>
+               
+               
+            </div>
+            <div type="bibliography">
+               <listBibl type="secondary">
+                  <bibl>
+                     <ptr target="bm:HEpA"/>
+                  </bibl>
+               </listBibl>
+               <listBibl type="secondary">
+                  <bibl>
+                     <ptr target="bm:BausiEtAl2020Senodos"/>
+                  </bibl>
+                  <bibl> <ptr target="bm:Bausi2006CollezioneA"/></bibl>
+               </listBibl>
+            </div>
+            <listRelation>
+               <relation name="saws:isDifferentTo" active="LIT6238AksColl" passive="LIT2371Senodo"></relation>
+            </listRelation>
+         </body>
+      </text>
+
 </TEI>
