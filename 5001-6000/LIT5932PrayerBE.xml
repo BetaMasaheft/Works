@@ -37,6 +37,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <keywords>
                     <term key="BetaEsraelLiterature"/>
                     <term key="Prayers"/>
+                    <term key="ChristianLiterature"/>
+                    <term key="Liturgy"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -46,22 +48,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="ES" when="2020-05-20">Created entity</change>
+            <change who="MV" when="2020-12-08">Added bibl, keywords, relation</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="edition" xml:lang="gez">
-                <div type="textpart" subtype="incipit"><ab>ተዘከር፡ እግዚኦ፡ ኪዳነ፡ አግብርቲከ፡ ኪዳነ፡ አብርሃም፡</ab>
-                    <note>quoted after <ref type="mss" target="ESsdm021"/></note></div>
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>This incipit is taken from <ref type="mss" corresp="BDLaethf34"/>.</note>
+                    <ab>
+                        ተዘከር፡ እግዚኦ፡ ኪዳነ፡ አግብርቲከ፡ ቅዱሳን፡ ኪዳን፡ አብርሃም፡ ይስሐቅ፡ ወያዕቆብ፡ ምእመናኒከ፡ ዘአሰፈውኮሙ፡ 
+                        ተስፋ፡ ጽድቅ፡ ወሕይወት፡ ወመሐልከ፡ ሎሙ፡ በርእስከ።
+                    </ab>
+                </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <note>This explicit is taken from <ref type="mss" corresp="BDLaethf34"/>.</note>
+                    <ab>
+                        ኢሰማዕነ፡ ወኢርኢነ፡ ወኢነገሩነ፡ አበዊነ፡ ከመቦ፡ ባዕድ፡ አምላክ፡ ዘእንበሌከ። ይትኃፈሩ፡
+                        ኵሎሙ፡ እለ፡ ይሰግዱ፡ ለግልፎ፡ ወእለ፡ ይትሜክሁ፡ በአማልክቲሆሙ፡ ነፍስነሰ፡ ትሴፈዎ፡ ለእግዚአብሔር፡ እስመ፡ ረዳኢነ፡ ወምስካይነ፡ ውእቱ፡
+                        ለዓለም።
+                    </ab>
+                </div>
             </div>
             <div type="bibliography">
                 <listBibl type="editions">
                     <bibl>
                         <ptr target="bm:Halevy1877Prieres"/>
-                        <citedRange unit="page">40-42</citedRange>
+                        <citedRange unit="page">40–42</citedRange>
                     </bibl>
+                    <bibl><ptr target="bm:Tasfa1955Saatat"/><citedRange unit="page">11–12</citedRange></bibl>
                 </listBibl>
-            </div><!---->
+                <listRelation>
+                    <relation name="saws:formsPartOf" active="LIT5932PrayerBE" passive="LIT1961Mashaf"/>
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>
