@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2436Teezaz">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Tǝʾǝzazä sänbät</title>
+            <title xml:lang="gez" xml:id="t1">ትእዛዘ፡ ሰንበት፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Tǝʾǝzāza sanbat</title>
+            <title xml:lang="en" corresp="#t1">The commandment of the Sabbath</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,17 +35,45 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+        <abstract><p></p></abstract>
+         <langUsage>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
+         <textClass>
+           <keywords>
+             <term key="BetaEsraelLiterature"></term>
+             <term key="Apocrypha"/>
+         </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2020-12-15">Added bibliography and relation</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <listRelation>
+           <relation name="saws:isAttributedToAuthor" active="LIT2436Teezaz" passive="PRS8281Sabra"/>
+         </listRelation>
+        <listBibl type="editions">
+          <bibl><ptr target="bm:Halevy1902Sanbat"/>
+          <citedRange unit="page">1-40</citedRange></bibl>
+        </listBibl>
+
+        <listBibl type="translation">
+        <bibl><ptr target="bm:Leslau1951Falasha"/>
+      <citedRange unit="page">3-39</citedRange></bibl>
+        </listBibl>
+
+        <listBibl type="secondary">
+        <bibl><ptr target="bm:Kaplan1999Literature"/>
+      <citedRange unit="page">104-107</citedRange></bibl>
+        </listBibl>
+
       </body>
    </text>
 </TEI>
