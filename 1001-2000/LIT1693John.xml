@@ -55,8 +55,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="DR" when="2017-04-04">Added keywords</change>
          <change who="ES" when="2018-05-09">added main type</change>
          <change who="ABr" when="2020-11-27">added Preface to the Gospel of John (with title inscriptio),
-           Eusebian sections, tituli, headline (with title inscriptio), colophon (with title subscriptio),
-           incipits and explicits from GCA001</change>
+           Eusebian sections, tituli, headline (with title inscriptio), incipits and explicits from GCA001</change>
+         <change who="ABr" when="2020-12-04">Deleted BioJohn (BiographyJohn was already present); added colophon (with title subscriptio) to xml:id="Postscript"</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -73,15 +73,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
 
          <div type="edition">
 
-            <!--<div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="BiographyJohn">
-               <label>Introduction and Biography of John</label>
-
-               THIS IS ALREADY PRESENT BELOW, IT IS NOT NEEDED. CAN I DELETE IT?
-                IF YES I WOULD USE THE xml:id "BiographyJohn" BELOW, TO REPLACE
-                THE xml:id "BioJohn" IN ORDER TO HAVE THE SAME FORMULATION FOR THE
-                BIOGRAPHIES OF THE FOUR EVANGELISTS (ABr)
-
-              <listBibl type="secondary">
+            <listBibl type="secondary">
                   <bibl>
                      <ptr target="bm:Dillmann1848Catalogus"/>
                      <citedRange unit="page">16</citedRange>
@@ -91,26 +83,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      <citedRange unit="page">18</citedRange>
                   </bibl>
                </listBibl>
-            </div>
 
-            CAN THIS BIBLIOGRAPHY BE MOVED UP OR BELOW? (ABr)
-
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="TituliJohn">
-               <label>Tituli of the Gospel of John</label>
-            </div>
-
-          AGAIN THIS IS ALREADY PRESENT BELOW. CAN I DELETE IT? (ABr)-->
 
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroJohn">
-              <!-->HERE I WOULD SUBSTITUTE THE xml:id= "IntroJohn" WITH "JohnGospelPreface"
-              LIKE IN LUKE. IN FACT THIS IS TECHNICALLY A PREFACE (መቅድመ) AND NOT AN INTRODUCTION (ABr)<-->
-               <label>Preface to the Gospel of John</label>
+            <label>Preface to the Gospel of John</label>
             <div type="textpart" subtype="title expanded" xml:id="TitlePrefaceJohn"><ab>በስመ፡
-             እግዚአብሔር፡ ዘይትዋሓድ፡ በመለኮት፡ ወይሤለስ፡ በአካላት፡ መቅድመ፡ ወንጌሉ፡ ለዮሐንስ፡ ፈጻሜ፡ ብስራት።</ab></div>
-            <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="BioJohn">
+             እግዚአብሔር፡ ዘይትዋሓድ፡ በመለኮት፡ ወይሤለስ፡ በኣካላት፡ መቅድመ፡ ወንጌሉ፡ ለዮሐንስ፡ ፈጻሜ፡ ብስራት።</ab></div>
+            <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="BiographyJohn">
                <label>Biography of John</label>
-               <!-->CONCERNING THE xml:id="BioJohn" SEE ABOVE<-->
-               <div type="textpart" subtype="incipit"><ab>ዝንቱሰ፡ ዮሓንስ፡ ፩፡ እም፲ወ፪፡ ሓዋርያት። ስማ፡ ለእሙ፡
+               <div type="textpart" subtype="incipit"><ab>ዝንቱሰ፡ ዮሐንስ፡ ፩፡ እም፲ወ፪፡ ሓዋርያት። ስማ፡ ለእሙ፡
                ባውፍልያ፡ ወካዕበ፡ ተሰምየት፡ ማርያም። ወውእቱ፡ እምነገደ፡ ዛብሎን፡ ወእምነ፡ ቤተ፡ ሳይዳ፡ ጸሓፈ፡ ወንጌሎ፡ በልሳነ፡ ዮናናውያን፡
                በ፰፡ ዓመት፡ እመንግሥተ፡ ኔሮን፡ ወልደ፡ አቅሎንድዮስ፡ ዘቀተሎሙ፡ ለጴጥሮስ፡ ወለጳውሎስ። በ፲ወ፫፡ ዓመተ፡ መንግሥቱ፡ እምድኅረ፡
                ዕርገቱ፡ ለእግዚእነ፡ በ፴፡ ዓመት።</ab></div>
@@ -124,7 +105,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="TituliJohn">
               <label>Tituli of the Gospel of John</label>
               <div type="textpart" subtype="incipit"><ab>፩፡ ተአምር፡ ዘቃና፡ ዘገሊላ። ፪፡ ዘከመ፡ ሰደደ፡ እምኰራብ። ፫፡ ኒቆዲሞስ።</ab></div>
-              <div type="textpart" subtype="explicit"><ab>፲፰፡ ዘከመ፡ ነሥኣ፡ ዮሴፍ፡ ሥጋሁ። ፲፱፡ ዘከመ፡ ዘነዉ፡ መላእክት፡ ትንሣኤ፡ ለአንስት። ፳፡ በዊኦቱ፡ ኀበ፡ አርድእት፡ እንዘ፡ ዕፅው፡ ኃዋኅው።</ab></div>
+              <div type="textpart" subtype="explicit"><ab>፲፰፡ ዘከመ፡ ነሥኣ፡ ዮሴፍ፡ ሥጋሁ። ፲፱፡ ዘከመ፡ ዜነዉ፡ መላእክት፡ ትንሣኤ፡ ለአንስት።
+              ፳፡ በዊኦቱ፡ ኀበ፡ አርድእት፡ እንዘ፡ ዕፅው፡ ኃዋኅው።</ab></div>
             </div>
             </div>
 
@@ -135,15 +117,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <ab><seg type="title inscriptio expanded">ብስራተ፡ አብ፡ ቅዱስ፡ ትሩፍ፡ ረድእ፡ ተናገሪ፡ በመለኮት፡ ዮሓንስ፡ ወልደ፡
                 ዘብዴዎስ፡ ፍቁረ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ።</seg> ጸሎቱ፡ ወበረከቱ፡ የሀሉ፡ ምስለ፡ ገብሩ፡ ዘመለኮት፡ ለዓመለ፡ ዓለም፡ አሜን፡</ab>
             </div>
-            <div type="textpart" subtype="subtextunit coretext" xml:lang="gez" xml:id="JohnGospel">
+            <div type="textpart" subtype="coretext" xml:lang="gez" xml:id="JohnGospel">
                <label>Gospel of John</label>
                <div type="textpart" subtype="incipit"><ab>ቀዳሚሁ፡ ውእቱ፡ ቃል፡ ወውእቱ፡ ቃል፡ ኀበ፡ እግዚኣብሔር፡ ሀለወ፡ ወእግዚኣብሔር፡ ውእቱ፡
-                ቃል፡ ዝንቱ፡ እምቀዲሙ፡ ሀሎ፡ ኀበ፡ እግዚኣብሔር። ኵሉ፡ ቦቱ፡ ኮነ፡ ወዘእንበሌሁሰ፡ አልቦ፡ ዘኮነ፡፡</ab></div>
+                ቃል፡ ዝንቱ፡ እምቀዲሙ፡ ሀሎ፡ ኀበ፡ እግዚኣብሔር። ኵሉ፡ ቦቱ፡ ኮነ፡ ወዘእንበሌሁሰ፡ አልቦ፡ ዘኮነ፡</ab></div>
                <div type="textpart" subtype="explicit"><ab>ወሶበ፡ ተጽሕፈ፡ ኵሉ፡ በበ፡ ኣሓዱ፡ እምኢያግመረ፡ ጥቀ፡ መጻሕፍቲሁ፡ ዘተጽሕፈ፡ አሜን፡ ወአሜን፡</ab></div>
             </div>
-            <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="JohnGospelColophon">
+            <div type="textpart" subtype="colophon" xml:lang="gez" xml:id="Postscript">
               <label>Colophon of the Gospel of John</label>
-              <div type="textpart" subtype="incipit"><ab>መልአ፡ <seg type="title subscriptio">ስብከተ፡ ዮሓንስ፡ ወልደ፡ ዘብዴዎስ፡ ሓዋርያ፡
+              <div type="textpart" subtype="incipit"><ab>መልአ፡ <seg type="title subscriptio expanded">ስብከተ፡ ዮሓንስ፡ ወልደ፡ ዘብዴዎስ፡ ሓዋርያ፡
               ፩፡ እም፲ወ፪፡</seg>እንተ፡ ጸሓፎ፡ በዮናኒ፡ ለሰብኣ፡ ሀገረ፡ ኤፌሶን።</ab></div>
               <div type="textpart" subtype="explicit"><ab>በ፰፡ ዓመተ፡ መንግሥቱ፡ ለጢባርዮስ፡ ቄሳር። ጸሎቱ፡ ወበረከቱ፡ ለቅዱስ፡ ዮሓንስ፡ የሀሉ፡ ምስለ፡ ገብሩ፡
               ዘመለኮት፡ ወፍቁሩ፡ በእደ፡ ማርያም፡ ወጻሓፊሃ፡ ኃጥእ፡ ገብረ፡ አምላክ፡ ለዓለመ፡ ዓለም፡ አሜን፡ ወአሜን።</ab></div>
@@ -153,13 +135,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Stichometry">
                <label>Stichometry to the Gospel of John</label>
             </div>
-
-            <!--<div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Postscript">
-               <label>Postscript to the Gospel of John</label>
-            </div>
-          IF BY POSTSCRIPT COLOPHON IS MEANT, THIS SHALL BE DELETED BECAUSE I ADDED THE COLOPHON ABOVE (ABr)-->
-
-         </div>
+          </div>
+        </div>
 
       </body>
    </text>

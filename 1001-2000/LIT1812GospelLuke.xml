@@ -43,101 +43,145 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="ABr" when="2020-11-28">Added Preface (with supplication, title inscriptio, Eusebian sections), headline (with title inscriptio), gospel; incipits and explicits from GCA001</change>
+          <change who="ABr" when="2020-12-04"></change>
+         <change who="ABr" when="2020-12-04">Added type:="colophon" to xml:id="PostscriptLuke" and label Colophon of the Gospel of Luke</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
         <div type="edition">
+          <listBibl type="secondary">
+             <bibl>
+                <ptr target="bm:Dillmann1848Catalogus"/>
+                <citedRange unit="page">15</citedRange>
+             </bibl>
+             <bibl>
+                <ptr target="bm:Nicoll1821Bodleianae"/>
+                <citedRange unit="page">17-18</citedRange>
+             </bibl>
+          </listBibl>
+          <note> The incipits and the explicits are taken from <ref type="mss" corresp="GCA001"/>
+           </note>
 
-           <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BiographyLuke">
-               <label>Introduction and Biography of Luke</label>
-              <listBibl type="secondary">
-                 <bibl>
-                    <ptr target="bm:Dillmann1848Catalogus"/>
-                    <citedRange unit="page">15</citedRange>
-                 </bibl>
-                 <bibl>
-                    <ptr target="bm:Nicoll1821Bodleianae"/>
-                    <citedRange unit="page">17-18</citedRange>
-                 </bibl>
-              </listBibl>
+        <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LukeGospelPreface">
+          <label>Preface to the Gospel of Luke</label>
+           <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="SupplicationPrefaceLuke">
+              <label>Supplication in the Preface to the Gospel of Luke</label>
+              <div type="textpart" subtype="incipit"><ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩፡ አምላክ። ዘመሓረነ፡ በረድኤቱ፡
+               እምድኅረ፡ ስሕተት፡ ወዑረት። ወኣርኣየነ፡ ተመርሖ፡ እመድኅረ፡ እከይ፡ ወተኃጕሎት፡</ab></div>
+              <div type="textpart" subtype="explicit"><ab>ወስብሓት፡ ሎቱ፡ ዕዘዝ፡ አልቦ፡ አምላክ፡ ዘእንበሌሁ።</ab></div>
             </div>
-
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="TituliLuke">
-               <label>Tituli of the Gospel of Luke</label>
+            <div type="textpart" subtype="title expanded" xml:id="TitlePrefaceLuke"><ab>ንቀድም፡ በረድኤተ፡
+             እግዚአብሔር፡ በጽሒፈ፡ መቅድመ፡ ሉቃስ፡ ኅሩይ፡ ፩፡ እም፸ወ፪፡ አርድእት፡ ኅሩያን።</ab></div>
+            <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="BiographyLuke">
+              <label>Biography of Luke</label>
+              <div type="textpart" subtype="incipit"><ab>ዝንቱሰ፡ ሉቃስ፡ ነበረ፡ ዓቃቤ፡ ሥራይ፡ በኣንጾኪያ። ወኮነ፡ ረድኦ፡
+               ለእግዚእነ። ወውእቱ፡ ቀለዮጳ፡ ዘተርእዮ፡ እግዚእነ፡ በፍኖተ፡ ኢማሑስ፡ በዕለተ፡ ትንሣኤ።</ab></div>
+              <div type="textpart" subtype="explicit"><ab>ወኣዕረፈ፡ ከዊኖ፡ ሰማዕተ፡ በሮሜ፡ አመ፡ ፳ወ፪፡ ለጥቅምት።</ab></div>
             </div>
+            <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="EusebianSectionsLuke">
+              <label>Statement about the Eusebian Sections in the Gospel of Luke</label>
+              <div type="textpart" subtype="incipit"><ab>ወኍልቈ፡ ኣርእስቲሁ፡ ንኡሳን፡ ፫፻፡ ፵ወ፪።</ab></div>
+              <div type="textpart" subtype="explicit"><ab>ወምዕራፋቲሁ፡ በልሳነ፡ ሮሜ፡ ፹፫።</ab></div>
+            </div>
+            <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="TituliLuke">
+              <label>Tituli of the Gospel of Luke</label>
+              <div type="textpart" subtype="incipit"><ab>፩፡ ጻሐፍት። ፪፡ ኖሎት። ፫፡ ስምዖን፡ ካህን።</ab></div>
+              <div type="textpart" subtype="explicit"><ab>
+              <l n="70">፹፩፡ ዘከመ፡ ነስሓ፡ ፈያታዊ።</l>
+              <l n="71">፹፪፡ በእንተ፡ ስእለተ፡ ሥጋሁ።</l>
+              <l n="72">፹፫፡ ቀለዮጳ፡ ወካልኡ።</l></ab></div>
+            </div>
+        </div>
 
-           <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT2713Luke">
-              <label>Bǝsrāta Luqās</label>
-              <div type="textpart" subtype="chapter" xml:id="ch1">
+        <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT2713Luke">
+          <label>Bǝsrāta Luqās</label>
+             <div type="textpart" subtype="textsubunit" xml:id="LukeGospelHeadline">
+              <label>Headline of the Gospel of Luke</label>
+              <ab><seg type="title inscriptio expanded">ብስራተ፡ አብ፡ ትሩፍ፡ ሉቃስ፡ ወንጌላዊ፡ አሓዱ፡
+               እምሰብዓ፡ ወክልኤቱ፡ ኣርድእት።</seg>ጸሎቱ፡ ወበረከቱ፡ የሀሉ፡ ምስለ፡ ገብሩ። ዘመለኮት፡ ወፍቁሩ፡ በእደ፡
+               ማርያም፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
+             </div>
+             <div type="textpart" subtype="coretext" xml:id="LukeGospel">
+               <label>Gospel of Luke</label>
+               <div type="textpart" subtype="incipit"><ab>እስመ፡ ብዙኃን፡ እለ፡ ፈቀዱ፡ ሠሪዓ፡ ዜና፡ ግብር፡ ዘንሕነ፡ ጠየቅናሁ፡ ዘከመ፡
+                አይድዑነ፡ እልክቱ፡ እለ፡ ቀደሙ፡ ርእየቶ፡ ወተልእክዎ፡ ለቃል፡ ሊተኒ፡ ረትዓኒ፡ ካዕበ፡ ከመ፡ እጽሓፍ፡ ለከ፡</ab></div>
+               <div type="textpart" subtype="explicit"><ab>ወነበሩ፡ በቤተ፡ መቅደስ፡ እንዘ፡ ይሴብሕዎ፡ ወይባርክዎ፡
+                ለእግዚአብሔር፡ በኵሉ፡ ጊዜ። አሜን።</ab></div>
+              <div type="textpart" subtype="textsubunit" xml:id="ch1">
                   <label>Chapter 1</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch2">
+              <div type="textpart" subtype="textsubunit" xml:id="ch2">
                   <label>Chapter 2</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch3">
+              <div type="textpart" subtype="textsubunit" xml:id="ch3">
                   <label>Chapter 3</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch4">
+              <div type="textpart" subtype="textsubunit" xml:id="ch4">
                   <label>Chapter 4</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch5">
+              <div type="textpart" subtype="textsubunit" xml:id="ch5">
                   <label>Chapter 5</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch6">
+              <div type="textpart" subtype="textsubunit" xml:id="ch6">
                   <label>Chapter 6</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch7">
+              <div type="textpart" subtype="textsubunit" xml:id="ch7">
                   <label>Chapter 7</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch8">
+              <div type="textpart" subtype="textsubunit" xml:id="ch8">
                   <label>Chapter 8</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch9">
+              <div type="textpart" subtype="textsubunit" xml:id="ch9">
                   <label>Chapter 9</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch10">
+              <div type="textpart" subtype="textsubunit" xml:id="ch10">
                   <label>Chapter 10</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch11">
+              <div type="textpart" subtype="textsubunit" xml:id="ch11">
                   <label>Chapter 11</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch12">
+              <div type="textpart" subtype="textsubunit" xml:id="ch12">
                   <label>Chapter 12</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch13">
+              <div type="textpart" subtype="textsubunit" xml:id="ch13">
                   <label>Chapter 13</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch14">
+              <div type="textpart" subtype="textsubunit" xml:id="ch14">
                   <label>Chapter 14</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch15">
+              <div type="textpart" subtype="textsubunit" xml:id="ch15">
                   <label>Chapter 15</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch16">
+              <div type="textpart" subtype="textsubunit" xml:id="ch16">
                   <label>Chapter 16</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch17">
+              <div type="textpart" subtype="textsubunit" xml:id="ch17">
                   <label>Chapter 17</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch18">
+              <div type="textpart" subtype="textsubunit" xml:id="ch18">
                   <label>Chapter 18</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch19">
+              <div type="textpart" subtype="textsubunit" xml:id="ch19">
                   <label>Chapter 19</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch20">
+              <div type="textpart" subtype="textsubunit" xml:id="ch20">
                   <label>Chapter 20</label>
                </div>
-              <div type="textpart" subtype="chapter" xml:id="ch21">
+              <div type="textpart" subtype="textsubunit" xml:id="ch21">
                   <label>Chapter 21</label>
                </div>
-            </div>
 
-           <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="PostscriptLuke">
-              <label>Postscript to the Gospel of Luke</label>
-           </div>
-        </div>
-      </body>
+            </div>
+            <div type="textpart" subtype="colophon" xml:lang="gez" xml:id="PostscriptLuke">
+              <label>Colophon of the Gospel of Luke</label>
+              <div type="textpart" subtype="incipit"><ab>መልአ፡ ጽሕፈተ፡ <seg type="title subscriptio">ብስራቱ፡ ሉቃስ፡</seg></ab></div>
+              <div type="textpart" subtype="explicit"><ab>በዓመተ፡ ፲ወ፬፡ እመንግሥተ፡ አቅላንድዮስ፡ ቄሳር። ጸሎቱ፡ ወበረከቱ፡
+               ለቅዱስ፡ ሉቃስ፡ የሀሉ፡ ምስለ፡ ገብሩ፡ በእደ፡ ማርያም፡ ለዓለመ፡ ዓለም፡ አሜን፡ ወአሜን።</ab></div>
+            </div>
+         </div>
+       </div>
+    </body>
    </text>
 </TEI>
