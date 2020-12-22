@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to God</title>
+            <title xml:lang="gez" xml:id="t1">ሃሌ፡ ሉያ፡ አዐትብ፡ ወእትነሣእ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Hāle luyā ʾaʿattǝb wa-ʾǝtnaśśāʾ</title>
+            <title xml:lang="en" corresp="#t1">Hallelujah, I make the sign of the cross and rise up</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -44,20 +46,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <keywords scheme="#ethioauthlist">
                <term key="Poetry"/>
                <term key="ChristianLiterature"/>
+               <term key="Liturgy"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-21">Added keywords</change>
+         <change who="MV" when="2020-12-08">Added bibl and relation; fixed title</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>ሃሌ፡ ሃሌ፡ ሃሌ፡ ሉያ፡ ሃሌ፡ ሃሌ፡ ሉያ፡ አአትብ፡ ወእትነሣእ፡ በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፨ ፫አስማተ፡ ነሢእየ፡ እትመረጐዝ፨</ab>
+               <note>This incipit is taken from <ref type="mss" corresp="BDLaethf34"/>.</note>
+               <ab>
+                  በ፭ ሃሌ፡ ሃሌ፡ ሃሌ፡ ሉያ፡ ሃሌ፡ ሃሌ፡ ሉያ፡ አአትብ፡ ወእትነሣእ፡ በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ። 
+                  ፫ አስማተ፡ ነሢእየ፡ እትመረጐዝ፡ እመኒ፡ ወደቁ፡ እትነሣእ፡ ወእመኒ፡ ሖርኩ፡ ውስተ፡ ጽልመት፡ እግዚአብሔር፡ ያበርህ፡ ሊተ፡ 
+                  በእግዚአብሔር፡ ተወከልኩ።  
+               </ab>
             </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <note>This explicit is taken from <ref type="mss" corresp="BDLaethf34"/>.</note>
+                  <ab>እግዚኦ፡ መሐረነ፡ ክርስቶስ፡ ፲ወ፪ ጊዜ፡ በል፡ ነአኵተከ፡ ጸሎተ፡ ሃይማኖት፡ በል፡ መስተብቍዕ፡ በል። </ab>
+               </div>
+         </div>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl><ptr target="bm:Tasfa1955Saatat"/><citedRange unit="page">5–9</citedRange></bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:formsPartOf" active="LIT3994Hymn" passive="LIT1961Mashaf"/>
+            </listRelation>
          </div>
       </body>
    </text>
