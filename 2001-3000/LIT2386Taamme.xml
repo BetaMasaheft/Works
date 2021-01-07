@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2386Taamme">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -23,8 +23,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+           <listBibl type="clavis">
+            <bibl type="CPG">
+               <ptr target="bm:CPG2"/>
+               <citedRange unit="item">2386</citedRange>
+            </bibl>
+         </listBibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -48,19 +52,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change who="DR" when="2016-10-28">Title updated and textparts added</change> 
+         <change who="DR" when="2016-10-28">Title updated and textparts added</change>
          <change who="MV" when="2017-05-10">Added keywords</change>
+         <change who="MKr" when="2020-12-09">Added relation and clavis</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
-            
+
             <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Witakowski2007EAEMenas"/>
                   <citedRange unit="page">918b</citedRange>
                </bibl>
+                <bibl>
+                 <ptr target="bm:Orlandi1970Elementi"/>
+                 <citedRange unit="page">84-85</citedRange>
+               </bibl>
+               <listRelation>
+                   <relation name="saws:isAttributedToAuthor" active="LIT2386Taamme" passive="PRS9486Theophil"/>
+                   <relation name="ecrm:P129_is_about" active="LIT2386Taamme" passive="PRS7000MenasM"/>
+               </listRelation>
             </listBibl>
          </div>
       </body>

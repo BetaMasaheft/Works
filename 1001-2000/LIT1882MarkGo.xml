@@ -79,6 +79,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2016-12-20" who="ES">updated record</change>
          <change who="DR" when="2017-03-17">Added keywords and updated title</change>
+         <change who="ABr" when="2020-11-23">Added Eusebian sections; headline (with title inscriptio); incipits and explicits from GCA001</change>
+         <change who="ABr" when="2020-12-04">colophon (with title subscriptio) of the Gospel in the textpart xml:id: "PostScript"</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -88,15 +90,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Zuurmond1989EvangeliumMarc"/>
+                  <citedRange unit="page">27-28</citedRange>
                </bibl>
-            </listBibl>
-         </div>
 
+            </listBibl>
+          </div>
 
          <div type="edition">
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="BiographyMark">
-               <label>Introduction and Biography of Mark</label>
-               <listBibl type="secondary">
+             <listBibl type="secondary">
                   <bibl>
                      <ptr target="bm:Dillmann1848Catalogus"/>
                      <citedRange unit="page">14</citedRange>
@@ -106,21 +107,60 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      <citedRange unit="page">17</citedRange>
                   </bibl>
                </listBibl>
-            </div>
+               <note>The incipit and explicit are taken from <ref type="mss" corresp="GCA001"/></note>
 
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="TituliMark">
-               <label>Tituli of the Gospel of Mark</label>
-            </div>
+       <div type="textpart" subtype="chapter" xml:id="BiographyMark">
+          <label>Biography of Mark</label>
+          <div type="textpart" subtype="incipit"><ab>በስመ፡ እግዚአብሔር፡ ሕያው፡ እስከ፡
+          ለዓለም፡ ወበኢየሱስ፡ ክርስቶስ፡ ቀዳማዊ፡ ወመንፈስ፡ ቅዱስ፡ ማኅየዊ። ዝንቱሰ፡ ማርቆስ፡ ሐዋርያ፡ ሊቀ፡
+          ጳጳሳት፡ ቅዱስ፡ ወድንግል። ወኮነ፡ ስሙ፡ ቅድመ፡ ዮሐንስ፡ በከመ፡ ዘከሮ፡ ሉቃስ፡ በኣብርክሲስ፡ ስማ፡
+          ለእሙ፡ ማርያም፡ ወይእቲ፡ እኅተ፡ በርናባስ፡ ወሀገሮሙ፡ ቄጵሮስ።</ab></div>
+          <div type="textpart" subtype="explicit"><ab>ወአዕረፈ፡ አመ፡ ፴ሁ፡ ለሚያዝያ፡
+          በ፲ወ፬፡ ዓመተ፡ መንግሥቱ፡ ለቀላውድዮስ፡ ቄሳር፡ ወኵሉ፡ ኑኃ፡ ንብረቱ፡ ፸፡ ዓመት።</ab></div>
+        </div>
+        <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="EusebianSectionsMark">
+          <label>Statement about the Eusebian Sections in the Gospel of Mark</label>
+          <div type="textpart" subtype="incipit"><ab>ወኍልቈ፡ ምዕራፋቲሁ፡ ንኡሳን፡ ፪፻፡ ፴፯።</ab></div>
+          <div type="textpart" subtype="explicit"><ab>ወምዕራፋቲሁ፡ እንተ፡ ተተርጐመት፡ በልሳነ፡ ቅብጢ፡
+          ፶፬፡ ወበሮሜ፡ ፵፰።</ab></div>
+        </div>
+        <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="TituliMark">
+          <label>Tituli of the Gospel of Mark</label>
+          <div type="textpart" subtype="incipit"><ab>፩፡ ዘጋኔን፡
+          <l n="1">፪፡ ሓማተ፡ ጴጥሮስ።</l>
+          <l n="2">፫፡ እለ፡ ተፈወሱ፡ እምብዙኅ፡ ደዌሆሙ፡</l></ab></div>
+          <div type="textpart" subtype="explicit"><ab>
+          <l n="46">፵፮፡ ዘከመ፡ አግብኦ፡ ይሁዳ።</l>
+          <l n="47">፵፯፡ ዘከመ፡ ክሕደ፡ ጴጥሮስ።</l>
+          <l n="48">፵፰፡ ስእለተ፡ ሥጋሁ፡ ለእግዚእነ።</l></ab></div>
+        </div>
 
-            <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT2711Mark">
-               <label>Bǝsrāta Mārqos</label>
-            </div>
+        <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT2711Mark">
+          <label>Bǝsrāta Mārqos</label>
+          <div type="textpart" subtype="textsubunit" xml:id="MarkGospelHeadline">
+          <label>Headline of the Gospel of Mark</label>
+          <ab><seg type="title inscriptio expanded">ብስራተ፡ አብ፡ ሓዋርያ፡ ማሪ፡ ማርቆስ፡ ወንጌላዊ፡ አሐዱ፡
+          እምሰብዓ፡ ወክልኤቱ፡ አርድእት።</seg> ጸሎቱ፡ ወበረከቱ፡ የሀሉ፡ ምስለ፡ ገብሩ፡ <gap reason="ellipsis" resp="Abr"/>
+          ወፍቁሩ፡ <gap reason="ellipsis" resp="Abr"/> ለዓለመ፡ ዓለም፡ አሜን።</ab>
+          </div>
+          <div type="textpart" subtype="coretext" xml:id="MarkGospel">
+          <label>Gospel of Mark</label>
+          <div type="textpart" subtype="incipit"><ab>ይቤ፡ ቀዳሚሁ፡ ለወንጌለ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡
+          ወልደ፡ እግዚኣብሔር፡ በከመ፡ ጽሑፍ፡ ውስተ፡ መጽሓፈ፡ ኢሳይያስ፡ ነቢይ።</ab></div>
+          <div type="textpart" subtype="explicit"><ab>ወወፂኦሙ፡ እሙንቱ፡ ሰበኩ፡ በውስተ፡ ኵሉ፡ መካን።
+          እንዘ፡ እግዚእ፡ ይገብር፡ ምስሌሆሙ፡ ወጸንዑ፡ በቃል፡ በእንተ፡ ተአምራት፡ እንተ፡ ኮነት፡ ትተልዎሙ፡ አሜን። ወአሜን።</ab></div>
+          </div>
+          <div type="textpart" subtype="colophon" xml:id="MarkPostscript">
+          <label>Colophon of the Gospel of Mark</label>
+          <div type="textpart" subtype="incipit"><ab>መልአ፡ ጽሕፈተ፡ <seg type="title subscriptio">ብስራቱ፡
+          ለማርቆስ፡ ሓዋርያ።</seg> ወኮነ፡ ጸሓፎ፡ በልሳነ፡ ሮሜ፡ ዘአፍርንጊ፡ ዘሀገረ፡ ሮምያ።</ab></div>
+          <div type="textpart" subtype="explicit"><ab>በ፲ወ፩፡ ዓመት፡ በራብዒት፡ ዓመቱ፡ ለቀላውድዮስ፡ ቄሳር፡ ንጉሠ፡
+          ሮም። ጸሎቱ፡ ወበረከቱ፡ ለቅዱስ፡ ማርቆስ፡ የሀሉ፡ ምስለ፡ ገብሩ፡ <gap reason="ellipsis" resp="Abr"/> ለዓለመ፡ ዓለም፡
+          አሜን፡ ወአሜን።</ab></div>
+          </div>
+        </div>
+        </div>
 
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MarkPostscript">
-               <label>Postscript to the Gospel of Mark</label>
-            </div>
-
-         </div>
       </body>
    </text>
 </TEI>

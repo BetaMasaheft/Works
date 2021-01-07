@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1900Martyr">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Martyrium of Sophia, and her daughters Pistis, Elpis and Agapis</title>
+           <title xml:lang="gez" xml:id="t1">ስምዕ፡ ዘሠላስ፡ ደናግል፡ ዘበ፡ ሮሜ፡ እለ፡ አስማቲሆን፡ ጲስጢስ፡ ወአላጲስ፡ ወአጋጲስ፡</title>
+           <title xml:lang="gez" type="normalized" corresp="#t1">Sǝmʿ za-śalās danāgǝl za-ba Rome ʾǝlla ʾasmātihon Ṗisṭis wa-ʾAlāṗis wa-ʾAgāṗis</title>
+            <title xml:lang="en" type="main" xml:id="t2">Martyrium of Sophia, and her daughters Pistis, Elpis and Agapis</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -21,8 +23,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+           <listBibl type="clavis">
+            <bibl type="BHG">
+               <ptr target="bm:BHG"/>
+               <citedRange unit="item">1637x</citedRange>
+            </bibl>
+         </listBibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -47,11 +53,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-03-17">Added keywords</change>
+         <change who="MKr" when="2020-12-07">Added Ethiopic title, bibliography, relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <div type="bibliography">
+<listBibl type="secondary">
+<bibl><ptr target="bm:Villa2018Sophia"/></bibl>
+</listBibl>
+<listRelation>
+    <relation name="saws:formsPartOf" active="LIT1900Martyr" passive="LIT1493Gadlas"/>
+</listRelation>
+        </div>
       </body>
    </text>
 </TEI>
