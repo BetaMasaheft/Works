@@ -1,11 +1,12 @@
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6325CCR18" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Return of lands by Krǝstos ʾAbuhu</title>
+                <title xml:lang="gez" xml:id="t1" type="main">Return of lands by Krǝstos ʾAbuhu</title>
+                    <title xml:lang='it' xml:id="t2it" type="D'usage">CCR 18</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="NV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,11 +31,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+              <p>This document, number eighteen in Carlo Conti Rossini's edition (and therefore CCR 18 according to Bausi's reference).
+The document is attested twice, once on verso with CCR 24 <ref target="#LIT6331CCR24"/>and 25<ref target="#LIT6332CCR25"/>. Below this document there is an added text of CCR 3 <ref target="#LIT6308CCR3"></ref>. Further, this document was apparently carefully copied into a small quire, which  contains a number of documents likely copied from older documents (originals?) in the sixteenth century.
+  </p>
             </abstract>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
+                  <language ident="it">Italian</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
@@ -43,7 +47,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+          <div type="bibliography">
+            <bibl>
+        <ptr target="bm:Bausi1997ManoscrittiEritreaParteIII"></ptr>
+          <ptr target="bm:ContiRossini1901Evangelodoro"></ptr>
+            </bibl>
+    </div>
         </body>
     </text>
 </TEI>
