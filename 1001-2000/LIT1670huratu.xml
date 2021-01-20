@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1670huratu">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Ḥurätu läʾǝskǝndǝr</title>
+            <title xml:id="t1" xml:lang="gez">ሑረቱ፡ ለእስክንድር፡</title>
+            <title corresp="#t1" type="normalized" xml:lang="gez">Ḥuratu la-ʾƎskǝndǝr</title>
+            <title xml:id="t2" xml:lang="en">Life of Aleksander the Great</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -23,6 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -33,6 +36,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+        <abstract>
+          <p>
+            The Life is evidently translated from the Arabic, and based upon the work
+            of pseudo-Callisthenes.
+          </p>
+        </abstract>
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
@@ -43,7 +52,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <div type="bibliography">
+
+           <listBibl type="secondary">
+             <bibl>
+                 <ptr target="bm:Wright1877BM"/>
+                 <citedRange unit="page">294b</citedRange>
+             </bibl>
+           </listBibl>
+           </div>
+
       </body>
    </text>
 </TEI>
