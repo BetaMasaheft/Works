@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1750LahaMa">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1750LahaMa">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">ላሐ፡ ማርያም፡</title>
-            <title xml:lang="gez" type="normalized" corresp="#t1">Lāḥā Māryām</title>
-            <title xml:lang="gez" type="normalized" xml:id="t2">Lāḥā Dǝngǝl</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Lāḥa Māryām</title>
+            <title xml:lang="en" type="normalized" corresp="#t1">Lamentation of Mary</title>
+            <title xml:lang="gez" xml:id="t2">ላሐ፡ ድንግል፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#2">Lāḥa dǝngǝl</title>
+            <title xml:lang="en" type="normalized" corresp="#t2">Lamentation of the Virgin</title>
+            <title xml:lang="gez" xml:id="t3">ድርሳን፡ ዘደረሰ፡ አባ፡ ህርያቆስ፡ ኤጲስ፡ ቆጶስ፡ ዘሀገረ፡ ብህንሳ፡ በእንተ፡ ክብራ፡ ለድንግል፡</title>
+            <title xml:lang="gez" corresp="#t3" type="normalized">Dǝrsān za-darasa ʾabbā Hǝryāqos ʾeṗis qoṗos za-hagara Bǝhnǝsā baʾǝnta kǝbrā la-dǝngǝl</title>
+            <title xml:lang="en" type="normalized" corresp="#t3">Homily composed by Cyriacus, bishop of the city of Behnesa on the glory of the Virgin</title>
             <author ref="PRS3251Cyriacus">Cyriacus of Behnesa</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -40,6 +47,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <textClass>
          <keywords>
              <term key="Apocrypha"/>
+            <term key="ChristianLiterature"/>
+            <term key="Homily"/>
          </keywords>
          </textClass>
       </profileDesc>
@@ -49,6 +58,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2019-11-21" who="ES">added explicit</change>
          <change when="2020-09-13" who="MKr">added bibliography</change>
+         <change when="2021-01-26" who="DR">Updated title, included information from deleted LIT3998Dersan</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -74,6 +84,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <listRelation><relation name="lawd:hasAttestation" active="LIT1750LahaMa#colophon" passive="ESgmg001"/>
             <relation name="saws:isAttributedToAuthor" active="LIT1750LahaMa" passive="PRS3251Cyriacus"/>
             <relation name="betmas:isAuthorOfEthiopicTranslation" active="LIT1750LahaMa" passive="PRS8387SalamaI"/>
+            <relation name="saws:isDifferentTo" active="LIT1750LahaMa" passive="LIT1278Dersan">
+               <desc>These two works are probably different from each other.</desc></relation>
+            <relation name="betmas:formerlyAlsoListedAs" active="LIT1750LahaMa" passive="LIT3998Dersan"/>
          </listRelation>
       </body>
    </text>
