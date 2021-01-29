@@ -1,13 +1,16 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5985CommPsalms" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6368PsaltComm" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Amharic Commentary on Psalms</title>
+                <title xml:lang="en" xml:id="t1">Amharic Commentary on the Psalter</title>
+                  <title xml:lang="gez" xml:id="t2">ትርጓሜ፡ ዳዊት፡</title>
+                  <title xml:lang="gez" corresp="#t2" type="normalized">Tərgwāme Dāwit</title>
+                  <title xml:lang="en" corresp="#t2">Commentary on the Psalter</title>
                 <editor role="generalEditor" key="AB"/>
-                <editor key="DR"/>
+                <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -30,34 +33,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p></p>
+                <p>A Psalter containing <ref type="work" corresp="LIT2000Mazmur">Psalms of David</ref>,
+              <ref type="work" corresp="LIT1828Mahale">Canticles of the Prophets</ref> and
+              <ref type="work" corresp="LIT2362Songof">Song of Songs</ref>
+               that are unified with <ref type="work" corresp="LIT5986CommPsalter">
+            an Amharic commentary</ref> and copied as continuous text.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="AmharicLiterature"/>
+                    <term key="Bible"/>
                     <term key="ChristianLiterature"/>
                     <term key="Commentary"/>
                 </keywords>
             </textClass>
             <langUsage>
                 <language ident="en">English</language>
+                <language ident="gez">Gǝʿǝz</language>
                 <language ident="am">Amharic</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DR" when="2020-05-22">Created entity</change>
-            <change who="DN" when="2021-01-22">Further work</change>
+            <change who="DN" when="2021-01-28">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
                 <listRelation>
-                     <relation name="saws:isCommentOn" active="LIT5985CommPsalms" passive="LIT2000Mazmur"/>
-                     <relation name="saws:isRelatedTo" active="LIT5985CommPsalms" passive="LIT6367PsalmsAmhComm"/>
+                    <relation name="saws:contains" active="LIT6368PsaltComm" passive="LIT5986CommPsalter"/>
+                    <relation name="lawd:hasAttestation" active="LIT6368PsaltComm" passive="BNFabb41"/>
                 </listRelation>
-            </div>
-
+            </div><!---->
         </body>
     </text>
 </TEI>
