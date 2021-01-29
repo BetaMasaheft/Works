@@ -36,8 +36,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>A Psalter containing <ref type="work" corresp="LIT2000Mazmur">Psalms of David</ref>,
               <ref type="work" corresp="LIT1828Mahale">Canticles of the Prophets</ref> and
               <ref type="work" corresp="LIT2362Songof">Song of Songs</ref>
-               that are unified with <ref type="work" corresp="LIT5986CommPsalter">
-            an Amharic commentary</ref> and copied as continuous text.</p>
+               that are unified with the <ref type="work" corresp="LIT5986CommPsalter">
+            Amharic commentary</ref> and copied as continuous text.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -64,7 +64,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:contains" active="LIT6368PsaltComm" passive="LIT5986CommPsalter"/>
                     <relation name="lawd:hasAttestation" active="LIT6368PsaltComm" passive="BNFabb41"/>
                 </listRelation>
-            </div><!---->
+
+           <div type="edition">
+             <note>The division into text parts follows <ref type="mss" corresp="BNFabb41"/>.</note>
+              <div type="textpart" subtype="book" xml:id="Psalms">
+                 <label>Psalms of David with Amharic commentary</label>
+              </div>
+
+              <div type="textpart" subtype="book" xml:id="CanticlesProphets">
+                 <label>Canticles of the Prophets with Amharic commentary</label>
+           </div>
+
+           <div type="textpart" subtype="book" xml:id="SongSongs">
+              <label>Song of Songs with Amharic commentary</label>
+        </div>
+
+       </div>
+            </div>
         </body>
     </text>
 </TEI>
