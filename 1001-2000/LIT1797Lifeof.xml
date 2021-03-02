@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1797Lifeof">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Life of Athanasios of Klysma</title>
+           <title xml:lang="gez" xml:id="t1">ገድል፡ ወስምዕ፡ ዘቅዱስ፡ ወብፁዕ፡ አትናቴዎስ፡ ዘብሔረ፡ ቍልዝም</title>
+           <title xml:lang="gez" type="normalized" corresp="#n1">Gadl wa-sǝmʿ za-qǝddus wa-bǝḍuʿ ʾAtnātewos za-bǝḥera Qʷǝlzǝm</title>
+            <title xml:lang="en" xml:id="t2">Life of Athanasios of Clysma</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,17 +35,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <textClass>
+             <keywords>
+                 <term key="ChristianLiterature"/>
+                 <term key="Hagiography"/>
+                 <term key="Translation"/>
+             </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2021-02-21">Added Ethiopic title, relations, bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
-      </body>
+     <body>
+         <div type="bibliography">
+           <listBibl type="editions">
+             <bibl><ptr target="bm:Raineri2011Atanasio"/></bibl>
+
+           </listBibl>
+           <listBibl type="secondary">
+            <bibl><ptr target="bm:MonferrerSala2013Athanasius"/></bibl>
+           </listBibl>
+             <listRelation>
+                 <relation name="saws:formsPartOf" active="LIT1797Lifeof" passive="LIT1493Gadlas"/>
+              </listRelation>
+         </div><!---->
+     </body>
    </text>
 </TEI>
