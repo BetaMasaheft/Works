@@ -52,6 +52,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract><p>The Gadl of St Libānos (Maṭāʿ) exists in three different recensions. 
+            The text is attributed to ʾElyas, the Bishop of Aksum (cp. <ref type="mss" corresp="ESmgm012"></ref>, <locus target="#17ra">17ra</locus>).</p></abstract>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -64,6 +66,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="MV" when="2017-10-30">Updated</change>
+         <change when="2021-02-01" who="ES">updated</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -84,7 +87,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
+         <div type="edition" xml:id="recension2">
+            <note>Recension 2 provided after <bibl>
+               <ptr target="bm:Bausi2003Libanos"/>
+            </bibl></note>
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
                 ስምዑ፡ እንግርክሙ፡ ዘንተ፡ ነገረ፡ በእንተ፡ <gap reason="omitted"/> ዘከመ፡ ሕይወ፡ ውስተ፡ ምድር፡ ፭፻፷ወ፯፡ ዓመተ፡ <gap reason="omitted"/> 
@@ -97,6 +103,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </ab>
             </div>
          </div>
+         
+         <div type="edition" xml:id="recension1">
+            <note>as edited in <bibl><ptr target="bm:Getatchew1990Elyas"/></bibl></note>
+         </div>
+         <div type="edition" xml:id="recension3">
+            <note>see <bibl> 
+               <ptr target="bm:ContiRossini1903Ricordi"/>
+               <citedRange>25-34</citedRange>
+            </bibl></note>
+         </div>
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor" active="LIT1473GadlaL" passive="PRS3750elyas"></relation>
+            <relation name="ecrm:P129_is_about" active="LIT1473GadlaL" passive="PRS6298Libanos"></relation>
+         </listRelation>
       </body>
    </text>
 </TEI>
