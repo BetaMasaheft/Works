@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2382Taamme">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -7,12 +7,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <title xml:id="t1" xml:lang="gez">ተኣምረ፡ ኤየሱስ፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t1">Taʾammǝra ʾIyasus</title>
             <title xml:lang="en" corresp="#t1">Miracles of Jesus</title>
-            
+
             <title xml:id="t2" xml:lang="gez">መጽሐፈ፡ እልአትቀርፋ፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t2">Maṣḥafa ʾǝlʾatqarfā</title>
-            
+
             <title xml:id="t3">Apocryphal Gospel of John</title>
-            
+
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -62,15 +62,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </keywords>
          </textClass>
       </profileDesc>
-      
+
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change when="2017-03-15" who="ES">updated keywords relations + corrections</change> 
+         <change when="2017-03-15" who="ES">updated keywords relations + corrections</change>
          <change who="MV" when="2017-05-10">Updated keyword</change>
          <change who="MV" when="2017-12-15">Added CANT id</change>
          <change when="2019-03-25" who="ES">divs added</change>
+         <change when="2021-03-23" who="RL">Added corresp links to work records for individual miracles</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -109,34 +110,81 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <ptr target="bm:RompayArras1975Miracles"/>
             </bibl>
          </listBibl>
-         
-         
-         
-         <div type="edition"> 
-            <div type="textpart" xml:id="Introduction">
-               <label>Introduction</label>
-               
+
+
+
+         <div type="edition">
+            <div type="textpart" xml:id="Introduction" corresp="LIT6396MJIntroduction">
+               <label>Introduction, Grébaut 1917 No 1</label>
+
                <div type="textpart" xml:id="John">
                   <label>On John the Evangelist as the author of the book; on the creation and the fall of the angels</label>
                </div>
                <div type="textpart" xml:id="Adam">
                   <label>Story of the family of Adam</label>
                </div>
-               
+
             </div>
 
             <div type="textpart" xml:id="Miracles">
                <label>Miracles of Jesus</label>
-               
-               <div type="textpart" xml:id="Nativity">
-                  <label>Miracle About the Nativity</label>
+
+               <div type="textpart" xml:id="Annunciation" corresp="LIT6397MJVirginityMary">
+                  <label>Miracle About the Annunciation, Grébaut 1917 No. 2</label>
                </div>
-               <div type="textpart" xml:id="Temple">
-                  <label>Miracle The Entrance of Jesus into the Temple</label>
+               <div type="textpart" xml:id="SalomePraises" corresp="LIT6012MJSalome">
+                 <label>Salome Praises Jesus, Grébaut 1917 No. 3</label>
                </div>
-               <div type="textpart" xml:id="Theft">
-                  <label>Miracle The Theft of a Heifer in Galilee</label>
+               <div type="textpart" xml:id="Nativity" corresp="LIT6399MJNativity">
+                 <label>Miracle About the Nativity, Grébaut 1917 No. 4</label>
                </div>
+               <div type="textpart" xml:id="Temple" corresp="LIT6013MJPresentation">
+                  <label>Miracle The Entrance of Jesus into the Temple, Grébaut 1917 No. 5</label>
+               </div>
+               <div type="textpart" xml:id="Epiphany" corresp="LIT6400MJEpiphany">
+                 <label>The Epiphany, Grébaut 1917 No. 6</label>
+               </div>
+               <div type="textpart" xml:id="HolyFamilyBrigands" corresp="LIT5620MMTetos">
+                 <label>The return of the Holy Family from Egypt and the meeting of the three brigands Ṭəṭos, Därkəs, and Gämhur, Grébaut 1917 No. 7</label>
+               </div>
+               <div type="textpart" xml:id="ChildJesus" corresp="LIT6401MJChildJesus">
+                 <label>The miracles of the Child Jesus, Grébaut 1917 No. 8</label>
+               </div>
+               <div type="textpart" xml:id="TetmenaCattle" corresp="LIT6014MJTetmena">
+                 <label>The cattle robbed from the righteous Ṭəṭmənä, Grébaut 1917 No. 9</label>
+               </div>
+               <div type="textpart" xml:id="FisherTiberias" corresp="LIT6015MJFisher">
+                 <label>The fish stolen from a fisherman of Tiberias by his companions, Grébaut 1917 No. 10</label>
+               </div>
+               <div type="textpart" xml:id="Theft" corresp="LIT6016MJCalf">
+                 <label>Miracle The Theft of a Heifer in Galilee, Grébaut 1920 No. 11</label>
+               </div>
+               <div type="textpart" xml:id="JosephLion" corresp="LIT6017MJLion">
+                 <label>Jesus saves Joseph from a lion, Grébaut 1920 No. 12</label>
+               </div>
+               <div type="textpart" xml:id="InnundatedField" corresp="LIT4721Miracle">
+                 <label>The inundated field, Grébaut 1920 No. 13</label>
+               </div>
+
+               <div type="textpart" xml:id="Adultress" corresp="LIT6019MJAdulterous">
+                 <label>The adulterous woman, Grébaut 1920 No. 15</label>
+               </div>
+
+               <div type="textpart" xml:id="BlindMan" corresp="LIT3941Miracle">
+                 <label>The healing of a man who was deaf, mute, and blind, Grébaut 1920, No. 18</label>
+               </div>
+               <div type="textpart" xml:id="RaisingYonas" corresp="LIT4720Miracle">
+                 <label>The resurrection of the widow of Nain’s son, Grébaut 1920 No. 19</label>
+               </div>
+
+               <div type="textpart" xml:id="Crucifixion" corresp="LIT6020MJCrucifixion">
+                 <label>The Passion, the Crucifixion, the death, and the burial of Jesus, van Rompay No. 37</label>
+               </div>
+
+               <div type="textpart" xml:id="Apparitions" corresp="LIT6021MJApparitions">
+                 <label>Apparitions of Jesus after the ascension, van Rompey No. 41, 42, 43</label>
+               </div>
+
             </div>
             <div type="textpart" xml:id="Abgar" corresp="LIT5027AbgarLonger">
                <label>Legend of Abgar</label>

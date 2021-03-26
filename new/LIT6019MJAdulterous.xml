@@ -1,5 +1,5 @@
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6019MJAdulterous" xml:lang="en" type="work">
     <teiHeader>
@@ -8,6 +8,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <title xml:lang="en" xml:id="t1">Miracle of Jesus: The adulterous woman</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
+                <editor key="RL"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -47,13 +48,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-06-10">Created entity</change>
-        </revisionDesc>
+            <change when="2021-03-25" who="RL">Added bibliographical information, incipit, explicit</change>
+          </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
                 <listBibl type="editions">
-                    <bibl><ptr target="bm:Grebaut1920MiraclesJesusII"/><citedRange unit="page">804-808</citedRange></bibl>
+                    <bibl>
+                      <ptr target="bm:Grebaut1920MiraclesJesusII"/><citedRange unit="page">804-808</citedRange><citedRange unit="item">15</citedRange>
+                      <ptr target="bm:RompayArras1975Miracles"/><citedRange unit="item">15</citedRange>
+                    </bibl>
                 </listBibl>
                 <listBibl type="translation">
                     <bibl><ptr target="bm:Grebaut1920MiraclesJesusII"/><citedRange unit="page">804-808</citedRange></bibl>
@@ -65,11 +70,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="edition">
                 <note>The following incipit and explicit are taken from <ref type="mss" corresp="BDLaethd20"/>,
                     without subscription and supplications.</note>
-                
+
                 <div type="textpart" subtype="incipit" xml:lang="gez">
                     <ab>ወእንዘ፡ ሀሎ፡ እግዚእ፡ ኢየሱስ፡ ኢየሩሳሌም፡ በአሐቲ፡ ዕለት፨ ተጋብኡ፡ ኀቤሁ፡
-                        ሊቃነ፡ ካህናት፡ ወጸሐፍቶሙ፡ ወሐራሆሙ፨ ወይቤልዎ፡ 
-                        ንሕነ፡ ነአምር፡ ከመ፡ እምኀበ፡ እግዚእብሔር፡ ተፈኖከ፨ 
+                        ሊቃነ፡ ካህናት፡ ወጸሐፍቶሙ፡ ወሐራሆሙ፨ ወይቤልዎ፡
+                        ንሕነ፡ ነአምር፡ ከመ፡ እምኀበ፡ እግዚእብሔር፡ ተፈኖከ፨
                         ወኵሉ፡ ዘትገብር፡ ግብረ፡
                         እግዚአብሔር፡ ውእቱ፡ ወዓቀሙ፡ ቅድሜሁ፡ ብእሲተ፨ ወይቤልዎ፡ እስመ፡ ዛቲ፡ ብእሲት፡
                         ዘመወት፨</ab>
@@ -80,7 +85,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         በእንቲአሃ፨ ወአምኑ፡ ብዙኃን፡ በእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ወሰብሕዎ፡ ለእግዚአብሔር፨
                     </ab>
                 </div>
-            </div>  
+            </div>
+            <div type="edition">
+              <div type="textpart" subtype="incipit" xml:lang="gez">
+                <bibl><ptr target="bm:Grebaut1920MiraclesJesusII"/><citedRange unit="page">804-805</citedRange></bibl>
+                <ab>
+                  ወእንዘ፡ ሀሎ፡ እግዚእ፡ ኢየሱስ፡ ክርስቶስ፡ ኢየሩሳሌም፡ በአሐቲ፡ ዕለት፡ ተጋብኡ፡ ኀ
+                  ቤሁ፡ ሊቃውንተ፡ አይሁድ፡ ወጸሐፍቶሙ፡ ወሐራሆሙ፨ ወይቤልዎ፡  ንሕነ፡ ና
+                  አምር፡ ከመ፡ እምኀበ፡ እግዚአብሔር፡ ተፈኖከ፡ ወኵሉ፡ ዘትገብር፡ ግብረ፡ እግ
+                  ዚአብሔር፡ ውእቱ፨ ወዓቀሙ፡ ብእሲተ፡ ቅድሜሁ፡ ወይቤልዎ፡ ዛቲ፡ ብ
+                  እሲት፡ ዘመወት፡ ወእሉ፡ ሰብእ፡ ይከውኑ፡ ስምዓ፡ ላዕሌሃ፡ ወአንተ፡ ፍታሕ፡ በከ
+                  መ፡ ሕግ፡ ዘይደሉ፡ ላዕሌሃ፡ እስመ፡ አንተ፡ ኰናኒሆሙ፡ ለእስራኤል፨
+                </ab>
+              </div>
+              <div type="textpart" subtype="explicit" xml:lang="gez">
+                <bibl><ptr target="bm:Grebaut1920MiraclesJesusII"/><citedRange unit="page">807</citedRange></bibl>
+                <ab>
+                  ወወጽአት፡ ይእቲ፡ ብእሲት፡ ወቦአት፡ ሀገረ፡ ወበገረት፡ ለሰብእ፡ ዜናሁ፨ ወበእ
+                  ንቲአሃ፡ አምኑ፡ ብዙኃን፡ በእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ወሰብሕዎ፡ ለእግዚአብ
+                  ሔር፨
+                </ab>
+              </div>
+            </div>
         </body>
     </text>
 </TEI>

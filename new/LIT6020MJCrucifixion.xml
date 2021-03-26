@@ -1,13 +1,15 @@
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6020MJCrucifixion" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" xml:id="t1">Miracle of Jesus: The crucifixion</title>
+                <title xml:lang="en" xml:id="t2">Miracle of Jesus: The Passion, the Crucifixion, the death, and the burial of Jesus</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
+                <editor key="RL"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -47,19 +49,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-06-10">Created entity</change>
-        </revisionDesc>
+            <change when="2021-03-25" who="RL">Added bibliographical information</change>
+          </revisionDesc>
     </teiHeader>
     <text>
         <body>
                 <listRelation>
                     <relation name="saws:formsPartOf" active="LIT6020MJCrucifixion" passive="LIT2382Taamme"/>
                 </listRelation>
+                <div type="bibliography">
+                    <listBibl type="editions">
+                        <bibl>
+                          <ptr target="bm:RompayArras1975Miracles"/><citedRange unit="item">39</citedRange>
+                        </bibl>
+                    </listBibl>
+                    </div>
             <div type="edition">
                 <note>The following incipit and explicit are taken from <ref type="mss" corresp="BDLaethd20"/>,
                     without subscription and supplications.</note>
-                
+
                 <div type="textpart" subtype="incipit" xml:lang="gez">
-                    <ab>ወበዕለተ፡ አርብ፡ ኮነ፡ አመ፡ ይስቅልዎ፡ ለእግዚእ፡ ኢየሱስ፡ ወእምዝ፡ አምጽኡ፡ ልብሰ፡ 
+                    <ab>ወበዕለተ፡ አርብ፡ ኮነ፡ አመ፡ ይስቅልዎ፡ ለእግዚእ፡ ኢየሱስ፡ ወእምዝ፡ አምጽኡ፡ ልብሰ፡
                         ሜላት፡ እምአልባሰ፡ ነገሥት፡ ወአልበስዎ፡ ለእግዚእነ፨
                         ወዓዲ፡ አልበስዎ፡ ላዕሌሁ፡ ልብሰ፡ አሮን፡ ወወደዩ፡ ዲበ፡ ርእሱ፡ አክሉለ፡ ዘሦክ፨ ወሖሩ፡ ኀበ፡
                         መካን፡ ዘሀለወ፡ ውስቴቱ፡ ታቦተ፡ ስምዕ፡</ab>
@@ -67,12 +77,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <div type="textpart" subtype="explicit" xml:lang="gez">
                     <ab>ወሰቀሉ፡ ምስለ፡ እግዚእ፡ ኢየሱስ፡ ፪ፈያተ፡ ስሙ፡
                         ለ፩ጥጦስ፡ ለዝንቱ፡ ሰቀልዎ፡ በየማኑ፨ ወስመ፡
-                        ካልኡ፡ ዳርክስ፡ ወለዝ፡ ሰቀልዎ፡ በፀጋሙ፨ ወሶቤሃ፡ ነሥኡ፡ እምኔሁ፡ አልባሲሁ፡ 
+                        ካልኡ፡ ዳርክስ፡ ወለዝ፡ ሰቀልዎ፡ በፀጋሙ፨ ወሶቤሃ፡ ነሥኡ፡ እምኔሁ፡ አልባሲሁ፡
                         ለእግዚእነ፡ ወተዓፀዉ፡ ሐራ፡ ላዕሌሁ፡ ከመ፡ ይትፈጸም፡ ቃለ፡ ዳዊት፡ ነቢይ፡ ዘይቤ፡ ተካፊሉ፡
                         አልባስየ፡ ለርእሶሙ፡ ወተዓፀዉ፡ ዲበ፡ ዓራዝየ፨
                     </ab>
                 </div>
-            </div>  
+            </div>
         </body>
     </text>
 </TEI>
