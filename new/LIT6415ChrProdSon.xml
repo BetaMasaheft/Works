@@ -5,11 +5,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">On the prodigal son</title>
+                <title xml:lang="en" xml:id="t1">On the parable of the prodigal son</title>
                 <title xml:lang="gez" xml:id="t2">ድርሳን፡ በእንተ፡ ምሳሌ፡ ዘሀሎ፡ ውስተ፡ ወንጌል፡ በእንተ፡ ዘሐርተመ፡ ወልድ፡ ነጊዶ፡ ርሑቀ፡ ብሔረ፡
                 ዘደረሰ፡ በመዋዕለ፡ አጽዋም፡ ለእለ፡ ይበውኡ፡ ዐቢየ፡ ክርስቲያን፡</title>
                 <title xml:lang="gez" type="normalized" corresp="#t2">Dǝrsān baʾǝnta mǝssāle za-hallo wǝsta Wangel baʾǝnta
                 za-ḥartama wald nagido rǝḥuqa bǝḥera za-darasa ba-mawāʿǝla ʾaṣwām la-ʾǝlla yǝbawʾu ʿabiya krǝstiyān</title>
+                <title xml:lang="la" xml:id="t4">In parabolam de filio prodigo</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -25,8 +26,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
-            </sourceDesc>
+                  <listBibl type="clavis">
+                   <bibl type="CPG">
+                      <ptr target="bm:CPG2"/>
+                      <citedRange unit="item">4577</citedRange>
+                   </bibl>
+                </listBibl>
+              </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
@@ -46,12 +52,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
+                <language ident="la">Latin</language>
             </langUsage>
+            <abstract><p>In the manuscript <ref type="mss" corresp="EMML1763">EMML1763</ref> the homily is attributed
+          to "Gorgoryos, priest from Antiochia" (<foreign xml:lang="gez">ጎርጎርዮስ፡ ቀሲስ፡ ዘአንጾኪያ፡</foreign>), however the text
+        is undoubtedly a translation of CPG 4577.</p></abstract>
         </profileDesc>
         <revisionDesc>
             <change who="MKr" when="2021-03-29">Created entity</change>
         </revisionDesc>
     </teiHeader>
+    <text>
+        <body>
+          <div type="bibliography"/>
+
+          <div xml:lang="gez" type="edition">
+            <note>The incipit is taken from <ref type="mss" corresp="EMML1763"/></note>
+            <div type="textpart" subtype="incipit">
+             <ab xml:lang="gez">መፍትው፡ ወትረ፡ ንስብክ፡ ፍቅረ፡ እግዚአብሔር፡ ዘላዕለ፡ ሰብእ። </ab>
+            </div>
+            </div>
+        </body>
+    </text>
     <text>
         <body>
             <div type="bibliography">
