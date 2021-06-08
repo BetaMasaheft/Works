@@ -1,5 +1,5 @@
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6015MJFisher" xml:lang="en" type="work">
     <teiHeader>
@@ -8,6 +8,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <title xml:lang="en" xml:id="t1">Miracle of Jesus: The fisher of the lake Tiberias whose fish were stolen</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
+                <editor key="RL"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -47,13 +48,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-06-09">Created entity</change>
+            <change when="2021-03-24" who="RL">Added additional bibliography, and incipit and explicit from Grébaut</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
                 <listBibl type="editions">
-                    <bibl><ptr target="bm:Grebaut1917MiraclesJesusI"/><citedRange unit="page">646-649</citedRange></bibl>
+                    <bibl>
+                      <ptr target="bm:Grebaut1917MiraclesJesusI"/><citedRange unit="page">646-649</citedRange>
+                      <ptr target="bm:Grebaut1917MiraclesJesusI"/><citedRange unit="item">10</citedRange>
+                    </bibl>
+                    <bibl><ptr target="bm:RompayArras1975Miracles"/><citedRange unit="item">10</citedRange></bibl>
+
                 </listBibl>
                 <listBibl type="translation">
                     <bibl><ptr target="bm:Grebaut1917MiraclesJesusI"/><citedRange unit="page">646-649</citedRange></bibl>
@@ -62,25 +69,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:formsPartOf" active="LIT6015MJFisher" passive="LIT2382Taamme"/>
                 </listRelation>
             </div>
+
             <div type="edition">
                 <note>The following incipit and explicit are taken from <ref type="mss" corresp="BDLaethd20"/>,
                     without subscription and supplications.</note>
-                
+
                 <div type="textpart" subtype="incipit" xml:lang="gez">
-                    <ab>ወአሜሃ፡ ሖረ፡ ጥብርያዶስ፡ ዘኮነ፡ ዮሴፍ፡ ወለእግዝእትነ፡ መፍቀዶሙ፡ በህየ፨
-                        ወሶበ፡ ቦኡ፡ ሀገረ፡ ጥብርያዶስ፡ ኃደጎሙ፡ እግዚእ፡ ኢየሱስ፡ ወኀበ፡ ጥብርያዶስ፡ ሖረ፨
-                        ወእንዘ፡ ይቀውም፡ መጽአ፡ አሕማር፡ ወበጽሐ፡ ኀበ፡ መርሶ፡ ወወፅአ፡
-                        ፩ብእሲ፡ እምእለ፡ አሕማር፡</ab>
+                    <ab>ወአሜሃ፡ ሖረ፡ ጥብርያዶስ፡ ዘኮነ፡ ዮሴፍ፡ ወለእግዝእትነ፡ መፍቀዶሙ፡ በህየ። ወሶበ፡ ቦኡ፡ ሀገረ፡ ጥብርያዶስ፡ ኃደጎሙ፡ እግዚእ፡ ኢየሱስ፡ ወኀበ፡ ጥብርያዶስ፡ ሖረ። ወእንዘ፡ ይቀውም፡ መጽአ፡ አሕማር፡ ወበጽሐ፡ ኀበ፡ መርሶ፡ ወወፅአ፡ ፩ብእሲ፡ እምእለ፡ አሕማር፡</ab>
                 </div>
                 <div type="textpart" subtype="explicit" xml:lang="gez">
-                    <ab>ወቆመ፡ ማእከለ፡ ወይቤ፡ ለከ፡ እብለከ፡ ኦዓሣ፡ ዘተሰረቀ፡ ተመየጥ፡ ውስተ፡ ሀገሩ፡ ለዘአሥገረከ፡ ወቀንፁ፡ ዓሣተ፡
-                        ሐመር፡ ወቦኡ፡ ውስተ፡ ሐመሩ፡ ለዝኩ፡ ብእሲ፡ 
-                         ዘተሰርቁ፡ እምኔሁ፨ ውእቱሰ፡ ኃጥአ፡ ሕሊናሁ፡ እምብዝኃ፡
-                        አንክሮ፡ ወተደሙ፡ አብያጺሁ፡ መሠግራን፤ ወይቤሎ፡ እስመ፡ ዝንቱ፡ ውእቱ፡
-                        ወሬዛ፡ ክርስቶስ፡ መድኅነ፡ ዓለም፡ ውእቱ፨ ወቦኡ፡ ምስሌሁ፡ ሀገረ፡
-                        ጥብርያዶስ፡ መካኑ፡ ኀበ፡ የኃድር፡ ወርእዩ፡ ብርሃነ፡ ገጹ፡ ወሣዕሳአ፡ አፉሁ፡ ወአምኑ፡ ቦቱ፨</ab>
+                    <ab>ወቆመ፡ ማእከለ፡ ወይቤ፡ ለከ፡ እብለከ፡ ኦዓሣ፡ ዘተሰረቀ፡ ተመየጥ፡ ውስተ፡ ሀገሩ፡ ለዘአሥገረከ፡ ወቀንፁ፡ ዓሣተ፡ ሐመር፡ ወቦኡ፡ ውስተ፡ ሐመሩ፡ ለዝኩ፡ ብእሲ፡ ዘተሰርቁ፡ እምኔሁ። ውእቱሰ፡ ኃጥአ፡ ሕሊናሁ፡ እምብዝኃ፡ አንክሮ፡ ወተደሙ፡ አብያጺሁ፡ መሠግራን፤ ወይቤሎ፡ እስመ፡ ዝንቱ፡ ውእቱ፡ ወሬዛ፡ ክርስቶስ፡ መድኅነ፡ ዓለም፡ ውእቱ። ወቦኡ፡ ምስሌሁ፡ ሀገረ፡ ጥብርያዶስ፡ መካኑ፡ ኀበ፡ የኃድር፡ ወርእዩ፡ ብርሃነ፡ ገጹ፡ ወሣዕሳአ፡ አፉሁ፡ ወአምኑ፡ ቦቱ።</ab>
                 </div>
-            </div>  
+            </div>
+            <div type="edition">
+              <div type="textpart" subtype="incipit" xml:lang="gez">
+                <bibl><ptr target="bm:Grebaut1917MiraclesJesusI"/><citedRange unit="page">646-7</citedRange></bibl>
+                <ab>
+                  ወአሜሃ፡ ሖረ፡ እግዚእ፡ ኢየሱስ፡ ሀገረ፡ ጥብርያዶስ፡ ዘኮነ፡ ምፍቅዶሙ፡ ለዮሴፍ፡ ወለእግዝእትነ፡ ህየ። ወሶበ፡ ቦኡ፡ ሀገረ፡ ጥብርያዶስ፡ ኀደጎሙ፡ እግዚእ፡ኢየሱስ፡ ለእሙ፡ ወለዮሴፍ፡ ወሖረ፡ ባሕረ፡ ጥብርያዶስ። ወእንዘ፡ ይቀውም፡ ህየ፡ መጽኣ፡ አሕማር፡ ወበጽሓ፡ ኀበ፡ መርሶ።
+                </ab>
+              </div>
+              <div type="textpart" subtype="explicit" xml:lang="gez">
+                <bibl><ptr target="bm:Grebaut1917MiraclesJesusI"/><citedRange unit="page">649</citedRange></bibl>
+                <ab>
+                  ወተደሙ፡ አብያጺሁ፡ መሠግራን፨ ወይቤሉ፡ እስመ፡ ዝንቱ፡ ወሬዛ፡ ክርስቶስ፡ መድኀነ፡ ዓለም፡ ውእቱ። ወቦኡ፡ ምስሌሁ፡ ሀገረ፡ ጥብርያዶስ፡ መካነ፡ኀበ፡ የኀድር። ወርእዩ፡ ብርሃነ፡ ገጹ፡ ወሳእሳዐ፡ አፉሁ፡ ወአምኑ፡ ቦቱ።
+                </ab>
+              </div>
+            </div>
         </body>
     </text>
 </TEI>

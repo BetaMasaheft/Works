@@ -1,5 +1,5 @@
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6012MJSalome" xml:lang="en" type="work">
     <teiHeader>
@@ -8,6 +8,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <title xml:lang="en" xml:id="t1">Miracle of Jesus: Salome praises Jesus</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
+                <editor key="RL"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -47,13 +48,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-06-09">Created entity</change>
+            <change when="2021-03-24" who="RL">Added incipit and explicit from Grebaut edition</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
                 <listBibl type="editions">
-                    <bibl><ptr target="bm:Grebaut1917MiraclesJesusI"/><citedRange unit="page">589-592</citedRange></bibl>
+                    <bibl>
+                      <ptr target="bm:Grebaut1917MiraclesJesusI"/><citedRange unit="item">3</citedRange>
+                      <ptr target="bm:Grebaut1917MiraclesJesusI"/><citedRange unit="page">589-592</citedRange>
+                    </bibl>
+                    <bibl><ptr target="bm:RompayArras1975Miracles"/><citedRange unit="item">3</citedRange></bibl>
                 </listBibl>
                 <listBibl type="translation">
                     <bibl><ptr target="bm:Grebaut1917MiraclesJesusI"/><citedRange unit="page">589-592</citedRange></bibl>
@@ -66,20 +72,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="edition">
                 <note>The following incipit and explicit are taken from <ref type="mss" corresp="BDLaethd20"/>,
                     without subscription and supplications.</note>
-                
+
                 <div type="textpart" subtype="incipit" xml:lang="gez">
-                    <ab>ወሶበ፡ ሰምዓት፡ ሰሎሜ፡ መወልዲት፡ ነገሮ፡ ለሕፃን፡ ሰብሐት፡ እንዘ፡ ትብል፨
-                        ኦዘይነብር፡ በየማኑ፡ ለአብ፡ ስቡሕ፡ ስብሐት፡ ለከ፨ ኦዘይፀውርዎ፡ ኪሩቤል፡
-                        ስብሐት፡ ለከ፨ ኦዘአንበረ፡ መንበሮ፡ መልዕልተ፡ ሰማያት፡ ወመከየዶ፡ መትሕተ፡ ምድር፡
-                        ስብሐት፡ ለከ፡ ኦዘሠምረ፡ ለርእሱ<supplied resp="DR" reason="omitted">፡</supplied> 
-                         ከመ፡ ይሣሃል፡ አግብርቲሁ፡</ab>
+                    <ab>ወሶበ፡ ሰምዓት፡ ሰሎሜ፡ መወልዲት፡ ነገሮ፡ ለሕፃን፡ ሰብሐት፡ እንዘ፡ ትብል። ኦዘይነብር፡ በየማኑ፡ ለአብ፡ ስቡሕ፡ ስብሐት፡ ለከ። ኦዘይፀውርዎ፡ ኪሩቤል፡ ስብሐት፡ ለከ። ኦዘአንበረ፡ መንበሮ፡ መልዕልተ፡ ሰማያት፡ ወመከየዶ፡ መትሕተ፡ ምድር፡ ስብሐት፡ ለከ፡ ኦዘሠምረ፡ ለርእሱ<supplied resp="DR" reason="omitted">፡</supplied> ከመ፡ ይሣሃል፡ አግብርቲሁ፡</ab>
                 </div>
                 <div type="textpart" subtype="explicit" xml:lang="gez">
-                    <ab>ኦዘይሴብሕዎ፡ ኵሉ፡ ነፍስ፡ ስብሐት፡ ለከ፡ ኦቡሩክ፡ ዘመጻእከ፡ ውስተ፡ ዓለም፡ በሥምረተ፡ አቡከ፡
-                        ከመ፡ ታድኅን፡ ነገደ፡ እስራኤል፡ ወኵሎ፡ አሕዛበ፡ ስብሐት፡ ለከ፨
-                        ኦዘትሰሪ፡ ጌጋየ፡ ወትደመስስ፡ አበሳ፤ ወተኃድግ፡ ኃጢአተ፡ ስብሐት፡ ለከ፨
-                        ለከ፡ ይደሉ፡ ስብሐት፡ ወክብር፡ ምስለ፡ አቡከ፡ ኄር፡ ወመንፈስከ፡ ቅዱስ፡ ማኅየዊ፡ ለዓለመ፡ ዓለም፡ አሜ<supplied resp="DR" reason="omitted">ን</supplied>፤</ab>
+                    <ab>ኦዘይሴብሕዎ፡ ኵሉ፡ ነፍስ፡ ስብሐት፡ ለከ፡ ኦቡሩክ፡ ዘመጻእከ፡ ውስተ፡ ዓለም፡ በሥምረተ፡ አቡከ፡ ከመ፡ ታድኅን፡ ነገደ፡ እስራኤል፡ ወኵሎ፡ አሕዛበ፡ ስብሐት፡ ለከ። ኦዘትሰሪ፡ ጌጋየ፡ ወትደመስስ፡ አበሳ፤ ወተኃድግ፡ ኃጢአተ፡ ስብሐት፡ ለከ። ለከ፡ ይደሉ፡ ስብሐት፡ ወክብር፡ ምስለ፡ አቡከ፡ ኄር፡ ወመንፈስከ፡ ቅዱስ፡ ማኅየዊ፡ ለዓለመ፡ ዓለም፡ አሜ<supplied resp="DR" reason="omitted">ን</supplied>፤</ab>
                 </div>
+            </div>
+            <div type="edition">
+              <div type="textpart" subtype="incipit">
+                <bibl><ptr target="bm:Grebaut1917MiraclesJesusI"/><citedRange unit="page">589-590</citedRange></bibl>
+                <ab>
+                  ወሶበ፡ ሰምዓት፡ ሰሎሜ፡ መወልዲት፡ ነገሮ፡ ለሕፃን፡ ሰብሐቶ፡ እንዘ፡ ትብል፡ ኦዘትነብር፡ በየማኑ፡ ለአብ፡ ስቡሕ፡ ስብሐት፡ ለከ፨ ኦዘአንበረ፡ መንበሮ፡ መልዕለተ፡ ሰማያት፡ ወመከየዶ፡ በመትሕተ፡ ምድር፡ ስብሐት፡ ለከ። ኦዘሠምረ፡ ለርእሱ፡ ከመ፡ ይሣህል፡ አግብርቲሁ፡ ወነሥአ፡ ሥጋ፡ ንስቲተ፡ በአምጣነ፡ ሕፃናት፡ ወሠምረ፡ ይስክብ፡ ውስተ፡ ጎል፡ ስብሐት፡ ለከ።
+                </ab>
+              </div>
+              <div type="textpart" subtype="explicit">
+                <bibl><ptr target="bm:Grebaut1917MiraclesJesusI"/><citedRange unit="page">591-592</citedRange></bibl>
+                  <ab>
+                    ኦዘትሰሪ፡ ጌጋየ፡ ወትደመስስ፡ አበሳ፡ ወተኀደግ፡ ኀጢአተ፡ ስብሐት፡ ለከ፨ ለከ፡ ይደሉ፡ ስብሐት፡ ወክብር፡ ምስለ፡ አቡከ፡ ኄር፡ ወመንፈስ፡ ቅዱስ፡ ማሕየዊ፡ ለዓለመ፡ ዓለም፡ አሜን። ሣህሉ፡ ይኩን፡ ምስለ፡ ገብሩ፡ ወልደ፡ ዋሕድ፡ አቡሁ፡ <gap reason="ellipsis"/> ለዓለመ፡ ዓለም፡ አሜን።
+                  </ab>
+              </div>
             </div>
         </body>
     </text>
