@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3171Commen">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -52,7 +52,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language><language ident="ar">Arabic</language><language ident="gez">Gǝʿǝz</language><language ident="grc">Greek</language></langUsage>
+        <abstract>
+          <ab>
+            The text is often prefixed with a short biography of
+            John Chrysostom (<ref target="#Vita"></ref>), which is of a later origin and has been originally
+            composed in Ethiopic.
+          </ab>
+        </abstract>
+         <langUsage>
+           <language ident="en">English</language>
+           <language ident="ar">Arabic</language>
+           <language ident="gez">Gǝʿǝz</language>
+           <language ident="grc">Greek</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="Commentary"/>
@@ -89,7 +101,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      <citedRange>480-481</citedRange>
                   </bibl>
             </listBibl>
-            
+
             <listRelation>
                <relation name="saws:isAttributedToAuthor" active="LIT3171Commen#t2greek" passive="PRS5720JohnChr"/>
                <relation name="saws:isAttributedToAuthor" active="LIT3171Commen#t2arabic" passive="PRS1346AbulFa"/>
@@ -99,10 +111,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <relation name="saws:isVersionInAnotherLanguageOf" active="LIT3171Commen#t1" passive="LIT3171Commen#t2arabic"/>
                <relation name="saws:isVersionInAnotherLanguageOf" active="LIT3171Commen#t3amharic" passive="LIT3171Commen#t1"/>
                <relation name="saws:isCommentOn" active="LIT3171Commen" passive="LIT3524Epistle"/>
+               <relation name="saws:hasUsed" active="LIT3171Commen#Vita" passive="LIT1239Chroni"></relation>
+              <relation name="saws:hasUsed" active="LIT3171Commen#Vita" passive="LIT1011Abusak"></relation>
+              <relation name="saws:hasUsed" active="LIT3171Commen#Vita" passive="LIT4723TarikaWaldaAmid"></relation>
+              <relation name="saws:hasUsed" active="LIT3171Commen#Vita" passive="LIT4968SenkessarSec"></relation>
             </listRelation>
          </div>
-         
+
          <div type="edition">
+           <div type="textpart" subtype="vita" xml:lang="gez" xml:id="Vita">
+             <label>Life of John Chrysostom</label>
+           </div>
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Summary">
                <label>Summary, table of the 34 homilies </label>
             </div>
@@ -110,7 +129,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <label> Second title</label>
             </div>
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Introduction">
-               <label>Introduction by <persName ref="PRS5720JohnChr"/> 
+               <label>Introduction by <persName ref="PRS5720JohnChr"/>
                </label>
             </div>
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homilies">
