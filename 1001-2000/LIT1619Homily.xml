@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Homily in Honour of Saint John the Evangelist</title>
+            <title xml:lang="en" xml:id="t1">Homily in honour of St John the Evangelist</title>
+            <title xml:lang="gez" xml:id="t2">ድርሳን፡ ዘዮሐንስ፡ አቡ፡ ቀለምሲስ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t2">Dǝrsān za-Yoḥannǝs ʾAbu Qalamsis</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,12 +35,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+           <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2021-09-12">Added Ethiopic title, relations, bibliography, incipit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -57,6 +63,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     <relation name="ecrm:P129_is_about" active="LIT1619Homily" passive="PRS5695John"/>
                 </listRelation>
             </div><!---->
+        </body>
+    </text>
+    <text>
+        <body>
+          <div type="bibliography"/>
+          <div xml:lang="gez" type="edition">
+            <note>The incipit is taken from <ref type="mss" corresp="EMML1480"/></note>
+            <div type="textpart" subtype="incipit">
+             <ab xml:lang="gez">በስመ፡ እግዚአብሔር፡ አብ፡ ዘኢይትፈለጥ፡ እምወልድ፡ ወእመንፈስ፡ ቅዱስ፡ ወበስመ፡ እግዚአብሔር፡ ወልድ፡ ዘኢይትፈለጥ፡ እምአብ፡
+             ወእመንፈስ፡ ቅዱስ። ወበስመ፡ እግዚአብሔር፡ መንፈስ፡ ቅዱስ፡ ጰራቅሊጦስ፡ ዘኢይትፈለጥ፡ እምአብ፡ ወወልድ። በጸውዖ፡ ዝንቱ፡ አስማተ፡ ሥላሴ፡ ተጠመቅነ፡
+           ኵልነ፡ ክርስቲያን፡ እምከዊነ፡ ምድራዊያን፡ ከመ፡ ንትመየጥ፡ ኀበ፡ ከዊነL ሰማያዊያን።</ab>
+            </div>
+         </div>
         </body>
     </text>
 </TEI>
