@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4714Salamlaki" xml:lang="en" type="work">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4714Salamlaki" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
@@ -13,33 +14,44 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine
+                    multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
-                                licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                        licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
-         </sourceDesc>
-         <sourceDesc>
+                <listWit>
+
+                    <witness xml:id="W1" corresp="ESamm007"><idno>ESamm007</idno><locus from="5va"
+                            to="5vb"/></witness>
+                    <witness xml:id="W2" corresp="ESmr001"><idno>ESmr001</idno><locus from="93rb"
+                            to="94rb"/></witness>
+                    <witness xml:id="W3" corresp="ESqs014"><idno>ESqs014</idno><locus from="7vc"
+                            to="8ra">7vc-8ra</locus></witness>
+                    <witness xml:id="W4" corresp="ESum014"><idno>ESum014</idno><locus from="9ra"
+                            to="9rb"/></witness>
+                </listWit>
+            </sourceDesc>
+            <sourceDesc>
                 <p/>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
-            <xi:fallback>
-               <p>Definitions of prefixes used.</p>
-            </xi:fallback>
-         </xi:include>
-      </encodingDesc>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+                <xi:fallback>
+                    <p>Definitions of prefixes used.</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
-                <p>
-                </p>
+                <p> </p>
             </abstract>
             <textClass>
                 <keywords>
@@ -47,21 +59,196 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     <term key="ChristianLiterature"/>
                 </keywords>
             </textClass>
-            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="gez">Gǝʿǝz</language>
+            </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="MV" when="2017-09-07">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
-      <body>
-        <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit">
-                <ab>
-                    ሰላም፡ ለኪ፡ ኆኅተ፡ ምሥራቅ፡
-                </ab>
+        <body>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit">
+                    <ab> ሰላም፡ ለኪ፡ ኆኅተ፡ ምሥራቅ፡ </ab>
+                </div>
+                <div type="textpart">
+                    <ab> ሰላም፡ ለኪ፡<app>
+                            <rdg wit="W1">ማርያም።</rdg>
+                            <rdg wit="W2 W3 W4"/>
+                        </app>ኆኅተ፡ ምሥራቅ፡<app>
+                            <rdg wit="W3 W4 W1">ዘወልደ፡</rdg>
+                            <rdg wit="W2">በወልዳ፡</rdg>
+                        </app><app>
+                            <rdg wit="W1">ናዊ፡</rdg>
+                            <rdg wit="W2 W3 W4">ኖሬ፡</rdg>
+                        </app>ሰላም፡ ለኪ፡<app>
+                            <rdg wit="W3 W4 W1">ዓፀድ፡</rdg>
+                            <rdg wit="W2">ጽጽልት፡</rdg>
+                        </app><app>
+                            <rdg wit="W1">ዘእሰከደሬ፡</rdg>
+                            <rdg wit="W2"/>
+                            <rdg wit="W3">ዘኢስኪድራ፡</rdg>
+                            <rdg wit="W4">ዘእስከደሬ፡ ለሶኪ፡ ስርጉት፡ በወሪውሬ፡ ሰለኪ፡ ፅድልት፡</rdg>
+                        </app><app>
+                            <rdg wit="W2 W4 W1"/>
+                            <rdg wit="W3">ሰላም፡ ለኪ፡</rdg>
+                        </app><app>
+                            <rdg wit="W2 W4 W1"/>
+                            <rdg wit="W3">እስመ፡ ወልድኪ፡</rdg>
+                        </app><app>
+                            <rdg wit="W2 W4 W1"/>
+                            <rdg wit="W3">ፈጣሬ፡</rdg>
+                        </app><app>
+                            <rdg wit="W2 W4 W1"/>
+                            <rdg wit="W3">ሰላ፡</rdg>
+                        </app><app>
+                            <rdg wit="W2 W4 W1"/>
+                            <rdg wit="W3">ለኪ፡ ጽድልተ፡</rdg>
+                        </app><app>
+                            <rdg wit="W2 W1"/>
+                            <rdg wit="W3 W4">ንጸሬ፡</rdg>
+                        </app><app>
+                            <rdg wit="W3 W1">ሰላም፡</rdg>
+                            <rdg wit="W2"/>
+                            <rdg wit="W4">ሰላኪ፡</rdg>
+                        </app><app>
+                            <rdg wit="W1">ለኪ፡ ጽድልተ፡</rdg>
+                            <rdg wit="W2 W3 W4"/>
+                        </app><app>
+                            <rdg wit="W1">ንፂሬ፡</rdg>
+                            <rdg wit="W2 W3 W4"/>
+                        </app><app>
+                            <rdg wit="W3 W1">ሥርጉት፡</rdg>
+                            <rdg wit="W2 W4"/>
+                        </app><app>
+                            <rdg wit="W2 W1">በወራውሬ፡</rdg>
+                            <rdg wit="W3">በወራውረ፡ ሰ፡</rdg>
+                            <rdg wit="W4"/>
+                        </app><app>
+                            <rdg wit="W2 W1">ሰላም፡</rdg>
+                            <rdg wit="W3 W4"/>
+                        </app><app>
+                            <rdg wit="W2 W1">ለኪ፡</rdg>
+                            <rdg wit="W3 W4"/>
+                        </app><app>
+                            <rdg wit="W1">በቅረ፡</rdg>
+                            <rdg wit="W2">ወጽዕድውት፡ ዘምስለ፡ ንዳሬ፡</rdg>
+                            <rdg wit="W3 W4"/>
+                        </app><app>
+                            <rdg wit="W3 W4 W1"/>
+                            <rdg wit="W2">ሳላም፡ ለኪ።</rdg>
+                        </app><app>
+                            <rdg wit="W1"/>
+                            <rdg wit="W2 W3 W4">በትረ፡</rdg>
+                        </app><app>
+                            <rdg wit="W2 W3 W1">አሮን፡</rdg>
+                            <rdg wit="W4">እሮን፡</rdg>
+                        </app><app>
+                            <rdg wit="W4 W1">ጸዋሪተ፡</rdg>
+                            <rdg wit="W2">ጸዋፊተ፡</rdg>
+                            <rdg wit="W3">ጸዋሪተ፡ፍሬ፡ ሰ፡</rdg>
+                        </app><app>
+                            <rdg wit="W2 W4 W1">ፍሬ፡</rdg>
+                            <rdg wit="W3"/>
+                        </app><app>
+                            <rdg wit="W1">ሳላም፡ ለኪ።</rdg>
+                            <rdg wit="W2 W3 W4"/>
+                        </app><app>
+                            <rdg wit="W2 W3 W1"/>
+                            <rdg wit="W4">ሶላኪ፡ እንተ፡</rdg>
+                        </app><app>
+                            <rdg wit="W3 W4 W1"/>
+                            <rdg wit="W2">ሰላም፡</rdg>
+                        </app><app>
+                            <rdg wit="W3 W4 W1"/>
+                            <rdg wit="W2">ኪ፡</rdg>
+                        </app><app>
+                            <rdg wit="W2 W1">አንተ፡</rdg>
+                            <rdg wit="W3 W4"/>
+                        </app><app>
+                            <rdg wit="W4 W1">ወለድኪ፡</rdg>
+                            <rdg wit="W2">ወለጽኪ፡ ፈብሬ፡</rdg>
+                            <rdg wit="W3"/>
+                        </app><app>
+                            <rdg wit="W4 W1">ፈጣሬ፡</rdg>
+                            <rdg wit="W2 W3"/>
+                        </app><app>
+                            <rdg wit="W1">ሰላም፡</rdg>
+                            <rdg wit="W2 W3 W4"/>
+                        </app><app>
+                            <rdg wit="W1"/>
+                            <rdg wit="W2 W3 W4">ዘምስለ፡</rdg>
+                        </app><app>
+                            <rdg wit="W2 W3 W1"/>
+                            <rdg wit="W4">ዝማረ፡ ንስጣድ፡</rdg>
+                        </app><app>
+                            <rdg wit="W4 W1"/>
+                            <rdg wit="W2 W3">ዝማሬ፡</rdg>
+                        </app><app>
+                            <rdg wit="W2 W3 W1"/>
+                            <rdg wit="W4">ለኪ፡</rdg>
+                        </app><app>
+                            <rdg wit="W4 W1"/>
+                            <rdg wit="W2">እስግድ፡</rdg>
+                            <rdg wit="W3">ንሰግድ፡</rdg>
+                        </app><app>
+                            <rdg wit="W2 W1">ለኪ።</rdg>
+                            <rdg wit="W3"/>
+                            <rdg wit="W4">ለስይትን በብ፡</rdg>
+                        </app><app>
+                            <rdg wit="W1">ዘምስለ፡ ዝማሬ፡</rdg>
+                            <rdg wit="W2 W3 W4"/>
+                        </app><app>
+                            <rdg wit="W3 W4 W1"/>
+                            <rdg wit="W2">መጽሐፈ፡</rdg>
+                        </app><app>
+                            <rdg wit="W1">ንሰማድ፡</rdg>
+                            <rdg wit="W2">ተአምናኪ፡</rdg>
+                            <rdg wit="W3 W4"/>
+                        </app><app>
+                            <rdg wit="W3 W1">ለኪ፡ ሶበ፡</rdg>
+                            <rdg wit="W2 W4"/>
+                        </app><app>
+                            <rdg wit="W2 W3 W1">ይትነበብ፡</rdg>
+                            <rdg wit="W4"/>
+                        </app><app>
+                            <rdg wit="W3 W4 W1">መጽሐፈ፡</rdg>
+                            <rdg wit="W2"/>
+                        </app><app>
+                            <rdg wit="W3 W4 W1"/>
+                            <rdg wit="W2">ለለወትረ፡</rdg>
+                        </app><app>
+                            <rdg wit="W1">ተአምርኪ።</rdg>
+                            <rdg wit="W2"/>
+                            <rdg wit="W3 W4">ተአምርኪ፡</rdg>
+                        </app><app>
+                            <rdg wit="W3 W4 W1">በሰላም፡</rdg>
+                            <rdg wit="W2"/>
+                        </app><app>
+                            <rdg wit="W1"/>
+                            <rdg wit="W2 W3 W4">ኪያነ፡</rdg>
+                        </app><app>
+                            <rdg wit="W1"/>
+                            <rdg wit="W2">ባርኪ፡ ሰላመ፡ ባርኪ፡</rdg>
+                            <rdg wit="W3 W4">ባርኪ።</rdg>
+                        </app><app>
+                            <rdg wit="W2 W1">ኪያነ፡</rdg>
+                            <rdg wit="W3"/>
+                            <rdg wit="W4">ወኢትርስእኒ፡ ለገብርኪ፡ ኃጥእ፡ ወአባሴ፡ ዘወልደ፡ ማርያሞ፡ ማር፡ አቡነ፡ ትክለ፡
+                                ሃይማሮት፡ ወልደሙ፡ ለአቡን፡ ዘገብርኤል፡ ለዓለመ፡ ንለም፡ አሜን፡ ወአሜን፡</rdg>
+                        </app><app>
+                            <rdg wit="W1">በርኪ። ወላዲተ፡ አምላክ፡ ማርያም፡ እንበለ፡ ዕብሳብ፡ ወሩካቤ፡ በይነ፡ ዘዓቀሂ፡ ብኩለኪ፡
+                                ንስቲተ፡ ቃለ፡ ይባቤ፡ ፈትዊ፡ እሙ፡ በረከተ፡ አፉኪ፡ ሙሐዘ፡ ከርቤ። ለነዳይ፡ ብእሲ፡ ወለዘረከበ፡
+                                ምንደቤ፡ ኅብስተከ፡ ፈትት፡ ኢሳይያስ፡ ይቤ።</rdg>
+                            <rdg wit="W2">ኅቡረ።</rdg>
+                            <rdg wit="W3 W4"/>
+                        </app>
+                    </ab>
+                </div>
             </div>
-        </div>
-      </body>
+        </body>
     </text>
 </TEI>
