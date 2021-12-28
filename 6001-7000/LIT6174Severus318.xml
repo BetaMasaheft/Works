@@ -8,7 +8,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <title xml:lang="gez" xml:id="t1">ነገር፡ በእንተ፡ ማኅበር፡ ሠለስቱ፡ ምእት፡ ዐሠርቱ፡ ወሰመንቱ፡ ዘአባ፡ ሳዊሮስ፡ አመ፡ ፱፡ ለኅዳር፡</title>
                 <title xml:lang="gez" corresp="#t1" type="normalized">Nagar baʾǝnta śalastu mǝʾǝt ʿaśśartu wa-samantu
                 za-ʾabā Sāwiros ʾama 9 la-Ḫǝdār</title>
-                <title xml:lang="en" xml:id="t2">Treatise on the Council of the 318 Fathers at Nicaea</title>
+                <title xml:lang="en" corresp="#t1" type="main">Treatise on the 318 (Fathers at Nicaea) by Sevirus for the 9 of Ḫǝdār</title>
+                <title xml:lang="gez" xml:id="t2">መጽሐፈ፡ ኅዳር፡</title>
+                <title xml:lang="gez" corresp="#t2" type="normalized">Maṣḥafa Ḫǝdār</title>
+                <title xml:lang="en" xml:id="t3">Treatise on the Council of the 318 Fathers at Nicaea</title>
+                <title xml:lang="en" xml:id="t4">Treatise on the First Four Councils</title>
+                <title xml:lang="ar" type="normalized" xml:id="t5ar">Kitāb al-Maǧāmīʿ</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -40,6 +45,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="ChristianLiterature"/>
                     <term key="Homily"/>
                     <term key="Theology"/>
+                    <term key="Translation"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -49,10 +55,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="MKr" when="2020-09-02">Created entity</change>
+            <change when="2021-12-28" who="ES">updated title, bibl, relation</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
+            <div type="bibliography">
+                <listBibl type="secondary">
+                    <bibl><ptr target="bm:Getatchew2007Hedar"/></bibl>
+                </listBibl>
+            </div>
             <div type="edition">
               <note>The following division into textparts follows <ref type="mss" corresp="BLorient691"/></note>
 
@@ -78,6 +90,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                 <listRelation>
                     <relation name="saws:isAttributedToAuthor" active="LIT6174Severus318" passive="PRS8788Severos"/>
+                    <relation name="saws:isDifferentTo" active="LIT6174Severus318" passive="1299Dersan"></relation>
                 </listRelation>
             </div><!---->
         </body>
