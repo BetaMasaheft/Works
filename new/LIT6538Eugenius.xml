@@ -1,16 +1,13 @@
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6159MalkeaBesoy" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6538Eugenius" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">መልክአ፡ ብሶይ፡ </title>
-                <title xml:lang="gez" corresp="#t1" type="normalized">Malkǝʾa Bǝsoy</title>
-                <title xml:lang="en" corresp="#t1">Malkǝʾ-hymn to Saint Bǝsoy</title>
-                <title xml:lang="en" xml:id="t2">Image of Saint Pishoy</title>
+                <title xml:lang="en" xml:id="t1">Martyrdom of Eugenius (ʾAwgānyos)</title>
                 <editor role="generalEditor" key="AB"/>
-                <editor key="RL"/>
+                <editor key="ES"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -24,7 +21,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="EMML6965">EMML 6965: 27 (XIV s.): ff. 160va-165rb (f. 160v: 8 Tāḫśāś)</witness> 
+                    <witness corresp="Tanasee121">Ṭānāsee 121 = Dāgā Esṭifānos 10: 25 (1416): A: IV: 3: ff. 164ra-168rb (f. 164r: 8 Tāḫśāś)</witness>                    
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -39,7 +39,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Hagiography"/>
-                    <term key="Poetry"/>
+                    <term key="Translation"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -48,29 +48,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="RL" when="2020-07-31">Created entity</change>
+            <change who="ES" when="2022-01-04">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="lawd:hasAttestation" active="LIT6159MalkeaBesoy" passive="EMIP00499"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT6538Eugenius" passive="LIT1493Gadlas"/>
+                    <relation name="ecrm:P129_is_about" active="LIT6538Eugenius" passive="PRS12051Awganyos"></relation>
                 </listRelation>
             </div><!---->
-            <div type="edition">
-              <note>The following text is taken from <ref type="mss" corresp="EMIP00499"/>.</note>
-                <div type="textpart" subtype="stanza" xml:id="Stanza1" xml:lang="gez" n="1">
-                  <label>Stanza 1</label>
-                  <ab>
-                    ሰላም፡ ለዝክረ፡ ስምከ፡ ዘተሰብሐ፡ ወተወደሰ፡
-                    በአፈ፡ ክህናት፡ ኄራን፡ እለ፡ አድምኡ፡ ሞገሰ።
-                    ከመ፡ እስብሕከ፡ ብሶይ፡ ሰብሐተ፡ ሐዲስ።
-                    ዘጥበብ፡ መንፈሳዊት፡ ከድነኒ፡ ቃስ።
-                    ወበውስተ፡ ከርሥዓ፡ ሐድስ፡፡መንፍስ፡ ቅዱስ።
-                  </ab>
-              </div>
-            </div>
         </body>
     </text>
 </TEI>
