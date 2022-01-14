@@ -7,7 +7,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">ገድለ፡ ሰማዕት፡ እንጦንስ፡ ሐዲስ፡</title>
                 <title type="normalized" xml:lang="gez" corresp="#t1">Gadla samāʿǝt ʾƎnṭonǝs ḥaddis</title>
+                <title  xml:lang="en" corresp="#t1">Life and martyrdom of Antony the New</title>
                 <title xml:lang="en" xml:id="t2">Martyrdom of Anthony the Qurayshite</title>
+                <title xml:lang="en" xml:id="t3arabic">Martyrdom of Anthony Rawḥ</title>
+                <title xml:lang="gez" xml:id="t4">እንጦንስ፡ ሐዲስ፡ ዘኮነ፡ ሰማት፡ በሀገረ፡ ርታ፡</title>
+                <title xml:lang="gez" corresp="#t4">ʾƎnṭonǝs ḥaddis za-kona samā‘ǝt ba-hagara Rǝtā</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -23,7 +27,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="BNFabb179">BNA 179: 3 = BNAC 179: 8 = BNACR 163: 8 (1509): ff. 36ra-38vc (f. 36ra: 27 Yakkātit)</witness>
+                    <witness corresp="EMML1840">EMML 1840: 9 (1400): ff. 264r-271rb 
+                        EMML "This young Arab [warēzā] was converted to Christianity because of a miracle he saw in a church in the Monastery of Mār Tēwoderos in Elnayrab in the region of Damas-cus. 
+                        He shocked his people when he was there to persecute the Christians. He shocked his people when he ap-peared to them in a monastic habit and said to them: 
+                        "I am a Christian, believer in my Lord Christ; now you may do (to me) whatever you wish"</witness>
+                    <witness corresp="EMML6694">EMML 6694: 14 (XX s.): ff. 166va-167ra (mutilo); "Enṭones ḥaddis za-kona samā‘et ba-hagara Retā"</witness>
+                    
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -48,6 +60,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="MKr" when="2020-11-16">Created entity</change>
+            <change when="2022-01-14" who="ES">minor updates</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -55,10 +68,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <div type="bibliography">
             <listBibl type="editions">
                 <bibl><ptr target="bm:Peeters1912Antoine"/></bibl>
+                <bibl><ptr target="bm:Peeters1914Antoine"/></bibl>
             </listBibl>
+              <listBibl type="secondary"><bibl><ptr target="bm:Krawczuk2017Antony"/></bibl></listBibl>
+              <listBibl type="secondary"><bibl corresp="#t3arabic"><ptr target="bm:Graf1944GCALI"/><citedRange>524</citedRange></bibl></listBibl>
                 <listRelation>
                     <relation name="ecrm:P129_is_about" active="LIT6231MartyrdomOfAnthonyQorasawi" passive="PRS13227AnthonyQorasawi"/>
                     <relation name="ecrm:CLP46i_may_form_part_of" active="LIT6231MartyrdomOfAnthonyQorasawi" passive="LIT1493Gadlas"/>
+                    <relation name="syriaca:different-from" active="LIT6231MartyrdomOfAnthonyQorasawi" passive="LIT5162MiracleEntonesHaddis"></relation>
                 </listRelation>
             </div><!---->
         </body>
