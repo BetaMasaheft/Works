@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1277Dersan">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dǝrsan zätewoflos baʾǝntä qǝddus Yoḥannǝs</title>
+            <title xml:lang="gez" xml:id="t1">ደርሳን፡ ዘብፁዕ፡ ቴዎፍሎስ፡ በእንተ፡ ቅዱስ፡ ወኄር፡ ዮሐንስ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān za-bǝḍuʿ Tewoflos baʾǝnta qǝddus wa-ḫer Yoḥannǝs</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,17 +34,41 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+        <abstract>
+<p>The homily is attributed to Theophilus (<foreign xml:lang="gez">ቴዎፍሎስ</foreign>), however there is no sufficient data to identify
+him with any of the known authors.</p>
+        </abstract>
+        <textClass>
+                <keywords>
+                    <term key="ChristianLiterature"/>
+                    <term key="Homily"/>
+                </keywords>
+            </textClass>
+         <langUsage>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2021-04-08">Added Ethiopic title, incipit</change>
       </revisionDesc>
    </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
-      </body>
-   </text>
+   <text>
+         <body>
+           <div type="bibliography"/>
+           <listRelation>
+          <relation name="ecrm:P129_is_about" active="LIT1277Dersan" passive="PRS5741Johnthe"/>
+          </listRelation>
+           <div xml:lang="gez" type="edition">
+             <note>The incipit is taken from <ref type="mss" corresp="EMML1763"/></note>
+             <div type="textpart" subtype="incipit">
+              <ab xml:lang="gez">ብዙኃን፡ ዐበይት፡ ሰብእ፡ እለ፡ ኮኑ፡ ውስተዝ፡ ዓለም፡ ወተሰምዩ፡ በመዋዕሊሆሙ፡ ወበፍና፡ ሰብእ፡ ኀያላነ፡ ኮኑ፡
+              ወፈድፋደ፡ ከብሩ፡ በዲበ፡ ምድር።</ab>
+              </div>
+              </div>
+           </body>
+     </text>
 </TEI>

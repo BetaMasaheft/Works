@@ -10,6 +10,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <title xml:lang="gez" corresp="#t2" type="normalized">Zenāhu la-ʾabuna qǝddus ʾabbā ʾƎnṭonyos</title>
             <title xml:lang="en" corresp="#t1" type="main">Vita of St Antony</title>
             <title xml:lang="la" corresp="#t1">Vita Antonii</title>
+            <title xml:lang="gez" xml:id="t3">ትምህርት፡ ዘአባ፡ እንጦንስ፡  </title>
+            <title xml:lang="gez" type="normalized" corresp="#t3"> Tǝmhǝrt za-ʾabbā ʾƎnṭonǝs</title>
+            <title xml:lang="en" corresp="#t3">Teaching of St Antony <note>This title is used in <ref type="mss" corresp="EMML141"/></note></title>
+            <title xml:lang="gez" xml:id="t4">ገድለ፡አባ፡ እንጦንስ፡  </title>
+            <title xml:lang="gez" type="normalized" corresp="#t4"> Gadla ʾabbā ʾƎnṭonǝs</title>
+            <title xml:lang="en" corresp="#t4">Combat of St Antony</title>
             <editor key="MV"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -27,7 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
+            <listWit>
+               <witness corresp="EMML1844">EMML 1844, fol. 2ra-21vb (16th cent.)</witness>
+               <witness corresp="BLorient692">London, BL Orient. 692, fol. 139ra-173va (15th/16th cent.)</witness>
+               <witness corresp="BNFabb60">Paris, BN d’Abb. 60, fol. 16va-76rb (17th/18th cent.?)</witness>
+               <witness corresp="BNFabb31">Paris, BN d’Abb. 31, fol. 1va-16vb (before 1766 AD)</witness>
+               <witness corresp="BLorient697">London, BL Orient. 697, fol. 6ra-49ra (early 18th cent.)</witness>
+               <witness corresp="BLorient698">London, BL Orient. 698, fol. 3ra-46rb (1715 AD)</witness>
+               <witness corresp="BLorient696">London, BL Orient. 696, fol. 5rb-35rb (1769-1777 AD</witness>
+               <witness corresp="Tanasee164">Ṭānāsee 164 = Dāgā Esṭifānos 53: 2 (XVIII s AB 19th/20th cent RZ): ff. 19ra-62ra</witness>
+               <witness corresp="EMML141"> EMML 141, fol. 3ra-50ra (1904/5 AD) (Tǝmhǝrt za-ʾabbā ʾƎnṭonǝs)</witness>
+               <witness corresp="EMML7345">EMML 7345, fol. 5ra-102vb (1947/8 AD)</witness>
+               <witness corresp="EMML7505">EMML 7505, fol. 2ra-81ra (late 17th cent.)</witness>
+               <witness corresp="NALE730" type="external">Addis Abäba, NL 730, fol. 32r-68r (1979/80 AD)</witness>
+               
+            </listWit>
          </sourceDesc>
          <sourceDesc>
             <listBibl type="clavis">
@@ -60,20 +80,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="MV" when="2017-12-18">Created text record</change>
          <change who="DR" when="2018-11-27">Specified clavis</change>
          <change when="2019-06-26" who="ES">added relation removed edition</change>
+         <change when="2022-01-14" who="ES">merged with LIT2442Temher, added witnesses</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
-            <listBibl type="secondary">
+            <listBibl type="secondary">              
                <bibl>
                   <ptr target="bm:Zarzeczny2013Antony"/>
                </bibl>
+               <bibl><ptr target="bm:Witakowski2015Antony"/></bibl>      
+               <bibl><ptr target="bm:Leloir1984Antony"/></bibl>
             </listBibl>
             <listRelation>
-               <relation name="saws:isAttributedToAuthor" active="LIT4857LifeofA" passive="PRS2209Athanasi">
+               <relation name="saws:isAttributedToAuthor" active="LIT4857LifeofA" passive="PRS2209Athanasi"><desc>The attribution to Athanasius is not witnessed in Ethiopian tradition</desc>
                </relation>
                <relation name="ecrm:P129_is_about" active="LIT4857LifeofA" passive="PRS1962Anthony"/>
+               <relation name="ecrm:CLP46i_may_form_part_of" active="LIT4857LifeofA" passive="LIT1493Gadlas"></relation>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT4857LifeofA" passive="LIT2442Temher"></relation>
             </listRelation>
          </div>
          

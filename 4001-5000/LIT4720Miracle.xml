@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4720Miracle" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
@@ -7,6 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 <title xml:lang="en" xml:id="t1">Miracle of Jesus: Raising of Yonās, the son of the widow of Nāyn</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
+                <editor key="RL"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -50,20 +51,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2017-10-09">Created entity</change>
+            <change when="2021-03-25" who="RL">Added bibliographical information, incipit, explicit</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 <listBibl type="editions">
-                    <bibl>
-                  <ptr target="bm:Grebaut1920MiraclesJesusII"/>
-                  <citedRange unit="page">827-831</citedRange>
-               </bibl>
+                    <bibl><ptr target="bm:Grebaut1920MiraclesJesusII"/><citedRange unit="page">827-831</citedRange><citedRange unit="item">19</citedRange></bibl>
+                    <bibl><ptr target="bm:RompayArras1975Miracles"/><citedRange unit="item">19</citedRange></bibl>
+               <listBibl type="translation">
+                 <bibl><ptr target="bm:Grebaut1920MiraclesJesusII"/><citedRange unit="page">827-831</citedRange></bibl>
+               </listBibl>
                 </listBibl>
                 <listRelation>
                <relation name="saws:formsPartOf" active="LIT4720Miracle" passive="LIT2382Taamme"/>
             </listRelation>
+            </div>
+            <div type="edition">
+              <div type="textpart" subtype="incipit" xml:lang="gez">
+                <bibl><ptr target="bm:Grebaut1920MiraclesJesusII"/><citedRange unit="page">827-828</citedRange></bibl>
+                <ab>
+                  ወእንዘ፡ የኃልፍ፡ እግዚእ፡ ኢየሱስ፡ በሀገረ፡ ናይን፡ ወምስለ፡ አርዳኢሁ፡ ስምዖን፡ ወእንድርያስ፡ ዮሐንስ፡ ወያዕቆብ፡ ወርእዩ፡ በህየ፡ ዓራተ፡ ዘይጸውሩ፡ ቦቱ፡ ምውተ። ወዝንቱ ምስት፡ ወልዳ፡ ለአሐቲ፡ ብእሲት፡ መበለት፡ ዘይብልዋ፡ በርስዓ፡ ወለተ፡ ይዋኤል። ወይዋኤል፡ አቡሃ፡ እምደቂቀ፡ ነቢያት፡ ውእቱ፡ ወስሙ፡ ለወልዳ፡ ዘሞተ፡ ዮናስ፡ ወልደ፡ ሳሌም፡ ወልደ፡ ምልክያል፡ እኁሁ ለርሑም፡ ወልደ፡ ሰላትያል፡ ወልደ፡ እኅወ፡ አቡሁ፡ ለዮናስ፡ ነቢይ።
+                </ab>
+              </div>
+              <div type="textpart" subtype="explicit" xml:lang="gez">
+                <bibl><ptr target="bm:Grebaut1920MiraclesJesusII"/><citedRange unit="page">831</citedRange></bibl>
+                <ab>
+                  ወንግሮሙ፡ ለሰብእ፡ ከመ፡ አነ፡ አብጠልኩ፡ ትንቢተ፡ እምደቂቀ፡ እስራኤል። ወዓዲ፡ እነሥእ፡ እምኔሆሙ፡ ክህነተ፡ ወእሁቦሙ፡ ለእለ፡ የአምኑ፡ ብየ፡ ወኣበጥል፡ እምኔሆሙ፡ ሢመተ፡ መንግሥት፡ እስከ፡ ዳግም፡ ምጽአትየ፡ ውስተ፡ ዓለም፡ ከመ፡ እኰንን፡ ሕያዋነ፡ ወሙታነ።
+                </ab>
+              </div>
             </div>
         </body>
     </text>
