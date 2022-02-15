@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2691Antioch">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT6565Treatise ">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Introduction to the Council of Antioch</title>
+            <title xml:id="t1" xml:lang="gez">ንጽሕፍ፡ ስርዓተ፡ ቤተ፡ ክርስቲያን፡ ወመዓርጊሃ፡ ዘአንበሩ፡ አበው፡ ቅዱሳን፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Nǝṣḥǝf sǝrʿāta beta kǝrstiyān wa-ma-ʿārgihā za-ʾanbaru ʾabaw qǝddusān</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -23,7 +24,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         
+         <sourceDesc>
+            <listWit><witness corresp="BNCFcod2"></witness></listWit>
+         </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -33,15 +36,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Liturgy"/>
+               <term key="CanonLaw"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+         
+         <change when="2022-02-15" who="ES">created record</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
+         <listRelation>
+            <relation name="dcterms:isPartOf" active="LIT6565Treatise" passive="LIT2317Senodo"/>
+
+         </listRelation>
+         
       </body>
    </text>
 </TEI>
