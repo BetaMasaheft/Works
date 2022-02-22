@@ -1,272 +1,251 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1709Kebran">
-   <teiHeader xml:base="https://betamasaheft.eu/">
-      <fileDesc>
-         <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ክብረ፡ ነገሥት፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Kǝbra nagaśt</title>
-            <title xml:lang="en" corresp="#t1">Glory of the Kings</title>
-            <title xml:lang="ar" xml:id="t2arabic">شرح سبب انتقال مملكة سليمان ملك اسرائيل الى البلاد النجاشيه التي هي الحبشة</title>
-            <title xml:lang="ar" corresp="#t2arabic" type="normalized">Šarḥ sabab intiqāl mamlakat Sulaymān malik ʾIsrāʾīl ʾilā bilād an-naǧāšīya allatī hiya al-ḥabaša</title>
-            <title type="short">Kebr. Nag.</title>
-            <editor role="generalEditor" key="AB"/>
-            <editor key="SH" role="encoder annotator"/>
-            <editor key="RHC" role="encoder"/>
-            <editor key="ES" role="metadata"/>
-            <respStmt>
-               <resp>Digitized by</resp>
-               <persName from="1995" to="1995">Michal Jerabek (<ref target="#RHC">edition 1</ref>)</persName>
-               <persName from="2000" to="2003" ref="RHC">Ran Ha-Cohen (<ref target="#RHC">edition 1</ref>)</persName>
-               
-               
-               
-               <persName ref="SH" from="2014" to="2018">Susanne Hummel (<ref target="#traces">TraCES edition</ref>)</persName>
-            </respStmt>
-            <funder>Akademie der Wissenschaften in Hamburg; European Research Council</funder>
-         </titleStmt>
-         <editionStmt>
-            <p>The text currently reproduced as <ref target="#RHC">edition 1</ref> is that copied by Michal Jerabek from <bibl>
-                  <ptr target="bm:Bezold1905KebraN"/>
-               </bibl>.</p>
-            <p>The non-unicode encoded text of <ref target="#RHC">edition 1</ref> was saved from the website by Ran HaCohen and converted to Unicode.</p>
-            <p>The text of <ref target="#traces">TraCES edition</ref> was prepared by the TraCES project on the basis of <bibl>
-                  <ptr target="bm:Bezold1905KebraN"/>
-               </bibl>.</p>
-            
-         </editionStmt>
-         <publicationStmt>
-            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
-            <pubPlace>Hamburg</pubPlace>
-            <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
-                  <p>The text of <ref target="#RHC">edition 1</ref> has the following copyright. 1995 Library of Ethiopian Texts,
-                     created and maintained by Michal Jerabek, Prague. Permission to use, copy, and
-                     distribute this text, for any NONCOMMERCIAL purpose is hereby granted without
-                     fee, provided that the copyright notice and this permission notice appear in
-                     all copies of this text. This text cannot be sold under any circumstances.</p>
-               </licence>
-            </availability>
-         </publicationStmt>
-         <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
-         </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <listWit rend="other">
-                  <witness type="external" corresp="BNFarabe264" facs="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89540w/cd0e210"/>
-               </listWit>
-               <listWit rend="edition">
-                  <witness corresp="BNFet5" xml:id="bnfet5"/>
-                  <witness corresp="BNFet146" xml:id="bnfet146"/>
-                  <witness corresp="BNFabb97" xml:id="bnfabb97"/>
-                  <witness corresp="BNFabb132" xml:id="bnfabb132"/>
-                  <witness corresp="BNFabb152" xml:id="bnfabb152"/>
-                  <witness corresp="BLorient818" xml:id="blor818"/>
-                  <witness corresp="BLorient819" xml:id="blor819"/>
-                  <witness corresp="EMML50" xml:id="emml50"/>
-                  <witness corresp="ANLcr27" xml:id="anlcr27"/>
-                  <witness corresp="BDLbruce87" xml:id="bdlbruce87"/>
-                  <witness corresp="BDLbruce93" xml:id="bdlbruce93"/>
-                  <witness corresp="BerOrFol395" xml:id="berlin395"/>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT1709Kebran" xml:lang="en" type="work">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="gez" xml:id="t1">ክብረ፡ ነገሥት፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Kǝbra nagaśt</title>
+                <title xml:lang="en" corresp="#t1">Glory of the Kings</title>
+                <title xml:lang="ar" xml:id="t2arabic">شرح سبب انتقال مملكة سليمان ملك اسرائيل الى البلاد النجاشيه التي هي الحبشة</title>
+                <title xml:lang="ar" corresp="#t2arabic" type="normalized">Šarḥ sabab intiqāl mamlakat Sulaymān malik ʾIsrāʾīl ʾilā bilād an-naǧāšīya allatī hiya al-ḥabaša</title>
+                <title type="short">Kebr. Nag.</title>
+                <editor role="generalEditor" key="AB"/>
+                <editor key="SH" role="encoder annotator"/>
+                <editor key="RHC" role="encoder"/>
+                <editor key="ES" role="metadata"/>
+                <respStmt>
+                    <resp>Digitized by</resp>
+                    <persName from="1995" to="1995">Michal Jerabek (<ref target="#RHC">edition 1</ref>)</persName>
+                    <persName from="2000" to="2003" ref="RHC">Ran Ha-Cohen (<ref target="#RHC">edition 1</ref>)</persName>
+                    
+                    
+                    
+                    <persName ref="SH" from="2014" to="2018">Susanne Hummel (<ref target="#traces">TraCES edition</ref>)</persName>
+                </respStmt>
+                <funder>Akademie der Wissenschaften in Hamburg; European Research Council</funder>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+                            Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                <pubPlace>Hamburg</pubPlace>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                                licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                
+                <p>The text of <ref target="#RHC">edition 1</ref> has the following copyright. 1995 Library of Ethiopian Texts,
+                    created and maintained by Michal Jerabek, Prague. Permission to use, copy, and
+                    distribute this text, for any NONCOMMERCIAL purpose is hereby granted without
+                    fee, provided that the copyright notice and this permission notice appear in
+                    all copies of this text. This text cannot be sold under any circumstances.</p>
+                <p>The text currently reproduced as <ref target="#RHC">edition 1</ref> is that copied by Michal Jerabek from <bibl>
+                    <ptr target="bm:Bezold1905KebraN"/>
+                </bibl>.</p>
+                <p>The non-unicode encoded text of <ref target="#RHC">edition 1</ref> was saved from the website by Ran HaCohen and converted to Unicode.</p>
+                <p>The text of <ref target="#traces">TraCES edition</ref> was prepared by the TraCES project on the basis of <bibl>
+                    <ptr target="bm:Bezold1905KebraN"/>
+                </bibl>.</p></availability>
+            </publicationStmt>
+            <sourceDesc>
+                <listWit>
+                    <listWit rend="other">
+                        <witness type="external" corresp="BNFarabe264" facs="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89540w/cd0e210"/>
                     </listWit>
-            </listWit>
-         </sourceDesc>
-      </fileDesc>
-
-
-      <encodingDesc>
-         <projectDesc>
-            <p>The text of <ref target="#traces">TraCES edition</ref> was prepared within the framework of the TraCES project.</p>
-         </projectDesc>
-         <editorialDecl>
-            <correction>
-               <p>The following errors
-                  have been corrected:
-                  <list>
-                     <item>...</item>
-                     <item>...</item>
-                     <item>...</item>
-
-                  </list>
-               </p>
-
-            </correction>
-
-            <normalization>
-               <p>Original spelling and typography is retained.</p>
-            </normalization>
-         </editorialDecl>
-         <tagsDecl>
-            <!-- the format for the tagsDecl to be specified -->
-         </tagsDecl>
-
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
-            <xi:fallback>
-               <p>Definitions of prefixes used.</p>
-            </xi:fallback>
-         </xi:include>
-      </encodingDesc>
-
-      <profileDesc>
-         <langUsage><language ident="en">English</language><language ident="ar">Arabic</language><language ident="gez">Gǝʿǝz</language></langUsage>
-
-         <abstract>
-            <p>The Kǝbra nagaśt is a kind of historical novel intended to justify the Solomonic dynasty by demonstrating its Israelite descent.
-               <bibl>
+                    <listWit rend="edition">
+                        <witness corresp="BNFet5" xml:id="bnfet5"/>
+                        <witness corresp="BNFet146" xml:id="bnfet146"/>
+                        <witness corresp="BNFabb97" xml:id="bnfabb97"/>
+                        <witness corresp="BNFabb132" xml:id="bnfabb132"/>
+                        <witness corresp="BNFabb152" xml:id="bnfabb152"/>
+                        <witness corresp="BLorient818" xml:id="blor818"/>
+                        <witness corresp="BLorient819" xml:id="blor819"/>
+                        <witness corresp="EMML50" xml:id="emml50"/>
+                        <witness corresp="ANLcr27" xml:id="anlcr27"/>
+                        <witness corresp="BDLbruce87" xml:id="bdlbruce87"/>
+                        <witness corresp="BDLbruce93" xml:id="bdlbruce93"/>
+                        <witness corresp="BerOrFol395" xml:id="berlin395"/>
+                    </listWit>
+                </listWit>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>The text of <ref target="#traces">TraCES edition</ref> was prepared within the framework of the TraCES project.</p>
+            </projectDesc>
+            <editorialDecl>
+                <correction>
+                    <p>The following errors
+                        have been corrected:
+                        <list>
+                            <item>...</item>
+                            <item>...</item>
+                            <item>...</item>
+                            
+                        </list>
+                    </p>
+                    
+                </correction>
+                
+                <normalization>
+                    <p>Original spelling and typography is retained.</p>
+                </normalization>
+            </editorialDecl>
+            <tagsDecl>
+                <!-- the format for the tagsDecl to be specified -->
+            </tagsDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage><language ident="en">English</language><language ident="ar">Arabic</language><language ident="gez">Gǝʿǝz</language></langUsage>
+            
+            <abstract>
+                <p>The Kǝbra nagaśt is a kind of historical novel intended to justify the Solomonic dynasty by demonstrating its Israelite descent.
+                    <bibl>
                         <ptr target="bm:Marrassini2007EAEKebraN"/>
                     </bibl>
                 </p>
-         </abstract>
-
-         <creation notAfter="1321">Composed (or translated) on the orders of makʷannǝn <persName ref="PRS10190Yaebik">Yāʿǝbika ʾƎgziʾ</persName> in 1321.</creation>
-         <textClass>
-            <keywords scheme="#ethioauthlist">
-               <term key="HistoryAndHistoriography"/>
-               <term key="ChristianLiterature"/>
-               <term key="Translation"/>
-            </keywords>
-         </textClass>
-
-      </profileDesc>
-      <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
-         <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change who="DR" when="2016-11-07">Title updated</change>
-         <change who="DR" when="2016-11-08">Bibliography and textparts added</change>
-         <change when="2016-12-14" who="ES">added keywords, added information</change>
-         <change who="RHC" when="2017-07-18">Sent word file with unicode encoded text.</change>
-         <change who="PL" when="2017-07-21">Marked up minimally the text provided.</change>
-         <change who="DR" when="2017-07-27">Minor correction to the text division</change>
-         <change who="SH" when="2018-06-29">Edited and annotated selected chapters for the TraCES project</change>
-         <change who="DR" when="2018-12-05">Deleted variant from English title</change>
-      </revisionDesc>
-      
-   </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <listRelation>
-            <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1709Kebran#t1" passive="LIT1709Kebran#t2arabic" cert="low">
-               <desc>The relation between <ref type="work" corresp="LIT1709Kebran#t1"/> and <ref type="work" corresp="LIT1709Kebran#t2arabic"/> is still not fully investigated. A derivation of the Gǝʿǝz version from
-                  the Arabic or vice versa and a dependence on a common source have all been proposed.
-                  <bibl>
-                     <ptr target="bm:Marrassini2007EAEKebraN"/>
-                     <citedRange unit="page">366b-367a</citedRange>
-                  </bibl>
-               </desc>
-            </relation>
-            <relation name="saws:isAttributedToAuthor" active="LIT1709Kebran" passive="PRS4823Gregory">
-               <desc>The <ref type="work" corresp="LIT1709Kebran"/> is composed as an exposition of <persName role="author" ref="PRS4823Gregory"/>, but actually alludes
-                  to <persName ref="PRS4825Gregory"/>.
-                  <bibl>
-                     <ptr target="bm:Marrassini2007EAEKebraN"/>
-                     <citedRange unit="page">364b</citedRange>
-                  </bibl>
-               </desc>
-            </relation>
-            <relation name="saws:isAttributedToAuthor" active="LIT1709Kebran#t2arabic" passive="PRS1013Abalfara">
-               <desc>The colophon states that <ref type="work" corresp="LIT1709Kebran#t2arabic"/> was translated from Coptic to Arabic by <persName role="translator" ref="PRS1013Abalfara"/>
-                  and <persName role="translator" ref="PRS1012Abalez"/>.</desc>
-            </relation>
+            </abstract>
             
-            <relation name="saws:isAttributedToAuthor" active="LIT1709Kebran#t2arabic" passive="PRS1012Abalez">
-               <desc>The colophon states that <ref type="work" corresp="LIT1709Kebran#t2arabic"/> was translated from Coptic to Arabic by <persName role="translator" ref="PRS1013Abalfara"/>
-                  and <persName role="translator" ref="PRS1012Abalez"/>.</desc>
-            </relation>
+            <creation notAfter="1321">Composed (or translated) on the orders of makʷannǝn <persName ref="PRS10190Yaebik">Yāʿǝbika ʾƎgziʾ</persName> in 1321.</creation>
+            <textClass>
+                <keywords scheme="#ethioauthlist">
+                    <term key="HistoryAndHistoriography"/>
+                    <term key="ChristianLiterature"/>
+                    <term key="Translation"/>
+                </keywords>
+            </textClass>
             
-            <relation name="saws:isAttributedToAuthor" active="LIT1709Kebran#t1" passive="PRS10351Yeshaq">
-               <desc>The colophon  states that <ref type="work" corresp="LIT1709Kebran#t1"/> was translated from Arabic to Gǝʿǝz by <persName role="translator" ref="PRS10351Yeshaq"/>
-                  at the order of <persName role="patron" ref="PRS10190Yaebik"/>.</desc>
-            </relation>
-         </listRelation>
-         <div type="bibliography">
-
-
-
-            <listBibl type="secondary">
-               <bibl corresp="#bdlbruce87 #bdlbruce93">
-                  <ptr target="bm:Dillmann1848Catalogus"/>
-                  <citedRange unit="page">68-72; 74</citedRange>
-               </bibl>
-               <bibl corresp="#bnfet5 #bnfet146">
-                  <ptr target="bm:Zotenberg1877Catalogue"/>
-               </bibl>
-               <bibl corresp="#blor818 #blor819">
-                  <ptr target="bm:Wright1877BM"/>
-                  <citedRange unit="page">297</citedRange>
-               </bibl>
-               <bibl>
-                        <ptr target="bm:Marrassini2007EAEKebraN"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Bruce1813Travels3"/>
-                        <citedRange unit="page">411-417</citedRange>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Beylot2004Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Getatchew2009Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Piovanelli2013Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Amsalu2014Colophon"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Amsalu2015Ark"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Wion2009Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Richelle2012Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Littmann1904Sheba"/>
-                    </bibl>
-            </listBibl>
-
-            <listBibl type="translation">
-               <bibl>
-                        <ptr target="bm:Budge1922Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Colin2002Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Bezold1905KebraN"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Beylot2008Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Raineri2008Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Mahler2007Kebra"/>
-                    </bibl>
-            </listBibl>
-            <listBibl type="editions">
-               <bibl>
-                        <ptr target="bm:Praetorius1870Fabula"/>
-                    </bibl>
-               <bibl corresp="#bnfet5 #bnfet146 #bdlbruce93 #bdlbruce87 #berlin395 #blor818 #blor819">
-                        <ptr target="bm:Bezold1905KebraN"/>
-                    </bibl>
-            </listBibl>
-
-
-          
-         </div>
-
-         <div type="edition" xml:lang="gez" xml:id="RHC" resp="RHC">
+        </profileDesc>
+        <revisionDesc>
+            <change who="PL" when="2016-03-21"> Created file from google
+                spreadsheet </change>
+            <change who="ES" when="2016-02-09">CREATED: text record</change>
+            <change who="DR" when="2016-11-07">Title updated</change>
+            <change who="DR" when="2016-11-08">Bibliography and textparts added</change>
+            <change when="2016-12-14" who="ES">added keywords, added information</change>
+            <change who="RHC" when="2017-07-18">Sent word file with unicode encoded text.</change>
+            <change who="PL" when="2017-07-21">Marked up minimally the text provided.</change>
+            <change who="DR" when="2017-07-27">Minor correction to the text division</change>
+            <change who="SH" when="2018-06-29">Edited and annotated selected chapters for the TraCES project</change>
+            <change who="DR" when="2018-12-05">Deleted variant from English title</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+           
+           <div type="bibliography">
+              <listRelation>
+                 <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1709Kebran#t1" passive="LIT1709Kebran#t2arabic" cert="low">
+                    <desc>The relation between <ref type="work" corresp="LIT1709Kebran#t1"/> and <ref type="work" corresp="LIT1709Kebran#t2arabic"/> is still not fully investigated. A derivation of the Gǝʿǝz version from
+                       the Arabic or vice versa and a dependence on a common source have all been proposed.
+                       <bibl>
+                          <ptr target="bm:Marrassini2007EAEKebraN"/>
+                          <citedRange unit="page">366b-367a</citedRange>
+                       </bibl>
+                    </desc>
+                 </relation>
+                 <relation name="saws:isAttributedToAuthor" active="LIT1709Kebran" passive="PRS4823Gregory">
+                    <desc>The <ref type="work" corresp="LIT1709Kebran"/> is composed as an exposition of <persName role="author" ref="PRS4823Gregory"/>, but actually alludes
+                       to <persName ref="PRS4825Gregory"/>.
+                       <bibl>
+                          <ptr target="bm:Marrassini2007EAEKebraN"/>
+                          <citedRange unit="page">364b</citedRange>
+                       </bibl>
+                    </desc>
+                 </relation>
+                 <relation name="saws:isAttributedToAuthor" active="LIT1709Kebran#t2arabic" passive="PRS1013Abalfara">
+                    <desc>The colophon states that <ref type="work" corresp="LIT1709Kebran#t2arabic"/> was translated from Coptic to Arabic by <persName role="translator" ref="PRS1013Abalfara"/>
+                       and <persName role="translator" ref="PRS1012Abalez"/>.</desc>
+                 </relation>
+                 
+                 <relation name="saws:isAttributedToAuthor" active="LIT1709Kebran#t2arabic" passive="PRS1012Abalez">
+                    <desc>The colophon states that <ref type="work" corresp="LIT1709Kebran#t2arabic"/> was translated from Coptic to Arabic by <persName role="translator" ref="PRS1013Abalfara"/>
+                       and <persName role="translator" ref="PRS1012Abalez"/>.</desc>
+                 </relation>
+                 
+                 <relation name="saws:isAttributedToAuthor" active="LIT1709Kebran#t1" passive="PRS10351Yeshaq">
+                    <desc>The colophon  states that <ref type="work" corresp="LIT1709Kebran#t1"/> was translated from Arabic to Gǝʿǝz by <persName role="translator" ref="PRS10351Yeshaq"/>
+                       at the order of <persName role="patron" ref="PRS10190Yaebik"/>.</desc>
+                 </relation>
+              </listRelation>
+              
+              <listBibl type="secondary">
+                 <bibl corresp="#bdlbruce87 #bdlbruce93">
+                    <ptr target="bm:Dillmann1848Catalogus"/>
+                    <citedRange unit="page">68-72; 74</citedRange>
+                 </bibl>
+                 <bibl corresp="#bnfet5 #bnfet146">
+                    <ptr target="bm:Zotenberg1877Catalogue"/>
+                 </bibl>
+                 <bibl corresp="#blor818 #blor819">
+                    <ptr target="bm:Wright1877BM"/>
+                    <citedRange unit="page">297</citedRange>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Marrassini2007EAEKebraN"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Bruce1813Travels3"/>
+                    <citedRange unit="page">411-417</citedRange>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Beylot2004Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Getatchew2009Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Piovanelli2013Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Amsalu2014Colophon"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Amsalu2015Ark"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Wion2009Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Richelle2012Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Littmann1904Sheba"/>
+                 </bibl>
+              </listBibl>
+              
+              <listBibl type="translation">
+                 <bibl>
+                    <ptr target="bm:Budge1922Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Colin2002Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Bezold1905KebraN"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Beylot2008Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Raineri2008Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Mahler2007Kebra"/>
+                 </bibl>
+              </listBibl>
+              <listBibl type="editions">
+                 <bibl>
+                    <ptr target="bm:Praetorius1870Fabula"/>
+                 </bibl>
+                 <bibl corresp="#bnfet5 #bnfet146 #bdlbruce93 #bdlbruce87 #berlin395 #blor818 #blor819">
+                    <ptr target="bm:Bezold1905KebraN"/>
+                 </bibl>
+              </listBibl>
+           </div>
+           
+            <div type="edition" xml:lang="gez" xml:id="RHC" resp="RHC">
             <div type="textpart" subtype="introduction" xml:lang="gez" xml:id="intro">
                <ab>
                   በአኰቴቱ ፡ ለእግዚኣብሔር ፡ አብ ፡ አኃዜ ፡ ኵሉ ፤ ወበወልዱ ፡ ኢየሱስ ፡ ክርስቶስ ፡ ዘቦቱ ፡ ኵሉ ፡ ኮነ ፡ ወዘእንበሌሁሰ ፡ አልቦ ፡ ዘኮነ ፤ ወበመንፈስ ፡ ቅዱስ ፡ ጰራቅሊጦስ ፡ ዘይወፅእ ፡ እምአብ ፡ ወይነሥእ ፡ እምወልድ ፡ ፩ ፡ አምላክ ፡ አብ ፡ ወወልድ ፡ ወመንፈስ ፡ ቅዱስ ፡ ነአምን ፡ ወንገኒ ፡ ለሥሉስ ፨ ፨ ፨ ፨
@@ -3606,10 +3585,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             ሰገድ ፤ ሕዝበ ፡ አርዓድ ፤ ቅድመ ፡ ሰገድ ፤ ዣን ፡ ሰገድ ፤ ውድም ፡ አርዓድ ፤ ዓምደ ፡ ጽዮን ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
          </div>
-         <div type="edition" xml:lang="gez" xml:id="traces" resp="SH">
-            
-         </div>
-      </body>
-
-   </text>
+            <div type="edition" xml:id="traces" xml:lang="gez" resp="SH">
+                <!-- how to include Geta-produced TEI? -->                
+            </div>
+            <!---->
+        </body>
+    </text>
 </TEI>
