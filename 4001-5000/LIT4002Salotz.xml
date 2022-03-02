@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4002Salotz">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Ṣalot za-Muse</title>
+
+           <title xml:lang="gez" xml:id="t1">ጸሎት፡ ዘሙሴ፡</title>
+           <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalot za-Muse</title>
+           <title xml:lang="en" corresp="#t1">Prayer of Moses</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -25,6 +28,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <listWit>
                <witness corresp="BLadd16213"/>
             </listWit>
+
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -36,23 +40,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p/>
+            <p>C. Conti Rossini suggested the existence of a <persName ref="ETH1274Betaes"/> version of of the work.</p>
          </abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="Apocrypha"/>
                <term key="ChristianLiterature"/>
+               <term key="BetaEsraelLiterature"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-03-24">Updated and added keywords</change>
+         <change who="DN" when="2022-03-02">Updated: information on versions, bibliography, keywords</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+        <div type="bibliography">
+              <listBibl type="editions">
+                 <bibl>
+                    <ptr target="bm:Nollet1933Priere"/>
+                 </bibl>
+              </listBibl>
+
+              <listBibl type="secondary">
+                 <bibl>
+                    <ptr target="bm:bm:ContiRossini1914Notice"/>
+                    <citedRange unit="page">63</citedRange>
+                 </bibl>
+              </listBibl>
+        </div>
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>ጸሎት፡ ዘሙሴ፡ ዘወሀቦ፡ እግዚአብሔር፡ መግረሬ፡ ፀር፡</ab>
