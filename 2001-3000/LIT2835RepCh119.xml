@@ -31,6 +31,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <listWit>
                <witness corresp="DSEthiop10"/>
+               <witness corresp="BNFet346"/>
+               <witness corresp="VATet82"/>
+               <witness corresp="EMML301"/>
                         </listWit>
          </sourceDesc>
       </fileDesc>
@@ -54,6 +57,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-05">Added keywords and incipit</change>
+         <change who="DR" when="2022-03-07">Transferred information from deleted LIT1860Malkea</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -67,12 +71,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>
          </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምከ፡ ምስለ፡ ስመ፡ ልዑል፡ ዘተሳተፈ።
-               </ab>
+      
+            <div type="textpart" subtype="incipit">
+               <ab>መልክአ፡ ሚካኤል። ሰላም፡ ለዝክረ፡ ስምከ፡ ምስለ፡ ስመ፡ ልዑል፡ ዘተሳተፈ፡ ወልደ፡ ያሬድ፡ ሔኖክ፡ በከመ፡ ጸሐፈ፡ ሶበ፡ እጼውዕ፡ ስመከ፡ ከሢትየ፡ አፈ፡ ራዳኤ፡ ምንዱባን፡ ሚካኤል፡ በከመ፡ ታለምድ፡ ዘልፈ።</ab>
+            </div>
+            <div type="textpart" subtype="explicit">
+               <ab>ሰላም፡ ለከ፡ ቅድመ፡ እግዚእከ፡ ስግድ፡ ዘበአድንኖ፡ ሰአሎ፡ ከመ፡ ይባርከነ፡ ሰፊሆ፡ የማኖ። አምላከ፡ ቅዱስ፡ ዕቀበኒ፡ ወአድኅነኒ፡ እምካራ፡ ሥጋ፡ ወነፍስ፡ ለገብርከ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
             </div>
          </div>
+         <!-- <listBibl type="mss">
+                  <bibl>BN éth. 346 (20th cent.), <locus from="237v" to="242v">237v-242v</locus>: “Malke´e à l´archange Michel” (GrébGriaule I–III, 46-47, n<locus target="#42">42</locus>);</bibl>
+                  <bibl>VatLib Aeth. 82 (19th cent.), <locus from="199v" to="211v">199v-211v</locus>: “Malkʾ in honorem s. Michahelis” (GréTisVat I, 316);</bibl>
+                  <bibl>EMML n°301 (20th cent.), <locus from="158a" to="166b">158a-166b</locus>: “Image of St Michael the Archangel” (EMML II, 1).</bibl>
+               </listBibl> -->
+         <listRelation>
+            <relation name="ecrm:P129_is_about" active="LIT2835RepCh119" passive="PRS7049Michael"/>
+            <relation name="betmas:formerlyAlsoListedAs" active="LIT2835RepCh119" passive="LIT1860Malkea"/>
+         </listRelation>
       </body>
    </text>
 </TEI>
