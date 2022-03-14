@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4336Ledata">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4336Ledata">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Genealogy of the Fathers</title>
             <title xml:id="t2" xml:lang="gez">ልደተ፡ አበው፡</title>
-            <title corresp="#t2" xml:lang="gez" type="normalized">Lǝdata abaw</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Lǝdata ʾabaw</title>
             <title xml:id="t3" xml:lang="">ዜና፡ ልደቶሙ፡ ለአበዊነ፡ ቅዱሳን፡ መነኮሳት፡ </title>
-            <title corresp="#t3" xml:lang="gez" type="normalized">zena Lǝdatomu la-ʾAbawina qǝdusān manakosāt</title>
+            <title corresp="#t3" xml:lang="gez" type="normalized">Zenā lǝdatomu la-ʾabawina qǝddusān manakosāt</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -41,16 +42,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+         <abstract><p>A relatively long text, beginning with a genealogy from Anthony to Takla Hāymānot, followed by episodes from the 
+            life of Takla Hāymānot and his disciples, and an admonition that no one not from the monastic house of Takla Hāymānot
+            should be appointed in Šawā and Dāmot. It ends with lists of the abbots of Dabra Libānos and of the monastic leaders of the house of Takla Hāymānot.</p></abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="ES" when="2017-02-02">Created record</change>
          <change who="SG" when="2019-03-28">addition to the title</change>
+         <change who="DR" when="2022-03-10">Corrected transliteration, added reference by suggestion of Denis Nosnitsin</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <div type="bibliography"><!--Lǝdata abaw--></div>
+         <div type="bibliography">
+         <listBibl type="editions">
+            <bibl><ptr target="bm:Getachew1983monastic"/></bibl>
+         </listBibl>
+            <listRelation>
+               <relation name="lawd:hasAttestation" active="LIT4336Ledata" passive="EMML2136"/>
+               <relation name="lawd:hasAttestation" active="LIT4336Ledata" passive="EMML1760"/>
+               <relation name="lawd:hasAttestation" active="LIT4336Ledata" passive="EMML3012"/>
+               <relation name="lawd:hasAttestation" active="LIT4336Ledata" passive="EMML233"/>
+               <relation name="lawd:hasAttestation" active="LIT4336Ledata" passive="EMML2495"/>
+               <relation name="lawd:hasAttestation" active="LIT4336Ledata" passive="BLorient769"/>
+            </listRelation>
+         </div>
       </body>
    </text>
 </TEI>
