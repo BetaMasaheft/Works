@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1973Mashaf">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mäṣḥafä täzkaru lämädḫane ʿaläm</title>
+
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ተዝካሩ፡ ለመድኃኔ፡ ዓለም፡</title>
+            <title  xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa tazkāru la-madḫāne ʿalam</title>
+             <title xml:lang="en" corresp="#t1">Book of the Commemoration of the Saviour of the World</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,17 +36,59 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
-      </profileDesc>
+
+        <creation/>
+        <abstract><p>GEneral record for the composition usually including
+          <ref type="work" corresp="LIT6576MiraclesMabaSeyo"/> and <ref type="work" corresp="LIT1475GadlaM"/>
+          (other constellations are possible,
+          <ref type="mss" corresp="EMML1779"/>).</p>
+        </abstract>
+        <textClass>
+        <keywords>
+      <term key="ChristianLiterature"/>
+      <term key="Hagiography"/>
+      <term key="Miracle"/>
+  </keywords>
+</textClass>
+<langUsage>
+    <language ident="en">English</language>
+    <language ident="gez">Gǝʿǝz</language>
+</langUsage>
+</profileDesc>
+
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
+         <change who="PL" when="2016-03-21">Created file from google
+            spreadsheet</change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+          <change who="DN" when="2022-03-17">revised text record</change>
       </revisionDesc>
    </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
-      </body>
+   <text>
+                  <body>
+                <div type="edition">
+                  <note>After Mss <ref type="mss" corresp="EMML4817"/>, <ref type="mss" corresp="EMML4810"/>
+                  and <ref type="mss" corresp="ESmy024"/>.
+                   </note>
+
+                   <div type="textpart" subtype="chapter" xml:id="Introduction">
+                    <label>Introduction</label>
+               </div>
+
+               <div type="textpart" subtype="chapter" xml:id="LIT1475GadlaM">
+                 <label>Acts of Mabāʾa Ṣǝyon</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="LIT6576MiraclesMabaSeyon">
+              <label>Miracles of Mabāʾa Ṣǝyon</label>
+         </div>
+          </div>
+
+               <listRelation>
+                  <relation name="lawd:hasAttestation" active="LIT6576MiraclesMabaSeyon" passive="ESmy024"/>
+                  <relation name="ecrm:P129_is_about" active="LIT6576MiraclesMabaSeyon" passive="PRS6418Mabaas"/>
+                  <relation name="lawd:hasAttestation" active="LIT6576MiraclesMabaSeyon" passive="EMML4817"/>
+                    <relation name="lawd:hasAttestation" active="LIT6576MiraclesMabaSeyon" passive="EMML4810"/>
+                    <relation name="dcterms:isPartOf" active="LIT6576MiraclesMabaSeyon" passive="LIT6577DossierMS"/>
+              </listRelation>
+              </body>
    </text>
 </TEI>
