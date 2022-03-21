@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3972Mashaf">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -46,18 +46,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </profileDesc>
       <revisionDesc>
          <change who="MV" when="2016-09-06">CREATED: text record</change>
+             <change who="DN" when="2022-03-20">revised TEI record</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <div type="edition" xml:lang="gez">
-            <div type="textpart" xml:id="Genealogy" corresp="LIT3143Ledata "><label>Genealogy of  Takla Haymānot</label></div>
-            <div type="textpart" xml:id="Book"><label>Maṣḥafa lǝdatu</label></div>
-         </div>
+        <div type="edition" xml:lang="gez">
+          <note>The text below follows the manuscript <ref type="mss" corresp="BLorient725"/>.</note>
+           <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                 መጽሐፈ፡ ልደቱ፡ ለአቡነ፡ ቅዱስ፡ ተክለ፡ ሃይማኖት፡ ወልደ፡ እግዚአብሔር፡ በጸጋ፡ ወልደ፡ አዳም፡
+                  በሥጋ፤ አዳም፡ ወለዶ፡ ለሴት፡ ወሴት፡ ወለዶ፡ ለሄኖስ፨ ወሄኖስ፡ ወለዶ፡ ለቃይናን፨ ወቃይናን፡ ወለዶ፡ ለመላልኤል፡
+                    ወመላልኤል፡ ለያሮድ፨ ወያሮድ፡ ወለዶ፡ ለሄኖክ፨ ወሄኖክ፡ ወለዶ፡ ለማቱሳላ፨ ወማቱሳላ፡ ወለዶ፡ ለሳሜህ፨ ላሜህ፡ ወለዶ፡ ለኖኅ፨
+                    ወኖኅ፡ ወለዶ፡ ለሴም፨
+               </ab>
+            </div>
+
+           <div type="textpart" subtype="explicit" xml:lang="gez">
+               <ab>
+                 ወንሕነሂ፡ መላህቅተ፡ ሕዝብ፡ ጸዋዒነ፡ ኃደግነ፨ ወከመዝ፡ ተረክበ፡ በመጻሕፍተ፡ አበዊነ፨
+               </ab>
+            </div>
          <div type="bibliography">
             <listRelation>
                <relation name="ecrm:P129_is_about" active="LIT3972Mashaf" passive="PRS9162TaklaHa"/>
+               <relation name="dcterms:isPartOf" active="LIT3972Mashaf" passive="LIT1008DossierTH"/>
+                <relation name="lawd:hasAttestation" active="LIT3972Mashaf" passive="BAVet110"/>
+                  <relation name="lawd:hasAttestation" active="LIT3972Mashaf" passive="IVorlov35"/>
+                    <relation name="lawd:hasAttestation" active="LIT3972Mashaf" passive="ESath002"/>
+                      <relation name="lawd:hasAttestation" active="LIT3972Mashaf" passive="BLorient725"/>
+                      <relation name="lawd:hasAttestation" active="LIT3972Mashaf" passive="BNFet138"/>
             </listRelation>
+         </div>
          </div>
       </body>
    </text>
