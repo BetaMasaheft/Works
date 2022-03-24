@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2285Saqoqa">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2285Saqoqa">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -49,6 +50,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Poetry"/>
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -58,6 +61,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-03-06" who="ES">added title abstract relation keywords</change>
          <change when="2020-04-13" who="DR">Added bibliography</change>
+         <change when="2022-03-14" who="DR">Added information from deleted LIT2987RepCh268</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -66,10 +70,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <relation name="ecrm:P129_is_about" active="LIT2285Saqoqa" passive="PRS6819Mary"/>
             <relation name="dcterms:isPartOf" active="LIT2285Saqoqa" passive="LIT2301Sebhat"/>
             <relation name="dcterms:isPartOf" active="LIT2285Saqoqa" passive="LIT1961Mashaf"/>
+            <relation name="betmas:formerlyAlsoListedAs" active="LIT2285Saqoqa" passive="LIT2987RepCh268"/>
          </listRelation>
          <listBibl type="secondary">
             <bibl>
                <ptr target="bm:Witakowski2010SD"/>
+            </bibl>
+            <bibl>
+               <ptr target="bm:Chaine1913Rep"/>
+               <citedRange unit="item">268</citedRange>
             </bibl>
          </listBibl>
          <listBibl type="editions">
