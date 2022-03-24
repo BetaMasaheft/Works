@@ -29,10 +29,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
-            <listWit>
-               <listWit>
+            <listWit>               
                   <witness corresp="BLadd16219#ms_i.2"/>
-               </listWit>
+               
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -53,13 +52,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </keywords>
          </textClass>
          <creation corresp="LIT1586Hayman#t2arabic" notBefore="1077" notAfter="1079">The date post
-            quem of the Arabic version is provided by the death of patriarch <persName ref="PRS3111Christod"/>, the date ante quem by a synodal letter from 1079 which is
-            not included. </creation>
-         <!--can a bibliographic reference be added here?-->
-         <!-- <bibl><ptr target="bm:Graf1947GCALII"/><citedRange unit="page">322</citedRange></bibl>-->
-         <creation corresp="LIT1586Hayman#t1" notAfter="1577">According to , the work must have been
+            quem of <ref target="#t2arabic">the Arabic version</ref> (<date when="1077"></date>) is provided by the death of patriarch <persName ref="PRS3111Christod"/>, 
+            the date ante quem by a synodal letter from <date when="1079">1079</date> which is
+            not included. 
+         </creation>
+         <creation corresp="LIT1586Hayman#t1" notAfter="1577">
+            According to <ref target="#ricci1969" type="item"></ref> the <ref target="#t1">work</ref> must have been
             translated to Ethiopic before 1577.</creation>
-         <!--<bibl><ptr target="bm:Ricci1969Letterature"/><citedRange unit="page">839</citedRange></bibl>-->
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google spreadsheet </change>
@@ -71,6 +70,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div type="bibliography">
+            <listBibl type="secondary">
+            <bibl xml:id="grafgcal"><ptr target="bm:Graf1947GCALII"/><citedRange unit="page">322</citedRange></bibl>
+            <bibl xml:id="ricci1969"><ptr target="bm:Ricci1969Letterature"/><citedRange unit="page">839</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Isenberg1841Dictionary"/>
+                  <citedRange unit="page">198</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:WionFritsch2005Haymanota"/>
+                  
+               </bibl>
+         </listBibl>
          <listRelation>
             <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1586Hayman#t1" passive="LIT1586Hayman#t2arabic"/>
             <relation name="saws:isAttributedToAuthor" active="LIT1586Hayman#t1" passive="PRS6419Mabaas">
@@ -97,7 +109,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             
                <relation name="saws:formsPartOf" active="LIT1586Hayman" passive="LIT5769HaymanTomar"/>
             
-         </listRelation>
+         </listRelation></div>
 
          <!--chapter distribution taken from various mss-->
 
