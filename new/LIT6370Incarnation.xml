@@ -44,6 +44,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
             </langUsage>
+            <abstract><p>The version preserved in EMML 1763 is likely a direct translation from Greek. The same homily was later translated
+            again as part of <ref type="work" corresp="LIT1586Hayman">Hāymānota ʾabaw</ref>.</p></abstract>
+
         </profileDesc>
         <revisionDesc>
             <change who="MKr" when="2021-02-01">Created entity</change>
@@ -54,8 +57,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="bibliography">
                 <listRelation>
                     <relation name="saws:isAttributedToAuthor" active="LIT6370Incarnation" passive="PRS2209Athanasi"/>
+
+                    <relation name="saws:isVersionOf" active="LIT6370Incarnation" passive="LIT1586Hayman#Athanasius1"/>
                 </listRelation>
-            </div><!---->
+
+
+              <listBibl type="editions">
+                  <bibl><ptr target="bm:Getatchew2017Treatise"/></bibl>
+              </listBibl>
+ </div>
+
+              <div xml:lang="gez" type="edition">
+            <note>The incipit is taken from <ref type="mss" corresp="EMML1763"/></note>
+            <div type="textpart" subtype="incipit">
+             <ab xml:lang="gez">ነአምን፡ ወልደ፡ እግዚአብሔር፡ እምቅድመ፡ ዓለም፡ ዘእንበለ፡ መዋዕል፡ እምአብ፡ ዘተወልደ፡ ወበደኀሪ፡ መዋዕል፡ በእንተ፡ መድኀኒተ፡ ዚኣነ፡
+               እማርያም፡ ተወልደ፡ በሥጋ።</ab>
+            </div>
+            </div>
+
         </body>
     </text>
 </TEI>
