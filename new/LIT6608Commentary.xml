@@ -1,11 +1,13 @@
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6608Commentary" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Commentary on the Pentateuch</title>
+                <title xml:lang="en" xml:id="t1">Commentary on the Pentateuch</title>
+                <title xml:lang="gez" xml:id="t2">ትርጓሜ፡ ኦሪት:</title>
+                <title corresp="#t2" type="normalized" xml:lang="gez">Tərgʷāme ʾOrit</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DE"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -49,7 +51,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+          <div type="bibliography">
+            <listRelation>
+              <relation name="dcterms:creator" active="Deuteronomy" passive="PRS6978Meherka"></relation>
+              <relation name="saws:hasUsed" active="LIT6608Commentary" passive="LIT1239Chroni"></relation>
+            </listRelation>
+          </div>
+            <div type="bibliography">
+              <listBibl type="secondary">
+                <bibl>
+                  <ptr target="bm:Butts2013Reception"/>
+                  <ptr target="bm:Butts2020Loci"/>
+                </bibl>
+              </listBibl>
+              <div type="edition">
+                <div type="textpart" subtype="section" xml:id="Genesis">
+                  <label>On Genesis</label>
+                </div>
+                <div type="textpart" subtype="section" xml:id="Exodus">
+                  <label>On Exodus</label>
+                </div>
+                <div type="textpart" subtype="section" xml:id="Leviticus">
+                  <label>On Leviticus</label>
+                </div>
+                <div type="textpart" subtype="section" xml:id="Numbers">
+                  <label>On Numbers</label>
+                </div>
+                <div type="textpart" subtype="section" xml:id="Deuteronomy">
+                  <label>On Deuteronomy</label>
+                </div>
+              </div>
+              </div>
         </body>
     </text>
 </TEI>
