@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1254Dagemm">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dagǝm mǝṣʾatu läkrǝstos wätǝnśaʾe mǝwǝtan</title>
+            <title xml:lang="gez" xml:id="t1">ዳግም፡ ምጽአቱ፡ ለክርስቶስ፡ ወትንሣኤ፡ ምውታን፡</title>
+         <title xml:lang="gez" corresp="#t1" type="normalized">Dāgǝm mǝṣʾatu la-Krǝstos wa-tǝnśāʾe mǝwwǝtān</title>
+         <title xml:lang="en" corresp="#t1">The Second Coming of Christ and the Resurrection of the Dead</title>
+
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,17 +36,57 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+            <creation/>
+            <abstract>
+                <p>The work contains a portion has been identified as a part of
+                  <ref type="work" corresp="LIT1127Apocal"/>.</p>
+            </abstract>
+            <textClass>
+                <keywords>
+                    <term key="ChristianLiterature"/>
+                    <term key="Apocrypha"/>
+                    <term key="Theology"/>
+                      <term key="ApocalypticLiterature"/>
+                </keywords>
+            </textClass>
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
+         <change who="PL" when="2016-03-21">Created file from google
+            spreadsheet</change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+          <change who="DN" when="2022-04-13">Updated</change>
       </revisionDesc>
    </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
-      </body>
+   <text>
+     <body>
+        <listRelation>
+        <relation name="dcterms:hasPart" active="LIT1254Dagemm" passive="LIT1127Apocal"/>
+      <relation name="lawd:hasAttestation" active="LIT1254Dagemm" passive="BNFabb51"/>
+        <relation name="lawd:hasAttestation" active="LIT1254Dagemm" passive="Tanasee35"/>
+      </listRelation>
+
+      <div type="bibliography">
+          <listBibl type="editions">
+            <bibl><ptr target="bm:Grebaut1910LitterMystere"/></bibl>
+
+
+              <bibl><ptr target="bm:Marrassini1994Apocalisse"/></bibl>
+              </listBibl>
+
+              <listBibl type="secondary">
+                  <bibl><ptr target="bm:Bausi2016TowardsPeter"/></bibl>
+                  </listBibl>
+        </div>
+
+      <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+                <note>The following text is taken from <bibl><ptr target="bm:Marrassini1994Apocalisse"/></bibl>.</note>
+                <ab>ዳግም፡ ምጽአቱ፡ ለክርስቶስ፡ ወትንሣኤ፡ ምውታን፡ ዘነገሮ፡ ለጴጥሮስ፡ እለ፡ ይመውቱ፡ በእንተ፡ ኀጢአቶሙ፡ እስመ፡ ኢዓቀቡ፡
+                ትእዛዞ፡ ለእግዚአብሔር፡ ፈጣሪሆሙ። ወዘንተ፡ ኀለየ፡ ከመ፡ ያእምር፡ ምሥጢሮሙ፡ ለወልደ፡ እግዚአብሔር፡ መሓሪ፡ ወመፍቀሬ፡ ምሕረት።</ab>
+            </div>
+
+        </div>
+     </body>
    </text>
 </TEI>
