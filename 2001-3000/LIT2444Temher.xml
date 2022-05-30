@@ -8,7 +8,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">ትምህርተ፡ ኅቡኣት፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t1">Tǝmhǝrta ḫǝbuʾāt</title>
             <title xml:lang="en" corresp="#t1">Teaching of Mysteries</title>
-            <title xml:lang="en" xml:id="t2">Doctrine of Mysteries</title>
+            <title xml:lang="en" corresp="#t1">Doctrine of Mysteries</title>
             <title xml:lang="la" corresp="#t1">Doctrina Arcanorum</title>
             <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
@@ -58,7 +58,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Not to be confused with the text also known as <ref type="work" corresp="LIT3978Elmastoagya"/>
             </p>
          </abstract>
-         
+
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -68,15 +68,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2016-12-21" who="ES">relation added</change>
          <change who="DR" when="2017-03-23">Added keywords, bibliography and textparts</change>
          <change who="DR" when="2020-07-29">Added reference</change>
+         <change who="DN" when="2022-05-29">Added Ethiopic text</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         
+
          <div type="bibliography">
             <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Burtea2010EAETemherta"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Hammerschmidt1960Texte"/>
+                  <citedRange unit="page">42-47</citedRange>
                </bibl>
                <bibl>
                   <ptr target="bm:Lifchitz1940textes"/>
@@ -101,11 +106,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2444Temher" passive="LIT2461Testam#Chapter22"/>
             </listRelation>
          </div>
-         
+
          <div type="edition">
-            <!-- arrangement of textparts according to <bibl><ptr target="bm:Lifchitz1940textes"/><citedRange unit="page">40-52</citedRange></bibl>-->
+             <note>
+             Arrangement of textparts and text quotation according to <bibl><ptr target="bm:Lifchitz1940textes"/>
+             <citedRange unit="page">40-52</citedRange></bibl>.</note>
             <div type="textpart" subtype="chapter" n="1" xml:lang="gez" xml:id="Chapter1">
                <label>Chapter 1</label>
+               <ab xml:lang="gez">በእንተ፡ ትምሕርተ፡ ኅቡዓት፡ ቅድመ፡ ዘትትነገር፡ እምጵርስ፡ ፎራ። ለምዕመናን፡ ኅቡዓት። ትምሕርተ፡ ኅቡዓትሰ፡
+               ከመዝ፡ ንግር። ዘቅድመ፡ ሀሎ፡ ወይሄሉ። ዘመጽአ። ዘሐመ። ወሞተ። ወተቀብረ። ወተንሥአ። ፃዕረ፡ ዘሞት፡ ፈትሐ።
+                ወዘእሙታን፡ ተንሥአ። ኢኮነ፡ ባሕቲቱ፡ ከዊኖ፡ ሰበእ፡ ዘእምመንፈስ፡ ቅዱስ፡ ሥጋሁ፡ ለአዳም፡ ምስለ፡ ነፍሱ። ዘኢኃደገ፡ ነፍሶ፡ ውስተ፡ ሞት።
+              ዘበመንፈስ፡ ለአዳም፡ ፀወኖ፡ ወአሕየዎ።<gap reason="ellipsis" resp="DN"/></ab>
             </div>
             <div type="textpart" subtype="chapter" n="2" xml:lang="gez" xml:id="Chapter2">
                <label>Chapter 2</label>
@@ -118,6 +129,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
             <div type="textpart" subtype="chapter" n="5" xml:lang="gez" xml:id="Chapter5">
                <label>Chapter 5</label>
+               <ab xml:lang="gez">እሙታን፡ ተንሢኦ፡ ሲኦል፡ ከይዶ። በሞቱ፡ ለሞት፡
+               ደምስሶ። እምድኅረ፡ ተንሥኦ፡ በሣልስት፡ እለት፡ አእኰቶ፡ ለአብ። እንዘ፡ ይብል፡ ዘአምላክ፡ ቃል፡ ጥዕጡዕ፡ ከምዝ
+               ዘበመንፈስ፡ ለአዳም፡ ፀወኖ፡ ወአሕየዎ።<gap reason="ellipsis" resp="DN"/>
+             በከመ፡ ይቤ፡ ሙሴ፡ ባዕዳንሂ፡ ነቢያት፡ ንሕነሂ፡ ቦቱ፡ ተወኪለነ፡ ሎቱ፡ ነሀብ፡ ስብሐተ። ዘሎቱ፡
+           ስብሐተ፡ ወጽንዕ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
+
             </div>
          </div>
       </body>
