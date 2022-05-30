@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3978Elmastoagya">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">እልመስጦኣግያ፡</title>
+            <title xml:id="t1">እልመስጦአግያ፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t1">ʾƎlmasṭoʾagya</title>
             <title xml:lang="en" corresp="#t1">Introduction into the Mysteries</title>
             <title xml:lang="en" corresp="#t1">Mystagogy</title>
-            
+
             <title xml:lang="gez" xml:id="t2">ትምህርተ፡ ኅቡኣት፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t2">Tǝmhǝrta ḫǝbuʾāt</title>
             <title xml:lang="en" corresp="#t2">Doctrine of Mysteries</title>
             <title xml:lang="la" corresp="#t2">Doctrina Arcanorum</title>
-            
+
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -30,8 +30,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         
-         
+
+
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -46,9 +46,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language><language ident="la">Latin</language></langUsage>
          <abstract>
-            <p>A short Gǝʿǝz theological treatise - a translation from Arabic. In the early Church this kind of text was recited for the baptized faithful after the catechumens had been dismissed. 
-               Whilst <persName ref="PRS5684JesusCh">Jesus Christ</persName>, as the central celebrated ﬁgure, 
-               was described and praised without his name being mentioned directly, the initiated in the mysteries of the Christian faith knew who was intended.</p>
+            <p>A short Gǝʿǝz theological treatise which is
+              a translation from Arabic. In the early Church this kind
+              of text was recited for the baptized faithful after the catechumens had been dismissed.
+               Whilst <persName ref="PRS5684JesusCh">Jesus Christ</persName>, as the central celebrated ﬁgure,
+               was described and praised without his name being mentioned directly,
+               the initiated in the mysteries of the Christian faith knew who was intended.</p>
+               
+               <p>Not to be confused with the text also known as <ref type="work" corresp="LIT2444Temher"/>.
+               For the texts in the version than cannot be immediately identified, see
+               <ref type="work" corresp="LIT6688TeachingMysteries"/>.</p>
          </abstract>
          <textClass>
             <keywords scheme="#ethioauthlist">
@@ -59,15 +66,60 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </profileDesc>
       <revisionDesc>
          <change who="ES" when="2016-12-21">updated record</change>
+         <change who="DN" when="2022-05-27">further updates</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <div type="bibliography">
+        <div type="bibliography">
+           <listBibl type="secondary">
+              <bibl>
+                 <ptr target="bm:Burtea2010EAETemherta"/>
+              </bibl>
+              <bibl>
+                 <ptr target="bm:Lifchitz1940textes"/>
+              </bibl>
+              <bibl>
+                 <ptr target="bm:Hammerschmidt1960Texte"/>
+                 <citedRange unit="page">43-44</citedRange>
+              </bibl>
+
+
+           </listBibl>
+           <listBibl type="editions">
+              <bibl>
+                 <ptr target="bm:Lifchitz1940textes"/>
+                 <citedRange unit="page">71-85</citedRange>
+              </bibl>
+           </listBibl>
+           <listBibl type="translation">
+              <bibl>
+                 <ptr target="bm:Lifchitz1940textes"/>
+                 <citedRange unit="page">71-85</citedRange>
+                 </bibl>
+
+           </listBibl>
             <listRelation>
                <relation name="saws:isVariantOf" active="LIT3978Elmastoagya" passive="LIT2444Temher"/>
+               <relation name="ecrm:CLP46i_may_form_part_of" active="LIT3978Elmastoagya" passive="LIT1586Hayman"/>
             </listRelation>
          </div>
+         <div type="edition">
+             <note>
+             The text follows the edition <bibl><ptr target="bm:Lifchitz1940textes"/>
+             <citedRange unit="page">71-85</citedRange></bibl>.</note>
+
+            <div type="textpart" xml:lang="gez" subtype="incipit">
+               <ab xml:lang="gez">እልመስጦአግያ፡ ወይእቲ፡ ሃይማኖት፡ መሐሮሙ፡ እግዚእነ፡ ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ፡ ለአርዳኢሁ፡
+               ዘያንብብዋ፡ ምእመናን፡ እምቅድመ፡ ቅዳሴ፡ ንጹሕ። ዘቅድመ፡ ሀሎ፡ ወይሄሉ፡ እስከ፡ ለዓለም፡ ወዘይመጽእ፡ ዘሐመ፡ ወሞተ፡ ወተቀብረ፡
+             ወተንሥአ፡ ወተሰብሐ፡ እምኀበ፡ አብ፡ ወፃዕረ፡ ዘሞት፡ ፈትሐ፡</ab>
+            </div>
+
+            <div type="textpart" xml:lang="gez" subtype="explicit">
+               <ab xml:lang="gez">በከመ፡ ይቤ፡ ሙሴ፡ ወባዕዳንሂ፡ ቅዱሳን፡ ከመ፡ ይእቲ፡ እግዚአብሔራዊት፡ ዘሎቱ፡ ክብር፡ ወስብሐት፡
+               ወእዛዝ፡ እስከ፡ ለዓለም፡ አሜን።</ab>
+            </div>
+            </div>
       </body>
    </text>
 </TEI>
