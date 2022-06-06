@@ -1,11 +1,13 @@
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6689EphrEaster" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Dǝrsān za-maḫāǝwa Fāsikā</title>
+                <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘመኃትወ፡ ፋሲካ፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān za-maḫātǝwa Fāsikā</title>
+                <title xml:lang="en" xml:id="t2">Homily for Easter Eve</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -21,7 +23,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+<listWit>
+<witness corresp="EMML1763">EMML 1763, f. 188v-190r</witness>
+<witness corresp="BLorient8192">British Library Orient. 8192, f. 54r-56r</witness>
+</listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -52,9 +57,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="saws:isAttributedToAuthor" active="LIT6689EphrEaster" passive=""/>
+                    <relation name="saws:isAttributedToAuthor" active="LIT6689EphrEaster" passive="PRS3827Ephrem"/>
                 </listRelation>
-            </div><!---->
+            </div>
+
+            <div xml:lang="gez" type="edition">
+                        <note>The incipit is taken from <ref type="mss" corresp="EMML1763"/></note>
+                        <div type="textpart" subtype="incipit">
+                         <ab xml:lang="gez">ፍቁራን፡ በዛቲ፡ ዕለት፡ ኖመ፡ መድኀኒነ፡ ምስለ፡ ምዉታን፡ ወኀወጾሙ፡ ለሕያዋን፡ ወወረደ፡ ውስተ፡ ሲኦል፡ ከመ፡ ይርአዮሙ፡ ለምዉታን።
+                         በዛቲ፡ ዕለት፡ እግዚኡ፡ ለአዳም፡ ወረደ፡ ኀቤሁ፡ ወጸውዖ፡ ወይቤሎ፡ አይቴ፡ ሀሎከ፡ አዳም፡ በከመ፡ ቀዳሚ፡ ጸውዖ።</ab>
+                        </div>
+                      </div>
+            <!---->
         </body>
     </text>
 </TEI>
