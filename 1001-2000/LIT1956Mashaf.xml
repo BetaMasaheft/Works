@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1956Mashaf">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -7,6 +7,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ኑዛዜ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa nuzāze</title>
             <title xml:lang="en" corresp="#t1">Book of Confession</title>
+            <title xml:lang="gez" xml:id="t2">መጽሐፈ፡ ንስሐ፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Maṣḥafa nǝssǝḥa</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -34,15 +36,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </xi:fallback>
          </xi:include>
       </encodingDesc>
-      <profileDesc>
+          <profileDesc>
+            <abstract><p>Maṣḥafa nuzāze is a short manual for penitents. It consists of a list of sins and and a request
+            for penance. It circulates in various recensions, the oldest known witness is possibly <ref type="mss" corresp="BLadd16222"></ref>.</p></abstract>
+            <textClass>
+              <keywords>
+                <term key="Prayers"></term>
+                <term key="ChristianLiterature"></term>
+              </keywords>
+            </textClass>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MK" when="2022-08-23">Added keywords, abstract, bibliography</change>
       </revisionDesc>
    </teiHeader>
+   <text>
+        <body>
+            <div type="bibliography">
+              <listBibl type="editions">
+                  <bibl><ptr target="bm:Zanetti2007Nuzaze"/></bibl>
+              </listBibl>
+            </div><!---->
+        </body>
+    </text>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
