@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1286Dersan">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dǝrsāna Garimā</title>
+            <title xml:lang="gez" xml:id="t1">ድርሳነ፡ ገሪማ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsāna Garimā</title>
+            <title xml:lang="en" corresp="#t1">Homily of Garimā</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -21,13 +23,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
-         </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness corresp="BLorient8192"/>
-               <witness type="external" corresp="EMML1763"/>
-            </listWit>
+           <listWit>
+               <witness corresp="EMML1763">EMML 1763, fols. 258r-259r</witness>
+               <witness corresp="EMML8509">EMML 8509, fols. 119v-120v</witness>
+               <witness corresp="BLorient8192">BL Orient. 8192, fols. 119v-120v</witness>
+               <witness corresp="ESum046">Ethio-Spare UM-046, fols. 217r-218v</witness>
+           </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -53,6 +54,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-11-30">witnesses and bibliography added</change>
          <change who="DR" when="2017-03-30">Added keywords</change>
+         <change who="MKr" when="2022-04-25">Added witnesses and relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -65,6 +67,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </listBibl>
             <listRelation>
                <relation name="saws:isDifferentTo" active="LIT1286Dersan" passive="LIT1285Dersan"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1286Dersan" passive="PRS5784Julian"/>
+               <relation name="ecrm:P129_is_about" active="LIT1286Dersan" passive="PRS4523Garima"/>
             </listRelation>
          </div>
       </body>
