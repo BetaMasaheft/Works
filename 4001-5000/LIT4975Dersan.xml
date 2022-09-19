@@ -4,9 +4,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘደረሰ፡ ቅዱስ፡ ጌርሎስ፡ ሊቀ፡ ጳጳሳት፡ ዘኢየሩሳለም፡</title>
-                <title xml:lang="gez" type="normalized" corresp="#1">Dǝrsān za-darasa qǝddus Gerlos liqa ṗaṗasāt za-ʾIyarusālem</title>
-                <title xml:lang="eng" corresp="#1">Homily pronounced by St Cyril, bishop of Jerusalem</title>
+                <title xml:id="t1" xml:lang="en">Homily on the Presentation of Jesus</title>
+                <title xml:lang="gez" xml:id="t2">ድርሳን፡ ዘደረሰ፡ ቅዱስ፡ ጌርሎስ፡ ሊቀ፡ ጳጳሳት፡ ዘኢየሩሳለም፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t2">Dǝrsān za-darasa qǝddus Gerlos liqa ṗaṗasāt za-ʾIyarusālem</title>
+                <title xml:lang="en" corresp="#t2">Homily pronounced by St Cyril, bishop of Jerusalem</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DE"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -41,18 +42,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <textClass>
                 <keywords>
                     <term key="Homily"/>
+                    <term key="ChristianLiterature"/>
                 </keywords>
             </textClass>
             <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DE" when="2018-06-13">Created entity</change>
+            <change when="2022-09-19" who="DR">Merged with deleted LIT1661Homily by suggestion of Marcin Krawczuk</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography"/>
-         <!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="saws:isAttributedToAuthor" active="LIT4975Dersan" passive="PRS3261Cyrilof"/>
+                    <relation name="betmas:formerlyAlsoListedAs" active="LIT4975Dersan" passive="LIT1661Homily"/>
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>
