@@ -5,8 +5,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Martyrium of Zenobius and Zenobia</title>
-                <!-- The Ethiopic title is not evident-->
+                <title xml:lang="gez" xml:id="t1">ገድለ፡ ዚኖቢስ፡ ወዚኖብያ፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Zenobis wa-Zinobyā</title>
+                <title xml:lang="en" corresp="#t1">Martyrium of Zenobius and Zenobia</title>
+                <title xml:lang="en" corresp="#t1" type="alt">Martyrdom of Zenobios and Zenobia</title>
+                <title xml:lang="en" corresp="#t2arabic">Martyrium of Zenobius and Zenobia (Arabic text)</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DE"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -69,6 +72,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DE" when="2021-12-14">Created entity</change>
             <change when="2021-12-14" who="DE">Added keywords, witnesses and bibliography according
             to the information collected by Alessandro Bausi</change>
+            <change when="2022-09-21" who="ES">added title relations and bibl</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -76,7 +80,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="bibliography">
                 <listRelation>
                     <relation name="ecrm:CLP46i_may_form_part_of" active="LIT6512Zenobius" passive="LIT1493Gadlas"/>
+                    <relation name="ecrm:P129_is_about" active="LIT6512Zenobius" passive="PRS13894Zinobis"/>
+                    <relation name="ecrm:P129_is_about" active="LIT6512Zenobius" passive="RS13895Zenobia"/>
                 </listRelation>
+                <listBibl type="secondary"><bibl corresp="#t2arabic">
+                    <ptr target="bm:Graf1944GCALI"/>
+                    <citedRange unit="page">527</citedRange>
+                </bibl></listBibl>
             </div><!---->
         </body>
     </text>
