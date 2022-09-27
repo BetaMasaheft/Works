@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1586Hayman">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -30,9 +30,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </sourceDesc>
          <sourceDesc>
             <listWit>
-               <listWit>
                   <witness corresp="BLadd16219#ms_i.2"/>
-               </listWit>
+
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -53,13 +52,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </keywords>
          </textClass>
          <creation corresp="LIT1586Hayman#t2arabic" notBefore="1077" notAfter="1079">The date post
-            quem of the Arabic version is provided by the death of patriarch <persName ref="PRS3111Christod"/>, the date ante quem by a synodal letter from 1079 which is
-            not included. </creation>
-         <!--can a bibliographic reference be added here?-->
-         <!-- <bibl><ptr target="bm:Graf1947GCALII"/><citedRange unit="page">322</citedRange></bibl>-->
-         <creation corresp="LIT1586Hayman#t1" notAfter="1577">According to , the work must have been
+            quem of <ref target="#t2arabic">the Arabic version</ref> (<date when="1077"></date>) is provided by the death of patriarch <persName ref="PRS3111Christod"/>,
+            the date ante quem by a synodal letter from <date when="1079">1079</date> which is
+            not included.
+         </creation>
+         <creation corresp="LIT1586Hayman#t1" notAfter="1577">
+            According to <ref target="#ricci1969" type="item"></ref> the <ref target="#t1">work</ref> must have been
             translated to Ethiopic before 1577.</creation>
-         <!--<bibl><ptr target="bm:Ricci1969Letterature"/><citedRange unit="page">839</citedRange></bibl>-->
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google spreadsheet </change>
@@ -71,9 +70,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div type="bibliography">
+            <listBibl type="secondary">
+            <bibl xml:id="grafgcal"><ptr target="bm:Graf1947GCALII"/><citedRange unit="page">322</citedRange></bibl>
+            <bibl xml:id="ricci1969"><ptr target="bm:Ricci1969Letterature"/><citedRange unit="page">839</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Isenberg1841Dictionary"/>
+                  <citedRange unit="page">198</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:WionFritsch2005Haymanota"/>
+
+               </bibl>
+         </listBibl>
          <listRelation>
             <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1586Hayman#t1" passive="LIT1586Hayman#t2arabic"/>
-            <relation name="saws:isAttributedToAuthor" active="LIT1586Hayman#t1" passive="PRS6419Mabaas">
+            <relation name="betmas:isAuthorOfEthiopicTranslation" active="LIT1586Hayman" passive="PRS6419Mabaas">
                <desc>
                   <bibl>
                      <ptr target="bm:Isenberg1841Dictionary"/>
@@ -89,15 +101,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <desc>The <foreign xml:lang="gez">Maṣḥafa ṭomār</foreign> very often follows
                   Hāymānota ʾabaw and precedes the table of content.</desc>
             </relation>
-            <relation name="saws:follows" active="LIT1586Hayman" passive="LIT2444Temher">
+            <relation name="saws:follows" active="LIT1586Hayman" passive="LIT3978Elmastoagya">
                <desc>The <foreign xml:lang="gez">Tǝmhǝrta ḫǝbuʾāt</foreign> can be included at the
                   beginning of the <foreign xml:lang="gez">Hāymānota ʾabaw</foreign>, following the
                   introduction.</desc>
+
             </relation>
-            
+
                <relation name="saws:formsPartOf" active="LIT1586Hayman" passive="LIT5769HaymanTomar"/>
-            
-         </listRelation>
+
+         </listRelation></div>
 
          <!--chapter distribution taken from various mss-->
 
@@ -106,8 +119,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <label>Introduction</label>
             </div>
 
-            <div type="textpart" xml:id="TemhertaHebuat" corresp="LIT2444Temher">
+            <div type="textpart" xml:id="TemhertaHebuat" corresp="LIT3978Elmastoagya">
                <label>Tǝmhǝrta ḫǝbuʾāt</label>
+               <note>Most commonly, it is the version <ref type="work" corresp="LIT3978Elmastoagya"/>,
+             but it can possibly be also <ref type="work" corresp="LIT2444Temher"/>
+           (or a version which is difficult to define, <ref type="work" corresp="LIT6688TeachingMysteries"/>).</note>           
             </div>
 
             <div type="textpart" xml:id="Didascalia">
@@ -350,7 +366,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <relation name="saws:isAttributedToAuthor" active="LIT1586Hayman#Julius" passive="PRS11175Julius"/>
                </listRelation>
                <label>Letters by Julius</label>
-               
+
                <div type="textpart" xml:id="Julius1">
                   <label>Extract from the letter to Dionysius, bishop of Cyprus</label>
                   <listRelation>
@@ -387,11 +403,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </div>
 
             </div>
-            
+
             <div type="textpart" xml:id="Celestine">
                <label>Testimony by Celestine of Rome</label>
             </div>
-            
+
                <div type="textpart" xml:id="Innocent">
                   <listRelation>
                      <relation name="saws:isAttributedToAuthor" active="LIT1586Hayman#Innocent" passive="PRS5568Innocent"/>
@@ -568,7 +584,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </div>
 
             <div type="textpart" xml:id="Epiphanios">
-               <!--PRS3828Epiphani (LIT1107Ankari needs work: the extracts here are translated from t2arabic, the 
+               <!--PRS3828Epiphani (LIT1107Ankari needs work: the extracts here are translated from t2arabic, the
             work as a whole from Greek)-->
                <listRelation>
                   <relation name="saws:isAttributedToAuthor" active="LIT1586Hayman#Epiphanios" passive="PRS3828Epiphani"/>
@@ -1358,11 +1374,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </div>
 
             <div type="textpart" xml:id="MashafaTomar" corresp="LIT1978Mashaf">
-               
+
                <label>Maṣḥafa ṭomār</label>
                <desc>The <foreign xml:lang="gez">Maṣḥafa ṭomār</foreign> circulates also
-                  independently and is not present in all manuscripts containing the <foreign xml:lang="gez">Hāymānota ʾabaw</foreign>. It can also follow the table of
-                  contents <ref target="#Contents"/>.</desc>
+                  independently and is not present in all manuscripts containing the <foreign xml:lang="gez">Hāymānota ʾabaw</foreign>. It can also follow  <ref target="#Contents">the table of
+                     contents</ref>.</desc>
             </div>
 
             <div type="textpart" xml:id="Contents">
@@ -1370,7 +1386,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </div>
          </div>
 
-         
+
       </body>
    </text>
 </TEI>

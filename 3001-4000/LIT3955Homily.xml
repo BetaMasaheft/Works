@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3955Homily">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -53,6 +53,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-13">Fixed title, added keywords</change>
          <change who="MV" when="2017-05-23">Added relation</change>
+         <change who="MKr" when="2022-09-12">Added reference to NASSCAL, incipit, relation 'about'</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -61,8 +62,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <listRelation>
                <relation name="saws:formsPartOf" active="LIT3955Homily" passive="LIT1284Dersan"/>
                <relation name="saws:isAttributedToAuthor" active="LIT3955Homily" passive="PRS11658Archelaus"/>
+               <relation name="ecrm:P129_is_about" active="LIT3955Homily" passive="PRS4377Gabriel"/>
             </listRelation>
+            <listBibl type="secondary">
+              <bibl>
+              <ptr target="bm:nasscal"/>
+              <citedRange unit="item">ECCA 627</citedRange>
+              <ref target="https://www.nasscal.com/e-clavis-christian-apocrypha/homily-on-the-archangel-gabriel-by-pseudo-archelaos-of-neapolis/"/>
+              </bibl>
+            </listBibl>
          </div>
       </body>
    </text>
+   <text>
+        <body>
+          <div type="bibliography"/>
+
+          <div xml:lang="gez" type="edition">
+            <note>The incipit is taken from <ref type="mss" corresp="BerOrFol117"/></note>
+            <div type="textpart" subtype="incipit">
+             <ab xml:lang="gez">ሠምረ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ከመ፡ እሖር፡ ኀበ፡ አብያተ፡ ክርስቲያናት፡ ቅዱሳት፡ እለ፡ ሐነጸት፡ እሌኒ፡ ንግሥት፡ ኀበ፡ ቅድስት፡
+             ሀገር፡ ኢየሩሳሌም። ወበጺሕየ፡ ሰገድኩ፡ ኀበ፡ ተሰቅለ፡ እግዚእነ፡ ወኀበ፡ ተቀብረ፡ ወኀበ፡ ተንሥአ።</ab>
+            </div>
+            </div>
+        </body>
+    </text>
 </TEI>

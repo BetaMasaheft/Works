@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4024GadlArkalades">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4024GadlArkalades">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -26,6 +27,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc>
             <listWit>
                <witness corresp="BNFet125#ms_i2"/>
+               <witness corresp="EMML7602">EMML 7602: 16 (1382-1413): ff. 129ra-131r Arkaledis (f. 129r: Ṭǝrr)</witness>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -52,6 +54,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2016-12-02">Adjustments and bibliography added</change>
          <change who="DR" when="2017-03-28">Added keywords</change>
+         <change when="2021-12-30" who="ES">added witness and relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -59,6 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <div type="bibliography">
             <listRelation>
                <relation name="saws:isDifferentTo" active="LIT4024GadlArkalades" passive="LIT1421GadlaA"/>
+               <relation name="ecrm:CLP46i_may_form_part_of" active="LIT4024GadlArkalades" passive="LIT1493Gadlas"/>
             </listRelation>
             
             <!--Syriac mss in Zotenberg 150 of this work or LIT1421GadlaA?-->
@@ -66,12 +70,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Wensinck1911Legends"/>
-                  <citedRange unit="page">
-                     <foreign xml:lang="gez">፩-፯</foreign>
-                  </citedRange>
+                  <citedRange unit="page">1-7</citedRange>
                </bibl>
             </listBibl>
          </div>
+         <div type="edition" xml:lang="gez"><div type="textpart" subtype="colophon"><ab>ለዘ፡ አጽሐፈ፡ ዘንተ፡ መጽሐፈ፡ ዳዊት፡ ንጉሥ፡ ወለጸሓፊያኒሁ፡ ኃጥኣን፡ ወአባሲየን፡ ይጽሐፍ፡ ስሞሙ፡ እግዚኣብሔር፡ ውስተ፡ መጽሐፈ፡ ሕይት፡ አሜን፡ ወአሜን፡</ab>
+         <note>quoted after <ref type="mss" target="EMML7602">EMML 7602, f. 131ra</ref></note></div></div>
       </body>
    </text>
 </TEI>

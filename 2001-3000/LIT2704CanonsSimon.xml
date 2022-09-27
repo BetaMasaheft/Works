@@ -23,11 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -37,6 +33,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+         <abstract><p>The canons are part of <ref type="work" corresp="LIT2317Senodo"></ref> and exist in two recensions, <ref type="work" corresp="LIT2639CanonsSimon1"></ref> and <ref type="work" corresp="LIT2671CanonsSimon2"></ref></p></abstract>
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
@@ -47,5 +44,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <body>
          <div type="bibliography"><!--(part of Canons of S. Simon the Canaanite)--></div>
       </body>
+      <listRelation>
+         <relation name="saws:hasParent" active="LIT2704CanonsSimon" passive="LIT2639CanonsSimon1"/>
+         
+         <relation name="saws:hasParent" active="LIT2704CanonsSimon" passive="LIT2671CanonsSimon2"/>
+         <relation name="saws:formsPartOf" active="LIT2704CanonsSimon" passive="LIT2317Senodo"></relation>
+      </listRelation>
    </text>
 </TEI>
