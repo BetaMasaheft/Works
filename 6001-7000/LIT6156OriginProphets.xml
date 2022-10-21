@@ -5,7 +5,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">On the countries of origin of the Prophets</title>
+                <title xml:lang="en" xml:id="t1">On the chronology and the
+                  countries of origin of the Prophets</title>
                 <title xml:lang="gez" xml:id="t2">አብያተ፡ ነቢያት፡</title>
          <title xml:lang="gez" corresp="#t2" type="normalized">ʾAbyāta nabiyāt</title>
          <title xml:lang="en" corresp="#t2">Houses of the Prophets</title>
@@ -33,7 +34,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>The work is not the same as
+                  <ref type="work" corresp="LIT1811Liveso"/>,
+                  though both share the initial chronological part.
+                  The author seems to indicate that he drew upon an Arabic source. The work includes a short explanation about the Wedding at Cana and
+                chronologies of <persName ref="PRS5684JesusCh"/> and <persName ref="PRS6819Mary"/>.
+                </p>
             </abstract>
             <textClass>
                 <keywords>
@@ -41,7 +47,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="Commentary"/>
                     <term key="HistoryAndHistoriography"/>
                     <term key="OldTestament"/>
-                    <term key="Religion"/>
+                    <term key="ChristianLiterature"/>
+                    <term key="Translation"/>
+                    <term key="Chronography"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -51,50 +59,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DN" when="2020-07-20">Created entity</change>
+            <change who="DN" when="2021-02-11">Corrections and additions</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="lawd:hasAttestation" active="LIT6156OriginProphets" passive="BNFabb195"/>
+                    <relation name="lawd:hasAttestation" active="LIT6156OriginProphets" passive="BNFabb96"/>
+                      <relation name="saws:isRelatedTo" active="LIT6156OriginProphets" passive="LIT1811Liveso"/>
                 </listRelation>
                    </div>
                 <div type="edition">
-                  <note>The division into text parts follows <ref type="mss" corresp="BNFabb195"/>.</note>
-                   <div type="textpart" subtype="chapter" xml:id="Chronology">
-                      <label>On the chronology of the Prophets</label>
                    </div>
-                   <div type="textpart" subtype="chapter" xml:id="Isaiah">
-                      <label>On Prophet Isaiah</label>
+                   <div type="edition">
+                    <note>The following text is taken from <ref type="mss" corresp="BNFabb96"/>.</note>
+                   <div type="textpart" xml:id="incipit" xml:lang="gez">
+                      <ab>አብያተ፡ ነብያት፡ በከመ፡ ጸኃፍና፡ ለነብያት፡ አብያቲሆሙ፡ ወኣህጕሪሆሙ፡ ወኀበ፡ ተቀብሩ፨
+                      ቀዳማይ፡ ነቢይ፡ ኢዮብ፡ ተነበየ፡ ፵ዓመት፨ ወእምድህሬሁ፡ ሙሴ፡ ተነበየ፡ ፵ዓመት፡ ቅድመ፡
+                      ምጽኣተ፡ እግዚእነ፡ በሥጋ፨ ፲ወ፬፻፹ወ፭ዓመት፨ ወእምሕሬሁ፡ ኢያሱ፡ ዘኔዌ፡ እስከ፡ ፳ወ፯ዓመት፨
+                      ወእምድህሬሁ፡ ሳሙኤል፡ ተነበየ፡ ፵ዓመት፡
+                   </ab>
+                   <div type="textpart" xml:id="explicit" xml:lang="gez">
+                      <ab>ወተሓብኣት፡ ፪፻ወ፭ወፈለሰት፡ እምዝንቱ፡ ዓለም፡ ኣመ፡ ፲ወ፯ለነኃሴ፨
+                   </ab>
+                   </div>
                 </div>
-                <div type="textpart" subtype="chapter" xml:id="Jeremiah">
-                   <label>On Prophet Jeremiah</label>
-             </div>
-
-             <div type="textpart" subtype="chapter" xml:id="Haggai">
-                <label>On Prophet Haggai</label>
-          </div>
-
-          <div type="textpart" subtype="chapter" xml:id="Zechariah">
-             <label>On Prophet Zechariah</label>
-       </div>
-
-       <div type="textpart" subtype="chapter" xml:id="Malachi">
-          <label>On Prophet Malachi</label>
-    </div>
-
-    <div type="textpart" subtype="chapter" xml:id="Elias">
-       <label>On Prophet Elias and his vision</label>
- </div>
-
-
- <div type="textpart" subtype="chapter" xml:id="Akeyas" cert="low">
-    <label>On Prophet ʾAkǝyās and his vision</label>
-</div>
-
-            </div>
-
-        </body>
+                   </div>
+                 </body>
     </text>
 </TEI>
