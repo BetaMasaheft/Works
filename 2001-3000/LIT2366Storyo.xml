@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2366Storyo">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Story of the Magi</title>
+            <title xml:lang="gez" xml:id="t1">በእንተ፡ ማርያም፡ ወሰብአ፡ ሰገል፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Baʾǝnta Māryām wa-sabʾa sagal</title>
+            <title xml:lang="en" xml:id="t2">On Mary and the Magi</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,17 +35,43 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2022-10-20">Added relations, Ethiopic title, incipit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
+     <body>
+          <div type="bibliography">
+              <listRelation>
+                  <relation name="syriaca:different-from" active="LIT2366Storyo" passive="LIT6495Zenawa"/>
+                  <relation name="ecrm:P129_is_about" active="LIT2366Storyo" passive="PRS6462MagiWi"/>
+                  <relation name="ecrm:P129_is_about" active="LIT2366Storyo" passive="PRS6819Mary"/>
+              </listRelation>
+          </div><!---->
+
+          <div xml:lang="gez" type="edition">
+                      <note>The incipit is taken from <ref type="mss" corresp="BerOrFol117"/></note>
+
+                      <div type="textpart" subtype="incipit">
+                       <ab xml:lang="gez">ብርሃን፡ ሠረቀ፡ ወጐየ፡ ጽልመት፡ እምዓለም፡ ብርሀ፡ ዓለም፡ ከመ፡ ይሰብሑ፡ በአምሳሊሁ፡ ለአብ፡ ዘውእቱ፡ አብርሆ፡ ሠረቀ፡
+                       እምከርሣ፡ ለድንግል፡ ወጐየ፡ ጽላሎት፡ ሶበ፡ አስተርእየ።</ab>
+                      </div>
+
+                      <div type="textpart" subtype="explicit">
+                       <ab>ቤተ፡ ክርስቲያን፡ እንዘ፡ እንዘ፡ ትትፌሣሕ፡ በልደቱ፡ ለልዑል፡ ዘሰማይ፡ ወምድር፡ ቦቱ፡ በርሁ፡ ቡሩክ፡ ዘበልደቱ፡ ኵሉ፡ ተባልሐ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
+                      </div>
+
+
+                    </div>
+
       </body>
    </text>
 </TEI>
