@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Nagara Amat</title>
+                <title xml:id="t1" xml:lang="gez">ነገረ፡ ዓመት፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Nagara ʿāmat</title>
+                <title xml:lang="en" corresp="#t1">Discourse on (the subdivision of) the year</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -44,12 +46,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MV" when="2022-11-14">Created entity</change>
+            <change who="MV" when="2022-11-16">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>This incipit is taken from <ref type="mss" corresp="BDLaethe39"/>.</note>
+                    <ab>
+                        እጽሕፍ፡ ነገረ፡ ዓመት፡ ዘይትከፈል፡ ክረምት፡ ዘመዋዕለ፡ ዘርእ፡ ፫ አውራኅ፡ መጸው፡ ብ፡ መዋዕል፡ ጽጌያት፡ ፫ አውራኅ፡ 
+                        ኃጋ<gap reason="illegible" unit="chars" quantity="1"/> ብ፡ መዋዕለ፡ በጋ፡ ፫ አውራኅ፡ ፀደድ፡ ብ፡ መዋዕለ፡ ጰንጠቈስጤ፡
+                    </ab>
+                </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <note>This explicit is taken from <ref type="mss" corresp="BDLaethe39"/>.</note>
+                    <ab>
+                        ቦዘይቤ፡ ቆስጢንጢኖስ፡ ምርቀያን፡ ኮስሪ፡ ዲዮግልጥያኖስ፡ መሐመድ፡ ዓዲ፡ በካልእ፡ አንቀጽ፡ ዲዮግልጥያኖ<cb n="b"/>ስ፡ ወምሐመድ፡ 
+                        ወመከሰምያኖስ፡ ነቡዮሙ፡ ለእ<gap reason="illegible" unit="chars" quantity="1"/>ም፡ ዕመር፡ ወልደ፡ ሐዕ፡ ጋፉር፡ ንጉሠ፡ ትንባላት፡ ቦዘረቢ፡ 
+                        ሄሮድስ፡ ዳኬዎስ፡ ብስጥያን፡ ዲዮግልጥያኖስ፡ መካሰምየኖስ፡
+                    </ab>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>
