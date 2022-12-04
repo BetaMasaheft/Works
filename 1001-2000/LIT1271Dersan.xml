@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1271Dersan">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dǝrsan bäʾǝntä ḍäʾatä näfs</title>
-            <author>Theophilos</author>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ በእንተ፡ ፀአተ፡ ነፍስ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān baʾǝnta ḍaʾata nafs</title>
+            <title xml:lang="en" xml:id="t2">Homily of Theophilus of Alexandria on the departure of the soul</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -34,17 +35,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+           <language ident="en">English</language>
+           <language ident="en">Gǝʿǝz</language>
+         </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Homily"/>
+               <term key="Translation"/>
+             </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2022-30-11">Corrected transliteration, added relation, keywords</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
+     <body>
+          <div type="bibliography">
+              <listRelation>
+                  <relation name="saws:isAttributedToAuthor" active="LIT1271Dersan" passive="PRS9486Theophil"/>
+              </listRelation>
+          </div><!---->
       </body>
    </text>
 </TEI>
