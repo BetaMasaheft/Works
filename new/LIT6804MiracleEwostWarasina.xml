@@ -1,11 +1,11 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6371MEMiracle" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6804MiracleEwostWarasina" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle of ʾEwosṭātewos: the woman from Šawā tells her mother to venerate Eustathius</title>
+                <title xml:lang="en" xml:id="t1">Miracle of ʾEwosṭātewos: ʾEwosṭātewos and Warāsina ʾƎgziʾ</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="ES"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,7 +30,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>The story of <persName ref="PRS10048Warasin"/> in some recensions appears inside of the text of <ref type="work" target="LIT1438GadlaE">Acts of ʾEwosṭātewos</ref>(as translated in <bibl><ptr target="bm:ContiRossini1912Studi"/><citedRange unit="page">633-634</citedRange><citedRange unit="note">1</citedRange></bibl>). When appearing as a miracle it is considerably extended by a note on the meeting between saint <persName ref="PRS3934Ewostate"/> and a hermit.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -45,22 +45,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="ES" when="2023-01-27">Created entity</change>
+            <change who="ES" when="2023-01-31">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
+            <listRelation>
+                <relation name="saws:formsPartOf" active="LIT6804MiracleEwostWarasina" passive="LIT4315Miracles"/>
+                <relation name="ecrm:P129_is_about" active="LIT6804MiracleEwostWarasina" passive="PRS3934Ewostate"/>
+                <relation name="ecrm:P129_is_about" active="LIT6804MiracleEwostWarasina" passive="PRS10048Warasin"/>
+            </listRelation>
             <div type="bibliography">
+                <listBibl type="translation"><bibl><ptr target="bm:ContiRossini1912Studi"/><citedRange unit="page">633-634</citedRange><citedRange unit="note">1</citedRange></bibl></listBibl>
+                <listBibl type="secondary"><bibl><ptr target="bm:Marrassini1986Laurenziana"/><citedRange unit="page">95</citedRange></bibl>
                 
-                <listBibl type="translation">
-                    <bibl>
-                        <ptr target="bm:Turaev1906Ewostatewos"/>
-                        <citedRange unit="page">89-90 (miracle 14)</citedRange>
-                    </bibl>
-                </listBibl>
-                <listRelation>
-                    <relation name="saws:formsPartOf" active="LIT6371MEMiracle" passive="LIT4315Miracles"/>
-                </listRelation>
+                    <bibl><ptr target="bm:Lusini1993Monachesimo"/><citedRange>41, 43</citedRange></bibl></listBibl>
             </div>
             
         </body>
