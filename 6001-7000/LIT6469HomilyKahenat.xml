@@ -7,6 +7,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ድርሳን፡ ዘ፳ወ፬፡ ካህናተ፡ ሰማይ፡</title>
                 <title xml:lang="gez" type="normalized" corresp="#t1">Maṣḥafa dǝrsān za-24 kāhǝnāta samāy</title>
+
+<title xml:lang="gez" xml:id="t2">መጽሐፍ፡ ዘወፅአት፡ እምኢየሩሳሌም፡ ከመ፡ ይትነገር፡ ዕበዮሙ፡ ወክብሮሙ፡ ለሚካኤል፡ ወገብርኤል፡</title>
+<title xml:lang="gez" type="normalized" corresp="#t2">Maṣḥafa za-waḍʾat ʾǝm-ʾIyarusālem kama yǝtnaggar ʿǝbayomy wa-kǝbromu
+la-Mikaʾel wa-Gabrǝʾel</title>
+
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -31,7 +36,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+<p>In Ethiopian tradition there are two texts referred to as "The Book which Came from Jerusalem". One of them (CAe3843) is transmitted
+as part of the <ref type="work" corresp="LIT1931Mashaf">Maṣḥafa Gǝnzat</ref>. The other (the present record) is included in some manuscripts
+ of <ref type="work" corresp="LIT1295Dersan">Dǝrsāna Mikāʾel</ref> and rarely also in the <ref type="work" corresp="LIT2222RetuaH">Rǝtuʿa Hāymānot homiliary</ref>.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -46,6 +53,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="MKr" when="2021-07-01">Created entity</change>
+            <change who="MKr" when="2023-04-24">Added incipit and relation to mark it as different text than LIT3843BookTh</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -55,9 +63,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:isAttributedToAuthor" active="LIT6469HomilyKahenat" passive="PRS8121RetuaH"/>
                     <relation name="ecrm:P129_is_about" active="LIT6469HomilyKahenat" passive="PRS12519TwentyFour"/>
                     <relation name="ecrm:CLP46i_may_form_part_of" active="LIT6469HomilyKahenat" passive="LIT2222RetuaH"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT6469HomilyKahenat" passive="LIT1295Dersan"/>
                     <relation name="syriaca:different-from" active="LIT6469HomilyKahenat" passive="LIT4958Priests"/>
+                    <relation name="syriaca:different-from" active="LIT6469HomilyKahenat" passive="LIT3843BookTh"/>
                 </listRelation>
             </div><!---->
+
+  <div xml:lang="gez" type="edition">
+  <note>The incipit is taken from <ref type="mss" corresp="EMML1194"/></note>
+  <div type="textpart" subtype="incipit">
+  <ab xml:lang="gez">ዛቲ፡ መጽሐፍ፡ ድርሳን፡ ዘ፳ወ፬ካህናተ፡ ሰማይ፡ ዘወፅአት፡ እምኢየሩሳሌም፡ ከመ፡ ይትነገር፡ ዕበዮሙ፡ ወክብሮሙ፡ ወሢመቶሙ፡ ወሕይወቶሙ፡
+  ወትፍሥሕቶሙ፡ ለሚካኤል፡ ወገብርኤል፡ ወእሉ፡ ፬እንስሳ፡ ወ፳ወ፬ካህናተ፡ ሰማይ፡ ሰባሕያን፡ ወመዘምራን፡ ወምሉአነ፡ ስብሐት፡</ab>
+  </div>
+  </div>
+
         </body>
     </text>
 </TEI>
