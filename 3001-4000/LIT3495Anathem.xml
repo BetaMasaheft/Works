@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3491Anathem">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3495Anathem">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Anathematisms by Gregory Thaumaturgus on the Incarnation</title>
+            <title xml:id="t1">Anathematisms by Cyril of Alexandria</title>
+            <title corresp="#t1" xml:lang="la">Explicatio duodecim capitum</title>
+            <title corresp="#t1">Explication of the twelve chapters</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,7 +35,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language>
+         <language ident="la">Latin</language></langUsage>
+         <abstract><ab>The Explicatio duodecim capitum (Twelve Anathematisms) by Cyril is usually transmitted as a chapter in <ref type="work" corresp="LIT1586Hayman">Hāymānota ʾabaw</ref> but may also appear as part of the appendix in the manuscripts of the <ref type="work" corresp="LIT1951Mashaf"></ref>, alongside some texts from the <ref type="work" corresp="LIT1047Aksumi"></ref></ab></abstract>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -43,17 +47,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
-         <change who="MV" when="2017-04-03">Added keywords</change>
+         <change who="ES" when="2023-04-17">restored deleted record</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listRelation>
-               <relation name="saws:formsPartOf" active="LIT3491Anathem" passive="LIT1586Hayman"/>
-            </listRelation>
-            <listRelation>
-               <relation name="saws:isAttributedToAuthor" active="LIT3491Anathem" passive="PRS4823Gregory"/>
+               <relation name="saws:formsPartOf" active="LIT3495Anathem" passive="LIT1586Hayman"/>
+        
+               <relation name="saws:isAttributedToAuthor" active="LIT3495Anathem" passive="PRS3255CyrilI"/>
             </listRelation>
          </div>
       </body>
