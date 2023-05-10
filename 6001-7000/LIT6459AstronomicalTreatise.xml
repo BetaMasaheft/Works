@@ -6,6 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" xml:id="t1">Astronomical treatise</title>
+                <title xml:lang="en" xml:id="t2">Cosmological treatise</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DE"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -21,7 +22,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="BNFabb109" xml:id="A"></witness>
+                    <witness corresp="BLorient816" xml:id="B"></witness>
+                   
+  
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -30,11 +36,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>A cosmological treatise of a European provenance, possibly translated from a Latin textbook on astronomy by a Jesuit missionary in 
+                    Ethiopia in <date>the first half of the 17th century</date> (<bibl>
+                        <ptr target="bm:HoffmannGeus2020Cosmology"></ptr>
+                        <citedRange unit="page">62</citedRange>
+                    </bibl>). The text was believed to be transmitted only in one 
+                    manuscript (<ref type="mss" corresp="BNFabb109"></ref>) employed in all three existing editions, 
+                    however, at least one further witness could be identified (<ref type="mss" corresp="BLorient816"></ref>). A preliminary 
+                comparison of the witnesses show some deivergencies in readings.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="NaturalSciences"/>
+                    <term key="Translation"></term>
                 </keywords>
             </textClass>
             <langUsage>
@@ -44,11 +58,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DE" when="2021-06-09">Created entity</change>
+            <change when="2023-05-10" who="DE">Added another title, abstract, witnesses, and bibliography.</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:Krackovskij1912Geography"></ptr>
+                    </bibl>
+                    <bibl>
+                        <ptr target="bm:Frantsouzoff2015Geography"></ptr>
+                    </bibl>
+                    <bibl>
+                        <ptr target="bm:HoffmannGeus2020Cosmology"/>
+                    </bibl>
+                </listBibl>
+            </div>
+            
             <div type="edition">
               <note>The following text is taken from <ref type="mss" corresp="BLorient816"></ref></note>
               <div type="textpart" xml:id="incipit" xml:lang="gez">
