@@ -8,6 +8,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘብፁዕ፡ ወቅዱስ፡ ዐቢይ፡ መምህረ፡ ለብሔረ፡ ጽባሕ፡ ያዕቆብ፡ ዘስሩግ፡</title>
                 <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān za-bǝḍuʿ wa-qǝddus ʿabiy mamhǝra bǝḥera ṣǝbaḥ Yāʿqob za-Sǝrug</title>
                 <title xml:lang="en" corresp="#t1">Homily by the blessed and holy great teacher of the East Jacob of Sarug</title>
+                <title xml:lang="en" xml:id="t2">Homily on the Nativity by Jacob of Sarug</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -32,13 +33,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-<p>The homily concerns the Christ's Nativity. According to the indication in <ref type="mss" corresp="BerOrFol117"></ref> it is intended for reading
-at Christmas (<q xml:lang="gez">በጌና፡</q>). It corresponds to no. 201 in the Akhrass' list.</p>
+<p>The homily concerns Christ's Nativity. According to the indication in <ref type="mss" corresp="BerOrFol117"/> it is intended for reading
+at Christmas (<q xml:lang="gez">በጌና፡</q>). It corresponds to no. 201 in Akhrass' list.</p>
+                <p>The same homily is also attested in two excerpts which form part of the <ref type="work" corresp="LIT1586Hayman"/>, but this transmission
+                    took place independently from that in <ref type="mss" corresp="BerOrFol117"/>, to which the present record refers.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Homily"/>
+                    <term key="Translation"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -48,6 +52,7 @@ at Christmas (<q xml:lang="gez">በጌና፡</q>). It corresponds to no. 201 in 
         </profileDesc>
         <revisionDesc>
             <change who="MKr" when="2022-09-12">Created entity</change>
+            <change who="DR" when="2023-05-24">Added bibliography provided by Aaron Butts</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -55,11 +60,18 @@ at Christmas (<q xml:lang="gez">በጌና፡</q>). It corresponds to no. 201 in 
             <div type="bibliography">
                 <listRelation>
                     <relation name="saws:isAttributedToAuthor" active="LIT6711JacSarGena" passive="PRS5655Jacobof"/>
+                    <relation name="betmas:formerlyAlsoListedAs" active="LIT6711JacSarGena" passive="LIT1186Baenta"/>
                 </listRelation>
 
 <listBibl type="clavis">
-<bibl><ptr target="bm:Akhrass2015List"/><citedRange unit="page">120</citedRange></bibl>
+<bibl><ptr target="bm:Akhrass2015List"/><citedRange unit="page">120</citedRange><citedRange unit="item">201</citedRange></bibl>
+    <bibl><ptr target="bm:Bedjan2006Homilies"/><citedRange unit="item">366</citedRange></bibl>
 </listBibl>
+                
+                <listBibl type="secondary">
+                    <bibl><ptr target="bm:Bedjan1902Martyrii"/><citedRange unit="page">720–774</citedRange></bibl>
+                    <bibl><ptr target="bm:Bedjan1902Cantus"/><citedRange unit="page">108–162</citedRange></bibl>
+                </listBibl>
 
             </div>
 
@@ -69,8 +81,7 @@ at Christmas (<q xml:lang="gez">በጌና፡</q>). It corresponds to no. 201 in 
              <ab xml:lang="gez">መንክር፡ ልደትከ፡ ኦወልደ፡ እግዚአ፡ ብሔር፡ ወአፉየ፡ ይንእስ፡ እምነጊረ፡ ዕበይከ፡ ወልሳንየ፡ የኀጽር፡ ከሢቶተ፡ ወእፎ፡ እነፍር፡
              ዕበየከ፡ እስመ፡ ኵሉ፡ ዓለም፡ ኢይክሉ፡ አእምሮትከ።</ab>
             </div>
-          </div><!---->
-
+          </div>
         </body>
     </text>
 </TEI>
