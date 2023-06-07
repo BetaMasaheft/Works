@@ -4,11 +4,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Interpretation and Symbolic Commentary on Genesis and Exodus</title>
+            <title xml:id="t1">Interpretation and Symbolic Commentary on Genesis and Exodus (general record)</title>
             <title xml:lang="gez" xml:id="t2">መምህር፡ ተስኢልየ፡</title>
             <title xml:lang="gez" corresp="#t2" type="normalized">Mamhǝr tasʾilǝya</title>
             <title xml:lang="gez" xml:id="t3">መምህረ፡ ተስኢልየ፡</title>
             <title xml:lang="gez" corresp="#t3" type="normalized">Mamhǝra tasʾilǝya</title>
+            <title xml:lang="gez" xml:id="t4">መምህረ፡ ኦሪት፡</title>
+            <title xml:lang="gez" corresp="#t4" type="normalized">Mamhǝra ʾorit</title>
+            <title xml:lang="en" corresp="#t4">The Teacher of the Old Testament</title>
 
          </titleStmt>
          <publicationStmt>
@@ -41,9 +44,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p/>
+            <p>A collection of commentaries on Old Testament books (from Genesis to Ruth) in Gǝʿǝz and Amharic with parts showing great variability, 
+            but also sharing a common core (according to R. Cowley).</p>
          </abstract>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage><language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+            <language ident="am">Amharic</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -54,39 +61,67 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-04-01">Added keywords and adjustments</change>
+         <change who="DN" when="2023-06-01">Added internal structure and abstract</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-            <div type="bibliography">
-              <listBibl type="secondary">
+            <div type="bibliography">             
+                 <listBibl type="secondary">                                 
+                
                   <bibl>
                       <ptr target="bm:Cowley1988Exeget"/>
-                      <citedRange unit="page">403–404</citedRange>
+                      <citedRange unit="page">116-117, 433–435</citedRange>
                   </bibl>
-                  <bibl>
-                      <ptr target="bm:Piovanelli1990AscensionJeremie"/>
-                      <citedRange unit="page">353</citedRange>
-                  </bibl>
+                  
                 </listBibl>
 
                 <listRelation>
                     <relation name="lawd:hasAttestation" active="LIT4117Interpretation" passive="BNFabb195"/>
                     <relation name="lawd:hasAttestation" active="LIT4117Interpretation" passive="BNFabb157"/>
+                   <relation name="lawd:hasAttestation" active="LIT4117Interpretation" passive="BNFabb156"/>
+                   <relation name="lawd:hasAttestation" active="LIT4117Interpretation" passive="BNFabb39"/>
+                   <relation name="lawd:hasAttestation" active="LIT4117Interpretation" passive="BNFet150"/>
                 </listRelation>
 
             </div>
         <div type="edition">
-           <note>The text edition follows <ref type="mss" corresp="BNFabb195"></ref>.</note>
-           <div type="textpart" subtype="incipit" xml:lang="gez">
-              <ab>
-                 በስመ፡ እግዚአብሔር፡ መሐሪ፡ ወመስተ፡ ሣህል፨ እወጥን፡ ጽሒፈ፡
-                  መጽሐፍ፡ ዘይሰመይ፡ መምህር፡ ተስኢልየ፡ እማእምራን፡ መጻሕፍት፨ ርባሁሰ፡
-                  ለዝ፡ መጽሐፍ፡ ይሜህር፡ ወይተረጉሞ፡ ቃላተ፡ ወነገራተ፡
-                  ዘኦሪት፡ እንተ፡ የዓፅብ፡ ወይስዓን፡ ለዘኢየአምር፡ ብእሲ፨ ትርጓሜሁሰ፡ ቦ፡ ኀበ፡ አሐደ፡ ቃል፡ በበ፫ወበበ፪፡ ስብሐት፡ ለእግዚአብሔር፡ በአፈ፡
-                  ኵሉ፡ ፍጥረት፡ ዘላዕሉ፡ ወታሕቱ፡ ለዓለመ፡ ዓለም፨ ኦሪት፡ ዘልደት፡ ኦሪት፡ ብሂል፡ ሕግ፡ ዘልደት፨ ወቦ፡ ዘይቤ፡ ሥርዓት፡ ብሂል፡ ዘፍጥረት፨
-                  መቅደመ፡ ኵሉ፡ ፈጠረ፡ እግዚአብሔር፡ ጽልመተ፡
-              </ab>
+           <note>The text edition follows <ref type="mss" corresp="BNFabb157"/>.</note>         
+                 
+            <div type="textpart" subtype="section" xml:lang="gez" xml:id="Genesis">
+                    <label>Commentary on Genesis</label>
+                    <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <ab>
+                       በስመ፡ እግዚአብሔር፡ መሐሪ፡ ወመስተሣህል፡ ርኁቀ፡ መዓት፡ ወብዙኃ፡ ምሕረት፡ ወጻድቅ፨ እወጥን፡ ጽሒፈ፡
+                       መጽሐፍ፡ ዘይሰመይ፡ መምህረ፡ ተስኢልየ፡ እማእምራን፡ መጻሕፍት፨ ወረባሑሰ፡ ለዝ፡ መጽሐፍ፤ ይሜህር፡ ወይተረጐሞ፡ ቃላተ፡ ወነገራተ፡
+                       እንተ፡ የዓፅብ፡ ወይሰአን፡ ዘይትኀባእ፡ ወዘይሴወር፡ ለዘኢየአምር፡ ብእሲ፨ ወትርጓሜሁሰ፡ ቦኀበ፡ ይነግር፡  
+                    </ab>
+                 </div>
+                 
+                 <div type="textpart" subtype="section" xml:lang="gez" xml:id="Exodus">                       
+                    <label>Commentary on Exodus</label>
+                 </div>
+                 <div type="textpart" subtype="section" xml:lang="gez" xml:id="Leviticus">
+                    <label>Commentary on Leviticus</label>
+                 </div>
+                 <div type="textpart" subtype="section" xml:lang="gez" xml:id="Numbers">
+                    <label>Commentary on Numbers</label>
+                 </div>
+                 <div type="textpart" subtype="section" xml:lang="gez" xml:id="Deuteronomy">
+                    <label>Commentary on Deuteronomy</label>
+                    
+                 </div>
+                 <div type="textpart" subtype="section" xml:lang="gez" xml:id="Joshua">
+                    <label>Commentary on Joshua</label>
+                 </div>
+                 
+                 <div type="textpart" subtype="section" xml:lang="gez" xml:id="Judges">
+                    <label>Commentary on Judges</label>
+                 </div>
+                 
+                 <div type="textpart" subtype="section" xml:lang="gez" xml:id="Ruth">
+                    <label>Commentary on Ruth</label>
+                 </div>
               </div>
          </div>
 
