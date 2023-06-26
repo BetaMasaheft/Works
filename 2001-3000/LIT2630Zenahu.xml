@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2630Zenahu">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Zenahu läqerlos</title>
+            <title xml:lang="gez" xml:id="t1">ዜናሁ፡ ለቄርሎስ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Zenāhu la-Qerǝllos</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,14 +34,48 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
+
+<abstract><p>A short biography of Cyril of Alexandria transmitted as an introduction in some manuscripts of Qerǝllos, rarely in other works
+(e. g. in Mar Yishak EMML 2847).</p></abstract>
+
+         <textClass>
+<keywords>
+<term key="ChristianLiterature"></term>
+<term key="Biography"></term>
+</keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2023-06-26"></change>
       </revisionDesc>
    </teiHeader>
+   <text>
+       <body>
+           <div type="bibliography">
+                 <listRelation>
+                   <relation name="ecrm:P129_is_about" active="LIT2630Zenahu" passive="PRS3255CyrilI"/>
+                   <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2630Zenahu" passive="LIT3309Qerellos"/>
+               </listRelation>
+           </div><!---->
+
+           <div xml:lang="gez" type="edition">
+                       <note>The incipit is taken from <ref type="mss" corresp="EMML2847"/></note>
+                       <div type="textpart" subtype="incipit">
+                        <ab xml:lang="gez">ዜናሁ፡ ለአብ፡ ቅዱስ፡ ወክቡር፡ ቄርሎስ፡ ሊቀ፡ ጳጳሳት፡ ዘእስክንድርያ፡ ወውእቱ፡ እምኍልቈሙ፡ ለአበው፡ ሊቃነ፡ ጳጳሳት፡ ፳ወ፬፡ ዘተራክበ፡
+                        እመጽሐፈ፡ ስንክሣር፡ ወእመጽሐፈ፡ ዮሐንስ፡ መደብር፡ ወአቡሻከር፡ ወእመጽሐፉ፡ ለጊዮርጊስ፡ ወልደ፡ አሚድ፡ እንዘ፡ <sic>ገድሚር፡</sic> ዜናሁ፡ ለቴዎፍሎስ፡ ሊቀ፡ ጳጳሳት፡ ዘለእስክንድርያ፡
+                      እኅወ፡ እሙ፡ ለቄርሎስ።</ab>
+                       </div>
+                     </div>
+
+       </body>
+   </text>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
