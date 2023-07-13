@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Amharic Commentary on the ʾOrit/Octateuch</title>
+                <title xml:lang="en" xml:id="t1">Amharic Commentary on the Octateuch</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,7 +30,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p><foreign xml:lang="am">ʾAndǝmtā</foreign>-commentary in Amharic on the books of the Octateuch. The part on Genesis is edited 
+                    and translated in <bibl><ptr target="bm:Mersha2011Commentary"/></bibl>.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -42,19 +43,85 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
+                <language ident="am">Amharic</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-05-22">Created entity</change>
+            <change who="DN" when="2023-07-12">Expanded the record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+                
+                <listBibl type="editions">                  
+                    <bibl>
+                        <ptr target="bm:Mersha2011Commentary"/>                        
+                    </bibl>
+                </listBibl>
+                
+                <listBibl type="secondary">                  
+                <bibl>
+                    <ptr target="bm:Cowley1988Exeget"/>
+                    <citedRange unit="page">455-456</citedRange>
+                </bibl>               
+                                     
+                </listBibl>
+                
                 <listRelation>
                     <relation name="saws:isCommentOn" active="LIT5982CommOrit" passive="LIT2083Octate"/>
+                    <relation name="lawd:hasAttestation" active="LIT5982CommOrit" passive="EMML1274"/>
+                    <relation name="lawd:hasAttestation" active="LIT5982CommOrit" passive="EMML1382" cert="low"/>
+                    <relation name="lawd:hasAttestation" active="LIT5982CommOrit" passive="EMML1694"/>
+                    <relation name="lawd:hasAttestation" active="LIT5982CommOrit" passive="EMML2012"/>
+                    <relation name="lawd:hasAttestation" active="LIT5982CommOrit" passive="EMML510"/>
+                    <relation name="lawd:hasAttestation" active="LIT5982CommOrit" passive="EMML1206"/>
+                    <relation name="lawd:hasAttestation" active="LIT5982CommOrit" passive="EMML175"/>
+                    <relation name="lawd:hasAttestation" active="LIT5982CommOrit" passive="BNFabb233"/>
                 </listRelation>
+    
+            </div>
+            
+            <div type="edition">
+                <note>The text edition follows <ref type="mss" corresp="EMML1274"/>.</note>         
+                
+                <div type="textpart" subtype="section" xml:lang="am" xml:id="Genesis">
+                    <label>ʾAndǝmtā-commentary on Genesis</label>
+                    <div type="textpart" subtype="incipit" xml:lang="am">
+                        <ab>
+                            ኦሪት፡ ዘልደት። ኦሪት፡ ማለት፡ ዜና፡ ማለት፡ ነው። የጥጦስን፡ የሐሳዊ፡ መሢሕን፡ የምጽአትን፡ የመንግሥተ፡ 
+                            ሰማያት፡ ነገር፡ ትናገራለችና። አንድም፡ ቃለ፡ እግዚአብሔር፡ ማለት፡ ነው። ከመዝ፡ በሎሙ፡ ከመዝ፡ በሎሙ፡ ሠርቷታልና፡
+                        </ab>                          
+                    </div>
+                    
+                    <div type="textpart" subtype="section" xml:lang="am" xml:id="Exodus">                       
+                        <label>ʾAndǝmtā-commentary on Exodus</label>
+                    </div>
+                    <div type="textpart" subtype="section" xml:lang="am" xml:id="Leviticus">
+                        <label>ʾAndǝmtā-commentary on Leviticus</label>
+                    </div>
+                    <div type="textpart" subtype="section" xml:lang="am" xml:id="Numbers">
+                        <label>ʾAndǝmtā-commentary on Numbers</label>
+                    </div>
+                    <div type="textpart" subtype="section" xml:lang="am" xml:id="Deuteronomy">
+                        <label>ʾAndǝmtā-commentary on Deuteronomy</label>
+                        
+                    </div>
+                    <div type="textpart" subtype="section" xml:lang="am" xml:id="Joshua">
+                        <label>ʾAndǝmtā-commentary on Joshua</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="section" xml:lang="am" xml:id="Judges">
+                        <label>ʾAndǝmtā-commentary on Judges</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="section" xml:lang="am" xml:id="Ruth">
+                        <label>ʾAndǝmtā-commentary on Ruth</label>
+                    </div>
+                </div>
             </div>
         </body>
+        
     </text>
 </TEI>
