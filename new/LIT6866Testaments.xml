@@ -1,11 +1,13 @@
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6866Testaments" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Testaments of the Three Patriarchs </title>
+                <title xml:lang="eng" xml:id="t1">Testaments of the Three Patriarchs</title>
+                <title xml:lang="gez" xml:id="t2"> ፍልሰቶሙ፡ ወፀዓቶሙ፡ ለአብርሃም፡ ወለይጽሐቅ፡ ወለያዕቆብ፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t2">Fǝlsatomu wa-ḍaʾatomu la-Abrǝhām wala-Yǝṣḥaq wala-Yāʿqob</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,7 +32,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>The Testaments of the Three Patriarchs (i. e. <ref type="work" corresp="LIT1412GadlaA">Abraham</ref>,
+                <ref type="work" corresp="LIT1517GadlaY">Isaac</ref> and <ref type="work" corresp="LIT1510GadlaY">Jacob</ref>) are usually transmitted together
+                in manuscripts. Each testament exists in distinct recensions. 
+              </p>
             </abstract>
             <textClass>
                 <keywords>
@@ -52,7 +57,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="ecrm:P129_is_about" active="LIT6866Testaments" passive=""/>
+                    <relation name="ecrm:P129_is_about" active="LIT6866Testaments" passive="PRS1269Abraham"/>
+                    <relation name="ecrm:P129_is_about" active="LIT6866Testaments" passive="PRS5650Jacob"/>
+                    <relation name="ecrm:P129_is_about" active="LIT6866Testaments" passive="PRS5578Isaac"/>
                 </listRelation>
             </div><!---->
         </body>
