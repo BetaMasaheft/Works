@@ -4,9 +4,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ዜናሁ፡ ለዮሴፍ፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Zenāhu la-Yosef</title>
-            <title xml:lang="en" corresp="#t1">History of Joseph</title>   
+            <title xml:lang="en" xml:id="t1">History of Joseph</title>   
             <title xml:lang="en" xml:id="t2">Testament of Joseph</title>   
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -26,21 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listBibl type="clavis">
-               <bibl type="CAVT">
-                  <ptr target="bm:CAVT"/>
-                  <citedRange unit="item">117</citedRange>
-               </bibl>
-            </listBibl>
-            <listWit>
-               <witness type="external" corresp="EMML1939">
-                  <desc>
-                     <locus from="124r" to="162r"/>
-                  </desc>
-               </witness>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -51,6 +35,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract><p>The title that may refer to the actual <ref type="work" corresp="LIT6872HistoryJoseph">History of Joseph (CAVT 113=114)</ref> and the <ref type="work" corresp="LIT6873DeathJoseph">Death of Joseph (CAVT 116=117)</ref>, which may also be transmitted together</p></abstract>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -64,6 +49,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="MV" when="2017-11-15">Additions</change>
+         <change when="2023-09-18" who="ES">split the two texts, left this one as a general record</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -74,7 +60,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Piovanelli1993Apocryphes"/>
                   <citedRange>209-210 n. 43</citedRange>
                </bibl>
+               <bibl><ptr target="bm:Buttsetal2017Joseph"/></bibl>
             </listBibl>
+            <listRelation><relation name="saws:hasPart" active="LIT2458Testam" passive="LIT6872HistoryJoseph"></relation><relation name="saws:hasPart" active="LIT2458Testam" passive="LIT6873DeathJoseph"></relation></listRelation>
          </div>
       </body>
    </text>
