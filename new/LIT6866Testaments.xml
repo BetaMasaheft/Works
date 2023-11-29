@@ -1,14 +1,13 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6603ChrysSunday5" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6866Testaments" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘዚኣሁ፡ ለዮሐንስ፡ አፈ፡ ወርቅ፡ ዘይትነበብ፡ በኃምስ፡ ሰንበተ፡ ጾም፡</title>
-                <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān za-ziʾāhu la-Yoḥannǝs ʾAfa Warq za-yǝtnabbab
-                ba-ḫāmǝs sanbata ṣom</title>
-                <title xml:lang="en" xml:id="t2">Homily by John Chrysostom for the fifth Sunday in Lent</title>
+                <title xml:lang="eng" xml:id="t1">Testaments of the Three Patriarchs</title>
+                <title xml:lang="gez" xml:id="t2"> ፍልሰቶሙ፡ ወፀአቶሙ፡ ለአብርሃም፡ ወለይጽሐቅ፡ ወለያዕቆብ፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t2">Fǝlsatomu wa-ḍaʿatomu la-Abrǝhām wala-Yǝṣḥaq wala-Yāʿqob</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -33,12 +32,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>The Testaments of the Three Patriarchs (i. e. <ref type="work" corresp="LIT1412GadlaA">Abraham</ref>,
+                <ref type="work" corresp="LIT1517GadlaY">Isaac</ref> and <ref type="work" corresp="LIT1510GadlaY">Jacob</ref>) are usually transmitted together
+                in manuscripts. Each testament exists in distinct recensions.
+              </p>
             </abstract>
             <textClass>
                 <keywords>
+                    <term key="Apocrypha"/>
                     <term key="ChristianLiterature"/>
-                    <term key="Homily"/>
+                    <term key="Translation"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -47,24 +50,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MKr" when="2022-03-26">Created entity</change>
+            <change who="MKr" when="2023-08-21">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="saws:isAttributedToAuthor" active="LIT6603ChrysSunday5" passive="PRS5720JohnChr"/>
+                    <relation name="ecrm:P129_is_about" active="LIT6866Testaments" passive="PRS1269Abraham"/>
+                    <relation name="ecrm:P129_is_about" active="LIT6866Testaments" passive="PRS5650Jacob"/>
+                    <relation name="ecrm:P129_is_about" active="LIT6866Testaments" passive="PRS5578Isaac"/>
                 </listRelation>
             </div><!---->
-
-            <div xml:lang="gez" type="edition">
-                       <note>The incipit is taken from <ref type="mss" corresp="EMML1763"/></note>
-                       <div type="textpart" subtype="incipit">
-                        <ab xml:lang="gez">እግዚእነ፡ ወአምላክነ፡ ወመድኅኒነ፡ ኢየሱስ፡ ክርስቶስ፡ አዘዘነ፡ በወንጌል፡ ወይቤ፡ ሶበ፡ ትጼልዩ፡ ከመዝ፡ በሉ፡ አቡነ፡ ዘበ፡ ሰማያት፡</ab>
-                       </div>
-                     </div>
-
         </body>
     </text>
 </TEI>

@@ -1,14 +1,14 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6603ChrysSunday5" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6905Epistulae" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘዚኣሁ፡ ለዮሐንስ፡ አፈ፡ ወርቅ፡ ዘይትነበብ፡ በኃምስ፡ ሰንበተ፡ ጾም፡</title>
-                <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān za-ziʾāhu la-Yoḥannǝs ʾAfa Warq za-yǝtnabbab
-                ba-ḫāmǝs sanbata ṣom</title>
-                <title xml:lang="en" xml:id="t2">Homily by John Chrysostom for the fifth Sunday in Lent</title>
+                <title xml:lang="la" xml:id="t1">Epistulae ad Caesariam</title>
+                <title xml:lang="gez" xml:id="t2">ድርሳን፡ ዘአባ፡ ሳዊሮስ፡ ሊቀ፡ ጳጳሳት፡ በኀሙሰ፡ ፋሲካ፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t2">Dǝrsān za-ʾabbā Sāwiros liqa ṗāṗāsāt ba-ḫamusa Fāsika</title>
+                <title xml:lang="en" corresp="#t2">A homily of Abba Severus, the Patriarch, which is read on the Thursday of Easter</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -24,8 +24,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
-            </sourceDesc>
+                  <listBibl type="clavis">
+                   <bibl type="CPG">
+                      <ptr target="bm:CPG3"/>
+                      <citedRange unit="item">7071, 11</citedRange>
+                   </bibl>
+                </listBibl>
+              </sourceDesc>
+              <sourceDesc>
+<listWit>
+<witness corresp="ESum037">UM-037, f. 59r-63r</witness>
+</listWit>
+              </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
@@ -39,6 +49,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Homily"/>
+                    <term key="Theology"/>
+                    <term key="Translation"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -47,24 +59,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MKr" when="2022-03-26">Created entity</change>
+            <change who="MKr" when="2023-11-02">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+              <listBibl type="editions">
+                  <bibl><ptr target="bm:Forness2022New"/></bibl>
+              </listBibl>
                 <listRelation>
-                    <relation name="saws:isAttributedToAuthor" active="LIT6603ChrysSunday5" passive="PRS5720JohnChr"/>
+                    <relation name="saws:isAttributedToAuthor" active="LIT6905Epistulae" passive="PRS8790Severus"/>
                 </listRelation>
             </div><!---->
-
-            <div xml:lang="gez" type="edition">
-                       <note>The incipit is taken from <ref type="mss" corresp="EMML1763"/></note>
-                       <div type="textpart" subtype="incipit">
-                        <ab xml:lang="gez">እግዚእነ፡ ወአምላክነ፡ ወመድኅኒነ፡ ኢየሱስ፡ ክርስቶስ፡ አዘዘነ፡ በወንጌል፡ ወይቤ፡ ሶበ፡ ትጼልዩ፡ ከመዝ፡ በሉ፡ አቡነ፡ ዘበ፡ ሰማያት፡</ab>
-                       </div>
-                     </div>
-
         </body>
     </text>
 </TEI>
