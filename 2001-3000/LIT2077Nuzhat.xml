@@ -4,46 +4,70 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Nuzhat al-asrārwa-ṭahārat al-aqḏār</title>
+            <title xml:lang="ar" xml:id="t1">نزهة الاسرار وطهارة الاقذار</title>
+            <title xml:lang="ar" type="normalized" corresp="#t1" >Nuzhat al-ʾasrār wa-ṭahārat al-ʾaqḏār</title>
+            <title xml:lang="en" corresp="#t1">The Picnic of the Secrets and the Purity of the Filth</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="DN"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+               Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
-               </licence>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                  licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
             </availability>
          </publicationStmt>
-         <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         <sourceDesc>     
+               <listWit>
+                  <witness corresp="AMS00004" xml:id="L">Agaro / Aggārō, Agaro Muḥammad Sayf, AMS00004;</witness>
+                  <witness corresp="MAJ00060" xml:id="P">Jimata, Muḥammad Abba Jamaal, MAJ00060</witness>     
+                  <witness corresp="BNFabb161" xml:id="Q"/>    
+               </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
-            <xi:fallback>
-               <p>Definitions of prefixes used.</p>
-            </xi:fallback>
-         </xi:include>
+         <p>A digital born TEI file</p>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <creation/>
+         <abstract>
+            <p>A hagiographic work about Šayḫ Ḥusayn of Bale, by an unknown author, attested also in a few Ethiopian Islamic manuscripts.</p>
+         </abstract>
+         <textClass>
+            <keywords>
+               <term key="Hagiography"/>
+               <term key="IslamicLiterature"/>
+            </keywords>
+         </textClass>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="ar">Arabic</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
-         <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DN" when="2024-01-18">Created entity</change>
       </revisionDesc>
    </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
+   <text>
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl><ptr target="bm:IHABook627"/></bibl>
+            </listBibl>
+            <listBibl type="editions">
+               <bibl><ptr target="bm:IHABook9"/><citedRange unit="volume">III, 13A</citedRange>
+                  <citedRange unit="page">44</citedRange></bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT6914NuzhatAsrar" passive="PRS5438husayn"/>
+               <relation name="skos:exactMatch" active="LIT6914NuzhatAsrar" passive="LIT3527IHA"/>
+               <relation name="lawd:hasAttestation" active="LIT6914NuzhatAsrar" passive="BNFabb161"/>
+            </listRelation>
+         </div><!---->
       </body>
    </text>
 </TEI>
