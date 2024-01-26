@@ -6,6 +6,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ገድለ፡ ሲኖዳ፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t1">Gadla Sinodā</title>
+            <title xml:lang="gez" xml:id="t2">ተአምረ፡ ሲኖዳ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t2">Taʾammǝra Sinodā</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -27,10 +29,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </sourceDesc>
          <sourceDesc>
 <listWit>
-<witness corresp="EMML1834"></witness>
-<witness corresp="EMML7602"></witness>
-<witness corresp="BNFabb126"></witness>
-<witness corresp="Tanasee44"></witness>
+<witness corresp="EMML1834">EMML 1834</witness>
+<witness corresp="EMML7602">EMML 7602</witness>
+<witness corresp="BNFabb126">BnF d'Abb. 126</witness>
+<witness corresp="Tanasee44">Ṭānasee 44</witness>
 </listWit>
          </sourceDesc>
       </fileDesc>
@@ -53,6 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
            <language ident="en">English</language>
            <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <abstract>
+<p>The Ethiopic vita of Shenoute of Atripe is, according to its editor, a translation from Arabic. It is divided into 52 chapters,
+each devoted to a particular miracle, and is attributed to a certain Awsa (from Besa).</p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -69,11 +75,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <text>
        <body>
            <div type="bibliography">
+             <listBibl type="secondary">
+               <bibl><ptr target="bm:Buzi2010EAEShenute"/></bibl>
+             </listBibl>
              <listBibl type="editions">
                  <bibl><ptr target="bm:Colin1982Shenoudi"/></bibl>
              </listBibl>
                <listRelation>
                    <relation name="ecrm:P129_is_about" active="LIT1501GadlaS" passive="PRS8823Shenute"/>
+                   <relation name="saws:isAttributedToAuthor" active="LIT1501GadlaS" passive="PRS2743Besa"/>
+                   <relation name="saws:isVersionOf" active="LIT1501GadlaS" passive="LIT2492VitaSi"/>
                </listRelation>
            </div><!---->
        </body>
