@@ -1,5 +1,5 @@
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6548Elaryon" xml:lang="en" type="work">
     <teiHeader>
@@ -7,6 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">ገድለ፡ ኤላርዮን፡</title>
                 <title xml:lang="gez" type="normalized" corresp="t1">Gadla ʾElāryon</title>
+                <title xml:lang="en" xml:id="t2">Life of Hilarion</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="ES"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -22,7 +23,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <listWit><witness corresp="EMML7602">EMML 7602: 8 (1382-1413): ff. 96ra-107va ʾElāryon (f. 96r: 23 Ṭǝqǝmt); f. 95vb-c: miniature of ʾElāryon</witness></listWit>
+                <listWit>
+                  <witness corresp="EMML7602">EMML 7602: 8 (1382-1413): ff. 96ra-107va ʾElāryon (f. 96r: 23 Ṭǝqǝmt); f. 95vb-c: miniature of ʾElāryon</witness>
+                  <witness corresp="EMML7469">EMML 7469, f. 581r-595v</witness>
+              </listWit>
+            </sourceDesc>
+            <sourceDesc>
+                <listBibl type="clavis">
+                 <bibl type="CPG">
+                    <ptr target="bm:BHG"/>
+                    <citedRange unit="item">752</citedRange>
+                 </bibl>
+              </listBibl>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -47,13 +59,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="ES" when="2022-01-12">Created entity</change>
+            <change who="MKr" when="2024-01-30">Added clavis and witnesses</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography"/>
-            <listRelation><relation name="ecrm:P129_is_about" active="LIT6548Elaryon" passive="PRS12097Ablaryon"></relation>
-                <relation name="ecrm:CLP46i_may_form_part_of" active="LIT6548Elaryon" passive="LIT1493Gadlas"/></listRelation>
+            <listRelation>
+            <relation name="ecrm:P129_is_about" active="LIT6548Elaryon" passive="PRS12097Ablaryon"></relation>
+            <relation name="ecrm:CLP46i_may_form_part_of" active="LIT6548Elaryon" passive="LIT1493Gadlas"></relation>
+            <relation name="saws:isAttributedToAuthor" active="LIT6548Elaryon" passive="PRS5682Jerome"></relation>
+          </listRelation>
         </body>
     </text>
 </TEI>
