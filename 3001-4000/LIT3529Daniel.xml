@@ -34,8 +34,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p>Biblical Book of Daniel, including the so-called deuterocanonical books with the stories about Susanna, Bel and the dragon, 
-               the Prayer of Azariah and the Three Holy Children.</p>
+            <p><ref type="work" corresp="wd:Q80115">Biblical Book of Daniel</ref>, including the so-called deuterocanonical books with 
+               the stories about <ref type="work" corresp="LIT3194Susanna">Susanna</ref>, 
+               <ref type="work" corresp="LIT3195Bel">Bel and the Dragon</ref>, 
+               <ref type="work" corresp="LIT2250salota">Prayer of Azariah and the Three Holy Children</ref> and
+               <ref type="work" corresp="LIT1566hababa ">Third Song of the Three Youths in the Furnace</ref>.</p>
          </abstract>
          <langUsage><language ident="en">English</language></langUsage>
          <textClass>
@@ -53,7 +56,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
-      </body>
+         <div type="bibliography">
+            <listRelation>
+               <relation name="saws:contains" active="LIT3529Daniel" passive="LIT3194Susanna"/>
+               <relation name="saws:contains" active="LIT3529Daniel" passive="LIT3195Bel"/>
+               <relation name="saws:contains" active="LIT3529Daniel" passive="LIT2250salota"/>
+               <relation name="saws:contains" active="LIT3529Daniel" passive="LIT1566hababa"/>
+               <relation name="saws:contains" active="LIT3529Daniel" passive="LIT1259Daniel"/>
+            </listRelation>     
+        </div>
+     </body>
    </text>
 </TEI>
