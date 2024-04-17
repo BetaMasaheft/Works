@@ -4,7 +4,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to ʾabbā Libānos</title>
+            <title xml:lang="gez" xml:id="t1">መልክአ፡ ሊባኖስ፡</title>
+            <title corresp="#t1" xml:lang="gez">Malkǝʾa Libānos</title>
+            <title corresp="#t1" xml:lang="en">Image of Libānos</title>
+            <title xml:id="t2">Hymn to ʾabbā Libānos</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,9 +17,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                 
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -25,7 +28,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </sourceDesc>
          <sourceDesc>
             <listWit>
-               <witness/>
+               <witness corresp="ANLcr26">StrANL Conti Rossini 26 (1934), 64ra-66va (StrANL 99)</witness>
+               <witness corresp="ANLcr88">StrANL Conti Rossini 88 (1939), 52vb - 55vb (StrANL 231)</witness>
+               <witness corresp="PavoniGL1">Asmara, Library of the Pavoni Social Center (1674), 1va – 6vb, 96ra – 99vb</witness>
+               <witness corresp="PavoniGL2">Asmara, Library of the Pavoni Social Center (20th cent.), 81vb – 84vb</witness>
+           
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -49,16 +56,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
+         <change when="2024-04-17" who="ES">merged with LIT6387MalkeaLibanos</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="ecrm:P129_is_about" active="LIT3097RepCh377" passive="PRS6298Libanos"></relation>
+            <relation name="betmas:formerlyAlsoListedAs" active="LIT3097RepCh377" passive="LIT6387MalkeaLibanos"></relation></listRelation>
          <div type="bibliography">
+            <listBibl type="translation">
+               <bibl><ptr target="bm:Bausi2003LibanosTr"/><citedRange unit="page">119-122</citedRange></bibl>
+            </listBibl>
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">377</citedRange>
                </bibl>
+               <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="page">206-212</citedRange></bibl>
             </listBibl>
          </div>
          <div type="edition">
