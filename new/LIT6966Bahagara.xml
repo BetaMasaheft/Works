@@ -1,13 +1,13 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6958Egziamlakfatari" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6966Bahagara" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
-            <titleStmt>    
-                <title xml:lang="gez" xml:id="t1">እግዚአብሔር፡ አምላክ፡ ፈጣሬ፡ ዓለማት፡ በእዱ፡</title>
-                <title xml:lang="gez" type="normalized" corresp="#t1">ʾƎgziʾabǝḥer ʾamlāk faṭāre ʿālamāt ba-ʾǝdu, ...  (Qǝne of an unidenfitied type)</title>
-                <title xml:lang="en" corresp="#t1">God, Lord, creator of the worlds with his own hand, ...</title>
+            <titleStmt>
+                <title xml:lang="gez" xml:id="t1">በሐገረ፡ ፊልጶስ፡ ቂሳርያ፡ ድኅረ፡ ሰርሮታ፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t1">Ba-ḥagara Filṗos Qisāryā dǝḫra sarǝrotā, ... (Qǝne of za-yǝʾǝze type)</title>
+                <title xml:lang="en" corresp="#t1">In the land of Philipp of Cesarea, after its foundation, ...</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,10 +30,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A digital born TEI file</p>
         </encodingDesc>
         <profileDesc>
-            <creation/>
+            <creation notBefore="1580" notAfter="1610"/>
             <abstract>
-                <p>This poem is referred to as qǝne, in <ref type="mss" corresp="BNFabb57"/>, attributed to <persName ref="PRS14051LaekaMaryam"/>, 
-                    possibly of the type <foreign xml:lang="gez">ʿǝṭāna mogar</foreign>.</p>
+                <p>The poem, attested in <ref type="mss" corresp="BNFabb57"/>, is a qǝne
+                    of the type <foreign xml:lang="gez">za-yǝʾǝze</foreign>, assigned to <persName ref="PRS14051LaekaMaryam"/>.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -48,29 +48,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DN" when="2024-04-17">Created entity</change>
+            <change who="DN" when="2024-04-18">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="saws:isAttributedToAuthor" active="LIT6958Egziamlakfatari" passive="PRS14051LaekaMaryam"/>
+                    <relation name="saws:isAttributedToAuthor" active="LIT6966Bahagara" passive="PRS14051LaekaMaryam"/>
                 </listRelation>
             </div>
             
             <div type="edition">
                 <div type="textpart" subtype="incipit" xml:lang="gez">
-                    <note>The text is taken from <ref type="mss" corresp="BNFabb57"/>.</note>
-                    <ab> 
-                        <add place="left">ዝኒ፡ ዘ<persName ref="PRS14051LaekaMaryam">ለአከ፡ ማርያም።</persName></add><add place="above"> ክብር፡ ይእቲ፡</add> 
-                        <l n="1">እግዚአብሔር፡ አምላክ፡ ፈጣሬ፡ ዓለማት፡ በእዱ፡</l> 
-                        <l n="2">አመ፡ ደኀሪ፡ ዘመን፡ ለወልዱ።</l>
-                        <l n="3">ፈነዎ፡ ወለአኮ፡ ኀበ፡ ማርያም፡ ኅንፃ፡ ፈቃዱ፡</l>
-                                             
-                    </ab>
-                </div>
+                <note>The text is taken from <ref type="mss" corresp="BNFabb57"/>.</note>
+                <ab> 
+                    <add place="above"><supplied reason="lost" resp="DN">ዘ</supplied><persName ref="PRS14051LaekaMaryam">
+                        <gap reason="lost" unit="chars" quantity="4"/>፡ ማርያም፡</persName> ዘይእዜ፡ ዝኒ፡ ዘኪያሁ፡ </add>
+                    <l n="1">በሐገረ፡ ፊልጶስ፡ ቂሳርያ፡ ድኅረ፡ ስርሮታ፡</l> 
+                    <l n="2">ፈጸመ፡ የማነ፡ ወልድኪ፡ <gap reason="lost" unit="chars" quantity="2"/>በዲበ፡ ዘባኑ፡ ለጴጥሮስ፡ ሓዋርያ።</l>
+                                
+                </ab>
+            </div>
             </div>
         </body>
+      
+        
     </text>
 </TEI>
