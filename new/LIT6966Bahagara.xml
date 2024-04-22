@@ -1,14 +1,13 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6954Egziabeher" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6966Bahagara" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
-            <titleStmt>             
-                <title xml:lang="gez" xml:id="t1">እግዚአብሔር፡ ሥመር፡ በሥምረትከ፡ ሥምርት፤</title>
-                <title xml:lang="gez" type="normalized" corresp="#t1">ʾƎgziʾabǝḥer śǝmar ba-śǝmratǝka śǝmǝrt,...  (Qǝne of kǝbr yǝʾǝti type)</title>
-                    <title xml:lang="en" corresp="#t1">Oh God, be of good will, with your benevolent benevolence,...</title>
-                    
+            <titleStmt>
+                <title xml:lang="gez" xml:id="t1">በሐገረ፡ ፊልጶስ፡ ቂሳርያ፡ ድኅረ፡ ሰርሮታ፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t1">Ba-ḥagara Filṗos Qisāryā dǝḫra sarǝrotā, ... (Qǝne of za-yǝʾǝze type)</title>
+                <title xml:lang="en" corresp="#t1">In the land of Philipp of Cesarea, after its foundation, ...</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -31,17 +30,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A digital born TEI file</p>
         </encodingDesc>
         <profileDesc>
-            <creation notBefore="1700" notAfter="1900"/>
+            <creation notBefore="1580" notAfter="1610"/>
             <abstract>
-                <p>This poem is referred to as <term key="Qene">qǝne</term> of the type <foreign xml:lang="gez">kǝbr yǝʾǝti</foreign>,
-                    in <ref type="mss" corresp="ESdd037"/> (following <ref type="work" corresp="LIT6952Tasqwaqu"/>), 
-                    and attributed to <persName ref="PRS14409Yohannes"/>.</p>
+                <p>The poem, attested in <ref type="mss" corresp="BNFabb57"/>, is a <term key="Qene"/>
+                    of the type <foreign xml:lang="gez">za-yǝʾǝze</foreign>, assigned to <persName ref="PRS14051LaekaMaryam"/>.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Poetry"/>
                     <term key="Qene"/>
+                    <term key="Zayeeze"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -50,29 +49,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DN" when="2024-04-16">Created entity</change>
+            <change who="DN" when="2024-04-18">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="dcterms:creator" active="LIT6954Egziabeher" passive="PRS14409Yohannes"/>
+                    <relation name="saws:isAttributedToAuthor" active="LIT6966Bahagara" passive="PRS14051LaekaMaryam"/>
                 </listRelation>
             </div>
             
-                <div type="edition">
-                    <div type="textpart" xml:lang="gez">
-                        <note>The text is taken from <ref type="mss" corresp="ESdd037"/>.</note>
-                        <ab> 
-                            <l n="1"><add place="left">ዝኒ፡ ዚአሁ፡</add> ክብር፡ ይእቲ፡ እግዚአብሔር፡ ሥመር፡ በሥምረትከ፡ ሥምርት፤</l>
-                            <l n="2">እስከነ፡ ትጸጊ፡ ለከ፡ ጽጌያተ፡ ትሩፍ፡ ስብሐት፤</l>
-                            <l n="3">ይሥቅይዋ፡ ዘልፈ፡ ለመቅደሰ፡ ዳሞ፡ ገነት፤</l>
-                            <l n="4">ትፍሥሕት፡ ጤግሮስ፡ ወዔፍራጥስ፡ ኃሤት፤ </l>
-                             </ab>
-                    </div>
-                </div>
-           
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                <note>The text is taken from <ref type="mss" corresp="BNFabb57"/>.</note>
+                <ab> 
+                    <add place="above"><supplied reason="lost" resp="DN">ዘ</supplied><persName ref="PRS14051LaekaMaryam">
+                        <gap reason="lost" unit="chars" quantity="4"/>፡ ማርያም፡</persName> ዘይእዜ፡ ዝኒ፡ ዘኪያሁ፡ </add>
+                    <l n="1">በሐገረ፡ ፊልጶስ፡ ቂሳርያ፡ ድኅረ፡ ስርሮታ፡</l> 
+                    <l n="2">ፈጸመ፡ የማነ፡ ወልድኪ፡ <gap reason="lost" unit="chars" quantity="2"/>በዲበ፡ ዘባኑ፡ ለጴጥሮስ፡ ሓዋርያ።</l>
+                                
+                </ab>
+            </div>
+            </div>
         </body>
+      
+        
     </text>
 </TEI>
