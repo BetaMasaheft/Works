@@ -1,13 +1,15 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6372MEMiracle" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6972PPrayer" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle of ʾEwosṭātewos: Monks of Dabra Libanos venerate Eustathius</title>
+                <title xml:lang="en" xml:id="t1">Protective prayer</title>
+                <title xml:lang="gez" xml:id="t2">ወእምቅድመ፡ ፍጥረቶሙ፡ ለመላእክት፡</title>
+                <title xml:lang="gez" corresp="#t2" type="normalized">Wa-ʾǝm-qǝdma fǝṭratomu la-malāʾǝkt…</title>
                 <editor role="generalEditor" key="AB"/>
-                <editor key="ES"/>
+                <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -35,8 +37,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
-                    <term key="Hagiography"/>
-                    <term key="Miracle"/>
+                    <term key="Magic"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -45,22 +46,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="ES" when="2023-01-27">Created entity</change>
+            <change who="DR" when="2024-04-26">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography">                
-                <listBibl type="translation">
-                    <bibl>
-                        <ptr target="bm:Turaev1906Ewostatewos"/>
-                        <citedRange unit="page">90 (miracle 15)</citedRange>
-                    </bibl>
-                </listBibl>
-                <listRelation>
-                    <relation name="saws:formsPartOf" active="LIT6372MEMiracle" passive="LIT4315Miracles"/>
-                </listRelation>
-            </div>            
+            <div type="edition">
+                <note>The following incipit and explicit are taken from <ref type="mss" corresp="BAVet128"/>.</note>
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <ab>
+                        በስመ፡ አብ፡ <gap reason="ellipsis"/> ወእምቅድመ፡ ፍጥረቶሙ፡ ለመላእክት፡ <supplied reason="omitted">ወ</supplied>ሰማይ፡ ወምድር፡ ወበዘነበርከ፡ 
+                        ብዙኅ፡ መዋዕል፡ ዲበ፡ ሠረገላ፡ ኪሩቤል፡
+                    </ab>
+                </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <ab>ወተማኅፀንኩክሙ፡ ከመ፡ ኢይቅረቡ፡ ኃይለ፡ ፀላዒ፡ ወፀር፡ ወቄዳር፡ ወመንደፍ፡ ዛር፡ ባርያ፡ ጥቍር፡ ለቀቲል፡ ከመ፡ ኢይቅረቡኒ፡
+                  ለገብርከ።
+                    </ab>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>

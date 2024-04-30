@@ -1,13 +1,13 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6372MEMiracle" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6729PrayerWater" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle of ʾEwosṭātewos: Monks of Dabra Libanos venerate Eustathius</title>
+                <title xml:lang="gez" xml:id="t1">Prayer of the Virgin Mary to her Son</title>
                 <editor role="generalEditor" key="AB"/>
-                <editor key="ES"/>
+                <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -21,7 +21,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="BerOrOct59"/>
+                    <witness corresp="BLorient13156"/>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -30,13 +33,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>Prayer to be recited over the water in which the sick are to be bathed and over the oil with which they are to be anointed for
+                    healing.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
-                    <term key="Hagiography"/>
-                    <term key="Miracle"/>
+                    <term key="Magic"/>
+                    <term key="Prayers"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -45,22 +49,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="ES" when="2023-01-27">Created entity</change>
+            <change who="DN" when="2022-09-30">Created entity</change>
+            <change when="2024-04-24" who="CH">Updated witnesses, abstract and incipit</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography">                
-                <listBibl type="translation">
-                    <bibl>
-                        <ptr target="bm:Turaev1906Ewostatewos"/>
-                        <citedRange unit="page">90 (miracle 15)</citedRange>
-                    </bibl>
-                </listBibl>
-                <listRelation>
-                    <relation name="saws:formsPartOf" active="LIT6372MEMiracle" passive="LIT4315Miracles"/>
-                </listRelation>
-            </div>            
+            <div type="edition">
+                <note>This incipit is taken from <ref type="mss" corresp="BerOrOct59"/>.</note>
+                <div type="textpart" subtype="incipit">
+                    <ab xml:lang="gez">በስመ፡ አብ፡ ወወልድ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ። ለከ፡ ንወጥን፡ በረድኤተ፡ እግዚአብሔር፡ አምላከነ፡ ሎቱ፡ ስብሐት፡ በእንተ፡ ጽሒፈ፡
+                        ጸሎት፡ ዘእም፳ወ፩ለእግዚእትነ፡ ድንግል፡ ማርያም፡ ንግሥተ፡ ኵሎን፡ አንስት፡ ወእሙ፡ ላሒወተ፡ ኵልነ፡ ኢየሱስ፡ ክርስቶስ፡ እግዚእነ፡ ዘይትነበብ፡ ላዕለ፡ ማይ፡ ወያሐፅብዎ፡ ሙ፡ 
+                        ለድውያን፡ ወጼልዩ፡ ላዕለ፡ ዘይት፡</ab>
+                </div>
+            </div>
+            <!---->
         </body>
     </text>
 </TEI>
