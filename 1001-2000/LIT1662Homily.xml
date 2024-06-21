@@ -4,9 +4,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Homily on the Resurrection of the Lord</title>
+            <title xml:lang="en" xml:id="t1">Homily on the Resurrection of the Lord</title>
             <title xml:lang="gez" xml:id="t2">ድርሳን፡ ዘቅዱስ፡ አባ፡ ጌርሎስ፡ ጳጳስ፡ ዘኢየሩሳሌም፡ በእንተ፡ ትንሣኤሁ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡</title>
-            <author>Cyril</author>
+            <title xml:lang="gez" type="normalized" corresp="#t2">Dǝrsān za-qǝddus ʾabbā Gerlos ṗāṗās za-ʾIyarusālem baʾǝnta tǝnśāʾehu la-ʾǝgziǝʾǝna Iyasus Krǝstos</title>
+            <author>Cyril of Jerusalem</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -23,6 +24,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </availability>
          </publicationStmt>
          <sourceDesc>
+           <listBibl type="clavis">
+                 <bibl type="CPG">
+                    <ptr target="bm:CPG2"/>
+                    <citedRange unit="item">3598</citedRange>
+                 </bibl>
+              </listBibl>
+       </sourceDesc>
+         <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
@@ -37,18 +46,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <profileDesc>
          <langUsage>
            <language ident="en">Gǝʿǝz</language>
-            <language ident="en">English</language>
+          <language ident="en">English</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Homily"/>
+               <term key="Translation"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <changw 
       </revisionDesc>
    </teiHeader>
    <text>
        <body>
            <div type="bibliography">
+             <listBibl type="secondary">
+                 <bibl><ptr target="bm:Lusini1988patristica"/><citedRange unit="page">487-488</citedRange></bibl>
+                 <bibl>
+      <ptr target="bm:nasscal"/>
+      <citedRange unit="item">ECCA 802</citedRange>
+     <ref target="https://www.nasscal.com/e-clavis-christian-apocrypha/homily-on-the-resurrection-and-the-passion-by-pseudo-cyril-of-jerusalem/"/>
+   </bibl>
+             </listBibl>
                <listRelation>
                    <relation name="saws:isAttributedToAuthor" active="LIT1662Homily" passive="PRS3261Cyrilof"/>
                </listRelation>
