@@ -6,10 +6,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ትርጓሜ፡ ፊደላት፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Tǝrgʷāme fidalāt</title>
-            <title xml:lang="en" corresp="#t1">Commentary on Gǝʿǝz letters</title>
+            <title xml:lang="en" corresp="#t1">Interpretation of Gǝʿǝz letters</title>
             <title xml:lang="gez" xml:id="t2">ትርጓሜ፡ ፊደል፡</title>
             <title xml:lang="gez" corresp="#t2" type="normalized">Tǝrgʷāme fidal</title>
-            <title xml:lang="en" corresp="#t2">Commentary on the Gǝʿǝz alphabet</title>
+            <title xml:lang="en" corresp="#t2">Interpretation of the Gǝʿǝz alphabet</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -38,7 +38,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract>
+            <p>Symbolic explanation of the characters of the Ethiopic 'alphabet' starting with <foreign xml:lang="gez-tr">ʾAlf</foreign>.</p>
+         </abstract>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language>
+            <language ident="gez-tr">Gǝʿǝz transliterated</language></langUsage>
+         <textClass>
+            <keywords scheme="#ethioauthlist">
+               <term key="Vocabulary"/>
+               <term key="Theology"/>
+               <term key="ChristianLiterature"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -49,7 +60,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="edition">
+            <div type="edition" subtype="incipit" xml:lang="gez">
+               <note>The following incipit is taken from <ref type="mss" corresp="InEtn40559"/>.</note>
+               <ab>አሌፍ፡ ብፁዓን፡ እለ፡ ንፁሃን፡</ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
