@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Ṭomarä tǝsbǝʾǝt</title>
+            <title xml:lang="gez" xml:id="t1">ጦማረ፡ ትስብእት፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Ṭomāra tǝsbǝʾǝt</title>
+            <title xml:lang="en" corresp="#t1">Epistle of humanity</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,9 +16,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                 This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
+                Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -33,17 +35,43 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
-         <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="ES" when="2024-07-11">updated</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         
+         <div type="bibliography"><listBibl type="secondary">
+            <bibl>
+               <ptr target="bm:Getatchew1980TomaraTesbet"/>
+            </bibl>
+
+            
+         </listBibl>
+         <listBibl type="editions"><bibl><ptr target="bm:Getatchew1991EpistleOfHumanityT"/></bibl></listBibl>
+         <listBibl type="translation"><bibl><ptr target="bm:Getatchew1991EpistleOfHumanityV"/></bibl></listBibl>
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor" active="LIT2474tomara" passive="PRS10626ZaraY"/>               
+            </listRelation>
+         </div>
+         <div xml:lang="gez" type="edition">
+            <note>The incipit is taken from <ref type="mss" corresp="EMML1480"/></note>
+            <div type="textpart" subtype="incipit">
+               <ab xml:lang="gez">ድርሳን፡ ዘይትነበብ፡ አመ፡ ፩ለመስከረም፡ በበዓለ፡ በርተሎሜዎስ፡ ሐዋርያ ። አመ፡ ፲፡ ወ፪፡ ለጥቅምት፡ በበዓለ፡ ማቴዎስ፡ ወንጌላዊ ። አመ፳ወ፪፡ በበዐለ፡ ሉቃስ፡ ወንጌላዊ ። አመ፡ ፲ወ፰ለኅዳር፡ በበዓለ፡ ፊልጶስ፡ ሓዋርያ፡ አመ፡ ፬፡ ለታኅሣሥ፡ በበዓለ፡ እንድርያስ፡ ሐዋርያ ። ኦፍቁራንየ፡ ደቂቀ፡ ወንጌል፡ መፍትው፡ ለነ፡ ናዕርፍ፡ በበዓሎሙ፡ ለሓዋርያት፡ አበዊነ፡ ወመምህራኒነ፡ እለ፡ ወለዱነ፡ በትምህርተ፡ መንፈስ፡ ቅዱስ፡ ወበስብከተ፡ ወንጌሉ፡ ለወልደ፡ እግዚኣብሔር ።
+               </ab>
+            </div>
+            <div type="textpart" xml:id="Bartholomew"><label>Homily in honor of Bartholomew, Matthew, Luke, Philip, and Andrew</label></div>
+            <div type="textpart" xml:id="John"><label>Homily in honor of John the evangelist, James the son of Alphaeus, Matthias, James son of Zebedee, and Mark the evangelist</label></div>
+            <div type="textpart" xml:id="Peter"><label>Homily in honor of Peter and Paul, Thomas, Thaddaeus, Nathaniel, and James the brother of Jesus</label></div>
+            <div type="textpart"><label>Homily in honor of Bartholomew, Matthew, Luke, Philip, and Andrew, fol. 53r-65v; homily in honor of John the evangelist, James the son of Alphaeus, Matthias, James son of Zebedee, and Mark the evangelist, fol. 66r-83v; homily in honor of Peter and Paul, Thomas, Thaddaeus, Nathaniel, and James the brother of Jesus, fol. 84r-96v
+               
+            </label></div>
+         </div>
       </body>
    </text>
 </TEI>
