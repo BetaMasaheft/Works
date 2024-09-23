@@ -4,11 +4,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ወገድል፡ ዘያሬድ፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān wa-gadl za-Yāred</title>
-            <title xml:lang="en" corresp="#t1">Homily and Vita of Yāred</title>
-            
-            
+            <title xml:lang="en" xml:id="t1">Collection of hagiographic texts in honour of St Yāred</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -36,6 +32,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </listBibl>
             <listWit>
                <witness corresp="BNFabb227"/>
+               <witness corresp="BLorient12860"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -47,6 +44,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+         <creation/>
+         <abstract>
+            <p>Collection of hagiographic texts in honour of <persName ref="PRS10245Yared">Yared</persName>.</p>
+         </abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
@@ -62,10 +63,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="MV" when="2017-11-07">Updated</change>
          <change who="MV" when="2017-11-27">Added textparts</change>
+         <change when="2024-07-04" who="CH">Updated abstract and witnesses and added relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div type="bibliography">
+            <listRelation>
+               <relation name="dcterms:hasPart" active="LIT1512GadlaY" passive="LIT1303Dersan"/>
+               <relation name="dcterms:hasPart" active="LIT1512GadlaY" passive="LIT7019MiraclesYared"/>
+               <relation name="dcterms:hasPart" active="LIT1512GadlaY" passive="LIT2989RepCh270"/>
+               <relation name="ecrm:P129_is_about" active="LIT1512GadlaY" passive="PRS10245Yared"/>
+            </listRelation>
+         </div>
          <div type="bibliography">
             <listBibl type="editions">
                <bibl> 
