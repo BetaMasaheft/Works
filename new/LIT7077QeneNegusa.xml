@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Nǝguśa nagaśt wald ʾama qoma ba-ʿawda tasayṭa salāsā ()</title>
+                <title xml:lang="gez" xml:id="t1">ንጉሠ፡ ነገሥት፡ ወልድ፡ አመ፡ ቆመ፡ በዓውደ፡ ተሰይጠ፡ ሰላሳ፤</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Nǝguśa nagaśt wald ʾama qoma ba-ʿawda tasayṭa salāsā (Qǝne of kəbr yəʾəti-type)</title>
+                <title xml:lang="en" corresp="#t1">The king of kings, the Son, when he stood in the courtyard (where) he was sold for thirty (silver coins)…</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -21,7 +23,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="UppQ1524o"/>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -30,13 +34,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p><foreign xml:lang="gez">Qǝne</foreign> without type indication in the manuscript. It has four lines, meaning
+                    that it can probably be classified as a <foreign xml:lang="gez">kəbr yəʾəti qəne</foreign> according to
+                    <bibl><ptr target="bm:Habtemichael1998Ufficio"/><citedRange unit="page">218</citedRange></bibl>. 
+                    It is attributed to <persName ref="PRS14574GabraLeul" cert="high" corresp="SD">Gabra Ləʿul</persName> 
+                    in the manuscript.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Poetry"/>
                     <term key="Qene"/>
+                    <term key="KebrYeeti" cert="medium"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -52,10 +61,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="lawd:hasAttestation" active="LIT7077QeneNegusa" passive=""/>
-                    <relation name="saws:isAttributedToAuthor" active="LIT7077QeneNegusa" passive=""/>
+                    <relation name="lawd:hasAttestation" active="LIT7077QeneNegusa" passive="UppQ1524o"/>
+                    <relation name="saws:isAttributedToAuthor" active="LIT7077QeneNegusa" passive="PRS14574GabraLeul"/>
                 </listRelation>
-            </div><!---->
+            </div>
+            <div type="edition" xml:lang="gez">
+                <note>This edition is based on <ref type="mss" corresp="UppQ1524o"/> on fol. 32r. Division into verses is indicated with ፤ .
+                    The end of the poem is indicated with ። .</note>
+                <ab>
+                    <l n="1">ንጉሠ፡ ነገሥት፡ ወልድ፡ አመ፡ ቆመ፡ በዓውደ፡ ተሰይጠ፡ ሰላሳ፤</l>
+                    <l n="2">ይቤሎ፡ በነግህ፡ ልሳነ፡ አግብርት፡ ሐዊሳ፤</l>
+                    <l n="3">ወይቤ፡ በ<sic resp="JK">ስ</sic>ርክ፡ ተረግዘት፡ ኲናት፡ አንበሳ፤</l>
+                    <l n="4">ንውመ፡ ኮነ፡ በፈቃዱ፡ ወልደ፡ ባህርየ፡ አብ፡ እንስሳ።</l>
+                </ab>
+            </div>
         </body>
     </text>
 </TEI>
