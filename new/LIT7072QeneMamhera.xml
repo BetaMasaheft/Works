@@ -5,9 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">">መምህረ፡ ዝንቱ፡ ዓለም፡ አውስጣቴዎስ፡ ደብረ፡ አርማንያ፡ ወልደከ፡ በጽሐ፡ ለዘምሮ፤</title>
-                <title xml:lang="gez" corresp="#t1" type="normalized">Mamǝhǝra zǝntu ʿālam, ʾAwǝsṭātewos, dabra ʾArmānyā waldaka baṣḥa la-zammǝro… (Qǝne of unknown type)</title>
-                <title xml:lang="en" corresp="#t1">The teacher of this world, ʾEwosṭātewos, came to the mountain of Armenia to praise Your Son…</title>
+                <title xml:lang="gez" xml:id="t1">መምህረ፡ ዝንቱ፡ ዓለም፡ <choice><sic>አ</sic><corr resp="JK">ኤ</corr></choice>ዎስጣቴዎስ፡ ደብረ፡ አርማንያ፡ ወልደከ፡ በጽሐ፡ ለዘምሮ፤</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Mamhǝra zǝntu ʿālam, ʾEwosṭātewos, dabra ʾArmānyā waldaka baṣḥa la-zammǝro (Qǝne of unknown type)</title>
+                <title xml:lang="en" corresp="#t1">The teacher of this world, ʾEwosṭātewos, came to the mountain/monastery of Armenia to praise Your Son…</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -34,8 +34,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p><foreign xml:lang="gez">Qǝne</foreign> without type indication in the manuscript. In the first line, it 
-                    refers to <persName ref="PRS3934Ewostate"/>.
+                <p><foreign xml:lang="gez">Qǝne</foreign> without type indication in the manuscript. It has eight lines, meaning
+                    that it can be classified as a <foreign xml:lang="gez">mawaddəs qəne</foreign> according to
+                    <bibl><ptr target="bm:Guidi1900Qene"/></bibl>. 
+                    In the first line, it refers to <persName ref="PRS3934Ewostate"/>.
                     It is attributed to <persName ref="PRS14574GabraLeul" cert="high" corresp="SD"/> in the manuscript.</p>
             </abstract>
             <textClass>
@@ -43,6 +45,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="ChristianLiterature"/>
                     <term key="Poetry"/>
                     <term key="Qene"/>
+                    <term key="Mawaddes" cert="medium"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -59,18 +62,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="bibliography">
                 <listRelation>
                     <relation name="lawd:hasAttestation" active="LIT7072QeneMamhera" passive="UppQ1524o"/>
+                    <relation name="ecrm:P129_is_about"  active="LIT7072QeneMamhera" passive="PRS3934Ewostate"/>
                 </listRelation>
             </div>
             <div type="edition" xml:lang="gez">
                 <note>This edition is based on <ref type="mss" corresp="UppQ1524o"/> on fols 40r, 41r. Division into verses is indicated with ፤ .
                     The end of the poem is indicated with ። .</note>
                 <ab>
-                    <l n="1">መምህረ፡ ዝንቱ፡ ዓለም፡ አውስጣቴዎስ፡ ደብረ፡ አርማንያ፡ ወልደከ፡ በጽሐ፡ ለዘምሮ፤</l>
+                    <l n="1">መምህረ፡ ዝንቱ፡ ዓለም፡ <choice><sic>አ</sic><corr resp="JK">ኤ</corr></choice>ዎስጣቴዎስ፡ 
+                        ደብረ፡ አርማንያ፡ ወልደከ፡ በጽሐ፡ ለዘምሮ፤</l>
                     <l n="2">አምጣነ፡ ቦቱ፡ ተስእለ፡ ዘያስተፌስህ፡ አእመሮ፤</l>
                     <l n="3">ወከመ፡ ዘንቃህ፡ እምንዋም፡ ተንስአ፡ ብኃይሉ፡ ወቀተለ፡ ጸሮ፤</l>
                     <l n="4">ማዕረረ፡ ሞት፡ ኢያሪኮ፡ ቦቲኮ፡ ዓጽፍከ፡ 
-                        እግዚ<choice><orig>እ</orig><corr>አ</corr></choice>፡ 
-                        ኢገ<choice><orig>ብ</orig><corr>ቢ</corr></choice>ር፡ ተድኅሮ፤</l><pb n="41r"/>
+                        እግዚ<del rend="strikethrough">እ</del><add place="above">አ</add>፡ 
+                        ኢገ<del rend="strikethrough">ብ</del><add place="above">ቢ</add>ር፡ ተድኅሮ፤</l><pb n="41r"/>
                     <l n="5">ማዕበልሂ፡ ዘካርያስ፡ እንተ፡ ኢያቅለለ፡ እግሮ፤</l>
                     <l n="6">ደንገጸ፡ እም፡ ቃልከ፡ ወስእኖ፡ ተናግሮ፤</l>
                     <l n="7">ወላዕከ፡ ቤትከ፡ ደብር፡ ለስርአተ፡ ሌዊ፡ ሰአሮ፤</l>
