@@ -18,9 +18,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
                 This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
+                Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -62,6 +61,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2017-03-06" who="ES">added title abstract relation keywords</change>
          <change when="2020-04-13" who="DR">Added bibliography</change>
          <change when="2022-03-14" who="DR">Added information from deleted LIT2987RepCh268</change>
+         <change who="ES" when="2024-09-27">Added the text, relations and bibl to A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -71,6 +71,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <relation name="dcterms:isPartOf" active="LIT2285Saqoqa" passive="LIT2301Sebhat"/>
             <relation name="dcterms:isPartOf" active="LIT2285Saqoqa" passive="LIT1961Mashaf"/>
             <relation name="betmas:formerlyAlsoListedAs" active="LIT2285Saqoqa" passive="LIT2987RepCh268"/>
+            <relation name="skos:exactMatch" active="LIT2285Saqoqa" passive="https://w3id.org/malke/2285/"></relation>
          </listRelation>
          <listBibl type="secondary">
             <bibl>
@@ -83,24 +84,172 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </listBibl>
          <listBibl type="editions">
             <bibl><ptr target="bm:Hayoz1956Marie"/></bibl>
+            <bibl>
+               <ptr target="bm:MgWebsite"></ptr>
+            </bibl>
          </listBibl>
          <listBibl type="translation">
             <bibl><ptr target="bm:Hayoz1956Marie"/></bibl>
-         </listBibl>
-         <div type="edition">
-           <note>The incipit is taken from <ref type="mss"
-             corresp="DSEthiop11" target="ms_i7"/>.</note>
-                  <div type="textpart" subtype="incipit">
-                     <ab>በስመ፡ አብ፡ እግዚኣብሔር፡ ሥሉስ፡ ኅጸተ፡ ግጻዌ፡ ዘአልቦ፡
-                        ሰቆቃወ፡ ድንግል፡ እጽሕፍ፡ በቀለመ፡ አንብዕ፡ ወአንጠብጥቦ። ወይሌ፡ ወላህ፡ ለይበል፡ ለዘአንብቦ።
-                        ከማሁ፡ ኀዘን፡ ወተሰዶ፡ ሶበ፡ በኵለሄ፡ ረከቦ። ርእዮ፡ ለይብኪ፡ ዐይነ፡ ልብ፡ ዘቦ። አይቴ፡
-                        ሀሎ፡ ንጉሠ፡ እስራኤል፡ ዘተወልደ። ከመ፡ ነሀብ፡ ሎቱ፡ እምኃ፡ ወሰጊደ። እንዘ፡ ይብሉ፡ እምሰብአ፡ ሰገል፡ ሰሚዖ፡
-                        ገሀደ።
-                       </ab>
-                  </div>
-
-                  </div>
-
-      </body>
+         </listBibl>         
+         <div type="edition" xml:lang="gez">
+            <note>Text taken from <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+            <div type="textpart" xml:id="masgabiya">
+               <lg type="stanza" n="1">
+                  <l n="1">በከመ፡ ትቤ፡ በወንጌል፡ ኀበ፡ ሀለዉ፡ ክልኤቱ፡ ወሠለስቱ፨</l>
+                  <l n="2">ጉቡኣን፡ በስምየ፨</l>
+                  <l n="3">እሄሉ፡ አንሰ፡ ማእከሌሆሙ፡ ህየ፨</l>
+                  <l n="4">በእንተ፡ ኪዳን፡ ዘላእሌየ፡ ታስተፋጥን፡ ነዓ፡ ተምኔትየ፨</l>
+                  <l n="5">ደብረ፡ ቍስቋም፡ ዘቦእከ፡ ኢየሱስ፡ አቡየ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">በስመ፡ እግዚአብሔር፡ ሥሉስ፡ ሕጸተ፡ ግጻዌ፡ ዘአልቦ፨</l>
+                  <l n="2">ሰቆቃወ፡ ድንግል፡ እጽሕፍ፡ በቀለመ፡ አንብዕ፡ ወአንጠብጥቦ፨</l>
+                  <l n="3">ወይሌ፡ ወላሕ፡ ለይበል፡ ዘአንበቦ፨</l>
+                  <l n="4">ከማሃ፡ ሐዘን፡ ወተሰዶ፡ ሶበ፡ በኵለሄ፡ ረከቦ፨</l>
+                  <l n="5">ርእዮ፡ ለይብኪ፡ ዐይነ፡ ልብ፡ ዘቦ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">አይቴ፡ ሀሎ፡ ንጉሠ፡ እስራኤል፡ ዘተወልደ፨</l>
+                  <l n="2">ከመ፡ ነሀብ፡ ሎቱ፡ አምኃ፡ ወሰጊደ፨</l>
+                  <l n="3">እንዘ፡ ይብሉ፡ ሰብአ፡ ሰገል፡ ሰሚዖ፡ ገሃደ፨</l>
+                  <l n="4">ሄሮድስ፡ አሜሃ፡ በእሳተ፡ ቅንአት፡ ነደ፨</l>
+                  <l n="5">ከመ፡ ይቅትሉ፡ ሕፃናተ፡ ወኢያትርፉ፡ አሐደ፨</l>
+                  <l n="6">እስከ፡ ቤተ፡ ልሔም፡ ወገሊላ፡ ሐራሁ፡ አዖደ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ጐየ፡ ዮሴፍ፡ ብሔረ፡ ግብጽ፡ ተንሢኦ፡ እምንዋሙ፨</l>
+                  <l n="2">መልአከ፡ እግዚአብሔር፡ ሌሊተ፡ በከመ፡ ነገሮ፡ በሕልሙ፨</l>
+                  <l n="3">ነሢኦ፡ ሕፃነ፡ ዘምስለ፡ ማርያም፡ እሙ፨</l>
+                  <l n="4">ይእቲ፡ ትበኪ፡ ወትቤ፡ ቀቲሎትየ፡ ይቅድሙ፨</l>
+                  <l n="5">እምእርአይ፡ ለወልድየ፡ ዘይትከዐው፡ ደሙ፨</l>
+               </lg>
+               <lg type="stanza" n="13">
+                  <l n="1">እፎ፡ ጐየይኪ፡ እምፍርሃተ፡ ቀትል፨</l>
+                  <l n="2">እምገጸ፡ ሄሮድስ፡ ቍንጽል፨</l>
+                  <l n="3">ወለተ፡ አናብስት፡ ግሩማን፡ እለ፡ ይጥሕሩ፡ በኀይል፨</l>
+                  <l n="4">ኢፈቀድኪዮ፡ በምድር፡ ለመንግሥተ፡ ዓለም፡ ወብዕል፨</l>
+                  <l n="5">እስመ፡ ልማዱ፡ ትሕትና፡ ለፍሬ፡ ከርሥኪ፡ ልዑል፨</l>
+                  <l n="6">ከማሁ፡ ግዕዝኪ፡ በምግባር፡ ወቃል፨</l>
+               </lg>
+               <lg type="stanza" n="14">
+                  <l n="1">ኢየሱስ፡ ስዱድ፡ ተስፋሆሙ፡ ለስዱዳን፨</l>
+                  <l n="2">ኢየሱስ፡ ግፉዕ፡ ምስካየ፡ ግፉዓን፨</l>
+                  <l n="3">እግዚአብሔር፡ ማኅደረ፡ ዘአልቦ፡ ከመ፡ ነዳያን፨</l>
+                  <l n="4">ኢየሱስ፡ ነግድ፡ ወፈላሲ፡ እንዘ፡ ውእቱ፡ ሕፃን፨</l>
+                  <l n="5">ወልደ፡ አብ፡ ፍቁር፡ በኀበ፡ ሰብእ፡ ምኑን፨</l>
+                  <l n="6">ማኃልየ፡ ብካይ፡ ኮነኒ፡ ዘእሙ፡ ሐዘን፨</l>
+               </lg>
+               <lg type="stanza" n="16">
+                  <l n="1">አይቴ፡ ይእቲ፡ ሐና፡ እምየ፨</l>
+                  <l n="2">ወኤልሳቤጥኒ፡ እንተ፡ እምአዝማድየ፨</l>
+                  <l n="3">ከመ፡ ይብክያኒ፡ ናሁ፡ በእንተ፡ ንግድትየ፨</l>
+                  <l n="4">ላሐወት፡ ማርያም፡ እንዘ፡ ትብል፡ ወይልየ፨</l>
+                  <l n="5">ዘያአምረኒ፡ ሊተ፡ ኀጣእኩ፡ በዝየ፨</l>
+               </lg>
+               <lg type="stanza" n="17">
+                  <l n="1">ተንሥኢ፡ ወንዒ፡ ሌዋዊት፡ ሐና፨</l>
+                  <l n="2">ትጼውዐኪ፡ ወለትኪ፡ ከመ፡ ትርአዪ፡ ሐዘና፨</l>
+                  <l n="3">እምርስትኪ፡ ወፅአት፡ ወተሰደት፡ በድክትምና፨</l>
+                  <l n="4">ትበኪ፡ እምዋዕየ፡ ሐጋይ፡ ኀጢአ፡ በፍና፨</l>
+                  <l n="5">ሕፍነ፡ ማይ፡ ዘታስትዮ፡ ለጽሙእ፡ ሕፃና፨</l>
+               </lg>
+               <lg type="stanza" n="18">
+                  <l n="1">መኑ፡ ይሁበኒ፡ ዘኤርምያስ፡ ቃለ፨</l>
+                  <l n="2">በእንተ፡ ማርያም፡ ኣስቆቁ፡ ወእንግር፡ አምሳለ፨</l>
+                  <l n="3">ልሳነ፡ ሕፃኒት፡ የብሰ፡ በከመ፡ ተብህለ፨</l>
+                  <l n="4">ወጕርዔሃኒ፡ በጽምእ፡ በሰለ፨</l>
+                  <l n="5">ሶበ፡ ርኅቡ፡ እጐሊሃ፡ ሰአልዋ፡ ስኢለ፨</l>
+                  <l n="6">ወኀጥአት፡ ሎሙ፡ ዘትሁቦሙ፡ እክለ፨</l>
+               </lg>
+               <lg type="stanza" n="19">
+                  <l n="1">መለኮታዊ፡ እጓላ፡ ሶበ፡ ጸምአ፡ ከመ፡ ደቂቅ፨</l>
+                  <l n="2">ዘይሰፍሮ፡ በሕፍኑ፡ ለማየ፡ ባሕር፡ ዕሙቅ፨</l>
+                  <l n="3">በከየት፡ ወትቤ፡ ማርያም፡ ማዕንቅ፨</l>
+                  <l n="4">እምሰብአ፡ ሀገር፡ አልቦ፡ ዘይገብራ፡ ለጽድቅ፨</l>
+                  <l n="5">ሰአልክዎሙ፡ ማየ፡ ኢወሀቡኒ፡ በሕቀ፨</l>
+                  <l n="6">ወሐጐልኩ፡ ለወልድየ፡ አሣዕኖ፡ ዘወርቅ፨</l>
+               </lg>
+               <lg type="stanza" n="20">
+                  <l n="1">ሰሚዖ፡ ሕፃን፡ ለእሙ፡ ገዓራ፨</l>
+                  <l n="2">ባረከ፡ ኰኵሐ፡ ወአንቅዐ፡ ማይ፡ እምታሕተ፡ እግራ፨</l>
+                  <l n="3">ወእምኔሃ፡ ለጽምአ፡ ትስተይ፡ አመራ፨</l>
+                  <l n="4">ከመ፡ ኢይስተይዋ፡ ሰብአ፡ ሀገር፡ ለይእቲ፡ ማይ፡ አምረራ፨</l>
+                  <l n="5">ወለርሑቃን፡ ፈውሰ፡ ወጥዕምተ፡ ገብራ፨</l>
+               </lg>
+               <lg type="stanza" n="24">
+                  <l n="1">አይቴኑ፡ መልአክ፡ ዘአብሰረኒ፨</l>
+                  <l n="2">ብካይየ፡ ይርአይ፡ ወይርድአኒ፨</l>
+                  <l n="3">አልብየ፡ ሰብአ፡ ዘያአምረኒ፨</l>
+                  <l n="4">እንዘ፡ ትብሊ፡ ድንግል፡ አራኅራኅክኒ፨</l>
+                  <l n="5">በገዳም፡ አመ፡ ነሥኡኪ፡ ልብሰ፡ ወልድኪ፡ ረቡኒ፨</l>
+                  <l n="6">ጸላኢ፡ ወተቃራኒ፡ ፈያታይ፡ ማሕዘኒ፨</l>
+               </lg>
+               <lg type="stanza" n="32">
+                  <l n="1">ኢደከምኩኒ፡ በስራሕ፡ ወበገዓር፨</l>
+                  <l n="2">እንዘ፡ አጐይየከ፡ ወትረ፡ እምሀገር፡ ለሀገር፨</l>
+                  <l n="3">ባሕታዊት፡ እምከ፡ ይእዜ፡ አይቴኑ፡ አሐውር፨</l>
+                  <l n="4">በጣዕመ፡ ቃላ፡ መዐርዒር፡ ወበአስቆቅዎ፡ መሪር፨</l>
+                  <l n="5">ማርያም፡ ትቤሎ፡ ለወልዳ፡ ፍቁር፨</l>
+               </lg>
+               <lg type="stanza" n="38">
+                  <l n="1">ታቦተ፡ አምላከ፡ እስራኤል፡ ጽዮን፡ ማርያም፡ ዘነገደት፡ ምድረ፡ ኢሎፍሊ፨</l>
+                  <l n="2">ወቀጥቀጠቶ፡ ለዳጎን፡ ነፍሳተ፡ ብዙኃን፡ ማህጐሊ፨</l>
+                  <l n="3">አመ፡ ነገደት፡ ቍስቋመ፡ በኀይለ፡ ወልዳ፡ ከሃሊ፨</l>
+                  <l n="4">ወድቁ፡ አማልክተ፡ ግብጽ፡ መናብርተ፡ ሰይጣን፡ ሐባሊ፨</l>
+                  <l n="5">ወተኀፍሩ፡ ኵሎሙ፡ ዘቦሙ፡ አስጋሊ፨</l>
+               </lg>
+               <lg type="stanza" n="43">
+                  <l n="1">ለምንት፡ በከይኪ፡ እግዝእትየ፡ እምጻማ፡ ፍኖት፡ ወስራሕ፨</l>
+                  <l n="2">አመ፡ ወረድኪ፡ ውስተ፡ ምድረ፡ ግብጽ፡ ምስለ፡ ወልድኪ፡ ፍሡሕ፨</l>
+                  <l n="3">እንዘ፡ አንቲ፡ ስርጉት፡ በቅድስና፡ ወንጽሕ፨</l>
+                  <l n="4">ሊተሰ፡ ለርሱሕ፡ ይደልወኒ፡ በፍትሕ፨</l>
+                  <l n="5">ይርከበኒ፡ እምኔኪ፡ ዘየዐቢ፡ ላሕ፨</l>
+               </lg>
+               <lg type="stanza" n="53">
+                  <l n="1">ወለተ፡ ዳዊት፡ በሊ፡ እንዘ፡ ትነግሪ፡ ዘእግዚአብሔር፡ አድኅኖ፨</l>
+                  <l n="2">ወታየድዒ፡ ሥልጣኖ፨</l>
+                  <l n="3">ርኢክዎ፡ ለኃጥእ፡ ዐብየ፡ ወተለዐለ፡ ከመ፡ አርዘ፡ ሊባኖስ፡ ከዊኖ፨</l>
+                  <l n="4">ኀጣእክዎ፡ በግብአትየ፡ ወኢረከብኩ፡ መካኖ፨</l>
+                  <l n="5">እስመ፡ ሰበረ፡ ወልድየ፡ ለሄሮድስ፡ ቀርኖ፨</l>
+               </lg>
+               <lg type="stanza" n="54">
+                  <l n="1">ሶበ፡ ኀለይኩ፡ ፍልሰትየ፡ ርሑቀ፡ ብሔረ፨</l>
+                  <l n="2">ወሑረትየ፡ እምዝ፡ ኀበ፡ ኢይገብእ፡ ድኅረ፨</l>
+                  <l n="3">ብካየ፡ ንግደትኪ፡ ድንግል፡ ኮነኒ፡ መዝሙረ፨</l>
+                  <l n="4">ረስይኒ፡ ወትረ፡ ማርያም፡ ውስተ፡ አፉኪ፡ ዝኩረ፨</l>
+                  <l n="5">በሕሊናኪ፡ ህልወ፡ ወበልብኪ፡ ኅዱረ፨</l>
+                  <l n="6">እስመ፡ ዘእንበሌኪ፡ ባዕደ፡ አልብየ፡ ማእምረ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke">
+               <note>cp.  also <ref type="work" corresp="LIT1869Malkea#explicit"></ref></note>
+               <lg type="stanza" n="1">
+                  <l n="1">ስብሐት፡ ለኪ፡ ማርያም፡ በስብሐተ፡ አብ፡ ፈናዊ፨</l>
+                  <l n="2">ስብሐት፡ ለኪ፡ ማርያም፡ በስብሐተ፡ ወልድ፡ ተፈናዊ፨</l>
+                  <l n="3">ስብሐት፡ ለኪ፡ ማርያም፡ በስብሐተ፡ መንፈስ፡ ቅዱስ፡ ማሕየዊ፨</l>
+                  <l n="4">ቃለ፡ ስእለትየ፡ በአእዛነ፡ መንፈስ፡ ጽልዊ፨</l>
+                  <l n="5">ወበዲበ፡ ዛቲ፡ ማሕሌት፡ ሰላመኪ፡ ከዐዊ፨</l>
+               </lg>
+            </div>
+         </div>         
+         <div type="edition" xml:lang="gez">
+            <note>incipit taken from <ref type="mss"
+               corresp="DSEthiop11#ms_i7"/>.</note>
+            <lg type="stanza" n="1">
+               <l>በስመ፡ አብ፡ እግዚኣብሔር፡ ሥሉስ፡ ኅጸተ፡ ግጻዌ፡ ዘአልቦ፡</l>
+                  <l>ሰቆቃወ፡ ድንግል፡ እጽሕፍ፡ በቀለመ፡ አንብዕ፡ ወአንጠብጥቦ።</l>
+               <l>ወይሌ፡ ወላህ፡ ለይበል፡ ለዘአንብቦ። </l>
+               <l>ከማሁ፡ ኀዘን፡ ወተሰዶ፡ ሶበ፡ በኵለሄ፡ ረከቦ። </l>
+               <l>ርእዮ፡ ለይብኪ፡ ዐይነ፡ ልብ፡ ዘቦ። </l>
+            </lg>
+            <lg type="stanza" n="2">
+               <l>አይቴ፡ ሀሎ፡ ንጉሠ፡ እስራኤል፡ ዘተወልደ። </l>
+               <l>ከመ፡ ነሀብ፡ ሎቱ፡ እምኃ፡ ወሰጊደ። </l>
+               <l>እንዘ፡ ይብሉ፡ እምሰብአ፡ ሰገል፡ ሰሚዖ፡ ገሀደ። ......</l>
+            </lg>            
+         </div>
+      </body>  
    </text>
 </TEI>
