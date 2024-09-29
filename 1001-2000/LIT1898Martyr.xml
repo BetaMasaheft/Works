@@ -57,7 +57,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en"/></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
+         
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -76,8 +80,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-03-17">Added keywords</change>
-         <change when="2021-12-14" who="DE">Added keywords, witnesses and bibliography according
-         to the information collected by Alessandro Bausi</change>
+         <change when="2021-12-14" who="DE">Added keywords, witnesses and bibliography according to the information collected by Alessandro Bausi</change>
+         <change when="2024-09-24" who="MKr">Added editions bibliography and a relation</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -93,6 +97,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Graf1947GCALI"/>
                   <citedRange unit="page">520</citedRange>
                </bibl>
+               
+               <listBibl type="editions">
+                  <bibl><ptr target="bm:Witakowski2024Mamas"/></bibl>                  
+               </listBibl>
+               
+               
             </listBibl>
             <!--from Zotenberg  196, not translation from Ethiopic-->
          </div>
@@ -100,6 +110,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <div type="bibliography">
             <listRelation>
                <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1898Martyr" passive="LIT1493Gadlas"/>
+               <relation name="ecrm:P129_is_about" active="LIT1898Martyr" passive="PRS6620Mamas"/>
             </listRelation>
 
 
