@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">እፎ፡ አይሁድ፡ አዝማደ፡ እምከ፡ ተደብተራ፡ መስቀል፡ ተከሉ፡ በአውደ፡ መትከፍትከ፡ ሴሎ።</title>
+                <title xml:lang="gez" xml:id="t1">እፎ፡ አይሁድ፡ አዝማደ፡ እምከ፡ <surplus resp="JK">ተ</surplus>ደብተራ፡ መስቀል፡ ተከሉ፡ በአውደ፡ መትከፍትከ፡ ሴሎ።</title>
                 <title xml:lang="gez" corresp="#t1" type="normalized">ʾƎffo ʾayhud ʾazmāda ʾəmməka dabtarā masqal takalu ba-ʾawda matkaftəka selo (Qǝne of the mawaddəs-type)</title>
                 <title xml:lang="en" corresp="#t1">How (could) the Jews, the relatives of your mother, the Tabernacle, plant the Cross in the courtyard of your shoulders, Selo…</title>
                 <editor role="generalEditor" key="AB"/>
@@ -23,7 +23,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="UppQ1524o"/>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -32,7 +34,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p><foreign xml:lang="gez">Mawaddəs</foreign>-type <foreign xml:lang="gez">qǝne</foreign> 
+                    attributed to <persName ref="PRS14574GabraLeul" cert="high" corresp="SD">Gabra Ləʿul</persName> 
+                    in the manuscript.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -54,10 +58,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="lawd:hasAttestation" active="LIT7078QeneEffo" passive=""/>
-                    <relation name="saws:isAttributedToAuthor" active="LIT7078QeneEffo" passive=""/>
+                    <relation name="lawd:hasAttestation" active="LIT7078QeneEffo" passive="UppQ1524o"/>
+                    <relation name="saws:isAttributedToAuthor" active="LIT7078QeneEffo" passive="PRS14574GabraLeul"/>
                 </listRelation>
-            </div><!---->
+            </div>
+            <div type="edition" xml:lang="gez">
+                <note>This edition is based on <ref type="mss" corresp="UppQ1524o"/> on fol. 43r
+                    (note that the same <foreign xml:lang="gez">qǝne</foreign> is also attested on fols 30r, 31r. 
+                    Division into verses is indicated with ። .
+                    The end of the poem is indicated with ።። .</note>
+                <ab>
+                    <l n="1">እፎ፡ አይሁድ፡ አዝማደ፡ እምከ፡ <surplus resp="JK">ተ</surplus>ደብተራ፡ መስቀል፡ ተከሉ፡ 
+                        በአውደ፡ መትከፍትከ፡ ሴሎ።</l>
+                    <l n="2">እመቦ፡ <add place="above">በ</add>ርባን፡ ዘይደልዎ፡ ተሰቅሎ።</l>
+                    <l n="3">ወአመተ፡ ጽዮን፡ በጽዮን፡ ነዊሃ፡ ተሰምዮ፡ በኵረ፡ ጽዮን፡ ሐሎ።</l>
+                    <l n="4">ኦዘታሌእሎ፡ ለማይ፡ በክንፈ፡ ደመና፡ ወለደመና፡ በክንፈ፡ አውሎ።</l>
+                    <l n="5">ባሕቱ፡ እመርኢነ፡ ወእመሰማእነ፡ ኵሎ።</l>
+                    <l n="6">ለዘመድ፡ እንበለ፡ ዘመደ፡ አልቦ፡ ዘይቀትሎ።</l>
+                    <l n="7">አቤልሂ፡ ለቃየል፡ እንዘ፡ ወልደ፡ እምየ፡ ይብሎ።</l>
+                    <l n="8">ቃየል፡ ወልደ፡ እሙ፡ ለአቤል፡ ተቀበሎ።።</l>
+                </ab>
+            </div>
         </body>
     </text>
 </TEI>
