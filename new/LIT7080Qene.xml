@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Wa-mot manfaqa sǝgāna la-raḫāb wa-manfaqa śǝgāna la-maret (Qəne of tha śəllāse-type)</title>
+                <title xml:lang="gez" xml:id="t1">ወሞት፡ መንፈቀ፡ ስጋነ፡ ለረኃብ፡ ወመንፈቀ፡ ሥጋነ፡ ለመሬት፤</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Wa-mot manfaqa sǝgāna la-raḫāb wa-manfaqa śǝgāna la-maret (Qǝne of the śəllāse-type)</title>
+                <title xml:lang="en" corresp="#t1">And death, half of our flesh for hunger and half of our flesh for the soil…</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -21,7 +23,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="UppQ1524o"/>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -30,13 +34,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p><foreign xml:lang="gez">Śəllāse</foreign>-type <foreign xml:lang="gez">qǝne</foreign> attributed to 
+                    <persName ref="PRS14574GabraLeul" cert="high" corresp="SD">Gabra Ləʿul</persName> 
+                    in the manuscript. In the manuscript, it appears that the first word of the first line was originally (in the Vorlage?)
+                    intended as a <foreign xml:lang="gez">qǝne</foreign>-type indication.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Poetry"/>
                     <term key="Qene"/>
+                    <term key="Sellase"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -52,10 +60,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="lawd:hasAttestation" active="LIT7080Qene" passive=""/>
-                    <relation name="saws:isAttributedToAuthor" active="LIT7080Qene" passive=""/>
+                    <relation name="lawd:hasAttestation" active="LIT7080Qene" passive="UppQ1524o"/>
+                    <relation name="saws:isAttributedToAuthor" active="LIT7080Qene" passive="PRS14574GabraLeul"/>
                 </listRelation>
-            </div><!---->
+            </div>
+            <div type="edition" xml:lang="gez">
+                <note>This edition is based on <ref type="mss" corresp="UppQ1524o"/> on fol. 28r. Division into verses is indicated with ፤ .
+                    The end of the poem is indicated with ። .</note>
+                <ab>
+                    <l n="1"><sic resp="JK">ሰ</sic>ላሤ፡ ወሞት፡ መንፈቀ፡ ስጋነ፡ ለረኃብ፡ ወመንፈቀ፡ ሥጋነ፡ 
+                        ለመ<choice resp="JK"><sic>ሩ</sic><corr>ሬ</corr></choice>ት፤</l>
+                    <l n="2">ወለግብረ፡ ኃዘን፡ ንትጋህ፡ ሕጹጻነ፡ ምግባር፡ ወሀብት፤</l>
+                    <l n="3">አምጣነ፡ ረኃብ፡ ድምጸ፡ <sic resp="JK">ደ</sic>ርሆ፡ ያነቅሀነ፡ በሌሊት።</l>
+                </ab>
+            </div>
         </body>
     </text>
 </TEI>
