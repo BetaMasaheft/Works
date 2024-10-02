@@ -5,7 +5,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Malkǝʾ-hymn to St Cosmas and Damian</title>
+            <title xml:id="t2" xml:lang="gez">መልክአ፡ ደቂቀ፡ ቴውዳዳ፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Malkəʾa daqiqa Tewdādā</title>
+            <title corresp="#t2" xml:lang="en">Image of the Children of Theodota</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="AD"></editor>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -14,9 +18,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                 
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -45,25 +49,70 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-02">Added keywords and incipit</change>
+         <change who="ES" when="2024-10-02">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT2746RepCh30" passive="PRS3202Cosmas"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT2746RepCh30" passive="PRS3315Damian"></relation>
+               <relation name="skos:exactMatch" active="LIT2746RepCh30" passive="https://w3id.org/malke/2746/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">30</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለስምክሙ፡ ዘይደልዎ፡ ሰላም።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <note>The following text reproduced after <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለስምክሙ፡ ዘይደልዎ፡ ሰላም፨</l>
+                  <l n="2">ወለሥዕርትክሙ፡ ድሉል፡ ከመ፡ ቃለ፡ ጠቢብ፡ ፍጹም፨</l>
+                  <l n="3">ደቂቀ፡ ቴውዳዳ፡ ሥርግዎን፡ በቀጠንተ፡ ቀይሕ፡ ደም፨</l>
+                  <l n="4">ኵሉ፡ ይዜምር፡ በፍሥሐ፡ ለዘዚአክሙ፡ ስም፨</l>
+                  <l n="5">ወለስምክሙ፡ ይገኒ፡ ዓለም፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለርእስክሙ፡ ዘልዑል፡ መካኑ፨</l>
+                  <l n="2">ወለገጽክሙ፡ መሬት፡ ዘ[56vb]ኢወለጦ፡ እምስኑ፨</l>
+                  <l n="3">ደቂቀ፡ ቴዎዳዳ፡ ዓለም፡ ኢያከብረክሙ፡ ቦኑ፨</l>
+                  <l n="4">ጋላተ፡ እምትሠየሙ፡ ወመኳንንተ፡ ትኩኑ፨</l>
+                  <l n="5">በእንተ፡ ክርስቶስ፡ ሕይወት፡ ሞትክሙ፡ አኮኑ፨</l>
+               </lg>
+               <lg type="stanza" n="25">
+                  <l n="1">ሰላም፡ ለግንዘትክሙ፡ በልብሰ፡ ዕፍረት፡ ምዑዝ፨</l>
+                  <l n="2">ለመቃብሪክሙሂ፡ ውስተ፡ መካን፡ ሐዋዝ፨</l>
+                  <l n="3">ደቂቀ፡ ቴውዳዳ፡ ኅሩያን፡ ወሠናያን፡ በግዕዝ፨</l>
+                  <l n="4">ማሕፀንተክሙ፡ በሰዓተ፡ ዐቢይ፡ ትካዝ፨</l>
+                  <l n="5">ምጽላላተ፡ ሐሤት፡ ኩኑኒ፡ ከመ፡ ዖፍ፡ በአርዝ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለክሙ፡ እምእደ፡ ፈላሒኖስ፡ አብ፡ ሀብተ፡ እስጢፋኖስ፡ ቀዲሙ፡</l>
+                  <l n="2">ደቂቀ፡ ቴውዳዳ፡ በሀብት፡ ድኅረ፡ ነሣእክሙ፨</l>
+                  <l n="3">በአሚን፡ ተጋደልክሙ፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለክሙ፡ መንገሌክሙ፡ ተስሕቡ፡ ክብረ፡ ማሕየዊ፡ ክርስቶስ፨</l>
+                  <l n="2">ሶበ፡ ላዕሌክሙ፡ ርእዩ፡ እለ፡ ቆዝሞስ፨</l>
+                  <l n="3">ብላዎስ፡ ወብልሳዎስ፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለክሙ፡ እለ፡ ቆዝሞስ፡ በሉኒ፡ በእንተ፡ ዝንቱ፡ ፃማከ፨</l>
+                  <l n="2">ወማሕሌት፡ ለነ፡ ዘኃለይከ፨</l>
+                  <l n="3">አይቴኒ፡ መካነ፡ አመ፡ ንግደትከ፨</l>
+                  <l n="4">ሰላምነ፡ የሀሎ፡ ምስሌከ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>
