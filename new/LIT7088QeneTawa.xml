@@ -5,9 +5,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1"></title>
+                <title xml:lang="gez" xml:id="t1">ጣዕዋ፡ ንኡስ፡ መድኀ<choice resp="JK"><sic>ኒ</sic><corr>ኔ</corr></choice><supplied reason="omitted">፡</supplied>
+                    አለም፡ ዘአሰረከ፡ እግረከ፡ ኖላዌ፡ እንስሳ፡ ቀኖት፤</title>
                 <title xml:lang="gez" corresp="#t1" type="normalized">Ṭāʿwā nǝʾus madḫane ʾalam za-ʾasarakka ʾǝgraka nolāwe ʾǝnsǝsā qannot (Qǝne possibly of the mawaddǝs-type)</title>
-                <title xml:lang="en" corresp="#t1">Little calf, Saviour of the World, whose foot the Shepherd of Beasts, the nails, bound…</title>
+                <title xml:lang="en" corresp="#t1">Little calf, Saviour of the World, whose foot the Shepherd of Beasts, the nail(s), bound…</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -35,9 +36,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <creation/>
             <abstract>
                 <p><foreign xml:lang="gez">Qǝne</foreign> without type indication in the manuscript. It has nine lines, meaning
-                    that it can be classified as a <foreign xml:lang="gez">mawaddəs qəne</foreign> according to
+                    that it can be classified as a <foreign xml:lang="gez">mawaddəs qəne</foreign> 
+                    (possibly of the subtype <foreign xml:lang="gez">kʷəlləkəmu</foreign>) according to
                     <bibl><ptr target="bm:Guidi1900Qene"/></bibl>. 
-                    In the first line, it refers to <persName ref="PRS3934Ewostate"/>.
                     It is attributed to <persName ref="PRS14574GabraLeul" cert="high" corresp="SD">Gabra Ləʿul</persName> 
                     in the manuscript.</p>
             </abstract>
@@ -46,6 +47,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="ChristianLiterature"/>
                     <term key="Poetry"/>
                     <term key="Qene"/>
+                    <term key="Mawaddes" cert="medium"/>
+                    <term key="Kwellekomu" cert="medium"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -61,10 +64,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="lawd:hasAttestation" active="LIT7088QeneTawa" passive=""/>
-                    <relation name="saws:isAttributedToAuthor" active="LIT7088QeneTawa" passive=""/>
+                    <relation name="lawd:hasAttestation" active="LIT7088QeneTawa" passive="UppQ1524o"/>
+                    <relation name="saws:isAttributedToAuthor" active="LIT7088QeneTawa" passive="PRS14574GabraLeul"/>
                 </listRelation>
-            </div><!---->
+            </div>
+            <div type="edition" xml:lang="gez">
+                <note>This edition is based on <ref type="mss" corresp="UppQ1524o"/> on fols 14r, 15r. Division into verses is indicated with ፤ .
+                    The end of the poem is indicated with ። .</note>
+                <ab>
+                    <l n="1">ጣዕዋ፡ ንኡስ፡ መድኀ<choice resp="JK"><sic>ኒ</sic><corr>ኔ</corr></choice><supplied reason="omitted">፡</supplied>
+                        አለም፡ ዘአሰረከ፡ እግረከ፡ ኖላዌ፡ እንስሳ፡ ቀኖት፤</l>
+                    <l n="2">አድያሜ፡ ዮርዳኖስ፡ አፉከ፡ እንተ፡ አልቦቱ፡ ሐሰት፤</l>
+                    <l n="3">አደ፡ ንዋ፡ ዮሐንስ፡ ሐሞት፤</l>
+                    <l n="4">ወአፃ<choice resp="JK"><sic>ቢ</sic><corr>ብ</corr></choice><choice resp="JK"><sic>እ</sic><corr>ኢ</corr></choice>ቢእከ፡ 
+                        ነቢያት፤</l>
+                    <l n="5">ቀዳሚ፡ ጸሐፉ፡ ቃላት፡ ብሉይ፡ ኦሪት፤</l><pb n="15r"/>
+                    <l n="6">ህዳጠሂ፡ ትፈርሆ፡ ለብዕ<choice resp="JK"><sic>ሴ</sic><corr>ሲ</corr></choice>ሐ፡ ኲናት፤</l>
+                    <l n="7">ርብቃ፡ ገቦ፡ ዚአከ፡ መንታ፡ <choice><sic>ዝ</sic><corr>ዘ</corr></choice>ወለደት፤</l>
+                    <l n="8">ወመተረት፡ <sic>መተ፡</sic> በለሰ፡ አሐቲ፡ ገነት፤</l>
+                    <l n="8">ሔዋን፡ ስቅለትከ፡ በዕለተ፡ አርብ፡ ተፈጥረት።</l>
+                </ab>
+            </div>
         </body>
     </text>
 </TEI>
