@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2384Taamme">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2384Taamme">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -31,29 +32,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+            href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Hagiography"/>
                <term key="Apocrypha"/>
                <term key="Miracle"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
 
          <abstract>
-            <p>A collection of miracles: general record. In the unpublished list compiled by William
-               Macomber, the T.M. in Ethiopian tradition contains up to 640 narratives. The
-               “standard” collection, according to the tradition of the Ethiopian Orthodox Church,
-               should contain 365 miracles, i.e. one for each day of the year. The canonical set
-               includes 33 miracles.</p>
+            <p>The collection of the Miracles of Mary is one of the most popular works of Gǝʿǝz literature.
+               It circulates as collections of varying constitution, of which the <ref type="work" corresp="LIT5673AkkonuColl"/> is the most standardised one.
+                In the unpublished list compiled by William
+               Macomber, <bibl><ptr target="bm:MacomberMiracles"/></bibl>, 
+               642 individual miracles are listed.</p>
+            <p>This record refers to any collection of the Miracles of Mary declared as such and
+               containing in addition to the miracles also introductory texts such as the <ref
+                  type="work" corresp="LIT1968Mashaf"/>. For groups of miracles of Mary without introductory texts,
+               see <ref type="work" corresp="LIT3585Taamme"/>, for the so-called <foreign xml:lang="gez">ʾAkko-nu bǝʾsi</foreign> collection of 33 miracles, see
+               <ref type="work" corresp="LIT5673AkkonuColl"/>.</p>
          </abstract>
       </profileDesc>
       <revisionDesc>
@@ -65,41 +76,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-      
+
          <div type="bibliography">
-            <!--<listRelation>
+            
+            <listRelation>
                <relation name="ecrm:P129_is_about" active="LIT2384Taamme" passive="PRS6819Mary"/>
-               <relation name="saws:contains" active="LIT2384Taamme" passive="LIT3993Miracle"/>
-               <relation name="saws:contains" active="LIT2384Taamme"
-                  passive="LIT3584Intro LIT3585Taamme LIT1968Mashaf LIT3586Miracle LIT3587Miracle          
-                  LIT3588Miracle LIT3589Miracle LIT3590Miracle LIT3591Miracle LIT3592Miracle LIT3593Miracle 
-                  LIT3594Miracle LIT3595Miracle LIT3596Miracle LIT3597Miracle                
-                  LIT3598Miracle LIT3599Miracle LIT3600Miracle LIT3601Miracle LIT3602Miracle LIT3603Miracle LIT3604Miracle LIT3605Miracle LIT3606Miracle LIT3607Miracle           
-                  LIT3608Miracle LIT3609Miracle LIT3610Miracle LIT3611Miracle LIT3612Miracle LIT3613Miracle LIT3614Miracle LIT3615Miracle LIT3616Miracle LIT3617Miracle 
-                  LIT3618Miracle LIT3619Miracle LIT3620Miracle LIT3621Miracle LIT3622Miracle LIT3623Miracle LIT3624Miracle LIT3625Miracle LIT3626Miracle LIT3627Miracle      
-                  LIT3628Miracle LIT3629Miracle LIT3630Miracle LIT3631Miracle LIT3632Miracle LIT3633Miracle LIT3634Miracle LIT3635Miracle LIT3636Miracle LIT3637Miracle              
-                  LIT3638Miracle LIT3639Miracle LIT3640Miracle LIT3641Miracle LIT3642Miracle LIT3643Miracle LIT3644Miracle LIT3645Miracle LIT3646Miracle LIT3647Miracle        
-                  LIT3648Miracle LIT3649Miracle LIT3650Miracle LIT3651Miracle LIT3652Miracle LIT3653Miracle LIT3654Miracle LIT3655Miracle LIT3656Miracle LIT3657Miracle         
-                  LIT3658Miracle LIT3659Miracle LIT3660Miracle LIT3661Miracle LIT3662Miracle LIT3663Miracle LIT3664Miracle LIT3665Miracle LIT3666Miracle LIT3667Miracle          
-                  LIT3668Miracle LIT3669Miracle LIT3670Miracle LIT3671Miracle LIT3672Miracle LIT3673Miracle LIT3674Miracle LIT3675Miracle LIT3676Miracle LIT3677Miracle         
-                  LIT3678Miracle LIT3679Miracle LIT3680Miracle LIT3681Miracle LIT3682Miracle LIT3683Miracle LIT3684Miracle LIT3685Miracle LIT3686Miracle LIT3687Miracle         
-                  LIT3688Miracle LIT3689Miracle LIT3690Miracle LIT3691Office LIT3692Miracle LIT3693Miracle LIT3694Miracle LIT3695Miracle LIT3696Miracle LIT3697Miracle           
-                  LIT3698Miracle LIT3699Miracle LIT3700Miracle LIT3701Miracle LIT3702Miracle LIT3703Miracle LIT3704Miracle LIT3705Miracle LIT3706Miracle LIT3707Miracle        
-                  LIT3708Miracle LIT3709Miracle LIT3710Miracle LIT3711Miracle LIT3712Miracle LIT3713Miracle LIT3714Miracle LIT3715Miracle LIT3716Miracle LIT3717Miracle       
-                  LIT3718Miracle LIT3719Miracle LIT3720Miracle LIT3721Miracle LIT3722Miracle LIT3723Miracle LIT3724Miracle LIT3725Miracle LIT3726Miracle LIT3727Miracle       
-                  LIT3728Miracle LIT3729Miracle LIT3730Miracle                 LIT3731Miracle LIT3732Miracle LIT3733Miracle LIT3734Miracle LIT3735Miracle LIT3736Miracle        
-                  LIT3863Miracle LIT3864Miracle LIT3865Miracle LIT3866Miracle LIT3867Miracle LIT3868Miracle             
-                  LIT3869Miracle LIT3870 Miracle LIT3871Miracle LIT3872Miracle LIT3873Miracle LIT3874Miracle           
-                  LIT3875Miracle LIT3876Miracle LIT3877Miracle LIT3878Miracle LIT3879Miracle LIT3880Miracle           
-                  LIT3881Miracle LIT3882Miracle LIT3883Miracle LIT3884Miracle LIT3885Miracle LIT3886Miracle LIT3887Miracle LIT3888Miracle  
-                  LIT3889Miracle LIT3890Miracle LIT3891Miracle LIT3892Miracle LIT3893Miracle LIT3894Miracle LIT3895Miracle LIT3896Miracle           
-                  LIT3897Miracle LIT3898Miracle LIT3899Miracle LIT3900Miracle LIT3901Miracle LIT3902Miracle LIT3903Miracle LIT3904Miracle         
-                  LIT3905Miracle LIT3906Miracle LIT3907Miracle LIT3908Miracle LIT3909Miracle LIT3910Miracle LIT3911Miracle LIT3912Miracle               
-                  LIT3913Miracle LIT3914Miracle LIT3915Miracle LIT3916Miracle LIT3917Miracle LIT3918Miracle LIT3919Miracle LIT3920Miracle              
-                  LIT3921Miracle LIT3922Miracle LIT3923Miracle LIT3924Miracle LIT3925Miracle LIT3926Miracle LIT3928Miracle                LIT4044Miracle                LIT4045Miracle        
-                  LIT4046Miracle                LIT4047Miracle                LIT4048Miracle"/>
-               
-            </listRelation>-->
+               <relation name="saws:contains" active="LIT2384Taamme" passive="LIT3584Intro">
+                  <desc><ref type="work" corresp="LIT3584Intro"/> is one of several introductory
+                     texts attested in varying sequence in manuscripts containing the <ref
+                        type="work" corresp="LIT2384Taamme"/>. </desc>
+               </relation>
+               <relation name="saws:contains" active="LIT2384Taamme" passive="LIT1968Mashaf">
+                  <desc><ref type="work" corresp="LIT1968Mashaf"/> is one of several introductory
+                     texts attested in varying sequence in manuscripts
+                     containing the <ref type="work" corresp="LIT2384Taamme"/>.</desc>
+               </relation>
+               <relation name="saws:contains" active="LIT2384Taamme" passive="LIT3585Taamme">
+                  <desc>Typically, the <ref type="work" corresp="LIT2384Taamme"/> contains a varying number of miracles.</desc>
+               </relation>
+            </listRelation>
+
             <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:BalickaBausi2010TM"/>
@@ -113,7 +109,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <bibl>
                   <ptr target="bm:Cerulli1943Maria"/>
                </bibl>
+               <bibl><ptr target="bm:Kropp2017Marienwunder"/></bibl>
+               <bibl><ptr target="bm:MacomberMiracles"/></bibl>
             </listBibl>
+
             <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Budge1923Miracles"/>

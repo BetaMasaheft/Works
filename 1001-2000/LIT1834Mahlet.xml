@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1834Mahlet">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1834Mahlet">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -16,9 +17,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                
                 This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
+                Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -39,8 +40,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
-               <term key="Chants"/>
-               <term key="Hagiography"/>
+               <term key="Poetry"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -50,6 +50,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-03-17">Added keywords</change>
          <change who="DR" when="2017-03-17">Added textparts</change>
+         <change when="2024-09-27" who="ES">added data from the database by Augustine Dickinson</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -57,8 +58,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <div type="bibliography">
             <listBibl type="editions">
                <bibl>
+                  <ptr target="bm:Chaine1913Rep"/>
+                  <citedRange unit="item">230</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Chaine1913Rep"/>
+                  <citedRange unit="item">397</citedRange>
+               </bibl>
+               <bibl>
                   <ptr target="bm:Grohmann1919Marien"/>
                   <citedRange unit="page">66-156</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:MgWebsite"></ptr>
                </bibl>
             </listBibl>
             <listBibl type="translation">
@@ -72,23 +84,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Grohmann1919Marien"/>
                   <citedRange unit="page">47-65, 158-321</citedRange>
                </bibl>
+               <bibl><ptr target="bm:Habtemichael2007EAEMahletaSege"/></bibl>
             </listBibl>
             <listRelation>
                <relation name="saws:isAttributedToAuthor" active="LIT1834Mahlet" passive="PRS8691segeDen"/>
+               <relation name="skos:exactMatch" active="LIT1834Mahlet" passive="https://w3id.org/malke/1834/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT1834Mahlet" passive="PRS6819Mary"></relation>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT1834Mahlet" passive="LIT3117RepCh397"></relation>
             </listRelation>
          </div>
-         <div type="edition">
+         <div type="edition" xml:lang="gez">
             <note>The following division into stanzas follows  <bibl>
                   <ptr target="bm:Grohmann1919Marien"/>
                   <citedRange unit="page">66-156</citedRange>
-               </bibl>.</note>
-            
-            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza1" n="1">
+            </bibl>.</note> <note>Text taken from <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+            <div type="textpart" xml:id="masgabiya">
+               <lg type="stanza" n="1">
+                  <l n="1">በስመ፡ እግዚአብሔር፡ ሕያው፡ በልሳነ፡ ኵሉ፡ ዘኢይትነገር፨</l>
+                  <l n="2">ወበስምኪ፡ ማርያም፡ ወላዲተ፡ ክርስቶስ፡ ክቡር፨</l>
+                  <l n="3">ማሕሌተ፡ ጽጌ፡ ወጠንኩ፡ ለተኣምርኪ፡ በመዝሙር፨</l>
+                  <l n="4">ድንግል፡ ማርያም፡ ንግሥተ፡ ሰማያት፡ ወምድር፨</l>
+                  <l n="5">አምጣነ፡ ይጥዕም፡ ውዳሴኪ፡ እመዓር፡ ወሦከር፨</l>
+               </lg>
+            </div>
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza1" n="1" corresp="LIT3117RepCh397">
                <label>Stanza 1</label>
+               <lg type="stanza" n="1">
+                  <l n="1">ጽጌ፡ አስተርአየ፡ ሠሪፆ፡ እምዐጽሙ፨</l>
+                  <l n="2">ለዘአምኃኪ፡ ጽጌ፡ ለገብርኤል፡ ምስለ፡ ሰላሙ፨</l>
+                  <l n="3">ወበእንተ፡ ዝ፡ ማርያም፡ ሶበ፡ ሐወዘኒ፡ መዐዛ፡ ጣዕሙ፨</l>
+                  <l n="4">ለተኣምርኪ፡ አሐሊ፡ እሙ፨</l>
+                  <l n="5">ማሕሌተ፡ ጽጌ፡ ዘይሰመይ፡ ስሙ፨</l>
+               </lg>
+               
             </div>
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza2" n="2">
                <label>Stanza 2</label>
+               <lg type="stanza" n="2">
+                  <l n="1">ተኣምርኪ፡ ማርያም፡ አብቈለት፡ ዕፀ፡ ትእምርት፨</l>
+                  <l n="2">ወአውፅአት፡ ጽጌ፡ በአፈ፡ ምዉት፨</l>
+                  <l n="3">መሐርኪያ፡ ፍቅረ፡ ዚአኪ፡ ለአሐቲ፡ ብእሲት፨</l>
+                  <l n="4">እንዘ፡ ትብሊ፡ ኢትጐጕዒ፡ አንብቦተ፡ ዛቲ፡ ጸሎት፨</l>
+                  <l n="5">እስመ፡ ትኤድመኒ፡ ሊተ፡ እምኵሉ፡ ስብሐት፨</l>
+               </lg>
+               
             </div>
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza3" n="3">
@@ -160,9 +200,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </div>
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza20" n="20">
+               <label>Stanza 23</label>
+               <lg type="stanza" n="23">
+                  <l n="1">ተኣምርኪ፡ ማርያም፡ ተሰብከ፡ በኦሪት፨</l>
+                  <l n="2">አመ፡ ተሰነአውኪ፡ ጳጦስ፡ ምስለ፡ መለኮት፨</l>
+                  <l n="3">ዘርእየኪ፡ ሙሴ፡ ሊቀ፡ ነቢያት፨</l>
+                  <l n="4">ጸልልኒ፡ በአዕፁቅኪ፡ ሐመልሚል፡ ዕፀት፨</l>
+                  <l n="5">ሦከ፡ ኃጢአትየ፡ ያውዒ፡ ጽጌኪ፡ እሳት፨</l>
+               </lg>
+               
+            </div>
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza23" n="23">
                <label>Stanza 20</label>
             </div>
-            
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza31" n="31">
                <label>Stanza 31</label>
             </div>
@@ -193,6 +243,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza38" n="38">
                <label>Stanza 38</label>
+               <lg type="stanza" n="38">
+                  <l n="1">ዘሰ፡ ይብል፡ ኣፈቅረኪ፡ ወኢያፈቅር፡ ተኣምረኪ፡ ክርስቲያናዊ፨</l>
+                  <l n="2">ኢክርስቱን፡ ውእቱ፡ ፀረ፡ ወልድኪ፡ ማሕየዊ፨</l>
+                  <l n="3">ወሠርፀ፡ እስጢፋ፡ ሐሳዊ፨</l>
+                  <l n="4">አንሰ፡ እቤ፡ በማኅሌተ፡ ሰሎሞን፡ ወልደ፡ ሰንቃዊ፨</l>
+                  <l n="5">አፈቅሮ፡ ለፍግዕኪ፡ ወለተ፡ ይሁዳ፡ ወሌዊ፨</l>
+                  <l n="6">ከመ፡ መርዓቶ፡ ያፈቅር፡ ጽጌኪ፡ መርዓዊ፨</l>
+               </lg>
+               
             </div>
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza39" n="39">
@@ -241,6 +300,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza50" n="50">
                <label>Stanza 50</label>
+               <lg type="stanza" n="50">
+                  <l n="1">አይኑ፡ ዘተገብረ፡ ፈውስ፨</l>
+                  <l n="2">እንበለ፡ ትትወለዲ፡ ድንግል፡ እምቤተ፡ ክህነት፡ ወንግሥ፨</l>
+                  <l n="3">መድኃኔ፡ ዓለም፡ ኮነ፡ ደመ፡ ጽጌኪ፡ ክርስቶስ፨</l>
+                  <l n="4">እሰግድ፡ ለተኣምርኪ፡ በአብራከ፡ ሥጋ፡ ወነፍስ፨</l>
+                  <l n="5">በከመ፡ ሰገደ፡ ለኪ፡ ዮሐንስ፡ በከርሥ፨</l>
+               </lg>
+               
             </div>
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza51" n="51">
@@ -261,6 +328,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza55" n="55">
                <label>Stanza 55</label>
+               <lg type="stanza" n="55">
+                  <l n="1">ያኀዝነኒ፡ ማርያም፡ ዘረከበኪ፡ ድክትምና፨</l>
+                  <l n="2">አመ፡ ቤተ፡ መቅደስ፡ ቦእኪ፡ እንዘ፡ ትጠብዊ፡ ሐሊበ፡ ሐና፨</l>
+                  <l n="3">ወያስተፌሥሐኒ፡ ካዕበ፡ ትእምርተ፡ ልህቅትኪ፡ በቅድስና፨</l>
+                  <l n="4">ምስለ፡ አብያጺሁ፡ ከመ፡ አብ፡ እንዘ፡ ይሴስየኪ፡ መና፨</l>
+                  <l n="5">ፋኑኤል፡ ጽጌ፡ ነድ፡ ዘይከይድ፡ ደመና፨</l>
+               </lg>
+               
             </div>
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza56" n="56">
@@ -281,6 +356,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza60" n="60">
                <label>Stanza 60</label>
+               <lg type="stanza" n="60">
+                  <l n="1">እግዚአብሔር፡ ነጸረ፡ ኵሎ፡ ዓለመ፨</l>
+                  <l n="2">ወኢረከበ፡ ማርያም፡ ዘከማኪ፡ እመ፨</l>
+                  <l n="3">ለሊሁሰ፡ ጽጌ፡ እማኅፀንኪ፡ ተቀስመ፨</l>
+                  <l n="4">ዳዊትኒ፡ አመረኪ፡ እንዘ፡ ይብል፡ ቅድመ፨</l>
+                  <l n="5">ስምዒ፡ ወለትየ፡ ወርእዪ፡ ዳግመ፨</l>
+                  <l n="6">እስመ፡ ፈተወ፡ ንጉሥ፡ ሥነኪ፡ አዳመ፨</l>
+               </lg>
+               
             </div>
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza61" n="61">
@@ -301,6 +385,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza65" n="65">
                <label>Stanza 65</label>
+               <lg type="stanza" n="65">
+                  <l n="1">እንዘ፡ ተሐቅፊዮ፡ ለሕፃንኪ፡ ጽጌ፡ ፀዓዳ፡ ወቀይሕ፨</l>
+                  <l n="2">ውስተ፡ ቤተ፡ መቅደስ፡ ጌስኪ፡ በዕለተ፡ ተኣምር፡ ዘንጽሕ፨</l>
+                  <l n="3">ንዒ፡ ርግብየ፡ ትናዝዝኒ፡ እምላሕ፨</l>
+                  <l n="4">ወንዒ፡ ሠናይትየ፡ ምስለ፡ ገብርኤል፡ ፍሡሕ፨</l>
+                  <l n="5">ወሚካኤል፡ ከማኪ፡ ርኅሩኅ፨</l>
+               </lg>
+               
             </div>
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza66" n="66">
@@ -381,6 +473,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza85" n="85" corresp="LIT2949RepCh230">
                <label>Stanza 85</label>
+               <l>   ሰዊተ፡ ስርናዩ፡ ለታዴዎስ፡ ወለበርተሎሜዎስ፡ ወይኑ።
+               </l>
             </div>
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza86" n="86">
@@ -621,6 +715,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza155" n="155">
                <label>Stanza 155</label>
+               <lg type="stanza" n="155">
+                  <l n="1">መኑ፡ ጠቢብ፡ እንበለ፡ ጽጌኪ፡ ዘየአምር፡ ጥዩቀ፨</l>
+                  <l n="2">ከዋክብተ፡ ሰማይ፡ ኈሊቆ፡ ወኆፃ፡ ባሕር፡ ድቁቀ፨</l>
+                  <l n="3">ለውዳሴኪ፡ ማርያም፡ ከመ፡ ለበሓዊ፡ ዘጽሕቀ፨</l>
+                  <l n="4">እስመ፡ ኢንክል፡ ፈጽሞ፡ ተኣምረኪ፡ ጥንቁቀ፨</l>
+                  <l n="5">ናርምም፡ ስብሐተኪ፡ ነጊረነ፡ ሕቀ፨</l>
+               </lg>
+               
             </div>
             
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza156" n="156">
@@ -631,6 +733,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <label>Stanza 157</label>
                <note>Not attested in all manuscripts.</note>
             </div>
+            
+            <div type="textpart" xml:id="tarafa-malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ስብሐት፡ ለኪ፡ ማርያም፡ በጽጌ፡ መላእክት፡ ትጉሃን፨</l>
+                  <l n="2">ስብሐት፡ ለኪ፡ ማርያም፡ በጽጌ፡ ነቢያት፡ ቅዱሳን፨</l>
+                  <l n="3">ስብሐት፡ ለኪ፡ ማርያም፡ በጽጌ፡ ሐዋርያት፡ ሰባክያን፨</l>
+                  <l n="4">ስብሐት፡ ለኪ፡ ማርያም፡ በጽጌ፡ ሰማዕታት፡ ወጻድቃን፨</l>
+                  <l n="5">ወስብሐት፡ ይደሉ፡ ለማሕሌተ፡ ጽጌኪ፡ ወይን፨</l>
+                  <l n="6">እስመ፡ በጽጌኪ፡ ወይን፡ ይትፌሣሕ፡ ኅዙን፨</l>
+               </lg>
+            </div>
+            
          </div>
       </body>
    </text>

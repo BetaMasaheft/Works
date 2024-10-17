@@ -28,6 +28,57 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
+   <!--  bibliography preserved from ES MKL-014         <listWit>
+               <listBibl type="mss">
+                  <bibl>I RECENSION:</bibl>
+                  <bibl>EMML n<locus target="#1763">1763</locus> (1336/37 or 1339/40,
+                     Monastery of Ḥayq ʾƎsṭifānos, ʾAmbassäl, Wällo),</bibl>
+                  <bibl>
+                     <locus from="110r" to="113v">110r-113v</locus> “Homily by Ēleyas, Bishop
+                     (of Axum), for the commemoration of Abbā Maṭaʿ or Libānos”</bibl>
+                  <bibl>(EMML V, 218-31, esp. 222).</bibl>
+                  <bibl>EMML n<locus target="#7602">7602</locus> (1379/90-1413),</bibl>
+                  <bibl>
+                     <locus from="126ra" to="128ra">126ra-128ra</locus>
+                  </bibl>
+                  <bibl>(cp. BAUSI 2003, X).</bibl>
+                  <bibl>EMML n<locus target="#8509">8509</locus> (14th cent.),</bibl>
+                  <bibl>
+                     <locus from="43r" to="45v">43r-45v</locus>.</bibl>
+                  <bibl>(cp. BAUSI 2003, X).</bibl>
+                  <bibl>II RECENSION:</bibl>
+                  <bibl>Asmara, Library of the Pavoni Social Center (1674)</bibl>
+                  <bibl>
+                     <locus target="#7rb">7rb</locus> – 32rb</bibl>
+                  <bibl>(cp. BAUSI 2003, IX).</bibl>
+                  <bibl>Asmara, Library of the Pavoni Social Center (20th cent.)</bibl>
+                  <bibl>
+                     <locus target="#1ra">1ra</locus> – 26vb</bibl>
+                  <bibl>(cp. BAUSI 2003, IX).</bibl>
+                  <bibl>StrANL Conti Rossini 26 (1934),</bibl>
+                  <bibl>
+                     <locus from="5ra" to="22ra">5ra-22ra</locus>: “Gadla Libānos, Vie de St
+                     Libānos, présentée comme homélie de ce saint par Elyas, évêque
+                     d’Axoum”</bibl>
+                  <bibl>(StrANL 90-91).</bibl>
+                  <bibl>StrANL Conti Rossini 88 (1939),</bibl>
+                  <bibl>
+                     <locus from="2ra" to="20rb">2ra-20rb</locus>: “Gadla Libānos. Vie d’abba
+                     Libānos, homélie par Elyas, évêque d’Axoum”</bibl>
+                  <bibl>(StrANL 225).</bibl>
+                  <bibl>VatLib Cerulli Etiop. 198 (early 19th cent.),</bibl>
+                  <bibl>
+                     <locus from="50ra" to="61vc">50ra-61vc</locus>
+                  </bibl>
+                  <bibl>(cp. BAUSI 2003, IX).</bibl>
+                  <bibl>III RECENSION:</bibl>
+                  <bibl>Conti Rossini (text copied from a ms. kept in Dabra Libānos,
+                     Eritrea)</bibl>
+                  <bibl>s. Conti Rossini 1903a, 25-34</bibl>
+                  <bibl>(cp. BAUSI 2003, IX).</bibl>
+               </listBibl>
+            </listWit>
+            -->
             <listBibl type="clavis">
                <bibl type="KRZ">
                   <ptr target="bm:KRZ"/>
@@ -41,6 +92,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <ptr target="bm:BHO"/>
                <citedRange unit="item">564</citedRange>
             </bibl>
+            
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -52,6 +104,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract><p>The Gadl of St Libānos (Maṭāʿ) exists in three different recensions, the most frequent being <ref target="#recension2">the second one</ref>. 
+            The text is attributed to ʾElyās, the Bishop of Aksum (cp. <ref type="mss" corresp="ESmgm012"></ref>, 
+            <locus target="#17ra">17ra</locus>).</p></abstract>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -64,18 +119,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="MV" when="2017-10-30">Updated</change>
+         <change when="2021-02-01" who="ES">updated</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
-               <bibl>
+               <bibl corresp="#recension2">
                   <ptr target="bm:Bausi2003Libanos"/>
                </bibl>
+               <bibl corresp="#recension1"><ptr target="bm:Getatchew1990Elyas"/></bibl>
             </listBibl>
             <listBibl type="secondary">
-               <bibl> 
+               <bibl corresp="#recension3"> 
                   <ptr target="bm:ContiRossini1903Ricordi"/>
                   <citedRange>25-34</citedRange>
                </bibl>
@@ -84,7 +141,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
+         <div type="edition" xml:id="recension2">
+            <note>Recension 2 provided after <bibl>
+               <ptr target="bm:Bausi2003Libanos"/>
+            </bibl></note>
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
                 ስምዑ፡ እንግርክሙ፡ ዘንተ፡ ነገረ፡ በእንተ፡ <gap reason="omitted"/> ዘከመ፡ ሕይወ፡ ውስተ፡ ምድር፡ ፭፻፷ወ፯፡ ዓመተ፡ <gap reason="omitted"/> 
@@ -97,6 +157,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </ab>
             </div>
          </div>
+         
+         <div type="edition" xml:id="recension1">
+            <note>as edited in <bibl><ptr target="bm:Getatchew1990Elyas"/></bibl></note>
+         </div>
+         <div type="edition" xml:id="recension3">
+            <note>see <bibl> 
+               <ptr target="bm:ContiRossini1903Ricordi"/>
+               <citedRange>25-34</citedRange>
+            </bibl></note>
+         </div>
+         <listRelation>
+            <relation name="saws:isAttributedToAuthor" active="LIT1473GadlaL" passive="PRS3750elyas"></relation>
+            <relation name="ecrm:P129_is_about" active="LIT1473GadlaL" passive="PRS6298Libanos"></relation>
+         </listRelation>
       </body>
    </text>
 </TEI>

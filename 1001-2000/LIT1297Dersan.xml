@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1297Dersan">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dǝrsanä Rufaʾel</title>
+            <title xml:lang="gez" xml:id="t1">ድርሳነ፡ ሩፋኤል፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsāna Rufāʾel</title>
+            <title xml:lang="en" corresp="#t1">Homily in honour of the Archangel Raphael</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,17 +35,68 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
+        <abstract>
+<p>Dǝrsāna Rufāʾel is a composition for the feast of Archangel Raphael on the 3rd of Ṗagʷǝmen.
+It consists of a homily by John Chrysostom on Raphael, a collection of miracles and two homilies on the Living Creatures
+(by Rǝtuʿa Haymānot and Chrystostom).</p>
+        </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2020-12-04">Updated transliteration, added summary, relations and bibliography, textparts.</change>
+         <change who="MKr" when="2022-11-30">Added reference to work records</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <div type="bibliography">
+          <listBibl type="secondary">
+          <bibl>
+             <ptr target="bm:Lusini2005EAEDersanaRufael"/>
+          </bibl>
+          </listBibl>
+          <listRelation>
+             <relation name="saws:isAttributedToAuthor" active="LIT1297Dersan" passive="PRS5720JohnChr"/>
+             <relation name="ecrm:P129_is_about" active="LIT1297Dersan" passive="PRS8083Raphael"/>
+          </listRelation>
+        </div>
+ <div type="edition"><!-- The incipits below are from https://eap.bl.uk/archive-file/EAP432-1-6 -->
+   <note>The following division into textparts follows <ref type="mss" corresp="BLorient619"/></note>
+      <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyJC">
+        <div type="textpart" subtype="incipit">
+           <ab>ድርሳን፡ ዘይቤ፡ አብ፡ ብፁዕ፡ አባ፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ ሊቀ፡ ጳጳሳት፡ ዘሀገረ፡ ዓባይ፡ ቍስጥንጥንያ፡
+             ዘይትነበብ፡ በበዓለ፡ ቅዱስ፡ ሩፋኤል፡ ሊቀ፡ መላእክት፡</ab>
+            </div>
+
+      </div>
+      <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Miracles"><label>Miracles of Raphael</label><!-- from BAVet130 -->
+         <div type="textpart" subtype="chapter" xml:id="MiracleImage"><label>On creating a large image of Rufāʾel</label></div>
+         <div type="textpart" subtype="chapter" xml:id="MiracleSeaMonster"><label>On a keeper of a church, who was carried away by a sea monster</label></div> 
+         <div type="textpart" subtype="chapter" xml:id="MiracleConstantine"><label>On how Rufāʾel appeared to emperor Constantine</label></div>
+         <div type="textpart" subtype="chapter" xml:id="MiracleTobias"><label>On Tobias</label></div>
+         <div type="textpart" subtype="chapter" xml:id="MiracleChurch"><label>History of the consecration of the church of Rufāʾel on an island near Alexandria</label></div>
+      </div>
+
+      <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyRetua" corresp="LIT2124OntheF">
+        <div type="textpart" subtype="incipit">
+           <ab>ድርሳን፡ ዘ፬እንስሳ፡ ክቡራን፡ ዘደረሰ፡ ርቱዓ፡ ሃይማኖት፡</ab>
+            </div>
+      </div>
+
+      <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyChrysostom" corresp="LIT6404Dersan4recA">
+        <div type="textpart" subtype="incipit">
+           <ab>ድርሳን፡ ዘብፁዕ፡ ወቅዱስ፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ ሊቀ፡ ጳጳሳት፡ ዘቍስጥንጥንያ፡
+             በእንተ፡ ፬እንስሳ፡ ዓበይት፡ መንፈሳውያን፡</ab>
+            </div>
+      </div>
+
+  </div>
       </body>
    </text>
 </TEI>

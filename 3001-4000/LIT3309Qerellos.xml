@@ -63,6 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="MV" when="2017-12-27">Added witnesses, keywords, bibl</change>
          <change when="2020-05-26" who="DE">Added textparts and relations.</change>
          <change when="2020-05-27" who="DE">Added corresps to textparts.</change>
+         <change when="2020-09-11" who="DE">Added textparts and relations.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -107,10 +108,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
               <relation name="dcterms:creator" active="LIT3309Qerellos#Prosphoneticus2" passive="PRS3255CyrilI"></relation>
               <relation name="dcterms:creator" active="LIT3309Qerellos#Dialogue" passive="PRS3255CyrilI"></relation>
               <relation name="saws:hasUsed" active="LIT3309Qerellos#VitaOfCyril" passive="LIT2375Synaxa"></relation>
-              <relation name="saws:hasUsed" active="LIT3309Qerellos#VitaOfCyril" passive="LIT1239Chroni"></relation>
+              <relation name="saws:hasUsed" active="LIT3309Qerellos#JohnOfNikiu79" passive="LIT1239Chroni#Chapter79">
+                <desc>This part of the short biography of Cyril contains an almost verbatim quotation of
+                Chapter 79 of the Chronicle of John of Nikiu.</desc>
+              </relation>
+              <relation name="saws:hasUsed" active="LIT3309Qerellos#JohnOfNikiu87" passive="LIT1239Chroni#Chapter87">
+                <desc>This part of the short biography of Cyril contains a concise paraphrase of
+                Chapter 87 of the Chronicle of John of Nikiu.</desc>
+              </relation>
               <relation name="saws:hasUsed" active="LIT3309Qerellos#VitaOfCyril" passive="LIT1011Abusak"></relation>
               <relation name="saws:hasUsed" active="LIT3309Qerellos#VitaOfCyril" passive="LIT4723TarikaWaldaAmid"></relation>
             </listRelation>
+         </div>
             <div type="edition">
               <note>Following text structure is based on
                 <bibl>
@@ -118,6 +127,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>.</note>
                <div type="textpart" subtype="vita" xml:id="VitaOfCyril" corresp="LIT2630Zenahu">
                  <label>Short biography of Cyril</label>
+                 <div type="textpart" xml:id="Introduction"></div>
+                 <div type="textpart" xml:id="JohnOfNikiu79"></div>
+                 <div type="textpart" xml:id="Synaxar"></div>
+                 <div type="textpart" xml:id="JohnOfNikiu87"></div>
                </div>
               <div type="textpart" subtype="section" n="1" xml:id="Section1">
               <div type="textpart" subtype="treatise" xml:id="Prosphoneticus1" corresp="LIT3310Prosph">
@@ -215,7 +228,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
               </div>
 
             </div>
-         </div>
+
       </body>
    </text>
 </TEI>

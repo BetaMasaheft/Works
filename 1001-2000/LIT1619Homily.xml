@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1619Homily">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Homily in Honour of Saint John the Evangelist</title>
-            <author>Zarʾa Yāʿqob</author>
+            <title xml:lang="en" xml:id="t1">Homily in honour of St John the Evangelist</title>
+            <title xml:lang="gez" xml:id="t2">ድርሳን፡ ዘዮሐንስ፡ አቡ፡ ቀለምሲስ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t2">Dǝrsān za-Yoḥannǝs ʾAbu Qalamsis</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -15,12 +16,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+               
                 This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
+                Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
+         
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
@@ -34,12 +36,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <abstract><p>Homily attributed to <persName ref="PRS10626ZaraY"/>, for 4 Ṭerr</p></abstract>
+         <langUsage>
+           <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2021-09-13">Added Ethiopic title, relations, bibliography, incipit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -47,4 +54,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <ab/>
       </body>
    </text>
+   <text>
+        <body>
+            <div type="bibliography">
+              <listBibl type="secondary">
+                  <bibl><ptr target="bm:Getatchew1981Study"/><citedRange><unit type="page">86-90</unit></citedRange></bibl>
+                 <bibl><ptr target="bm:Getatchew1983John"/></bibl>
+              </listBibl>
+                <listRelation>
+                    <relation name="saws:isAttributedToAuthor" active="LIT1619Homily" passive="PRS10626ZaraY"/>
+                    <relation name="ecrm:P129_is_about" active="LIT1619Homily" passive="PRS5695John"/>
+                </listRelation>
+            </div><!---->
+        
+          
+          <div xml:lang="gez" type="edition">
+            <note>The incipit is taken from <ref type="mss" corresp="EMML1480"/></note>
+            <div type="textpart" subtype="incipit">
+             <ab xml:lang="gez">በስመ፡ እግዚአብሔር፡ አብ፡ ዘኢይትፈለጥ፡ እምወልድ፡ ወእመንፈስ፡ ቅዱስ፡ ወበስመ፡ እግዚአብሔር፡ ወልድ፡ ዘኢይትፈለጥ፡ እምአብ፡
+             ወእመንፈስ፡ ቅዱስ። ወበስመ፡ እግዚአብሔር፡ መንፈስ፡ ቅዱስ፡ ጰራቅሊጦስ፡ ዘኢይትፈለጥ፡ እምአብ፡ ወወልድ። በጸውዖ፡ ዝንቱ፡ አስማተ፡ ሥላሴ፡ ተጠመቅነ፡
+           ኵልነ፡ ክርስቲያን፡ እምከዊነ፡ ምድራዊያን፡ ከመ፡ ንትመየጥ፡ ኀበ፡ ከዊነ፡ ሰማያዊያን።</ab>
+            </div>
+         </div>
+        </body>
+    </text>
 </TEI>

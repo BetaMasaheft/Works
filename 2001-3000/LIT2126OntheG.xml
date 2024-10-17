@@ -1,11 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2126OntheG">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">On the Glory of the Church</title>
-            
+            <title xml:id="t1" xml:lang="gez">ስምዑ፡  ለዓቢይ፡ መምህር፡ ክቡር፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ ይነግር፡ ስብሐታ፡ ወክብራ፡ ወዕበያ፡ ለዛቲ፡ በተ፡ ክርስተያን።</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Sǝmʿu la-ʿābiy mamhǝr kǝbur Yoḥannǝs ʾAfa Warq yǝnaggǝr sǝbḥatā wa-kǝbrā
+            la-zātti beta krǝstiyān...</title>
+            <title corresp="#t1" xml:lang="en">Listen to the great teacher, the honoured John Chrysostom tell the glory and honour of this
+            church...</title>
+            <title xml:id="t2" xml:lang="en">On the Glory of the Church</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -34,7 +38,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+
+         <langUsage>
+           <language ident="en">English</language>
+           <language ident="en">Gǝʿǝz</language>
+         </langUsage>
+
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -48,6 +57,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-15" who="ES">keywords relation</change>
+         <change when="2020-12-02" who="MKr">Added incipit</change>
+         <change when="2020-12-01" who="DR">added title</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -55,7 +66,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <listRelation>
             <relation name="saws:isAttributedToAuthor" active="LIT2125OntheG" passive="PRS5720JohnChr"/>
          </listRelation>
-         <ab/>
+
+         <div xml:lang="gez" type="edition">
+           <note>The incipit and the explicit are taken from <ref type="mss" corresp="BLorient550"/>.</note>
+           <div type="textpart" subtype="incipit">
+            <ab xml:lang="gez">ስምዑ፡ ለዓቢይ፡ መምህር፡ ክቡር፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ ይነግር፡ ስብሐታ፡ ወክብራ፡ ወዕበያ፡ ለዛቲ፡ ቤተ፡ ክርስቲያን። </ab>
+           </div>
+           <div type="textpart" subtype="explicit">
+            <ab>ስብሐት፡ ለዘዐርገ፡ ወለዘይመጽእ፡ ዳግመ፡ ስብሐት፡ ለመስቀል፡ ወእሁብ፡ ሰላመ።</ab>
+          </div></div>
+
       </body>
    </text>
 </TEI>

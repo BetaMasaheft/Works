@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5673AkkonuColl" xml:lang="en" type="work">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5673AkkonuColl" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
@@ -11,12 +12,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine multimediale
-                            Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine
+                    multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
-                                licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                        licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -25,18 +26,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
-            <xi:fallback>
-               <p>Definitions of prefixes used.</p>
-            </xi:fallback>
-         </xi:include>
-      </encodingDesc>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+                <xi:fallback>
+                    <p>Definitions of prefixes used.</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
-                <p>A collection of miracles of Mary which is fixed in its content and sequence in its manuscript transmission: after the introduction 
-                    to the Miracles follow a fixed sequence of 
-                    33 miracles, each of is followed by a stanza of the <ref type="work" corresp="LIT4274AkkonuB">ʾakko-nu bǝʾsi hymn</ref>, which might be followed by a miniature illustrating the miracle.</p>
+                <p>A collection of miracles of Mary which is fixed in its content and sequence in
+                    its manuscript transmission: after the introduction to the Miracles follow a
+                    fixed sequence of 33 miracles, each of is followed by a stanza of the <ref
+                        type="work" corresp="LIT4274AkkonuB">ʾakko-nu bǝʾsi hymn</ref>, which might
+                    be followed by a miniature illustrating the miracle.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -48,589 +52,621 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     <term key="Chants"/>
                 </keywords>
             </textClass>
-            <langUsage><language ident="en">English</language></langUsage>
+            <langUsage>
+                <language ident="en">English</language>
+            </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2019-05-07">Created entity</change>
+            <change who="GS" when="2022-09-06">Added elements on the poor monk who begs the Virgin for garment and food.</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
-       
-           <div type="bibliography">
-               <listBibl type="secondary">
-               <bibl>
-                  <ptr target="bm:Habtemichael2003EAEAkkonu"/>
-               </bibl>
-               <bibl>
-                  <ptr target="bm:BalickaBausi2010TM"/>
-               </bibl>
-                   <bibl>
-                  <ptr target="bm:Balicka2010TMart"/>
-               </bibl>
-                   <bibl>
-                       <ptr target="bm:Grohmann1919Marien"/>
-                       <citedRange unit="page">322-382</citedRange>
-                   </bibl>
-               </listBibl>
+
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="saws:formsPartOf" active="LIT5673AkkonuColl" passive="LIT2384Taamme"/>
+                </listRelation>
+                <listBibl type="secondary">
+                    <bibl>
+                        <ptr target="bm:Habtemichael2003EAEAkkonu"/>
+                    </bibl>
+                    <bibl>
+                        <ptr target="bm:BalickaBausi2010TM"/>
+                    </bibl>
+                    <bibl>
+                        <ptr target="bm:Balicka2010TMart"/>
+                    </bibl>
+                    <bibl>
+                        <ptr target="bm:Grohmann1919Marien"/>
+                        <citedRange unit="page">322-382</citedRange>
+                    </bibl>
+                </listBibl>
             </div>
-       
+
             <div type="edition">
-                
+
                 <div type="textpart" subtype="title inscriptio" xml:id="Title">
                     <label>Title</label>
                 </div>
-                
+
                 <div type="textpart" xml:id="introduction">
                     <label>Introduction to the Miracles of Mary</label>
-                    
+
                     <div type="textpart" xml:id="MashafaSerat" corresp="LIT1968Mashaf">
                         <label>Maṣḥafa śǝrʿāt</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="IntroExhortation" corresp="LIT3584Intro">
                         <label>Introductive exhortation</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl1">
-                    <label>First Miracle</label>
-                    
+                    <label>Miracle of Hildephonsus (Dexius) of Toledo</label>
+
                     <div type="textpart" xml:id="AkkMir1" corresp="LIT3586Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" corresp="LIT5052SobaAshafa">
                         <label>Soba ʾaṣḥafa</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta1" corresp="LIT4274AkkonuB#Stanza1">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin1" corresp="AT1108MMDaqseyos">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
+                <div type="textpart" xml:id="AkkColl1A">
+                    <label>Miracle of Mary: Miracle of a poor monk whom Mary gave a garment</label>
+                    <note> The narration about the poor monk does not appear in most manuscripts but
+                        only occurs as the first (sometimes as the second) narration in a few
+                        manuscripts. </note>
+                    <div type="textpart" xml:id="AkkMir1A" corresp="LIT3587Miracle">
+                        <label>Miracle</label>
+                    </div>
+
+
+                    <div type="textpart" xml:id="AkkSta1A" corresp="LIT4274AkkonuB#Stanza1">
+                        <label>ʾAkko-nu bǝʾsi stanza</label>
+                    </div>
+
+                    <div type="textpart" xml:id="AkkMin1A" corresp="AT1145MMGarment">
+                        <label>Miniature</label>
+                    </div>
+                </div>
+
                 <div type="textpart" xml:id="AkkColl2">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of a picture of Mary speaking to a worker</label>
+
                     <div type="textpart" xml:id="AkkMir2" corresp="LIT3588Miracle">
                         <label>
-                     <ref type="work" corresp="LIT3588Miracle"/>
-                  </label>
+                            <ref type="work" corresp="LIT3588Miracle"/>
+                        </label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta2" corresp="LIT4274AkkonuB#Stanza2">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin2" corresp="AT1109MMWorker">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl3">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of a Jew of ʾAḫmīm</label>
+
                     <div type="textpart" xml:id="AkkMir3" corresp="LIT3589Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta3" corresp="LIT4274AkkonuB#Stanza3">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin3" corresp="AT1110MMJew">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl4">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of the scribe Damianus from Philippi</label>
+
                     <div type="textpart" xml:id="AkkMir4" corresp="LIT3590Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta4" corresp="LIT4274AkkonuB#Stanza4">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin4" corresp="AT1111MMDamianus">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl5">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of the Bishop of Rome, ʾAbbās (Leo)</label>
+
                     <div type="textpart" xml:id="AkkMir5" corresp="LIT3591Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta5" corresp="LIT4274AkkonuB#Stanza5">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin5" corresp="AT1112MMAbbas">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl6">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of the monk Isaac</label>
+
                     <div type="textpart" xml:id="AkkMir6" corresp="LIT3592Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta6" corresp="LIT4274AkkonuB#Stanza6">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin6" corresp="AT1113MMYeshaq">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl7">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of the child girl called Mary, from Dafrā</label>
+
                     <div type="textpart" xml:id="AkkMir7" corresp="LIT3593Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta7" corresp="LIT4274AkkonuB#Stanza7">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin7" corresp="AT1114MMMaryam">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl8">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of a French painter whose scaffold was overthrown by the
+                        devil</label>
+
                     <div type="textpart" xml:id="AkkMir8" corresp="LIT3594Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta8" corresp="LIT4274AkkonuB#Stanza8">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin8" corresp="AT1115MMFrenchman">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl9">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of a sick man in a hospital whom Mary carries to
+                        Jerusalem</label>
+
                     <div type="textpart" xml:id="AkkMir9" corresp="LIT3595Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta9" corresp="LIT4274AkkonuB#Stanza9">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin9" corresp="AT1116MMJerusalem">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl10">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of the youth Zechariah, from Rome</label>
+
                     <div type="textpart" xml:id="AkkMir10" corresp="LIT3596Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta10" corresp="LIT4274AkkonuB#Stanza10">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin10" corresp="AT1117MMZakaryas">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl11">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of Juliana and Barbara from Bethlehem</label>
+
                     <div type="textpart" xml:id="AkkMir11" corresp="LIT3597Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta11" corresp="LIT4274AkkonuB#Stanza11">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin11" corresp="AT1118MMYolyana">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl12">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of three Arabs in Rīf and Salomon, abbot of Kalamon</label>
+
                     <div type="textpart" xml:id="AkkMir12" corresp="LIT3598Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta12" corresp="LIT4274AkkonuB#Stanza12">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin12" corresp="AT1119MMArabs">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl13">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of the construction of a church in Jericho</label>
+
                     <div type="textpart" xml:id="AkkMir13" corresp="LIT3599Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta13" corresp="LIT4274AkkonuB#Stanza13">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin13" corresp="AT1120MMSea">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl14">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of the blind priest John from the church of St Mercurius in
+                        Cairo</label>
+
                     <div type="textpart" xml:id="AkkMir14" corresp="LIT3600Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta14" corresp="LIT4274AkkonuB#Stanza14">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin14" corresp="AT1121MMYohannes">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl15">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of a rich man from Qʷalāsis who fought the Qʷǝz and whose eye was
+                        pierced by an arrow</label>
+
                     <div type="textpart" xml:id="AkkMir15" corresp="LIT3601Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta15" corresp="LIT4274AkkonuB#Stanza15">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin15" corresp="AT1122MMGreek">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl16">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of Abraham, his wife Gerā and their blind daughter Elisabeth from
+                        Badramān</label>
+
                     <div type="textpart" xml:id="AkkMir16" corresp="LIT3602Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta16" corresp="LIT4274AkkonuB#Stanza16">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin16" corresp="AT1123MMElsabet">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl17">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of a widow and her poor daughters Maria, Martha, and
+                        Yawāhit</label>
+
                     <div type="textpart" xml:id="AkkMir17" corresp="LIT3603Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta17" corresp="LIT4274AkkonuB#Stanza17">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin17" corresp="AT1124MMWidow">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl18">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of the two scribes who were brothers</label>
+
                     <div type="textpart" xml:id="AkkMir18" corresp="LIT3604Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta18" corresp="LIT4274AkkonuB#Stanza18">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin18" corresp="AT1125MMScribes">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl19">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of George the Younger, who was delivered from prison</label>
+
                     <div type="textpart" xml:id="AkkMir19" corresp="LIT3605Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta19" corresp="LIT4274AkkonuB#Stanza19">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin19" corresp="AT1126MMGiyorgis">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl20">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of the old priest Qaṭīr at ʾƎlkǝsus (al-Khusus)</label>
+
                     <div type="textpart" xml:id="AkkMir20" corresp="LIT3606Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta20" corresp="LIT4274AkkonuB#Stanza20">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin20" corresp="AT1127MMQatir">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl21">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of the two brothers Tāg and Nazīb from Dalgā</label>
+
                     <div type="textpart" xml:id="AkkMir21" corresp="LIT3607Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta21" corresp="LIT4274AkkonuB#Stanza21">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin21" corresp="AT1128MMDyers">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl22">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of a European man with a petrified foot</label>
+
                     <div type="textpart" xml:id="AkkMir22" corresp="LIT3608Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta22" corresp="LIT4274AkkonuB#Stanza22">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin22" corresp="AT1129MMFrank">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl23">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of the leprous Bishop Mercurius</label>
+
                     <div type="textpart" xml:id="AkkMir23" corresp="LIT3609Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta23" corresp="LIT4274AkkonuB#Stanza23">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin23" corresp="AT1130MMMarqorewos">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl24">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of a woman from Hartalom/Hartarom with broken legs</label>
+
                     <div type="textpart" xml:id="AkkMir24" corresp="LIT3610Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta24" corresp="LIT4274AkkonuB#Stanza24">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin24" corresp="AT1131MMWoman">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl25">
-                    <label> Miracle</label>
-                    
+                    <label> Miracle of Sophia, abbess of Mount Carmel</label>
+
                     <div type="textpart" xml:id="AkkMir25" corresp="LIT3611Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta25" corresp="LIT4274AkkonuB#Stanza25">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin25" corresp="AT1132MMSophia">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl26">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of the Phoenician evil man called Bārok</label>
+
                     <div type="textpart" xml:id="AkkMir26" corresp="LIT3612Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta26" corresp="LIT4274AkkonuB#Stanza26">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin26" corresp="AT1133MMBarok">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl27">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of Anastasius, a deacon of Rome</label>
+
                     <div type="textpart" xml:id="AkkMir27" corresp="LIT3613Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta27" corresp="LIT4274AkkonuB#Stanza27">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin27" corresp="AT1134MMAnestasyos">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl28">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of a monk of the Monastery of St Samuel of Kalamon</label>
+
                     <div type="textpart" xml:id="AkkMir28" corresp="LIT3614Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta28" corresp="LIT4274AkkonuB#Stanza28">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin28" corresp="AT1135MMSalusi">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl29">
-                    <label> Miracle</label>
-                    
+                    <label>The Story of a Cannibal of Qǝmr</label>
+
                     <div type="textpart" xml:id="AkkMir29" corresp="LIT3615Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta29" corresp="LIT4274AkkonuB#Stanza29">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin29" corresp="AT1136MMCannibal">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl30">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of a poor widow and her son who became a thief and was
+                        crucified</label>
+
                     <div type="textpart" xml:id="AkkMir30" corresp="LIT3692Miracle LIT3616Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta30" corresp="LIT4274AkkonuB#Stanza30">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin30" corresp="AT1137MMThief">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl31">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of a pregnant woman</label>
+
                     <div type="textpart" xml:id="AkkMir31" corresp="LIT3617Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta31" corresp="LIT4274AkkonuB#Stanza31">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin31" corresp="AT1138MMFlood">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl32">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of the thirsty dog whom the Virgin gave water</label>
+
                     <div type="textpart" xml:id="AkkMir32" corresp="LIT3618Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta32" corresp="LIT4274AkkonuB#Stanza32">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkMin32" corresp="AT1139MMDog">
                         <label>Miniature</label>
                     </div>
                 </div>
-                
+
                 <div type="textpart" xml:id="AkkColl33">
-                    <label> Miracle</label>
-                    
+                    <label>Miracle of the preservation of the Church of the Virgin in ʾAṯrīb </label>
+
                     <div type="textpart" xml:id="AkkMir33" corresp="LIT3619Miracle">
                         <label>Miracle</label>
                     </div>
-                    
+
                     <div type="textpart" xml:id="AkkSta33" corresp="LIT4274AkkonuB#Stanza33">
                         <label>ʾAkko-nu bǝʾsi stanza</label>
                     </div>
                 </div>
-                    
-             <!--       BL orient 645
-                    LIT3918Miraqcle + LIT5059TaammeraFeqreki-->
-                    
-                    
-                    <div type="textpart" xml:id="AkkSta34" corresp="LIT4274AkkonuB#Stanza34">
-                        <label>ʾAkko-nu bǝʾsi stanza</label>
-                    </div>
-                    
+
+                <!--       BL orient 645
+                    LIT3918Miracle + LIT5059TaammeraFeqreki-->
+
+
+                <div type="textpart" xml:id="AkkSta34" corresp="LIT4274AkkonuB#Stanza34">
+                    <label>ʾAkko-nu bǝʾsi stanza</label>
+                </div>
+
             </div>
         </body>
     </text>

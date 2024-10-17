@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2361somade">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -27,6 +27,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
+            
+               <sourceDesc>
+                  <listWit>
+                     <witness  corresp="BAVet87"/>        
+                     <witness  corresp="BAVet134"/>
+                     <witness corresp="BLorient584"/>
+                     <witness corresp="BLadd16196"/>
+                     <witness  corresp="BNFabb106"/>
+                     <witness  corresp="BNFet192"/>
+                     <witness  corresp="BNFet371"/>
+                  </listWit>
+               </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -43,6 +55,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="JK" when="2023-09-04">Added basic structure and edition of key antiphons.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -58,6 +71,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Velat1969Soma"/>
                </bibl>
             </listBibl>
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:1968SomaDeggwa"/>
+               </bibl>
+            </listBibl>
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:2007SomaDeggwa"/>
+               </bibl>
+            </listBibl>
             <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Habtemichael2010Somadeggwa"/>
@@ -65,188 +88,2904 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </listBibl>
             <listRelation>
                <relation name="saws:isAttributedToAuthor" active="LIT2361somade" passive="PRS10245Yared">
-                  <desc>The work is traditionally attributed to <persName ref="PRS10245Yared">Yāred māḫletāwi</persName>
+                  <desc>The work is traditionally attributed to <persName ref="PRS10245Yared">Yāred māḫletāwi</persName>.
                   </desc>
                </relation>
             </listRelation>
-            <div type="edition">
+         </div>
+            <div type="edition" xml:lang="gez">
+               
+               <note>For the four first weeks, the following description of the structure of the 
+                  <foreign xml:lang="gez">Ṣoma dǝggʷā</foreign> is based
+                  on the edition by <bibl><ptr target="bm:Velat1966Soma"/></bibl>. This includes a noteworthy 
+                  distinction in the analysis of the placement of the <foreign xml:lang="gez">Wāzemā</foreign>/
+                  <foreign xml:lang="gez">Sark</foreign> services: In the first week, the <foreign xml:lang="gez">Wāzemā</foreign>/
+                  <foreign xml:lang="gez">Sark</foreign> service in the night between Sunday and Monday is analysed as
+                  the "<foreign xml:lang="gez">Wāzemā</foreign>/<foreign xml:lang="gez">Sark</foreign> service of Monday", 
+                  the <foreign xml:lang="gez">Wāzemā</foreign>/
+                  <foreign xml:lang="gez">Sark</foreign> service in the night between Monday and Tuesday is analysed as
+                  the "<foreign xml:lang="gez">Wāzemā</foreign>/<foreign xml:lang="gez">Sark</foreign> service of Tuesday",
+                  etc. By contrast, in the second and subsequent weeks, the <foreign xml:lang="gez">Wāzemā</foreign>/
+                  <foreign xml:lang="gez">Sark</foreign> service in the night between Sunday and Monday is analysed as
+                  a second "<foreign xml:lang="gez">Wāzemā</foreign>/<foreign xml:lang="gez">Sark</foreign> service of Sunday",
+                  the <foreign xml:lang="gez">Wāzemā</foreign>/
+                  <foreign xml:lang="gez">Sark</foreign> service in the night between Monday and Tuesday is analysed as
+                  the "<foreign xml:lang="gez">Wāzemā</foreign>/<foreign xml:lang="gez">Sark</foreign> service of Monday",
+                  etc. (however, the <foreign xml:lang="gez">Wāzemā</foreign>/
+                  <foreign xml:lang="gez">Sark</foreign> service in the night between Saturday and Sunday is still analysed as
+                  the first "<foreign xml:lang="gez">Wāzemā</foreign>/<foreign xml:lang="gez">Sark</foreign> service of Sunday"
+                  – consequently, Sundays have two <foreign xml:lang="gez">Wāzemā</foreign>/
+                  <foreign xml:lang="gez">Sark</foreign> services, whereas Saturdays have none). From the fifth week on,
+                  the description is based on <bibl><ptr target="bm:2007SomaDeggwa"/></bibl>.
+               </note>
+               
+               
+               <div type="textpart" xml:id="FirstWeek">
+                  <label>Set of antiphons for the first week of the Great Fast (<foreign xml:lang="gez">ዘወረደ፡</foreign>,
+                     <foreign xml:lang="gez">Za-warada</foreign>).</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">1–83</citedRange>
+                     </bibl>
+                     <bibl>
+                        <ptr target="bm:2007SomaDeggwa"/>
+                        <citedRange unit="page">1–34</citedRange>
+                     </bibl>
+                  </listBibl>
+                  
+                  <div type="textpart" xml:id="SundayFirst">
+                     <label>Set of antiphons for the Sunday of the first week.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">1–18</citedRange>
+                        </bibl>
+                     </listBibl>
                <div type="textpart" xml:id="Vigil">
-                  <label>Hymn for the vigil of the fast (<foreign xml:lang="gez">ዋዜማ፡ ዘመኅትወ፡ ድራረ፡ ጾም፡</foreign>)</label>
+                  <label>Set of antiphons for the "Vigil of the Fast", i.e. the <foreign xml:lang="gez">Wāzemā</foreign>/
+                     <foreign xml:lang="gez">Sark</foreign> 
+                     service of the Sunday of the first week of the Great Fast 
+                     (<foreign xml:lang="gez">ዋዜማ፡ ዘመኃትወ፡ ድራረ፡ ጾም፡</foreign>).</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">1-3</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        ዘወረደ፡ አምላዕሉ፡ አይሁድ፡ ሰቀሉ፡
+                        ወሚመ፡ ኢያእምሩ፡ እግዚአ፡ ኵሉ፡     
+                        ዘያሐዩ፡ በቃሉ።
+                     </ab>
+                  </div>
                </div>
+                     <div type="textpart" xml:id="SundayFirstMawaddesService">
+                        <label>Set of antiphons for the <foreign xml:lang="gez">Mawaddǝs</foreign> service 
+                           of the Sunday of the first week of the Great Fast.</label>
+                        <listBibl type="editions">
+                           <bibl>
+                              <ptr target="bm:Velat1966Soma"/>
+                              <citedRange unit="page">4-18</citedRange>
+                           </bibl>
+                        </listBibl>
+                        <div type="textpart" subtype="incipit">
+                           <ab>
+                              ተቀነዩ፡ ለእግዚአብሔር፡ በፍርሀት፡ ወተሐሠዩ፡ 
+                              ሎቱ፡ በረዓድ፡ እስመ፡ ለዓለም፡ ምሕረቱ፡
+                              ለትውልደ፡ ትውልድ፡ ጽድቁ፡ ንሕነሰ፡ 
+                              ሐዝቡ፡ ባኡ፡ ቅድሜሁ፡ በተጋንዮ፡
+                              ወውስተ፡ አዕጻዲሁ፡ በስብሐት፡ እመንዎ፡ 
+                              እ፡ ንጹም፡ ጾመ፡ ወናፍቅር፡ ቢጸነ፡ 
+                              ወንትፋቀር፡ በበይናቲነ፡ እ፡ አክብሩ፡ 
+                              ሰንበተ፡ ተገበሩ፡ ጽድቀ፡ እስመ፡ ሰንበትሰ፡ 
+                              በእንተ፡ ሰብእ፡ ተፈጥረት፡ እ፡ ምሕረተ፡ ወፍትሐ፡ አሐሊ፡ 
+                              ለከ፡ እዜምር፡ ወእሌቡ፡ ፍኖተ፡ ንጹሐ፡ 
+                              እስመ፡ ለዓለም፡ ምሕረቱ፡ ለትውልደ፡ 
+                              ትውልድ፡ ጽድቁ፡ ንሕነሰ፡ ሕዝቡ፡ አባግዐ፡
+                              መርዔቱ። 
+                           </ab>
+                        </div>
+                     </div>
+                  </div>
+               
                <div type="textpart" xml:id="MondayFirst">
-                  <label>Hymn for the Monday of the first week</label>
+                  <label>Set of antiphons for the Monday of the first week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">19–39</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="MondayFirstWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Monday 
+                        of the first week of the Great Fast.</label>
+                     <note>This set of antiphons can also be construed as a second 
+                        <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the
+                        Sunday of the first week of the Great Fast.</note>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">19-20</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ንብጻሕ፡ ቅድመ፡ 
+                           ገጹ፡ በአሚን፡ ወበመዝሙር፡ ንየብብ፡ ሎቱ፡
+                           ን፡ ንፀመዶ፡ ለልዑል፡ በጾም፡ ወበጸሎት፡ ን፡ በኵሉ፡ ጊዜ፡ 
+                           ወበኵሉ፡ ሰዓት፡ ንብጻሕ፡ ቅድመ፡ ገጹ፡
+                           በአሚን፡ ንብጻሕ፡ ቅድመ፡ ገጹ፡ በአሚን።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="MondayFirstSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Monday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">21-27</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ከመዝ፡ ይቤ፡ ሙሴ፡ ፀአቱ፡ እምትዕይንት፡
+                           ሶበ፡ ይሠርቅ፡ ፀሓይ፡ ተንሥእ፡ እግዚኦ፡
+                           ወይዘረዉ፡ ፀርከ፡ ወይጕየዩ፡ ኵሎሙ፡ እለ፡ 
+                           ይጸልኡከ፡ ወበማኅደሩሰ፡ ይቤ፡ ተመየጥ፡
+                           እግዚኦ፡ ላዕለ፡ እስራኤል፡ ሕዝብከ፡ በእልፍ፡ 
+                           ወበአእላፍ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="MondayFirst3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Monday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">27-31</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="MondayFirst6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Monday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">32-35</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="MondayFirst9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Monday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">36-39</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+               
                <div type="textpart" xml:id="TuesdayFirst">
-                  <label>Hymn for the Tuesday of the first week</label>
+                  <label>Set of antiphons for the Tuesday of the first week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">40–49</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="TuesdayFirstWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Tuesday 
+                        of the first week of the Great Fast.</label>
+                     <note>This set of antiphons can also be construed as a 
+                        <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the
+                        Monday of the first week of the Great Fast.</note>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">40–41</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ምሕረትከ፡ ወጽድቅከ፡ ዘልፈ፡ 
+                           ይርከባኒ፡ ሥመር፡ እግዚኦ፡ ከመ፡ ታድኅነኒ፡ ዘአድኀንኮ፡ 
+                           ለዳዊት፡ ገብርከ፡ ዘሜጥካሁ፡ ለጳውሎስ፡ 
+                           በኂሩትከ፡ ወሊተኒ፡ ለገብርከ፡ ሚጠኒ፡
+                           ኀቤከ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayFirstSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Tuesday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">42–44</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           በሐ፡ በልዋ፡ ተሳለምዋ፡ ጊሡ፡ ኀቤሃ፡ 
+                           ኢትርሐቁ፡ እምኔሃ፡ እስመ፡ ዋካ፡ ይእቲ፡ 
+                           ወብርሃን፡ ይእቲ፡ ትበርህ፡ እምፀሓይ፡ 
+                           ይእቲ፡ ትትሌዐል፡ እምአድባር፡ ታቦት፡ 
+                           ሕጉ፡ ለንጉሥ፡ ዐቢይ፡ ደብተራ፡ ፍጽምት፡ 
+                           እመ፡ ኵሉ፡ ሕዝብ፡ ተሀሉ፡ ማእከሌክሙ፡ አኀው።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayFirst3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Tuesday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">44–46</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayFirst6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Tuesday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">46–47</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayFirst9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Tuesday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">47–49</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="WednesdayFirst">
-                  <label>Hymn for the Wednesday of the first week</label>
+                  <label>Set of antiphons for the Wednesday of the first week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">50–58</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="WednesdayFirstWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Wednesday 
+                        of the first week of the Great Fast.</label>
+                     <note>This set of antiphons can also be construed as a 
+                        <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the
+                        Tuesday of the first week of the Great Fast.</note>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">50–52</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ረዳኢ፡ ለእለ፡ ውስተ፡ ሠርም፡ ወለእለ፡ ይትመነደቡ፡
+                           መቅለሊ፡ ለርኁባን፡ ዘይኄሊ፡ ወይትቤቀል፡
+                           ለግፉዓን፡ ዐርከ፡ መሃይምናን፡ መስተናግር፡ 
+                           ለጻድቃን፡ ወማኅደር፡ ለንጹሓን፡ ወለእለ፡ 
+                           በጽድቅ፡ ይጼውዕዎ፡ ሰማዒ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayFirstSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Wednesday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">52–54</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ምርሐኒ፡ ፍኖተ፡ ወእሑር፡ ቤቶ፡ 
+                           ለአምላከ፡ ያዕቆብ፡ እስመ፡ ኪያሃ፡ አኀሥሥ፡ 
+                           ዘአፍቀረት፡ ነፍስየ፡ ማኅደረ፡ ስምከ፡ ከመ፡ 
+                           ተሀበኒ፡ ተምኔትየ፡ ኵሎ፡ አሚረ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayFirst3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Wednesday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">54–55</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayFirst6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Wednesday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">56–57</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayFirst9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Wednesday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">57–58</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="ThursdayFirst">
-                  <label>Hymn for the Thursday of the first week</label>
+                  <label>Set of antiphons for the Thursday of the first week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">59–69</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="ThursdayFirstWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Thursday 
+                        of the first week of the Great Fast.</label>
+                     <note>This set of antiphons can also be construed as a 
+                        <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the
+                        Wednesday of the first week of the Great Fast.</note>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">59–60</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ሰርከ፡ ናአኵተከ፡ ወንሴብሐከ፡ መፍቀሬ፡ 
+                           ሰብእ፡ ክርስቶስ፡ ዘአውዐልከነ፡ ኵሎ፡ ኑኀ፡ 
+                           ዕለት፡ አቢተነ፡ በጸጋ፡ መድኀኒትከ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayFirstSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Thursday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">61–64</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <note>The second incipit provided below is only provided in abbreviated form in
+                        <bibl><ptr target="bm:Velat1966Soma"/></bibl>.</note>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           አንሥኢ፡ አዕይንቲኪ፡ ጽዮን፡ ወነጽሪ፡ 
+                           ዐውደኪ፡ እስመ፡ አዕበየ፡ እግዚአብሔር፡
+                           ሣህሎ፡ ላዕሌኪ፡ ይትኀፈሩ፡ ጸላእትኪ፡ እለ፡
+                           ኢይቀርቡ፡ ኀቤኪ፡ ተሐነጺ፡ በጽድቅ፡ ረሐቂ፡
+                           እምዐመፃ፡ ወኢይሁብ፡ ለባዕድ፡ ክብረኪ።
+                        </ab>
+                     </div>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           በጽድቅ፡ ወበተፋቅሮ፡ እስመ፡ ረከብኩ፡ 
+                           እምውስተ፡ ደቂቅኪ፡ ይቤ፡ እግዚአብሔር፡ 
+                           በነቢይ፡ የሐንጹ፡ አሕዛብ፡ አረፋተኪ፡ 
+                           አምኂ፡ ደቂቀ፡ እኅትኪ፡ ኅሪት፡ መድኀኒት፡ 
+                           ወሕይወት፡ ህየንተ፡ አበውኪ፡ ተወልዱ፡ 
+                           ለኪ፡ ደቂቅ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayFirst3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Thursday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">64–66</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayFirst6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Thursday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">66–67</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayFirst9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Thursday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">68–69</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="FridayFirst">
-                  <label>Hymn for the Friday of the first week</label>
+                  <label>Set of antiphons for the Friday of the first week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">70–79</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="FridayFirstWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Friday 
+                        of the first week of the Great Fast.</label>
+                     <note>This set of antiphons can also be construed as a 
+                        <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the
+                        Thursday of the first week of the Great Fast.</note>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">70–71</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ናአኵተከ፡ እግዚኦ፡ አምላክነ፡ ዘአውዐልከነ፡ ኵሎ፡ ኑኀ፡ 
+                           ዕለት፡ ዘአንተ፡ ተአምር፡ ኅቡኣተ፡ ልብነ፡ 
+                           አኰቴተ፡ ስብሐት፡ ናዐርግ፡ ለከ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="FridayFirstSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Friday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">71–74</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           በሐ፡ ንበላ፡ ኵልነ፡ ንሳለማ፡ እምነ፡ ለቅድስት፡ ቤተ፡ 
+                           ክርስቲያን፡ እስመ፡ ሐነጽዋ፡ ለቤተ፡ ክርስቲያን፡ ወሣረርዋ፡ 
+                           በመንፈስ፡ ቅዱስ፡ ከመ፡ ትኩን፡ አርአያ፡ ዘበሰማያት፡ 
+                           ከመ፡ ታድኅነነ፡ እምእቶነ፡ እሳት።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="FridayFirst3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Friday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">74–76</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="FridayFirst6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Friday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">76–77</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="FridayFirst9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Friday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">78–79</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="SaturdayFirst">
-                  <label>Hymn for the Saturday of the first week</label>
+                  <label>Set of antiphons for the Saturday of the first week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">80–83</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="SaturdayFirstWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Saturday 
+                        of the first week of the Great Fast.</label>
+                     <note>This set of antiphons can also be construed as a 
+                        <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the
+                        Friday of the first week of the Great Fast.</note>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">80–82</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ተስፋየ፡ እምንእስየ፡ ምርጉዝ፡ ለርሥኣንየ፡ 
+                           ዝንቱ፡ ውእቱ፡ መስቀል፡ መርሖሙ፡
+                           አንተ፡ ለዕዉራን፡ ምርጉዞሙ፡ ለሐንካሳን፡ 
+                           አንሰ፡ እትአመን፡ ወኣሰምክ፡ በመስቀልከ፡ 
+                           ይገንዩ፡ አሕዛብ፡ ለስምከ፡ እግዚኦ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="SaturdayFirstSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Saturday 
+                        of the first week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">82–83</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ለኢየሩሳሌም፡ ሐጹር፡ የዐውዳ፡
+                           በኀይለ፡ መስቀሉ፡ ጸንዐ፡ ማኅፈዳ፡ 
+                           ዕዝራኒ፡ ርእያ፡ ወፈርሀ፡ ቀሪቦታ፡
+                           ዐቢይ፡ ኀይል፡ ተገብረ፡ በውስቴታ፡
+                           ደብተራ፡ እንተ፡ እግዚአብሔር፡ ተከለ፡
+                           መልአክ፡ ተናገራ፡ ወማኅደሮ፡ ረሰያ።
+                        </ab>
+                     </div>
+                  </div>
                </div>
+               </div>
+                  
+                  
+               <div type="textpart" xml:id="SecondWeek">
+                  <label>Set of antiphons for the second week of the Great Fast (<foreign xml:lang="gez">ቅድስት፡</foreign>,
+                     <foreign xml:lang="gez">Qǝddǝst</foreign>).</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">84–138</citedRange>
+                     </bibl>
+                     <bibl>
+                        <ptr target="bm:2007SomaDeggwa"/>
+                        <citedRange unit="page">34–54</citedRange>
+                     </bibl>
+                  </listBibl>
+                  
                <div type="textpart" xml:id="SundaySecond">
-                  <label>Hymn for the Sunday of the second week</label>
+                  <label>Set of antiphons for the Sunday of the second week (Sunday of Qǝddǝst,
+                     <foreign xml:lang="gez">ቅድስት፡</foreign>).</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">84–99</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="SundaySecond1WazemaService">
+                     <label>Set of antiphons for the first <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> 
+                        service of the Sunday of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">84–87</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ዛቲ፡ ዕለት፡ ቅድስት፡
+                           ይእቲ፡ ለውሉደ፡ ሰብእ፡ መድኀኒት፡
+                           ትኩነነ፡ መርሐ፡ በፍኖት፡
+                           በኵሉ፡ ጊዜ፡ ወበኵሉ፡ ሰዓት።
+                           ቀደሳ፡ እግዚአብሔር፡ ለሰንበት።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="SundaySecondMawaddesService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Mawaddǝs</foreign> service 
+                        of the Sunday of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">87–97</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ግነዩ፡ ለእግዚአብሔር፡ ወጸውዑ፡ ስሞ፡ 
+                           ወንግርዎሙ፡ ለአሕዛብ፡ ምግባሮ፡ ሀቡ፡ 
+                           ስብሐተ፡ ለስሙ፡ አክብሩ፡ ሰንበተ፡ ተገበሩ፡ 
+                           ጽድቀ፡ ዝግቡ፡ ለክሙ፡ መዝገበ፡ ዘበሰማያት፡
+                           ኀበ፡ ፃፄ፡ ኢያማስኖ፡ ወኢይረክቡ፡ ሰራቂ፡ ድልዋኒክሙ፡ 
+                           ንበሩ፡ ዘበላዕሉ፡ ኀልዩ፡ ኀበ፡ ሀሎ፡ ክርስቶስ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="SundaySecond2WazemaService">
+                     <label>Set of antiphons for the second <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> 
+                        service of the Sunday of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">98</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="MondaySecond">
-                  <label>Hymn for the Monday of the second week</label>
+                  <label>Set of antiphons for the Monday of the second week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">99–106</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="MondaySecondSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Monday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">99–101</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ነያ፡ ጽዮን፡ ቅድስት፡
+                           ነያ፡ ጽዮን፡ መድኀኒት፡
+                           አቡነ፡ ዘበሰማያት፡
+                           ለከ፡ ይደሉ፡ ስብሐት።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="MondaySecond3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Monday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">101–102</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="MondaySecond6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Monday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">102–103</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="MondaySecond9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Monday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">104–105</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="MondaySecondWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Monday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">105–106</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="TuesdaySecond">
-                  <label>Hymn for the Tuesday of the second week</label>
+                  <label>Set of antiphons for the Tuesday of the second week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">107–113</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="TuesdaySecondSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Tuesday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">107–108</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           እነግረክሙ፡ አኀውየ፡ ጸጋ፡ እግዚአብሔር፡ 
+                           ዘተውህበ፡ ለቤተ፡ ክርስቲያን፡ ዘእመቄዶንያ፡ 
+                           እምብዝኀ፡ መከራ፡ ሕማሞሙ፡ 
+                           ፈድፋደ፡ ፍሥሐሆሙ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="TuesdaySecond3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Tuesday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">108–109</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="TuesdaySecond6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Tuesday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">110–111</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="TuesdaySecond9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Tuesday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">111–112</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="TuesdaySecondWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Tuesday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">112–113</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="WednesdaySecond">
-                  <label>Hymn for the Wednesday of the second week</label>
+                  <label>Set of antiphons for the Wednesday of the second week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">114–120</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="WednesdaySecondSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Wednesday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">114–115</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ሐዋዘ፡ ብርሃነ፡ 
+                           ጸግወነ፡ እግዚኦ፡ ነግሀ፡ ነቂሀነ፡ እምንዋም፡ 
+                           ንጊሣ፡ ለቤተ፡ ክርስቲያን፡ ኀበ፡ የኀድር፡ ብዕለ፡ 
+                           ስብሐቲሁ፡ ንስእል፡ ዘእምኀቤሁ፡ ረድኤተ፡ 
+                           ወሕይወተ፡ ኵሉ፡ ዘጌሠ፡ ወመጽአ፡ ኀቤሃ፡ ኢይጻሙ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="WednesdaySecond3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Wednesday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">115–116</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="WednesdaySecond6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Wednesday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">117–118</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="WednesdaySecond9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Wednesday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">118–119</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="WednesdaySecondWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Wednesday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">120</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="ThursdaySecond">
-                  <label>Hymn for the Thursday of the second week</label>
+                  <label>Set of antiphons for the Thursday of the second week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">121–127</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="ThursdaySecondSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Thursday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">121–122</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ትበርህ፡ እምኮከበ፡ ጽባሕ፡ 
+                           ወታስተርኢ፡ እምአርእስተ፡ አድባር፡ 
+                           አዳም፡ ወሠናይት፡ ጽዕዱት፡
+                           ወብርህት፡ ከመ፡ ፀሓይ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="ThursdaySecond3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Thursday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">123–124</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="ThursdaySecond6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Thursday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">124–125</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="ThursdaySecond9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Thursday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">126–127</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="ThursdaySecondWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Thursday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">127</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="FridaySecond">
-                  <label>Hymn for the Friday of the second week</label>
+                  <label>Set of antiphons for the Friday of the second week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">128–135</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="FridaySecondSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Friday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">128–130</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ወአንተሰ፡ ጊሥ፡ ኀበ፡ እግዚአብሔር፡ 
+                           ጸሊ፡ ወትረ፡ ወኢትናፍቅ፡ ለጸሎት፡
+                           እንዘ፡ ትትአመን፡ ሰአል፡
+                           እንዘ፡ ትብል፡ አቡነ፡ ዘበሰማያት።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="FridaySecond3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Friday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">130–131</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="FridaySecond6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Friday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">131–133</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="FridaySecond9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Friday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">133–134</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="FridaySecondWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Friday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">134–135</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="SaturdaySecond">
-                  <label>Hymn for the Saturday of the second week</label>
+                  <label>Set of antiphons for the Saturday of the second week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">136–138</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="SaturdaySecondSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Saturday 
+                        of the second week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">136–138</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           በአፍአኒ፡ መስቀል፡ ወበውሣጤኒ፡ መስቀል፡
+                           በገዳምኒ፡ መስቀል፡ እንዘ፡ ጸልመተ፡ ያበርህ።
+                        </ab>
+                     </div>
+                  </div>
                </div>
+               </div>
+                  
+                  
+               <div type="textpart" xml:id="ThirdWeek">
+                  <label>Set of antiphons for the third week of the Great Fast (<foreign xml:lang="gez">ምኵራብ፡</foreign>,
+                     <foreign xml:lang="gez">Mǝkʷrāb</foreign>).</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">139–198</citedRange>
+                     </bibl>
+                     <bibl>
+                        <ptr target="bm:2007SomaDeggwa"/>
+                        <citedRange unit="page">54–78</citedRange>
+                     </bibl>
+                  </listBibl>
+                  
                <div type="textpart" xml:id="SundayThird">
-                  <label>Hymn for the Sunday of the third week (Sunday of the Temple) <foreign xml:lang="gez">ዋዜማ፡ ዘምኵራብ፡</foreign>)</label>
+                  <label>Set of antiphons for the Sunday of the third week (Sunday of the Temple, 
+                     <foreign xml:lang="gez">ምኵራብ፡</foreign>).</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">139–153</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="SundayThird1WazemaService">
+                     <label>Set of antiphons for the first <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> 
+                        service of the Sunday of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">139–142</citedRange>
+                        </bibl>
+                     </listBibl>                     
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           በዕለተ፡ ሰንበት፡ ቦአ፡ ኢየሱስ፡ ምኵራበ፡ አይሁድ፡ 
+                           ምህሮሙ፡ ወይቤሎሙ፡ ለእመ፡ ኪያየ፡ 
+                           ኢአመንክሙ፡ ለግብርየ፡ እመኑ፡ አንትሙ፡ 
+                           ጊዜ፡ መዋዕለ፡ ዓመታት፡ ዕለታተ፡ ሰንበታተ፡ 
+                           ኢፈለጥክሙ፡ እንዳዒ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="SundayThirdMawaddesService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Mawaddǝs</foreign> service 
+                        of the Sunday of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">142–153</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="SundayThird2WazemaService">
+                     <label>Set of antiphons for the second <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> 
+                        service of the Sunday of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">153</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="MondayThird">
-                  <label>Hymn for the Monday of the third week</label>
+                  <label>Set of antiphons for the Monday of the third week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">154–162</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="MondayThirdSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Monday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">154–157</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ክርስቶስ፡ ብነ፡ ጸወንነ፡ ወኀይልነ፡ ጽንዕነ፡ 
+                           ቤዛነ፡ መድኀኒተ፡ ነፍስነ፡ ኪያሁ፡ ናአኵት፡ 
+                           ኵልነ፡ ለዘአንቅሀነ፡ እምንዋም።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="MondayThird3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Monday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">157–158</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="MondayThird6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Monday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">158–159</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="MondayThird9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Monday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">160–161</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="MondayThirdWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Monday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">161–162</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="TuesdayThird">
-                  <label>Hymn for the Tuesday of the third week</label>
+                  <label>Set of antiphons for the Tuesday of the third week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">163–170</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="TuesdayThirdSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Tuesday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">163–165</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ተክዕወ፡ በላዕሌነ፡ ት<sic>አ</sic>ዛዘ፡ ኦሪት፡ 
+                           ወነቢያት። ኖን። ማኅቶት፡ ለእግርየ፡ ሕግከ፡ 
+                           ብርሃን፡ ለፍኖትየ፡ ካልእ፡ ሕግ፡ አእምሮ፡ 
+                           ቃላተ፡ ጽድቅ፡ ፍጹመ፡ ተፋቅሮ፡ ይእቲ፡ ታድኅን፡
+                           እሞት።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayThird3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Tuesday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">165–166</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayThird6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Tuesday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">167–168</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayThird9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Tuesday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">168–169</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayThirdWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Tuesday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">170</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="WednesdayThird">
-                  <label>Hymn for the Wednesday of the third week</label>
+                  <label>Set of antiphons for the Wednesday of the third week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">171–178</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="WednesdayThirdSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Wednesday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">171–173</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ውእተ፡ አሚረ፡ ይትወሀቦሙ፡ ካልእ፡ ልብ፡ 
+                           ትሠርጽ፡ ሃይማኖት፡ ወይትመዋእ፡ ሞት፡ ይመጽእ፡
+                           ጽድቅ፡ ወይትጋ<sic>በ</sic>እ፡ ትዕግሥት፡ ውእተ፡ አሚረ፡
+                           ይነቅህ፡ ዓለም፡ ዘአልቦ፡ አመ፡ ነቅሀ፡ ወምድርኒ፡ 
+                           አመ፡ ታግብእ፡ ማሕፀንታ፡ ውእተ፡ አሚረ፡ 
+                           አልቦ፡ ክረምት፡ ወኢሐጋይ፡ ዘአንበለ፡ መብረቀ፡ 
+                           ስብሐቲሁ፡ ወብርሃኑ፡ ለእግዚአብሔር፡ 
+                           ከመ፡ ይርአይ፡ ኵሉ፡ ዘጽኑሕ፡ ሎቱ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayThird3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Wednesday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">173–174</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayThird6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Wednesday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">174–176</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayThird9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Wednesday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">176–177</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayThirdWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Wednesday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">177–178</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="ThursdayThird">
-                  <label>Hymn for the Thursday of the third week</label>
+                  <label>Set of antiphons for the Thursday of the third week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">179–186</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="ThursdayThirdSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Thursday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">179–181</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           አንትሙሰ፡ ከመዝ፡ ንዑ፡ ውስተ፡ ይእቲ፡ 
+                           ሀገር፡ እለ፡ ሥዩማን፡ ሊቃውንተ፡ ቤተ፡ 
+                           ክርስቲያን፡ ሃሌ፡ ሉያ፡ ሃሌ፡ ሉያ፡ ሃሌ፡ 
+                           ሉያ፡ ስብሐት፡ ለእግዚአብሔር፡ በጽዮን።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayThird3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Thursday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">181–182</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayThird6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Thursday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">182–184</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayThird9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Thursday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">184–185</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayThirdWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Thursday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">186</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="FridayThird">
-                  <label>Hymn for the Friday of the third week</label>
+                  <label>Set of antiphons for the Friday of the third week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">187–195</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="FridayThirdSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Friday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">187–188</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ወተዘከረ፡ ሣህሎ፡ ለዓለም፡ ዘሠርዐ፡ 
+                           ለአብርሃም፡ ወመሐለ፡ ለይስሐቅ፡ ወአቀመ፡ 
+                           ስምዐ፡ ለያዕቆብ፡ እስመ፡ ደብተራሁ፡ እንተ፡ 
+                           ተከላ፡ ለስምዕ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="FridayThird3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Friday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">188–190</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="FridayThird6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Friday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">191–193</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="FridayThird9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Friday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">193–195</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="FridayThirdWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Friday 
+                        of the third week of the Great Fast.</label>
+                     <note>No antiphons for this service are provided in <bibl><ptr target="bm:Velat1966Soma"/></bibl>.</note>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="SaturdayThird">
-                  <label>Hymn for the Saturday of the third week</label>
+                  <label>Set of antiphons for the Saturday of the third week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">196–198</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="SaturdayThirdSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Friday 
+                        of the third week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">196–198</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ገሠጸ፡ ባሕረ፡ ወነፋሳተ፡ ወኵሉ፡ ፍጥረት፡ 
+                           ያከብርዋ፡ ለሰንበት፡ በኀይለ፡ መስቀሉ፡ አጋንንተ፡ 
+                           አውፅአ፡ እለ፡ ለምጽ፡ አንጽሐ፡ ገብረ፡ ተኣምረ፡ 
+                           ፈወሰ፡ ዱያነ፡ ወከሠተ፡ አዕይንተ፡ ዕዉራን፡ 
+                           ወኵሎ፡ ፈጺሞ፡ አዕረፈ፡ እግዚእነ፡ በሰንበት።
+                        </ab>
+                     </div>
+                  </div>
                </div>
+               </div>
+               
+               
+               <div type="textpart" xml:id="FourthWeek">
+                  <label>Set of antiphons for the fourth week of the Great Fast (<foreign xml:lang="gez">መፃጕዕ፡</foreign>,
+                     <foreign xml:lang="gez">Maṣ́agʷǝʿ</foreign>).</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">199–253</citedRange>
+                     </bibl>
+                     <bibl>
+                        <ptr target="bm:2007SomaDeggwa"/>
+                        <citedRange unit="page">78–101</citedRange>
+                     </bibl>
+                  </listBibl>
+               
                <div type="textpart" xml:id="SundayFourth">
-                  <label>Hymn for the Sunday of the fourth week (Sunday of the Paralytic) <foreign xml:lang="gez">ዋዜማ፡ ዘመፃጕዕ፡</foreign>)</label>
+                  <label>Set of antiphons for the Sunday of the fourth week (Sunday of the Paralytic,
+                     <foreign xml:lang="gez">መፃጕዕ፡</foreign>).</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">199–212</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="SundayFourth1WazemaService">
+                     <label>Set of antiphons for the first <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> 
+                        service of the Sunday of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">199–201</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ውእቱ፡ እግዚኣ፡ ለሰንበት፡ ወአቡሃ፡ ለምሕረት፡ 
+                           ቤትየሰ፡ ቤ<sic>ቱ</sic>፡ ጸሎት፡ ይሰመይ፡ ቤተ፡ 
+                           እግዚአብሔር፡ ወማኅደሩ፡ ለልዑል። ቤትየሰ፡ 
+                           ቤተ፡ ጸሎት፡ ይሰመይ፡ ቤተ፡ ረሰይክሙ፡ አንትሙ፡ 
+                           በአተ፡ ፈያት፡ ቤ፡ አሕየዎ፡ ኢየሱስ፡ 
+                           ለመፃጕዕ፡ ለዘ፴ወ፰ክረምተ፡ ሐመ።
+                        </ab>
+                     </div>                     
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ወልደ፡ እግዚአብሔር፡ ተኣምረ፡ ገብረ፡ አሕየወ፡ 
+                           በሥልጣኑ፡ ዐይነ፡ ዕዉረ፡<sic>?</sic> ዘዘዚአሁ፡ 
+                           ኅቡረ፡ ወለዕረፍተ፡ ኵሉ፡ ሰንበተ፡ 
+                           ፈጠረ፡ በሰንበት፡ ዐርገ፡ ሐመረ፡ ገሠጸ፡ ባሕረ፡ 
+                           ወገሠጾሙ፡ ለነፋሳት፡ ወወረቀ፡ ምድረ፡ 
+                           ወገብረ፡ ጽቡረ፡ አሕየወ፡ ዕዉረ፡ ወ፡ ገብረ፡ 
+                           ተኣምረ፡ በሰንበት፡ መድኀኒነ፡ ክርስቶስ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="SundayFourthMawaddesService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Mawaddǝs</foreign> service 
+                        of the Sunday of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">201–212</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="SundayFourth2WazemaService">
+                     <label>Set of antiphons for the second <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> 
+                        service of the Sunday of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">212</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="MondayFourth">
-                  <label>Hymn for the Monday of the fourth week</label>
+                  <label>Set of antiphons for the Monday of the fourth week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">213–221</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="MondayFourthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Monday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">213–216</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           በትረ፡ ኀይል፡ ይፌኑ፡ ለከ፡ እግዚአብሔር፡ 
+                           እምጽዮን፡ ወት<sic>ኳ</sic>ንን፡ በማእከለ፡ ጸላእትከ፡ 
+                           ይዕቀብከ፡ እግዚአብሔር፡ አምኵሉ፡ እኩይ፡ 
+                           ወየሀብከ፡ ሞገሰ፡ ከመ፡ ሞገሰ፡ 
+                           ዳዊት፡ በቅደመ፡ እግዚአብሔር።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="MondayFourth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Monday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">216–217</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="MondayFourth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Monday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">218–219</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="MondayFourth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Monday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">219–221</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="MondayFourthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Monday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">221</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="TuesdayFourth">
-                  <label>Hymn for the Tuesday of the fourth week</label>
+                  <label>Set of antiphons for the Tuesday of the fourth week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">222–228</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="TuesdayFourthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Tuesday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">222–223</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           እምነ፡ ጽዮን፡ በሐ፡ ቅድስት፡ ቤተ፡ 
+                           ክርስቲያን፡ ስርጉት፡ በስብሐት፡ 
+                           አረፋቲሃ፡ ዘመረግድ፡ ስ፡
+                           ወማኅፈዲሃኒ፡ ዘቢረሌ፡ ስ፡ እምሥነ፡ 
+                           ገድሎሙ፡ ለሰማዕት፡ ስ፡ ታቦተ፡ ሕጉ፡ ለንጉሥ፡ 
+                           ዐቢይ፡ ስ፡ እስመ፡ ክርስቶስ፡ መሠረትኪ፡ 
+                           ፀሓየ፡ ጽድቅ፡ ያበርህ፡ ለኪ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayFourth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Tuesday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">224–225</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayFourth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Tuesday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">225–226</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayFourth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Tuesday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">226–228</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayFourthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Tuesday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">228</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="WednesdayFourth">
-                  <label>Hymn for the Wednesday of the fourth week</label>
+                  <label>Set of antiphons for the Wednesday of the fourth week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">229–236</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="WednesdayFourthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Wednesday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">229–230</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           በጽድቅ፡ ወበተፋቅሮ፡ እስመ፡ ረከብኩ፡ እምውስተ፡ 
+                           ደቂቅኪ፡ ይቤ፡ እግዚአብሔር፡ በነቢይ፡ የ<sic>ሕ</sic>ንጽ፡ 
+                           አሕዛብ፡ አረፋተኪ፡ አምኂ፡ ደቂቀ፡ እኅትኪ፡ 
+                           ኅሪት፡ መድኀኒት፡ ወሕይወት፡ ህየንተ፡ 
+                           አበውኪ፡ ተወልዱ፡ ለኪ፡ ደቂቅ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayFourth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Wednesday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">231–232</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayFourth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Wednesday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">232–233</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayFourth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Wednesday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">233–234</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayFourthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Wednesday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">235–236</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="ThursdayFourth">
-                  <label>Hymn for the Thursday of the fourth week</label>
+                  <label>Set of antiphons for the Thursday of the fourth week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">237–243</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="ThursdayFourthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Thursday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">237–238</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           እምነ፡ ጽዮን፡ በሐ፡ በጽባሕ፡ ፍሥሓ፡ 
+                           እ፡ ነሣእናሃ፡ ትኩነ፡ 
+                           መርሐ፡ እ፡ ከመ፡ ታድኅነነ፡ እምእደ፡ ፀርነ፡ 
+                           እ፡ ወታንግፈነ፡ እምእደ፡ ጸላእትነ፡ እ፡ እሞሙ፡ 
+                           <sic>ሰማዕት፡</sic> ወእኅቶሙ፡ ለመላእክት፡ 
+                           እ፡ ሀገሪቶሙ፡ ለቅዱሳን፡ እንተ፡ በሰማያት፡ 
+                           ንበላ፡ በሐ፡ ነሣእናሃ፡ ትኩነነ፡ መርሐ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayFourth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Thursday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">239–240</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayFourth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Thursday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">240–241</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayFourth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Thursday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">241–243</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayFourthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Thursday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">243</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="FridayFourth">
-                  <label>Hymn for the Friday of the fourth week</label>
+                  <label>Set of antiphons for the Friday of the fourth week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">244–250</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="FridayFourthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Friday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">244–246</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ወሪድየ፡ ብሔረ፡ ሮሜ፡ ለቤተ፡ ክርስቲያን፡ 
+                           ርኢክዋ፡ አእመርክዋ፡ አፍቀርክዋ፡ ከመ፡ 
+                           እኅትየ፡ ሠናየ፡ ኀለፍኩ፡ እምድኅረ፡ ጕንዱይ፡ 
+                           መዋዕል፡ ወእምዝ፡ እምድኅረ፡ ኅዳጥ፡ 
+                           ዓመታት፡ ካዕበ፡ ርኢክዋ፡ ወትትኀፀብ፡ በፈለገ፡ 
+                           ጤግሮስ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="FridayFourth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Friday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">246–247</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="FridayFourth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Friday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">247–248</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="FridayFourth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Friday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">249–250</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
+                  <div type="textpart" xml:id="FridayFourthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Friday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">250</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="SaturdayFourth">
-                  <label>Hymn for the Saturday of the fourth week</label>
+                  <label>Set of antiphons for the Saturday of the fourth week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Velat1966Soma"/>
+                        <citedRange unit="page">251–253</citedRange>
+                     </bibl>
+                  </listBibl>
+                  <div type="textpart" xml:id="SaturdayFourthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service for the Saturday 
+                        of the fourth week of the Great Fast.</label>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:Velat1966Soma"/>
+                           <citedRange unit="page">251–253</citedRange>
+                        </bibl>
+                     </listBibl>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ኀይለ፡ መስቀሉ፡ ለክርስቶስ፡ ጽንዕ፡ 
+                           ወጥቅም፡ ሐጹር፡ የዐውዳ፡ ዳዊትኒ፡ 
+                           ይቤ፡ ነኪር፡ ነገሩ፡ በእን<sic>ተ</sic>አኪ፡ 
+                           ሀገረ፡ እግዚአብሔር።
+                        </ab>
+                     </div>
+                  </div>
                </div>
+               </div>
+               
+               
+               <div type="textpart" xml:id="FifthWeek">
+                  <label>Set of antiphons for the fifth week of the Great Fast (<foreign xml:lang="gez">ደብረ፡ ዘይት፡</foreign>,
+                     <foreign xml:lang="gez">Dabra Zayt</foreign>).</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:2007SomaDeggwa"/>
+                        <citedRange unit="page">101–132</citedRange>
+                     </bibl>
+                  </listBibl>
+                  
                <div type="textpart" xml:id="SundayFifth">
-                  <label>Hymn for the Sunday of the fifth week (Sunday of the Mount of Olives) <foreign xml:lang="gez">ዋዜማ፡ ዘደብረ፡ ዘይት፡</foreign>)</label>
+                  <label>Set of antiphons for the Sunday of the fifth week (Sunday of the 
+                     Mount of Olives) <foreign xml:lang="gez">ዋዜማ፡ ዘደብረ፡ ዘይት፡</foreign>).</label>
+                  <div type="textpart" xml:id="SundayFifth1WazemaService">
+                     <label>Set of antiphons for the first <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> 
+                        service of the Sunday of the fifth week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           እንዘ፡ ይነብር<supplied reason="subaudible">፡</supplied> እግዚእነ፡
+                           ውስተ፡ ደብረ፡ ዘይት፡ ወይቤሎሙ፡ 
+                           ለአርዳኢሁ፡ ዑቁኬ፡ ኢያስሕቱክሙ፡ 
+                           ወንበሩ፡ ድልዋኒክሙ፡ በሰንበት፡ 
+                           ኢይኩን፡ ጕያክሙ።
+                        </ab>
+                     </div>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           እንዘ፡ ይነብር፡ እግዚእነ፡ ውስተ፡ ደብረ፡ 
+                           ዘይት፡ ወይቤሎሙ፡ ለአርዳኢሁ፡ በዕለተ፡
+                           ሰንበት፡ ካዕበ፡ ይቤሎሙ፡ ኢየሱስ፡ ለአርዳኢሁ፡ 
+                           እምበለ<sic>ሰ</sic>፡ አእምሩ፡ አምሳሊሁ፡ ከመ፡
+                           በጽሐ፡ ጊዜሁ፡ ለማዕረር።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="SundayFifthMawaddesService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Mawaddǝs</foreign> service 
+                        of the Sunday of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="SundayFifth2WazemaService">
+                     <label>Set of antiphons for the second <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> 
+                        service of the Sunday of the fifth week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="MondayFifth">
-                  <label>Hymn for the Monday of the fifth week</label>
+                  <label>Set of antiphons for the Monday of the fifth week.</label>
+                  <div type="textpart" xml:id="MondayFifthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Monday of the fifth week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           አንቅሐኒ፡ በጽባሕ፡ ክሥተኒ፡ ዕዝንየ፡
+                           በዘአጸምዕ፡ አምላኪየ፡
+                           አምላኪየ፡ እገይሥ፡ ኀቤከ፡ ዘይሰማዕ፡ ግበር፡
+                           ሊተ፡ ምሕረተከ፡ በጽባሕ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="MondayFifth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Monday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="MondayFifth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Monday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="MondayFifth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Monday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="MondayFifthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Monday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="TuesdayFifth">
-                  <label>Hymn for the Tuesday of the fifth week</label>
+                  <label>Set of antiphons for the Tuesday of the fifth week.</label>
+                  <div type="textpart" xml:id="TuesdayFifthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Tuesday of the fifth week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ወአንሰ፡ በብዝኃ፡ ምሕረትከ፡ 
+                           እበውእ፡ ቤተከ፡ ወእሰግድ፡
+                           ውስተ፡ ጽርሐ፡ መቅደስከ፡ በፈሪሆትከ፡ 
+                           እግዚኦ፡ ምርሐኒ፡ በጽድቅከ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayFifth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Tuesday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayFifth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Tuesday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayFifth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Tuesday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="TuesdayFifthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Tuesday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="WednesdayFifth">
-                  <label>Hymn for the Wednesday of the fifth week</label>
+                  <label>Set of antiphons for the Wednesday of the fifth week.</label>
+                  <div type="textpart" xml:id="WednesdayFifthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Wednesday of the fifth week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ኢሳይያስኒ፡ ይቤ፡ ይኅድግ፡ ኃጥእ፡ 
+                           ፍኖቶ፡ ወብእሲ፡ ዓማፂ፡ ምክሮ፡ 
+                           ወይትመየጥ፡ ኀበ፡ <hi rend="rubric">እግዚአብሔር፡</hi> 
+                           አምላኩ፡ እስመ<supplied reason="subaudible">፡</supplied> ይቤ፡ እሄሉ፡ 
+                           <hi rend="rubric">እግዚአብሔር፡</hi> ምስሌሁ፡ ወሣህልየሰ፡ 
+                           ኢይከልዕ፡ እምኔሁ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayFifth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Wednesday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayFifth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Wednesday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayFifth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Wednesday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="WednesdayFifthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Wednesday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="ThursdayFifth">
-                  <label>Hymn for the Thursday of the fifth week</label>
+                  <label>Set of antiphons for the Thursday of the fifth week.</label>
+                  <div type="textpart" xml:id="ThursdayFifthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Thursday of the fifth week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           አኃውየ፡ ኢታዕብዩ፡ ልበክሙ፡ ወአትሕቱ፡ 
+                           ርእሰክሙ፡ ታሕተ፡ እዴሁ፡ <hi rend="rubric">ለእግዚአብሔር፡</hi> 
+                           ፅንዕት፡ ኀበ፡ ዘይክል፡ አድኅኖታ፡ ረዲኦታ፡ 
+                           ለነፍስክሙ፡ አኃውየ፡ ኢታዕብዩ፡ ልበክሙ፡ 
+                           ዲበ፡ ቢጽክሙ፡ እስመ፡ ኵሉ፡ ፆሮ፡ ይፀውር።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayFifth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Thursday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayFifth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Thursday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayFifth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Thursday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="ThursdayFifthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Thursday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="FridayFifth">
-                  <label>Hymn for the Friday of the fifth week</label>
+                  <label>Set of antiphons for the Friday of the fifth week.</label>
+                  <div type="textpart" xml:id="FridayFifthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Friday of the fifth week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ይሴፎ፡ ሰብእ፡ ይርከብ፡ ተስፋሁ፡ 
+                           ይሴፎ፡ ሰብእ፡ ኀበ፡ ፈጣሪሁ፡ 
+                           ወይኔጽራ፡ አዕይንቲሁ፡ ኀበ፡ ቅዱሰ፡ ፳ኤል፡
+                           ለመስተዓግሣን፡ አንተ፡ ኃይል፡ እግዚኦ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="FridayFifth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Friday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="FridayFifth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Friday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="FridayFifth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Friday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="FridayFifthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Friday 
+                        of the fifth week of the Great Fast.</label>
+                  </div>
                </div>
+                  
+                  <div type="textpart" xml:id="MatthiasTheApostle">
+                     <label>Set of antiphons for the feast of Matthias the Apostle (8 Maggābit).</label>
+                     <div type="textpart" xml:id="MatthiasTheApostleSebNaghService">
+                        <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                           for the feast of Matthias the Apostle (8 Maggābit).</label>
+                        <div type="textpart" subtype="incipit">
+                           <ab>
+                              እለ፡ ኃረይከ፡ ወጸዋዕከ፡ 
+                              ከመ፡ ይኩኑ፡ ቅዱሳኒከ፡ ነገሩ፡ ወአስምዑ፡ 
+                              ቃለከ፡ ቃለ፡ ሕይወት፡ ቃለ፡ መድኃኒት፡ 
+                              እስመ፡ ጻድቅ፡ ውእቱ፡ ጸውዖሙ፡ በጽድቁ፡ 
+                              ወረሱ፡ መንግሥተ፡ ሰማያት<sic>፡</sic>
+                           </ab>
+                        </div>
+                     </div>
+                     <!-- ለእመ፡ ኮነ፡ ማትያስ፡ አመ፡ ፰ለመጋቢት፡ (see BLadd16196#ms_i1.6) -->
+                  </div>
+                  
                <div type="textpart" xml:id="Cross">
-                  <label>Hymn for the feast of the cross <foreign xml:lang="gez">ለእመ፡ ኮነ፡ በዓለ፡ መስቀል፡</foreign>)</label>
+                  <label>Set of antiphons for the feast of the Cross in the Great Fast (10 Maggābit).</label>
+                  <div type="textpart" xml:id="CrossSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the feast of the Cross in the Great Fast (10 Maggābit).</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ካልዕ፡ ክብሩ፡ ለፀሐይ፡ ካልዕ፡ ክብሩ፡ ለወርኅ፡ 
+                           ካልዕ፡ ክብሮሙ፡ ለከዋክብት፡ ኮከብ፡ 
+                           አምኮከብ፡ ይኄይስ፡ ክብሩ፡ ወንሕነኒ፡ ንትኬለል፡ 
+                           ዮም፡ በዕፀ፡ መስቀሉ፡ ለክርስቶስ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="Cross3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Friday 
+                        of the feast of the Cross in the Great Fast (10 Maggābit).</label>
+                  </div>
+                  <div type="textpart" xml:id="Cross6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Friday 
+                        of the feast of the Cross in the Great Fast (10 Maggābit).</label>
+                  </div>
+                  <div type="textpart" xml:id="Cross9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Friday 
+                        of the feast of the Cross in the Great Fast (10 Maggābit).</label>
+                  </div>
                </div>
-               <div type="textpart" xml:id="MatthiasTheApostle"><!-- ለእመ፡ ኮነ፡ ማትያስ፡ አመ፡ ፰ለመጋቢት፡ (see BLadd16196#ms_i1.6) --></div>
+                  
+                  <div type="textpart" xml:id="MartyrsOfSebaste">
+                     <label>Set of antiphons for the feast of the Forty Martyrs of Sebaste (13 Maggābit).</label>
+                     <div type="textpart" xml:id="MartyrsOfSebasteWazemaService">
+                        <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                           <foreign xml:lang="gez">Sark</foreign> service for the feast 
+                           of the Forty Martyrs of Sebaste (13 Maggābit).</label>
+                        <div type="textpart" subtype="incipit">
+                           <ab>
+                              ጻድቅሰ፡ ከመ፡ በቀልት፡ ይፈሪ፡ ወይበዝኅ፡ 
+                              ከመ፡ ዘግባ፡ ዘሊባኖስ፡ እስመ፡ ሀሎ፡ አዕፅምቲሆሙ፡ 
+                              ኅቡዕ፡ ውስተ፡ ቀላይ፡ አዝቂር፡ ወኪርያቅ፡ ፵ሐራ፡ 
+                              ሰማይ።
+                           </ab>
+                        </div>
+                     </div>
+                     <div type="textpart" xml:id="MartyrsOfSebasteSebNaghService">
+                        <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                           for the feast of the Forty Martyrs of Sebaste (13 Maggābit).</label>
+                     </div>
+                  </div>
+                  
+                  <div type="textpart" xml:id="TheocritusOfRome">
+                     <label>Set of antiphons for the feast of Theocritus of Rome (17 Maggābit).</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           በከመ፡ ከዋክብት፡ ያሠረግውዎ፡ ለሰማይ፡ 
+                           በስኖሙ፡ ከማሁ፡ ሰማዕትኒ፡ ያሠረግውዋ፡ 
+                           ለቤተ፡ ክርስቲያን፡ በገድሎሙ።
+                        </ab>
+                     </div>
+                  </div>
+                                    
                <div type="textpart" xml:id="Mary">
-                  <label><!-- see BLadd16196#ms_i1.7 --></label>
+                  <label>Set of antiphons for the feast of the Virgin Mary (21 Maggābit).</label>
+                  <div type="textpart" xml:id="MarySebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the feast of the Virgin Mary (21 Maggābit).</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ወትቤ፡ ማርያም፡ ነየ፡ ዓመተ፡ 
+                           <hi rend="rubric">እግዚአብሔር፡</hi> ይኩነኒ፡ በከመ፡ ትቤለኒ፡ 
+                           ያስተበፅዑኒ፡ ሊተሰ፡ እምይእዜሰ፡ ኵሉ፡ 
+                           ትውልድ፡ <hi rend="rubric">ምል፡</hi> ያስተበፅዑኒ፡ ያስተበፅዑኒ፡
+                           ሊተሰ፡ እምይእዜሰ፡ ኵሉ፡ ትውልድ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="Mary3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Friday 
+                        of the feast of the Virgin Mary (21 Maggābit).</label>
+                  </div>
+                  <div type="textpart" xml:id="Mary6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Friday 
+                        of the feast of the Virgin Mary (21 Maggābit).</label>
+                  </div>
+                  <div type="textpart" xml:id="Mary9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Friday 
+                        of the feast of the Virgin Mary (21 Maggābit).</label>
+                  </div>
+                  <!-- see BLadd16196#ms_i1.7 -->
                </div>
+                  
+                  <div type="textpart" xml:id="Incarnation">
+                     <label>Set of antiphons for the feast of the Incarnation (29 Maggābit).</label>
+                     <div type="textpart" xml:id="IncarnationWazemaService">
+                        <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                           <foreign xml:lang="gez">Sark</foreign> service 
+                           for the feast of the Incarnation (29 Maggābit).</label>
+                        <div type="textpart" subtype="incipit">
+                           <ab>
+                              ለልየ፡ በእዴየ፡ ለሐኵዋ፡ ለድንግል፡ 
+                              እንተ፡ እምኔሃ፡ ተሰባእኩ፡ ይቤ፡ 
+                              <hi rend="rubric">እግዚአብሔር፡</hi> መንበሩ፡ ዘኪሩቤል፡ 
+                              ዘኢዮር፡ ማኅደሩ፡ ዘኢይትነገር፡ ቃል፡ 
+                              ኃደረ ላዕሌሃ።
+                           </ab>
+                        </div>
+                        <div type="textpart" subtype="incipit">
+                           <ab>
+                              ዘመልዕልተ፡ ሠረገላ፡ ኪሩቤል፡ 
+                              ይነብር፡ እግዚኡ፡ ለገብርኤል፡ ወረደ፡ 
+                              እምሰማይ፡ ዲበ፡ ምድር፡ እንቲአሁ፡ ዓመተ፡ 
+                              እመ፡ ረስዮ፡ ዘመጽአ፡ ውስተ፡ ዓለም፡ ወኮነ፡ 
+                              ወሬዛ፡ ለኵልነ፡ ቤዛ።
+                           </ab>
+                        </div>
+                        <div type="textpart" subtype="incipit">
+                           <ab>
+                              ተፈሥሒ፡ ፍሥሕት፡ 
+                              ቡርክት፡ አንቲ፡ እምአንስት፡ <hi rend="rubric">እግዚአብሔር፡</hi>
+                              ምስሌኪ፡ ጸርሐ፡ መልአክ፡ ወይቤላ፡ ዜና፡ 
+                              በዕዝና፡ ነገራ፡ አብሰራ፡ ገብርኤል፡ ለ<hi rend="rubric">ማርያም</hi>።
+                           </ab>
+                        </div>
+                     </div>
+                     <div type="textpart" xml:id="IncarnationSebNaghService">
+                        <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                           for the feast of the Incarnation (29 Maggābit).</label>
+                     </div>
+                  </div>
+                  
                <div type="textpart" xml:id="SaturdayFifth">
-                  <label>Hymn for the Saturday of the fifth week</label>
+                  <label>Set of antiphons for the Saturday of the fifth week.</label>
+                  <div type="textpart" xml:id="SaturdayFifthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Saturday of the fifth week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ርድአነ፡ በኃይለ፡ መስቀልከ፡ ነግሃ፡ ነቂሐነ፡ እምንዋም፡ 
+                           ንሴብሐከ፡ እስመ፡ ለከ፡ ይደሉ፡ ስብሐት<sic>፡</sic>
+                        </ab>
+                     </div>
+                  </div>
                </div>
+               </div>
+               
+               
+               <div type="textpart" xml:id="SixthWeek">
+                  <label>Set of antiphons for the sixth week of the Great Fast (<foreign xml:lang="gez">ገብር፡ ኄር፡</foreign>,
+                     <foreign xml:lang="gez">Gabr ḫer</foreign>).</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:2007SomaDeggwa"/>
+                        <citedRange unit="page">132–164</citedRange>
+                     </bibl>
+                  </listBibl>
+               
                <div type="textpart" xml:id="SundaySixth">
-                  <label>Hymn for the Sunday of the sixth week (Sunday of the Good Servant) <foreign xml:lang="gez">ዋዜማ፡ ዘገብር፡ ኄር፡</foreign>)</label>
+                  <label>Set of antiphons for the Sunday of the sixth week (Sunday of the Good Servant) 
+                     <foreign xml:lang="gez">ዋዜማ፡ ዘገብር፡ ኄር፡</foreign>).</label>
+                  <div type="textpart" xml:id="SundaySixth1WazemaService">
+                     <label>Set of antiphons for the first <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> 
+                        service of the Sunday of the sixth week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ገብር፡ ኄር፡ ወገብር፡ ምዕመን፡ ገብር፡ ዘአሥመሮ፡ 
+                           ለእግዚኡ፡ ዘበምልክናከ፡ ሠናየ<supplied reason="subaudible">፡</supplied> ገበርከ፡ ብፁዕ፡ 
+                           አንተ፡ ገብር፡ ኄር።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="SundaySixthMawaddesService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Mawaddǝs</foreign> service 
+                        of the Sunday of the sixth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="SundaySixth2WazemaService">
+                     <label>Set of antiphons for the second <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> 
+                        service of the Sunday of the sixth week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="MondaySixth">
-                  <label>Hymn for the Monday of the sixth week</label>
+                  <label>Set of antiphons for the Monday of the sixth week</label>
+                  <div type="textpart" xml:id="MondaySixthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Monday of the sixth week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ሃሌ፡ ሃሌ፡ ሉያ<supplied reason="subaudible">፡</supplied> አእምሩ፡ አእምሩ፡ 
+                           ከመ፡ በጽሐ፡ ጊዜሁ፡ ለነቂሕ፡ 
+                           እምንዋም፡ እምይእዜሰ፡ አልጸቀት፡ ሕይወትነ፡ 
+                           እንተ፡ ይእቲ፡ ተስፋነ፡ ሐለፈ፡ ሌሊት፡ ወመጽአ፡ 
+                           መዓልት፡ ንግድፍ<supplied reason="subaudible">፡</supplied> እምላዕሌነ፡ ኵሎ፡ 
+                           ምግባረ፡ ጽልመት፡ ንዑ፡ ናንሶሱ፡ በብርሃኑ<sic>፡</sic>
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="MondaySixth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Monday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="MondaySixth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Monday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="MondaySixth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Monday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="MondaySixthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Monday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="TuesdaySixth">
-                  <label>Hymn for the Tuesday of the sixth week</label>
+                  <label>Set of antiphons for the Tuesday of the sixth week.</label>
+                  <div type="textpart" xml:id="TuesdaySixthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Tuesday of the sixth week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ነአኵቶ፡ ለ<hi rend="rubric">እግዚአብሔር፡</hi> ለዘዓቀበነ፡ 
+                           ወአንቅሐነ፡ እምንዋም፡ ክቡድ፡ ወመኑ፡ 
+                           መሐሪ፡ ዘከማከ፡ በሰማይ፡ ወበምድር፡ 
+                           ዘይቀትል፡ ወያሐዩ፡ ዘይቤዙ፡ ወይባልሕ፡ 
+                           በከመ፡ ይቤ፡ ዳዊት፡ <hi rend="rubric">እግዚአብሔር</hi><supplied reason="omitted">፡</supplied> ያበርህ፡ 
+                           ሊተ፡ ምዕመና፡ ለሕይወትየ።
+                        </ab>
+                     </div>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ዕሥየኒ፡ እግዚኦ፡ ሠናይተከ፡ ኅሥዋ፡ ለጽዮን፡ 
+                           ወትልዉ፡ አሠራ፡ እሥ፡ እግ፡ ሠና፡ ወዕቀቡ፡ ኵሎ፡ 
+                           ፍናዊሃ፡ ዕ፡ ዘዓቀበ፡ ሕጋ፡ ይረክባ፡ ዕ፡ ዘአፍቀራ፡
+                           ለቤተ፡ ክርስቲያን፡ ኢይፃሙ፡ ዕ፡ ወተሐቅፎ፡ 
+                           ከመ፡ እሙ፡ ዕ፡ ወተዓብዮ፡ እምነ፡ ቢጹ፡ 
+                           ዕ፡ ወትሴስዮ፡ እክለ፡ ጥበብ፡ ወአእምሮ፡ ዕ፡ 
+                           ወታሰትዮ፡ ወይነ<supplied reason="subaudible"></supplied> ትፍሥሕት፡ ዘበአእምሮ፡ 
+                           ዕ፡ ወታስተቄጽሎ፡ አክሊለ፡ ትፍሥሕት፡ 
+                           ወኃሤት፡ ዕሥየኒ፡ እግዚኦ፡ ሠናይተከ፡ ሠናይት፡
+                           ወሕይወት፡ እንተ፡ አልባቲ፡ ርስሐት።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="TuesdaySixth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Tuesday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="TuesdaySixth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Tuesday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="TuesdaySixth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Tuesday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="TuesdaySixthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Tuesday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="WednesdaySixth">
-                  <label>Hymn for the Wednesday of the sixth week</label>
+                  <label>Set of antiphons for the Wednesday of the sixth week.</label>
+                  <div type="textpart" xml:id="WednesdaySixthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Wednesday of the sixth week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ነግሀ፡ ነቂሐነ፡ እምንዋም፡ ነግሀ፡ 
+                           ነቂሐነ፡ እምንዋም፡ ንጊሣ፡ ለቤተ፡ ክርስቲያን፡ 
+                           ነ፡ እሞሙ፡ ይእቲ፡ ለመሐይምናን፡ 
+                           ወማኅደሮሙ፡ ለንጹሐን፡ ነ፡ አመ፡ ኖኅ፡ 
+                           ይእቲ፡ መድኃኒት፡ እንተ፡ 
+                           ኮነት፡ አንቀጸ<supplied reason="subaudible">፡</supplied> ሕይወት፡ ነ፡ አዳም፡ ወሠናይት፡
+                           ፅዕዱት<supplied reason="subaudible">፡</supplied> ወብርህት፡ ቅድስት፡ ቤተ፡ ክርስቲያን።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="WednesdaySixth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Wednesday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="WednesdaySixth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Wednesday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="WednesdaySixth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Wednesday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="WednesdaySixthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Wednesday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="ThursdaySixth">
-                  <label>Hymn for the Thursday of the sixth week</label>
+                  <label>Set of antiphons for the Thursday of the sixth week.</label>
+                  <div type="textpart" xml:id="ThursdaySixthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Thursday of the sixth week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ሰከየት፡ ምድር<supplied reason="subaudible">፡</supplied> ወትቤ፡ ኀበ፡ ፈጣሪሃ፡ እንዘ፡
+                           ትብል፡ ሰ፡ ገመኑ፡ አሕዛብ፡ ለስምከ፡ ቅዱስ፡
+                           ሰ፡ ምስካበ<supplied reason="subaudible">፡</supplied> አቡሁ፡ የዓርግ፡ ወልድ፡ ሰ፡ አውሥኣ፡ 
+                           እግዚእ፡ ወይቤላ፡ ዓይንየ፡ ይሬእዮሙ፡
+                           ወዕዝንየ፡ ይሰምዖሙ፡ ሰ፡ እምከመ፡ ተመይጡ፡ 
+                           ወነስሑ፡ ይድኅኑ፡ ሰ፡ ወእመ፡ አኮሰ፡ ይመውቱ፡ 
+                           ይመጽኡ፡ ኀቤየ፡ ወአነ፡ እኴንኖሙ፡ 
+                           ሰከየት፡ ምድር፡ ወትቤ፡ ሰብሑ፡ ወዘምሩ፡ ለስሙ።
+                        </ab>
+                     </div>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ምስአል፡ ወምስጋድ፡ ወምስትሥራየ፡
+                           ኃጢአት፡ ይእቲ፡ እንተ፡ ዕፁበ፡ ትረድዕ፡ 
+                           ፅዕዱት፡ ከመ፡ ፀሐይ፡ ብርህት፡ አግዓዚት፡ 
+                           ይእቲ፡ ርዕዩ፡ ጽዮንሃ፡ ቅድስተ<supplied reason="subaudible">።</supplied>
+                        </ab>
+                     </div>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ሐነጸ፡ መቅደሶ፡ በአርያም፡ ወሣረራ፡ ከመ፡ 
+                           ኢታ<supplied reason="omitted">ን</supplied>ቀልቅል፡ ለዓለም፡ 
+                           ይቤ፡ ልዑል<supplied reason="subaudible">፡</supplied> ሣረርክዋ፡ 
+                           ዝየ፡ አኃድር፡ እስመ፡ ኃረይክዋ፡ ስምየ፡ ቅዱሰ፡ 
+                           ዘይዜከር፡ የዓቢ፡ ወይከብር፡ እምኵሉሰ፡
+                           ኪያየ፡ ዘያፈቅር።
+                        </ab>
+                     </div>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           አነ፡ ውእቱ፡ ዘአስተፌሥሐኪ፡ ይቤ፡ <hi rend="rubric">እግዚአብሔር፡</hi> 
+                           ነጽሪ፡ ወርእዪ፡ ፍሥሓ፡ ዘይመጽእ፡ ላዕሌኪ፡ 
+                           ኢይጸልም፡ ወርኅኪ፡ ወኢየዓርብ፡ ፀሐይኪ፡ አነ፡
+                           ውእቱ፡ ዘአስተፌሥሐኪ፡ ወዘአድኅነኪ፡ 
+                           ይቤ፡ ቅዱሰ፡ ፳ኤል<sic>፡</sic>
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="ThursdaySixth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Thursday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="ThursdaySixth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Thursday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="ThursdaySixth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Thursday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="ThursdaySixthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Thursday 
+                        of the sixth week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="FridaySixth">
-                  <label>Hymn for the Friday of the sixth week</label>
+                  <label>Set of antiphons for the Friday of the sixth week.</label>
+                  <div type="textpart" xml:id="FridaySixthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Friday of the first week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ዋካ፡ ይእቲ፡ ወብርሃን፡ መድኃኒት፡ 
+                           ቤተ፡ ክርስቲያን፡ ውስተ፡ ሕይወት፡ ትመርህ፡ 
+                           ወታበጽሖሙ፡ ቅድመ፡ <hi rend="rubric">እግዚአብሔር፡</hi> 
+                           ለየዋሃን፡ ወትቤሎሙ፡ ለዕጉሣን፡ ነዮሙ፡ 
+                           ውሉድየ፡ መሐይምናን፡ ለስምከ፡ ይሰግዱ፡ 
+                           ኀቤየ፡ ወትረ፡ እንተ፡ ጸብሐት።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="FridaySixth3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Friday 
+                        of the first week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="FridaySixth6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Friday 
+                        of the first week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="FridaySixth9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Friday 
+                        of the first week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="FridaySixthWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Friday 
+                        of the fourth week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="SaturdaySixth">
-                  <label>Hymn for the Saturday of the sixth week</label>
+                  <label>Set of antiphons for the Saturday of the sixth week.</label>
+                  <div type="textpart" xml:id="SaturdaySixthSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Saturday of the sixth week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ናክብር፡ ሰንበቶ፡ በተፋቅሮ፡ 
+                           ወኢንኅድግ፡ ሥርዓቶ፡ ወናልዕል፡ 
+                           ስሞ፡ ኅቡረ፡ ለ<hi rend="rubric">እግዚአብሔር፡</hi> 
+                           ሃሌ፡ ሃሌ፡ ሉያ፡ ሃሌሉያ፡ ንሴብሕ፡ 
+                           ክርስቶስሃ፡ ለዘበመስቀሉ<supplied reason="omitted">፡ </supplied>ርኃወ፡ ገነተ።
+                        </ab>
+                     </div>
+                  </div>
                </div>
+               </div>
+               
+               
+               <div type="textpart" xml:id="SeventhWeek">
+                  <label>Set of antiphons for the seventh week of the Great Fast (<foreign xml:lang="gez">ኒቆዲሞስ፡</foreign>,
+                     <foreign xml:lang="gez">Niqodimos</foreign>).</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:2007SomaDeggwa"/>
+                        <citedRange unit="page">164–189</citedRange>
+                     </bibl>
+                  </listBibl>
+               
                <div type="textpart" xml:id="SundaySeventh">
-                  <label>Hymn for the Sunday of the seventh week (Sunday of Nicodemus) <foreign xml:lang="gez">ዋዜማ፡ ዘኒቆዲሞስ፡</foreign>)</label>
+                  <label>Set of antiphons for the Sunday of the seventh week (Sunday 
+                     of Nicodemus) <foreign xml:lang="gez">ዋዜማ፡ ዘኒቆዲሞስ፡</foreign>).</label>
+                  <div type="textpart" xml:id="SundaySeventh1WazemaService">
+                     <label>Set of antiphons for the first <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> 
+                        service of the Sunday of the seventh week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ወሀሎ፡ ፩ዱ፡ ብእሲ<supplied reason="subaudible">፡</supplied> እምፈሪሳውያን፡ ዘስሙ፡ 
+                           ኒቆዲሞስ፡ ዘሖረ፡ ኀቤሁ፡ ቀዲሙ፡ ሌሊተ፡ ወይቤሎ፡ 
+                           ለኢየሱስ፡ ዕጓለ፡ አንበሳ፡ ሰከብከ፡ ወኖምከ፡ 
+                           አንሥአኒ፡ በትንሣኤከ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="SundaySeventhMawaddesService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Mawaddǝs</foreign> service 
+                        of the Sunday of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="SundaySeventh2WazemaService">
+                     <label>Set of antiphons for the second <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> 
+                        service of the Sunday of the seventh week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="MondaySeventh">
-                  <label>Hymn for the Monday of the seventh week</label>
+                  <label>Set of antiphons for the Monday of the seventh week.</label>
+                  <div type="textpart" xml:id="MondaySeventhSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Monday of the seventh week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           በአይቴ፡ እንከ፡ እረክቦ፡ ይትረከብኑ፡ <hi rend="rubric">እግዚአብሔር፡</hi> 
+                           ይሰምዓኒኑ፡ ጸሎትየ፡ እምብዝኃ፡ ጌጋይየ፡ ወሥረይ፡ 
+                           ላቲ፡ ለነፍስየ፡ እስመ፡ አበስኩ፡ ለከ፡ እስመ፡ አልቦ፡ 
+                           ባዕድ፡ አምላክ፡ በእንበሌከ፡ እግዚኦ፡ ተሠሃለኒ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="MondaySeventh3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Monday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="MondaySeventh6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Monday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="MondaySeventh9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Monday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="MondaySeventhWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Monday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="TuesdaySeventh">
-                  <label>Hymn for the Tuesday of the seventh week</label>
+                  <label>Set of antiphons for the Tuesday of the seventh week.</label>
+                  <div type="textpart" xml:id="TuesdaySeventhSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Tuesday of the seventh week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           በተወክፎቱ፡ ለአብርሃም፡ ወበኂሩቱ፡ ለይስሐቅ፡
+                           ወበየውሃቱ፡ ለሙሴ፡ ወበአፍቅሮቶሙ፡ 
+                           ለሐዋርያት፡ ጸውዓነ፡ በቅድስት፡ ቤተ፡ 
+                           ክርስቲያን፡ አሰፈወነ፡ በረከታተ፡ 
+                           ብዕለ፡ ሣህለ፡ ወተስፋ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="TuesdaySeventh3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Tuesday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="TuesdaySeventh6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Tuesday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="TuesdaySeventh9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Tuesday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="TuesdaySeventhWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Tuesday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="WednesdaySeventh">
-                  <label>Hymn for the Wednesday of the seventh week</label>
+                  <label>Set of antiphons for the Wednesday of the seventh week.</label>
+                  <div type="textpart" xml:id="WednesdaySeventhSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Wednesday of the seventh week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ነአኵተከ፡ እግዚኦ፡ አምላክነ፡ ለደቂቀ፡ 
+                           አዳም፡ ዘከፈልከነ፡ ምሕረተከ፡ 
+                           ርስተከ<supplied reason="subaudible">፡</supplied> መልዓ፡ ምድረ፡ ዘፈጠርከ፡ 
+                           እምሰማይ፡ እስከ፡ አጽናፈ፡ ምድር፡ ትሴሲ፡ 
+                           ተግባረከ፡ መ፡ ም፡ ዘ፡ ዓቢተነ፡ በመድኃኒትከ፡ 
+                           ጸግወነ፡ ወትረ፡ ሠናይተከ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="WednesdaySeventh3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Wednesday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="WednesdaySeventh6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Wednesday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="WednesdaySeventh9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Wednesday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="WednesdaySeventhWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Wednesday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="ThursdaySeventh">
-                  <label>Hymn for the Thursday of the seventh week</label>
+                  <label>Set of antiphons for the Thursday of the seventh week.</label>
+                  <div type="textpart" xml:id="ThursdaySeventhSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Thursday of the seventh week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           አኃውየ፡ ቀድሱ፡ ጾመ፡ እስመ፡ ጾም፡ በቍዔት፡ 
+                           ባቲ፡ እስመ፡ በይእቲ፡ ጾም፡ ድኅኑ፡ አበው፡ 
+                           እመንሱት፡ ዓደው<supplied reason="subaudible">፡</supplied> እሞት፡ ውስተ፡ 
+                           ሕይወት።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="ThursdaySeventh3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Thursday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="ThursdaySeventh6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Thursday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="ThursdaySeventh9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Thursday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="ThursdaySeventhWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Thursday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="FridaySeventh">
-                  <label>Hymn for the Friday of the seventh week</label>
+                  <label>Set of antiphons for the Friday of the seventh week. This commemoration includes antiphons
+                     for a <foreign xml:lang="gez">Mǝhǝllā</foreign> service.</label>
+                  <div type="textpart" xml:id="FridaySeventhSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service
+                        for the Friday of the seventh week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           ንስእለከ፡ እግዚኦ፡ አምላክነ፡ ናስተበቍዓከ፡ ሚጠነ፡ ኀቤከ፡ 
+                           ንስእለከ፡ እግዚኦ፡ አምላክነ፡ ዘሜጥኮ፡ ለጳውሎስ፡ በኂሩትከ፡ 
+                           ን፡ ሚጠነ፡ ኀቤከ፡ ን፡ እስመ፡ ለዘኒ፡ ስሕተ፡ አንተ፡ ትክል፡ መይጦቶ፡ መንገሌከ።
+                        </ab>
+                     </div>
+                  </div>
+                  <div type="textpart" xml:id="FridaySeventh3HourService">
+                     <label>Set of antiphons for the service of the 3rd Hour for the Friday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="FridaySeventh6HourService">
+                     <label>Set of antiphons for the service of the 6th Hour for the Friday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="FridaySeventh9HourService">
+                     <label>Set of antiphons for the service of the 9th Hour for the Friday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
+                  <div type="textpart" xml:id="FridaySeventhWazemaService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Wāzemā</foreign>/
+                        <foreign xml:lang="gez">Sark</foreign> service for the Friday 
+                        of the seventh week of the Great Fast.</label>
+                  </div>
                </div>
+                  
                <div type="textpart" xml:id="SaturdaySeventh">
-                  <label>Hymn for the Saturday of the seventh week</label>
+                  <label>Set of antiphons for the Saturday of the seventh week.</label>
+                  <div type="textpart" xml:id="SaturdaySeventhSebNaghService">
+                     <label>Set of antiphons for the <foreign xml:lang="gez">Sǝbḥata nagh</foreign> service 
+                        for the Saturday of the seventh week of the Great Fast.</label>
+                     <div type="textpart" subtype="incipit">
+                        <ab>
+                           በበዓሎሙ፡ ለአይሁድ፡ ዓርገ፡ 
+                           ኢየሱስ፡ ኢየሩሳሌም፡ ወተቀበልዎ፡ ሕዝብ፡ 
+                           ብዙኃን፡ ወበልዋ፡ ለወለተ፡ ጽዮን፡ ነዋ፡ 
+                           ንጉሥኪ፡ ጻድቅ፡ ወየዋህ፡ ዘዕሤቱ፡ ምስሌሁ፡ 
+                           ወምግባሩ፡ ቅድመ፡ ገጹ፡ ዘየሐፅብ፡ በወይን፡ 
+                           ልብሶ፡ ወበደመ፡ አስካል፡ ዓፅፎ፡ የዓሥር፡ 
+                           ዲበ፡ ዘይት፡ ዕዋለ፡ አድጉ።
+                        </ab>
+                     </div>
+                  </div>
                </div>
-               <div type="textpart" xml:id="PalmSunday">
-                  <label>Hymn for the Palm Sunday</label>
                </div>
+               
                <div type="textpart" xml:id="HolyWeek">
-                  <label>Hymn for the days of the Holy Week</label>
+                  <label>Set of antiphons for the days of the Holy Week.</label>
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:2007SomaDeggwa"/>
+                        <citedRange unit="page">189–222</citedRange>
+                     </bibl>
+                  </listBibl>
+                  
+               <div type="textpart" xml:id="PalmSunday">
+                  <label>Set of antiphons for Palm Sunday.</label>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        በዕምርት፡ ዕለት፡ በዓልነ፡ ንፍሑ፡ ቀርነ፡ በጽዮን፡ 
+                        ወስብኩ፡ በደብረ፡ መቅደስየ፡ እስመ፡ ይቤ፡ ዛቲ፡
+                        ዕለት፡ በዓለ<supplied reason="subaudible">፡</supplied> <hi rend="rubric">እግዚአብሔር፡</hi> ሆሣዕና፡ በአርያም፡ 
+                        ቡሩክ<supplied reason="subaudible">፡</supplied> አንተ፡ ንጉሠ፡ ፳ኤል።
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" xml:id="MaundyThursday">
-                  <label>Hymn for the Maundy Thursday</label>
+               <div type="textpart" xml:id="MondayHolyWeek">
+                  <label>Set of antiphons for the Monday of the Holy Week.</label>
+               </div>
+                  <div type="textpart" xml:id="TuesdayHolyWeek">
+                     <label>Set of antiphons for the Tuesday of the Holy Week.</label>
+                  </div>
+                     <div type="textpart" xml:id="WednesdayHolyWeek">
+                        <label>Set of antiphons for the Wednesday of Holy Week.</label>
+                     </div>
+                        <div type="textpart" xml:id="MaundyThursday">
+                  <label>Liturgical instructions and set of antiphons for Maundy Thursday.</label>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        ወበሐሙስ፡ በ፩ሰዓት፡ ይትጋብኡ፡ ሕዝብ፡ 
+                        ውስተ፡ ቤተ፡ መቅደስ፡ ወያልብሱ፡ ታቦተ፡ ልብሰ፡ ጸሊመ፡
+                     </ab>
+                  </div>
                </div>
                <div type="textpart" xml:id="GoodFriday">
-                  <label>Hymn for the Good Friday</label>
+                  <label>Liturgical instructions and set of antiphons for Good Friday.</label>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        መዝሙር፡ ዘዓርብ፡ በጽባሕ፡ በ፱ንአምን፡ 
+                        ነአምን፡ ነአምን፡ ሕማሞ፡ ለዘኢየሐምም፡ 
+                        ርግዘተ፡ ገቦሁ፡ ነአምን፡ ወቅንዋተ፡ እደዊሁ፡ 
+                        ነአምን፡ ዬ፡ ዬ፡ ዬ፡ ነአምን፡ ሞቶ፡ ወትንሣኤሁ።
+                     </ab>
+                  </div>
                </div>
                <div type="textpart" xml:id="HolySaturday">
-                  <label>Hymn for the Holy Saturday</label>
+                  <label>Liturgical instructions and set of antiphons for Holy Saturday.</label>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        በሌሊተ፡ ሰንበተ፡ አይሁድ፡ ይትጋብኡ፡ ካህናት፡ 
+                        ውስተ፡ ቤተ፡ ክርስቲያን፡ ወያንብቡ፡ መኃልየ፡ 
+                        ሰሎሞን፡ በ፫መኃልያት፡ ለለፍጻሜሁ፡ 
+                        ይበል፡ ካህን፡ ሊጦን፡ ወይስግድ፡ ሥልሰ፡ 
+                        ወያልብሱ፡ ልብሰ፡ ሠናየ፡ ለታቦት፡
+                     </ab>
+                  </div>
                </div>
+               </div>
+               
                <div type="textpart" xml:id="Index">
-                  <label>Index of the chants</label>
+                  <label>Index of the chants.</label>
                </div>
                <div type="textpart" xml:id="Directives">
-                  <label>Directives for the parts to be recited beyond Lent</label>
+                  <label>Directives for the parts to be recited beyond Lent.</label>
                </div>
+
+            
+            <div type="textpart" xml:id="Haleta">
+               <label>Table of melodic variations for the Hallelujah (<foreign xml:lang="gez">አንቀጸ፡ ሃሌታ፡</foreign>, 
+                  <foreign xml:lang="gez">ʾAnqaṣa hālletā</foreign>).</label>
+               <listBibl type="editions">
+                  <bibl>
+                     <ptr target="bm:Velat1966Soma"/>
+                     <citedRange unit="page">254–261</citedRange>
+                  </bibl>
+                  <bibl>
+                     <ptr target="bm:2007SomaDeggwa"/>
+                     <citedRange unit="page">222–231</citedRange>
+                  </bibl>
+               </listBibl>
             </div>
-         </div>
+            </div>
       </body>
    </text>
 </TEI>

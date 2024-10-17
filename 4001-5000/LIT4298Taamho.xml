@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4298Taamho">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4298Taamho">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ተአምኆታ፡ ለማርያም፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Taʾamḫotā la-Māryām</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Taʾammǝḫotā la-Māryām</title>
             <title xml:lang="en" corresp="#t1">Salutation to Mary</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -51,10 +52,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </profileDesc>
       <revisionDesc>
          <change who="MV" when="2016-12-30">Created file</change>
+         <change who="DR" when="2022-07-06">Merged with LIT3981Saluta by suggestion of Sophia Dege-Müller</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div type="bibliography">
+            <listRelation>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT4298Taamho" passive="LIT3981Saluta"/>
+            </listRelation>
+         </div>
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
@@ -63,14 +70,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                ማርያም፡ ማኅቶተ፡ ኵሉ፡ ዓለም፨ ሰላም፡ ድንግል፡ ወላዲተ፡ ፍሕም፨ ሰላም፡ ለኪ፡ ድንግል፡ ብርሃን፡ ዘኢይጸልም፨
             </ab>
             </div>
+            <div type="textpart" xml:id="Everybody">
+               <label>Salutation from everybody</label>
+            </div>
             <div type="textpart" subtype="chapter" xml:id="HeavenlySpirits"/>
-            <div type="textpart" subtype="chapter" xml:id="Priests"/>
-            <div type="textpart" subtype="chapter" xml:id="Deacons"/>
-            <div type="textpart" subtype="chapter" xml:id="Martyrs"/>
-            <div type="textpart" subtype="chapter" xml:id="Righteous"/>
-            <div type="textpart" subtype="chapter" xml:id="Monks"/>
-            <div type="textpart" subtype="chapter" xml:id="Virgins"/>
-            <div type="textpart" subtype="chapter" xml:id="Believers"/>
+            <div type="textpart" subtype="chapter" xml:id="Priests">
+               <label>Salutation from the priests</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Deacons">
+               <label>Salutation from the deacons</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Martyrs">
+               <label>Salutation from the martyrs</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Righteous">
+               <label>Salutation from the righteous</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Monks">
+               <label>Salutation from the monks</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Virgins">
+               <label>Salutation from the chaste virgins</label>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Believers">
+               <label>Salutation from the faithful</label>
+            </div>
             <div type="textpart" subtype="chapter" xml:id="Conclusion"/>
          </div>
       </body>

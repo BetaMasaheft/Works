@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to the martyrs of Sebaste</title>
+           <title xml:lang="gez" xml:id="t1">መልክአ፡ አርብዓ፡ ሐራ፡</title>
+           <title xml:lang="gez" corresp="#t1" type="normalized">Malkǝʾa ʾarbǝʿā ḥarā</title>
+           <title xml:lang="en" corresp="#t1">Image of the Forty Soldiers</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -49,6 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-03">Added keywords and incipit</change>
+         <change who="AD" when="2021-04-12">Updated title and corrected typo</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -64,10 +67,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
-                  ሰላም፡ መልክኦሙ፡ ወይን፡ እንተ፡ አንኃ፡ ሐረገ።
+                  ሰላ<choice resp="AD"><sic>ም፡</sic><corr>መ፡</corr></choice> መልክኦሙ፡ ወይን፡ እንተ፡ አንኃ፡ ሐረገ።
                </ab>
             </div>
          </div>
+         
+         <listRelation>
+            <relation name="ecrm:P129_is_about" active="LIT2936RepCh217" passive="PRS12049MartyrsSebaste"/>
+         </listRelation>
       </body>
    </text>
 </TEI>

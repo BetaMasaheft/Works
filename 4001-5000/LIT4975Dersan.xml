@@ -48,25 +48,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 <keywords>
                     <term key="Homily"/>
                     <term key="Translation"/>
-                  </keywords>
+                   <term key="ChristianLiterature"/>
+                </keywords>
             </textClass>
             <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
-        <revisionDesc>
-            <change who="DE" when="2018-06-13">Created entity</change>
-            <change who="MKr" when="2020-11-03">Added clavis and bibliography</change>
+            
+         
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
-      <body>
-          <div type="bibliography">
-            <listBibl type="editions">
+ 
+        <change who="DE" when="2018-06-13">Created entity</change>
+        <change who="MKr" when="2020-11-03">Added clavis and bibliography</change>
+        <change when="2022-09-19" who="DR">Merged with deleted LIT1661Homily by suggestion of Marcin Krawczuk</change>
+        </revisionDesc>
+    </teiHeader>
+    <text xml:base="https://betamasaheft.eu/">
+        <body>
+            <div type="bibliography">
+              <listBibl type="editions">
                 <bibl><ptr target="bm:Beylot2007Cyrille"/></bibl>
-            </listBibl>
+              </listBibl> 
                 <listRelation>
-                  <relation name="saws:isAttributedToAuthor" active="LIT4975Dersan" passive="PRS3261Cyrilof"/>
-              </listRelation>
-          </div><!---->
-      </body>
+                    <relation name="saws:isAttributedToAuthor" active="LIT4975Dersan" passive="PRS3261Cyrilof"/>
+                    <relation name="betmas:formerlyAlsoListedAs" active="LIT4975Dersan" passive="LIT1661Homily"/>
+                    <relation name="ecrm:P129_is_about" active="LIT4975Dersan" passive="PRS8854Simeon"/>
+                </listRelation>
+            </div>
+        </body>
     </text>
 </TEI>

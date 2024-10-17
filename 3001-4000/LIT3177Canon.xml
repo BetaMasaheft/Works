@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3177Canon">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Canon of the Doctors of the Church on those who abjure</title>
+             <title xml:id="t1" xml:lang="gez">መጽሐፈ፡ ቀኖና፡ ዘሠርዕዎ፡ መምሕራነ፡ ቤተ፡ ክርስቲያን፡ በእንተ፡ ዘክህደ፡ ሃይማኖት፡</title>
+            <title corresp="#t1" xml:lang="en">Canon of the Doctors of the Church on those who abjure</title>
+            <title corresp="#t1" xml:lang="en">Canon Established by the Doctors of the Church on those who deny the faith</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="RL"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -24,9 +27,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p/>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -48,11 +49,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-03">Added keywords</change>
+         <change when="2021-01-18" who="RL">Added extra English title, Gǝʿǝz title and witnesses</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
+         <listRelation>
+            <relation name="lawd:hasAttestation" active="LIT3177Canon" passive="EMIP02264"/>
+            <relation name="lawd:hasAttestation" active="LIT3177Canon" passive="BLadd11293"/>
+            <relation name="lawd:hasAttestation" active="LIT3177Canon" passive="EMML5"/>
+         </listRelation>
       </body>
    </text>
 </TEI>
