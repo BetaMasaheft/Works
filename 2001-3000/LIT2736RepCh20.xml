@@ -8,8 +8,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <title xml:lang="gez" corresp="#t1" type="normalized">Malkǝʾa Śǝllāse</title>
             <title xml:lang="en" corresp="#t1">Image of the Trinity</title>
             <title xml:lang="gez" xml:id="t2">ሰላም፡ ለህላዌክሙ፡ ዘይመውእ፡ ህላዌያተ።</title>
-            <title xml:lang="gez" type="normalized" corresp="#t2">Salām la-həllāwekkəmu za-yəmawwəʾ həllāweyāta</title>
-            <title xml:lang="en" corresp="#t2">Salutation to Your substance, who wins the elements</title>
+            <title xml:lang="gez" type="normalized" corresp="#t2">Salām la-həllāwekəmu za-yəmawwəʾ həllāweyāta</title>
+            <title xml:lang="en" corresp="#t2">Salutation to Your substance, which wins over the elements</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -19,9 +19,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -42,8 +41,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </xi:fallback>
          </xi:include>
       </encodingDesc>
-      <profileDesc>
+      <profileDesc>         
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract><p>Hymn composed on the occasion of the consecration of the church of Dabra Bərhān Śəllāse (1694 A.D.) and attributed to <persName ref="PRS8671SebhatL">ʾAbbā Səbḥat Laʾab</persName> (†1702 A.D.).</p>
+            <p>According to <bibl><ptr target="bm:Loefgren1974Katalog"/><citedRange unit="page">45</citedRange></bibl>,
+               the text was written under one <foreign xml:lang="gez-tr">nəguś</foreign> ʾIyāsu mentioned in the 
+               <foreign xml:lang="gez-tr">malkəʾ</foreign>, i.e. either under 
+               <persName ref="PRS5616IyasuI">ʾIyāsu I (r. 1682–1706)</persName> or
+               <persName ref="PRS5617IyasuII">ʾIyāsu II (r. 1730–1755)</persName>.</p>
+         </abstract>
          <textClass>
             <keywords>
                <term key="Poetry"/>
@@ -56,18 +62,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2016-11-25">witnesses added</change>
          <change who="MV" when="2017-03-14">Added title, keywords and incipit</change>
+         <change who="JK" when="2024-07-23">Added reference to Löfgren 1974</change>
+         <change who="ES" when="2024-09-27">Added the text, title, relations and bibl (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor" active="LIT2736RepCh20" passive="PRS8671SebhatL"></relation>
+               <relation name="skos:exactMatch" active="LIT2736RepCh20" passive="https://w3id.org/malke/2736/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">20</citedRange>
                </bibl>
             </listBibl>
             <listBibl type="secondary">
+               <bibl><ptr target="bm:Tedros2008Malk"/></bibl>
+               <bibl><ptr target="bm:Gabre1970Consider"/></bibl>
                <bibl>
                   <ptr target="bm:Habtemichael2007EAEmalke"/>
                   <citedRange unit="page">701b</citedRange>
@@ -78,13 +94,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለህላዌክሙ፡ ዘይመውእ፡ ህላዌያተ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <note>The following text reproduced after <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለህላዌክሙ፡ ዘይመውእ፡ ህላዌያተ፨</l>
+                  <l n="2">ለረኪበ፡ ስሙ፡ ኅቡእ፡ አመ፡ ወጠኑ፡ ተምኔተ፨</l>
+                  <l n="3">እምግብርክሙ፡ ሥላሴ፡ ሶበ፡ ረከብኩ፡ አስማተ፨</l>
+                  <l n="4">መለኮተ፡ ለለ፡ አሐዱ፡ ዘዚአክሙ፡ ገጻተ፨</l>
+                  <l n="5">እንበለ፡ ትድምርት፡ እሰሚ፡ ወእሁብ፡ ትድምርተ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምክሙ፡ ዘኢይትጋባእ፡ እምተከፍሎ፨</l>
+                  <l n="2">እንዘ፡ እምተከፍሎ፡፨</l>
+                  <l n="3">ይትጋባእ፡ በተሰምዮ፡ አምላክ፡ ወይመስሎ፨</l>
+                  <l n="4">ሥሉስ፡ ቅዱስ፡ ጸግዉኒ፡ በተሣህሎ፨</l>
+                  <l n="5">ፍሬ፡ ጽድቅ፡ ከርካዕክሙ፡ ዘእዴክሙ፡ ተከሎ፨</l>
+                  <l n="6">ወፍሬ፡ ወይንክሙ፡ ርትዕ፡ ምስሌሁ፡ ዘሀሎ፨</l>
+               </lg>
+               <lg type="stanza" n="44">
+                  <l n="1">ሰላም፡ ለመልክእክሙ፡ ዘኢኀደገ፡ አምሳለ፨</l>
+                  <l n="2">እምጾታ፡ ኵሉ፡ መልክእ፡ ዘውስተ፡ መጻሕፍት፡ ተብህለ፨</l>
+                  <l n="3">ዋሕድናክሙ፡ ሥላሴ፡ ሶበ፡ አርዮስ፡ ከፈለ፨</l>
+                  <l n="4">ሰይፍክሙ፡ ንዋየ፡ ውስጡ፡ ከመ፡ ይፍድዮ፡ በቀለ፨</l>
+                  <l n="5">ዘእንበለ፡ ሰይፍ፡ ኪያሁ፡ ቀተለ፨</l>
+               </lg>
+               <lg type="stanza" n="45">
+                  <l n="1">ሥላሴክሙ፡ ሥላሴ፡ ይረስየኒ፡ መካነ፨</l>
+                  <l n="2">ድኅረ፡ ተዋሐድኩሰ፡ ዘሥላሴሁ፡ ብርሃነ፨</l>
+                  <l n="3">ዮርዳኖስክሙ፡ ዝየ፡ እስመ፡ ኵለንታየ፡ ኮነ፨</l>
+                  <l n="4">ኢየኀሥሥ፡ እምዮርዳኖስ፡ ሰማዕተክሙ፡ ምእመነ፨</l>
+                  <l n="5">ወኢይትሜነዮ፡ ለታቦር፡ እስመ፡ ታቦር፡ አነ፨</l>
+               </lg>
+               <lg type="stanza" n="46">
+                  <l n="1">ሥሉስ፡ ቅዱስ፡ እለ፡ ልብሰ፡ ጥበብ፡ ትለብሱ፨</l>
+                  <l n="2">በልብስክሙ፡ ጸሐፉ፡ ስመ፡ ወልደ፡ ኂሩት፡ ኢያሱ፨</l>
+                  <l n="3">በዓመተ፡ ሐሩር፡ ነፍሳዊ፡ ድኅረ፡ ነገሥተ፡ ምድር፡ ነግሡ፨</l>
+                  <l n="4">ዘያረዊ፡ ማየ፡ ሕይወት፡ ሕንጻ፡ ደብረ፡ ብርሃን፡ መቅደሱ፨</l>
+                  <l n="5">እስመ፡ ለጽሙዓን፡ አውሐዘ፡ ነቅዕክሙ፡ ከርሡ፨</l>
+               </lg>
+               <lg type="stanza" n="47">
+                  <l n="1">ለዘበሰጊድ፡ አቅረብኩ፡ መካልየ፡ ልሳን፡ ስብሐታተ፨</l>
+                  <l n="2">መጠነ፡ አርባዕ፡ ዓሥር፡ እንዘ፡ አተሉ፡ ሰብዓተ፨</l>
+                  <l n="3">ህየንተ፡ አሐዱ፡ ሥላሴ፡ እለ፡ ትፈድዩ፡ ምእተ፨</l>
+                  <l n="4">ጸግዉኒ፡ እምገጽክሙ፡ ንዋየ፡ ገጽ፡ ትፍሥሕተ፨</l>
+                  <l n="5">ወዲበ፡ ዓሥር፡ አህጉር፡ ሀቡኒ፡ ሢመተ፨</l>
+               </lg>
             </div>
          </div>
+         
          <div type="edition" xml:lang="gez">
             <note>taken from the modern published edition as appears at <ptr target="https://debelodatastore.blob.core.windows.net/debelocontainer/Files/SundaySchool/MelkeaSelassie.pdf"/></note>
             <div type="textpart" subtype="stanza" xml:lang="gez">

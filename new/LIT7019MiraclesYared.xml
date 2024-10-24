@@ -21,7 +21,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="BLorient12860"/>
+                    <witness corresp="EMML1844"/>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -30,7 +33,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>Miracles of Yāred, transmitted in a text, which is different from the one in the manuscript d'Abbadie 227 of the 
+                    <placeName ref="INS0303BNF">Bibliothèque nationale de France in Paris</placeName>.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -46,15 +50,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="ES" when="2024-07-03">Created entity</change>
+            <change when="2024-07-03" who="CH">Updated relations, added textparts and witnesses</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7019MiraclesYared" passive=""/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7019MiraclesYared" passive="LIT1512GadlaY"/>
+                    <relation name="ecrm:P129_is_about" active="LIT7019MiraclesYared" passive="PRS10245Yared"/>
                 </listRelation>
             </div><!---->
+            <div type="edition">
+                <note>This list of three miracles of Yāred reflects the number of miracles attested in <ref type="mss" corresp="BLorient12860"/>.
+                    However, since this manuscript is incomplete, the number of miracles attributed to Yāred is probably higher. Incipits are taken 
+                    from <bibl><ptr target="bm:Strelcyn1978BritishLibrary"/><citedRange unit="page">87</citedRange></bibl>.</note>
+                <div type="textpart" subtype="chapter" xml:id="Satan">
+                    <label>Miracle of overcoming of Satan by Yāred</label>
+                    <q xml:lang="gez"><gap reason="lost"/>ወእምድኅረ፡ አዕረፈ፡ <persName ref="PRS10245Yared">ያሬድ፡</persName> ካህን፡ ፈጺሞ፡ 
+                        ገድሉ፡ ወመዊዖ፡ ሰይጣነ፡<gap reason="ellipsis"/></q>
+                </div>
+                <div type="textpart" subtype="chapter" xml:id="Decoration">
+                    <label>The miracle of Yāred, when decoration of the church was hidden from him</label>
+                    <q xml:lang="gez">በስመ፡ <gap reason="ellipsis"/> ነገር፡ በእንተ፡ ሰዋሬሁ፡ ለያሬድ፡ ካህን፡ ሠርጐ፡ ቤተ፡ ክርስቲያን፡ <gap reason="ellipsis"/></q>
+                </div>
+                <div type="textpart" subtype="chapter" xml:id="Gift">
+                    <label>The miracle of Yāred, when a gift dedicated to him was hidden from him</label>
+                    <q xml:lang="gez">በስመ፡ <gap reason="ellipsis"/> ነገር፡ በእንተ፡ ሰዋሬሁ፡ ለያሬድ፡ ካህን፡ ዘተወህቦ፡ ጸጋ፡ <gap reason="ellipsis"/></q>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>

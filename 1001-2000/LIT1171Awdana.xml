@@ -35,7 +35,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Chronography"/>
+               <term key="Translation"/>
+            </keywords>
+         </textClass>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -43,6 +53,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2016-10-04" who="MV">Fixed title</change>
          <change when="2017-04-04" who="DR">Added div</change>
+         <change when="2024-10-18" who="MV">Added bibl, incipit, explicit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -53,15 +64,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:ContiRossini1941AwdaNagast"/>
                </bibl>
             </listBibl>
+            <listBibl type="secondary">
+               <bibl> 
+                  <ptr target="bm:Pietruschka2003Awda"/>
+               </bibl>
+            </listBibl>
          </div>
-        <div type="edition">
-           <div type="textpart" xml:id="tables">
+         <div type="edition">
+            <div type="textpart" xml:id="tables">
                <label>Sixteen circular tables, each subdivided into sixteen parts with questions on various topics</label>
-           </div>
+            </div>
             <div type="textpart" xml:id="seas">
                <label>Sixteen "seas" (<foreign xml:lang="gez">ባሕር፡</foreign>), each containing 16 sentences as a response to the previous questions</label>
+               <note>The following incipit and explicit are taken from <ref type="mss" corresp="BAVet119"/> according to
+                  <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">480</citedRange></bibl>.</note>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ፩ አምላክ፡ መሐሪ፡ ወመስተሣህል፡ ዘተናገረ፡ ፩ ጠቢ<surplus>ቢ</surplus>ብ፡ እምነ፡ ብዙኃን፡ ጠቢባን፡ ወፈላስፋውያን፡
+                     ዘንተ፡ ዘስሙ፡ መጽሐፈ፡ ምክር፡ ለአበው፡  <sic>ቀደመት፡</sic> ከመ፡ ያእምሩ፡ በቱ፡ በዝ፡ እምሂ፡ ሠናየ፡ ወዕመሂ፡ እኩየ፡
+                     ሰብአ፡ ዓለም፡ ለለርእሶሙ፡ ውእቱ፡ ፩ በኃሢሠ፡ መፍቅድ፡ ሐቲት፡ ፪ ሐቲት፡ በነጊደ፡ ንዋይ፡ ፫ ሐቲት፡ 
+                     <supplied reason="omitted">በ</supplied>በዊዓ፡ ቤተ፡ ንጉሥ፡ <supplied reason="omitted"/> ፩ <del rend="expunctuated">ባሕረ፡ ፃና</del>
+                     ፩ በኃሢሠ፡ መፍቅድ፡ ናሁ<supplied reason="omitted">፡</supplied> መጽአ፡ ለከ፡ ሠናይ፡ ዘያስተፌሥሕ፡ ልበከ፡ ብስራት፡ ለከ፡ እስመ፡ ይትፌጸም፡ ጻሕቅከ፡
+                  </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                     ፲፮ ሐቲ<supplied reason="omitted">ት፡</supplied> በተዋስቦ፡ እመሰ፡ ትፈቅድ፡ ተዋስቦ፡ ተዓገሥ፡ እስመ፡ <sic>በተዓገሦ፡</sic> ይትረከብ፡
+                     በ<del rend="expunctuated">ብ</del>ትፍሥሕት፡ <sic>ወኃሢት፤</sic> ወብዕል፡ ወኵሉ፡ <sic>ተምኒትከ፡</sic> ወአንተ፡ <sic>ኵን፡</sic> ኅዱዓ፡
+                     በኵሉ፡ <choice><sic>ነገር፡</sic><corr resp="PRS4805Grebaut PRS9530Tisseran">ነገረ፡</corr></choice> ተዋስቦ፡ ወዝኒ፡ ተዋስቦ፡ ዘትሄሊ፡ ይከውኖሙ፡
+                     ለእሉ፡ ትፍሥሕት፡ <sic>ወኃሢት፡</sic> ወብዕል፨
+                  </ab>
+               </div>
             </div>
-        </div>
+         </div>
       </body>
    </text>
 </TEI>

@@ -4,8 +4,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to Pilate</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ጲላጦስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Ṗilāṭos</title>
+            <title corresp="#t1" xml:lang="en">Image of Pontius Pilate</title>
+            <title xml:id="t2">Hymn to Pilate</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="AD"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -13,10 +17,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">               
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -44,25 +47,73 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-28">Added keywords and incipit</change>
+         <change who="ES" when="2024-09-27">Added the text, title, relations and bibl (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT2723RepCh7" passive="PRS7928Pontius"></relation>
+               <relation name="skos:exactMatch" active="LIT2723RepCh7" passive="https://w3id.org/malke/2723/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">7</citedRange>
                </bibl>
             </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Cerulli1975Tiberius"/></bibl>
+            </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  መሠረተ፡ ፈቃድ፡ አስተናደፍኩ፡ ከመ፡ ጠቢበ፡ ሊቀ፡ ጽርበት።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <note>The following text reproduced after <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">መሠረተ፡ ፈቃድ፡ አስተናይፍኩ፡ ከመ፡ ጠቢብ፡ ሊቀ፡ ፀረብት።</l>
+                  <l n="2">ዲበ፡ ኰኵሐ፡ ስምከ፡ እሕንጽ፡ ማኅፈደ፡ ክቡር፡ ማኅሌት።</l>
+                  <l n="3">ጲላጦስ፡ መስግን፡ ዘኢየሩሳሌም፡ ቅድስት፨</l>
+                  <l n="4">ባሕቱ፡ ካልእ፡ ዘእምኀቤከ፡ ረድኤት፨</l>
+                  <l n="5">ያስተፋጥን፡ ሐድሶታ፡ ለዛቲ፡ ሕንፀት፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ በጽላተ፡ ሰማይ፡ ዘተጽሕፈ፨</l>
+                  <l n="2">ወለድማኅከ፡ ምሉእ፡ ጸጋ፡ ሌሊተ፡ ገድል፡ ነፍኒፈ፨</l>
+                  <l n="3">ጲላጦስ፡ ክብርከ፡ እምወሰነ፡ ክብር፡ ኃለፈ፨</l>
+                  <l n="4">ለክርስቶስ፡ ፍዳ፡ ሥቃዩ፡ እስመ፡ ሥጋከ፡ ተወክፈ፨</l>
+                  <l n="5">ሥቃየ፡ ንጉሥ፡ ጢባርዮስ፡ ዘይኴንን፡ እልፈ፨</l>
+               </lg>
+               <lg type="stanza" n="28">
+                  <l n="1">ሰላም፡ ለግንዘተ፡ ሥጋከ፡ በእደ፡ ሰይለቡስ፡ ሊቀ፡ ገዛዕት፨</l>
+                  <l n="2">ወለመቃብሪከ፡ ሰላም፡ መቃብረ፡ ክርስቶስ፡ እምርት፨</l>
+                  <l n="3">ጲላጦስ፡ ነጋሢ፡ ተወካፌ፡ መስቀል፡ ፀባሕት፨</l>
+                  <l n="4">ነጐድጓድ፡ ማኅሌትከ፡ አመ፡ ወርኃ፡ በዓል፡ ክረምት፨</l>
+                  <l n="5">እምሰማየ፡ ልሳን፡ ተሰምዓ፡ ወደምፁ፡ አቅርንት፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለከ፡ በጸጋ፡ አምላክከ፡ ወልድ፡ አምጣነ፡ አልቦ፡ ንስሐ፤</l>
+                  <l n="2">ጲላጦስ፡ ቦእከ፡ ቤተ፡ ፍሥሐ፨</l>
+                  <l n="3">ዘብርሃን፡ ሠርጐ፡ ሕንጼሃ፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለከ፡ ለኒቆዲሞስ፡ ወዮሴፍ፡ ዘገነዝዎ፡ በሥጋ፨</l>
+                  <l n="2">ጲላጦስ፡ ክብሮሙ፡ እንበለ፡ ንትጋ፨</l>
+                  <l n="3">አውረስከ፡ ቅዳሜ፡ ጸጋ፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለከ፡ ለገባእት፡ ዓስብ፡ አመ፡ ይትወሀቦሙ፡ ድኅረ፨</l>
+                  <l n="2">ጲላጦስ፡ ኪያከ፡ በዘአክበረ፨</l>
+                  <l n="3">አማሕፀንኩከ፡ ኢትርሳዕ፡ ፍቅረ፨</l>
+                  <l n="4">ተሀበኒ፡ አሐተ፡ ዲናረ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

@@ -5,8 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:id="t1" xml:lang="gez">ተረፈ፡ ነገሩ፡ ለኤልሳዕ፡ ቀሊል፡ ስረት፡ ዖፍ።</title>
-                <title corresp="#t1" xml:lang="gez" type="normalized">Tarrafa nagaru la-ʾelsāʿ qalil sǝrat ʿof</title>
+                <title xml:id="t1" xml:lang="gez">ተረፈ፡ ነገሩ፡ ለኤልሳዕ፡ ቀሊለ፡ ስረት፡ ዖፍ።</title>
+                <title xml:lang="gez" type="normalized" corresp="#t1">Tarafa nagaru la-ʾElsāʿ qalila sǝrrat ʿof ... (Qǝne of ʿǝṭāna mogar type)</title>
+                <title xml:lang="en" corresp="#t1">The remains of the matter of Elijah, bird, of the light flight ...</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="ES"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -22,7 +23,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <listWit><witness corresp="BLorient492#a1"> <!--<title ref="#t2"></title>--></witness></listWit>
+                <listWit><witness corresp="BLorient492">BL oriental 492, as 
+                    <ref target="BLorient492#a1">Additional note 1</ref></witness></listWit>
                 
             </sourceDesc>
         </fileDesc>
@@ -32,13 +34,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p>A <term key="Qene">qǝne poem</term> of <term key="EtanaMogar">ʿǝṭāna mogar</term> type</p>
+                <p>A <term key="Qene">qǝne poem</term> of <term key="EtanaMogar">ʿǝṭāna mogar</term> type, 
+                    to be possibly assigned to <persName ref="PRS11371Marqos">Mārqos</persName> (the author of 
+                    <ref type="work" corresp="LIT6991Emhaqala"/>) .</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Poetry"/>
                     <term key="Qene"/>
+                    <term key="EtanaMogar"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -48,11 +53,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="ES" when="2024-05-02">Created entity</change>
+            <change who="DN" when="2024-08-14">Some revisions</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography"/><!---->
+            <listRelation>
+                <relation name="saws:isAttributedToAuthor" active="LIT6990Taraf" passive="PRS11371Marqos" cert="medium">
+                </relation>
+            </listRelation>
         </body>
     </text>
 </TEI>
