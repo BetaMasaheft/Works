@@ -39,12 +39,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <witness corresp="EMML44"/>
                <witness corresp="BNFet346"/>
                <witness corresp="BAVet82"/>
+               <witness corresp="BAVet21"/>
                <!--create mini ms-->
             </listWit>
             <!-- list from ESam004 
             <listBibl type="mss">
                <bibl>BritMus Orient. 4849 (17th-18th cent.), <locus from="37r" to="108v">37r-108v</locus> (StrBritLib 94, n<locus target="#58">58</locus>);</bibl>
                <bibl>VatLib Aeth. 82 (19th cent.), <locus from="15" to="83">15-83</locus> (GréTisVat I, 298-307);</bibl>
+                <bibl>VatLib Aeth. 121 (19th cent.),   <locus from="5r" to="89r">52-89r</locus> (GréTisVat I, 488-491);</bibl>
                <bibl>EMML n° 424 (19th-20th cent.), <locus from="1a" to="124b">1a-124b</locus> (EMML II, 143);</bibl>
                <bibl>EMML n°301 (20th cent.), <locus from="2a" to="138a">2a-138a</locus> (EMML II, 1);</bibl>
                <bibl>EMML n°44 (20th cent.), <locus from="2a" to="15a">2a-15a</locus>, 31b-53b, 64a-83a (EMML I, 48);</bibl>
@@ -152,7 +154,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </div>
                
                <div type="textpart" subtype="Introduction">
-<label>Introduction</label>               </div>
+                  <label>Introduction</label>             
+               </div>
             </div>
             
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Hedar">
@@ -167,9 +170,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionMiracles">
                   <label xml:lang="en">Introduction to the miracles performed by St Michael</label>
+                  <!-- This introduction is transmitted in the section for Ḫǝdār in BAVet82, but in the section for Maskaram in BAVet121 (instead of the miracle)  -->
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleHedar">
                   <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ḫǝdār</foreign> on the Egyptian sailors saved by St Michael</label>
+                  <!-- This miracle is transmitted in the section for Ḫǝdār in BAVet82, but in the section for Hamle in BAVet121  -->
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeHedar">
                   <label xml:lang="en">Commemorative Notice for <foreign xml:lang="gez">Ḫǝdār</foreign>
@@ -194,6 +199,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleTahsas">
                   <label xml:lang="en">Miracle for <foreign xml:lang="gez">Tāḫśāś</foreign> on the poor peasant who found a treasure</label>
+                  <!-- This miracle is transmitted in the section for Tāḫśāś in BAVet82, but in the section for Gǝnbot in BAVet121  -->
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="ThreeYouths">
+                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Tāḫśāś</foreign> of the three youths in the furnace</label>
+                  <!-- This miracle is inserted here after BAVet121; GrebTiss p. 489 give no incipt of other info, it does not correspond to "MiracleTahsas". -->
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeTahsas">
                   <label xml:lang="en">Commemorative Notice for <foreign xml:lang="gez">Tāḫśāś</foreign>
@@ -215,10 +225,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyTerr" passive="PRS3828Epiphani"/>
                   </listRelation>
                   <label xml:lang="en">Homily for <foreign xml:lang="gez">Ṭǝrr</foreign> by <persName ref="PRS3828Epiphani"/>
+                     <!-- This homily is transmitted in the section for Ṭǝrr in BAVet82, but in the section for Miyāzyā in BAVet121  -->
                   </label>
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleTerr">
                   <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ṭǝrr</foreign>
+                     <!-- This miracle is transmitted in the section for Ṭǝrr in BAVet82, but in the section for Miyāzyā in BAVet121  -->
                   </label>
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeTerr">
@@ -248,6 +260,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleYakkatit">
                   <label xml:lang="en">Miracle for <foreign xml:lang="gez">Yakkātit</foreign>
+                     <!-- This miracle is transmitted in the section for Yakkātit in BAVet82, but in the section for Naḥase in BAVet121  -->
                   </label>
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeYakkatit">
@@ -284,7 +297,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            and <bibl>
                               <ptr target="bm:budge1894stmichael"/>
                            </bibl> as <persName ref="PRS8790Severus"/>. His name is often omitted,
-                           leaving only his title "patriarch of Antioch". Occassionally it is also attributed to other authors.
+                           leaving only his title "patriarch of Antioch". Occasionally it is also attributed to other authors.
                         </desc>
                      </relation>
                   </listRelation>
@@ -292,6 +305,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleMaggabit">
                   <label xml:lang="en">Miracle for <foreign xml:lang="gez">Maggābit</foreign>
+                     <!-- This miracle is transmitted in the section for Maggābit in BAVet82, but in the section for Yakkātit in BAVet121  -->
                   </label>
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeMaggabit">
@@ -311,7 +325,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </label>
                
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyMiyazya">
-                  
+                  <!-- This homily is within the section for Miyāzyā in BAVet82, but in the section for Tāḫśāś in BAVet121 (here attributed to PRS10425Yohanne) -->
                   <listRelation>
                      <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyMiyazya" passive="PRS10425Yohanne">
                         <desc>The Homily for <foreign xml:lang="gez">Miyāzyā</foreign> is attributed in
@@ -331,6 +345,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleMiyazya">
                   <label xml:lang="en">Miracle for <foreign xml:lang="gez">Miyāzyā</foreign>
+                     <!-- This homily is transmitted in the section for Miyāzyā in BAVet82, but in the section for Ṭǝrr in BAVet121  -->
                   </label>
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeMiyazya">
@@ -367,6 +382,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleGenbot">
                   <label xml:lang="en">Miracle for <foreign xml:lang="gez">Gǝnbot</foreign>
+                     <!-- This miracle is within the section for Gǝnbot in BAVet82, but in the section for Ḫǝdār in BAVet121  -->
                   </label>
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeGenbot">
@@ -422,6 +438,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleHamle">
                   <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ḥamle</foreign>
+                     <!-- This miracle is within the section for Ḥamle in BAVet82, but in the section for Tāḫśāś in BAVet121  -->
                   </label>
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeHamle">
@@ -445,6 +462,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleNahase">
                   <label xml:lang="en">Miracle for <foreign xml:lang="gez">Naḥase</foreign>
+                     <!-- This miracle is transmitted in the section for Naḥase in BAVet82, but in the section for Ṭǝqǝmt in BAVet121  -->
                   </label>
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeNahase">
@@ -496,6 +514,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleTeqemt">
                   <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
+                     <!-- This miracle is transmitted in the section for Ṭǝqǝmt in BAVet82, but in the section for Maggābit in BAVet121  -->
                   </label>
                </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeTeqemt">
