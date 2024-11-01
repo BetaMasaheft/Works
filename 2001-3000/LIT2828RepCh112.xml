@@ -4,7 +4,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to Nathaniel</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ናትናኤል፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Nātnāʾel</title>
+            <title corresp="#t1" xml:lang="en">Image of Nathaniel</title>
+            <editor key="AD"></editor>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -13,10 +16,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">          
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -44,6 +46,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-05">Added keywords and incipit</change>
+         <change who="ES" when="2024-11-01">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -54,15 +57,50 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">112</citedRange>
                </bibl>
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
             </listBibl>
+            <listRelation><relation name="skos:exactMatch" active="LIT2828RepCh112" passive="https://w3id.org/malke/2827/"></relation></listRelation>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዕለተ፡ ፅንስከ፡ ኃሤት፡ ትኩዝ፡ አቡከ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ሰላም፡ ለዕለተ፡ ክቡር፡ ፅንስከ፨</l>
+                  <l n="2">ወለልደትከ፡ ትኩን፡ ትፍሥሕተ፡ ኅዝንት፡ እምከ፨</l>
+                  <l n="3">እስራኤላዊት፡ ናትናኤል፡ ጽልሑተ፡ እስራኤል፡ ሕዝብከ፨</l>
+                  <l n="4">እስመ፡ ኢኀደረ፡ ወኢተረክበ፡ ላዕሌከ፨</l>
+                  <l n="5">እንዘ፡ በሥጋዌ፡ ትአጽር፡ ነጸርከ፡ አምላክ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ እንተ፡ ተሰምየ፡ ይሁዳ፨</l>
+                  <l n="2">ምስለ፡ ሥዕርትከ፡ ወርእስከ፡ ክሉለ፡ ብርሃን፡ ጸዐዳ፨</l>
+                  <l n="3">ዕሩቀ፡ ኵለንታ፡ ናትናኤል፡ እምልብሰ፡ ጽልሑት፡ ወዕዳ፨</l>
+                  <l n="4">መሐርከ፡ ቅድመ፡ ኵሉ፡ ለወለተ፡ ዳዊት፡ ወልዳ፨</l>
+                  <l n="5">ከመ፡ እምወላዲ፡ ተወልደ፡ ዘልደት፡ እንግዳ፨</l>
+               </lg>
+               <lg type="stanza" n="19">
+                  <l n="1">ሰላም፡ ለመቃብሪከ፡ ወለትንሣኤከ፡ በስብሐት፨</l>
+                  <l n="2">በዕለት፡ እምርት፡ እንዘ፡ ኢእምርት፡ ዕለት፨</l>
+                  <l n="3">ዐቃቤ፡ ሥራይ፡ ናትናኤል፡ በዕብሬትከ፡ ክረምት፨</l>
+                  <l n="4">ተሰቅዩ፡ ጠለ፡ ፈውስ፡ ሕሙማነ፡ ነፍስ፡ አዝርእት፨</l>
+                  <l n="5">ዘተዘርኡ፡ ወተገድፉ፡ በዓለም፡ ገራህት፨</l>
+               </lg>
+               <lg type="stanza" n="20">
+                  <l n="1">ሰላም፡ ለዕለተ፡ ሞትከ፡ በኢየሩሳሌም፡ ቅድመ፨</l>
+                  <l n="2">እንተ፡ ተቀትለት፡ ነቢያተ፡ ወፈጣሬ፡ ኵሉ፡ ዳግመ፨</l>
+                  <l n="3">ኤጲስ፡ ቆጶስ፡ ናትናኤል፡ ኀበ፡ ያዕቆብ፡ ተሰይመ፨</l>
+                  <l n="4">ፍታሕ፡ ፍታሕ፡ በቃልከ፡ እማእሠረ፡ ጌጋይ፡ ዓለመ፨</l>
+                  <l n="5">ወሕትም፡ በእዴከ፡ አፈ፡ ፀር፡ ግሩም፨</l>
+               </lg>
+               <lg type="stanza" n="21">
+                  <l n="1">ሶበ፡ ሐወጸኒ፡ ግብተ፡ ማሕሌተከ፡ እንግዳ፨</l>
+                  <l n="2">አባእክዎ፡ ቤትየ፡ አምጣነ፡ ፈራህከ፡ ፍዳ፨</l>
+                  <l n="3">ሐውጾተ፡ ድውይኒ፡ ዘትእዛዝከ፡ ይሁዳ፨</l>
+                  <l n="4">ሐውጸኒ፡ ለዓለም፡ ለዘደወይኩ፡ በዐውዳ፨</l>
+                  <l n="5">እንዘ፡ ለነፍስየ፡ ትጸውር፡ መፍቅዳ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>
