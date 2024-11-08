@@ -16,9 +16,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -36,6 +36,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract>
+            <p>According to <bibl><ptr target="bm:Getatchew2018Cross"/><citedRange unit="page">53</citedRange></bibl>, 
+               this <foreign xml:lang="gez">malkǝʾ</foreign> was possibly written by an otherwise unknown Ləssāna Maṣḥaf. 
+               Its fifteenth stanza circulates on its own as a magic text (see, for example, <ref type="mss" corresp="UppEt58"/>).</p>
+         </abstract>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Poetry"/>        
@@ -47,25 +52,96 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-09">Added keywords and incipit</change>
          <change who="AD" when="2021-04-11">Updated title</change>
+         <change who="JK" when="2024-11-07">Added references to Getatchew Haile 2018</change>
+         <change when="2024-11-07" who="ES">added text and bibl from Augustine Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation>
+            <relation name="ecrm:P129_is_about" active="LIT2842RepCh125" passive="TrueCross"/>            
+            <relation name="skos:exactMatch" active="LIT2842RepCh125" passive="https://w3id.org/malke/2842/"></relation>
+         </listRelation>
          <div type="bibliography">
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">125</citedRange>
                </bibl>
+               <bibl>
+                  <ptr target="bm:Getatchew2018Cross"/>
+                  <citedRange unit="page">54–67</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:MgWebsite"/>
+               </bibl>
+               <bibl><ptr target="bm:ZekraAbaw"/></bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Grebaut1934Priere"></ptr></bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምከ፡ በመጽሔተ፡ መስቀል፡ ዘተለክዐ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <note>This edition is based on the text provided at <bibl><ptr target="bm:MgWebsite"/></bibl>.</note>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ በመጽሔተ፡ መስቀል፡ ዘተለክአ፨</l>
+                  <l n="2">ወለሥዕርትከ፡ ጸሊም፡ ዘደመ፡ ተኰርኦ፡ ተቀብአ፨</l>
+                  <l n="3">ሰዋስወ፡ ፍቅር፡ ክርስቶስ፡ ትኩል፡ ዲበ፡ እንግድአ፨</l>
+                  <l n="4">አስትየኒ፡ ለተሳትፎ፡ እንተ፡ ሰተይከ፡ ጽዋዐ፨</l>
+                  <l n="5">በዋዕየ፡ ፍቅርከ፡ አምላካዊ፡ ሕሊናየ፡ ጸምአ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለርእስከ፡ ሥርግወ፡ አክሊል፡ ዘሥዖክ፨</l>
+                  <l n="2">ወለዕጉሠ፡ ምራቅ፡ ገጽከ፡ እምሐራ፡ ጲላጦስ፡ መልአክ፨</l>
+                  <l n="3">ኢየሱስ፡ ክርስቶስ፡ ተወካፌ፡ ስቅለት፡ አምላክ፨</l>
+                  <l n="4">እንበለ፡ ደምከ፡ ወመስቀልከ፡ ቡሩክ፨</l>
+                  <l n="5">አልብየ፡ ምክሕ፡ እምዘመድ፡ ወዐርክ፨</l>
+               </lg>
+               <lg type="stanza" n="26">
+                  <l n="1">ሰላም፡ ለትንሣኤከ፡ እንበለ፡ መዋጥሕ፡ ወግልባቤ፨</l>
+                  <l n="2">ወለዕርገትከ፡ በኀይል፡ ውስተ፡ ደብረ፡ ስኂን፡ ወደብረ፡ ከርቤ፨</l>
+                  <l n="3">በኵረ፡ ትንሣኤ፡ ክርስቶስ፡ ልሳነ፡ መጽሐፍ፡ በከመ፡ ይቤ፨</l>
+                  <l n="4">አጥረይኩ፡ ምክሐ፡ ወጸወነ፡ በጊዜ፡ ምንዳቤ፨</l>
+                  <l n="5">ኪያከ፡ አበ፡ ወኪያከ፡ መጋቤ፨</l>
+               </lg>
+               <lg type="stanza" n="27">
+                  <l n="1">ሰላም፡ ለምጽአትከ፡ በስብሐተ፡ አብ፡ ወላዲ፨</l>
+                  <l n="2">ወለመንግሥትከ፡ ህልው፡ ለዓለመ፡ ዓለም፡ ወዓዲ፨</l>
+                  <l n="3">ጥዑመ፡ ስም፡ ክርስቶስ፡ ሞገሰ፡ ዮሐንስ፡ ቃለ፡ ዐዋዲ፨</l>
+                  <l n="4">እንዘ፡ ትዜከር፡ እግዚእየ፡ ትእይርተ፡ ሄሮድስ፡ ከሐዲ፨</l>
+                  <l n="5">ለቤዛ፡ ኃጥእ፡ ገብርከ፡ መስቀለከ፡ ፍዲ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለከ፡ ሠናየ፡ መዐዛ፡ ወጽጌ፡ ንጉሠ፡ ዕፀዋት፡ ዕፅ፨</l>
+                  <l n="2">ወመንበረ፡ ስብሐት፡ ግሩም፡ ዘኪሩቤል፡ ቢጽ፨</l>
+                  <l n="3">መስቀል፡ ርቡዐ፡ ገጽ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ይትባረክ፡ እግዚአብሔር፡ በአፈ፡ ኵሉ፡ ዘሥጋ፨</l>
+                  <l n="2">ወይትአኰት፡ ስሙ፡ ቅድመ፡ ማኅበር፡ ወእንግልጋ፨</l>
+                  <l n="3">ክርስቶስ፡ ስቁል፡ ለአርዌ፡ ብርት፡ ዘትዛወጋ፨</l>
+                  <l n="4">ኅብስተ፡ ሥጋከ፡ ምስለ፡ ማየ፡ ሕይወት፡ ፈለጋ፨</l>
+                  <l n="5">እንበለ፡ ሤጥ፡ ለሰብእ፡ ዘወሀብከ፡ ጸጋ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ስብሐት፡ ለከ፡ አምላኪየ፡ በኍልቈ፡ ሰብእ፡ ወመላእክት፨</l>
+                  <l n="2">ስብሐት፡ ለከ፡ አምላኪየ፡ በኍልቈ፡ ጽዱላን፡ ከዋክብት፨</l>
+                  <l n="3">ስብሐት፡ ለከ፡ አምላኪየ፡ በኍልቈ፡ | ኵሉ፡ ዓለማት፨</l>
+                  <l n="4">ስብሐት፡ ለከ፡ አምላኪየ፡ በኍልቈ፡ ኣዝማናት፡ ወዕለታት፨</l>
+                  <l n="5">ስብሐት፡ ይደሉ፡ ለመስቀልከ፡ ሕይወት፨</l>
+                  <l n="6">እስመ፡ በመስቅልከ፡ ድኅኑ፡ ኵሉ፡ ፍጥረት፨</l>
+               </lg>
+               <lg type="stanza" n="8">
+                  <l n="1">ሰላም፡ ለከ፡ ማሕተመ፡ ሥላሴ፡ መስቀል፡ እንተ፡ ትገዝም፡ ዐማፄ፨</l>
+                  <l n="2">ኩኖ፡ ሰይፈ፡ ወማሕፄ፡ ፀርየ፡ ይኩን፡ ነፉፄ፨</l>
+                  <l n="3">እምገጹ፡ ረኪቦ፡ ድንጋፄ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>
