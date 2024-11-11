@@ -5,7 +5,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Homily by Zacharias, bishop of Sakha, on the descent of Jesus, Mary, Joseph, and Salome to Egypt</title>
+                <title xml:lang="en" xml:id="t1">Homily by Zacharias, bishop of Sakha, on the descent of Jesus, Mary, Joseph, and Salome to Egypt</title>
+                <title xml:lang="gez" xml:id="t2">ድርሳን፡ ዘአቡነ፡ አባ፡ ዘካርያስ፡ ኤጲስ፡ ቆጶስ፡ ትሩፍ፡ ዘለሀገረ፡ ሰኳ፡ መፍቀሪተ፡ ክርስቶስ፡ በእንተ፡ ርደቱ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ኀበ፡ ግብጽ ፡ ወእሙ፡
+                    እግዝእትነ፡ ማርያም፡ ወዮሴፍ፡ ወሰሎሜ፡ አመ፳ወ፩እምነ፡ ግንቦት፡</title>
+                <title xml:lang="gez" type="romanized" corresp="#t2">Dǝrsān za-ʾabuna ʾabbā Zakāryās ʾeṗṗis qoṗṗos tǝruf za-la-hagara Sakʷā mafqarita
+                    Krǝstos baʾǝnta rǝdatu la-ʾǝgziʾǝna ʾIyasus Krǝstos ḫaba Gǝbṣ wa-ʾǝmu ʾǝgzǝʾǝtǝna Māryām wa-Yosef wa-Salome ʾame 20wa4 ʾǝmǝnna Gǝnbot</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -46,16 +50,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </t:langUsage>
         </profileDesc>
         <revisionDesc>
-            <t:change xmlns:t="http://www.tei-c.org/ns/1.0" who="MKr" when="2024-11-11">Created entity</t:change>
+            <change who="MKr" when="2024-11-11">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
-        <t:body xmlns:t="http://www.tei-c.org/ns/1.0">
+        <body>
             <div type="bibliography">
+                
+                <listBibl type="secondary">
+                    <bibl><ptr target="bm:Graf1944GCALI"/><citedRange unit="page"></citedRange>228-229</bibl>
+                </listBibl>
+                
                 <listRelation>
-                    <relation name="saws:isAttributedToAuthor" active="LIT7140Homily" passive=""/>
+                    <relation name="saws:isAttributedToAuthor" active="LIT7140Homily" passive="PRS10510Zachari"/>
                 </listRelation>
             </div><!---->
-        </t:body>
+            
+            <div xml:lang="gez" type="edition">
+                <note>The incipit is taken from <ref type="mss" corresp="EMML7469"/>.</note>
+                <div type="textpart" subtype="incipit">
+                    <ab xml:lang="gez">በአማን፡ ሠረቀ፡ ለነ፡ ዮም፡ ኦአኀዊየ፡ ፀሐየ፡ ጽድቅ፡ ወፈውሰ፡ ዘሀሎ፡ ታሕተ፡ </ab>
+                </div>
+             </div>
+            
+            
+        </body>
     </text>
 </TEI>
