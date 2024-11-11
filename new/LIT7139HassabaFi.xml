@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Hassaba Fidalat</title>
+                <title xml:lang="en" xml:id="t1">...</title>
+                <title xml:lang="gez" xml:id="t2">ሐሳበ፡ ፊደላት፡ ወጠልሰማት፡ ዘተረክበ፡ እምደሴተ፡ ጻና</title>
+                <title xml:lang="gez" type="normalized" corresp="#t2">Ḥassāba fidalāt wa-ṭalsamāt za-tarakba ʾəm-desseta Ṣānā</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -49,7 +51,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT7139HassabaFi" passive="BAVet118"/>
+                </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>
+                        The following incipit is taken from <ref type="mss" corresp="BAVet118"/> according to
+                        <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">478</citedRange></bibl>.</note>
+                    <ab>
+                        <sic>ሓሳበ፡</sic> <sic>ፊደላተ፨</sic> <sic>ወጠልሰማተ፡</sic> ዘተረክበ፡ እምደሴተ፡ ፃና፨ ለእመ፡ <sic>ተሓውር፡</sic>
+                        ውስተ፡ ቤተ፡ መንግሥት፨  <sic>ሰመከ፡</sic> <sic>ወሰመ፡</sic> <sic>እግዝእ፡</sic> ወርኅ፡ ዕለት፨ በ፯ግድፍ፨
+                    </ab>
+                </div>       
+            </div>
         </body>
     </text>
 </TEI>

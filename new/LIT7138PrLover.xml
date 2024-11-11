@@ -5,7 +5,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Prayer of the lover</title>
+                <title xml:lang="en" xml:id="t1">Prayer of the lover</title>
+                <title xml:lang="gez" xml:id="t2">ጸሎተ፡ መስተፋቅር</title>
+                <title xml:lang="gez" type="normalized" corresp="#t2">Ṣalota mastafāqər</title>
+                <title xml:lang="grc" xml:id="t3">περη αγαπης κὲ εφτήχία</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -42,6 +45,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
+                <language ident="grc">Greek</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
@@ -50,7 +54,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT7138PrLover" passive="BAVet118#a1"/>
+                    <relation name="lawd:hasAttestation" active="LIT7138PrLover" passive="BAVet128#a33"/>
+                </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>
+                        The following incipit is taken from <ref type="mss" corresp="BAVet118"/> according to
+                        <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page"></citedRange></bibl>.</note>
+                    <ab>
+                        በስመል፡ አብ፡ <gap reason="ellipsis" resp="PRS4805Grebaut PRS9530Tisseran"/> <sic>ጸሎተ፡</sic> <sic>ምስተ<surplus>፡</surplus>ፋቅር፨</sic> 
+                        አስማተ፡ ንዋይ፡ ምስሓበ፡ ንዋይ፨ አስተፋቅር፡ ወአስተዋድድ፡ ወአስተ<surplus>፡</surplus>ሳልም፨
+                    </ab>
+                </div>       
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <note>The following explicit is taken from <ref type="mss" corresp="BAVet118"/> according to
+                        <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page"></citedRange></bibl>.</note>
+                    <ab>
+                        ኵሎሙ፡ ሰብአ፡ ሃገር፡ <sic>ወሉደ፡</sic> አዳም፡ ወሔዋን፡ ይሰግዱ፡ ለገብርከ፡ እገሌ፨
+                    </ab>
+                </div>       
+            </div>
         </body>
     </text>
 </TEI>

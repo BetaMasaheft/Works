@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">On the persecution of the Jacobite Christians at the time of the Jesuits</title>
+                <title xml:lang="en" xml:id="t1">On the persecution of the Jacobite Christians at the time of the Jesuits</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -33,15 +33,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p/>
             </abstract>
             <textClass>
-                <t:keywords xmlns:t="http://www.tei-c.org/ns/1.0">
+                <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="HistoryAndHistoriography"/>
-                </t:keywords>
+                </keywords>
             </textClass>
-            <t:langUsage xmlns:t="http://www.tei-c.org/ns/1.0">
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
-            </t:langUsage>
+            </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="MV" when="2024-11-11">Created entity</change>
@@ -49,7 +49,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT7136Jacobite" passive="BAVet114"/>
+                    <relation name="lawd:hasAttestation" active="LIT7136Jacobite" passive="BNFabb225"/>
+                </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>
+                        The following incipit is taken from <ref type="mss" corresp="BAVet114"/> according to
+                        <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">444</citedRange></bibl>.</note>
+                    <ab>
+                        ንጽሕፍ፡ ተዝካረ፡ ነገር፡ ጥዩቅ፡ ወዜና፡ ጽዱቅ። በእንተ፡ ዘኮነ፡ ስደት፡ ዓቢይ፡ ላዕለ፡ ክርስቲያን፡ ያዕቆባውያን፨ እለ፡ ብሔረ፡ ኢትዮጵያ፨
+                    </ab>
+                </div>       
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <note>The following explicit is taken from <ref type="mss" corresp="BAVet114"/> according to
+                        <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">444</citedRange></bibl>.</note>
+                    <ab>
+                        ወተኈለቁ፡ ምስለ፡ ሰብአ፡ ቤታ፨
+                    </ab>
+                </div>       
+            </div>
         </body>
     </text>
 </TEI>
