@@ -6,8 +6,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ፈላስፋ፡ ጠቢባን፡</title>
-                <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa falāsfā ṭabibān (short recension)</title>
-                <title xml:lang="en" corresp="#t1">The book of the wise philosophers</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa falāsfā ṭabibān</title>
+                <title xml:lang="en" corresp="#t1">The book of the wise philosophers (short recension)</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -33,7 +33,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <creation/>
             <abstract>
                 <p>
-                    <!-- Add abstract -->
+                    This is the short recension of the <foreign xml:lang="gez">Maṣḥafa falāsfā ṭabibān</foreign>.
                 </p>
             </abstract>
             <textClass>
@@ -57,16 +57,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <text>
         <body>
             <listRelation>
-               <!--  
-                <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1925Mashaf#t1" passive="LIT1925Mashaf#t2arabic"/>
-                <relation name="saws:isAttributedToAuthor" active="LIT1925Mashaf#t2arabic" passive="PRS7509Nasralla">
-                    <desc>It is not clear whether <persName ref="PRS7509Nasralla"/>, who is otherwise unknown, is the compiler or author.-->
-                        <bibl>
-                            <ptr target="bm:Pietruschka2005EAEFalasfa"/>
-                        </bibl>
-                    </desc>
-                </relation>
-                <relation name="saws:isAttributedToAuthor" active="LIT1925Mashaf#t1" passive="PRS7077Mikael"/>
+                <listRelation>
+                    <relation name="saws:isVersionOf" active="LIT7144MFTabiban" passive="LIT1925Mashaf"/>
+                    <relation name="saws:isDifferentTo" active="LIT7144MFTabiban" passive="LIT7145MFTabiban"/>
+                </listRelation>
             </listRelation>
             <div type="bibliography">
                 <listBibl type="secondary">
@@ -91,33 +85,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <div type="edition">
                     <div type="textpart" subtype="incipit" xml:lang="gez">
                         <note>
-                            The following incipit is taken from <ref type="mss" corresp="BAVet118#i3"/></note>
+                            The following incipit is taken from <ref type="mss" corresp="BNFet157#ms_i3"/> according to <bibl><ptr target="bm:Zotenberg1877Catalogue"/>
+                                <citedRange unit="page">260</citedRange></bibl>. It corresponds to <bibl>
+                                    <ptr target="bm:Dillmann1866Chrestomathia"/>
+                                    <citedRange unit="page">40</citedRange>
+                                </bibl>.
+                        </note>
                         <ab>
-                            በስመ፡ እግዚአብሔር፡ መሐሪ፡ ወመስተሣህል፡ ንወጥን፡ በጽሒፈ፡ መጽሐፈ፡ ጠቢባን፡ ዘተናገሩ፡ ቦቱ፡ 
-                            ለለ፩፩እምኔሆሙ፡ በአምጣነ፡ ክሂሎቶሙ፡ ይቤ፡ ጠቢብ፡ ወሬዛ፡ ጠቢብ፡ ይኄይስ፡ እምአረጋዊ፡ አብድ፡
-                            <!-- Continuare qui per mostrare differenza con la recensione lunga -->
+                            በስመ፡ እግዚአብሔር፡ መሓሪ፡
+                            ወመስተሣህል፡ ወላዕሌሁ፡ ትውክልትነ፡ ወረድኤትነ፡ ዘውእቱ፡ ይሁብ፡ መክፈልተ፡ ሀብታት፡ በከመ፡ ፈቀደ፤
+                            ውእቱ፡ ይጼጉ፡ ወውእቱ፡ ያስተነቢ፡ ወይሁብ፡ መንፈሶ፡ ለኵሉ፡ <gap reason="omitted" extent="unknown" resp="PRS10747Zotenbe"/>
+                            ንዌጥን፡ በረድኤተ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ በጽሒፈ፡ መጽሐፈ፡ ፈላስፋ፡ ጠቢባን፡ ዘተናገሩ፡ ባቲ፡ ለለ፡ ፩፡
+                            እምኔሆሙ፡ በአምጣነ፡ ክሂሎቱ፤
                         </ab>
-                    </div>       
-                    <div type="textpart" subtype="explicit" xml:lang="gez">
-                        <note>The following explicit is taken from <ref type="mss" corresp="BAVet118#i3"/> </note>
+                    </div>      
+                    <div type="textpart" subtype="sentence" xml:id="MainText">
+                        <note>
+                            The following incipit is taken from <ref type="mss" corresp="BNFet157#ms_i3"/> according to <bibl><ptr target="bm:Zotenberg1877Catalogue"/>
+                                <citedRange unit="page">260</citedRange></bibl>.
+                        </note>
                         <ab>
-                            ይቤ፡ ስቅራጥስ፡ ለአርዳኢሁ፡ ኩኑ፡ ድልዋነ፡ ለሞት፡ ለተዘክሮ፡ ከመ፡ ይፈድፍድ፡ <supplied reason="omitted">ሕ</supplied>ይወትክሙ፡ 
-                            ወዓዲ፡ ይቤሎሙ፡ ለእመ፡ ፈቀድክሙ፡ 
-                            <sic>ትሕየው፡</sic>
-                            በሠናይ፡ አኅፅፁ፡ አጥርዮ፡ 
-                            ከመ፡ ይኅፅፅ፡ ትካዝክሙ፡ <del rend="expunctuated">ሰ</del>ዘሰ፡ <choice>
-                                <sic>ትውኀበ፡</sic>
-                                <corr resp="PRS4805Grebaut PRS9530Tisseran">ተውኅበ፡</corr>
-                            </choice> 
-                            <sic>ጥብብ፡</sic>
-                            ኢይኅዝን፡ በእንተ፡ ኃጢአ፡ ወርቅ፡ ወብሩር፡ 
-                            አማኅፀንኩክሙ፡ ፍርህዎ፡ ለእግዚአብሔር፡ ወዕቀቡ፡ ትእዛዞ፡ ተፈጸመ፡ መጽሐፈ፡ ጥበብ፡ ስብሐት፡ 
-                            ለእግዚአብሔር፡ ለዓለመ፡ ዓለም፡ አሜን፡ ወአሜን።
+                            ይቤ፡ ጠቢብ፡ ወሬዛ፡ ጠቢብ፡ ይኄይስ፡ እምነ፡ አረጋዊ፡ አብድ። ተብህለ፡ እስመ፡ ተግሣጽሰ፡ ይከብር፡ እምነ፡ አዕናቍ፡ ክቡራት፡
+                            ወያከብር፡ ዘመደ፡ ኅሡራን፡ ወያቀውሞሙ፡ ውስተ፡ ምቅዋመ፡ ክቡራን፡ ወያከብር፡ እንበለ፡ ተባይጾ፡ ወያብዝኅ፡ ረድኤተ፡ እንዘ፡ አልቦቱ፡ ዘርእ። ተብህለ፡
+                            እስመ፡ ጥበብሰ፡ ይጸንዕ፡ እምነ፡ ዘመድ፡ ብዙኃን፡ ወአእምሮሂ፡ ይከብር፡ እምነ፡ ዘመድ፡ ክቡራን። ተብህለ፡ ግዕዝ፡ ሠናይ፡ ይኄይስ፡
+                            እምነ፡ ቢጽ፡ ሠናይ፡ ወመጽሐፍሂ፡ ናዛዚሁ፡ ለትኩዝ፡ ውእቱ። ተብህለ፡ ሕስዋ፡ ለጥበብ፡ እስመ፡ ይእቲ፡ ተውሳከ፡ ልቡና፡ ወመራኂተ፡
+                            ፍኖት፡ ይእቲ፡ ወዓርክ፡ ይእቲ፡ በውስተ፡ ተአንግዶ፡ ወሞገስ፡ ይእቲ፡ በውስተ፡ ጉባኤ። ተብህለ፡ መቅድመ፡ ኵሉ፡ ዘይፈቅድ፡ ባቲ፡
+                            ሰብእ፡ ልቡና፡ ወተግሣጽ፡ ወጽድቅ፡ ወትዕግሥት፡ ወጥበብ፡ ወንጽሕና፡ ወተገድሎ፡ ወአእኵቶ፡ ወጸልዮ፡ ጸሎታት፡ እንተ፡ ይእቲ፡ መሠረተ፡ ሃይማኖት፡ ዘታበጽሕ፡ ኀበ፡
+                            ፈጣሪ፡ ሎቱ፡ ስብሐት። ወጽድቀ፡ ቃል፡ ወዜና፡ ወርኂቅ፡ እመሐላ፡ በሐሰት፡ ወተቀብሎ፡ በገጽ፡ ፍሡሕ፤ ወአክብሮ፡ አናግድ፡ ወአሠንዮ፡ ለኵሉ፡ ወዓዊበ፡ ጎር፡
                         </ab>
-                    </div>       
+                    </div>
                 </div>
-                
-                
             </div>
         </body>
     </text>
