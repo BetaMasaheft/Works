@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2107OntheA">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="en" xml:id="t1">On the Annunciation to Mary by Gabriel</title>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘዮሐንስ፡ አፈ፡ ወርቅ፡ ዘከመ፡ ዜነዋ፡ ገብርኤል፡ ለማርያም፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t2">Dǝrsān za-Yoḥannǝs ʾAfa Warq za-kama zenawā Gabrǝʾel la-Māryām</title>
+            <title xml:lang="en" xml:id="t2">On the Annunciation to Mary by Gabriel</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -40,7 +42,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -56,13 +61,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="ES" when="2017-02-15">keywords relation</change>
          <change who="MV" when="2017-12-20">Updated</change>
+         <change who="MKr" when="2022-09-20">Added incipit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listRelation>
-               <relation name="ecrm:P129_is_about" active="LIT2107OntheA" passive="PRS6819Mary PRS4377Gabriel"/>
+               <relation name="ecrm:P129_is_about" active="LIT2107OntheA" passive="PRS6819Mary"/>
+               <relation name="ecrm:P129_is_about" active="LIT2107OntheA" passive="PRS4377Gabriel"/>
                <relation name="saws:isAttributedToAuthor" active="LIT2107OntheA" passive="PRS5720JohnChr"/>
                <relation name="saws:formsPartOf" active="LIT2107OntheA" passive="LIT1284Dersan"/>
             </listRelation>
@@ -78,6 +85,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>
             </listBibl>
          </div>
+
+         <div xml:lang="gez" type="edition">
+                     <note>The incipit is taken from <ref type="mss" corresp="BerOrFol117"/></note>
+                     <div type="textpart" subtype="incipit">
+                      <ab xml:lang="gez">ናሁ፡ ዜነዋነ፡ ትፍሥሕት፡ ወሰበከ፡ ለነ፡ ግዕዛነ፡ ወጸውዐነ፡ ዳግመ፡ ወካዕበ፡ ተመይጠነ፡ ወዜነወነ፡ ቃል፡ ዘምሉእ፡ ፍሥሓ፡ ወተወለጠ፡
+                      ግብርናቲነ፡ በነገረ፡ መልአክ፡ ከመ፡ ኢይድግም፡ ከይሲ፡ ነጊሮታ፡ ለብእሲት።</ab>
+                     </div>
+
+                   </div>
+
       </body>
    </text>
 </TEI>

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2230Saatat">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -33,7 +33,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <witness type="external" corresp="EMML4419">
                   <locus from="103b"/>
                </witness>
-               <witness corresp="BNFet11#ms_i3" cert="low"/> 
+               <witness corresp="BNFet11#ms_i3" cert="low"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -45,7 +45,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
+           <language ident="la">Latin</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -55,15 +59,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <abstract>
             <p>
                <foreign xml:lang="gez">Saʿātāt za-gǝbṣ</foreign> is a version of the
-               <ref type="work" corresp="LIT1961Mashaf">Maṣḥafa saʿātāt</ref>, a Church service made up of psalms, biblical readings and hymns. 
+               <ref type="work" corresp="LIT1961Mashaf">Maṣḥafa saʿātāt</ref>, a Church service made up of psalms, biblical readings and hymns.
                It is taken from the Copto-Arabic tradition. The date of the translation into Gǝʿǝz is unknown, according to the teachers of the <foreign xml:lang="gez">Qǝddāse bet</foreign>, it was spread
                in the <date>13th century</date> by <persName ref="PRS9162TaklaHa">Takla Hāymānot</persName> and his monastic network. </p>
            <p>The three other types of Maṣḥafa saʿātāt identified by  <bibl>
                   <ptr target="bm:Taft1986Liturgy"/>
                   <citedRange unit="page">266</citedRange>
                </bibl> are: </p>
-            <p> 
-               <ref type="work" corresp="LIT3575Mashaf"/>: the Saʿātāt of <persName ref="PRS4709Giyorgis">Giyorgis of Saglā</persName>, 
+            <p>
+               <ref type="work" corresp="LIT3575Mashaf"/>: the Saʿātāt of <persName ref="PRS4709Giyorgis">Giyorgis of Saglā</persName>,
                which replaced the <ref type="work" corresp="LIT2230Saatat"/>:  and is presently in use in Ethiopia and Eritrea;</p>
             <p>
                <ref type="work" corresp="LIT3576Saatat"/>:  a Saʿātāt that includes the entire Psalter in the daily pensum;</p>
@@ -77,7 +81,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </listBibl>
             </p>
          </abstract>
-      </profileDesc> 
+      </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
@@ -85,6 +89,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="DR" when="2016-08-05"> Added Information </change>
          <change who="DR" when="2016-08-08"> Added Information </change>
          <change when="2017-02-20" who="ES">updated keywords relations title</change>
+         <change when="2021-08-04" who="DE">Added text division.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -114,11 +119,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <relation name="saws:contains" active="LIT2230Saatat" passive="LIT3196dorho">
                <desc>Some manuscripts of the Saʿātāt za-gǝbṣ contain the <ref type="work" corresp="LIT3196dorho">Service at the Cockcrow</ref>.</desc>
             </relation>
+            <relation name="saws:contains" active="LIT2230Saatat" passive="LIT6468Astebeqweot">
+               <desc>Some manuscripts of the Saʿātāt za-gǝbṣ contain the <ref type="work" corresp="LIT6468Astebeqweot">Service at the Cockcrow</ref>.</desc>
+            </relation>
             <relation name="saws:isVersionInAnotherLanguageOf" active="LIT2230Saatat" passive="LIT3570Agbiya">
                <desc>The Coptic <ref type="work" corresp="LIT3570Agbiya"/> is the main source for the <ref type="work" corresp="LIT2230Saatat"/>.</desc>
             </relation>
             <relation name="saws:hasUsed" active="LIT2230Saatat" passive="LIT3564Psalmodia">
-               <desc>Parts of <ref type="work" corresp="LIT3564Psalmodia"/>, mainly <ref type="work" corresp="LIT3566Theotokia"/> and <ref type="work" corresp="LIT3568Psalis"/> 
+               <desc>Parts of <ref type="work" corresp="LIT3564Psalmodia"/>, mainly <ref type="work" corresp="LIT3566Theotokia"/> and <ref type="work" corresp="LIT3568Psalis"/>
                   are among additional material included in <ref type="work" corresp="LIT2230Saatat"/>, but not in <ref type="work" corresp="LIT3570Agbiya"/>.</desc>
             </relation>
             <relation name="saws:hasUsed" active="LIT2230Saatat" passive="LIT3566Theotokia">
@@ -128,7 +136,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <desc>Additional material included in <ref type="work" corresp="LIT2230Saatat"/>, but not in <ref type="work" corresp="LIT3570Agbiya"/>.</desc>
             </relation>
             <relation name="saws:hasUsed" active="LIT2230Saatat" passive="LIT3572Horologium">
-               <desc>Prayers and troparia from <ref type="work" corresp="LIT3572Horologium"/> are among additional material included in 
+               <desc>Prayers and troparia from <ref type="work" corresp="LIT3572Horologium"/> are among additional material included in
                   <ref type="work" corresp="LIT2230Saatat"/>, but not in <ref type="work" corresp="LIT3570Agbiya"/>.</desc>
             </relation>
             <relation name="saws:hasUsed" active="LIT2230Saatat" passive="LIT3573Horologium">
@@ -145,6 +153,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <desc>Parts of <ref type="work" corresp="LIT2230Saatat"/> survive in <ref type="work" corresp="LIT1544Gebrah"/>.</desc>
             </relation>
          </listRelation>
+         <div type="edition">
+           <note>The following text division is a generic one based on <bibl>
+                 <ptr target="bm:Turaev1895Saatat"/>
+              </bibl>
+           and manuscript evidence.</note>
+           <div type="textpart" subtype="reading" xml:id="Prime">
+             <label xml:lang="la">Prime</label>
+             <label xml:lang="gez">ጸሎተ፡ ነግህ፡</label>
+           </div>
+           <div type="textpart" subtype="reading" xml:id="Tertia">
+             <label xml:lang="la">Tertia</label>
+             <label xml:lang="gez">ጸሎተ፡ ፫ ሰዓት፡</label>
+           </div>
+           <div type="textpart" subtype="reading" xml:id="Sexta">
+             <label xml:lang="la">Sexta</label>
+             <label xml:lang="gez">ጸሎተ፡ ፮ ሰዓት፡</label>
+           </div>
+           <div type="textpart" subtype="reading" xml:id="Nona">
+             <label xml:lang="la">Nona</label>
+             <label xml:lang="gez">ጸሎተ፡ ፱ ሰዓት፡</label>
+           </div>
+           <div type="textpart" subtype="reading" xml:id="Vesperae">
+             <label xml:lang="la">Vesperae</label>
+             <label xml:lang="gez">ጸሎተ፡ ሰርክ፡</label>
+           </div>
+           <div type="textpart" subtype="reading" xml:id="Completorium">
+             <label xml:lang="la">Completrorium</label>
+             <label xml:lang="gez">ጸሎተ፡ ንዋም፡</label>
+           </div>
+           <div type="textpart" subtype="reading" xml:id="Nocturnae">
+             <label xml:lang="la">Nocturnae</label>
+             <label xml:lang="gez">ጸሎተ፡ መንፈቀ፡ ሌሊት፡</label>
+           </div>
+           <div type="textpart" subtype="reading" xml:id="ThreeNight">
+             <label xml:lang="gez">ጸሎተ፡ በ፫ ሰዓተ፡ ሌሊት፡</label>
+           </div>
+           <div type="textpart" subtype="reading" xml:id="Cockrow" corresp="LIT3196dorho">
+             <label xml:lang="en">Service at the Cockcrow</label>
+             <label xml:lang="gez">ጸሎት፡ በንቅወተ፡ ዶርሆ፡</label>
+           </div>
+           <div type="textpart" subtype="reading" xml:id="Stylites" corresp="LIT6468Astebeqweot">
+             <label xml:lang="en">Prayers of Simeon Stylites</label>
+             <label xml:lang="gez">አስተብቍዖት፡ እንተ፡ ዘስምዖን፡ ዓምዳዊ፡</label>
+           </div>
+         </div>
       </body>
    </text>
 </TEI>

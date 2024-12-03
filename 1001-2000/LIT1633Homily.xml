@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1633Homily">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Homily on the Annunciation to the Virgin Mary</title>
-            <title xml:id="t2">On the Annunciation, and on the blessed Virgin Mary and Elizabeth</title>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘአባ፡ ያዕቆብ፡ በእንተ፡ ስብከት፡ ጌና፡ ወበእንተ፡ ማርያም፡ ወኤልሳቤጥ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#n1">Dǝrsān za-ʾabbā Yāʿqob baʾǝnta sǝbkāta genā wa-baʾǝnta Māryām wa-ʾElsābeṭ</title>
+            <title xml:lang="en" xml:id="t2">Homily on the Annunciation to the Virgin Mary</title>
+            <title xml:lang="en" xml:id="t3">On the Annunciation, and on the blessed Virgin Mary and Elizabeth</title>
             <author ref="PRS5655Jacobof">Jacob of Serug</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -38,7 +40,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
-               
+
                <term key="ChristianLiterature"/>
                <term key="Translation"/>
                <term key="Homily"></term>
@@ -50,17 +52,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2020-03-19" who="ES">added incipit relation</change>
+         <change who="MKr" when="2020-12-17">Added bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <body>
+          <body>
          <div type="edition" xml:lang="gez">
             <div type="textpart" subtype="incipit"><ab>ድርሳን፡  ዘአባ፡ ያዕቆብ፡  በእንተ፡ ስብከት፡ ጌና፡  ወበእንተ፡  ማርያም፡  ወኤልሳቤጥ፡ </ab></div>
             <note>After BL Orient 774</note>
          </div>
-         <listRelation>
+         <div type="bibliography">
+           <listBibl type="editions">
+             <bibl><ptr target="bm:Tedros2019Annunciation"/></bibl>
+           </listBibl>
+          <listRelation>
             <relation name="saws:isAttributedToAuthor" active="LIT1633Homily" passive="PRS5655Jacobof"/>
          </listRelation>
+         </div>
       </body>
    </text>
 </TEI>

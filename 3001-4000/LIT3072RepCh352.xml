@@ -4,7 +4,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to Walatta Ṗeṭros</title>
+            <title xml:id="t1">Hymn (Tarafa malkǝʾ) to ʾƎḫǝta Krǝstos</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -13,21 +13,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -40,15 +35,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
-               <term key="Poetry"/>
+               <term key="Poetry"/>        
                <term key="ChristianLiterature"/>
                <term key="Hagiography"/>
             </keywords>
          </textClass>
+         <abstract>
+            <p><persName ref="PRS3082Chaine"/> mistakenly identified this malkǝʾ-hymn as the one for
+               <persName ref="PRS9848Walatta"/> in 
+               <bibl>
+                  <ptr target="bm:Chaine1913Rep"/>
+                  
+               </bibl>, but the tarafa malkǝʾ is dedicated to 
+               <persName ref="PRS3698ehetaKr"/> and follows upon malkǝʾ is usually followed by <ref type="work" corresp="LIT2892RepCh173"></ref>
+            </p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
+         <change when="2024-09-27" who="ES">added edition and link to LIT2892RepCh173</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -59,14 +65,56 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">352</citedRange>
                </bibl>
+               <bibl>
+                  <ptr target="bm:MgWebsite"></ptr>
+               </bibl>
             </listBibl>
+            <listRelation>
+               <relation name="skos:exactMatch" active="LIT3072RepCh352" passive="https://w3id.org/malke/2892/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT3072RepCh352" passive="PRS3698ehetaKr"></relation>
+               <relation name="ecrm:CLP46i_may_form_part_of" active="LIT3072RepCh352" passive="LIT2892RepCh173"></relation>
+            </listRelation>
          </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                እኅተ፡ ክርስቶስ፡ ስርጉት፡ ወርቀ፡ መሲሐዊት፡ አሚን። 
-               </ab>
-            </div>
+            <note>Taken from <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+               <lg type="stanza" n="1">
+                  <l n="1">እኅተ፡ ክርስቶስ፡ ሥርጉት፡ ወርቀ፡ መሲሐዊት፡ አሚን፨</l>
+                  <l n="2">አምሳለ፡ ቢሶስ፡ ትርሲተ፡ ካህን፨</l>
+                  <l n="3">ወንጹሕ፡ ሄጶዴጤን፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለኪ፡ በቀላየ፡ ኃፍረት፡ አስጠምኪ፡ ትዝኅርተ፡ ዲያብሎስ፡ ከይሲ፨</l>
+                  <l n="2">አካላተ፡ ሥሉስ፡ እንዘ፡ ትቄድሲ፨</l>
+                  <l n="3">ወእምጽድቅ፡ ኢትትገሀሲ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለኪ፡ እኅተ፡ ክርስቶስ፡ ትባኢ፡ ውሣጤ፡ መንጦላዕት፡ ከዋላ፨</l>
+                  <l n="2">መነንኪያ፡ ጥቀ፡ ከመ፡ ኳሔላ፨</l>
+                  <l n="3">ለዓለም፡ ካልእተ፡ ህላ፨</l>
+               </lg>
+               <lg type="stanza" n="4">
+                  <l n="1">ሰላም፡ ለኪ፡ በጸሎት፡ ወጾም፡ ወሰጊድ፡ ህየንተ፡ ድካምኪ፡ በዝኃ፨</l>
+                  <l n="2">እንተ፡ ኢያስተርኢ፡ ቀርን፡ በጊዜ፡ ተነፍሐ፨</l>
+                  <l n="3">ትትሌዓሊ፡ ደብረ፡ ፍሥሐ፨</l>
+               </lg>
+               <lg type="stanza" n="5">
+                  <l n="1">ሰላም፡ ለኪ፡ ለነፍሰ፡ አዳም፡ ነፍስኪ፡ ጊዜ፡ ተዳደቀ፡ ፍልሰት፨</l>
+                  <l n="2">ለቀበላሃ፡ ወረዱ፡ ምስለ፡ ማኅሌት፨</l>
+                  <l n="3">ትጉሃን፡ እምሰማያት፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለኪ፡ ዘያስተሐቅር፡ ኪያኪ፡ እመቦ፡ እስመ፡ እምልቡና፡ ተዐርቀ፨</l>
+                  <l n="2">ይሁዳ፡ ሰይጣን፡ ዘአፍቀረ፡ ወርቀ፨</l>
+                  <l n="3">ይረፍቅ፡ ኀበ፡ ረፈቀ፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለኪ፡ እኅተ፡ ክርስቶስ፡ እምነ፨</l>
+                  <l n="2">ቀላተ፡ ማኅሌት፡ እምአፉነ፨</l>
+                  <l n="3">ኵሎ፡ ዕለተ፡ ወኵሎ፡ ዘመነ፨</l>
+                  <l n="4">መንገሌኪ፡ ናንቀዓዲ፡ ዐይነ፨</l>
+               </lg>
+            
+            
          </div>
       </body>
    </text>

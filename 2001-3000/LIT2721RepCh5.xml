@@ -4,8 +4,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to St Michael</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ሚካኤል፡ ካልእ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Mikāʾel Kāləʾ</title>
+            <title corresp="#t1" xml:lang="en">Second Image of Michael</title>
+            <title xml:id="t2">Hymn to St Michael</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="AD"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -14,20 +18,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -49,25 +49,88 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-28">Added keywords and incipit</change>
+         <change who="ES" when="2024-09-27">Added the text, title, relations and bibl (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation><relation name="skos:exactMatch" active="LIT2721RepCh5" passive="https://w3id.org/malke/2721/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT2721RepCh5" passive="PRS7049Michael"></relation></listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">5</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  መለኮተ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ይዜኑ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <note>The following text reproduced after <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">መለኮተ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ይዜኑ፨</l>
+                  <l n="2">ብጽዓነ፡ ሚካኤል፡ መልአኩ፡ ውስተ፡ አፈ፡ ዚአየ፡ ለለ፡ ዘመኑ፨</l>
+                  <l n="3">ከመ፡ ባሕለ፡ ልሳን፡ ይትናገር፡ ነገረ፡ መፍቅዳት፡ ልሳኑ፨</l>
+                  <l n="4">ሕፁረ፡ ይኩን፡ ባሕቱ፡ ወኢይትናዋኅ፡ ድርሳኑ፨</l>
+                  <l n="5">በሊዐ፡ መዓር፡ በአቅም፡ ይኄይስ፡ አኮኑ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለተፈጥሮትከ፡ እምባሕርየ፡ ነፋስ፡ ወእሳት፨</l>
+                  <l n="2">ወቤተ፡ ክርስቲያን፡ ትብል፡ እምኀበ፡ ኢምንት፨</l>
+                  <l n="3">ሚካኤል፡ አንተ፡ ለባሴ፡ ትሕትና፡ እምጥንት፨</l>
+                  <l n="4">በልበ፡ ዲያብሎስኒ፡ ጊዜ፡ ሠረፀ፡ ስሕተት፨</l>
+                  <l n="5">ውስተ፡ ሕሊናከ፡ ኢዐርገ፡ ትዕቢት፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ትሩፈ፡ ውዳሴ፡ እምንትጋ፨</l>
+                  <l n="2">እንተ፡ ጸሐፍዎ፡ ነቢያት፡ ለመጽሐፈ፡ ዘመን፡ ዐቀብተ፡ ሕጋ፨</l>
+                  <l n="3">አኮ፡ ዘብከ፡ ሚካኤል፡ መሌሊተ፡ ሥጋ፨</l>
+                  <l n="4">ሶበ፡ ትትፌኖ፡ ባሕቱ፡ ኀበ፡ ሥጋውያን፡ እንግልጋ፨</l>
+                  <l n="5">እምባሕረ፡ ነፍስ፡ ግዘፈ፡ ትነሥእ፡ በጸጋ፨</l>
+               </lg>
+               <lg type="stanza" n="22">
+                  <l n="1">ሰላም፡ ለመልክእከ፡ ዘይጸድል፡ እምእብላ፨</l>
+                  <l n="2">ወለሢመትከ፡ እምአብ፡ በቃለ፡ ኪዳን፡ ወመሐላ፨</l>
+                  <l n="3">ሊቀ፡ ካህናት፡ ሚካኤል፡ በዐለ፡ ቄዳርስ፡ ወቀጸላ፨</l>
+                  <l n="4">አዕርገኒ፡ በጸሎትከ፡ ዐጸደ፡ ፍግዓ፡ ወተድላ፨</l>
+                  <l n="5">ምስለ፡ ኀጥኣን፡ ኢይረድ፡ ዘገሀነም፡ ቈላ፨</l>
+               </lg>
+               <lg type="stanza" n="23">
+                  <l n="1">ስብሐት፡ ለከ፡ እግዚአብሔር፡ ዘብርሃናት፨</l>
+                  <l n="2">ስብሐት፡ ለከ፡ እግዚአብሔር፡ ዘሥልጣናት፨</l>
+                  <l n="3">ስብሐት፡ ለከ፡ እግዚአብሔር፡ ዘአርእስተ፡ መላእክት፨</l>
+                  <l n="4">ለከ፡ እግዚኦ፡ ለገባሬ፡ ኵሉ፡ ፍጥረት፨</l>
+                  <l n="5">መንፈ፡ ሚካኤል፡ ይሰግድ፡ ለኵሉ፡ ሰዓት፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለከ፡ ሚካኤል፡ ሊቅ፡ ዘገዳመ፡ ራማ፡ ማዕነቅ፨</l>
+                  <l n="2">ሕብረ፡ አክናፊከ፡ ሐመልማለ፡ ወርቅ፨</l>
+                  <l n="3">ዙቱሱሕ፡ ምስለ፡ መብረቅ፨</l>
+               </lg>
+               <lg type="stanza" n="5">
+                  <l n="1">ሰላም፡ ለከ፡ ረድኤትከ፡ ፈጣን፡ እምእግረ፡ ረዋጺ፡ ፈረስ፨</l>
+                  <l n="2">ወእምተንሥኦቱ፡ ለቀሊል፡ ነፋስ፨</l>
+                  <l n="3">ሚካኤል፡ መልአከ፡ ፈውስ፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለከ፡ ከመ፡ ዘሕቱም፡ መጽሐፍ፡ ወዘኢይተርጐም፡ ነገር፨</l>
+                  <l n="2">ብሂለ፡ መድምም፡ ስምከ፡ ምሥጢር፨</l>
+                  <l n="3">ሚካኤል፡ መልአከ፡ ምክር፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለከ፡ ተኣምረ፡ ስምከ፡ ብዕል፨</l>
+                  <l n="2">ወጽንዐ፡ ረድኤት፡ ኀይል፨</l>
+                  <l n="3">በርእስየ፡ ይንበር፡ ከመ፡ አክሊል፨</l>
+                  <l n="4">እንተ፡ ላዕሌሁ፡ ትእምርተ፡ መስቀል፨</l>
+                  <l n="5">ሚካኤል፡ መጽሐፉ፡ ዘይብል፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>
