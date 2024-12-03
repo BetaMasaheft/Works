@@ -1,20 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2462Testam">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2462Testam">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="la" xml:id="t1">Testamentum Domini in Galilea</title>
-            
+
             <title xml:id="t2eth" xml:lang="gez">ኪዳን፡ ዘእግዚእነ፡ ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ፡</title>
             <title xml:lang="en" corresp="#t2eth">Testament of Our Lord and Saviour Jesus Christ</title>
-            <title xml:lang="gez" corresp="#t2eth" type="normalized">Kidān za-ʾǝgziʾǝna wa-madḫānina ʾIyasus Krǝstos</title> 
+            <title xml:lang="gez" corresp="#t2eth" type="normalized">Kidān za-ʾǝgziʾǝna wa-madḫānina ʾIyasus Krǝstos</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -31,41 +25,54 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+        <abstract><p>An apocryphal work formed by the merger of two original writings: (1) an apocalypse of Jesus to the Apostles in
+        Galilee (chapters 1-11 in the edition) and (2) the so-called Epistula Apostolorum (chapters 12-62 in the edition).</p></abstract>
+        <textClass>
+            <keywords>
+                <term key="ChristianLiterature"/>
+                <term key="Translation"/>
+                <term key="Apocrypha"/>
+                <term key="ApocalypticLiterature"/>
+            </keywords>
+        </textClass>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language>
+       <language ident="la">Latin</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2018-03-09" who="ES">adjusted title</change>
+         <change when="2020-08-03" who="MKr">Added keywords, bibliography, info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <div type="bibliography">
+          <listBibl type="editions">
+              <bibl><ptr target="bm:Guerrier1912Testament"/></bibl>
+          </listBibl>
+
+          <listBibl type="secondary">
+             <bibl><ptr target="bm:Bausi2010Testamentum"/></bibl>
+          </listBibl>
+          </div>
       </body>
       <listRelation>
-         <relation name="dcterms:isPartOf"
-                   active="LIT2462Testam"
-                   passive="LIT5058Kidan"/>
+         <relation name="dcterms:isPartOf" active="LIT2462Testam" passive="LIT5058Kidan"/>
+          <relation name="saws:contains" active="LIT2462Testam" passive="LIT1354Epistu"/>
       </listRelation>
    </text>
 </TEI>

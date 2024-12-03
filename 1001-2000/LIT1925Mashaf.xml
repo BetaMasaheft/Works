@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1925Mashaf">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1925Mashaf">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -32,7 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
            <listWit>
@@ -47,8 +41,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -58,13 +51,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <abstract>
-            <p>There exist a short and a long recension of the <foreign xml:lang="gez">Maṣḥafa falāsfā ṭabibān</foreign>. The short recension generally
-            preserves the Arabic text. To the long recension, sayings of the Church fathers and other stories,
-            especially of <persName ref="PRS1499Ahiqar"/>, have been added.</p>
+            <p>
+               Collection of sentences and sayings of Greek philosophers, Fathers of the Church and biblical figures. Some apophthegms are anonymous.
+               The work was translated from the Arabic <foreign xml:lang="ar">Kitāb al-bustān wa-qāʿidat al-ḥukamāʾ wa-šams al-ʾādāb</foreign> between
+               1510 and 1522 by <persName role="translator" ref="PRS7077Mikael"/> and enjoyed much popularity given the high number of manuscripts.
+               There is a short and a long recension of the work. The <ref type="work" corresp="LIT7144MFTabiban">short recension</ref> generally
+               preserves the Arabic text. The <ref type="work" corresp="LIT7145MFTabiban">long recension</ref> includes additional sayings of the Church Fathers
+               and other stories, especially of <persName ref="PRS1499Ahiqar"/>.</p>
             <p>
                <listBibl type="secondary">
                   <bibl>
@@ -91,26 +87,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2016-11-15">Updated title and added bibliography</change>
          <change who="DR" when="2017-03-21">Added keywords</change>
          <change who="DR" when="2017-03-17">Added keywords</change>
+         <change who="MV" when="2024-11-15">Expanded abstract, added relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
-            <relation name="saws:isVersionInAnotherLanguageOf"
-                      active="LIT1925Mashaf#t1"
-                      passive="LIT1925Mashaf#t2arabic"/>
-            <relation name="saws:isAttributedToAuthor"
-                      active="LIT1925Mashaf#t2arabic"
-                      passive="PRS7509Nasralla">
-               <desc>It is not clear whether <persName ref="PRS7509Nasralla"/>, who is otherwise unknown, is the compiler or author.
+            <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1925Mashaf#t1" passive="LIT1925Mashaf#t2arabic"/>
+            <relation name="saws:isAttributedToAuthor" active="LIT1925Mashaf#t2arabic" passive="PRS7509Nasralla">
+               <desc>It is not clear whether <persName ref="PRS7509Nasralla"/>, who is otherwise unknown, is the compiler or author of the Arabic work.
                   <bibl>
                      <ptr target="bm:Pietruschka2005EAEFalasfa"/>
                   </bibl>
                </desc>
             </relation>
-            <relation name="saws:isAttributedToAuthor"
-                      active="LIT1925Mashaf#t1"
-                      passive="PRS7077Mikael"/>
+            <relation name="saws:isAttributedToAuthor" active="LIT1925Mashaf#t1" passive="PRS7077Mikael"/>
          </listRelation>
          <div type="bibliography">
             <listBibl type="secondary">
@@ -139,7 +130,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
 
-       
          </div>
       </body>
    </text>

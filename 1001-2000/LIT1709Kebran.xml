@@ -1,314 +1,265 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1709Kebran">
-   <teiHeader xml:base="https://betamasaheft.eu/">
-      <fileDesc>
-         <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ክብረ፡ ነገሥት፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Kǝbra nagaśt</title>
-            <title xml:lang="en" corresp="#t1">Glory of the Kings</title>
-            <title xml:lang="ar" xml:id="t2arabic">شرح سبب انتقال مملكة سليمان ملك اسرائيل الى البلاد النجاشيه التي هي الحبشة</title>
-            <title xml:lang="ar" corresp="#t2arabic" type="normalized">Šarḥ sabab intiqāl mamlakat Sulaymān malik ʾIsrāʾīl ʾilā bilād an-naǧāšīya allatī hiya al-ḥabaša</title>
-            <title type="short">Kebr. Nag.</title>
-            <editor role="generalEditor" key="AB"/>
-            <editor key="SH" role="encoder annotator"/>
-            <editor key="RHC" role="encoder"/>
-            <editor key="ES" role="metadata"/>
-            <respStmt>
-               <resp>Digitized by</resp>
-               <persName from="1995" to="1995">Michal Jerabek (<ref target="#RHC">edition 1</ref>)</persName>
-               <persName from="2000" to="2003" ref="RHC">Ran Ha-Cohen (<ref target="#RHC">edition 1</ref>)</persName>
-               
-               
-               
-               <persName ref="SH" from="2014" to="2018">Susanne Hummel (<ref target="#traces">TraCES edition</ref>)</persName>
-            </respStmt>
-            <funder>Akademie der Wissenschaften in Hamburg; European Research Council</funder>
-         </titleStmt>
-         <editionStmt>
-            <p>The text currently reproduced as <ref target="#RHC">edition 1</ref> is that copied by Michal Jerabek from <bibl>
-                  <ptr target="bm:Bezold1905KebraN"/>
-               </bibl>.</p>
-            <p>The non-unicode encoded text of <ref target="#RHC">edition 1</ref> was saved from the website by Ran HaCohen and converted to Unicode.</p>
-            <p>The text of <ref target="#traces">TraCES edition</ref> was prepared by the TraCES project on the basis of <bibl>
-                  <ptr target="bm:Bezold1905KebraN"/>
-               </bibl>.</p>
-            
-         </editionStmt>
-         <publicationStmt>
-            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
-            <pubPlace>Hamburg</pubPlace>
-            <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
-                  <p>The text of <ref target="#RHC">edition 1</ref> has the following copyright. 1995 Library of Ethiopian Texts,
-                     created and maintained by Michal Jerabek, Prague. Permission to use, copy, and
-                     distribute this text, for any NONCOMMERCIAL purpose is hereby granted without
-                     fee, provided that the copyright notice and this permission notice appear in
-                     all copies of this text. This text cannot be sold under any circumstances.</p>
-               </licence>
-            </availability>
-         </publicationStmt>
-         <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-         </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <listWit rend="other">
-                  <witness type="external"
-                           corresp="BNFarabe264"
-                           facs="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89540w/cd0e210"/>
-               </listWit>
-               <listWit rend="edition">
-                  <witness corresp="BNFet5" xml:id="bnfet5"/>
-                  <witness corresp="BNFet146" xml:id="bnfet146"/>
-                  <witness corresp="BNFabb97" xml:id="bnfabb97"/>
-                  <witness corresp="BNFabb132" xml:id="bnfabb132"/>
-                  <witness corresp="BNFabb152" xml:id="bnfabb152"/>
-                  <witness corresp="BLorient818" xml:id="blor818"/>
-                  <witness corresp="BLorient819" xml:id="blor819"/>
-                  <witness corresp="EMML50" xml:id="emml50"/>
-                  <witness corresp="ANLcr27" xml:id="anlcr27"/>
-                  <witness corresp="BDLbruce87" xml:id="bdlbruce87"/>
-                  <witness corresp="BDLbruce93" xml:id="bdlbruce93"/>
-                  <witness corresp="BerOr395" xml:id="berlin395"/>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT1709Kebran" xml:lang="en" type="work">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="gez" xml:id="t1">ክብረ፡ ነገሥት፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Kǝbra nagaśt</title>
+                <title xml:lang="en" corresp="#t1">Glory of the Kings</title>
+                <title xml:lang="ar" xml:id="t2arabic">شرح سبب انتقال مملكة سليمان ملك اسرائيل الى البلاد النجاشيه التي هي الحبشة</title>
+                <title xml:lang="ar" corresp="#t2arabic" type="normalized">Šarḥ sabab intiqāl mamlakat Sulaymān malik ʾIsrāʾīl ʾilā bilād an-naǧāšīya allatī hiya al-ḥabaša</title>
+               <title xml:lang="gez" xml:id="t3">ፍካሬ፡ ወዜና፡ የ፫፻፲ወ፰፡ ርቷዓነ፡ ሃይማኖት፡</title>
+               <title xml:lang="gez" corresp="#t3" type="normalized">Fǝkkāre wa-zenā za-318 rǝtuʿāna hāymānot</title>
+                <title type="short">Kebr. Nag.</title>
+                <editor role="generalEditor" key="AB"/>
+                <editor key="SH" role="encoder annotator"/>
+                <editor key="RHC" role="encoder"/>
+                <editor key="ES" role="metadata"/>
+                <respStmt>
+                    <resp>Digitized by</resp>
+                    <persName from="1995" to="1995" ref="000">Michal Jerabek (<ref target="#rhced">edition 1</ref>)</persName>
+                    <persName from="2000" to="2003" ref="RHC">Ran Ha-Cohen (<ref target="#rhced">edition 1</ref>)</persName>
+                    
+                    
+                    
+                    <persName ref="SH" from="2014" to="2018">Susanne Hummel (<ref target="#traces">TraCES edition</ref>)</persName>
+                </respStmt>
+                <funder>Akademie der Wissenschaften in Hamburg; European Research Council</funder>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+                            Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                <pubPlace>Hamburg</pubPlace>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                                licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                
+                <p>The text of <ref target="#rhced">edition 1</ref> has the following copyright. 1995 Library of Ethiopian Texts,
+                    created and maintained by Michal Jerabek, Prague. Permission to use, copy, and
+                    distribute this text, for any NONCOMMERCIAL purpose is hereby granted without
+                    fee, provided that the copyright notice and this permission notice appear in
+                    all copies of this text. This text cannot be sold under any circumstances.</p>
+                <p>The text currently reproduced as <ref target="#rhced">edition 1</ref> is that copied by Michal Jerabek from <bibl>
+                    <ptr target="bm:Bezold1905KebraN"/>
+                </bibl>.</p>
+                <p>The non-unicode encoded text of <ref target="#rhced">edition 1</ref> was saved from the website by Ran HaCohen and converted to Unicode.</p>
+                <p>The text of <ref target="#traces">TraCES edition</ref> was prepared by the TraCES project on the basis of <bibl>
+                    <ptr target="bm:Bezold1905KebraN"/>
+                </bibl>.</p></availability>
+            </publicationStmt>
+            <sourceDesc>
+                <listWit>
+                    <listWit rend="other">
+                       <witness type="external" corresp="BNFarabe264" facs="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89540w/cd0e210">BnF arabe 264</witness>
                     </listWit>
-            </listWit>
-         </sourceDesc>
-      </fileDesc>
-
-
-      <encodingDesc>
-         <projectDesc>
-            <p>The text of <ref target="#traces">TraCES edition</ref> was prepared within the framework of the TraCES project.</p>
-         </projectDesc>
-         <editorialDecl>
-            <correction>
-               <p>The following errors
-                  have been corrected:
-                  <list>
-                     <item>...</item>
-                     <item>...</item>
-                     <item>...</item>
-
-                  </list>
-               </p>
-
-            </correction>
-
-            <normalization>
-               <p>Original spelling and typography is retained.</p>
-            </normalization>
-         </editorialDecl>
-         <tagsDecl>
-            <!-- the format for the tagsDecl to be specified -->
-         </tagsDecl>
-
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
-            <xi:fallback>
-               <p>Definitions of prefixes used.</p>
-            </xi:fallback>
-         </xi:include>
-      </encodingDesc>
-
-      <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
-
-         <abstract>
-            <p>The Kǝbra nagaśt is a kind of historical novel intended to justify the Solomonic dynasty by demonstrating its Israelite descent.
-               <bibl>
+                    <listWit rend="edition">
+                        <witness corresp="BNFet5" xml:id="bnfet5">BnF éthiopien 5</witness>
+                       <witness corresp="BNFet146" xml:id="bnfet146">BnF éthiopien 146</witness>
+                       <witness corresp="BNFabb97" xml:id="bnfabb97">BnF d'Abbadie 97</witness>
+                       <witness corresp="BNFabb132" xml:id="bnfabb132">BnF d'Abbadie 132</witness>
+                       <witness corresp="BNFabb152" xml:id="bnfabb152">BnF d'Abbadie 152</witness>
+                        <witness corresp="BLorient818" xml:id="blor818">BL oriental 818</witness>
+                       <witness corresp="BLorient819" xml:id="blor819">BL oriental 819</witness>
+                        <witness corresp="EMML50" xml:id="emml50">EMML 50</witness>
+                        <witness corresp="ANLcr27" xml:id="anlcr27">ANL Conti Rossini 27</witness>
+                        <witness corresp="BDLbruce87" xml:id="bdlbruce87">Bodleian Bruce 87</witness>
+                        <witness corresp="BDLbruce93" xml:id="bdlbruce93">Bodleian Bruce 93</witness>
+                       <witness corresp="BerOrFol395" xml:id="berlin395">Berlin, SPK or. fol. 395</witness>
+                    </listWit>
+                </listWit>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>The text of <ref target="#traces">TraCES edition</ref> was prepared within the framework of the TraCES project.</p>
+            </projectDesc>
+            <editorialDecl>
+                <correction>
+                    <p>The following errors
+                        have been corrected:
+                        <list>
+                            <item>...</item>
+                            <item>...</item>
+                            <item>...</item>
+                            
+                        </list>
+                    </p>
+                    
+                </correction>
+                
+                <normalization>
+                    <p>Original spelling and typography is retained.</p>
+                </normalization>
+            </editorialDecl>
+            <tagsDecl>
+                <!-- the format for the tagsDecl to be specified -->
+            </tagsDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage><language ident="en">English</language><language ident="ar">Arabic</language><language ident="gez">Gǝʿǝz</language></langUsage>
+            
+            <abstract>
+                <p>The Kǝbra nagaśt is a kind of historical novel intended to justify the Solomonic dynasty by demonstrating its Israelite descent.
+                    <bibl>
                         <ptr target="bm:Marrassini2007EAEKebraN"/>
                     </bibl>
                 </p>
-         </abstract>
-
-         <creation notAfter="1321">Composed (or translated) on the orders of makʷannǝn <persName ref="PRS10190Yaebik">Yāʿǝbika ʾƎgziʾ</persName> in 1321.</creation>
-         <textClass>
-            <keywords scheme="#ethioauthlist">
-               <term key="HistoryAndHistoriography"/>
-               <term key="ChristianLiterature"/>
-               <term key="Translation"/>
-            </keywords>
-         </textClass>
-
-      </profileDesc>
-      <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
-         <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change who="DR" when="2016-11-07">Title updated</change>
-         <change who="DR" when="2016-11-08">Bibliography and textparts added</change>
-         <change when="2016-12-14" who="ES">added keywords, added information</change>
-         <change who="RHC" when="2017-07-18">Sent word file with unicode encoded text.</change>
-         <change who="PL" when="2017-07-21">Marked up minimally the text provided.</change>
-         <change who="DR" when="2017-07-27">Minor correction to the text division</change>
-         <change who="SH" when="2018-06-29">Edited and annotated selected chapters for the TraCES project</change>
-         <change who="DR" when="2018-12-05">Deleted variant from English title</change>
-      </revisionDesc>
-      
-   </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <listRelation>
-            <relation name="saws:isVersionInAnotherLanguageOf"
-                      active="LIT1709Kebran#t1"
-                      passive="LIT1709Kebran#t2arabic"
-                      cert="low">
-               <desc>The relation between <ref type="work" corresp="LIT1709Kebran#t1"/> and <ref type="work" corresp="LIT1709Kebran#t2arabic"/> is still not fully investigated. A derivation of the Gǝʿǝz version from
-                  the Arabic or vice versa and a dependence on a common source have all been proposed.
-                  <bibl>
-                     <ptr target="bm:Marrassini2007EAEKebraN"/>
-                     <citedRange unit="page">366b-367a</citedRange>
-                  </bibl>
-               </desc>
-            </relation>
-            <relation name="saws:isAttributedToAuthor"
-                      active="LIT1709Kebran"
-                      passive="PRS4823Gregory">
-               <desc>The <ref type="work" corresp="LIT1709Kebran"/> is composed as an exposition of <persName role="author" ref="PRS4823Gregory"/>, but actually alludes
-                  to <persName ref="PRS4825Gregory"/>.
-                  <bibl>
-                     <ptr target="bm:Marrassini2007EAEKebraN"/>
-                     <citedRange unit="page">364b</citedRange>
-                  </bibl>
-               </desc>
-            </relation>
-            <relation name="saws:isAttributedToAuthor"
-                      active="LIT1709Kebran#t2arabic"
-                      passive="PRS1013Abalfara">
-               <desc>The colophon states that <ref type="work" corresp="LIT1709Kebran#t2arabic"/> was translated from Coptic to Arabic by <persName role="translator" ref="PRS1013Abalfara"/>
-                  and <persName role="translator" ref="PRS1012Abalez"/>.</desc>
-            </relation>
+            </abstract>
             
-            <relation name="saws:isAttributedToAuthor"
-                      active="LIT1709Kebran#t2arabic"
-                      passive="PRS1012Abalez">
-               <desc>The colophon states that <ref type="work" corresp="LIT1709Kebran#t2arabic"/> was translated from Coptic to Arabic by <persName role="translator" ref="PRS1013Abalfara"/>
-                  and <persName role="translator" ref="PRS1012Abalez"/>.</desc>
-            </relation>
+            <creation notAfter="1321">Composed (or translated) on the orders of makʷannǝn <persName ref="PRS10190Yaebik">Yāʿǝbika ʾƎgziʾ</persName> in 1321.</creation>
+            <textClass>
+                <keywords scheme="#ethioauthlist">
+                    <term key="HistoryAndHistoriography"/>
+                    <term key="ChristianLiterature"/>
+                    <term key="Translation"/>
+                </keywords>
+            </textClass>
             
-            <relation name="saws:isAttributedToAuthor"
-                      active="LIT1709Kebran#t1"
-                      passive="PRS10351Yeshaq">
-               <desc>The colophon  states that <ref type="work" corresp="LIT1709Kebran#t1"/> was translated from Arabic to Gǝʿǝz by <persName role="translator" ref="PRS10351Yeshaq"/>
-                  at the order of <persName role="patron" ref="PRS10190Yaebik"/>.</desc>
-            </relation>
-         </listRelation>
-         <div type="bibliography">
-
-
-
-            <listBibl type="secondary">
-               <bibl corresp="#bdlbruce87 #bdlbruce93">
-                  <ptr target="bm:Dillmann1848Catalogus"/>
-                  <citedRange unit="page">68-72; 74</citedRange>
-               </bibl>
-               <bibl corresp="#bnfet5 #bnfet146">
-                  <ptr target="bm:Zotenberg1877Catalogue"/>
-               </bibl>
-               <bibl corresp="#blor818 #blor819">
-                  <ptr target="bm:Wright1877BM"/>
-                  <citedRange unit="page">297</citedRange>
-               </bibl>
-               <bibl>
-                        <ptr target="bm:Marrassini2007EAEKebraN"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Bruce1813Travels3"/>
-                        <citedRange unit="page">411-417</citedRange>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Beylot2004Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Getatchew2009Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Piovanelli2013Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Amsalu2014Colophon"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Amsalu2015Ark"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Wion2009Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Richelle2012Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Littmann1904Sheba"/>
-                    </bibl>
-            </listBibl>
-
-            <listBibl type="translation">
-               <bibl>
-                        <ptr target="bm:Budge1922Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Colin2002Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Bezold1905KebraN"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Beylot2008Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Raineri2008Kebra"/>
-                    </bibl>
-               <bibl>
-                        <ptr target="bm:Mahler2007Kebra"/>
-                    </bibl>
-            </listBibl>
-            <listBibl type="editions">
-               <bibl>
-                        <ptr target="bm:Praetorius1870Fabula"/>
-                    </bibl>
-               <bibl corresp="#bnfet5 #bnfet146 #bdlbruce93 #bdlbruce87 #berlin395 #blor818 #blor819">
-                        <ptr target="bm:Bezold1905KebraN"/>
-                    </bibl>
-            </listBibl>
-
-
-          
-         </div>
-
-         <div type="edition" xml:lang="gez" xml:id="RHC" resp="RHC">
-            <div type="textpart"
-                 subtype="introduction"
-                 xml:lang="gez"
-                 xml:id="intro">
+        </profileDesc>
+        <revisionDesc>
+            <change who="PL" when="2016-03-21"> Created file from google
+                spreadsheet </change>
+            <change who="ES" when="2016-02-09">CREATED: text record</change>
+            <change who="DR" when="2016-11-07">Title updated</change>
+            <change who="DR" when="2016-11-08">Bibliography and textparts added</change>
+            <change when="2016-12-14" who="ES">added keywords, added information</change>
+            <change who="RHC" when="2017-07-18">Sent word file with unicode encoded text.</change>
+            <change who="PL" when="2017-07-21">Marked up minimally the text provided.</change>
+            <change who="DR" when="2017-07-27">Minor correction to the text division</change>
+            <change who="SH" when="2018-06-29">Edited and annotated selected chapters for the TraCES project</change>
+            <change who="DR" when="2018-12-05">Deleted variant from English title</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+           
+           <div type="bibliography">
+              <listRelation>
+                 <relation name="betmas:formerlyAlsoListedAs" active="IT1709Kebran" passive="LIT1387Fekkar"></relation>
+                 <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1709Kebran#t1" passive="LIT1709Kebran#t2arabic" cert="low">
+                    <desc>The relation between <ref type="work" corresp="LIT1709Kebran#t1"/> and <ref type="work" corresp="LIT1709Kebran#t2arabic"/> is still not fully investigated. A derivation of the Gǝʿǝz version from
+                       the Arabic or vice versa and a dependence on a common source have all been proposed.
+                       <bibl>
+                          <ptr target="bm:Marrassini2007EAEKebraN"/>
+                          <citedRange unit="page">366b-367a</citedRange>
+                       </bibl>
+                    </desc>
+                 </relation>
+                 <relation name="saws:isAttributedToAuthor" active="LIT1709Kebran" passive="PRS4823Gregory">
+                    <desc>The <ref type="work" corresp="LIT1709Kebran"/> is composed as an exposition of <persName role="author" ref="PRS4823Gregory"/>, but actually alludes
+                       to <persName ref="PRS4825Gregory"/>.
+                       <bibl>
+                          <ptr target="bm:Marrassini2007EAEKebraN"/>
+                          <citedRange unit="page">364b</citedRange>
+                       </bibl>
+                    </desc>
+                 </relation>
+                 <relation name="saws:isAttributedToAuthor" active="LIT1709Kebran#t2arabic" passive="PRS1013Abalfara">
+                    <desc>The colophon states that <ref type="work" corresp="LIT1709Kebran#t2arabic"/> was translated from Coptic to Arabic by <persName role="translator" ref="PRS1013Abalfara"/>
+                       and <persName role="translator" ref="PRS1012Abalez"/>.</desc>
+                 </relation>
+                 
+                 <relation name="saws:isAttributedToAuthor" active="LIT1709Kebran#t2arabic" passive="PRS1012Abalez">
+                    <desc>The colophon states that <ref type="work" corresp="LIT1709Kebran#t2arabic"/> was translated from Coptic to Arabic by <persName role="translator" ref="PRS1013Abalfara"/>
+                       and <persName role="translator" ref="PRS1012Abalez"/>.</desc>
+                 </relation>
+                 
+                 <relation name="saws:isAttributedToAuthor" active="LIT1709Kebran#t1" passive="PRS10351Yeshaq">
+                    <desc>The colophon  states that <ref type="work" corresp="LIT1709Kebran#t1"/> was translated from Arabic to Gǝʿǝz by <persName role="translator" ref="PRS10351Yeshaq"/>
+                       at the order of <persName role="patron" ref="PRS10190Yaebik"/>.</desc>
+                 </relation>
+              </listRelation>
+              
+              <listBibl type="secondary">
+                 <bibl corresp="#bdlbruce87 #bdlbruce93">
+                    <ptr target="bm:Dillmann1848Catalogus"/>
+                    <citedRange unit="page">68-72; 74</citedRange>
+                 </bibl>
+                 <bibl corresp="#bnfet5 #bnfet146">
+                    <ptr target="bm:Zotenberg1877Catalogue"/>
+                 </bibl>
+                 <bibl corresp="#blor818 #blor819">
+                    <ptr target="bm:Wright1877BM"/>
+                    <citedRange unit="page">297</citedRange>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Marrassini2007EAEKebraN"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Bruce1813Travels3"/>
+                    <citedRange unit="page">411-417</citedRange>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Beylot2004Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Getatchew2009Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Piovanelli2013Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Amsalu2014Colophon"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Amsalu2015Ark"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Wion2009Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Richelle2012Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Littmann1904Sheba"/>
+                 </bibl>
+              </listBibl>
+              
+              <listBibl type="translation">
+                 <bibl>
+                    <ptr target="bm:Budge1922Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Colin2002Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Bezold1905KebraN"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Beylot2008Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Raineri2008Kebra"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:Mahler2007Kebra"/>
+                 </bibl>
+              </listBibl>
+              <listBibl type="editions">
+                 <bibl>
+                    <ptr target="bm:Praetorius1870Fabula"/>
+                 </bibl>
+                 <bibl corresp="#bnfet5 #bnfet146 #bdlbruce93 #bdlbruce87 #berlin395 #blor818 #blor819">
+                    <ptr target="bm:Bezold1905KebraN"/>
+                 </bibl>
+              </listBibl>
+           </div>
+            
+            <div type="edition"  xml:lang="gez" xml:id="rhced" resp="RHC">
+                <div type="textpart" subtype="incipit"  xml:id="Introduction">
                <ab>
                   በአኰቴቱ ፡ ለእግዚኣብሔር ፡ አብ ፡ አኃዜ ፡ ኵሉ ፤ ወበወልዱ ፡ ኢየሱስ ፡ ክርስቶስ ፡ ዘቦቱ ፡ ኵሉ ፡ ኮነ ፡ ወዘእንበሌሁሰ ፡ አልቦ ፡ ዘኮነ ፤ ወበመንፈስ ፡ ቅዱስ ፡ ጰራቅሊጦስ ፡ ዘይወፅእ ፡ እምአብ ፡ ወይነሥእ ፡ እምወልድ ፡ ፩ ፡ አምላክ ፡ አብ ፡ ወወልድ ፡ ወመንፈስ ፡ ቅዱስ ፡ ነአምን ፡ ወንገኒ ፡ ለሥሉስ ፨ ፨ ፨ ፨
                </ab>
 
             </div>
+ 
 
-
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="1"
-                 xml:id="Chapter1">
-               <label>
-                  <foreign xml:lang="gez">፩ ፡ በእንተ፡ ክብረ፡ ነገሥት፡</foreign>
+            <div type="textpart" subtype="chapter"  n="1" xml:id="Chapter1">
+               <label xml:lang="gez">
+                   ፩ ፡ በእንተ፡ ክብረ፡ ነገሥት፡ 
                </label>
                <ab> ፍካሬ ፡ ወዜና ፡ ዘ፫፻፲ወ፰ ፡ ርቱዓነ ፡ ሃይማኖት ፡ በእንተ ፡ ክብር ፡ ወዕበይ ፡ ወተድላ ፡ ዘከመ ፡ ወሀበ ፡ እግዚኣብሔር ፡ ለደቂቀ
          ፡ አዳም ፤ ወፈድፋደሰ ፡ ዘበእንተ ፡ ዕበያ ፡ ወክብራ ፡ ለጽዮን ፡ ታቦተ ፡ ሕጉ ፡ ለእግዚኣብሔር ፡ እንተ ፡ ገባሪሃ ፡ ወኬንያሃ ፡ ለሊሁ
@@ -323,13 +274,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          በሥጋ ፡ እትገሰስ ፤ ወበደኃሪ ፡ መዋዕል ፡ በሥምረቱ ፡ ተወልደ ፡ በሥጋ ፡ እምዳግማዊት ፡ ጽዮን ፡ ዳግማዊ ፡ አዳም ፡ ዝውእቱ ፡ መድኀኒነ
          ፡ ክርስቶስ ፡ ዛቲ ፡ ይእቲ ፡ ምክሕነ ፡ ወሃይማኖትነ ፡ ተስፋነ ፡ ወሕይወትነ ፡ ጽዮን ፡ ሳማያዊት ፨ </ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="2"
-                 xml:id="Chapter2">
+            <div type="textpart" subtype="chapter"  n="2" xml:id="Chapter2">
                <label>
-                  <foreign xml:lang="gez">፪ ፡ በእንተ ፡ ዕበየ ፡ ነገሥት ።</foreign>
+                   ፪ ፡ በእንተ ፡ ዕበየ ፡ ነገሥት ። 
                </label>
                <ab> ሀቡኬ ፡ ንግባእ ፡ ወነሐስብ ፡ ወንወጥን ፡ ዘናዐቢ ፡ ወናሐጽጽ ፡ እምነገሥተ ፡ ምድር ፡ በሕግ ፡ ወበሥርዐት ፡ በክብር ፡ ወበዕበይ ፡
          እምቀዳሚ ፡ እስከ ፡ ደኃሪ ፨ ፡ ተንሥአ ፡ ጎርጎርዮስ ፡ ገባሬ ፡ መንክር ፡ ዘተወድየ ፡ ውስተ ፡ ግብ ፡ በእንተ ፡ ፍቅረ ፡ ስምዐ ፡
@@ -338,13 +285,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ንዋየ ፡ ዓለም ፡ ወሚመ ፡ በብዝኀ ፡ ሢመተ ፡ አህጉር ፤ ወዘንተ ፡ ኀሊይየ ፡ ለለ ፡ ተረፈ ፡ ጸሎትየ ፡ የሀውከኒ ፡ ካዕበ ፡ ኅሊናየ ፡
          ወእኄሊ ፡ በእንተ ፡ ዕበየ ፡ ነገሥት ፡ ወአኀዝኩ ፡ እወጥን ፨ ፨ ፨ </ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="3"
-                 xml:id="Chapter3">
+            <div type="textpart" subtype="chapter"  n="3" xml:id="Chapter3">
                <label>
-                  <foreign xml:lang="gez"> ፫ ፡ በእንተ ፡ መንግሥተ ፡ አዳም ።</foreign>
+                    ፫ ፡ በእንተ ፡ መንግሥተ ፡ አዳም ። 
                </label>
                <ab> ወእምአዳም ፡ አልዐልኩ ፡ ወእቤ ፡ ንጉሥ ፡ እግዚአብሔር ፡ በአማን ፡ ዘሎቱ ፡ ይደሉ ፡ ስብሐት ፡ ወእምታሕቴሁ ፡ ሤሞ ፡ ለአዳም ፡
          ንጉሠ ፡ ላዕለ ፡ ኵሉ ፡ ዘፈጠረ ፤ ወበዕልወቱ ፡ አውፅኦ ፡ እምገነት ፡ በኂጠተ ፡ ከይሲ ፡ በምክረ ፡ ዲያብሎስ ፡ ወበውእቱ ፡ ዜና ፡
@@ -352,13 +295,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወርእዮ ፡ አዳም ፡ ለአቤል ፡ ከመ ፡ ሠናይ ፡ ራእዩ ፡ ወፍሡሕ ፡ ገጹ ፡ ይቤ ፡ ዝንቱ ፡ ወልድየ ፡ ወራሴ ፡ መንግሥትየ ፨ ፨ ፨
          ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="4"
-                 xml:id="Chapter4">
+            <div type="textpart" subtype="chapter"  n="4" xml:id="Chapter4">
                <label>
-                  <foreign xml:lang="gez"> ፬ ፡ በእንተ ፡ ቅንአት ።</foreign>
+                    ፬ ፡ በእንተ ፡ ቅንአት ። 
                </label>
                <ab> ወሶበ ፡ ልህቁ ፡ ኅቡረ ፡ ቀንአ ፡ ላዕሌሁ ፡ ሰይጣን ፡ ወወደየ ፡ ይእተ ፡ ቅንአተ ፡ ውስተ ፡ ልበ ፡ ቃየን ፤ ቀዳሚ ፡ ቅንአቱ ፡
          በእንተ ፡ ቃለ ፡ አቡነ ፡ አዳም ፡ ዘይቤ ፡ ዝውእቱ ፡ ብሩሀ ፡ ገጽ ፡ ይኩን ፡ ወራሴ ፡ መንግሥትየ ፤ ወበዳግምሳ ፡ ቅንአቱ ፡ በእንተ ፡
@@ -370,13 +309,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወርእዮ ፡ አዳም ፡ ይቤ ፤ ይእዜኬ ፡ ተሣሀለኒ ፡ እግዚኣብሔር ፡ ወወሀበኒ ፡ ብርሃነ ፡ ገጽየ ፡ በንስሓ ፡ ኣቃርቦ ፡ ዋርስየ ፡ ዝንቱ ፡
          ወውእቱሰ ፡ ቀታሌ ፡ ዋርስየ ፡ በ፱ ፡ ትውልዱ ፡ ትደመሰስ ፡ ስሙ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="5"
-                 xml:id="Chapter5">
+            <div type="textpart" subtype="chapter"  n="5" xml:id="Chapter5">
                <label>
-                  <foreign xml:lang="gez"> ፭ ፡ በእንተ ፡ መንግሥተ ፡ ሴት ።</foreign>
+                    ፭ ፡ በእንተ ፡ መንግሥተ ፡ ሴት ። 
                </label>
                <ab> ወአዕረፈ ፡ አዳም ፡ ወነግሠ ፡ ሴት ፡ በጽድቅ ፤ ወአዕረፈ ፡ ሴት ፡ ወነግሠ ፡ ሄኖስ ፤ ወአእረፈ ፡ ሄኖስ ፡ ወነግሠ ፡ ቃይናን ፤
          ወአእረፈ ፡ ቃይናን ፡ ወነግሠ ፡ መላልኤል ፤ ወአዕረፈ ፡ መላልኤል ፡ ወነግሠ ፡ ያሮድ ፤ ወአዕረፈ ፡ ያሮድ ፡ ወነግሠ ፡ ሄኖክ ፡ በጽድቅ
@@ -384,13 +319,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ሄኖክ ፡ ነግሠ ፡ ማቱሳላ ፤ ወአዕረፈ ፡ ማቱሳላ ፡ ወነግሠ ፡ ላሜኅ ፤ ወአዕረፈ ፡ ላሜኅ ፡ ወነግሠ ፡ ኖሕ ፡ በጽድቅ ፡ ወአሥመሮ ፡
          ለእግዚኣብሔር ፡ በኵሉ ፡ ግብሩ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="6"
-                 xml:id="Chapter6">
+            <div type="textpart" subtype="chapter"  n="6" xml:id="Chapter6">
                <label>
-                  <foreign xml:lang="gez"> ፮ ፡ በእንተ ፡ ኀጢአተ ፡ ቃየን ።</foreign>
+                    ፮ ፡ በእንተ ፡ ኀጢአተ ፡ ቃየን ። 
                </label>
                <ab> ወውእቱሰ ፡ ርጉም ፡ ቀታሌ ፡ እኁሁ ፡ ቃየን ፡ አብዝኃ ፡ ለእከይ ፡ ወዘርኡኒ ፡ ከማሁ ፡ እለ ፡ አምዕዕዎ ፡ ለእግዚኣብሔር ፡ በእከዮሙ
          ፡ ወአልቦሙ ፡ ፍርሀተ ፡ እግዚኣብሔር ፡ ቅድመ ፡ አዕይንቲሆሙ ፡ ወኢኀለይዎ ፡ ከመ ፡ ፈጣሪሆሙ ፡ ወኢጸለዩ ፡ ኀቤሁ ፡ ወኢተጋነዩ ፡
@@ -400,13 +331,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ውሉዶሙ ፡ መሀይምናን ፡ ለከሓድያን ፡ ወይከውኑ ፡ ውሉዶሙ ፡ ዘርአ ፡ ግሙራ ፡ ርኩሳን ፡ መንፈቆሙ ፡ ሠናይ ፡ ወመንፈቆሙ ፡ ዘርአ ፡
          እኩያን ፤ ወእለ ፡ ገብርዋ ፡ ለእኪት ፡ ጽኑሕ ፡ ደይኖሙ ፡ ወንቡር ፡ ጌጋዮሙ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="7"
-                 xml:id="Chapter7">
+            <div type="textpart" subtype="chapter"  n="7" xml:id="Chapter7">
                <label>
-                  <foreign xml:lang="gez"> ፯ ፡ በእንተ ፡ ኖሕ ።</foreign>
+                    ፯ ፡ በእንተ ፡ ኖሕ ። 
                </label>
                <ab> ወኖሕሰ ፡ ጻድቅ ፡ ይፈርሆ ፡ ለእግዚኣብሔር ፡ ወየዐቅብ ፡ ጽድቀ ፡ ወዘነገርዎ ፡ አበዊሁ ፡ ሕገ ፡ እምአዳም ፡ ዓሥር ፡ ትውልድ ፡
          ለሊሁ ፡ ኖሕ ፡ እንዘ ፡ ይዜከር ፡ ወይገብር ፡ ሠናየ ፡ ወየዐቅብ ፡ ሥጋሁ ፡ እምዝሙት ፡ ወይጌሥጽ ፡ ደቂቆ ፡ ከመ ፡ ኢይደመሩ ፡ ምስለ
@@ -415,13 +342,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ዘእንበለ ፡ ሕግ ፡ ወሥርዐት ፡ ብእሲ ፡ ላዕለ ፡ ብእሲ ፡ ያረኴስ ፡ ቢጾ ፡ ወአንስት ፡ ላዕለ ፡ አንስት ፡ ይገብራ ፡ ኀሳረ ፨ ፨
          ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="8"
-                 xml:id="Chapter8">
+            <div type="textpart" subtype="chapter"  n="8" xml:id="Chapter8">
                <label>
-                  <foreign xml:lang="gez"> ፰ ፡ በእንተ ፡ አይኅ ።</foreign>
+                    ፰ ፡ በእንተ ፡ አይኅ ። 
                </label>
                <ab> ወኮነ ፡ ዝግብር ፡ እኩየ ፡ በቅድመ ፡ እግዚኣብሔር ፤ ወውእቱኒ ፡ ደምሰሶሙ ፡ በማየ ፡ አይኅ ፡ ዘይቈርር ፡ እምነ ፡ አስሐቲያ ፡
          አርኀወ ፡ ኀዋኅወ ፡ ሰማይ ፡ ወወረደ ፡ አስራበ ፡ አይኅ ፡ ወተርኅወ ፡ አንቅዕት ፡ ዘመትሕተ ፡ ምድር ፡ ወተከሥተ ፡ አንቅዕተ ፡ አይኅ ፡
@@ -431,13 +354,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ወበእንቲአሁ ፡ ኀልቁ ፡ ዘእንበለ ፡ ፷ ፡ ነፍስ ፡ ወእምነ ፡ ንጹሕ ፡ እንስሳ ፡ ወአራዊት ፡ በበ፯፯ ፡ ወእምነ ፡ ርኩስ ፡ እንስሳ ፡
          ወአራዊት ፡ በበ፪፪ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="9"
-                 xml:id="Chapter9">
+            <div type="textpart" subtype="chapter"  n="9" xml:id="Chapter9">
                <label>
-                  <foreign xml:lang="gez"> ፱ ፡ በእንተ ፡ ኪዳነ ፡ ኖሕ ።</foreign>
+                    ፱ ፡ በእንተ ፡ ኪዳነ ፡ ኖሕ ። 
                </label>
                <ab> ወእምዝ ፡ አዕረፈ ፡ ኖሕ ፡ ጻድቅ ፡ ወነግሠ ፡ ሴም ፡ በጥበብ ፡ ወበጽድቅ ፡ እስመ ፡ ተባረከ ፡ በኀበ ፡ ኖሕ ፡ እንዘ ፡ ይብል ፡
          ኩን ፡ እግዚአ ፡ ለእኁከ ፤ ወለካምኒ ፡ ይቤሎ ፡ ኩን ፡ ገብረ ፡ ለእኁከ ፤ ወለያፌትኒ ፡ ይቤሎ ፡ ተገበር ፡ ወተአዛዜ ፡ ኩን ፡ ለሴም ፡
@@ -450,13 +369,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ኢያማስና ፡ ለምድር ፡ ዳግመ ፡ በአይኅ ፡ ወከመ ፡ እሁቦሙ ፡ ለደቂቅከ ፡ ክረምተ ፡ ወሐጋየ ፡ ዘርአ ፡ ወማእረረ ፡ ጸደየ ፡ ወመጸወ ፨
          ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="10"
-                 xml:id="Chapter10">
+            <div type="textpart" subtype="chapter"  n="10" xml:id="Chapter10">
                <label>
-                  <foreign xml:lang="gez"> ፲ ፡ በእንተ ፡ ጽዮን ።</foreign>
+                    ፲ ፡ በእንተ ፡ ጽዮን ። 
                </label>
                <ab> ወእምሕል ፡ በርእስየ ፡ ወበጽዮን ፡ ታቦተ ፡ ኪዳንየ ፡ እንተ ፡ ፈጠርክዋ ፡ ለምሥሃል ፡ ወለመድኀኒተ ፡ ሰብእ ፡ ወኣወርዳ ፡ በደኃሪ ፡
          ለዘርእከ ፡ ወእሠምር ፡ መሥዋዕተ ፡ ደቂቅከ ፡ በዲበ ፡ ምድር ፡ ወትሄሉ ፡ ምስሌሆሙ ፡ ታቦተ ፡ ኪዳንየ ፡ ለዓለም ፡ ወሶበኒ ፡ መጽአ ፡
@@ -468,13 +383,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወእምቅድመ ፡ ምጽናዓት ፡ ወልጐታተ ፡ ባሕር ፡ ዘፈጠራ ፡ ለታቦተ ፡ ኪዳን ፡ ዛቲ ፡ ይእቲ ፡ እንተ ፡ በሰማያት ፡ ታንሶሱ ፡ ዲበ ፡ ምድር
          ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="11"
-                 xml:id="Chapter11">
+            <div type="textpart" subtype="chapter"  n="11" xml:id="Chapter11">
                <label>
-                  <foreign xml:lang="gez"> ፲፩ ፡ ኀበ ፡ ኀብሩ ፡ ፫፻፲ወ፷ ፡ ርቱዓነ ፡ ሃይማኖት ።</foreign>
+                    ፲፩ ፡ ኀበ ፡ ኀብሩ ፡ ፫፻፲ወ፷ ፡ ርቱዓነ ፡ ሃይማኖት ። 
                </label>
                <ab> ወአውሥእዎ ፡ ወይቤሉ ፡ እወ ፡ አማን ፡ ቀደመት ፡ ተፈጥሮ ፡ ታቦተ ፡ ኪዳን ፡ ወአልቦ ፡ ሐሰት ፡ ውስተ ፡ ቃልከ ፡ እሙን ፡ ወርቱዕ
          ፡ ወጽድቅ ፡ ውእቱ ፡ ወአልቦ ፡ ተውላጥ ፤ አቅዲሙሰ ፡ ለጽዮን ፡ ፈጠራ ፡ ለማኅደረ ፡ ስብሐቲሁ ፡ ወምክረ ፡ ኪዳኑሰ ፡ ዘይቤ ፡ እለብስ
@@ -483,13 +394,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ጽዮንሰ ፡ ሰማያዊት ፡ ተመሰለታ ፡ ለወላዲተ ፡ መድኅን ፡ ማርያም ፤ እስመ ፡ ሕንጽት ፡ ጽዮን ፡ ወንቡር ፡ ውስቴታ ፡ ፲ ፡ ቃላት ፡ ዘሕግ
          ፡ እለ ፡ ጽሑፋት ፡ በእደዊሁ ፡ ወውስተ ፡ ከርሠ ፡ ማርያም ፡ ኀደረ ፡ ለሊሁ ፡ ፈጣሪ ፡ ዘበእንቲአሁ ፡ ኵሉ ፡ ኮነ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="12"
-                 xml:id="Chapter12">
+            <div type="textpart" subtype="chapter"  n="12" xml:id="Chapter12">
                <label>
-                  <foreign xml:lang="gez"> ፲፪ ፡ በእንተ ፡ ከናኣን ።</foreign>
+                    ፲፪ ፡ በእንተ ፡ ከናኣን ። 
                </label>
                <ab> ወከናኣንሰ ፡ ዘነፈቀ ፡ መንግሥተ ፡ እምደቂቀ ፡ ሴም ፡ ተዐዲዎ ፡ ማሕላ ፡ ዘአበዊሁ ፡ ዘአምሐሎሙ ፡ ኖሕ ፤ ወደቂቀ ፡ ከናኣንሰ ፡ ፯
          ፡ ጽኑዓን ፡ ወነሥአ ፡ እምድረ ፡ ሴም ፡ ፯ ፡ አህጉረ ፡ ዐበይተ ፡ ወሤሞሙ ፡ ህየ ፡ ለደቂቁ ፡ ወከማሁ ፡ ካዕበ ፡ ክፍሉኒ ፡ ለርእሱ ፡
@@ -504,13 +411,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ሊተ ፡ ወልድከ ፡ ዘታፈቅር ፤ ወይዘብሑ ፡ ደቂቆሙ ፡ ወአዋልዲሆሙ ፡ ለአጋንንት ፡ ወይክዕዉ ፡ ደመ ፡ ንጹሐ ፡ ለርኩሳን ፡ አጋንንት ፨ ፨
          ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="13"
-                 xml:id="Chapter13">
+            <div type="textpart" subtype="chapter"  n="13" xml:id="Chapter13">
                <label>
-                  <foreign xml:lang="gez"> ፲ወ፫ ፡ በእንተ ፡ አብርሃም ።</foreign>
+                    ፲ወ፫ ፡ በእንተ ፡ አብርሃም ። 
                </label>
                <ab> ወወለደ ፡ ታራ ፡ ወልደ ፡ ወሰመዮ ፡ አብራም ፤ ወሶበ ፡ ኮነ ፡ ሎቱ ፡ ፲ወ፪ ፡ ዓመተ ፡ ለአኮ ፡ አቡሁ ፡ ታራ ፡ ከመ ፡ ይሢጥ ፡
          ጣዖተ ፤ ወይቤ ፡ አብራም ፡ ዝሰ ፡ ኢኮነ ፡ አምላክ ፡ ዘያድኅን ፤ ወወሰደ ፡ ከመ ፡ ይሢጥ ፡ ጣዖተ ፡ በከመ ፡ አዘዞ ፡ አቡሁ ፤
@@ -526,13 +429,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ዘእንበሌከ ፡ እምዮም ፡ ወእምዝ ፡ አስተርአዮ ፡ ሰረገላ ፡ ዘእሳት ፡ ዘይነድድ ፡ ወፈርሀ ፡ አብራም ፡ ወወድቀ ፡ በገጹ ፡ ውስተ ፡ ምድር
          ፤ ወአንሥኦ ፡ ወይቤሎ ፡ ኢትፍራህ ፡ ቁም ፡ ርቱዐ ፡ ወአእተተ ፡ እምኔሁ ፡ ፍርሀተ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="14"
-                 xml:id="Chapter14">
+            <div type="textpart" subtype="chapter"  n="14" xml:id="Chapter14">
                <label>
-                  <foreign xml:lang="gez"> ፲ወ፬ ፡ በእንተ ፡ ኪዳነ ፡ አብርሃም ።</foreign>
+                    ፲ወ፬ ፡ በእንተ ፡ ኪዳነ ፡ አብርሃም ። 
                </label>
                <ab> ወተናገሮ ፡ እግዚኣብሔር ፡ ወይቤሎ ፤ ኢትፍራህ ፡ እምዮም ፡ ገብርየ ፡ አንተ ፡ ወኣቀውም ፡ ኪዳንየ ፡ ምስሌከ ፡ ወምስለ ፡ ዘርእከ ፡
          እምድኅሬከ ፡ ወኣበዝኅ ፡ ዘርአከ ፡ ወኣዐቢ ፡ ስምከ ፡ ፈድፋደ ፡ ወኣወርዳ ፡ ለታቦተ ፡ ኪዳንየ ፡ ዲበ ፡ ምድር ፡ በ፯ ፡ ትውልድ ፡
@@ -548,25 +447,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፀሮ ፡ ወአዕረፈ ፡ በክብር ፡ በእግዚኣብሔር ፡ ወኀየሰ ፡ ወተሞገሰ ፡ እምእለ ፡ ቅድሜሁ ፤ ኀየሰ ፡ ወከብረ ፡ ወተለዐለ ፨ ፨ ፨ ፨ ፨
          ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="15"
-                 xml:id="Chapter15">
+            <div type="textpart" subtype="chapter"  n="15" xml:id="Chapter15">
                <label>
-                  <foreign xml:lang="gez"> ፲ወ፭ ፡ በእንተ ፡ ይስሐቅ ፡ ወያዕቆብ ።</foreign>
+                    ፲ወ፭ ፡ በእንተ ፡ ይስሐቅ ፡ ወያዕቆብ ። 
                </label>
                <ab> ወነግሠ ፡ ይስሐቅ ፡ ወልዱ ፡ ወውእቱኒ ፡ ኢተዐደወ ፡ እምትእዛዙ ፡ ለእግዚኣብሔር ፡ ወኮነ ፡ ንጹሕ ፡ በነፍሱ ፡ ወበሥጋሁ ፡ ወአዕረፈ
          ፡ በክብር ፡ ወነግሠ ፡ ያዕቆብ ፡ ወልዱ ፡ ወውእቱኒ ፡ ኢተዐደወ ፡ እምትእዛዙ ፡ ለእግዚኣብሔር ፤ ወኮነ ፡ ብዙኅ ፡ ንዋዩ ፡ ወደቂቁ ፡
          ወባረኮ ፡ እግዚኣብሔር ፡ ወአዕረፈ ፡ በክብር ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="16"
-                 xml:id="Chapter16">
+            <div type="textpart" subtype="chapter"  n="16" xml:id="Chapter16">
                <label>
-                  <foreign xml:lang="gez"> ፲ወ፮ ፡ በእንተ ፡ ሮቤል ።</foreign>
+                    ፲ወ፮ ፡ በእንተ ፡ ሮቤል ። 
                </label>
                <ab> ወእምድኅሬሁ ፡ ሮቤል ፡ በኰሩ ፡ ለያዕቆብ ፡ ተዐደወ ፡ ትእዛዘ ፡ እግዚኣብሔር ፡ ወፈለሰት ፡ መንግሥት ፡ እምኔሁ ፡ ወእምዘርኡ ፡
          በእንተ ፡ ዘአርኰሰ ፡ ብእሲተ ፡ አቡሁ ፡ እስመ ፡ ኢርቱዕ ፡ ተዐድዎ ፡ ሕግ ፡ ዘአዘዘ ፡ እግዚኣብሔር ፤ ወረገሞ ፡ አቡሁ ፡ ወተምዖ ፡
@@ -578,13 +469,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወልዱ ፤ ወእምድኅሬሁ ፡ ነግሠ ፡ እሴይ ፡ ወልዱ ፡ ወመንግሥተ ፡ ዘእቤ ፡ በረከተ ፡ አብ ፡ ላዕለ ፡ ወልድ ፡ ከመ ፡ ይትባረክ ፡ በሠናይ
          ፤ ወመንግሥትሰ ፡ ላዕለ ፡ እስራኤል ፡ እምድኅረ ፡ ሞተ ፡ እሴይ ፡ ነግሠ ፡ ዳዊት ፡ በጽድቅ ፡ ወበርትዕ ፡ ወበየውሀት ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="17"
-                 xml:id="Chapter17">
+            <div type="textpart" subtype="chapter"  n="17" xml:id="Chapter17">
                <label>
-                  <foreign xml:lang="gez"> ፲ወ፯ ፡ በእንተ ፡ ክብራ ፡ ለጽዮን ።</foreign>
+                    ፲ወ፯ ፡ በእንተ ፡ ክብራ ፡ ለጽዮን ። 
                </label>
                <ab> ወለጽዮንሰ ፡ ታቦተ ፡ ሕጉ ፡ ለእግዚኣብሔር ፡ አቅዲሙ ፡ ሰማየ ፡ ሣረረ ፡ ወሠምረ ፡ ትኩን ፡ በምድር ፡ ማኅደረ ፡ ስብሐቲሁ ፡ ፈቂዶ
          ፡ አውረዳ ፡ ለምድር ፡ ወወሀቦ ፡ ለሙሴ ፡ በአርአያ ፡ ይግበራ ፤ ወይቤሎ ፡ ግበር ፡ ታቦተ ፡ እምዕፅ ፡ ዘኢይነቅዝ ፡ ወትለብጦ ፡ በወርቅ
@@ -617,13 +504,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          እምእደ ፡ ፀሮሙ ፤ ወይትናገሮሙ ፡ በዐምደ ፡ ደመና ፡ ከመ ፡ ይዕቀቡ ፡ ሕጎ ፡ ወሥርዐቶ ፡ ወይሖሩ ፡ በትእዛዙ ፡ ለእግዚኣብሔር ፨ ፨ ፨
          ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="18"
-                 xml:id="Chapter18">
+            <div type="textpart" subtype="chapter"  n="18" xml:id="Chapter18">
                <label>
-                  <foreign xml:lang="gez"> ፲ወ፰ ፡ ኀበ ፡ ኀብሩ ፡ አበው ፡ ጳጳሳት ።</foreign>
+                    ፲ወ፰ ፡ ኀበ ፡ ኀብሩ ፡ አበው ፡ ጳጳሳት ። 
                </label>
                <ab> ካዕበ ፡ አውሥኡ ፡ ማኅበረ ፡ ፫፻፲ወ፰ ፡ ወ ፡ ይቤሉ ፡ አሜን ፤ ዛቲኬ ፡ ይእቲ ፡ መድኀኒቶሙ ፡ ለደቂቀ ፡ አዳም ፡ እስመ ፡ ታቦተ ፡
          ሕጉ ፡ ለእግዚኣብሔር ፡ እምከመ ፡ ወረደት ፡ ተሰምዩ ፡ ሰብአ ፡ ቤቱ ፡ ለእግዚኣብሔር ፤ በከመ ፡ ይቤ ፡ ዳዊት ፡ ወማኅደሮሂ ፡ ውስተ ፡
@@ -632,24 +515,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          በሥጋ ፡ ዲበ ፡ መንበረ ፡ መለኮት ፤ ወጸላእቱኒ ፡ ይገብኡ ፡ ታሕተ ፡ መከይደ ፡ እገሪሁ ፡ ወይትኀተሙ ፡ በማኅተመ ፡ ዚአሁ ፨ ፨ ፨
          ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="19"
-                 xml:id="Chapter19">
+            <div type="textpart" subtype="chapter"  n="19" xml:id="Chapter19">
                <label>
-                  <foreign xml:lang="gez"> ፲፱ ፡ በእንተ ፡ ኀበ ፡ ተረከበት ፡ ዛቲ ፡ መጽሐፍ ።</foreign>
+                    ፲፱ ፡ በእንተ ፡ ኀበ ፡ ተረከበት ፡ ዛቲ ፡ መጽሐፍ ። 
                </label>
                <ab> ወይቤ ፡ ሊቀ ፡ ጳጳሳት ፡ ዘሮሜ ፡ ድማትዮስ ፤ አንሰ ፡ ረከብኩ ፡ መጽሐፈ ፡ በውስተ ፡ ቤተ ፡ ሶፍያ ፡ እምውስተ ፡ መጻሕፍት ፡
          ወመዛግብተ ፡ ንጉሥ ፡ ከመ ፡ ኵላ ፡ መንግሥተ ፡ ዓለም ፡ ለንጉሠ ፡ ሮሜ ፡ ወለንጉሠ ፡ ኢትዮጵያ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="20"
-                 xml:id="Chapter20">
+            <div type="textpart" subtype="chapter"  n="20" xml:id="Chapter20">
                <label>
-                  <foreign xml:lang="gez"> ፳ ፡ በእንተ ፡ ክፍለ ፡ ምድር ።</foreign>
+                    ፳ ፡ በእንተ ፡ ክፍለ ፡ ምድር ። 
                </label>
                <ab> እመንፈቃ ፡ ለኢየሩሳሌም ፡ ወእምደቡባ ፡ እስከ ፡ መስዕ ፡ ሠረቃዊ ፡ ክፍሉ ፡ ለንጉሠ ፡ ሮም ፤ ወእመንፈቃ ፡ ለኢየሩሳሌም ፡ እምደቡባ
          ፡ እስከ ፡ መስዕ ፡ ወህንድ ፡ ዐረባዊ ፡ ክፍሉ ፡ ለንጉሠ ፡ ኢትዮጵያ ፡ እስመ ፡ ክልኤሆሙ ፡ ዘርአ ፡ ሴም ፡ ወልደ ፡ ኖሕ ፡ ዘርአ ፡
@@ -657,13 +532,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          በረከተ ፡ አቡሆሙ ፡ ኖሕ ፡ ንጉሠ ፡ ሮምሂ ፡ ወልደ ፡ ሰሎሞን ፡ ውእቱ ፡ ወንጉሠ ፡ ኢትዮጵያ ፡ ወልደ ፡ ሰሎሞን ፡ በኰሩ ፡ ውእቱ ፡
          ዘይልህቅ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="21"
-                 xml:id="Chapter21">
+            <div type="textpart" subtype="chapter"  n="21" xml:id="Chapter21">
                <label>
-                  <foreign xml:lang="gez"> ፳፩ ፡ በእንተ ፡ ንግሥተ ፡ አዜብ ።</foreign>
+                    ፳፩ ፡ በእንተ ፡ ንግሥተ ፡ አዜብ ። 
                </label>
                <ab> ወዘከመ ፡ ተወልደሂ ፡ ውእቱ ፡ ረከብኩ ፡ ጽሑፍ ፡ ውስቴቱ ፡ ለውእቱ ፡ መጽሐፍ ፤ እስመ ፡ ከመዝ ፡ ዘከርዋ ፡ ወንጌላዊያን ፡ ለይእቲ
          ፡ ብእሲት ፤ ወእግዚእነሂ ፡ ኢየሱስ ፡ ክርስቶስ ፡ ይቤ ፡ እንዘ ፡ ይወቅሦሙ ፡ ለሕዝበ ፡ አይሁድ ፡ ሰቃልያን ፡ እለ ፡ አሜሃ ፡ ትውልድ
@@ -676,13 +547,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወህባ ፡ እግዚኣብሔር ፡ ክብረ ፡ ወብዕለ ፡ ወርቀ ፡ ወብሩረ ፡ ወአልባሰ ፡ ክቡረ ፡ ወአግማለ ፡ ወአግብርተ ፡ ወነጋድያነ ፡ ወይነግዱ ፡
          ላቲ ፡ ባሕረ ፡ ወየብሰ ፡ ወህንደኬ ፡ ወአስዋነ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="22"
-                 xml:id="Chapter22">
+            <div type="textpart" subtype="chapter"  n="22" xml:id="Chapter22">
                <label>
-                  <foreign xml:lang="gez"> ፳፪ ፡ በእንተ ፡ ታምሪን ፡ ነጋዲ ።</foreign>
+                    ፳፪ ፡ በእንተ ፡ ታምሪን ፡ ነጋዲ ። 
                </label>
                <ab> ወሀለወ ፡ ፩ ፡ ልብው ፡ ሊቀ ፡ ነጋድያን ፡ ዘስሙ ፡ ተምሪን ፡ ወይጽዕን ፡ ፭፻ ፡ ወ፳ ፡ አግማለ ፡ ወአሕማረኒ ፡ ቦቱ ፡ መጠነ ፡
          ፸ወ፫ ፡ ወሰሎሞን ፡ ንጉሥ ፡ አሜሃ ፡ ፈቀደ ፡ ከመ ፡ ይሕንጽ ፡ ቤተ ፡ እግዚኣብሔር ፡ ወለአከ ፡ ውስተ ፡ ኵሉ ፡ ነጋድያን ፡ ለምሥራቅ
@@ -705,13 +572,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወሀቦ ፡ እግዚኣብሔር ፡ ክብረ ፡ ወብዕለ ፡ ወጥበበ ፡ ወሞገሰ ፡ ዘኢኮኑ ፡ ከማሁ ፡ እለ ፡ እምቅድሜሁ ፡ ወኢይከውኑ ፡ እምድኅሬሁ ፡
          ዘከማሁ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="23"
-                 xml:id="Chapter23">
+            <div type="textpart" subtype="chapter"  n="23" xml:id="Chapter23">
                <label>
-                  <foreign xml:lang="gez"> ፳፫ ፡ ኀበ ፡ ገብአ ፡ ነጋዲ ፡ ኢትዮጵያ ።</foreign>
+                    ፳፫ ፡ ኀበ ፡ ገብአ ፡ ነጋዲ ፡ ኢትዮጵያ ። 
                </label>
                <ab> ወእምዝ ፡ ፈተወ ፡ ነጋዲ ፡ ተምሪን ፡ ከመ ፡ ይግባእ ፡ ብሔሮ ፡ ወሖረ ፡ ኀቤሁ ፡ ለሰሎሞን ፡ ወሰገደ ፡ ሎቱ ፡ ወአምኆ ፡ ወይቤሎ ፤
          ሰላም ፡ ለዕበይከ ፡ ፈንወኒ ፡ እሖር ፡ ብሔርየ ፡ ኀበ ፡ እግዝእትየ ፡ እስመ ፡ ጐንደይኩ ፡ በርኢየ ፡ ክብርከ ፡ ወጥበብከ ፡ ወበብዙኅ ፡
@@ -739,13 +602,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ እምታሕቴሃ ፡ ከመ ፡ ይደለዉ ፡ ለፍኖት ፡ እስከ ፡ ፮ ፡ አውራኅ ፡ ወይንሥኡ ፡ መሣንቀ ፡ ወይሥርዑ ፡ አብያቲሆሙ ፡ እስመ ፡ ርሑቅ ፡
          ብሔር ፡ ኀበ ፡ የሐውሩ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="24"
-                 xml:id="Chapter24">
+            <div type="textpart" subtype="chapter"  n="24" xml:id="Chapter24">
                <label>
-                  <foreign xml:lang="gez"> ፳፬ ፡ ኀበ ፡ ተደለወት ፡ ለሐዊር ።</foreign>
+                    ፳፬ ፡ ኀበ ፡ ተደለወት ፡ ለሐዊር ። 
                </label>
                <ab> ወትቤሎሙ ፡ ስምዑ ፡ ቃልየ ፡ እሊአየ ፡ ወአፅምኡኒ ፡ ነገርየ ፤ እስመ ፡ አንሰ ፡ እፈቅድ ፡ ጥበበ ፡ ወልብየኒ ፡ ተኀሥሣ ፡ ለአእምሮ
          ፤ እስመ ፡ ተነደፍኩ ፡ በፍቅረ ፡ ጥበብ ፡ ወተስሕብኩ ፡ በአሕባለ ፡ አእምሮ ፤ እስመ ፡ ትኄይስ ፡ ጥበብ ፡ እመዝገበ ፡ ወርቅ ፡ ወብሩር
@@ -775,13 +634,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ለሰሎሞን ፤ እስመ ፡ ሰምዐት ፡ ወጽህቀት ። ተደለወት ፡ ለሐዊር ፤ ወተጽዕነ ፡ ራኩብ ፡ ፯፻ወ፺ ፡ ወ፯ ፡ ወበቅልሰ ፡ ወዓድግ ፡ ዘአልቦ ፡
          ኆልቈ ፡ ተጽዕነ ፤ ወሖረት ፡ ወዓርትዐት ፡ ፍኖታ ፡ እንዘ ፡ ይትዌከል ፡ ልባበ ፡ እግዚኣብሔር ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="25"
-                 xml:id="Chapter25">
+            <div type="textpart" subtype="chapter"  n="25" xml:id="Chapter25">
                <label>
-                  <foreign xml:lang="gez"> ፳፭ ፡ ዘከመ ፡ በጽሐት ፡ ኀበ ፡ ሰሎሞን ፡ ንጉሥ ።</foreign>
+                    ፳፭ ፡ ዘከመ ፡ በጽሐት ፡ ኀበ ፡ ሰሎሞን ፡ ንጉሥ ። 
                </label>
                <ab> ወበጽሐት ፡ ኢየሩሳሌም ፡ ወአብአት ፡ አምኃ ፡ ለንጉሥ ፡ ብዙኀ ፡ ክብረ ፡ ዘይትፈቀድ ፡ ሎቱ ፤ ወውእቱኒ ፡ አክበራ ፡ ወተፈሥሐ ፡
          ወወሀባ ፡ ማኅደረ ፡ በታዕካ ፡ መንግሥት ፡ ዘቅሩብ ፡ ኀቤሁ ። ወይፌኑ ፡ ላቲ ፡ ድራረ ፡ ወምሳሐ ፡ ለለ ፡ አሐቲ ፡ ጊዜ ፡ ፲ወ፭ ፡
@@ -803,13 +658,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ሰአለ ፡ ጥበበ ፡ ወአእምሮ ፡ ከመ ፡ የሀቦ ፡ በዘ ፡ ይኴንን ፡ ሕዝቦ ፡ ወበዘ ፡ የሐንጽ ፡ ቤቶ ፡ ወበዘ ፡ ያሤኒ ፡ ተግባሮ ፡
          ለእግዚኣብሔር ፡ በኵሉ ፡ ዘወሀቦ ፡ ጥበበ ፡ ወአእምሮ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="26"
-                 xml:id="Chapter26">
+            <div type="textpart" subtype="chapter"  n="26" xml:id="Chapter26">
                <label>
-                  <foreign xml:lang="gez"> ፳፮ ፡ ኀበ ፡ ተናገረ ፡ ንጉሥ ፡ ምስለ ፡ ንግሥት ።</foreign>
+                    ፳፮ ፡ ኀበ ፡ ተናገረ ፡ ንጉሥ ፡ ምስለ ፡ ንግሥት ። 
                </label>
                <ab> ወትቤ ፡ ንግሥት ፡ ማክዳ ፡ ለንጉሥ ፡ ሰሎሞን ፡ ብፁዕ ፡ አንተ ፡ እግዚእየ ፡ ዘከመዝ ፡ ለከ ፡ ተውህበ ፡ ጥበብ ፡ ወአእምሮ ፤ አንሰ
          ፡ እምፈተውኩ ፡ እኩን ፡ ከመ ፡ አሐቲ ፡ እንተ ፡ ትንእስ ፡ እምአእማቲከ ፡ ከመእኅፅብ ፡ እገሪከ ፡ ወእስማዕ ፡ ጥበበከ ፡ ወእለቡ ፡
@@ -828,13 +679,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          መሬት ፡ አነ ፡ ሥጋ ፡ ረሰየኒ ፡ ወእንዘ ፡ ማይ ፡ አነ ፡ ሰብዓ ፡ ርጉዐ ፡ ረሰየኒ ፡ ወእንዘ ፡ ነጠብጣብ ፡ ንስቲት ፡ ምራቅ ፡ እንተ
          ፡ ትተፋእ ፡ ዲበ ፡ ምድር ፡ ወትየብስ ፡ መልዕልተ ፡ ምድር ፡ በአርአያሁ ፡ ለሐኰኒ ፡ ወበአምሳሊሁ ፡ ገብረኒ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="27"
-                 xml:id="Chapter27">
+            <div type="textpart" subtype="chapter"  n="27" xml:id="Chapter27">
                <label>
-                  <foreign xml:lang="gez"> ፳፯ ፡ በእንተ ፡ ገባራዊ ።</foreign>
+                    ፳፯ ፡ በእንተ ፡ ገባራዊ ። 
                </label>
                <ab> ወእንዘ ፡ ዘንተ ፡ ይትናገራ ፡ ለንግሥት ፡ ርእዮ ፡ ለ፩ ፡ ገባር ፡ እንዘ ፡ ይጸውር ፡ እብነ ፡ ዲበ ፡ ርእሱ ፡ ወሳእረ ፡ ማይ ፡
          ዲበ ፡ ክሳዱ ፡ ወስንቁ ፡ ወዓሣእኒሁ ፡ ውስተ ፡ ሐቌሁ ፡ ወለዕፀውኒ ፡ ደመሮን ፡ ውስተ ፡ እደዊሁ ፡ ወብሉያት ፡ ወሥጡጣት ፡ አልባሲሁ ፡
@@ -862,13 +709,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          እምሰማያት ፡ ወወሀበክሙ ፡ ጽላተ ፡ ሥርዐተ ፡ መላእክት ፡ በእደ ፡ ሙሴ ፡ ነቢዩ ፡ ሰማዕነ ፡ ዘንተ ፤ ወይወርድ ፡ አ ፡ ኀቤክሙ ፡ ለሊሁ
          ፡ ወይትናገረክሙ ፡ ወይኤምረክሙ ፡ ፍትሖ ፡ ወትእዛዞ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="28"
-                 xml:id="Chapter28">
+            <div type="textpart" subtype="chapter"  n="28" xml:id="Chapter28">
                <label>
-                  <foreign xml:lang="gez"> ፳፰ ፡ በእንተ ፡ ዘከመ ፡ አዘዛ ፡ ለንግሥት ።</foreign>
+                    ፳፰ ፡ በእንተ ፡ ዘከመ ፡ አዘዛ ፡ ለንግሥት ። 
                </label>
                <ab> ወዓውሥአ ፡ ንጉሥ ፡ ወይቤላ ፡ በአማን ፡ ርቱዕ ፡ ይሰግዱ ፡ ለእግዚኣብሔር ፡ ለዘ ፡ ገብረ ፡ ኵሎ ፤ ሰማየ ፡ ወምድረ ፤ ወባሕረ ፡
          ወየብሰ ፤ ፀሐየ ፡ ወወርኀ ፤ ከዋክብተ ፡ ወጸዳላተ ፤ ዕፀወ ፡ ወአእባነ ፤ እንስሳ ፡ ወአዕዋፈ ፤ ዓራዊተ ፡ ወሐርገጻተ ፤ ዓሣተ ፡
@@ -906,13 +749,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ አንስተ ፡ አውሰቡ ፡ መቅሠፍተ ፡ ኀሠሡ ፡ ለርእሶሙ ፡ ወዘሰ ፡ አውሰበ ፡ አሐተ ፡ ብእሲተ ፡ አልቦ ፡ ኀጢአተ ። ወሕገ ፡ እኅት ፡
          ከላእነ ፡ ዘበእንተ ፡ ወሊድ ፡ ይቤሉ ፡ ሐዋርያት ፡ በውስተ ፡ ሲኖዶስ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="29"
-                 xml:id="Chapter29">
+            <div type="textpart" subtype="chapter"  n="29" xml:id="Chapter29">
                <label>
-                  <foreign xml:lang="gez"> ፳፱ ፡ በእንተ ፡ ፫፻፲ወ፰ ።</foreign>
+                    ፳፱ ፡ በእንተ ፡ ፫፻፲ወ፰ ። 
                </label>
                <ab> ወንሕነኒ ፡ ሠራዕነ ፡ ምስሌሆሙ ፡ ጠዩቀነ ፡ ዘነበቡ ፡ እለ ፡ እምቅድሜነ ፡ ሐዋርያት ፤ ንሕነ ፡ ፫፻፲ወ፰ ፡ አርታዕነ ፡ ወዓስተራታዕነ
          ፡ ሃይማኖተ ፡ እንዘ ፡ እግዚእነ ፡ ኢየሱስ ፡ ክርስቶስ ፡ ምስሌነ ፤ ወውእቱ ፡ ሠርዐ ፡ ለነ ፡ ዘከመ ፡ ንሜህር ፡ ወዘከመ ፡ ንገብር ፡
@@ -938,13 +777,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ መሐል ፡ ሊተ ፡ በአምላክከ ፡ አምላከ ፡ እስራኤል ፡ ከመ ፡ ኢትትኀየለኒ ፤ እመቦ ፡ ለእመ ፡ ተስሕትኩ ፡ ሕገ ፡ ሰብእ ፡ ነኣስ ፡
          እወርድ ፡ ውስተ ፡ ጻማ ፡ ወሕማም ፡ ወምንዳቤ ፡ በፍኖት ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="30"
-                 xml:id="Chapter30">
+            <div type="textpart" subtype="chapter"  n="30" xml:id="Chapter30">
                <label>
-                  <foreign xml:lang="gez"> ፴ ፡ በእንተ ፡ ዘመሐለ ፡ ላቲ ፡ ንጉሥ ፡ ሰሎሞን ።</foreign>
+                    ፴ ፡ በእንተ ፡ ዘመሐለ ፡ ላቲ ፡ ንጉሥ ፡ ሰሎሞን ። 
                </label>
                <ab> አውሥኣ ፡ ወይቤላ ፡ እምሕል ፡ ለኪ ፡ ከመ ፡ ኢይትኀየልኪ ፡ ወባሕቱ ፡ አንቲኒ ፡ መሐሊ ፡ ከመ ፡ ኢትትኀየሊ ፡ ኵሎ ፡ ዘውስተ ፡
          ቤትየ ፤ ወሰሐቀት ፡ ንግሥት ፡ ወትቤሎ ፡ እንዘ ፡ ጠቢብ ፡ አንተ ፡ ለምንት ፡ ከመ ፡ አብድ ፡ ትትናገር ፤ እሰርቅኑ ፡ ወሚመ ፡ አሀይድ
@@ -983,13 +818,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ይጼዐኑ ፡ ዲበ ፡ ኆጻ ፡ ወሰረገላ ፡ ዘየሐውር ፡ ዲበ ፡ ባሕር ፡ ወሰረገላ ፡ ዘይረውጽ ፡ በነፋሳት ፡ ዘገብረ ፡ በከመ ፡ ጥበብ ፡ ዘወሀቦ
          ፡ እግዚአብሔር ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="31"
-                 xml:id="Chapter31">
+            <div type="textpart" subtype="chapter"  n="31" xml:id="Chapter31">
                <label>
-                  <foreign xml:lang="gez"> ፴፩ ፡ በእንተ ፡ ዘወሀባ ፡ ትእምርተ ፡ ለንግሥት ።</foreign>
+                    ፴፩ ፡ በእንተ ፡ ዘወሀባ ፡ ትእምርተ ፡ ለንግሥት ። 
                </label>
                <ab> ወተፈሥሐት ፡ ወወፅአት ፡ ከመ ፡ ትሖር ፡ ወአስተፋነዋ ፡ በብዙኅ ፡ ግርማ ። ወአግሐሣ ፡ እንተ ፡ ባሕቲቶሙ ፡ ወአውፅአ ፡ ሕልቀተ ፡
          እምአጽባዕቱ ፡ እንተ ፡ ትንእስ ፡ ወወሀባ ፡ ለንግሥት ፡ ወይበላ ፡ ንሥኢ ፡ ከመ ፡ ኢትርስዕኒ ፡ ወለእመቦ ፡ ዘረከብኩ ፡ እምውስቴትኪ ፡
@@ -1001,13 +832,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ወንዴት ፡ በፈቃዱ ፡ ይትወሀብ ፡ እስመ ፡ ኵሉ ፡ ሎቱ ፡ ወአልቦ ፡ ዘየአቢዮ ፡ ለትእዛዙ ፡ ወለኰነኔሁ ፡ በሰማይ ፡ ወበምድር ፡ በባሕር
          ፡ ወበቀላያት ፤ ወእግዚኣብሔር ፡ የሀሉ ፡ ምስሌኪ ፡ ወሖሪ ፡ በሰላም ። ወተፋነው ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="32"
-                 xml:id="Chapter32">
+            <div type="textpart" subtype="chapter"  n="32" xml:id="Chapter32">
                <label>
-                  <foreign xml:lang="gez"> ፴፪ ፡ ዘከመ ፡ ወለደት ፡ ወበጽሐት ፡ ብሔራ ።</foreign>
+                    ፴፪ ፡ ዘከመ ፡ ወለደት ፡ ወበጽሐት ፡ ብሔራ ። 
                </label>
                <ab> ወሖረት ፡ ወበጽሐት ፡ ውስተ ፡ ሀገረ ፡ ባላ ፡ ዘዲሳርያ ፡ በ፱ ፡ አውራኅ ፡ ወበ፭ ፡ ዕለታት ፡ እምዘ ፡ ተፈነወት ፡ በኀቤሁ ፤
          ወአኀዛ ፡ ማሕምም ፡ ወወለደት ፡ ሕፃነ ፡ ተባዕተ ፡ ወወሀበቶ ፡ ለሐፃኒት ፡ በብዙኅ ፡ ክብር ፡ ወተድላ ፤ ወይእቲሰ ፡ ነበረት ፡ እስከ ፡
@@ -1025,13 +852,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          አራዊት ፡ ወኵሎ ፡ ዘበሕገ ፡ ውርዙት ። ወይበላ ፡ ለንግሥት ፡ አሐውር ፡ እነጽር ፡ ገጸ ፡ አቡየ ፡ ወእገብእ ፡ ዝየ ፡ በፈቃደ ፡
          እግዚኣብሔር ፡ አምላከ ፡ እስራኤል ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="33"
-                 xml:id="Chapter33">
+            <div type="textpart" subtype="chapter"  n="33" xml:id="Chapter33">
                <label>
-                  <foreign xml:lang="gez"> ፴ወ፫ ፡ ዘከመ ፡ ወረደ ፡ ንጉሠ ፡ ኢትዮጵያ ።</foreign>
+                    ፴ወ፫ ፡ ዘከመ ፡ ወረደ ፡ ንጉሠ ፡ ኢትዮጵያ ። 
                </label>
                <ab> ወጸውዐቶ ፡ ለተምሪን ፡ ሊቀ ፡ ነጋድያኒሃ ፡ ወትበሎ ፡ ተደለው ፡ ለመንግድከ ፡ ወውስዶ ፡ ለዝንቱ ፡ ወልድ ፡ እስመ ፡ አጽሐበኒ ፡
          ሌሊተ ፡ ወመዐልተ ፡ ፈድፋደ ፡ በሕቁ ፤ ወታበጽሖ ፡ ኀበ ፡ ንጉሥ ፡ ወታገብኦ ፡ በዳኅን ፡ ዝየ ፡ ለእመ ፡ ሠምረ ፡ እግዚኣብሔር ፡
@@ -1054,13 +877,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወንጌላዊ ፡ እንዘ ፡ ይብል ፡ መጋቢሃ ፡ ውእቱ ፡ ለኵሉ ፡ ብሔረ ፡ ጋዛ ፡ ኅጽዋ ፡ ለንግሥተ ፡ ህንደኬ ፡ ውእቱ ፡ ዘአምነ ፡ በቃለ ፡
          ሉቃስ ፡ ሐዋርያ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="34"
-                 xml:id="Chapter34">
+            <div type="textpart" subtype="chapter"  n="34" xml:id="Chapter34">
                <label>
-                  <foreign xml:lang="gez"> ፴፬ ፡ ዘከመ ፡ በጽሐ ፡ ብሔረ ፡ እሙ ።</foreign>
+                    ፴፬ ፡ ዘከመ ፡ በጽሐ ፡ ብሔረ ፡ እሙ ። 
                </label>
                <ab> ወሶበ ፡ በጽሐ ፡ ሀገረ ፡ እሙ ፡ ተፈሥሐ ፡ በህየ ፡ በክብር ፡ ወበአምኃ ፤ ወሶበ ፡ ርእይዎ ፡ መሰሎሙ ፡ ፍጹመ ፡ ሰሎሞን ፡ ንጉሥ ፡
          ወሰገዲ ፡ ሎቱ ፡ ወይቤልዎ ፡ ባሕ ፡ ሕየው ፡ አበ ፡ ነጋሢ ፡ ወያበውኡ ፡ ሎቱ ፡ አምኃ ፡ ወጋዳ ፡ ወመጋዝአ ፡ ወምሳሓተ ፡ ከመ ፡
@@ -1085,13 +904,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወበምድርኒ ፡ ወሀቦ ፡ ዘይከውን ፡ ንጉሠ ፡ ዲበ ፡ ታቦተ ፡ ሕጉ ፡ ጽዮን ፡ ቅድስት ፡ ሰማያዊት ፡ ዘውእቱ ፡ ንጉሠ ፡ ኢትዮጵያ ፤ ወእለሰ
          ፡ ይነግሡ ፡ እለ ፡ ኢኮኑ ፡ እስራኤል ፡ ተዐድዎ ፡ ሕግ ፡ ወትእዛዝ ፡ ዘኢሠምረ ፡ እግዚኣብሔር ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="35"
-                 xml:id="Chapter35">
+            <div type="textpart" subtype="chapter"  n="35" xml:id="Chapter35">
                <label>
-                  <foreign xml:lang="gez"> ፴ወ፭ ፡ በእንተ ፡ ዘለአከ ፡ ንጉሥ ፡ ሰሎሞን ፡ መልአከ ፡ ኀይሉ ፡ ኀበ ፡ ወልዱ ።</foreign>
+                    ፴ወ፭ ፡ በእንተ ፡ ዘለአከ ፡ ንጉሥ ፡ ሰሎሞን ፡ መልአከ ፡ ኀይሉ ፡ ኀበ ፡ ወልዱ ። 
                </label>
                <ab> ወለአከ ፡ ሰሎሞን ፡ ንጉሥ ፡ መልአከ ፡ ኀይሉ ፡ ዘያሰምክ ፡ ዲበ ፡ እዴሁ ፡ ምስለ ፡ አምኃ ፡ ወመባልዕት ፡ ወመስቴ ፡ ከመ ፡
          ይትቀበሎ ፡ ለውእቱ ፡ ነጋዲ ። ወሖረ ፡ ምስለ ፡ ብዙኅ ፡ ሰረገላት ፡ ወበጽሐ ፡ ኀቤሁ ፡ ወአምኆ ፡ ወወሀቦ ፡ ኵሎ ፡ ዘለአከ ፡ ሎቱ ፡
@@ -1130,14 +945,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወሶበ ፡ ቦአ ፡ ካዕበ ፡ ኢዮአስ ፡ ወልደ ፡ ዮዳሔ ፡ ከመ ፡ ይንግሮ ፡ ለንጉሥ ፡ ምጽአተ ፡ ዚአሁ ፡ አልቦ ፡ ዘቆመ ፡ ቅድመ ፡ ንጉሥ ፡
          አላ ፡ ኵሎሙ ፡ እስራኤል ፡ ይጸዐቁ ፡ ከመ ፡ ይርአዩ ፡ ኪያሁ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="36"
-                 xml:id="Chapter36">
+            <div type="textpart" subtype="chapter"  n="36" xml:id="Chapter36">
                <label>
-                  <foreign xml:lang="gez"> ፴፮ ፡ ኀበ ፡ ተራከበ ፡ ምስለ ፡ ወልዱ ፡ ንጉሥ ፡ ሰሎሞን ። ወወፅአ ፡ ኢዮአስ ፡ ወልደ ፡ ዮዳሔ
-            ፡ ወአብኦ ።</foreign>
+                    ፴፮ ፡ ኀበ ፡ ተራከበ ፡ ምስለ ፡ ወልዱ ፡ ንጉሥ ፡ ሰሎሞን ። ወወፅአ ፡ ኢዮአስ ፡ ወልደ ፡ ዮዳሔ
+            ፡ ወአብኦ ። 
                </label>
                <ab> ወሶበ ፡ ርእዮ ፡ ንጉሥ ፡ ሰሎሞን ፡ ተንሥአ ፡ ወተቀበሎ ፡ ወፈትሐ ፡ መዝግሐ ፡ ልብሱ ፡ እመትከፍቱ ፡ ወሐቀፎ ፡ በእደዊሁ ፡ ዲበ ፡
          እንግድዓሁ ፡ ወሰዐሞ ፡ አፉሁ ፡ ወፍጽሞ ፡ ወአዕይንቲሁ ፡ ወይቤሎ ፡ ናሁ ፡ አቡየ ፡ ዳዊት ፡ ተሐዲሶ ፡ በውርዙቱ ፡ ተንሥአ ፡ እምነ ፡
@@ -1181,13 +992,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ለእግዚኣብሔር ፤ እስመ ፡ ሰምዐት ፡ በኀቤከ ፡ ወተምህረት ፡ ወገብረት ፡ በከመ ፡ ነገርከ ፡ ወአምላክናሁ ፡ ለእግዚኣብሔር ። ወበዝ ፡
          ኵሉ ፡ ስእነ ፡ ኦሆ ፡ አብሎቶ ፡ ለወልዱ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="37"
-                 xml:id="Chapter37">
+            <div type="textpart" subtype="chapter"  n="37" xml:id="Chapter37">
                <label>
-                  <foreign xml:lang="gez"> ፴፯ ፡ ኀበ ፡ ተስእሎ ፡ ሰሎሞን ፡ ለወልዱ ።</foreign>
+                    ፴፯ ፡ ኀበ ፡ ተስእሎ ፡ ሰሎሞን ፡ ለወልዱ ። 
                </label>
                <ab> ወካዕበ ፡ ነገሮ ፡ እንተ ፡ ባሕቲቱ ፡ ሰሎሞን ፡ ወይቤሎ ፡ ለወልዱ ፡ ለምንት ፡ ትፈቅድ ፡ ከመ ፡ ትርሐቅ ፡ እምኔየ ፡ ምንተ ፡
          ኀጣእከ ፡ ከመ ፡ ትሖርብሔረ ፡ አረሚ ፡ ወምንት ፡ አጽሀቀከ ፡ ከመ ፡ ትኅድግ ፡ መንግሥተ ፡ እስራኤል ። አውሥዓወልዱ ፡ ወይቤሎ ፡
@@ -1213,13 +1020,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ሖርኩእስመ ፡ ፈተውኩ ፡ እርአይ ፡ ገጸከ ፡ ወእስማዕ ፡ ቃለከ ፡ ወእንሣእ ፡ በረከትከ ፡ ወእሖር ፡ ኀበ ፡ እምየ ፡ በዳኅን ፨ ፨ ፨ ፨ ፨
          ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="38"
-                 xml:id="Chapter38">
+            <div type="textpart" subtype="chapter"  n="38" xml:id="Chapter38">
                <label>
-                  <foreign xml:lang="gez"> ፴፰ ፡ ኀበ ፡ መከረ ፡ ንጉሥ ፡ ይፈኑ ፡ ወልዶ ፡ ምስለ ፡ ደቂቆሙ ።</foreign>
+                    ፴፰ ፡ ኀበ ፡ መከረ ፡ ንጉሥ ፡ ይፈኑ ፡ ወልዶ ፡ ምስለ ፡ ደቂቆሙ ። 
                </label>
                <ab> ወእምዝ ፡ ገብአውስተ ፡ ቤቱ ፡ ሰሎሞን ፡ ንጉሥ ፡ ወአስተጋብኦሙ ፡ ለመማክርቲሁ ፡ ወለመገብቱ ፡ ወለመላህቅተ ፡ ቤተ ፡ መንግሥቱ ፡
          ወይቤሎሙ ፡ ስእንኩ ፡ ኦሆ ፡ አብሎቶ ፡ ለዝንቱ ፡ ወልድ ፤ ወይእዜኒስምዑኒ ፡ ዘእነግረክሙ ፡ ሀቡ ፡ ናንግሦ ፡ ለብሔረ ፡ ኢትዮጵያ ፡
@@ -1244,13 +1047,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          አምላክከ ። ወእምዝ ፡ አስተዳለዉ ፡ ከመ ፡ ይግበሩ ፡ ሎሙ ፡ ዘበሕግ ፡ ወይፈንውዎሙ ፡ ውስተ ፡ ብሔረ ፡ ኢትዮጵያ ፡ ወይንገሡ ፡ በህየ ፡
          ወይንበሩ ፡ እስከ ፡ ለዓለም ፤ እሙንቱ ፡ ወዘርኦሙ ፡ ለትውልደ ፡ ትውልድ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="39"
-                 xml:id="Chapter39">
+            <div type="textpart" subtype="chapter"  n="39" xml:id="Chapter39">
                <label>
-                  <foreign xml:lang="gez"> ፴፱ ፡ ኀበ ፡ አንገሥዎ ፡ ለወልደ ፡ ሰሎሞን ።</foreign>
+                    ፴፱ ፡ ኀበ ፡ አንገሥዎ ፡ ለወልደ ፡ ሰሎሞን ። 
                </label>
                <ab> ወአስተዳለዉ ፡ ዕፍረተ ፡ ቅብአ ፡ መንግሥት ፡ ወተነፍኀ ፡ ቃለ ፡ ቀርን ፡ ወብዕዛ ፡ ወዕንዚራ ፡ ወመሰንቆ ፡ ወከበሮ ፡ ወጸርኀት ፡
          ሀገር ፡ በውውዓ ፡ በትፍሥሕት ፡ ወበይባቤ ፤ ወአብእዎ ፡ ውስተ ፡ ቅድስተ ፡ ቅዱሳን ፡ ወተእኅዘ ፡ በአቅርንተ ፡ ምሥዋዕ ፡ ወተውህቦ ፡
@@ -1265,13 +1064,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ አሜን ፨ ፡ ወካዕበ ፡ አቡሁኒ ፡ ይቤሎ ፡ ለሰዶቅ ፡ ካህን ፡ አይድኦኬ ፡ ወንግሮ ፡ ፍትሖ ፡ ወኵነኔሁ ፡ ለእግዚኣብሔር ፡ ከመ ፡
          ይዕቀብ ፡ በህየ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="40"
-                 xml:id="Chapter40">
+            <div type="textpart" subtype="chapter"  n="40" xml:id="Chapter40">
                <label>
-                  <foreign xml:lang="gez"> ፵ ፡ ኀበ ፡ አዘዞ ፡ ሳዶቅ ፡ ካህን ፡ ለዳዊት ፡ ንጉሥ ።</foreign>
+                    ፵ ፡ ኀበ ፡ አዘዞ ፡ ሳዶቅ ፡ ካህን ፡ ለዳዊት ፡ ንጉሥ ። 
                </label>
                <ab> ወአውሥአ ፡ ሰዶቅ ፡ ካህን ፡ ወይቤሎ ፡ ስማዕ ፡ ዘእነግረከ ፤ ወለእመ ፡ ገበርከ ፡ ተሐዩ ፡ ለእግዚኣብሔር ፡ ወለእመሰ ፡ ኢገበርከ ፡
          ይቀሥፈከ ፡ እግዚኣብሔር ፡ ወትከውን ፡ ሕጹጸ ፡ እምነ ፡ ኵሉ ፡ አሕዛብ ፡ ወትትመዋእ ፡ በፀርከ ፡ ወይመይጥ ፡ ገጾ ፡ እምኔከ ፡ ወትከውን
@@ -1295,14 +1090,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ለዘ ፡ አክበሮ ፡ ወያፈቅሮ ፡ ለዘ ፡ አፍቀሮ ፤ እስመ ፡ መላኬ ፡ ሞት ፡ ወሕይወት ፡ ውእቱ ፤ ይኤዝዝ ፡ ወይመልክ ፡ ኵሎ ፡ ዓለመ ፡
          በጥበቡ ፡ ወበክሂሎቱ ፡ ወበመዝራዕቱ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="41"
-                 xml:id="Chapter41">
+            <div type="textpart" subtype="chapter"  n="41" xml:id="Chapter41">
                <label>
-                  <foreign xml:lang="gez"> ፵፩ ፡ በእንተ ፡ በረከተ ፡ ነገሥት ። ወስማዕሂ ፡ ዘይረክበከ ፡ ቡራኬ ፡ ለእመ ፡ ገበርከ ፡ ፈቃዶ
-            ፡ ለእግዚኣብሔር ።</foreign>
+                    ፵፩ ፡ በእንተ ፡ በረከተ ፡ ነገሥት ። ወስማዕሂ ፡ ዘይረክበከ ፡ ቡራኬ ፡ ለእመ ፡ ገበርከ ፡ ፈቃዶ
+            ፡ ለእግዚኣብሔር ። 
                </label>
                <ab> ቡሩከ ፡ ትከውንበኵሉ ፡ ፍናዊከ ፡ ቡሩከ ፡ ትከውን ፡ በሀገር ፡ ቡሩከ ፡ ትከውን ፡ በሐቅል ፤ ቡሩከ ፡ ትከውን ፡ በቤትከ ፡ ቡሩከ ፡
          ትከውን ፡ በአፍአከ ፤ ቡሩከ ፡ ይከውን ፡ ፍሬ ፡ ከርሥከ ። ይቤሉ ፡ ጉቡኣን ፡ አሜን ። ቡሩከ ፡ ይከውን ፡ ፍሬ ፡ ምድርከ ። አሜን ።
@@ -1334,14 +1125,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፍቁራኒሆሙ ፡ ወኢለጸላኢሆሙ ፤ ወኢለአብዕልቲሆሙ ፡ ወኢለነዳያኒሆሙ ፤ አላ ፡ በጽድቅ ፡ ኵነኔ ፡ ይኴንኑ ፡ ቢጾሙ ፡ በርቱዕ ፡ ፍትሕ
          ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="42"
-                 xml:id="Chapter42">
+            <div type="textpart" subtype="chapter"  n="42" xml:id="Chapter42">
                <label>
-                  <foreign xml:lang="gez"> ፵፪ ፡ በእንተ ፡ ፲ ፡ ቃላት ። ወስምዑ ፡ እስራኤል ፡ ዘተአዘዘ ፡ እምእግዚኣብሔር ፡ ከመ ፡ ትዕቀቡ
-            ፡ ኪያሁ ።</foreign>
+                    ፵፪ ፡ በእንተ ፡ ፲ ፡ ቃላት ። ወስምዑ ፡ እስራኤል ፡ ዘተአዘዘ ፡ እምእግዚኣብሔር ፡ ከመ ፡ ትዕቀቡ
+            ፡ ኪያሁ ። 
                </label>
                <ab> ወይቤ ፡ አነ ፡ ውእቱ ፡ እግዚኣብሔር ፡ አምላክከ ፡ ዘአውፃእኩከ ፡ እምነ ፡ ምድረ ፡ ግብጽ ፡ ወእምነ ፡ ቤተ ፡ ቅኔ ፤ ወኢይኩን ፡
          ባዕደ ፡ አማልክተ ፡ ዘእንበሌየ ፡ ወኢትግበር ፡ አምላከ ፡ ዘግልፎ ፡ ወኢበኵሉ ፡ አምሳል ፡ ዘውስተ ፡ ሰማይ ፡ ዘላዕሉ ፡ ወኢበኵሉ ፡ ዘበ
@@ -1380,13 +1167,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወልዑል ፡ ውእቱ ፡ ወመሓሪ ፡ ወመስተሣህል ፡ ውእቱ ፡ ወሎቱ ፡ ይደሉ ፡ ስብሐት ፡ ለዓለመ ፡ ዓለም ፡ አሜን ፨ ፨ ፨ ፨ ፨ ፨ ፨
          ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="43"
-                 xml:id="Chapter43">
+            <div type="textpart" subtype="chapter"  n="43" xml:id="Chapter43">
                <label>
-                  <foreign xml:lang="gez"> ፵፫ ፡ ኀበ ፡ ተአዘዙ ፡ ደቂቀ ፡ ኀይለ ፡ እስራኤል ።</foreign>
+                    ፵፫ ፡ ኀበ ፡ ተአዘዙ ፡ ደቂቀ ፡ ኀይለ ፡ እስራኤል ። 
                </label>
                <ab> ሀገርሰ ፡ ተፈሥሐት ፡ በእንተ ፡ ዘአንገሠ ፡ ወልዶ ፡ ንጉሥ ፡ ወረሰዮ ፡ ንጉሠ ፡ እምደወሉ ፡ እስከ ፡ ደወለ ፡ ባዕድ ፤ ወዓዲ ፡
          ሐዘነት ፡ ሀገር ፡ እስመ ፡ አዘዘ ፡ ንጉሥ ፡ ከመ ፡ የሀቡ ፡ ደቂቆሙ ፡ እለ ፡ ተሰምዩ ፡ በኵረ ፤ ወእለኒ ፡ እምየማን ፡ ከማሁ ፡
@@ -1423,13 +1206,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ከመ ፡ ይዕስዮሙ ፡ ሠና ፡ የ ፤ እስመ ፡ መንፈሰ ፡ እግዚኣብሔር ፡ ያዐርፍ ፡ ውስተ ፡ ልቡ ፡ ለንጉሥ ፡ ወእደዊሁ ፡ ውስተ ፡ ኅሊናሁ ፡
          ወአእምሮቱ ፡ ውስተ ፡ ልቡናሁ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="44"
-                 xml:id="Chapter44">
+            <div type="textpart" subtype="chapter"  n="44" xml:id="Chapter44">
                <label>
-                  <foreign xml:lang="gez"> ፵፬ ፡ ከመ ፡ ኢመፍትው ፡ ሐምየ ፡ ንጉሥ ።</foreign>
+                    ፵፬ ፡ ከመ ፡ ኢመፍትው ፡ ሐምየ ፡ ንጉሥ ። 
                </label>
                <ab> ወኢመፍትው ፡ ይሕምይዎ ፡ ለንጉሥ ፡ እስመ ፡ መሲሑ ፡ ለእግዚኣብሔር ፡ ውእቱ ። ኢመፍትው ፡ ወኢኮነ ፡ ሠናየ ፡ ሐሚዮቱ ፡ ለንጉሥ ፤
          ለእመ ፡ ገብረ ፡ ሠናየ ፡ ኢያሀጒል ፡ እም፫ ፡ መንግሥት ፡ ፩ ፡ ያገርር ፡ ሎቱ ፡ ፀሮ ፡ ወኢያገብኦ ፡ ውስተ ፡ እደ ፡ ጸላኢሁ ፤ ፪ ፡
@@ -1453,13 +1232,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          እምልቡ ፡ ነገረ ፡ ጽድቅ ፡ ወሃይማኖት ፡ በእንተ ፡ አብያተ ፡ ክርስቲያናት ፡ ወመሀይምናን ፡ ወፀሩኒ ፡ ግሩራን ፡ በኀይለ ፡ መስቀሉ ፡
          ለኢየሱስ ፡ ክርስቶስ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="45"
-                 xml:id="Chapter45">
+            <div type="textpart" subtype="chapter"  n="45" xml:id="Chapter45">
                <label>
-                  <foreign xml:lang="gez"> ፵፭ ፡ በእንተ ፡ ዘበከዩ ፡ ወመከሩ ፡ እለ ፡ ተፈነዉ ።</foreign>
+                    ፵፭ ፡ በእንተ ፡ ዘበከዩ ፡ ወመከሩ ፡ እለ ፡ ተፈነዉ ። 
                </label>
                <ab> ወደቂቀ ፡ መኳንንተ ፡ እስራኤልሰ ፡ እለ ፡ ተአዘዙ ፡ ከመ ፡ ይሖሩ ፡ ምስለ ፡ ወልደ ፡ ንጉሥ ፡ መከሩ ፡ ኅቡረ ፡ እንዘ ፡ ይብሉ ፡
          ምንተ ፡ ንሬሲ ፤ እስመ ፡ ኀደግነ ፡ ብሔረነ ፡ ወሙላደነ ፡ ወአዝማዲነ ፡ ወሰብአ ፡ ሀገርነ ። ወይእዜኒ ፡ ሀቡ ፡ ከመ ፡ ናቅም ፡ ኪዳነ
@@ -1496,13 +1271,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወገብሩ ፡ ፻ወ፵ ፡ ዲድርክም ፡ ወነሥኦ ፡ ወወሀቦ ፡ ለጸራቢ ፡ ወአሠነየ ፡ ሎቱ ፡ በአሐቲ ፡ ጊዜ ፡ እምነ ፡ ተረፋተ ፡ ዕፀው ፡ ዘቤተ ፡
          መቅደስ ፤ ወተፈሥሐ ፡ ወአርአዮሙ ፡ ለአኀዊሁ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="46"
-                 xml:id="Chapter46">
+            <div type="textpart" subtype="chapter"  n="46" xml:id="Chapter46">
                <label>
-                  <foreign xml:lang="gez"> ፵፮ ፡ ዘከመ ፡ መከሩ ፡ በእንተ ፡ ጽዮን ።</foreign>
+                    ፵፮ ፡ ዘከመ ፡ መከሩ ፡ በእንተ ፡ ጽዮን ። 
                </label>
                <ab> ወእንዘ ፡ ይነውም ፡ በሌሊት ፡ አስተርአዮ ፡ መልአከ ፡ እግዚኣብሔር ፡ ለአዛርያስ ፡ ወይቤሎ ፡ ንሣእ ፡ ለከ ፡ ፬ ፡ ጠሊተ ፡ ዘዘዓመት
          ፡ ዘበእንተ ፡ ኀጢአትክሙ ፡ ወለከ ፡ ወለኤልምያስ ፡ ወለአቢስ ፡ ወለማክሪ ፡ ወአርባዕተ ፡ በግዐ ፡ ንጹሐ ፡ ዘዘዓመት ፡ ወአሐተ ፡ ላህመ
@@ -1527,13 +1298,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወእፈቅድአ ፡ እሡዕአ ፡ መሥዋዕተአ ፡ መድኀኒትአበእንተ ፡ ኀጢአትየአ ፡ ውስተ ፡ ዛቲ ፡ ሀገርአ ፡ ቅድስትአ ፡ ኢየሩሳሌምአ ፡ ወጽዮንአ ፡
          ታቦተ ፡ ሕጉአ ፡ ለእግዚኣብሔርአ ፤ ወሰላም ፡ ለዕዘዝከ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="47"
-                 xml:id="Chapter47">
+            <div type="textpart" subtype="chapter"  n="47" xml:id="Chapter47">
                <label>
-                  <foreign xml:lang="gez"> ፵፯ ፡ በእንተ ፡ መሥዋዕተ ፡ አዛርያስ ፡ ወንጉሥ ።</foreign>
+                    ፵፯ ፡ በእንተ ፡ መሥዋዕተ ፡ አዛርያስ ፡ ወንጉሥ ። 
                </label>
                <ab> ወሖረ ፡ ኢዮአስ ፡ ወልደ ፡ ዮዳሔ ፡ ወነገሮ ፡ ለንጉሥ ፡ ሰሎሞን ፡ ወተፈሥሐ ፡ ንጉሥ ፡ በእንተዝ ፡ ወአዘዘ ፡ ከመ ፡ ያስተዳልዉ ፡
          መሣውዐ ፡ መሥዋዕተ ፡ ከመ ፡ ይሡዕ ፡ ወልዱ ፤ ወአምጽአ ፡ ወወሀቦ ፡ ዘይበፅዕ ፡ ለእግዚኣብሔር ፡ ፻ ፡ አስዋረ ፡ ወ፻ ፡ መግዝአ ፡
@@ -1547,13 +1314,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወሦዐ ፡ ንዋዮ ፡ በከመ ፡ አዘዞ ፡ መልአከ ፡ እግዚኣብሔር ፡ ለአዛርያስ ፡ በሌሊት ። ወእምዝ ፡ እምድኅረ ፡ ሦዑ ፡ ገብኡ ፡ ውስተ ፡
          አብያቲሆሙ ፡ ወኖሙ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="48"
-                 xml:id="Chapter48">
+            <div type="textpart" subtype="chapter"  n="48" xml:id="Chapter48">
                <label>
-                  <foreign xml:lang="gez"> ፵፰ ፡ ኀበ ፡ አንሥእዋ ፡ ለጽዮን ።</foreign>
+                    ፵፰ ፡ ኀበ ፡ አንሥእዋ ፡ ለጽዮን ። 
                </label>
                <ab> ወናሁ ፡ ካዕበ ፡ አስተርአዮ ፡ መልአከ ፡ እግዚኣብሔር ፡ ለአዛርያስ ፡ ወሠረቀ ፡ ላዕሌሁ ፡ ከመ ፡ ዐምደ ፡ እሳት ፡ ወመልአ ፡ ቤት ፡
          በብርሃኑ ፡ ወአንሥኦ ፡ ለአዛርያስ ፡ ወይቤሎ ፤ ቁም ፡ ወጽናዕ ፡ ወአንቅሆ ፡ ለኤልምያኖስ ፡ እኁከ ፡ ለአብሳ ፡ ወለማከሪ ፡ ወንሥኡ ፡
@@ -1568,13 +1331,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ላቲ ፡ በግዐ ፡ ወአጸንሕሑ ፡ ስኂነ ፡ ወነጸፉ ፡ ላቲ ፡ ሜላተ ፡ ወአንበርዋ ፡ ውስተ ፡ ምስዋር ፡ ፯ ፡ ዕለተ ፡ ወ፯ ፡ ሌሊተ ፨ ፨ ፨
          ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="49"
-                 xml:id="Chapter49">
+            <div type="textpart" subtype="chapter"  n="49" xml:id="Chapter49">
                <label>
-                  <foreign xml:lang="gez"> ፵፱ ፡ ኀበ ፡ ባረኮ ፡ አቡሁ ፡ ለወልዱ ።</foreign>
+                    ፵፱ ፡ ኀበ ፡ ባረኮ ፡ አቡሁ ፡ ለወልዱ ። 
                </label>
                <ab> ወእምዝ ፡ ተንሥአ ፡ ንጉሠ ፡ ኢትዮጵያ ፡ ከመ ፡ ይሖር ፡ ብሔሮ ፡ ወቦአ ፡ ኀበ ፡ አቡሁ ፡ ከመ ፡ ይጸሊ ፡ ሎቱ ፡ ወይቤሎ ፡ ባርከኒ
          ፡ አባ ፡ ወሰገደ ፡ ሎቱ ። ወአንሥኦ ፡ ወባረኮ ፡ ወአኀዞ ፡ ርእሶ ፡ ወይቤ ፤ ቡሩክ ፡ እግዚኣብሔር ፡ አምላኪየ ፡ ዘባረኮ ፡ ለአቡየ ፡
@@ -1591,13 +1350,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ለከ ፡ ትኩንከ ፡ መርሐ ፡ እግዝእትነ ፡ ጽዮን ፡ ቅድስት ፡ ሰማያዊት ፡ ታቦተ ፡ ሕጉ ፡ ለእግዚኣብሔር ፡ ንጽሕት ። ወተባረከ ፡ ወሰገደ ፡
          ወሖረ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="50"
-                 xml:id="Chapter50">
+            <div type="textpart" subtype="chapter"  n="50" xml:id="Chapter50">
                <label>
-                  <foreign xml:lang="gez"> ፶ ፡ ኀበ ፡ ተፋነዉ ፡ ምስለ ፡ አቡሁ ፡ ወላሐወት ፡ ሀገር ።</foreign>
+                    ፶ ፡ ኀበ ፡ ተፋነዉ ፡ ምስለ ፡ አቡሁ ፡ ወላሐወት ፡ ሀገር ። 
                </label>
                <ab> ወተፋነዉ ፡ ወሖሩ ፤ ወአቅደሙ ፡ ጽዒኖታ ፡ ለጽዮን ፡ በሌሊት ፡ ውስተ ፡ ሰረገላ ፡ በኅሱራት ፡ ንዋያት ፡ ወርሱሓት ፡ አልባስ ፡ ምስለ
          ፡ ንዋይ ፡ ቊስቋሳት ፡ ወተጽዕኑ ፡ ኵሉ ፡ ሰረገላት ። ወተንሡ ፡ ሊቃናት ፡ ወተነፍሐ ፡ ቀርን ፡ ወደምፀት ፡ ሀገር ፡ ወወውዑ ፡ መሐዛት
@@ -1621,14 +1376,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          እለ ፡ ተወልዱ ፡ ዘእንበለ ፡ ሕግ ፡ ይትወሀቦሙ ፡ ሕግ ፡ ወይብልዋ ፡ ለጽዮን ፡ እምነ ፡ በእንተ ፡ ብእሲ ፡ ዘተወልደ ፤ በእንተ ፡
          ዝንቱኑ ፡ ወልድየ ፡ እንጋ ፡ ዘተወልደ ፡ እምኔየ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="51"
-                 xml:id="Chapter51">
+            <div type="textpart" subtype="chapter"  n="51" xml:id="Chapter51">
                <label>
-                  <foreign xml:lang="gez"> ፶፩ ፡ ኀበ ፡ ዘይቤሎ ፡ ለሳዶቅ ፡ ካህን ፡ ሑር ፡ ወአምጽእ ፡ ውእተ ፡ ልብሰ ፡ ዘላዕሌሃ
-            ።</foreign>
+                    ፶፩ ፡ ኀበ ፡ ዘይቤሎ ፡ ለሳዶቅ ፡ ካህን ፡ ሑር ፡ ወአምጽእ ፡ ውእተ ፡ ልብሰ ፡ ዘላዕሌሃ
+            ። 
                </label>
                <ab> ወይቤሎ ፡ ለሳዶቅ ፡ ካህን ፡ ሖር ፡ አምጽእ ፡ ውእተ ፡ ልብሰ ፡ ዘላዕሌሃ ፡ ለጽዮን ፡ ወንሣእ ፡ ለከ ፡ ዘንተ ፡ ልብሰዘይኄይስ ፡
          እምኔሁ ፡ ወአልብሳ ፡ መልዕልተ ፡ ፪ ፡ ዘታሕቴሃ ፤ ወውእቱ ፡ ልብስ ፡ ዘዐሥቅ ፡ ወርቀ ፡ ቄፋዝ ፡ ዝብጦ ፡ ወእኑም ፡ በስህቦ ፡ ወአኮ
@@ -1648,13 +1399,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          አማልክተ ፡ አሕዛብ ፤ ወሶበኒ ፡ ትሠውዕ ፡ አንጺረከ ፡ ለኀቤነ ፡ ሡዕ ፡ ለኢየሩሳሌም ፡ ወለጽዮን ፡ ቅድስት ፡ ወሶበኒ ፡ ትጼሊ ፡
          አንጺረከ ፡ ለኢየሩሳሌም ፡ ለኀቤነ ፡ ጸሊ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="52"
-                 xml:id="Chapter52">
+            <div type="textpart" subtype="chapter"  n="52" xml:id="Chapter52">
                <label>
-                  <foreign xml:lang="gez"> ፶፪ ፡ ኀበ ፡ ዘሖረ ፡ ሳዶቅ ፡ ካህን ።</foreign>
+                    ፶፪ ፡ ኀበ ፡ ዘሖረ ፡ ሳዶቅ ፡ ካህን ። 
                </label>
                <ab> ወሖረ ፡ ሳዶቅካህን ፡ ወወሀቦ ፡ ልብሳ ፡ ለጽዮን ፡ ወአዘዘ ፡ ኵሎ ፡ ዘነገሮ ፡ ሰሎሞን ። ወተፈሥሐ ፡ ዳዊት ፡ ወልደ ፡ ሰሎሞን ፡
          በእንተዝ ፡ ወአንከረ ፡ ወአስተብፅዐ ፡ ፈድፋደ ፡ ወይቤ ፡ ዛቲ ፡ ትኩነኒ ፡ እግዝእትየ ፡ በተአምኖታ ፡ ለታቦተ ፡ ሕጉ ፡ ለእግዚኣብሔር ።
@@ -1674,13 +1421,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          እምአብያጺሁ ፡ ወከመ ፡ ንስር ፡ ሶበ ፡ ያቀልልሥጋሁ ፡ በመልዕልተ ፡ ነፉስ ፤ ከማሁ ፡ ይረውጹ ፡ በሰረገላ ፡ ዘአልቦ ፡ ቅድመ ፡ ወድኅረ
          ፡ ዘእንበለ ፡ ተሀውኮ ፡ ይምነ ፡ ወፅግመ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="53"
-                 xml:id="Chapter53">
+            <div type="textpart" subtype="chapter"  n="53" xml:id="Chapter53">
                <label>
-                  <foreign xml:lang="gez"> ፶፫ ፡ ኀበ ፡ ተውህበ ፡ ሰረገላ ፡ ለኢትዮጵያ ።</foreign>
+                    ፶፫ ፡ ኀበ ፡ ተውህበ ፡ ሰረገላ ፡ ለኢትዮጵያ ። 
                </label>
                <ab> ወበኀበ ፡ ኀደሩሰ ፡ ጋዛ ፡ ይእቲ ፡ ሀገረ ፡ እሙ ፡ ለንጉሥ ፡ ዘወሀባ ፡ ሶበ ፡ ትመጽእ ፡ ኀቤሁ ፡ ንጉሥ ፡ ሰሎሞን ፡ ለንግሥተ ፡
          ኢትዮጽያ ። ወእምህየ ፡ በጽሑ ፡ በአሐቲ ፡ ዕለት ፡ ውስተ ፡ ደወለ ፡ ግብጽ ፡ እንተ ፡ ስማ ፡ ምስሪን ፤ ወሶበ ፡ ርእዩ ፡ ደቂቀ ፡
@@ -1712,13 +1455,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          እደዊሆሙ ፡ ወያነክሩ ፡ ወይሰፍሑ ፡ እደዊሆሙ ፡ ውስተ ፡ ሰማይ ፡ ወይሰግዱ ፡ በገጾሙ ፡ ውስተ ፡ ምድር ፡ ወያአኵትዎ ፡ ለእግዚኣብሔር ፡
          በአልባቢሆሙ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="54"
-                 xml:id="Chapter54">
+            <div type="textpart" subtype="chapter"  n="54" xml:id="Chapter54">
                <label>
-                  <foreign xml:lang="gez"> ፶፬ ፡ ኀበ ፡ ተነበየ ፡ ዳዊት ፡ ወተሰለማ ፡ ለጽዮን ።</foreign>
+                    ፶፬ ፡ ኀበ ፡ ተነበየ ፡ ዳዊት ፡ ወተሰለማ ፡ ለጽዮን ። 
                </label>
                <ab> ወቦአ ፡ ንጉሥ ፡ ወቆመ ፡ ቅድሜሃ ፡ ወተሰለማ ፡ ወሰገደ ፡ ላቲ ፡ ወይቤ ፤ እግዚኦ ፡ አምላከ ፡ እስራኤል ፡ ለከ ፡ ስብሐት ፡ እስመ
          ፡ ትገብር ፡ ፈቃደከ ፡ ወአኮ ፡ ፈቃደ ፡ ሰብእ ፤ ታረስዖ ፡ ጥበቦ ፡ ለጠቢብ ፡ ወታአብዶ ፡ ምክረ ፡ ለመካሪ ፡ ወትሜጥቆ ፡ ለነዳይ ፡
@@ -1751,13 +1490,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ጴጥሮስ ፡ ወዮሐንስ ፡ በርእሰ ፡ ደብረ ፡ ታቦር ፤ ወአንከርዎ ፡ ኵሎሙ ፡ ወይቤሉ ፡ ዝንቱ ፡ ወልደ ፡ ነቢይ ፡ ውስተ ፡ ነቢያትኑ ፡ ኍሉቅ
          ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="55"
-                 xml:id="Chapter55">
+            <div type="textpart" subtype="chapter"  n="55" xml:id="Chapter55">
                <label>
-                  <foreign xml:lang="gez"> ፶፭ ፡ በእንተ ፡ ዘተፈሥሑ ፡ ሰብአ ፡ ኢትዮጵያ ።</foreign>
+                    ፶፭ ፡ በእንተ ፡ ዘተፈሥሑ ፡ ሰብአ ፡ ኢትዮጵያ ። 
                </label>
                <ab> ወአኀዙ ፡ ዕንዚራተ ፡ ወነፍኁ ፡ ቀርነ ፡ ወከበሮ ፡ ወብዕዛ ፡ ወበቃለ ፡ ማሕሌቶሙ ፡ ወፍሥሓሆሙ ፡ ተሀውከት ፡ ወደምፀት ፡ ፈለገ ፡
          ግብጽ ፡ ወኀብሩ ፡ ምስሌሆሙ ፡ ውውዓ ፡ ወማሕሌት ፤ ወወድቁ ፡ ጣዖታቲሆሙ ፡ ዘገብሩ ፡ በእደዊሆሙ ፡ አምሳለ ፡ ሰብእ ፡ ወከልብ ፡ ወድመት
@@ -1786,13 +1521,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ሰማይ ፡ ወሚካኤል ፡ ሊቀ ፡ መላእክት ፤ ወተፈሥሑ ፡ ኵሎሙ ፡ አድያመ ፡ ኢትዮጵያ ፡ እስመ ፡ ታበርህ ፡ ጽዮን ፡ ኀበ ፡ በጽሐት ፡ ከመ
          ፡ ፀሐይ ፡ በውስተ ፡ ጽልመት ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="56"
-                 xml:id="Chapter56">
+            <div type="textpart" subtype="chapter"  n="56" xml:id="Chapter56">
                <label>
-                  <foreign xml:lang="gez"> ፶፮ ፡ በእንተ ፡ ግብአተ ፡ ሳዶቅ ፡ ካህን ፡ ውሂቦ ፡ ሞፃ ።</foreign>
+                    ፶፮ ፡ በእንተ ፡ ግብአተ ፡ ሳዶቅ ፡ ካህን ፡ ውሂቦ ፡ ሞፃ ። 
                </label>
                <ab> ወሶበ ፡ ገብአ ፡ ሳዶቅ ፡ ካህን ፡ ኀበ ፡ ሰሎሞን ፡ ንጉሥ ፡ ወረከቦ ፡ እንዘ ፡ ይቴክዝ ፡ አውሥኦ ፡ ንጉሥ ፡ ለሳዶቅ ፡ ካህን ፡
          ወይቤሎ ፡ አመ ፡ ትመጽእ ፡ ንግሥት ፡ አስተርአየኒ ፡ ከመዝ ፡ በሌሊት ፡ ከመ ፡ ዘእቀውም ፡ ውስተ ፡ ቀመራ ፡ ለኢየሩሳሌም ፡ ወረደ ፡
@@ -1810,13 +1541,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወአልቦ ፡ ዘረከበ ፡ ዘእንበለ ፡ ዕፀወ ፡ ለውሕ ፡ ጥጉዓን ፡ በአረፍተ ፡ ምንባሪሃ ፡ ለጽዮን ፡ ዘአስተማሰለ ፡ አዛርያስ ፨ ፨ ፨ ፨
          ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="57"
-                 xml:id="Chapter57">
+            <div type="textpart" subtype="chapter"  n="57" xml:id="Chapter57">
                <label>
-                  <foreign xml:lang="gez"> ፶፯ ፡ በእንተ ፡ ውድቀተ ፡ ሳዶቅ ፡ ካህን ።</foreign>
+                    ፶፯ ፡ በእንተ ፡ ውድቀተ ፡ ሳዶቅ ፡ ካህን ። 
                </label>
                <ab> ወርእዮ ፡ ዘንተ ፡ ወድቀ ፡ በገጹ ፡ ውስተ ፡ ምድር ፡ ወተክዕወት ፡ ነፍሱ ፡ በላዕሌሁ ፡ እስመ ፡ ደንገፀ ፡ ወኮነ ፡ ከመ ፡ በድን ፤
          ወሶበ ፡ ጐንደየ ፡ ወፂአ ፡ ለአከ ፡ ሎቱ ፡ ኢዮአስ ፡ ወልደ ፡ ዮዳሔ ፡ ወረከቦ ፡ ውዱቀ ፡ ከመ ፡ በድን ፡ ወአንሥኦ ፡ ርእሶ ፡ ወገሰሶ
@@ -1829,13 +1556,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          በእንተ ፡ ዘሰረቁ ፡ ቤተ ፡ መቅደሱ ፡ ለእግዚኣብሔር ፡ ወፈቀዱ ፡ ያርኵሱ ፡ ማኅደረ ፡ ስሙ ፡ ውስተ ፡ ምድር ፡ ዘአልቦ ፡ ሕገ ፨ ፨ ፨
          ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="58"
-                 xml:id="Chapter58">
+            <div type="textpart" subtype="chapter"  n="58" xml:id="Chapter58">
                <label>
-                  <foreign xml:lang="gez"> ፶፰ ፡ ኀበ ፡ ተንሥአ ፡ ሰሎሞን ፡ ይቅትሎሙ ።</foreign>
+                    ፶፰ ፡ ኀበ ፡ ተንሥአ ፡ ሰሎሞን ፡ ይቅትሎሙ ። 
                </label>
                <ab> ከመዝ ፡ ተናገረ ፡ ንጉሥ ፡ ሰሎሞን ፡ ወተንሥአ ፡ በመዐት ፡ ወሖረ ፡ ከመ ፡ ይኅሥሦሙ ፤ ወሶበ ፡ ተንሥኡ ፡ ንጉሥ ፡ ወመኳንንቲሁ ፡
          ወኀያላኒሁ ፡ ተጋብኡ ፡ አእሩገ ፡ እስራኤል ፡ ውስተ ፡ ቤተ ፡ እግዚኣብሔር ፡ ምስለ ፡ አቤራት ፡ ወደናግል ፡ ወበከዩ ፡ በእንተ ፡ ጽዮን
@@ -1857,13 +1580,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ መልዕልተ ፡ ነፉስ ፡ በሰረገላ ፤ ወለነሰ ፡ መሰለነ ፡ ዘአንተ ፡ ረሰይከ ፡ ሎሙ ፡ በጥበብከ ፡ ከመ ፡ ይሖሩ ፡ በሰረገላ ፡ መልዕልተ ፡
          ነፋስ ። ወይቤሎሙ ፡ ቦኑ ፡ ዘሀለወት ፡ ጽዮን ፡ ታቦተ ፡ ሕጉ ፡ ለእግዚኣብሔር ፡ ምስሌሆሙ ፤ ወይቤልዎ ፡ አልቦ ፡ ዘርኢነ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="59"
-                 xml:id="Chapter59">
+            <div type="textpart" subtype="chapter"  n="59" xml:id="Chapter59">
                <label>
-                  <foreign xml:lang="gez"> ፶፱ ፡ ኀበ ፡ ሐተቶ ፡ ለግብጻዊ ፡ ገብረ ፡ ፈርዖን ።</foreign>
+                    ፶፱ ፡ ኀበ ፡ ሐተቶ ፡ ለግብጻዊ ፡ ገብረ ፡ ፈርዖን ። 
                </label>
                <ab> ወኀለፈ ፡ እምህየ ፡ ወረከበ ፡ ፩ ፡ መኰንነ ፡ እመኳንንተ ፡ ግብጽ ፡ ዘንጉሥ ፡ ፈርዖን ፡ ዘለአኮ ፡ ኀቤሁ ፡ ምስለ ፡ አምኃ ፡
          ወምሉእ ፡ ንዋይ ፡ ምስሌሁ ፡ ወበጽሐ ፡ ወሰገደ ፡ ለንጉሥ ። ወአፍጠኖ ፡ ሐቲተ ፡ ሰሎሞን ፡ ንጉሥ ፡ ዘእንበለ ፡ የሀብ ፡ አምኃሁ ፡
@@ -1883,13 +1602,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ክብርክሙ ፡ ለባዕድ ። አውሥአ ፡ በጥበብ ፡ ሰሎሞን ፡ ወይቤ ፡ በአይቴ ፡ ይክል ፡ ነሢኦታ ፡ ለእግዝእትነ ፡ እስመ ፡ ሀለወት ፡ ኀቤነ ፨
          ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="60"
-                 xml:id="Chapter60">
+            <div type="textpart" subtype="chapter"  n="60" xml:id="Chapter60">
                <label>
-                  <foreign xml:lang="gez"> ፷ ፡ ኀበ ፡ ላሐዋ ፡ ሰሎሞን ፡ ለጽዮን ።</foreign>
+                    ፷ ፡ ኀበ ፡ ላሐዋ ፡ ሰሎሞን ፡ ለጽዮን ። 
                </label>
                <ab> ወቦአ ፡ ውስተ ፡ ኀይመቱ ፡ ወበከየ ፡ ብካየ ፡ መሪረ ፡ እንዘ ፡ ይብል ፡ እግዚኦ ፡ በመዋዕልየኑ ፡ ትነሥኣ ፡ ለታቦተ ፡ ኪዳንከ ፡
          እምኔነ ፤ ባሕቱ ፡ እምቀደምከ ፡ ነሢአ ፡ ነፍስየ ፡ እምኔሃ ፡ ዘበመዋዕልየ ፡ ትነሥኣ ፤ እስመ ፡ አንተሰ ፡ ኢትሔሱ ፡ ቃልከ ፡ ወኢትዔምፅ
@@ -1961,13 +1676,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ቤተ ፡ እግዚኣብሔር ፡ ወትከውነከ ፡ ምክሐ ፡ ይእቲ ፡ ወምስማከ ፡ ለእመ ፡ ዐቀብከ ፡ ትእዛዞ ፡ ወኢያምለከ ፡ ባዕደ ፡ አማልክተ ፡
          ትትፈቀር ፡ በኀበ ፡ እግዚኣብሔር ፡ ከመ ፡ ዳዊት ፡ አቡከ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="61"
-                 xml:id="Chapter61">
+            <div type="textpart" subtype="chapter"  n="61" xml:id="Chapter61">
                <label>
-                  <foreign xml:lang="gez"> ፷፩ ፡ በእንተ ፡ ግብአተ ፡ ሰሎሞን ፡ ኢየሩሳሌም ።</foreign>
+                    ፷፩ ፡ በእንተ ፡ ግብአተ ፡ ሰሎሞን ፡ ኢየሩሳሌም ። 
                </label>
                <ab> ወእምዝ ፡ አተወ ፡ ሀገረ ፡ ኢየሩሳሌም ፡ ወበከየ ፡ በህየኒ ፡ ምስለ ፡ አእሩገ ፡ ኢየሩሳሌም ፡ ብካየ ፡ ዐቢየ ፡ በውስተ ፡ ቤተ ፡
          እግዚኣብሔር ፤ ወእምድኅረዝ ፡ ተኣኀዙ ፡ ንጉሥ ፡ ምስለ ፡ ሰዶቅ ፡ ካህን ፡ በክሳውዲሆሙ ፡ ወበከዩ ፡ መሪረ ፡ በውስተ ፡ ምንባሪሃ ፡
@@ -2017,13 +1728,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ነገሮሙ ፡ ለአብዳን ፡ በላዕለ ፡ ጠቢብ ፡ ኢይበቊዕ ፡ ከመ ፡ ጢስ ፡ ለዐይን ፡ ወከመ ፡ ቆዕ ፡ ለስነን ፡ ከማሁ ፡ ኢይበቊዕ ፡ በላዕለ ፡
          ጠቢብ ፡ ነገረ ፡ አብዳን ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="62"
-                 xml:id="Chapter62">
+            <div type="textpart" subtype="chapter"  n="62" xml:id="Chapter62">
                <label>
-                  <foreign xml:lang="gez"> ፷፪ ፡ በእንተ ፡ ዘአውሥኦሙ ፡ ሰሎሞን ።</foreign>
+                    ፷፪ ፡ በእንተ ፡ ዘአውሥኦሙ ፡ ሰሎሞን ። 
                </label>
                <ab> ወአውሥኦሙ ፡ ሰሎሞን ፡ ንጉሥ ፡ ወይቤሎሙ ፡ ስምዑኒ ፡ ዘእነግረክሙ ፡ ኪያየ ፡ ሶበ ፡ ወሰደኒ ፡ እንዘ ፡ እጸውር ፡ ኪያሃ ፡ ምንት ፡
          እምተስእኖ ፡ ለእግዚኣብሔር ፡ ወኪያክሙኒ ፡ ሶበ ፡ ይወስደክሙ ፡ ጸዊረክ ፡ ሙ ፡ ኪያሃ ፡ ምንት ፡ እምተስእኖ ፡ ለእግዚኣብሔር ፡ ወሶበሂ
@@ -2043,13 +1750,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ዘምስለ ፡ አበዊነ ፡ አብርሃም ፡ ወይስሐቅ ፡ ወያዕቆብ ፡ ኢይሔሱ ፡ ቃሎ ፡ ወኢይዔምፅ ፡ ኪዳኖ ፡ ከመ ፡ ኢያማስን ፡ ዘርኦሙ ፡ ለአበዊነ
          ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="63"
-                 xml:id="Chapter63">
+            <div type="textpart" subtype="chapter"  n="63" xml:id="Chapter63">
                <label>
-                  <foreign xml:lang="gez"> ፷፫ ፡ ኀበ ፡ ኀበሩ ፡ ዐበይተ ፡ እስራኤል ።</foreign>
+                    ፷፫ ፡ ኀበ ፡ ኀበሩ ፡ ዐበይተ ፡ እስራኤል ። 
                </label>
                <ab> ወእምዝ ፡ አውሥእዎ ፡ መላህቅተ ፡ እስራኤል ፡ ወይቤልዎ ፡ ትኩን ፡ ሥምረትከ ፡ ወሥምረተ ፡ እግዚኣብሔር ፡ አምላክከ ፡ ወንሕነሰ ፡
          አልቦ ፡ ዘንትዐደው ፡ እምቃልከ ፡ ወኢናየድዖሙ ፡ ለባዕድ ፡ አሕዛብ ፡ ከመ ፡ ተነሥአት ፡ ጽዮን ፡ እምኔነ ። ወአቀሙ ፡ ዘንተ ፡ ኪዳነ ፡
@@ -2071,13 +1774,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ዕሙቅ ፡ ዘይስሕብ ፡ ውስተ ፡ ልጐት ፡ ለዘ ፡ ኢይክል ፡ ጸቢተ ፡ እስከ ፡ የዐዝዞ ፡ ማይ ፡ ወየሀጒል ፡ ነፍሶ ፡ ከማሁ ፡ ትፈቅድ ፡
          አስጥሞቶ ፡ ይእቲ ፡ ብእሲት ፡ ለሰሎሞን ፡ ንጉሥ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="64"
-                 xml:id="Chapter64">
+            <div type="textpart" subtype="chapter"  n="64" xml:id="Chapter64">
                <label>
-                  <foreign xml:lang="gez"> ፷፬ ፡ ኀበ ፡ አስሐተቶ ፡ ለሰሎሞን ፡ ወለተ ፡ ፈርዖን ።</foreign>
+                    ፷፬ ፡ ኀበ ፡ አስሐተቶ ፡ ለሰሎሞን ፡ ወለተ ፡ ፈርዖን ። 
                </label>
                <ab> ወእምዝ ፡ ተግህደት ፡ በቅድሜሁ ፡ ወትቤሎ ፡ ይኄይስ ፡ ሰጊድ ፡ ለአማልክት ፡ ከመ ፡ አቡየ ፡ ወኵሎሙ ፡ ነገሥተ ፡ ግብጽ ፡ እለ ፡
          እምቅድሜሁ ፡ ለአቡየ ። ወአውሥኣ ፡ ወይቤላ ፡ ሎሙሰ ፡ ይብሉ ፡ አማልክቲሆሙ ፡ ዘገብሩ ፡ በእደዊሆሙ ፡ በነሃቢ ፡ ወበጸራቢ ፡ በለሓኵ ፡
@@ -2108,13 +1807,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ፍጥረት ፤ ወይእቲ ፡ ስሕተተ ፡ ተባዕት ፡ እምአንስት ፡ ተፈጥረት ፡ እምሔዋን ፡ እስመ ፡ አዋልደ ፡ ሔዋን ፡ ኵሎን ፨ ፨ ፨ ፨ ፨ ፨ ፨
          ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="65"
-                 xml:id="Chapter65">
+            <div type="textpart" subtype="chapter"  n="65" xml:id="Chapter65">
                <label>
-                  <foreign xml:lang="gez"> ፷፭ ፡ በእንተ ፡ ኀጢአተ ፡ ሰሎሞን ።</foreign>
+                    ፷፭ ፡ በእንተ ፡ ኀጢአተ ፡ ሰሎሞን ። 
                </label>
                <ab> ወለሰሎሞንሰ ፡ ኮኖ ፡ ጌጋየ ፡ በእንተ ፡ ሰጊድ ፡ ለጣዖት ፡ ፈድፋደ ፡ እስመ ፡ እንዘ ፡ ጠቢብ ፡ ኮነ ፡ አብደ ፡ ወተጽሕፈ ፡ ኀጢአቱ
          ፡ ውስተ ፡ መጽሐፈ ፡ ነቢያቲሆሙ ። ወአውሥኡ ፡ እለ ፡ ሂየ ፡ ሊቃነ ፡ ጳጳሳት ፡ ወይቤሉ ፡ ይምሕሮኑ ፡ እግዚኣብሔር ፡ ለሰሎሞን ፡
@@ -2127,13 +1822,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ያውስብ ፡ ብእሲተ ፡ አቡሁ ፡ ዳዊት ፡ ሰሜናዊት ፡ እንተ ፡ ስማ ፡ አቢስ ፡ ወበእንተሰ ፡ ዘተጽሕፈ ፡ ጌጋዩ ፡ ለሰሎሞን ፡ አነ ፡ እከሥት
          ፡ ለክሙ ፡ በዘ ፡ ከሠተ ፡ ሊተ ፡ እግዚኣብሔር ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="66"
-                 xml:id="Chapter66">
+            <div type="textpart" subtype="chapter"  n="66" xml:id="Chapter66">
                <label>
-                  <foreign xml:lang="gez"> ፷፮ ፡ በእንተ ፡ ትንቢተ ፡ ክርስቶስ ።</foreign>
+                    ፷፮ ፡ በእንተ ፡ ትንቢተ ፡ ክርስቶስ ። 
                </label>
                <ab> እስመ ፡ ሰሎሞን ፡ ብሂል ፡ በስዉር ፡ ነገር ፡ በፍካሬ ፡ ትንቢት ፡ ክርስቶስ ፡ ብሂል ። ወበከመ ፡ ሰሎሞን ፡ ሐነጸ ፡ ቤተ ፡
          እግዚኣብሔር ፡ ከማሁ ፡ ክርስቶስኒ ፡ አንሥአ ፡ ወረሰየ ፡ ሥጋሁ ፡ ቤተ ፡ ክርስቲያን ፤ ወበከመ ፡ ይቤሎሙ ፡ ለአይሁድ ፡ ንሥትዎ ፡
@@ -2161,13 +1852,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ንጉሥ ፡ ወነቢይ ፡ ውእቱ ፡ ወበጥበብ ፡ ተነበየ ፡ ዘበእንተ ፡ ክርስቶስ ፡ ብዙኀ ፡ አምሳለ ፡ ወበእንተ ፡ ቤተ ፡ ክርስቲያን ፡ ወጸሐፈ ፡
          ፬ ፡ መጽሐፈ ፡ ትንቢቱ ፡ ውተኆለቈ ፡ ምስለ ፡ አብርሃም ፡ ይስሐቅ ፡ ወያዕቆብ ፡ ወዳዊት ፡ አቡሁ ፡ በመንግሥተ ፡ ሰማያት ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="67"
-                 xml:id="Chapter67">
+            <div type="textpart" subtype="chapter"  n="67" xml:id="Chapter67">
                <label>
-                  <foreign xml:lang="gez"> ፷ወ፯ ፡ በእንተ ፡ ብካየ ፡ ሰሎሞን ።</foreign>
+                    ፷ወ፯ ፡ በእንተ ፡ ብካየ ፡ ሰሎሞን ። 
                </label>
                <ab> ወዘከመሂ ፡ አዕረፈ ፡ እነግረክሙ ፤ ኮነ ፡ መዋዕሊሁ ፡ ፷ ፡ ወአኀዞ ፡ ሕማም ፡ ወበከመ ፡ መዋዕለ ፡ አቡሁሰ ፡ ዳዊት ፡ ኢኮነ ፡ አላ
          ፡ ፳ ፡ ሐጸ ፡ እምኔሁ ፡ በእንተ ፡ ዘተአዘዘ ፡ ለአንስት ፡ ወሰገደ ፡ ለጣዖታት ። ወመጽአ ፡ መልአከ ፡ ሞት ፡ ወዘበጦ ፡ እግሮ ፡
@@ -2213,13 +1900,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ከማሁ ፡ ይሤርዎሙ ፡ መድኅን ፡ ለኃጥኣን ፡ ወየኀትሞሙ ፡ ውስተ ፡ ማኅተመ ፡ ሲኦል ፤ ወበከመ ፡ አንተ ፡ ሐነጽከ ፡ ቤተ ፡ እግዚኣብሔር
          ፡ ከማሁ ፡ ይትሐነጽ ፡ አብያተ ፡ እግዚኣብሔር ፡ ውስተ ፡ አርእስተ ፡ አድባር ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="68"
-                 xml:id="Chapter68">
+            <div type="textpart" subtype="chapter"  n="68" xml:id="Chapter68">
                <label>
-                  <foreign xml:lang="gez"> ፷፰ ፡ በእንተ ፡ መድኀኒትነ ፡ ማርያም ።</foreign>
+                    ፷፰ ፡ በእንተ ፡ መድኀኒትነ ፡ ማርያም ። 
                </label>
                <ab> ወካዕበ ፡ ይኩንከ ፡ ትእምርተ ፡ ከመ ፡ ይመጽእ ፡ መድኅን ፡ እምዘርእከ ፡ ወከመ ፡ ያድኅንከ ፡ ምስለ ፡ አበዊከ ፡ ወዘርእከ ፡
          እምድኅሬከ ፡ በምጽአቱ ። ተፈጥረት ፡ መደኀኒትክሙ ፡ ውስተ ፡ ከርሠ ፡ አዳም ፡ ከመ ፡ ዕንቈ ፡ ባሕርይ ፡ እምቅድመ ፡ ሔዋን ፤ ወሶበ ፡
@@ -2275,13 +1958,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ምድር ። መኑ ፡ ከመ ፡ እግዚኣብሔር ፡ መሓሪ ፡ ዘይምሕር ፡ ወይምሕክ ፡ ተግባሮ ፡ ዘይሰሪ ፡ አበሳ ፡ ለመአብሳን ፡ ወኢያጠፍእ ፡ ዝክረ
          ፡ ነሳሕያን ፤ እስመ ፡ ኵለንታሁ ፡ ስርየት ፡ ወኵለንታሁ ፡ ምሕረት ፡ ወሎቱ ፡ ይደሉ ፡ ስብሐት ፡ አሜን ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="69"
-                 xml:id="Chapter69">
+            <div type="textpart" subtype="chapter"  n="69" xml:id="Chapter69">
                <label>
-                  <foreign xml:lang="gez"> ፷፱ ፡ በእንተ ፡ ስእለተ ፡ ሰሎሞን ።</foreign>
+                    ፷፱ ፡ በእንተ ፡ ስእለተ ፡ ሰሎሞን ። 
                </label>
                <ab> ወተመይጠ ፡ ወአንቃዕደወ ፡ ኀበ ፡ መልአክ ፡ ወሰፍሐ ፡ ክልኤሆን ፡ እደዊሁ ፡ ወይቤ ፡ እግዚኦ ፡ ቀርበኑ ፡ ምጽአቱ ፡ ለመድኅን ፡
          ዘትቤ ፡ ወሚመ ፡ ርሑቅኑ ፡ አውሥአ ፡ መልአክ ፡ ወይቤሎ ፡ በ፵ወ፫ ፡ ትውልድ ፡ እምዘመድከ ፡ ወእምዘርእከ ፡ ይመጽእ ፡ ወያድኅነክሙ ፤
@@ -2313,13 +1992,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          በከመ ፡ አንገሠኒ ፡ አቡየ ፡ ዳዊት ፡ እግዚእየ ፡ እንዘ ፡ ሕያው ፡ አነሂ ፡ ኣነግሦ ፡ ለወልድየ ፡ ኢዮርብዓም ፡ ወይኩን ፡ ዘርኡ ፡
          መድኀኒትየ ፡ ሊተ ፡ ወለአበውየ ፡ እስከ ፡ ለዓለም ፡ በከመ ፡ ነገረኒ ፡ መልአከ ፡ እግዚኣብሔር ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="70"
-                 xml:id="Chapter70">
+            <div type="textpart" subtype="chapter"  n="70" xml:id="Chapter70">
                <label>
-                  <foreign xml:lang="gez"> ፸ ፡ በእንተ ፡ ዘነግሠ ፡ ሮብዓም ።</foreign>
+                    ፸ ፡ በእንተ ፡ ዘነግሠ ፡ ሮብዓም ። 
                </label>
                <ab> ወእምዝ ፡ ነሥኦ ፡ ሳዶቅ ፡ ካህን ፡ ወአንገሦ ፡ ወቀብኦ ፡ ወገብረ ፡ ሎቱ ፡ ዘበሕጉ ፡ ወአንበረ ፡ ዕፀ ፡ ዲበ ፡ ደብተራ ፡ ወረከቦ
          ፡ በስመ ፡ አቡሁ ፡ ሰሎሞን ፡ ወአጽዐንዎ ፡ ዲበ ፡ በቅለ ፡ ንጉሥ ፡ ወይቤልዎ ፡ ባሕ ፡ ሕያው ፡ አበ ፡ ነጋሢ ፤ ወደምፀት ፡ ሀገር ፡
@@ -2369,13 +2044,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ በሥጋወወልደኤሊ ፡ በሕገ ፡ ኦሪት ፡ በከመ ፡ አዘዞ ፡ እግዚኣብሔር ፡ ለሙሴ ፡ ከመ ፡ ይትዋሰቡ ፡ ምስለ ፡ ዘመዶሙ ፡ በበ ፡ አብያተ ፡
          አበዊሆሙ ፡ ወኢይትዋሰቡ ፡ እምባዕድ ፡ ዘመድ ፨ ፨ ፨ ፨ ፨ ፨ </ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="71"
-                 xml:id="Chapter71">
+            <div type="textpart" subtype="chapter"  n="71" xml:id="Chapter71">
                <label>
-                  <foreign xml:lang="gez">፸፩ ፡ በእንተ ፡ ማርያም ፡ ወለተ ፡ ዳዊት ። </foreign>
+                   ፸፩ ፡ በእንተ ፡ ማርያም ፡ ወለተ ፡ ዳዊት ።  
                </label>
                <ab>ወበእንተዝኬ ፡ ተዐውቀ ፡
          ከመ ፡ ማርያም ፡ ወለተ ፡ ዳዊት ፡ ይእቲ ፡ ወዮሴፍኒ ፡ ወልደ ፡ ዳዊት ፡ ውእቱ ፤ ወበእንተዝ ፡ ተፍኅረት ፡ ማርያም ፡ ለዮሴፍ ፡ ዘመዳ
@@ -2385,13 +2056,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ እለ ፡ አመነ ፡ ቦቱ ፡ ሰሐበነ ፡ ኀበ ፡ አቡሁ ፡ ወአዕረገነ ፡ ውስተ ፡ ሰማያት ፡ መንበሩ ፡ ከመ ፡ ንኩን ፡ መዋርስቲሁ ፤ እስመ ፡
          ውእቱ ፡ መፍቀሬ ፡ ሰብእ ፡ ውእቱ ፡ ወሎቱ ፡ ይደሉ ፡ ስብሐት ፡ እስከ ፡ ለዓለም ፡ አሜን ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="72"
-                 xml:id="Chapter72">
+            <div type="textpart" subtype="chapter"  n="72" xml:id="Chapter72">
                <label>
-                  <foreign xml:lang="gez"> ፸፪ ፡ በእንተ ፡ ንጉሠ ፡ ሮምሂ ።</foreign>
+                    ፸፪ ፡ በእንተ ፡ ንጉሠ ፡ ሮምሂ ። 
                </label>
                <ab> ወበእንተ ፡ ንጉሠ ፡ ሮምሂ ፡ ንዌጥን ፡ ንንግርክሙ ፡ ዘሰማዕነ ፡ ወዘረከብነ ፡ ጽሑፈ ፡ ዘርኢነ ። መንግሥተ ፡ ሮምሰ ፡ ለያፌት ፡
          ወልደ ፡ ኖሕ ፡ ኮነት ፡ ክፍሉ ፡ ወመንግሥቱ ፤ ወእንዘ ፡ ይነብሩ ፡ ገብሩ ፡ አህጉረ ፡ ዐበይተ ፡ ዓሥሩ ፡ ወክልኤ ፡ ወእለ ፡ የዐብያ ፡
@@ -2441,13 +2108,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          አዕጹቀ ፡ ምስለ ፡ ቊጸሊሁ ። ወአውሥአ ፡ አድራሚ ፡ ወይቤ ፡ ወዝንቱሰ ፡ ይብል ፡ በልዓ ፡ ቆዐ ፤ አማንኑ ፡ ከመዝ ። አውሥአ ፡ ወይቤ ፡
          ባዕለ ፡ አባግዕ ፡ አልቦ ፡ እግዚእየ ፡ ዘእንበለ ፡ ይኩን ፡ ቆዐ ፡ ሠርጸ ፡ ጽጌ ፡ በልዐ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="73"
-                 xml:id="Chapter73">
+            <div type="textpart" subtype="chapter"  n="73" xml:id="Chapter73">
                <label>
-                  <foreign xml:lang="gez"> ፸፫ ፡ በእንተ ፡ ቀዳሜ ፡ ፍትሑ ፡ ለአድራሚ ፡ ንጉሠ ፡ ሮም ።</foreign>
+                    ፸፫ ፡ በእንተ ፡ ቀዳሜ ፡ ፍትሑ ፡ ለአድራሚ ፡ ንጉሠ ፡ ሮም ። 
                </label>
                <ab> ወይቤሎሙ ፡ ስምዑኒ ፡ ዘእፈትሕ ፡ ለክሙ ፤ ለእመ ፡ ሠረዋ ፡ አሕሩገ ፡ ጒንዲ ፡ ሥረዎን ፡ ወኵሎን ፡ ለከ ፡ ወለእመ ፡ በልዓ ፡ ቈጽለ
          ፡ አዕጹቅ ፡ ወጽጌ ፡ ቆዕ ፡ ንሣእ ፡ ቅርፅ ፡ ፀምሮን ፡ ወደቂቆን ፡ እለ ፡ ኢተበኵራ ፤ ወእለሰ ፡ ተበኵራ ፡ ወወለዳ ፡ ኅድግ ፡ ሎቱ ፡
@@ -2460,13 +2123,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ትውልዲ ፡ እስመ ፡ በፈቃደ ፡ እግዚኣብሔር ፡ ተውህበ ፡ ኵሉ ፡ መንግሥተ ፡ ዓለም ፡ ለዘርአ ፡ ሴም ፡ ወግብርናት ፡ ለዘርአ ፡ ካም ፡
          ወጒዕትያ ፡ ለዘርአ ፡ ያፌት ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="74"
-                 xml:id="Chapter74">
+            <div type="textpart" subtype="chapter"  n="74" xml:id="Chapter74">
                <label>
-                  <foreign xml:lang="gez"> ፸፬ ፡ በእንተ ፡ ንጉሠ ፡ ምድያም ።</foreign>
+                    ፸፬ ፡ በእንተ ፡ ንጉሠ ፡ ምድያም ። 
                </label>
                <ab> ንጉሠ ፡ ምድያምሂ ፡ ዘርአ ፡ ሤም ፡ ውእቱ ፤ እስመ ፡ ዘርአ ፡ ይስሐቅ ፡ ዔሳው ፡ ውእቱ ፡ ዘወፅአ ፡ እምከርሠ ፡ እሙ ፡ እንዘ ፡
          ይእኅዞ ፡ ያዕቆብ ፡ በሰኰናሁ ፡ ወሄደ ፡ ብኵርናቱ ፡ ለዔሳው ፡ በእንተ ፡ ተብሲለ ፡ ብርስን ፡ ወበስመ ፡ ጽዕለቱ ፡ ተሰምየ ፡ ስመ ፡
@@ -2483,13 +2142,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ለ፲ወ፪ ፡ ነገደ ፡ እስራኤል ፡ በእንተ ፡ ዘኢአምኑ ፡ ኪያየ ፡ ወአስተሐቀሩ ፡ ስብሐትየ ፤ ወለእለሰ ፡ የአምኑ ፡ ብየ ፡ ታዐብይዎሙ ፡
          ወታስተፌሥሕዎሙ ፡ ምስሌክሙ ፡ በመንግሥትየ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="75"
-                 xml:id="Chapter75">
+            <div type="textpart" subtype="chapter"  n="75" xml:id="Chapter75">
                <label>
-                  <foreign xml:lang="gez"> ፸፭ ፡ በእንተ ፡ ንጉሠ ፡ ባቢሎን ።</foreign>
+                    ፸፭ ፡ በእንተ ፡ ንጉሠ ፡ ባቢሎን ። 
                </label>
                <ab> ወንጉሠ ፡ ባቢሎንሂ ፡ ዘርአ ፡ ሴም ፡ ውእቱ ፤ ወንነግረክሙ ፡ ጥዩቀ ፡ ከመ ፡ ዘርአ ፡ ሴም ፡ ንጉሠ ፡ ባቢሎን ። ወሀሎ ፡ በውእቱ ፡
          መዋዕል ፡ በመንግሥተ ፡ ምናሴ ፡ ንጉሠ ፡ እስራኤል ፡ ወሀሎ ፡ ፩ ፡ ብእሲ ፡ ዘስሙ ፡ ከርሚን ፡ ፈራሄ ፡ እግዚኣብሔር ፡ ወይገብር ፡
@@ -2500,13 +2155,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ክፍለ ፡ አበዊሁ ፤ ወበእንተ ፡ ፍቅረ ፡ ንዋይ ፡ ሖረ ፡ ውስተ ፡ አርማቴም ፡ ከመ ፡ ይንበር ፡ ወአንበርዎ ፡ እስራኤል ፡ በእንተ ፡
          ብዕሉ ፡ እስመ ፡ ቦ ፡ ብዙኀ ፡ ንዋየ ፡ ወይፈርህ ፡ መኳንንተ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="76"
-                 xml:id="Chapter76">
+            <div type="textpart" subtype="chapter"  n="76" xml:id="Chapter76">
                <label>
-                  <foreign xml:lang="gez"> ፸፮ ፡ በእንተ ፡ ሰማዕተ ፡ ሐሰት ።</foreign>
+                    ፸፮ ፡ በእንተ ፡ ሰማዕተ ፡ ሐሰት ። 
                </label>
                <ab> ወሀሎ ፡ ፩ ፡ ፀዋግ ፡ እምዘርአ ፡ ብንያም ፡ ዘስሙ ፡ ብንያስ ፡ ዘይስሕብ ፡ በቅለ ፡ ንጉሠ ፡ እስራኤል ፡ ወይሴስዮ ፡ ከርሚን ፡
          ምስለ ፡ በቅለ ፡ ንጉሥ ፡ ምናሴ ። ወእምጎሩ ፡ ለከርሚን ፡ ሀለዉ ፡ እለ ፡ ይቀንኡ ፡ ላዕሌሁ ፡ በእንተ ፡ ሣዕር ፡ ወዐዘቅት ፡ ወበእንተ
@@ -2573,14 +2224,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          እምድኅረ ፡ ዓመት ፡ ፯ ፡ ምሕሮ ፡ ወአግብኦ ፡ ውስተ ፡ ንስሓ ፤ ወኮነት ፡ መንግሥተ ፡ ባቢሎን ፡ ሎቱ ፡ ዘለዘርኡ ፡ እስከ ፡ ለዓለም ፨
          ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="77"
-                 xml:id="Chapter77">
+            <div type="textpart" subtype="chapter"  n="77" xml:id="Chapter77">
                <label>
-                  <foreign xml:lang="gez"> ፸፯ ፡ በእንተ ፡ ንጉሠ ፡ ፋርስ ። ወንጉሠ ፡ ፋርስኒ ፡ ዘርአ ፡ ሴም ፡ ውእቱ ፡ ወዘበእንቲአሁ ፡
-            ናየድዐክሙ ።</foreign>
+                    ፸፯ ፡ በእንተ ፡ ንጉሠ ፡ ፋርስ ። ወንጉሠ ፡ ፋርስኒ ፡ ዘርአ ፡ ሴም ፡ ውእቱ ፡ ወዘበእንቲአሁ ፡
+            ናየድዐክሙ ። 
                </label>
                <ab> ወለደ ፡ ይሁዳ ፡ ክልኤ ፡ ደቂቀ ፡ ወአእተወ ፡ ሎቱ ፡ ትዕማርሃ ፡ ለዘ ፡ ይልህቅ ፡ ወልዲ ፤ ወሞተ ፡ ወፈነዎ ፡ ለዘ ፡ ይንእስ ፡
          ወልዲ ፡ ኀቤሃ ፡ ከመ ፡ ያቅም ፡ ለእኁሁ ፡ ዘርአ ፡ ኀበ ፡ ብእሲቱ ፡ እኁሁ ። ወውእቱኒ ፡ ገብረ ፡ ዘይጸልእ ፡ እግዚኣብሔር ፡ ወኢፈቀደ
@@ -2605,14 +2252,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ፋሬስ ፡ ወዛራ ፤ ወተሐንጸት ፡ ፋርስ ፡ በስመ ፡ ፋሬስ ፡ ወነግሠ ፡ ላዕሌሃ ፡ ውእቱ ፡ ወዘርኡ ፡ እምድኅሬሁ ፡ ወተሰምዩ ፡ ፈረሳዊያን
          ። ናሁኬ ፡ ተዐውቀ ፡ ንጉሠ ፡ ፋርስ ፡ ከመ ፡ ዘርአ ፡ ሴም ፡ ውእቱ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="78"
-                 xml:id="Chapter78">
+            <div type="textpart" subtype="chapter"  n="78" xml:id="Chapter78">
                <label>
-                  <foreign xml:lang="gez"> ፸፰ ፡ በእንተ ፡ ንጉሠ ፡ ሞአብ ። ወንጉሠ ፡ ሞአብሂ ፡ ዘርአ ፡ ሴም ፡ ውእቱ ፡ ወናየድዐክሙ ፡
-            ዘከመሂ ፡ ኮነ ።</foreign>
+                    ፸፰ ፡ በእንተ ፡ ንጉሠ ፡ ሞአብ ። ወንጉሠ ፡ ሞአብሂ ፡ ዘርአ ፡ ሴም ፡ ውእቱ ፡ ወናየድዐክሙ ፡
+            ዘከመሂ ፡ ኮነ ። 
                </label>
                <ab> ወሶበ ፡ አፍለሶ ፡ እግዚኣብሔር ፡ ለአብርሃም ፡ እምሀገረ ፡ አቡሁ ፡ ውስተ ፡ ምድረ ፡ ካራን ፡ ወለሎጥኒ ፡ አዕደዎ ፡ እግዚኣብሔር ፡
          ውስተ ፡ ምድረ ፡ ሰዶም ፡ ወገሞራ ፤ ወሶበ ፡ ፈቀደ ፡ እግዚኣብሔር ፡ ከመ ፡ ያጥፍኦሙ ፡ ለሰብአ ፡ ሰዶም ፡ ወገሞራ ፡ ፈነወ ፡
@@ -2632,13 +2275,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ብሂል ፤ ወውእቱኬ ፡ አቡሆሙ ፡ ለሞአባውያን ፡ ወለአጋራዊያን ። ናሁኬ ፡ ተዐውቀ ፡ ንጉሠ ፡ ሞአብሂ ፡ ከመ ፡ ዘርአ ፡ ሴም ፡ ውእቱ ፨ ፨
          ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="79"
-                 xml:id="Chapter79">
+            <div type="textpart" subtype="chapter"  n="79" xml:id="Chapter79">
                <label>
-                  <foreign xml:lang="gez"> ፸፱ ፡ በእንተ ፡ ንጉሠ ፡ ዓማሌቅ ።</foreign>
+                    ፸፱ ፡ በእንተ ፡ ንጉሠ ፡ ዓማሌቅ ። 
                </label>
                <ab> ወሶበ ፡ ወለደት ፡ እንተ ፡ ትልህቅ ፡ ትቤላ ፡ ለእንተ ፡ ትንእስ ፡ ሀቢኬ ፡ ናስትዮ ፡ ወይነ ፡ ለአቡነ ፡ ወአንቲኒ ፡ ከመ ፡ ትባኢ
          ፡ ኀቤሁ ፡ እመ ፡ ትረክቢ ፡ ውሉደ ፡ ወካዕበ ፡ ገብራ ፡ ወይነ ፡ ወደገማ ፡ ቃለ ፡ እበድ ፡ እንዘ ፡ ይብላ ፡ ስተይ ፡ ወይነ ፡ ኦአቡነ
@@ -2647,14 +2286,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወልደ ፡ ወሰመየቶ ፡ ስሞ ፡ ዓሞን ፤ ወውእቱ ፡ ንጉሦሙ ፡ ለዓማሌቃውያን ፡ ወናሁኬ ፡ ተዐውቀ ፡ ከመ ፡ ንጉሠ ፡ ዓማሌቅ ፡ ከመ ፡ ዘርአ
          ፡ ሤም ፡ ውእቱ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="80"
-                 xml:id="Chapter80">
+            <div type="textpart" subtype="chapter"  n="80" xml:id="Chapter80">
                <label>
-                  <foreign xml:lang="gez"> ፹ ፡ በእንተ ፡ ንጉሠ ፡ ኢሎፍሊ ። ወናሁ ፡ ኢሎፍሊ ፡ ዘርአ ፡ ሳምሶን ፡ ይነግሡ ፡ ላዕሌሆሙ
-            ።</foreign>
+                    ፹ ፡ በእንተ ፡ ንጉሠ ፡ ኢሎፍሊ ። ወናሁ ፡ ኢሎፍሊ ፡ ዘርአ ፡ ሳምሶን ፡ ይነግሡ ፡ ላዕሌሆሙ
+            ። 
                </label>
                <ab> ወሰምሶንሰ ፡ እም፲ወ፪ ፡ ደቂቀ ፡ ያዕቆብ ፡ ዘርአ ፡ ዳን ፡ ውእቱ ፡ ወልደ ፡ አመት ፡ እምያዕቆብ ፤ ውእቱሰ ፡ ሳምሶን ፡ ናየድዐክሙ
          ፡ ዘከመ ፡ ኮነ ። አስተርአያ ፡ መልአከ ፡ እግዚኣብሔር ፡ ለእሙ ፡ ለሰምሶን ፡ ወይቤላ ፡ ተዐቀቢ ፡ እምኵሉ ፡ ርኩስ ፡ ወኢትቅረቢ ፡
@@ -2682,13 +2317,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ዓመተ ፡ ይበልዑ ፡ ወይትዋነዩ ፡ በቅድሜሆን ፤ ወገብራ ፡ ሎሙ ፡ ዐስቀ ፡ ዘዲባጋት ፡ ወሰዋትለ ፡ ውስተ ፡ ሐቌያቲሆሙ ፡ ወአዕ ፡ ኑገ
          ፡ ውስተ ፡ ክሳውዲሆሙ ። ወረሰይዎ ፡ ንጉሠ ፡ ለወልደ ፡ መክሳባ ፡ ውስተ ፡ መንበረ ፡ አቡሁ ፡ ላዕለ ፡ ኢሎፍሊ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="81"
-                 xml:id="Chapter81">
+            <div type="textpart" subtype="chapter"  n="81" xml:id="Chapter81">
                <label>
-                  <foreign xml:lang="gez"> ፹፩ ፡ ዘከመ ፡ ቀተሎ ፡ ወልደ ፡ ሳምሶን ፡ ለወልደ ፡ ንጉሠ ፡ ኢሎፍሊ ።</foreign>
+                    ፹፩ ፡ ዘከመ ፡ ቀተሎ ፡ ወልደ ፡ ሳምሶን ፡ ለወልደ ፡ ንጉሠ ፡ ኢሎፍሊ ። 
                </label>
                <ab> ወውእቱሰ ፡ ወልድ ፡ አከምሔል ፡ ወልደ ፡ ሳምሶን ፡ ወይቤላ ፡ ለእሙ ፡ ደሊላ ፡ ለምንት ፡ አነ ፡ ኢይነግሥ ፡ ወኢይነብር ፡ ላዕለ ፡
          ዝንቱ ፡ መንበር ። ወትቤሎ ፡ እሙ ፡ ኅድግ ፡ ወልድየ ፡ ኢኮነት ፡ ዛቲ ፡ መንበር ፡ ዘአቡከ ፡ ወኢኮነ ፡ ዝየ ፡ ሀገሩ ፡ ለአቡከ ፤
@@ -2713,13 +2344,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወአልቦ ፡ ዘተዐደወ ፡ እምትእዛዙ ፤ እምዘ ፡ ፭ ፡ ክረምት ፡ ዘተወልደ ፡ ዘንተ ፡ ገብረ ፤ ወኮነት ፡ መንግሥተ ፡ ኢሎፍሊ ፡ ሎቱ ፡
          ወለዘርኡ ፡ እምድኅሬሁ ። ናሁኬ ፡ ተዐውቀ ፡ ከመ ፡ መንግሥተ ፡ ኢሎፍሊኒ ፡ ከመ ፡ ዘኮነ ፡ ለዘርአ ፡ ሴም ፡ ውእቱ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="82"
-                 xml:id="Chapter82">
+            <div type="textpart" subtype="chapter"  n="82" xml:id="Chapter82">
                <label>
-                  <foreign xml:lang="gez"> ፹፪ ፡ በእንተ ፡ ርደተ ፡ አብርሃም ፡ ግብጽ ።</foreign>
+                    ፹፪ ፡ በእንተ ፡ ርደተ ፡ አብርሃም ፡ ግብጽ ። 
                </label>
                <ab> ወካዕበ ፡ ናየድዐክሙ ፡ ከመ ፡ ሶበ ፡ ወሀቦ ፡ እግዚኣብሔር ፡ ለአብርሃም ፡ ክብረ ፡ ወብዕለ ፡ ኀጥአ ፡ ውሉደ ። በውስተ ፡ ምስካቢሆሙ
          ፡ ይትናገሩ ፡ ሳራ ፡ ወአብርሃም ፡ ወይቤላ ፡ ኮንኪ ፡ መካነ ፡ ወይእቲኒ ፡ ትቤሎ ፡ አኮ ፡ አነ ፡ መካን ፡ አላ ፡ አንተ ፤ ወበእንተዝ
@@ -2761,13 +2388,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ምስለ ፡ ይስሓቅ ፡ ገብርየ ፡ ወልደ ፡ ሳራ ፡ ወእባርክ ፡ በዘርኡ ፡ ኵሎሙ ፡ አሕዛበ ፡ ምድር ፡ ወእገብሮ ፡ ዐበይተ ፡ ነገሥተ ፡ ላዕለ
          ፡ ኵሉ ፡ አሕዛበ ፡ ምድር ፡ ወበሰማያትኒ ፡ እሬስዮ ፡ ንጉሠ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="83"
-                 xml:id="Chapter83">
+            <div type="textpart" subtype="chapter"  n="83" xml:id="Chapter83">
                <label>
-                  <foreign xml:lang="gez"> ፹፫ ፡ በእንተ ፡ ንጉሠ ፡ እስማኤላውያን ።</foreign>
+                    ፹፫ ፡ በእንተ ፡ ንጉሠ ፡ እስማኤላውያን ። 
                </label>
                <ab> ወበእንተዝ ፡ ኮኑ ፡ ነገሥተ ፡ ደቂቀ ፡ ይስማዔል ፡ ላዕለ ፡ ትርብ ፡ ወላዕለ ፡ ቅብጥ ፡ ወላዕለ ፡ ኖባ ፡ ወሶበ ፡ ወኵርጒ ፡ ወሪፊ
          ፡ ወማካ ፡ ወሞርና ፡ ወፊንቃና ፡ ወኣርሲባና ፡ ወሊባ ፡ ወመስዕ ፤ እስመ ፡ ዘርአ ፡ ሴም ፡ ውእቱ ። ወዘርአ ፡ ይስሓቅኒ ፡ ነግሠ ፡
@@ -2779,13 +2402,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወምድር ፡ ዘውእቱ ፡ ያዐቢ ፡ ነገሥተ ፡ ወለእለ ፡ ፈቀደ ፡ ካዕበ ፡ ይስዕር ፡ ስልጣኖሙ ፤ እስመ ፡ ሎቱ ፡ ክሂል ፡ ወስልጣን ፡ ላዕለ ፡
          ኵሉ ፡ ፍጥረት ፡ ለዓለመ ፡ ዓለም ፡ አሜን ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="84"
-                 xml:id="Chapter84">
+            <div type="textpart" subtype="chapter"  n="84" xml:id="Chapter84">
                <label>
-                  <foreign xml:lang="gez"> ፹፬ ፡ በእንተ ፡ ንጉሠ ፡ ኢትዮጵያ ፡ ዘከመ ፡ ገብአ ፡ ሀገሩ ።</foreign>
+                    ፹፬ ፡ በእንተ ፡ ንጉሠ ፡ ኢትዮጵያ ፡ ዘከመ ፡ ገብአ ፡ ሀገሩ ። 
                </label>
                <ab> ወንጉሠ ፡ ኢትዮጵያሰ ፡ ቦአ ፡ ውስተ ፡ ሀገሩ ፡ በዐቢይ ፡ ፍሥሓ ፡ ወተድላ ፡ ምስለ ፡ ኵሉ ፡ ቃለ ፡ ማሕሌቶሙ ፡ ወዕንዚራቲሆሙ ፡
          ወሰረገላቲሆሙ ፡ ከመ ፡ ኀይለ ፡ ሰማያዊያን ፡ እንዘ ፡ ይረውጹ ፡ በጽሑ ፡ ደወሎሙ ፡ እምኢየሩሳሌም ፡ በዕለት ፡ ሀገረ ፡ ወቄሮም ።
@@ -2799,13 +2418,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወልዳ ፡ እንተ ፡ ፍኖተ ፡ አዝያባ ፡ ወቂሮ ፡ ወወፅአ ፡ እንተ ፡ መሰስ ፡ ወዐርገ ፡ ቡር ፡ ወመጽአ ፡ ሀገረ ፡ ምስፍና ፡ ርእሰ ፡
          ኢትዮጵያ ፡ ዘለሊሃ ፡ አሕነጸታ ፡ በስማ ፡ ወተብህለት ፡ ደብረ ፡ ማክዳ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="85"
-                 xml:id="Chapter85">
+            <div type="textpart" subtype="chapter"  n="85" xml:id="Chapter85">
                <label>
-                  <foreign xml:lang="gez"> ፹፭ ፡ ኀበ ፡ ተፈሥሐት ፡ ማክዳ ፡ ንግሥት ።</foreign>
+                    ፹፭ ፡ ኀበ ፡ ተፈሥሐት ፡ ማክዳ ፡ ንግሥት ። 
                </label>
                <ab> ወበጽሐ ፡ ዳዊት ፡ ንጉሥ ፡ በዐቢይ ፡ ግርማ ፡ ውስተ ፡ ሀገረ ፡ እሙ ፤ ወእምዝ ፡ ርእየታ ፡ በመልዕልት ፡ ለጽዮን ፡ ቅድስት ፡ እንዘ
          ፡ ታበርህ ፡ ከመ ፡ እንተ ፡ ፀሐይ ፡ ወሶበ ፡ ርእየታ ፡ አእኰተቶ ፡ ወሰብሐቶ ፡ ለአምላከ ፡ እስራኤል ፡ ወሰገደት ፡ ወጐድአት ፡
@@ -2822,26 +2437,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወብዕል ፡ ወሞገስ ፡ ወአእምሮ ፡ ወሥነ ፡ ቃል ፡ ወልቡና ፤ ወወርቅ ፡ ወብሩር ፡ ኀስረ ፡ ከመ ፡ ብርት ፡ ወዲባጋት ፡ ዘወርቅ ፡ ኮነ ፡
          ከመ ፡ ዐግያት ፡ ዘፈትል ፡ ወእንስሳ ፡ ወአፍራስ ፡ ዘአልቦ ፡ ኆልቈ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="86"
-                 xml:id="Chapter86">
+            <div type="textpart" subtype="chapter"  n="86" xml:id="Chapter86">
                <label>
-                  <foreign xml:lang="gez"> ፹፮ ፡ ኀበ ፡ አንገሠቶ ፡ ማክዳ ፡ ለወልዳ ።</foreign>
+                    ፹፮ ፡ ኀበ ፡ አንገሠቶ ፡ ማክዳ ፡ ለወልዳ ። 
                </label>
                <ab> ወአመ ፡ ሣልስት ፡ ዕለት ፡ አወፈየቶ ፡ ለወልዳ ፡ አፍራሰ ፡ ኅሩያነ ፡ እለ ፡ የዐቅቡ ፡ ተዓይነ ፡ ፀር ፡ ወያመዘብሩ ፡ ካዕበ ፡
          አህጉረ ፡ ፀር ፡ ፯፻ ፡ ወ፼ ፡ ወ፸፻ ፡ ወጋኝተ ፡ አፍራስ ፡ እለ ፡ ይወልዳ ፡ ፸ወ፯፻ ፡ ወበቅለ ፡ አንስት ፡ ፲፻ ፡ ወበቅለ ፡ ተባዕት
          ፡ ኅሩያነ ፡ ፯፻ ፡ ወአልባሰ ፡ ክብር ፡ ወርቀ ፡ ወብሩረ ፡ ስፉረ ፡ በጎሞር ፡ ወመጠነ ፡ መስፈርተ ፡ ቆሮስ ፡ በበ ፡ ሳድስ ፡ ወሳብዕ
          ፡ ወአወፈየቶ ፡ ኵሎ ፡ ዘበሕጉ ፡ ወመንበረ ፡ መንግሥታኒ ፤ ኵሎ ፡ አወፈየቶ ፡ ለወልዳ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="87"
-                 xml:id="Chapter87">
+            <div type="textpart" subtype="chapter"  n="87" xml:id="Chapter87">
                <label>
-                  <foreign xml:lang="gez"> ፹፯ ፡ ኀበ ፡ መሐሉ ፡ መኳንንተ ፡ ኢትዮጵያ ።</foreign>
+                    ፹፯ ፡ ኀበ ፡ መሐሉ ፡ መኳንንተ ፡ ኢትዮጵያ ። 
                </label>
                <ab> ወትቤሎሙ ፡ ለመኳንንቲሃ ፡ በሉኬ ፡ መሐሉ ፡ በጽዮን ፡ ሰማያዊት ፡ ከመ ፡ ኢታንግሡ ፡ አንስተ ፡ ውስተ ፡ መንበረ ፡ መንግሥተ ፡
          ኢትዮጵያ ፡ ዘእንበለ ፡ ዘርኡ ፡ ለዳዊት ፡ ወልደ ፡ ሰሎሞን ፡ ንጉሥ ፡ ተባዕተ ፡ እስከ ፡ ለዓለም ፤ ወኢታንግሡ ፡ አንስተ ፡ እስከ ፡
@@ -2883,13 +2490,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          በአናቅጺሃ ፡ ለኢየሩሳሌም ። ምንተ ፡ እነግረክሙ ፡ ለእለ ፡ ሀለውክሙ ፡ ዝየ ፤ እስመ ፡ መሰለነ ፡ ምድር ፡ ዘታድለቀልቅ ፡ እስከ ፡
          መሠረታቲሃ ፡ ወሰማይኒ ፡ ዘያንጐደጒድ ፡ በመልዕልቴነ ፤ ወልብኒ ፡ ትርዕድ ፡ ምስለ ፡ ብረኪሃ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="88"
-                 xml:id="Chapter88">
+            <div type="textpart" subtype="chapter"  n="88" xml:id="Chapter88">
                <label>
-                  <foreign xml:lang="gez"> ፹፰ ፡ ኀበ ፡ ዜነዋ ፡ ለእሙ ፡ ዘከመ ፡ አንገሥዎ ።</foreign>
+                    ፹፰ ፡ ኀበ ፡ ዜነዋ ፡ ለእሙ ፡ ዘከመ ፡ አንገሥዎ ። 
                </label>
                <ab> ወሶበ ፡ አርመሙ ፡ እሉ ፡ ተንሥአ ፡ ካህን ፡ ዘይኤዝዘነ ፡ ዘምስለ ፡ ፍርሀተ ፡ እግዚኣብሔር ፡ ወአንብዕ ፡ እንዘ ፡ ትርዕድ ፡ ከርሥነ
          ፡ ወትውኅዝ ፡ አንብዕነ ፤ ውስተ ፡ ልብነ ፡ በአማንኬ ፡ ወኢኮነ ፡ ሐሰተ ፡ ህልው ፡ እግዚኣብሔር ፡ ወይነብር ፡ ውስተ ፡ ትእዛዙ ፡
@@ -2923,13 +2526,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ሐየውነ ፡ ምስሌክሙ ፡ ወአልብነ ፡ ተስፋ ፡ ውስተ ፡ ብሔረ ፡ ሙላድነ ፡ ዘእንበለ ፡ ኀቤክሙ ፡ ወእግዝእትነ ፡ ጽዮን ፡ ቅድስት ፡
          ሰማያዊት ፡ ማኅደረ ፡ ስብሐቲሁ ፡ ለእግዚኣብሔር ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="89"
-                 xml:id="Chapter89">
+            <div type="textpart" subtype="chapter"  n="89" xml:id="Chapter89">
                <label>
-                  <foreign xml:lang="gez"> ፹፱ ፡ ኀበ ፡ ነገረቶሙ ፡ ንግሥት ፡ ለደቂቀ ፡ እስራኤል ።</foreign>
+                    ፹፱ ፡ ኀበ ፡ ነገረቶሙ ፡ ንግሥት ፡ ለደቂቀ ፡ እስራኤል ። 
                </label>
                <ab> ወአውሥአት ፡ ንግሥት ፡ ወትቤሎሙ ፡ አኮ ፡ ከመ ፡ አግብርት ፡ ዘትብሉ ፡ አላ ፡ ንሬስየክሙ ፡ ከመ ፡ አብ ፡ ወከመ ፡ መምህር ፤ እስመ
          ፡ አንትሙ ፡ ዐቃብያነ ፡ ሕጉ ፡ ለእግዚኣብሔር ፡ ወመራሕያነ ፡ ትእዛዙ ፡ ለአምላከ ፡ እስራኤል ፡ ወሰብአ ፡ ቤቱ ፡ ለእግዚኣብሔር ፡
@@ -2966,13 +2565,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          በውስተ ፡ ዘትካት ፡ ልማድ ፡ ይትበርበር ፡ ቤቱ ፡ ወይትኰነን ፡ ምስለ ፡ ብእሲቱ ፡ ወውሉዲ ፡ ወንዋዩ ፨ ፡ ወትቤሎ ፡ ለአዛርያስ ፡ በል
          ፡ ንግር ፡ ዘከመ ፡ ታፈቅር ፡ እግዝእትነ ፡ ምስለ ፡ ንጉሥ ፡ ሰማያዊ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="90"
-                 xml:id="Chapter90">
+            <div type="textpart" subtype="chapter"  n="90" xml:id="Chapter90">
                <label>
-                  <foreign xml:lang="gez"> ፺ ፡ ኀበ ፡ ወደሳ ፡ አዛርያስ ፡ ለንግሥት ፡ ወለሀገራ ።</foreign>
+                    ፺ ፡ ኀበ ፡ ወደሳ ፡ አዛርያስ ፡ ለንግሥት ፡ ወለሀገራ ። 
                </label>
                <ab> ወተንሥአ ፡ አዛርያስ ፡ ወይቤላ ፡ ለንግሥት ፡ ኦእግዝእትነ ፡ በአማን ፡ አልቦ ፡ ዘይትማሰለኪ ፡ በጥበብ ፡ ወበአእምሮ ፡ ወተውህበ ፡
          ለኪ ፡ እምኀበ ፡ እግዚኣብሔር ፡ ዘእንበለ ፡ እግዚእየ ፡ ንጉሥ ፡ ዘአብጽሐነ ፡ ውስተ ፡ ዛቲ ፡ ምድር ፡ ምስለ ፡ እግዝእትነ ፡ ጽዮን ፡
@@ -3020,13 +2615,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ክልኤ ፡ መካልይ ፡ ወይከውን ፡ ትርብዕተ ፡ ዐስቡ ፡ በኀበ ፡ እግዚኣብሔር ፡ እስመ ፡ ገብረ ፡ ለሊሁ ፡ ወመህረ ፡ ለቢጹ ፡ ወበእንተዝ ፡
          ይፈደፍድ ፡ ዐስቡ ፤ ወካዕበ ፡ ብፁዓን ፡ ትከውኑ ፡ ለእመ ፡ ወሀብክሙ ፡ ንዋይክሙ ፡ ዘእንበለ ፡ ርዴ ፡ ወልቃሕ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="91"
-                 xml:id="Chapter91">
+            <div type="textpart" subtype="chapter"  n="91" xml:id="Chapter91">
                <label>
-                  <foreign xml:lang="gez"> ፺፩ ፡ ዘንተ ፡ ዘይበልዑ ፡ ንጹሕ ፡ ወርኩስ ።</foreign>
+                    ፺፩ ፡ ዘንተ ፡ ዘይበልዑ ፡ ንጹሕ ፡ ወርኩስ ። 
                </label>
                <ab> ወዝንቱ ፡ ዘትበልዑ ፡ ንጹሕ ፡ ወዘኢኮነ ፡ ንጹሕ ፤ ላህም ፡ በግዕ ፡ ወጠሊ ፡ ሐርጌ ፡ ሀየል ፡ ወይጠል ፡ ቶራ ፡ ድስክነ ፡ ወውዕላ
          ፡ ዓርጋ ፡ ወዝራት ፡ ወኵሉ ፡ እንስሳ ፡ ዘንፉቅ ፡ ሰኰናሁ ፡ ወጽፈሪሁ ፡ ብልዑ ፡ ወዘይትመሰኳዕ ፡ ብልዑ ፤ ወዝንቱሰ ፡ ዘኢትበልዑ ፡
@@ -3064,13 +2655,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          እግዚኣብሔር ፡ ኮነ ፡ ከመ ፡ ትምጻእ ፡ ጽዮን ፡ ውስተ ፡ ዛቲ ፡ ብሔረ ፡ ኢትዮጵያ ፡ ወከመ ፡ ትኩኖ ፡ መርሐ ፡ ለንጉሥነ ፡ ዳዊት ፡
          መፍቀሬ ፡ እግዚኣብሔር ፡ ቀዋሚሃ ፡ ለደብተራሁ ፡ መጋቢሃ ፡ ለማኅደረ ፡ ስብሐቲሁ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="92"
-                 xml:id="Chapter92">
+            <div type="textpart" subtype="chapter"  n="92" xml:id="Chapter92">
                <label>
-                  <foreign xml:lang="gez"> ፺፪ ፡ ኀበ ፡ ሐደሱ ፡ መንግሥቶ ፡ ለዳዊት ።</foreign>
+                    ፺፪ ፡ ኀበ ፡ ሐደሱ ፡ መንግሥቶ ፡ ለዳዊት ። 
                </label>
                <ab> ወይቤ ፡ አዛርያስ ፡ አምጽኡ ፡ ኢዮቤል ፡ ወንሖር ፡ ኀበ ፡ ጽዮን ፡ ወበህየ ፡ ነሐድስ ፡ መንግሥቶ ፡ ለእግዚእነ ፡ ዳዊት ። ወነሥአ ፡
          ቅብአ ፡ መንግሥትኒ ፡ ምልአ ፡ ቀርን ፡ ወቀብእዎ ፡ ዕፍረተ ፡ ዘውእቱ ፡ ቅብአ ፡ መንግሥት ፤ ወነፍኁ ፡ ቀርነ ፡ ወብዕዛ ፡ ወከበሮ ፡
@@ -3089,13 +2676,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ብሔረ ፡ ጋዛ ፡ ወሞጻእቱ ፡ ኀበ ፡ ቀዳሚ ፡ ተወጠነ ፤ ወከመዝ ፡ ሢመቱ ፡ ለንጉሠ ፡ ኢትዮጵያ ፡ ሎቱ ፡ ወለዘርኡ ፡ እስከ ፡ ለዓለም ፨
          ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="93"
-                 xml:id="Chapter93">
+            <div type="textpart" subtype="chapter"  n="93" xml:id="Chapter93">
                <label>
-                  <foreign xml:lang="gez"> ፺፫ ፡ በእንተ ፡ ዘአማሰኑ ፡ ሃይማኖተ ፡ ሮም ።</foreign>
+                    ፺፫ ፡ በእንተ ፡ ዘአማሰኑ ፡ ሃይማኖተ ፡ ሮም ። 
                </label>
                <ab> ወእምድኅረ ፡ ነበሩ ፡ ፫አውራኀ ፡ እስመ ፡ መጽአት ፡ ጽዮን ፡ ውስተ ፡ ብሔረ ፡ ኢትዮጵያ ፡ አመ ፡ ሠረቀ ፡ ቀዳሚ ፡ ወርኅ ፡ በነገረ
          ፡ ዕብራዊያን ፡ ወበጽርእ ፡ ታርሞን ፡ ወበግዕዝ ፡ ሚያዝያ ፡ አመ ፡ ፮ ፡ ወጸሐፍዎን ፡ ለእሉ ፡ ሕግ ፡ ወአስማት ፡ ወአንበርዎን ፡
@@ -3116,13 +2699,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ሃይማኖተ ፡ እንተ ፡ ቤተ ፡ ክርስቲያን ፤ ወከማሁ ፡ ትነብር ፡ ኢትዮጵያ ፡ ምስለ ፡ ሃይማኖታ ፡ እስከ ፡ ምጽአተ ፡ እግዚእነ ፡ ኢየሱስ
          ፡ ክርስቶስ ፡ ዘሎቱ ፡ ስብሐት ፡ ለዓለመ ፡ ዓለም ፡ አሜን ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="94"
-                 xml:id="Chapter94">
+            <div type="textpart" subtype="chapter"  n="94" xml:id="Chapter94">
                <label>
-                  <foreign xml:lang="gez"> ፺፬ ፡ ቀዳሚ ፡ ፀብአ ፡ ንጉሠ ፡ ኢትዮጵያ ።</foreign>
+                    ፺፬ ፡ ቀዳሚ ፡ ፀብአ ፡ ንጉሠ ፡ ኢትዮጵያ ። 
                </label>
                <ab> ወእምዝ ፡ ተንሥኡ ፡ ለፀብእ ፡ እምድኅረ ፡ ፫ ፡ አውራኅ ፡ እምነ ፡ ሀገረ ፡ ምስፍና ፡ ምስለ ፡ ማክዳ ፡ እሙ ፡ ወጽዮን ፡ እግዝእቱ
          ፡ ወሌዋዊያን ፡ ይጸውርዋ ፡ ለታቦተ ፡ ሕግ ፡ ምስለ ፡ ንዋየ ፡ ሐቢቶሙ ፡ ወእንዘ ፡ የሐውሩ ፡ በብዙኅ ፡ ግርማ ፡ ከመ ፡ አሜሃ ፡
@@ -3151,13 +2730,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ሞቱ ፡ ለሰሎሞን ፡ ዘተጽሕፈ ፡ ወእምድኅረ ፡ ሞቱሰ ፡ ለሰሎሞን ፡ እምባዕዳን ፡ ነቢያት ፡ ዘተጽሕፈ ፡ አምሳሉ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨
          ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="95"
-                 xml:id="Chapter95">
+            <div type="textpart" subtype="chapter"  n="95" xml:id="Chapter95">
                <label>
-                  <foreign xml:lang="gez"> ፺፭ ፡ ኀበ ፡ ኀብሩ ፡ ክብሩ ፡ ለንጉሠ ፡ ኢትዮጵያ ።</foreign>
+                    ፺፭ ፡ ኀበ ፡ ኀብሩ ፡ ክብሩ ፡ ለንጉሠ ፡ ኢትዮጵያ ። 
                </label>
                <ab> ወበእንተሰ ፡ ክብረ ፡ ነገሥት ፡ አእመርነ ፡ ወጠየቅነ ፡ ከመ ፡ ይከብር ፡ ንጉሠ ፡ ኢትዮጵያ ፡ ንጉሠ ፡ ጽዮን ፡ ውእቱ ፡ ወበኵርኒ ፡
          ውእቱ ፡ እምዘርአ ፡ ሴም ፡ ወማኅደሩሂ ፡ ውስተ ፡ ጽዮን ፡ ለእግዚኣብሔር ፡ ውእቱ ፡ ወበህየ ፡ ይሰብር ፡ ኀይለ ፡ ኵሎሙ ፡ ፀሩ ፡
@@ -3197,13 +2772,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          እግዚኣብሔር ፡ ይጼልል ፡ መልዕልተ ፡ ማ ፡ ይ ፤ ዘንተሰ ፡ ዘይቤ ፡ በቃለ ፡ እግዚኣብሔር ፡ ተፈጥሩ ፡ ሰማያት ፡ ወምድር ፡ ወመንፈሰ ፡
          እግዚኣብሔር ፡ ኀደረ ፡ ላዕለ ፡ ኵሉ ፡ ፍጥረት ፡ ብሂል ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="96"
-                 xml:id="Chapter96">
+            <div type="textpart" subtype="chapter"  n="96" xml:id="Chapter96">
                <label>
-                  <foreign xml:lang="gez"> ፺፮ ፡ በእንተ ፡ ትንቢት ፡ ዘክርስቶስ ።</foreign>
+                    ፺፮ ፡ በእንተ ፡ ትንቢት ፡ ዘክርስቶስ ። 
                </label>
                <ab> ወካዕበ ፡ ሰበከ ፡ ሙሴ ፡ በኦሪት ፡ ወይቤ ፡ ነቢየ ፡ ያነሥእ ፡ ለክሙ ፡ ዘከማየ ፡ እምአኀዊክሙ ፡ ወስምዕዎ ፡ ለውእቱ ፡ ነቢይ ፡
          ወኵሉ ፡ ነፍስ ፡ እንተ ፡ ኢትሰምዖ ፡ ለውእቱ ፡ ነቢይ ፡ ይእቲ ፡ ነፍስ ፡ ለትሠሮ ፡ እምሕዝባ ፤ ወዘንተ ፡ ይቤ ፡ በእንተ ፡ ክርስቶስ
@@ -3262,13 +2833,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ጳጦስ ፡ በደብረ ፡ ሲና ፡ እንተ ፡ ኢያውዐያ ፡ እሳት ፡ በላዒ ፤ ወፍካሬሁ ፡ ለዝንቱ ፡ እሳት ፡ መለኮት ፡ ወልደ ፡ እግዚኣብሔር ፡ ወዕፀ
          ፡ ጳጦስ ፡ ዘትነድድ ፡ ወቈጽላ ፡ ኢትውዒ ፡ ዛቲ ፡ ይእቲ ፡ ማርያም ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="97"
-                 xml:id="Chapter97">
+            <div type="textpart" subtype="chapter"  n="97" xml:id="Chapter97">
                <label>
-                  <foreign xml:lang="gez"> ፺፯ ፡ ኀበ ፡ አንጐርጐሩ ፡ እስራኤል ።</foreign>
+                    ፺፯ ፡ ኀበ ፡ አንጐርጐሩ ፡ እስራኤል ። 
                </label>
                <ab> ወካዕበ ፡ አንጐርጐሩ ፡ ደቂቀ ፡ እስራኤል ፡ በእንተ ፡ ተክህኖ ፡ ቅድመ ፡ እግዚኣብሔር ፡ እንዘ ፡ ይብሉ ፡ ንሕነሰ ፡ አኮኑ ፡
          እስራኤል ፡ ንሕነ ፡ ዘርአ ፡ አብርሃም ፡ ወእፎ ፡ ዘኢንሠውዕ ፡ ንሕነ ፡ ከማሆሙ ፡ በውስተ ፡ ደብተራ ፡ ስምዕ ፡ በኀበ ፡ ታቦተ ፡ ሕጉ
@@ -3298,13 +2865,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ይእ ፡ ዜ ፡ ምስሌሆሙ ፡ ይብሉከ ፡ ዛቲሰ ፡ እምትካት ፡ ገባሪተ ፡ መንክር ፡ በቃለ ፡ እግዚኣብሔር ፡ እምይቤሉ ፡ ሶበ ፡ አርአይኩ ፡
          ተኣምረ ፡ በውስቴታ ፤ አላ ፡ ለቤተ ፡ አቡከ ፡ ጸሐፍ ፡ በትረ ፡ አሮን ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="98"
-                 xml:id="Chapter98">
+            <div type="textpart" subtype="chapter"  n="98" xml:id="Chapter98">
                <label>
-                  <foreign xml:lang="gez"> ፺፰ ፡ በእንተ ፡ በትረ ፡ ሙሴ ፡ ወአሮን ።</foreign>
+                    ፺፰ ፡ በእንተ ፡ በትረ ፡ ሙሴ ፡ ወአሮን ። 
                </label>
                <ab> ወነገሮሙ ፡ ሙሴ ፡ ዘንተ ፡ ወአምጽኡ ፡ በበአብያተ ፡ አበዊሆሙ ፡ እለ ፡ ኀረዩ ፡ ለንጽሕ ፡ ወኮነ ፡ ፲ ፡ ወ፪ ፡ አብትረ ፤ ወጸሐፈ
          ፡ ሙሴ ፡ አብትሪሆሙ ፡ በአስማተ ፡ አበዊሆሙ ፤ በትረ ፡ አሮን ፡ ተጽሕፈት ፡ በሌዊ ፡ ወበትረ ፡ ከርሚን ፡ ተጽሕፈ ፡ በይሁዳ ፡ ወበትረ
@@ -3383,13 +2946,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ላዕሌሁ ፡ ለአዳም ፡ ሰረበ ፡ ብሒአ ፡ ወእድ ፡ እንተ ፡ ሣረረታ ፡ ለምድር ፡ ተቀነወት ፡ ዘበእንቲአሁ ፡ ለአዳም ፡ ተትሒቶ ፡ ተወልደ ፡
          አያያተ ፡ ገብር ፡ ነሢኦ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="99"
-                 xml:id="Chapter99">
+            <div type="textpart" subtype="chapter"  n="99" xml:id="Chapter99">
                <label>
-                  <foreign xml:lang="gez"> ፺፻ ፡ በእንተ ፡ ክልኤቱ ፡ አግብርት ።</foreign>
+                    ፺፻ ፡ በእንተ ፡ ክልኤቱ ፡ አግብርት ። 
                </label>
                <ab> እስመ ፡ ብእሲ ፡ ንጉሥ ፡ ከመ ፡ ዘቦቱ ፡ ፪አግብርተ ፡ ፩ዕቡይ ፡ ወጽኑዕ ፡ ወ፩ትሑት ፡ ወድኩም ፡ ወተኀየሎ ፡ ውእቱ ፡ ዕቡይ ፡
          ለውእቱ ፡ ትሑት ፡ ወዘበጦ ፡ ወቀተሎ ፡ ወሰለቦ ፤ ወርእዮሙ ፡ ንጉሥ ፡ እምልዑል ፡ መንበሩ ፡ ወካዕበ ፡ ውእቱ ፡ ንጉሥ ፡ ወሪዶ ፡ አኀዞ
@@ -3404,13 +2963,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          እምክብሩ ፡ ነሠቶ ፡ ለኀያል ፡ ወእሙስና ፡ አንሥኦ ፡ ለነዳይ ፤ እስመ ፡ ኀቤሁ ፡ ክብር ፡ ወኀሳር ፡ ለዘ ፡ ፈቀደ ፡ ያከብር ፡
          ወለዘፈቀደ ፡ ያኀስር ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="100"
-                 xml:id="Chapter100">
+            <div type="textpart" subtype="chapter"  n="100" xml:id="Chapter100">
                <label>
-                  <foreign xml:lang="gez"> ፻ ፡ በእንተ ፡ እለ ፡ ተዐደዉ ፡ መላእክት ።</foreign>
+                    ፻ ፡ በእንተ ፡ እለ ፡ ተዐደዉ ፡ መላእክት ። 
                </label>
                <ab> ወቦ ፡ ካዕበ ፡ መላእክትሂ ፡ እለ ፡ ተምዕዖሙ ፡ እግዚኣብሔር ፡ እስመ ፡ አእመሮሙ ፡ ማእምረ ፡ ልብ ፡ ዘሐመይዎ ፡ ለአዳም ፡ እንዘ ፡
          ይብሉ ፡ እምድኅረ ፡ አፍቀሮ ፡ እግዚኣብሔር ፡ ወወሀቦ ፡ ኪያነሂ ፡ ከመ ፡ ንትለአኮ ፡ ወእንስሳ ፡ ወአራዊት ፡ ወዓሣተ ፡ ባሕር ፡
@@ -3481,13 +3036,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ዘተጋነይክሙ ፡ ሊተ ፡ ወእመጽእ ፡ ወእሄሉ ፡ ምስሌክሙ ፡ ወኣንሶሱ ፡ ማእከሌክሙ ፡ ወአኀ ፡ ድር ፡ ውስተ ፡ አልባቢክሙ ፤ ወትከውኑኒ ፡
          ሕዝብየ ፡ ወእከውነክሙ ፡ አምላክክሙ ፡ በጽድቅ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="101"
-                 xml:id="Chapter101">
+            <div type="textpart" subtype="chapter"  n="101" xml:id="Chapter101">
                <label>
-                  <foreign xml:lang="gez"> ፻፩ ፡ በእንተ ፡ ህላዌ ፡ ኵለሄ ።</foreign>
+                    ፻፩ ፡ በእንተ ፡ ህላዌ ፡ ኵለሄ ። 
                </label>
                <ab> ወካዕበ ፡ ይቤሎ ፡ ግበር ፡ ላቲ ፡ ዐጸደ ፡ ቀዳሚ ፡ ዴዴ ፡ ከመ ፡ ኢይባእ ፡ ህየ ፡ ሥኡብ ፡ ወርኩስ ፡ ወዘኢኮነ ፡ ንጹሐ ፡ እስመ
          ፡ አነ ፡ እሄሉ ፡ ኀቤሃ ፡ ወአኮ ፡ ህየ ፡ ባሕቲታ ፡ አላ ፡ ኀበ ፡ ኵሉ ፡ አምሳሊሃ ፡ ኀበ ፡ ይጼዋዕ ፡ ስምየ ፡ በንጽሕ ፤ ሀሎኩ ፡
@@ -3503,13 +3054,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ዘይመስል ፡ ኪያየ ፡ ይቤ ፡ እግዚኣብሔር ፤ እዴየ ፡ ሣረረታ ፡ ለምድር ፡ ወየማንየ ፡ አጽንዐታ ፡ ለሰማይ ፡ አነ ፡ ምስለ ፡ ወልድየ ፡
          ወመንፈስ ፡ ቅዱስ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="102"
-                 xml:id="Chapter102">
+            <div type="textpart" subtype="chapter"  n="102" xml:id="Chapter102">
                <label>
-                  <foreign xml:lang="gez"> ፻፪ ፡ በእንተ ፡ ቀዳሚ ።</foreign>
+                    ፻፪ ፡ በእንተ ፡ ቀዳሚ ። 
                </label>
                <ab> በከመ ፡ ዳዊት ፡ ተነበየ ፡ በአፈ ፡ መንፈስ ፡ ቅዱስ ፡ እንዘ ፡ ይብል ፡ ምስሌከ ፡ ቀዳማዊ ፡ በዕለተ ፡ ኀይል ፤ ማእዜ ፡ ይእቲ ፡
          ዕለተ ፡ ኀይል ፡ ብሂል ፤ አኮኑ ፡ አመ ፡ ፈጠረ ፡ ክርስቶስ ፡ ቃለ ፡ አብ ፡ ሰማየ ፡ ወምድረ ፤ እስመ ፡ ይቤ ፡ ሙሴ ፡ ውስተ ፡ ርእሰ
@@ -3560,13 +3107,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ማሕየዌ ፡ ኵሉ ፤ ወአምሳለ ፡ መንበር ፡ ዘቅድስት ፡ ኢየሩሳሌም ፡ ዛቲ ፡ ይእቲ ፡ ታቦት ፡ ዘቤተ ፡ ክርስቲያን ፡ ወአምሳለ ፡ ኢየሩሳሌም
          ፡ እንተ ፡ በሰማያት ፡ ዛቲ ፡ ይእቲ ፡ ቤተ ፡ ክርስቲያን ፡ እንተ ፡ አሕዛብ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="103"
-                 xml:id="Chapter103">
+            <div type="textpart" subtype="chapter"  n="103" xml:id="Chapter103">
                <label>
-                  <foreign xml:lang="gez"> ፻፫ ፡ በእንተ ፡ አቅርንተ ፡ ምሥዋዕ ።</foreign>
+                    ፻፫ ፡ በእንተ ፡ አቅርንተ ፡ ምሥዋዕ ። 
                </label>
                <ab> ታቦትሰ ፡ አቅርንተ ፡ ምሥዋዕ ፡ ውእቱ ፡ ኀበ ፡ ይሠውዑ ፡ ቅዱሳን ፡ ካህናት ፡ ወዘያነብሩ ፡ ዲቤሁ ፡ ጠረጲዛ ፡ አምሳለ ፡ ኀበ ፡
          ተቀብረ ፡ በውስተ ፡ ጎልጎታ ፡ መቃብር ፤ ወዘመልዕልተ ፡ ጠረጲዛ ፡ ጵርስፎራ ፡ አምሳለ ፡ አጵርጌ ፡ ዘውእቱ ፡ ሥጋሁ ፡ ለአማኑኤል ፡
@@ -3584,13 +3127,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ በእንቲአሆሙ ፡ አማልክቲሆሙ ፡ ለአሕዛብ ፡ አጋንንት ፡ ወእግዚኣብሔርሰ ፡ ሰማያተ ፡ ገብረ ፡ አሚን ፡ ወሠናይት ፡ ቅድሜሁ ፨ ፨
          ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="104"
-                 xml:id="Chapter104">
+            <div type="textpart" subtype="chapter"  n="104" xml:id="Chapter104">
                <label>
-                  <foreign xml:lang="gez"> ፻፬ ፡ ካዕበ ፡ በእንተ ፡ ታቦት ፡ ወነገረ ፡ ዕልዋን ።</foreign>
+                    ፻፬ ፡ ካዕበ ፡ በእንተ ፡ ታቦት ፡ ወነገረ ፡ ዕልዋን ። 
                </label>
                <ab> ወበእንተ ፡ ታቦትሰ ፡ አድኀኖ ፡ ለኖኅ ፡ በታቦት ፤ ወተናገሮ ፡ ለአብርሃም ፡ በኀበ ፡ ዕፀ ፡ መንበር ፡ ዘውእቱ ፡ ዕፅ ፡ ዘኢይነቅዝ
          ፤ ወአድኀኖ ፡ ለይስሐቅ ፡ በዘ ፡ ተእኅዘ ፡ በዕፀ ፡ ሳቤቅ ፡ በግዕ ፤ ወአብዐሎ ፡ ለያዕቆብ ፡ በ፫ ፡ አብትረ ፡ ዕፀው ፡ እለ ፡ ወደየ
@@ -3638,13 +3177,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ኢዐቀቡ ፡ ዘጽሑፍ ፡ ውስቴታ ፡ ርጉመ ፡ ለይኩን ፡ ይብለከ ፤ ወለነሰ ፡ ለእለ ፡ አመነ ፡ በክርስቶስ ፡ ወልደ ፡ እግዚኣብሔር ፡ ኀረየነ ፡
          ጸጋ ፡ እግዚኣብሔር ፡ እንዘ ፡ ይብል ፡ ዘአምነ ፡ ወተጠምቀ ፡ ይድኀን ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="105"
-                 xml:id="Chapter105">
+            <div type="textpart" subtype="chapter"  n="105" xml:id="Chapter105">
                <label>
-                  <foreign xml:lang="gez"> ፻፭ ፡ በእንተ ፡ አሚነ ፡ አብርሃም ።</foreign>
+                    ፻፭ ፡ በእንተ ፡ አሚነ ፡ አብርሃም ። 
                </label>
                <ab> ወአንተሰ ፡ ኢትሌቡ ፡ ከመ ፡ በአሚን ፡ ይጸድቁ ፡ ከመ ፡ አብርሃም ፡ ወዳዊት ፡ ወኵሎሙ ፡ ነቢያት ፡ በበ ፡ መትልው ፡ እለ ፡ ተነበዩ
          ፡ በእንተ ፡ ምጽአቱ ፡ ለወልደ ፡ እግዚኣብሔር ። ወይቤ ፡ አብርሃም ፡ በመዋዕልየኑ ፡ እግዚኦ ፡ ትፌኑ ፡ ቃልከ ፡ ዲበ ፡ ምድር ፤ ወይቤሎ
@@ -3656,13 +3191,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ዕዉር ፡ እንዘ ፡ ብከ ፡ አዕይንተ ፡ ኢትሬኢ ፡ ወእንዘ ፡ ብከ ፡ እዝ ፡ ነ ፡ ኢትሰምዕ ፤ በከመ ፡ ይቤ ፡ በእንቲአክሙ ፡ ኢሳይያስ ፡
          ነቢይ ፡ ዖሩ ፡ አዕይንቲሆሙ ፡ ወተጸለለ ፡ ልቦሙ ፡ ከመ ፡ ኢይለብዉ ፡ ወኢይሣህሎሙ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="106"
-                 xml:id="Chapter106">
+            <div type="textpart" subtype="chapter"  n="106" xml:id="Chapter106">
                <label>
-                  <foreign xml:lang="gez"> ፻፮ ፡ ትንቢት ፡ በእንተ ፡ ምጽአቱ ፡ ለክርስቶስ ።</foreign>
+                    ፻፮ ፡ ትንቢት ፡ በእንተ ፡ ምጽአቱ ፡ ለክርስቶስ ። 
                </label>
                <ab> ወበእንተሰ ፡ ምጽአቱ ፡ ስማዕ ፡ ዘከመ ፡ ተነበዩ ፡ ፩፩ዘአዳም ፡ ለሰሚዖት ፡ በእንተ ፡ ምጽአቱ ፡ ተነበየ ፡ ኢሳይያስ ፡ ወይቤ ፡
          ወልድ ፡ ተወልደ ፡ ለነ ፡ ሕፃን ፡ ተውህበ ፡ ለነ ፡ ስልጣን ፡ ጽሑፍ ፡ ዲበ ፡ መትከፍቱ ፡ ውእቱ ፡ አምላክ ፡ ጽኑዐ ፡ ምኵናን ፡ ንጉሥ
@@ -3753,13 +3284,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ይሰግዲ ፡ ሎሙ ፡ በሰማይ ፡ ወበምድር ፡ በባሕር ፡ ወበቀላያት ፤ ወሎቱ ፡ ስብሐት ፡ ለዓለመ ፡ ዓለም ፡ አሜን ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨
          ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="107"
-                 xml:id="Chapter107">
+            <div type="textpart" subtype="chapter"  n="107" xml:id="Chapter107">
                <label>
-                  <foreign xml:lang="gez"> ፻፯ ፡ በእንተ ፡ በአቱ ፡ ኢየሩሳሌም ፡ በስብሐት ።</foreign>
+                    ፻፯ ፡ በእንተ ፡ በአቱ ፡ ኢየሩሳሌም ፡ በስብሐት ። 
                </label>
                <ab> ወበእንተ ፡ በአቱ ፡ ኢየሩሳሌም ፡ በስብሐት ፡ ተነበዩ ፡ ነቢያት ፡ እንዘ ፡ ይብል ፡ ኢሳይያስ ፡ ነቢይ ፡ አብርሂ ፡ አብርሂ ፡
          ኢየሩሳሌም ፡ በጽሐ ፡ ብርሃንኪ ፡ ወስብሐተ ፡ እግዚኣብሔር ፡ ሠረቀ ፡ ላዕሌኪ ፡ ወበከመ ፡ ተነበየ ፡ ዘካርያስ ፡ ነቢይ ፡ ወይቤ ፡
@@ -3788,13 +3315,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          በጽንዐ ፡ ኀይሉ ፤ ወዘንተኒ ፡ ብሂል ፡ አኃዜ ፡ ስልጣነ ፡ ነገሥ ፡ ት ፡ በቅንዋት ፡ ተቀነወ ፡ እራኁ ፡ ዘሕይወተ ፡ ኵሉ ፡ ውስቴቶን ፡
          እኁዝ ፡ ዘገብረ ፡ ክርስቶስ ፡ በጽንዐ ፡ ኀይሉ ፡ ፍቁር ፡ ብሂል ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="108"
-                 xml:id="Chapter108">
+            <div type="textpart" subtype="chapter"  n="108" xml:id="Chapter108">
                <label>
-                  <foreign xml:lang="gez"> ፻፰ ፡ በእንተ ፡ እከየ ፡ ይሁዳ ፡ ዕልው ።</foreign>
+                    ፻፰ ፡ በእንተ ፡ እከየ ፡ ይሁዳ ፡ ዕልው ። 
                </label>
                <ab> ወበእንተ ፡ እከዩ ፡ ለይሁዳ ፡ ረሲዕ ፡ ተነበዩ ፡ ነቢያት ፡ ወይቤ ፡ ዳዊት ፡ በእንቲአሁ ፡ ለብእሲ ፡ ዐማፂ ፡ ይንዕዎ ፡ እኪት ፡
          ለአማስኖ ፤ ወካዕበ ፡ ይቤ ፡ ወይገብእ ፡ ጻማሁ ፡ ዲበ ፡ ርእሱ ፡ ወትወርድ ፡ ዐመፃሁ ፡ ዲበ ፡ ድማሑ ። ወበከመ ፡ ተነበየ ፡ ሰሎሞን ፡
@@ -3823,13 +3346,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ተነበየ ፡ ሰሎሞን ፡ ወልዲ ፡ ወይቤ ፡ ጽሉእ ፡ በኀበ ፡ እግዚኣብሔር ፡ መዳልወ ፡ ዐመፃ ፡ ወበከመ ፡ ተነበየ ፡ ኤርምያስ ፡ ነቢይ ፡
          ወይቤ ፡ በእንተ ፡ ይሁዳ ፡ ድልው ፡ ሊተ ፡ ዐስብየ ፡ ፴ ፡ ብሩር ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="109"
-                 xml:id="Chapter109">
+            <div type="textpart" subtype="chapter"  n="109" xml:id="Chapter109">
                <label>
-                  <foreign xml:lang="gez"> ፻፱ ፡ በእንተ ፡ ስቅለቱ ።</foreign>
+                    ፻፱ ፡ በእንተ ፡ ስቅለቱ ። 
                </label>
                <ab> ወካዕበ ፡ ተነበዩ ፡ ነቢያት ፡ በእንተ ፡ ስቅለቱ ፡ ለክርስቶስ ፡ ወበከመ ፡ ተነበየ ፡ ሙሴ ፡ ቊልዔሁ ፡ ለእግዚኣብሔር ፡ ወይቤ ፡
          ትሬእዩ ፡ መድኀኒትክሙ ፡ ስቁለ ፡ ዲበ ፡ ዕፅ ፡ ወኢተአምኑ ፡ ቦቱ ። ወበከመ ፡ ተነበየ ፡ ዳዊት ፡ ወይቤ ፡ አኀዙኒ ፡ ከለባት ፡ ብዙኃን
@@ -3855,13 +3374,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          በከመ ፡ ተብህለ ፡ በሐዋርያት ፡ በወንጌል ፡ መራሕከነ ፡ ወበነቢያት ፡ ናዘዝከነ ፤ እስመ ፡ ነገረ ፡ ነቢያት ፡ ያረትዕ ፡ ሃይማኖተ ፡
          ኑፉቃን ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="110"
-                 xml:id="Chapter110">
+            <div type="textpart" subtype="chapter"  n="110" xml:id="Chapter110">
                <label>
-                  <foreign xml:lang="gez"> ፻፲ ፡ በእንተ ፡ ትንሣኤሁ ።</foreign>
+                    ፻፲ ፡ በእንተ ፡ ትንሣኤሁ ። 
                </label>
                <ab> ወካዕበ ፡ በእንተ ፡ ትንሣኤሁ ፡ ተነበየ ፡ ዳዊት ፡ ወይቤ ፡ ይእዜ ፡ እትነሣእ ፡ ይቤ ፡ እግዚኣብሔር ፡ እሬሲ ፡ መድኀኒተ ፡ ወኣግህድ
          ፡ ቦቱ ፤ ወካዕበ ፡ ይቤ ፡ ተንሥእ ፡ እግዚኦ ፡ ወኰንና ፡ ለምድር ፡ እስመ ፡ አንተ ፡ ትወርስ ፡ በኵሉ ፡ አሕዛብ ፤ ወካዕበ ፡ ተነበየ
@@ -3873,13 +3388,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ነቢይ ፡ ወይቤ ፡ እስመ ፡ ኢተኀድጋ ፡ ውስተ ፡ ሲኦል ፡ ለነፍስየ ። ወበከመ ፡ ተነበየ ፡ ሰሎሞን ፡ ወልዲ ፡ ወይቤ ፡ ወይትሌዐል ፡ ፀሐየ
          ፡ ጽድቅ ፡ ወይምነ ፡ የዐውድ ፡ ወይገብእ ፡ ውስተ ፡ መካኑ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="111"
-                 xml:id="Chapter111">
+            <div type="textpart" subtype="chapter"  n="111" xml:id="Chapter111">
                <label>
-                  <foreign xml:lang="gez"> ፻፲፩ ፡ በእንተ ፡ ዕርገቱ ፡ ወዳግም ፡ ምጽአቱ ።</foreign>
+                    ፻፲፩ ፡ በእንተ ፡ ዕርገቱ ፡ ወዳግም ፡ ምጽአቱ ። 
                </label>
                <ab> ወበከመ ፡ ተነበዩ ፡ ነቢያት ፡ ኵሎሙ ፡ ወአበው ፡ ቀደምት ፡ ብዙኀ ፡ በእንተ ፡ ዕርገቱ ፡ ወዳግም ፡ ምጽአቱ ፡ ይኰንን ፡ ሕያዋነ ፡
          ወሙታነ ፡ ወዳዊትኒ ፡ ይቤ ፡ በእንተ ፡ ዕርገቱ ፡ ዐረገ ፡ ውስተ ፡ አርያም ፡ ፄዊወከ ፡ ፄዋ ፡ ወወህብከ ፡ ጸጋከ ፡ ለእጓለ ፡ እመሕያው
@@ -3904,13 +3415,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ዘእንበለ ፡ ጥልቀት ፤ ወከማሁ ፡ ወረደ ፡ መድኀኒነ ፡ ወአድኀነ ፡ ቤተ ፡ ክርስቲያኑ ፡ ማኅበረ ፡ አሕዛብ ፡ ወዐርገ ፡ ነሢኦ ፡ ክብረ ፡
          ወስብሐተ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="112"
-                 xml:id="Chapter112">
+            <div type="textpart" subtype="chapter"  n="112" xml:id="Chapter112">
                <label>
-                  <foreign xml:lang="gez"> ፻፲፪ ፡ በእንተ ፡ ዘአርአዩ ፡ ነቢያት ፡ በሥጋሆሙ ።</foreign>
+                    ፻፲፪ ፡ በእንተ ፡ ዘአርአዩ ፡ ነቢያት ፡ በሥጋሆሙ ። 
                </label>
                <ab> ተአዘዘ ፡ ይስሐቅ ፡ ለአቡሁ ፡ ወይቤ ፡ ዕቅደኒ ፡ ወተሦዐ ፡ እንዘ ፡ ኢይመውት ፡ ተቤዘዎ ፡ በበግዕ ፡ ዘወረደ ፡ እምሰማያት ፤ ወከማሁ
          ፡ ወልደ ፡ እግዚኣብሔር ፡ ተአዛዜ ፡ ለአቡሁ ፡ ኮነ ፡ እስከ ፡ ለሞት ፡ ወተአስረ ፡ በፍቅረ ፡ ሰብእ ፡ ወተቀነወ ፡ ወተረግዘ ፡ ወኮነ ፡
@@ -3946,13 +3453,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ኢይኅድጉ ፡ አዕፅምቲሁ ፡ ውስተ ፡ ምድረ ፡ ግብጽ ፤ አላ ፡ ከመ ፡ ሶበ ፡ ሐወጸክሙ ፡ እግዚኣብሔር ፡ ንሥኡ ፡ ምስሌክሙ ፡ ወደምሩ ፡
          አዕፅምትየ ፡ ውስተ ፡ መቃብረ ፡ አበዊየ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="113"
-                 xml:id="Chapter113">
+            <div type="textpart" subtype="chapter"  n="113" xml:id="Chapter113">
                <label>
-                  <foreign xml:lang="gez"> ፻፲፫ ፡ በእንተ ፡ ሰረገላ ፡ ወመግረሬ ፡ ፀር ።</foreign>
+                    ፻፲፫ ፡ በእንተ ፡ ሰረገላ ፡ ወመግረሬ ፡ ፀር ። 
                </label>
                <ab> አውሥኡ ፡ ወይቤልዎ ፡ ሊቃነ ፡ ጳጳሳት ፡ ለጎርጎርዮስ ፡ ገባሬ ፡ መንክር ፡ ናሁኬ ፡ ጠየቅነ ፡ ወአለበውከነ ፡ ከመ ፡ ከብሩ ፡ ወዐብዩ
          ፡ ነገሥተ ፡ ኢትዮጵያ ፡ በእንተ ፡ ጽዮን ፤ ወካዕበ ፡ ዐብዩ ፡ ነገሥተ ፡ ሮም ፡ በእንተ ፡ ቅንዋት ፡ ዘገብረት ፡ ልጓመ ፡ እሌኒ ፡
@@ -3978,13 +3481,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ወይቤ ፡ ኢትዮጵያ ፡ ታበጽሕ ፡ እደዊሃ ፡ ኀበ ፡ እግዚኣብሔር ፤ ወዘንተ ፡ ዘይቤ ፡ ኢየዐልዉ ፡ ወኢይዌልጡ ፡ ዘንተ ፡ ሃይማኖትነ ፡
          ወሥርዐትነ ፡ ወዘእለ ፡ እምቅድሜነ ፡ መምህራነ ፡ ሕግ ፡ ሐዋርያት ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="114"
-                 xml:id="Chapter114">
+            <div type="textpart" subtype="chapter"  n="114" xml:id="Chapter114">
                <label>
-                  <foreign xml:lang="gez"> ፻፲፬ ፡ በእንተ ፡ ግብአታ ፡ ለጽዮን ።</foreign>
+                    ፻፲፬ ፡ በእንተ ፡ ግብአታ ፡ ለጽዮን ። 
                </label>
                <ab> ወታቦተ ፡ ሕጉኒ ፡ ለእግዚኣብሔር ፡ ጽዮን ፡ ቅድስት ፡ ትነብር ፡ ህየ ፡ እስከ ፡ ውእተ ፡ አሚረ ፡ አመ ፡ ይነብር ፡ እግዚእነ ፡
          ውስተ ፡ ደብረ ፡ ጽዮን ፤ ወትመጽእ ፡ ጽዮን ፡ ወታስተርኢ ፡ ለኵሉ ፡ ድሉተ ፡ ወሕንጽታ ፡ በከመ ፡ ቀፈላ ፡ ሙሴ ፡ በ፫ ፡ ማኅተም ፤
@@ -3996,13 +3495,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ዘጸሐፈ ፡ ሎሙ ፡ በእዴሁ ፡ ቃላተ ፡ ለትእዛዙ ፡ ወመና ፡ ዘከመ ፡ ሴሰዮሙ ፡ ዘእንበለ ፡ ጻማ ፡ ምስለ ፡ መስፈሩ ፡ ጎሞር ፡ ወመንፈሳዊት
          ፡ ጽዮን ፡ ለመድኀኒቶሙ ፡ ዘወረደት ፡ ወበትረ ፡ አሮንመ ፡ እንተ ፡ ሠረጸት ፡ በአምሳለ ፡ ማርያም ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="115"
-                 xml:id="Chapter115">
+            <div type="textpart" subtype="chapter"  n="115" xml:id="Chapter115">
                <label>
-                  <foreign xml:lang="gez"> ፻፲፭ ፡ በእንተ ፡ ቅስተ ፡ እስራኤል ።</foreign>
+                    ፻፲፭ ፡ በእንተ ፡ ቅስተ ፡ እስራኤል ። 
                </label>
                <ab> ወያወሥኦሙ ፡ ወይብሎሙ ፡ ለምንት ፡ ክሕድክሙኒ ፡ ወዐለውክሙኒ ፡ ወሰቀልክሙኒ ፡ ዘንተ ፡ ኵሎ ፡ ዘገበርኩ ፡ ለክሙ ፡ ወአድኀንኩክሙ ፡
          ወሪድየ ፡ እምሰይጣን ፡ ወእምግብርናተ ፡ ፈርዖን ፡ ወበእንቲአክሙኒ ፡ መጻእኩ ፡ ወአንትሙሰ ፡ ርእዩ ፡ ዘከመ ፡ ቀነውክሙኒ ፡ ወረገዝክሙኒ
@@ -4015,13 +3510,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          አሐቲ ፡ ዕለት ፡ በኀበ ፡ እግዚኣብሔር ፡ መጠነ ፡ ፼ ፡ ዓመት ፡ ቦዘ ፡ ይትኴነን ፡ መጠነ ፡ ዕለት ፡ ወቦመንፈቀ ፡ ዕለት ፡ ወቦ ፡ ፫
          ፡ ሰዐት ፡ ዘዕለት ፡ ወቦ ፡ ፩ ፡ ሰዓት ፡ ዘዕለት ፡ ወቦዘያሜክርዎ ፡ ወያስተናጽሕዎ ፡ እምነ ፡ አበሳሁ ፨ ፨ ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="116"
-                 xml:id="Chapter116">
+            <div type="textpart" subtype="chapter"  n="116" xml:id="Chapter116">
                <label>
-                  <foreign xml:lang="gez"> ፻፲፮ ፡ በእንተ ፡ ሰረገላ ፡ ኢትዮጵያ ።</foreign>
+                    ፻፲፮ ፡ በእንተ ፡ ሰረገላ ፡ ኢትዮጵያ ። 
                </label>
                <ab> ወአውሥእዎ ፡ ወይቤልዎ ፡ ሊቃነ ፡ ጵጳሳት ፡ ናሁኬ ፡ ነገርከነ ፡ በእንተ ፡ መግረሬ ፡ ፀር ፡ ዘሮሜ ፤ ወይእዜኒ ፡ በእንተ ፡ ሰረገላ
          ፡ ዘኢትዮጵያ ፡ ወእመሂ ፡ ይነብር ፡ ደኃሪ ፡ እስከ ፡ ምጽአተ ፡ ክርስቶስ ፡ ከመ ፡ ነገርከነ ፡ በእንተ ፡ ጽዮን ፡ ወበእንተ ፡
@@ -4030,13 +3521,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          ፡ ይገብር ፡ በፈቃዲ ፡ እግዚኣብሔር ፡ ከመ ፡ ያኅልቆሙ ፤ እስመ ፡ አርማንያ ፡ ደወለ ፡ ሮም ፡ ወናግራን ፡ ደወለ ፡ ኢትዮጵያ ፨ ፨
          ፨</ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="117"
-                 xml:id="Chapter117">
+            <div type="textpart" subtype="chapter"  n="117" xml:id="Chapter117">
                <label>
-                  <foreign xml:lang="gez"> ፻፲፯ ፡ በእንተ ፡ ንጉሠ ፡ ሮምያ ፡ ወንጉሠ ፡ ኢትዮጵያ ።</foreign>
+                    ፻፲፯ ፡ በእንተ ፡ ንጉሠ ፡ ሮምያ ፡ ወንጉሠ ፡ ኢትዮጵያ ። 
                </label>
                <ab> ወይትለአኩ ፡ ንጉሠ ፡ ሮምያ ፡ ወንጉሠ ፡ ኢትዮጵያ ፡ ወሊቀ ፡ ጳጳሳት ፡ ዘእስክንድርያ ፡ ከመ ፡ ያኅልቅዎሙ ፡ እንዘ ፡ ርቱዕ ፡
          ሃይማኖቶሙ ፡ ለሰብአ ፡ ሮም ፤ ወይትነሥኡ ፡ ፀብአ ፡ ከመ ፡ ይጽብእዎሙ ፡ ለፀረ ፡ እግዚኣብሔር ፡ አይሁድ ፡ ወያኅልቅዎሙ ፡ ንጉሠ ፡ ሮሜ
@@ -4071,11 +3558,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          በረከቶሙ ፡ ለኵሎሙ ፡ ቅዱሳን ፡ ወሰማዕት ፡ ለዓለመ ፡ ዓለም ፡ አሜን ፡ ክርስቶስ ፡ ንጉሥነ ፡ ወበክርስቶስ ፡ ሕይወትነ ፡ ለዓለመ ፡
          ዓለም ፡ አሜን ፡ ወአሜን ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ </ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="118"
-                 xml:id="Chapter118">
+            <div type="textpart" subtype="chapter"  n="118" xml:id="Chapter118">
                <ab>
          ወተብህለ ፡ በክታበ ፡ ዐረቢ ፡ አውፃእናሃ ፡
          እመጽሐፈ ፡ ቅብጥ ፡ ለዐረቢ ፡ እመንበረ ፡ ማርቆስ ፡ ወንጌላዊ ፡ መምህር ፡ አበ ፡ ኵልነ ፤ ወአውፃእናሃ ፡ በ፬፻ ፡ ወ፱ ፡ ዓመተ ፡
@@ -4093,11 +3576,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
       </ab>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 n="119"
-                 xml:id="Chapter119">
+            <div type="textpart" subtype="chapter"  n="119" xml:id="Chapter119">
                <ab>
             ወእምድኅረ ፡ ተወልደ ፡ መድኀኒነ ፡ እሉ ፡ ነገሥት ። ባዜን ፤ ጽንፈ ፡ አስግድ ፤ ባሕረ ፡ አስግድ ፤ ግርማ ፡ ሰፍር ፤ ሰርዓዳ ፤ ኵሉ ፡
             ለጽዮን ፤ ሰርጓይ ፤ ዘርአይ ፤ በጋማይ ፤ ዛን ፡ አስግድ ፤ ጽዮን ፡ ሕግ ፤ ማአልባጋድ ፤ ሳፍ ፡ አርዓድ ፤ አግዳር ፤ አብርሃ ፡ ወአጽብሐ
@@ -4108,11 +3587,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             እግዚአብሔር ፡ አነ ፡ አቀንኦሙ ፡ በዘኢኮነ ፡ ሕዝብ ። ወእምድኅሬሁ ፡ አግብአ ፡ ሎሙ ፤ ይኵኖ ፡ አምላክ ፤ ያግባ ፡ ጽዮን ፤ ባሕር ፡
             ሰገድ ፤ ሕዝበ ፡ አርዓድ ፤ ቅድመ ፡ ሰገድ ፤ ዣን ፡ ሰገድ ፤ ውድም ፡ አርዓድ ፤ ዓምደ ፡ ጽዮን ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨ ፨</ab>
             </div>
+   
          </div>
-         <div type="edition" xml:lang="gez" xml:id="traces" resp="SH">
             
-         </div>
-      </body>
-
-   </text>
+            <div type="edition" xml:id="traces" xml:lang="gez" resp="SH">
+                <!-- how to include Geta-produced TEI? -->                
+            </div>
+            <!---->
+        </body>
+    </text>
 </TEI>

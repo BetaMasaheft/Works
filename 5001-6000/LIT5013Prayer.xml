@@ -1,23 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT5013Prayer"
-     xml:lang="en"
-     type="work">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5013Prayer" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Prayer</title>
+                <title xml:lang="en" xml:id="t1">Magic prayer to Mary</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DE"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine multimediale
                             Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
@@ -31,8 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -41,30 +34,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>Magic prayer to St Mary beginning with ʾasmat.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Magic"/>
+                    <term key="Prayers"></term>
                 </keywords>
             </textClass>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DE" when="2018-07-20">Created entity</change>
+            <change when="2021-06-29" who="DE">Added abstract and incipit.</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
          <!---->
+         <div type="edition">
+           <note>The incipit is cited according to <ref corresp="BerOrOct59" type="mss"></ref></note>
+           <div type="textpart" subtype="incipit" xml:lang="gez">
+             <ab>
+               በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ። አሐዱ፡ አምላክ። ጸሎት፡ ዘእግዚእትነ፡ ማርያም። ዘጸለየት፡ ወትቤ።
+               በርታፍዮስ። ተሐዝልፍዮስ። ዐምድ፡ ወዮስ። ዘቆሮልዮስ። እንብኮቢያኤል። እልምድቃኤል፡ ዐዘቅታኤል፡
+               እርፋቃኤል። በዘ፡ ቆመ፡ ሰማይ፡ ወምድር። ሕዝዝቃናኤል። መርሜኑ። አስሀርልዮስ።
+             </ab>
+           </div>
+         </div>
         </body>
     </text>
 </TEI>

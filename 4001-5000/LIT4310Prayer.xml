@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT4310Prayer">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4310Prayer">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="en" xml:id="t1">Protective prayer containing divine names</title>
+            <title xml:lang="en" xml:id="t1">Protective prayers containing divine names</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -27,29 +21,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-         </sourceDesc>
-         <sourceDesc>
             <listWit>
-               <witness corresp="BAVet42#ms_i4"/>
+               <witness corresp="BAVet42"/>
+               <witness corresp="BMLor403"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract>
+            <p>Collection of prayers, which were used as <term key="Magic">magic prayers</term>, each of which beginning with 
+               <foreign xml:lang="gez">ኦእግዚኦ፡ እግዚኦ፡</foreign> and often continued with 
+               <foreign xml:lang="gez">አነኒ፡ ተማኅፀንኩ፡ በዝንቱ፡ ዘዚአከ፡ አስማት፡</foreign> or
+               <foreign xml:lang="gez">አነኒ፡ ተማኅፀንኩ፡ በዝንቱ፡ ስምከ፡</foreign> and with <foreign xml:lang="gez">ʾasmāt</foreign>, 
+               some of which are styled according to the Hebrew or Syriac alphabet.</p>
+         </abstract>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Prayers"/>
@@ -59,15 +52,143 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </profileDesc>
       <revisionDesc>
          <change who="MV" when="2017-01-13">Created file</change>
+         <change when="2024-10-23" who="CH">Added abstract and textparts</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div type="bibliography">
+            <listRelation>
+               <relation name="dcterms:hasPart" active="LIT4310Prayer" passive="LIT7119Yethafaru"/>
+            </listRelation>
+         </div>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Turaev1909Vatikana"/>
+                  <citedRange unit="page">183-185</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Budge1929"/>
+                  <citedRange unit="page">112-127</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Basset1895ApocryphesV"/>
+                  <citedRange unit="page">11-30</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-               ስብሓት፡ ወጸሎት፡ ወወድሶ፡ መለኮት፨ ወተማኅፅኖ፡ በአስማት፡ ለስርየተ፡ ኀጢአት። ኦእግዚኦ፡ አነኒ፡ ገብርከ፡ ተማኅፀንኩ፡ በዝንቱ፡ ዘዚአከ፡ አስማት፡ አሌፍ፨ ኤፍ፨ ካፍ፨ 
-            </ab>
+            <note>The following incipits of the work and its single prayers are taken from <ref type="mss" corresp="BMLor403"/>
+               or <bibl><ptr target="bm:Turaev1909Vatikana"/><citedRange unit="page">183</citedRange></bibl>.</note>
+            <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="supplication">
+               <label>Supplication</label>
+               <ab>በስመ፡ <gap reason="ellipsis"/> ስብሓት፡ ወጸሎ<sic resp="CH">ተ</sic>፡ ወወድሶ፡ ወመለኮት፨ ወተማኅፅኖ፡ 
+                  በአስማ<sic resp="CH">ተ</sic>፡ ለስርየተ፡ ኃጢአት።</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="first">
+               <label>1st prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ በዝንቱ፡ ዘዚአከ፡ አስማት፡ አአሌፍ። ካፍ።</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="second">
+               <label>2nd prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ ዕቀበኒ፡ እመሥገርቱ፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="third">
+               <label>3rd prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ በስምከ። አሌፍ።</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="fourth">
+               <label>4th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ ለሊከ፡ በቃልከ፡ ትቤ፡ ሰማይ፡ ወምድር፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="fifth">
+               <label>5th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ ዘዚአከ፡ አስማት። ቤት፡ ቀዳሚት፡ ዘሳረረ፡ ኵሉ፡ ዓለም፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="sixth">
+               <label>6th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ ደምረነ፡ ምስለ፡ ቡሩካን፡ ክህንት፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="seventh">
+               <label>7th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አድኅነኒ፡ ተማኅፀንኩ፡ ዘዚአስማት። ጋሜል፡ ኤል። ኤልኤል። መንፈስ፡ ቅዱስ፡ ዲቤየ፡ ይጽልል፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="eighth">
+               <label>8th prayer</label>
+               <ab>ኦእግዚኦ፡ ዘዚአከ፡ ሣህል፡ እስመ፡ በኀቤከ፡ ኵሎ፡ ይትከሀልከ፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="ninth">
+               <label>9th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አድኅነኒ፡ ተማኅፀንኩ፡ በዝንቱ፡ ዘዚአከ፡ አስማት። ዳሌጥ፡ ወሄት። አድኅነኒ፡ ዘአድኀንኮ፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="tenth">
+               <label>10th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ ግብርከ፡ ወምግባርከ፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="eleventh">
+               <label>11th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ በዝንቱ፡ ዘዚአከ፡ አስማት፡ ሄ፡ ለሄ። ወለላሄ። እንዘ፡ ሥልጣንሰ፡ ምሉእ፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="twelfth">
+               <label>12th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ በዝንቱ፡ ዘዚአከ፡ አስማት፡ ኢያሄ፡ ሱራሄ፡ ድምናሄ፡ ለፍኖተ፡ ሀገርከ፡ </ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="thirteenth">
+               <label>13th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ በዝንቱ፡ ዘዚአከ፡ አስማት፡ ዋው፡ ያው፡ ታው፡ ወሕያው፡ ሣህልከ፡ ወምሕረትከ፡ ዲቤነ፡ ከዐው፡ አሰረ፡ ዚአከ፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="fourteenth">
+               <label>14th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ በዝንቱ፡ ዘዚአከ፡ አስማት፡ ዛይ፡ አዶናይ፡ ፈጣሪሁ፡ ለሰማይ።</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="fifteenth">
+               <label>15th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ በዝንቱ፡ ዘዚአከ፡ አስማት፡ ጤት፡ ወሔት፡ ወሳምኬት፡ ለምንተ፡ ገደፍከኒ፡ አድኅነኒ፡ እምተ፡ ከንት፡ ዕስየኒ፡ ፍሥሓ፡ ወሐሤት፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="sixteenth">
+               <label>16th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ ዘዚአከ፡ አስማት፡ ዮድ፡ ሄድ፡ ወላሜድ፡ ፈሪትከ፡ ውስተ፡ ሥጋየ፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="seventeenth">
+               <label>17th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ በዝንቱ፡ ዘዚአከ፡ አስማት። ኦአኃዊየ፡ ንዑ፡ ትስምዑ፡ ዘይትነገር፡ መድምም፡ ዕበዩ፡ ለሜም።</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="eighteenth">
+               <label>18th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ በዝንቱ፡ ዘዚአከ፡ አስማት። ኖን። አፍርዮን። ምክራድዮን። እምነቅዐ፡ ሕይወት፡ ከመ፡ ንርወዮን።</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="nineteenth">
+               <label>19th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ በዝንቱ፡ ዘዚአከ፡ አስማት፡ ሜ፡ ተኖሜ፡ ዘከለልኮ፡ ለታቦር፡ በጊሜ፡ ተማኅፀንኩ፡ በደብረ፡ ቍስቋም፡ በዘ፡ ነበርከ፡ ምስለ፡ እምከ፡ ቀዳሚ፡ 
+                  በአሣእኒከ፡ ዘጾረት፡ ሰሎሜ።</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="twentieth">
+               <label>20th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ ለከ፡ ኦዋሕድ፡ ዘቆመ፡ ቅድመ፡ ጲላጦስ፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="twentyfirst">
+               <label>21st prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ በስምከ፡ ዔ፡ ጥናዔ። ጰናዔ፡ ዘሰአልነ፡ ኀቤከ፡ ኩን፡ ሰማዔ።</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="twentysecond">
+               <label>22nd prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ በዝንቱ፡ ስምከ። ፌ። መንፈስከ፡ ቅዱስ፡ ፈኑ፡ ዲቤየ፡ </ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="twentythird">
+               <label>23rd prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አነኒ፡ ተማኅፀንኩ፡ በዝንቱ፡ ስምከ፡ ሬሲ፡ ትስእለከ፡ ዘዚኣየ፡ ነፍስ፡ አበሳየ፡ ደምስስ፡ እንተ፡ ጽንዕት፡ ነፍሰ፡ በጠለ፡ ምሕረትከ፡ አርሕስ።</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="twentyfourth">
+               <label>24th prayer</label>
+               <ab>ኦእግዚኦ፡ እግዚኦ፡ አድኅ<sic>ኒ</sic>ኒ፡ ተማኅፀንኩ፡ ዘዚአከ፡ አስማት፡ ሳን። ኑን፡ ፍኑን። ዝንቱ፡ ዘተብህለ፡ እብን፡ ምኑን፡ ውስተ፡ ርእሰ፡ ማእዝንት፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="twentyfifth" corresp="#LIT7119Yethafaru">
+               <label>25th prayer</label>
+               <ab>ኦእግዚኦ፡ ነጽር፡ ውስተ፡ ረዲኦትየ፡ እግዚኦ፡ አፍጥን፡ ረዲኦትየ፡ ይትኃፈሩ፡ ወይኅሠሩ፡ ኵሎሙ፡ ጸላእትየ፡ ለይግብኡ፡ ድኅሬሆሙ፡ ወይትኃፈሩ፡ እለ፡ መከሩ፡
+                  እኩየ፡ ላዕሌየ፡</ab>
             </div>
          </div>
       </body>

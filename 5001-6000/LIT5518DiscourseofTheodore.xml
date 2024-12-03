@@ -1,23 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT5518DiscourseofTheodore"
-     xml:lang="en"
-     type="work">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5518DiscourseofTheodore" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Discourseof Theodore, patriarch of Antioch</title>
+                <title xml:lang="en" xml:id="t1">Discourse of Theodore, patriarch of Antioch, on Claudius, the son of Ptolemy</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="SG"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine multimediale
                             Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
@@ -31,8 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -46,24 +39,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
-                </keywords>
+                  </keywords>
             </textClass>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="SG" when="2019-04-03">Created entity</change>
+          <change who="MKr" when="2021-06-18">Minor corrections in incipit, added relation</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography"/>
-         <!---->
+            <div type="edition" xml:lang="gez">
+                <div type="textpart" subtype="incipit"><ab>ድርሳን፡ ዘነበበ፡ አቡነ፡ ቅዱስ፡ ወክቡር፡ በዘዚአሁ፡ ጾታ፡ አባ፡ ቴዎድሮስ፡ ሊቀ፡ ጳጳሳት፡ ዘሀገረ፡ አንጾኪያ።
+                    በእንተ፡ ክብሩ፡  ለቅዱስ፡ ጽኑእ፡ ወኃያል፡ ድንግል፡ መዋኢ፡ መስተጋድል፡ መልክአ፡ መላእክተ፡  እግዚእ፡
+                    ገላውዴዎስ፡ ውልደ፡ ንጉሥ፡ መፍቀሬ፡ እግዚአብሔር፡ አብጥልማዎስ።
+                    ወአኃዘ፡ ተጋድሎ፡  እመአመ፡ ንዕሱ፡ እስከ፡ ተፍጻሜቱ፡ ገድሉ፡ ክብርት፡ ዘውእቱ፡ አመ፡ ፲ወአሚሩ፡ ለወርኃ፡ ሰኔ። ወከሠተ፡</ab>
+</div>
+                <note>After <ref type="mss" corresp="BLorient700"/></note>
+            </div>
+            <listRelation>
+  <relation name="saws:isAttributedToAuthor" active="LIT5518DiscourseofTheodore" passive="PRS12594Anstasyos"></relation>
+<relation name="ecrm:P129_is_about" active="LIT5518DiscourseofTheodore" passive="PRS3126Claudius"></relation>
+            </listRelation>
         </body>
     </text>
 </TEI>

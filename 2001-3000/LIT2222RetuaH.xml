@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2222RetuaH">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2222RetuaH">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Rǝtuʿa Haymanot, homiliary</title>
+            <title xml:lang="gez" xml:id="t1">ርቱዐ፡ ሃይማኖት፡</title>
+            <title type="normalized" xml:lang="gez" corresp="#t1">Rǝtuʿa Hāymānot</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
+         <editionStmt>
+            <p>The text structure of the edition is based on
+               <ref type="mss" corresp="EMML2375">EMML 2375</ref>.</p>
+         </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
@@ -27,13 +26,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit>
+               <witness corresp="EMML2375"></witness>
+            </listWit>
+
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -41,21 +41,144 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Homily"/>
+               <term key="Theology"/>
+            </keywords>
+         </textClass>
+<abstract>
+<p>Rǝtuʿa Hāymānot is a collection of homilies focusing on the events of the Passion cycle. Most probably it is an indigenous
+  Ethiopian production. Its author must have lived ca. 1375 and there is some ground to identify him
+  with <persName ref="PRS4709Giyorgis">Giyorgis of Saglā</persName>. It should not be confused with a collection of homilies
+preserved in <ref type="mss" corresp="EMML1763">EMML 1763</ref>, <ref type="mss" corresp="EMML8509">EMML 8509</ref>
+and <ref type="mss" corresp="BLorient8192">BL Or. 8192</ref>.</p>
+</abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2023-01-30">Added missing work IDs</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
-      </body>
+  <body>
+     <div type="bibliography">
+        <listBibl type="secondary">
+           <bibl>
+              <ptr target="bm:Getachew2010RetuaHaymanot"/>
+           </bibl>
+           <bibl>
+             <ptr target="bm:Villa2019Filologia"/>
+             <citedRange unit="page">147-154</citedRange>
+            </bibl>
+            <bibl>
+            <ptr target="bm:Getatchew1981Controversies"/>
+            <citedRange unit="page">109-116</citedRange>
+            </bibl>
+            <bibl>
+            <ptr target="bm:ErhoLee2022Shepherd"/>
+            <citedRange unit="page">455-460</citedRange>
+            </bibl>
+         </listBibl>
+         </div>
+
+<div type="edition" xml:lang="gez">
+
+
+<div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Introduction" corresp="LIT6799RHintro">
+<div type="textpart" subtype="incipit">
+   <ab>ስሉሥ፡ ቅዱስ፡ ዘያሌቡ፡ ወኢይትሌቡ፡ ዘያዔውቅ፡ ወኢይትዓወቅ፡ ዘያኤምር፡ ወኢይትአመር፡ ዘይሄሊ፡ ወኢይትሀለይ፡ ዘይጤይቅ፡ ወኢይጠየቅ፡ ዘይእኅዝ፡ ወኢይትአኃዝ፡</ab>
+</div>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Nativity" corresp="LIT2113OntheB">
+<label>On Christ's nativity</label>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Baptism" corresp="LIT2095OnHowO">
+<label>On Christ's baptism</label>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Beginning" corresp="LIT6060BeginningOfLent">
+<label>On fasting, prayer, and almsgiving, for the first Sunday of Lent</label>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Sunday1" corresp="LIT6049SundayRetuaH">
+<label>On fasting and chastity, for the first Sunday of Lent</label>
+<note>Some manuscripts contain homilies only for the first three Sundays of Lent.</note>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Sunday2" corresp="LIT6050SundayRetuaH">
+<label>On fasting and peace, for the second Sunday of Lent</label>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Sunday3" corresp="LIT6061SundayRetuaH">
+<label>On fasting and meekness, for the third Sunday of Lent</label>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Sunday4" corresp="LIT6440Sunday4">
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Sunday5" corresp="LIT6442Sunday5">
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Sunday6" corresp="LIT6443Sunday6">
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Adoration" corresp="LIT6045SerataSegdat">
+<label>Order of services for the Rite of Adoration, for the beginning of the Fast of the Apostles</label>
+<note>This part is not a homily but a liturgical text. It appears very rarely in the collection.</note>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Incarnation" corresp="LIT2097OnHowt">
+<label>On the incarnation of the word</label>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Entrance" corresp="LIT6048OnPalmSundayRetuaH">
+<label>On the entrance to Jerusalem</label>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Washing" corresp="LIT2149OntheW">
+<label>On the washing of the feet and on the communion after the Last Supper,
+for Maundy Thursday</label>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Crucifixion" corresp="LIT2118OntheD">
+<label>On the crucifixion of Our Lord, on the thief on the right side, and
+on death, for the 9th hour of Good Friday</label>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Ascension" corresp="LIT2109OntheA">
+<label>On the ascension of Our Lord</label>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Paraclete" corresp="LIT2137OntheP">
+<label>On the Paraclete</label>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Apostles" corresp="LIT6047On12ApostlesRetuaH">
+<label>On the apostles</label>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Transfiguration" corresp="LIT2145OntheT">
+<label>On the transfiguration of Our Lord</label>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Mary" corresp="LIT1640Homily">
+<label>On Our Lady Mary</label>
+</div>
+
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Angels" corresp="LIT2124OntheF">
+<label>On the angels</label>
+</div>
+
+ </div>
+         </body>
    </text>
 </TEI>

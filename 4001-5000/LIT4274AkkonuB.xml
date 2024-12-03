@@ -1,18 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT4274AkkonuB">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4274AkkonuB">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">አኮኑ፡ ብእሲ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">ʾAkko-nu bǝʾsi</title>
-            <title xml:lang="en" corresp="#t1">Was he not a man?</title>
+            <title xml:lang="en" corresp="#t1">Is it not that a man…?</title>
+            <title xml:lang="en" xml:id="t2">Was he not a man?</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -27,7 +22,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -36,8 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -47,12 +41,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <abstract>
             <p/>
          </abstract>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -64,6 +53,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-12-16">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-01-24">Title updated, bibliography and textparts added</change>
          <change who="DR" when="2017-04-03">Added keywords</change>
+         <change who="DR" when="2020-04-11">Added text from edition</change>
+         <change who="JK" when="2024-09-27">Updated translation of title</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -71,11 +62,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="bibliography">
             <listBibl type="secondary">
                <bibl>
-                  <ptr target="bm:Habtemichael2005EAEAkkonu"/>
+                  <ptr target="bm:Habtemichael2003EAEAkkonu"/>
                </bibl>
                <bibl>
                   <ptr target="bm:Grohmann1919Marien"/>
                   <citedRange unit="page">322-382</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Chaine1913Rep"/>
+                  <citedRange unit="item">327</citedRange>
                </bibl>
             </listBibl>
             <listBibl type="editions">
@@ -84,242 +79,386 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="page">336-352</citedRange>
                </bibl>
             </listBibl>
+            <listRelation>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT4274AkkonuB" passive="LIT3047RepCh327"/>
+            </listRelation>
          </div>
+       
          <div type="edition">
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza1">
+            <note>The following text is that of the edition  <bibl>
+               <ptr target="bm:Grohmann1919Marien"/>
+               <citedRange unit="page">336-352</citedRange>
+            </bibl> given here without critical apparatus.</note>
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza1">
                <label>Stanza 1: Introduction</label>
+                  <ab>
+                    አኮኑ፡ ብእሲ፡ ሶበ፡ ሐኒጸ፡ ቤት፡ አፍትዎ፨
+                     ኵሎ፡ ፃ<supplied reason="omitted">ዕ</supplied>ፃዖ፡ ያቀድም፡ አስተዳልዎ፨
+                     እስእለኪ፡ ሀብኒ፡ መንፈሰ፡ ጥበብ፡ ወአለብዎ፨
+                    መንክራተኪ፡ ማርያም፡ ሶበ፡ ፈቀድኩ፡ ዜንዎ፨
+                    ወለሠናይ<supplied reason="omitted">ት</supplied>ኪ፡ ረትዓኒ፡ እትልዎ፨
+                  </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza2">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza2">
                <label>Stanza 2, referring to <ref type="work" corresp="LIT3588Miracle"/>
                </label>
+               <ab>
+                 ሶበ፡ ወሀበኪ፡ ዘልፈ፡ ሰላመ፡ መልአክ፡ ብስራታዊ፨
+                  ፍቁርኪ፡ ገባራዊ፨ 
+                  ከመ፡ ባረኪዮ፡ ቅድመ፡ ማርያም፡ መጽሐፈ፡ ሓዊ፨
+                  ባርክኒ፡ እግዝእትየ፡ ምስለ፡ ወልድኪ፡ ናዝራዊ፨
+                  በበረከቶሙ፡ ለይሁዳ፡ ወልዊ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza3">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza3">
                <label>Stanza 3, referring to <ref type="work" corresp="LIT3589Miracle"/>
                </label>
+               <ab>
+                 ዕብራዊ፡ ብፁዕ፡ ውስት፡ ምድረ፡ አክሚም፡ ዘልህቀ፨
+                  እንዘ፡ ይሴብሕ፡ ስመኪ፡ ሶበ፡ ሰገደ፡ ወወድቀ፨
+                  ከመ፡ አስተርአይኪዮ፡ ቅድመ፡ ወተናበብኪዮ፡ ጻድቅ፨
+                  ማርያም፡ አስተርእይኒ፡ ኀበ፡ ረሰይኩ፡ ምርሩቀ፨
+                  እስመ፡ ሕሊናየ፡ ዘንት፡ ያስትሐምም፡ ጥቀ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza4">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza4">
                <label>Stanza 4, referring to <ref type="work" corresp="LIT3590Miracle"/>
                </label>
+               <ab>
+                 ለድምያኖስ፡ ዘተፀምደኪ፡ ዲበ፡ መልዕልተ፡ ደብር፡ ነዋኅ፨
+                  ዘጸሐፍኪ፡ ስሞ፡ ኀበ፡ ዓምደ፡ ወርቅ፡ ቀይሕ፨
+                  ምሥራቀ፡ ፀሓይ፡ ብሩህ፡ ማርያም፡ ጽባሕ፨
+                  ጸሐፊ፡ ስመ፡ ዚአየ፡ ዲበ፡ ልብስኪ፡ ንጹሕ፨
+                  ወበልብሰ፡ ወልድኪ፡ ከዕበ፡ ዘበደም፡ ንዙኅ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza5">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza5">
                <label>Stanza 5, referring to <ref type="work" corresp="LIT3591Miracle"/>
                </label>
+               <ab>
+                  አመ፡ እዴሁ፡ መተረ፡ ነሢኦ፡ መጥበሕተ፡ ማኅመሜ፨
+                  አባስ፡ ካህነ፡ ሮሜ፨
+                  ከመ፡ ፈወስኪዮ፡ ቅድመ፡ ማርያም፡ እኅተ፡ ሰሎሜ፨
+                  ፈውሲ፡ ቊስለ፡ ነፍስየ፡ ወጸግውኒ፡ ሱላሜ፨
+                  ጊዜ፡ ተዘመርኩ፡ ስመኪ፡ ቀዋሜ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza6">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza6">
                <label>Stanza 6, referring to <ref type="work" corresp="LIT3592Miracle"/>
                </label>
+               <ab>
+                  ይስሓቅ፡ መነኮስ፡ እምድኅረ፡ ጽሕቀ፡ ወትመነየ፨
+                  ገጸኪ፡ ልኁየ፡ በዕለተ፡ ርእየ፨
+                  ከመ፡ ትቤልዮ፡ ሎቱ፡ እስከ፡ ፈድፋደ፡ ትኃሥየ፨                  
+                  በልኒ፡ እግዝእትየ፡ ተፈሣሕ፡ ቊልዔየ፨
+                  እምድኅረ፡ ዕለታት፡ ሠላስ፡ ትሄሉ፡ ምስሌየ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza7">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza7">
                <label>Stanza 7, referring to <ref type="work" corresp="LIT3593Miracle"/>
                </label>
+               <ab>
+                  ዘአትለውኪያ፡ ማርያም፡ ወነሣእኪያ፡ ጽሚተ፨
+                  ለወለት፡ አሓቲ፡ እንተ፡ ትለብስ፡ ሜላተ፨
+                  ከመ፡ አሣዕነኪ፡ እፁር፡ ወምርጉዘኪ፡ ሕይወተ፨
+                  ኀበ፡ ሖርኪ፡ እግዝእትየ፡ አት<supplied reason="undefined">ል</supplied>ውኒ፡ ሊተ፨
+                  ብፁዕ፡ ገብር፡ ዘይተሉ፡ እግዝእተ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza8">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza8">
                <label>Stanza 8, referring to <ref type="work" corresp="LIT3594Miracle"/>
                </label>
+               <ab>
+                  ምለለ፡ ዓራቱ፡ ዘፅፅ፡ ጊዜ፡ ኅቡረ፡ ተነጽሓ፨
+                  ከመ፡ ረዳእኪዮ፡ ቅድመ፡ ወባላህኪዮ፡ ኣሜሃ፨
+                  ለዘ<supplied reason="undefined">ሠዓ</supplied>ኪ፡ ብእሲ፡ መካነ፡ ብካይ፡ ወፍሥሓ፨
+                  ባልህኒ፡ እግዝእትየ፡ እንተ፡ ትሠረገዊ፡ ንጽሓ፨
+                  ሶበ፡ አኅጒሎትየ፡ ጽህቀ፡ ለሐሰት፡ አቡሃ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza9">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza9">
                <label>Stanza 9, referring to <ref type="work" corresp="LIT3595Miracle"/>
                </label>
+               <ab>
+                  ዐጸደ፡ ወይን፡ ማርያም፡ ዘጣዕመ፡ ፍሬሃ፡ አዳም፨
+                  ወስነ፡ ጽጌሃ፡ ልምሉም፨
+                  ኀበ፡ ተቀብረ፡ ወልድኪ፡ ኢየሩሳ<supplied reason="undefined">ሌ</supplied>ም፨
+                  ሶበ፡ ሰአለኪ፡ በተማኅፅኖ፡ ነጋዲ፡ ሕሙም፨
+                  ከመ፡ አብጸሕኪዮ፡ ለስዒም፡ አብጽሕኒ፡ ዮም፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza10">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza10">
                <label>Stanza 10, referring to <ref type="work" corresp="LIT3596Miracle"/>
                </label>
+               <ab>
+                  ዘካርያስ፡ ወሬዛ፡ ህየንተ፡ ኃምሳ፡ ጽጌ፡ ረዳ፡
+                  አስትዓ፡ ማኅሌት፡ ለኪ፡ ሶበ፡ አወፈየኪ፡ ጋዳ፨
+                  ከመ፡ አድኅንኪዮ፡ ቅድመ፡ እምቀትለ፡ ፈያት፡ ማእከለ፡ በዳ፨
+                  አድኅንኒ፡ እግዝእትየ፡ ወበልህኒ፡ እምዕዳ፨
+                  አመ፡ ወርቅ፡ ወባህርይ፡ ፀዓዳ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza11">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza11">
                <label>Stanza 11, referring to <ref type="work" corresp="LIT3597Miracle"/>
                </label>
+               <ab>
+                  ኃይልኪ፡ ማርያም፡ ስነነ፡ ኃጥአን፡ ሰበረ፨
+                  ኅብስተ፡ አዋልደ፡ ክልኤቲ፡ ሶበ፡ ተፍዕሙ፡ ኅቡረ፨
+                  በኃይልኪ፡ ዝንቱ፡ እንተ፡ አርአየ፡ መንክረ፨
+                  ጉበርኪ፡ እግዝእትየ፡ ዘኢ<supplied reason="undefined">ያ</supplied>አምር፡ ተግባረ፨
+                  ውስተ፡ መቅደስኪ፡ እፈቱ ኃዲረ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza12">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza12">
                <label>Stanza 12, referring to <ref type="work" corresp="LIT3598Miracle"/>
                </label>
+               <ab>
+                  ዐረባውያን፡ ዕደው፡ እለ፡ ውኂዘ፡ ማይ፡ ኃየሎሙ፨
+                  ማርያም፡ ስመኪ፡ ሶበ፡ ዘከሩ፡ ቀዲሙ፨
+                  ከመ፡ ኮነ፡ ብእሲ፡ እንተ፡ ተሳለቀ፡ ቦሙ፨
+                  ፀርኪ፡ እግዝእትየ፡ ለለጌሰሙ፡ ወዓሙ፨
+                  ሲሳየ፡ ሐርገ<choice resp="DR"><sic>ዕ</sic><corr>ፅ</corr></choice>፡ ይኩን፤ ወይዘርዘር፡ ዓፅሙ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza13">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza13">
                <label>Stanza 13, referring to <ref type="work" corresp="LIT3599Miracle"/>
                </label>
+               <ab>
+                  ኃይለኪ፡ ጽኑዓ፡ ወመንክረኪ፡ ትክሥቲ፨
+                  ከመ፡ አፍለስኪያ፡ ቅድመ፡ ለደብረ፡ ዕቆና፡ እንታክቲ፨
+                  መንገለ፡ ኃሣር፡ ወወይሌ፡ ማርያም፡ ወለት፡ ማቲ፨
+                  አፍልሲ፡ ክብረ፡ ፀርየ፡ በጽንዓ፡ እዴኪ፡ ዛቲ፨
+                  አኮኑ፡ ምክህየ፡ ወዝክርየ፡ አንቲ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza14">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza14">
                <label>Stanza 14, referring to <ref type="work" corresp="LIT3600Miracle"/>
                </label>
+               <ab>
+                  ተወከፈኪ፡ ስእለቶ፡ እምሐሊብኪ፡ መንፈሳዊ፨
+                  ዘቀባዕኪ፡ ዓይኖ፡ ለዮሓንስ፡ አረጋዊ፨
+                  ማርያም፡ ድንግል፡ ወለተ፡ ንጉሥ፡ ሐሴቦናዊ፨
+                  ተወከፊ፡ ቃለ፡ አፉየ፡ ወጽራኅየ፡ ለብዊ፨
+                  ወኀበ፡ ስእለትየ፡ ከዕበ፡ ዕዝነኪ፡ ጽልዊ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza15">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza15">
                <label>Stanza 15, referring to <ref type="work" corresp="LIT3601Miracle"/>
                </label>
+               <ab>
+                  ሕይወተ፡ ሕሙማን፡ ማርያም፡ ዘፈወስኪዮ፡ እምቊስሉ፨
+                  ለባዕል፡ ጽርዓዊ፡ እንት፡ ትነድፈ፡ አበሉ፨
+                  ከመ፡ ተአምረኪ፡ እስብክ፡ ወመንክረኪ፡ <supplied reason="undefined">እ</supplied>ተሉ፨
+                  ስሕትኒ፡ ምስለ፡ ትፍሥሕት፤ ወምስለ፡ ጥዒና፡ አሀሉ፨ 
+                  እስከ፡ አመ፡ እብል፡ ድኅረ፤ ተፈጸመ፡ ኵሉ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza16">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza16">
                <label>Stanza 16, referring to <ref type="work" corresp="LIT3602Miracle"/>
                </label>
+               <ab>
+                  ለወለተ፡ ብእሲ፡ ባዕል፡ እንት፡ አዖራ፡ በደዶ፨
+                  ዘአብራህኪ፡ ዓይና፡ ሶበ፡ ሰአለተኪ፡ በተዓንግዶ፨
+                  ፈለገ፡ ረድኤት፡ ማርያም፡ ዘትሰመዪ፡ መጌዶ፨
+                  ለንጉሥ፡ በዕለተ፡ መርዓ፡ ይበልዕ፡ ማዕዶ፨
+                  በማየ፡ ንጽሕኪ፡ ዘሐፀበ፡ እዶ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza17">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza17">
                <label>Stanza 17, referring to <ref type="work" corresp="LIT3603Miracle"/>
                </label>
+               <ab>
+                  ማርያም፡ ንግሥት፡ ምስለ፡ ኵሎሙ፡ ደቂቃ፨
+                  ዘትትሜካህ፡ ብኪ፡ እመ፡ እስራኡል፡ ርብቃ፨
+                  ለዕቤራይት፡ አሓቲ፡ ክበደ፡ ተፅናስ፡ እንተ፡ አጽዓቃ፨
+                  ከመ፡ ናዘዝኪያ፡ ወፈጸምኪ፡ ጻህቃ፨
+                  ናዝዝኒ፡ ጸሎትየ፡ ኢትግባእ፡ ዕራቃ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza18">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza18">
                <label>Stanza 18, referring to <ref type="work" corresp="LIT3604Miracle"/>
                </label>
+               <ab>
+                  ብኪ፡ ተመይጡ፡ እምፍኖተ፡ ጌጋይ፡ዘኢመፍትው፨
+                  እለ፡ ጸሐፉ፡ ስመኪ፡ ክልኤቱ፡ አኃው፨
+                  ርኂተ፡ ምግባር፡ ማርያም፡ እምፀበለ፡ ኵሉ፡ አፈው፨
+                  ቅድመ፡ ሠናይትኪ፡ ወርኅራኄኪ፡ ቅድው፨
+                  አሥምሮ፡ ምኑን፡ ወላህይ፡ ሕስው፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza19">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza19">
                <label>Stanza 19, referring to <ref type="work" corresp="LIT3605Miracle"/>
                </label>
+               <ab>
+                  ሶበ፡ ጊዮርጊስ፡ ኖመ፡ እምጽንዓ፡ ኵነኔ፡ ዕፁብ፨
+                  ከመ፡ አስተርአይኪዮ፡ ሎቱ፡ በአርኣያ፡ ፅዕዱት፡ ርግብ፨
+                  ወለተ፡ ንጉሥ፡ መክብብ፡ ማርያም፡ ጠባብ፨
+                  መልዕልት፡ ምስሐል፡ ከመ፡ ይጼልል፡ ኪሩብ፨
+                  ጸልልኒ፡ እግዝእትየ፡ ክንፈኪ፡ ዘላህብ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza20">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza20">
                <label>Stanza 20, referring to <ref type="work" corresp="LIT3606Miracle"/>
                </label>
+               <ab>
+                  ዓቃቢ፡ ምዑክ፡ አመ፡ ምስለ፡ ከጢር፡ ተ<supplied reason="undefined">ባ</supplied>አሰ፨
+                  ዘአጽወስኪ፡ እግሮ፡ እስከነ፡ ፈለሰ፨
+                  ንግሥተ፡ ሰማይ፡ ማርያም፡ እንት፡ ወለድኪ፡ ንጉሠ፨
+                  እግረ፡ ዕድዋንየ፡ ረስዪ፡ ጽቡሰ ፨
+                  ወበዲበ፡ ፀርየ፡ ከዕበ፡ ፈንዊ፡ ተፅናሰ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza21">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza21">
                <label>Stanza 21, referring to <ref type="work" corresp="LIT3607Miracle"/>
                </label>
+               <ab>
+                  እንዘ፡ ገብረ፡ ዚአኪ፡ አነ፡ እንበለ፡ ሕፀፅ፡ ወንትጋ፨
+                  ዘእትቀነይ፡ ለኪ፡ አምሳለ፡ አኃው፡ ዘብሔረ፡ ደልጋ፨
+                  ማርያም፡ ድንግል፡ ማርያም፡ ምልዕተ፡ ጸጋ፨
+                  ተገደፍኩኑ፡ እምቅድመ፡ አዕይንትኪ፡ እንጋ፨
+                  ሶበ፡ ተዳደቀኒ፡ ግብተ፡ ለዘመን፡ ፁጋ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza22">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza22">
                <label>Stanza 22, referring to <ref type="work" corresp="LIT3608Miracle"/>
                </label>
+               <ab>
+                  ለአፍርንጋዊ፡ ብእሲ፡ ሶበ፡ ኀቤኪ፡ ተማኅፀነ፨
+                  ዘአሕየውኪ፡ እግሮ፡ እንት፡ ኮነ፡ ዕብነ፨
+                  ማርያም፡ ለኪ፡ ጊዜ፡ አዓርግ፡ ቊርባነ፨
+                  ውስተ፡ ትፍሥሕትየ፡ ኢትቶስሒ፡ ኀዘነ፨
+                  ከ<choice resp="DR"><sic>ወ</sic><corr>መ</corr></choice>፡ ይቶስሑ፡ ምስለ፡ ማይ፡ ወይነ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza23">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza23">
                <label>Stanza 23, referring to <ref type="work" corresp="LIT3609Miracle"/>
                </label>
+               <ab>
+                  ለመርቆሬዎስ፡ ካህን፡ ዘአንጻሕኪ፡ ለምጾ፨
+                  ወአሕየውኪዮ፡ ፍጼመ፡ እምነ፡ ሕማም፡ ዘታረምጾ፨
+                  ማርያም፡ ምልሒ፡ ለሕሊናየ፡ ሕፀፆ፨
+                  ለወልድኪ፡ መምህረ፡ ሕግ፡ <supplied reason="undefined">ከመ፡</supplied> ኢይርሣዕ፡ ተግሣጾ፨
+                  ከመ፡ ዘይሬኢ፡ በመጽሔት፡ ገጾ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza24">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza24">
                <label>Stanza 24, referring to <ref type="work" corresp="LIT3610Miracle"/>
                </label>
+               <ab>
+                  ለብእሲት፡ ስብርት፡ ዘአሕየውኪያ፡ እምጻማ፨
+                  ሶበ፡ ሰአለተኪ፡ አስትሓሚማ፨
+                  ንጉሠ፡ አስራኤል፡ አቡኪ፡ ለእለ፡ ውስተ፡ ጌት፡ ወኖባማ፨
+                  ከመ፡ ወሀበ፡ አስትዓ፡ በጊዜ፡ ነሥአ፡ ሰቂማ፨
+                  ጸጋ፡ መንፈስ፡ ቅዱስ፡ ሀብኒ፡ ማርያም፡ ዘራማ፨ 
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza25">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza25">
                <label>Stanza 25, referring to <ref type="work" corresp="LIT3611Miracle"/>
                </label>
+               <ab>
+                  መቅደሰ፡ ኦሪት፡ ማርያም፡ <supplied reason="undefined">ወ</supplied>ወንጌላዊት፡ ሕንፃ፨
+                  ጰራቅሊጦስ፡ ዘይሔውጻ፨
+                  እምከርሠ፡ ሶፍያ፡ ፍጡነ፡ ዘሠዐርኪ፡ ፅንሰ፡ ዓመፃ፨
+                  ይሠዓር፡ ኃዉአትየ፡ ለስእለትኪ፡ በድምፃ፨
+                  ከመ፡ ምክረ፡ በሕር፡ ትሥዕረ፡ ቡኖፃ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza26">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza26">
                <label>Stanza 26, referring to <ref type="work" corresp="LIT3612Miracle"/>
                </label>
+               <ab>
+                  እምብልሀ፡ አስይፍት፡ ወኵያንው፡ እስከ፡ ነስሓ፡ ወትጋነየ፨
+                  ዘዐቀብኪዮ፡ ለባሮክ፡ እንት፡ ይሰመይ፡ ጠዋየ፨
+                  ኵሎ፡ ዘመነ፡ እንበለ፡ ዳእሙ፡ ሠናየ፨
+                  ዕቀብኒ፡ እግዝእትየ፡ ከመ፡ ኢይርኣይ፡ ጌጋየ፨
+                  ወለእመኒ፡ ጌገይኩ፡ ምሕረትኪ፡ ብየ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza27">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza27">
                <label>Stanza 27, referring to <ref type="work" corresp="LIT3613Miracle"/>
                </label>
+               <ab>
+                  ታቦተ፡ አምላክ፡ ማርያም፡ ዘትትከደኒ፡ ውቱረ፨
+                  ወርቀ፡ ቅድስና፡ ጽሩየ፡ ወአኮ፡ ብሩረ፨
+                  አንስጣስዮስ፡ ገብርኪ፡ አመ፡ በደዌሁ፡ ትፅዕረ፨
+                  ከመ፡ አብሰርኪዮ፡ ዘያስትፌሥሕ፡ ነገረ፨
+                  ብስራተ፡ ሰላም፡ አስምዕኒ፡ ወትረ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza28">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza28">
                <label>Stanza 28, referring to <ref type="work" corresp="LIT3614Miracle"/>
                </label>
+               <ab>
+                  እንበለ፡ ማኅፄ፡ ወመፍጽሕ፡ አመ፡ ገዳመ፡ ፈለሰ፨
+                  ዘሰቈርኪ፡ ሎቱ፡ አረፍት፡ ዕብን፡ ይቡሰ፨
+                  ለዘሰአለኪ፡ ብእሲ፡ እንት፡ ይሰመይ፡ ሣሉሰ፨
+                  ስቊሪ፡ ገቦ፡ ፀርየ፡ ወዘጸላእትየ፡ ከርሠ፨
+                  ነሢአኪ፡ ሚርያም፡ መጥባሕተ፡ ሐዲሰ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza29">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza29">
                <label>Stanza 29, referring to <ref type="work" corresp="LIT3615Miracle"/>
                </label>
+               <ab>
+                  ፍቅርኪ፡ አድኀኖ፡ ለበላዔ፡ ሰብእ፡ ጊጉይ፨
+                  በእንት፡ ኅፍነ፡ <supplied reason="undefined">ማይ፡</supplied> ዘቆመ፡ በገቦ፡ ነዳይ፨
+                  ከንቱ፡ ከንቱ፡ ዘታሕት፡ ሰሚይ፨
+                  ምንትኑ፡ ለእጓለ፡ እመሕያው፡ ሠናይ፨
+                  እንበለ፡ ፍቅርኪ፡ ማርያም፡ ባህርይ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza30">
-               <label>Stanza 30, referring to <ref type="work" corresp="LIT3616Miracle LIT3692Miracle"/>
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza30">
+               <label>Stanza 30, referring to <ref type="work" corresp="LIT3616Miracle"/>, <ref type="work" corresp="LIT3692Miracle"/>
                </label>
+               <ab>
+                  ኦንግሥት፡ ወላዲተ፡ ንጉሥ፡ ፈራቂ፨
+                  ከመ፡ አድኀንኪዮ፡ ቅድመ፡ ለወልደ፡ መበለት፡ ሠራቂ፨
+                  ማርያም፡ ዘልፈ፡ አድኅኖትየ፡ ጸሐቂ፨
+                  ለፀርየኒ፡ እስከ፡ አስናኒሁ፡ የሐቂ፨
+                  ላዕሌሁ፡ ፈንዊ፡ ጋኔነ፡ ዘይሣቂ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza31">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza31">
                <label>Stanza 31, referring to <ref type="work" corresp="LIT3617Miracle"/>
                </label>
+               <ab>
+                  ለብእሲት፡ ፅንስት፡ በሰዓት፡ ወሊድ፡ ወሐሪስ፨
+                  ሚእከለ፡ ሞገድ፡ መፍርህ፡ ዘከደንኪያ፡ በልብስ፨
+                  ከማሃ፡ ክድንኒ፡ ኢያጽዕቀኒ፡ ትጽናስ፨
+                  ማርያም፡ እግዝእትየ፡ ዘአጥረይክኒ፡ እምከርሥ፨
+                  አፅዳለ፡ ብርሃን፡ ወአኮ፡ ዘማዕስ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza32">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza32">
                <label>Stanza 32, referring to <ref type="work" corresp="LIT3618Miracle"/>
                </label>
+               <ab>
+                  ሴስይኒ፡ ማርያም፡ ለፀማድኪ፡ ዐሳብ፨
+                  ኅብስተ፡ አእምሮ፡ ሠናይ፡ ወወይነ፡ ጥበብ፨
+                  እመኒ፡ ፈድፈደ፡ ኃጢአትየ፡ እምሕዝብ፨
+                  ተዘከሪ፡ እግዝእትየ፡ በርኅራኄኪ፡ ዕፁብ፨
+                  ከመ፡ አስተይኪዮ፡ ማየ፡ ለጽሙዕ፡ ከልብ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza33">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza33">
                <label>Stanza 33: General praise</label>
+               <ab>
+                  መላእክት፡ ሰማይ፡ ኵሎሙ፡ እለ፡ ስብሓተ፡ ለመዱ፨
+                  ወጠቢባነ፡  ምድር፡ ዓዲ፡ እለ፡ ኅቡረ፡ ተዓለዱ፨
+                  ጽሔፈ፡ ውዳሴኪ፡ እሙ፡ እንዘ፡ ይፈቅዱ፨
+                  ኢይክሉ፡ ጥንቁቀ፡ ፈጽሞ፡ ለለአሓዱ፡ አሓዱ፨
+                  እስመ፡ ከመ፡ ኖፃ፡ ብዙኅ፡ ኢውሱን፡ ፍቅዱ፨
+               </ab>
             </div>
-            <div type="textpart"
-                 subtype="stanza"
-                 xml:lang="gez"
-                 xml:id="Stanza34">
+            <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza34">
                <label>Stanza 34: Relating to a miracle accomplished at the monastery of Kalamun on behalf of an angel who had disobeyed God</label>
+               <ab>
+                  ወላዲት፡ አምላክ፡ ማርያም፡ እንበለ፡ ሰብሳብ፡ ወሩካቤ፨
+                  በይነ፡ ዘአቅረብኩ፡ ለኪ፡ ንስቲተ፡ ቃለ፡ ይባቤ፨
+                  ፈትቲ፡ እሙ፡ በረከተ፡ አፉኪ፡ ሙሐዘ፡ ከርቤ፨
+                  ለነዳይ፡ ብእሲ፡ ወለዘረከቦ፡ ምንዳቤ፨
+                  ኅብስተከ፡ ፈትት፡ ኢሳይያስ፡ ይቤ፨
+               </ab>
             </div>
          </div>
       </body>

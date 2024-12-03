@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2509Weddas">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2509Weddas">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -31,20 +25,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-         </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <listWit>
-                  <witness corresp="BLadd16203#ms_i1"/>
-                  <witness corresp="BLadd16225#ms_i7"/>
-               </listWit>
-            </listWit>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -60,20 +45,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </abstract>
          <textClass>
             <keywords>
+               <term key="Poetry"/>
                <term key="Prayers"/>
                <term key="Bible"/>
                <term key="Liturgy"/>
-               <term key="OldTestament"/>
                <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
-         <langUsage>
-            <language ident="en"/>
-            <language ident="ar"/>
-            <language ident="it"/>
-            <language ident="gez"/>
-            <language ident="cop"/>
-         </langUsage>
+         <langUsage><language ident="en"/><language ident="gez"/></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google spreadsheet </change>
@@ -82,6 +61,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="MV" when="2016-08-11"> Added witnesses</change>
          <change when="2017-02-09" who="ES">updated keywords and relations</change>
          <change when="2017-04-24" who="ES">updated keywords and relations</change>
+         <change who="DR" when="2020-03-11">Deleted relation, updated keywords</change>
       </revisionDesc>
    </teiHeader>
 
@@ -97,15 +77,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:1964Psalter"/>
                   <citedRange unit="page">434-467</citedRange>
                </bibl>
+               <bibl><ptr target="bm:Velat1966MeerafText"/><citedRange unit="page">76-91</citedRange></bibl>
             </listBibl>
 
             <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Budge1922Mary"/>
                </bibl>
+               <bibl><ptr target="bm:Velat1966MeerafTrad"/></bibl>
             </listBibl>
 
             <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Weninger2010EAEWeddaseMaryam"/>
+               </bibl>
                <bibl>
                   <ptr target="bm:Grohmann1919Marien"/>
                   <citedRange unit="page">9-18</citedRange>
@@ -136,15 +121,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>
 
             <listRelation>
-               <relation name="saws:isRelatedTo"
-                         active="LIT2509Weddas"
-                         passive="LIT3306Theotokion"/>
-               <relation name="saws:formsPartOf"
-                         active="LIT2509Weddas"
-                         passive="LIT2701Dawit"/>
-               <relation name="ecrm:P129_is_about"
-                         active="LIT2509Weddas"
-                         passive="PRS6819Mary"/>
+               <relation name="saws:formsPartOf" active="LIT2509Weddas" passive="LIT2701Dawit"/>
+               <relation name="ecrm:P129_is_about" active="LIT2509Weddas" passive="PRS6819Mary"/>
             </listRelation>
 
 
@@ -153,10 +131,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 
          <div type="edition">
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:id="Sunday"
-                 corresp="LIT3019RepCh299">
+            <div type="textpart" subtype="chapter" xml:id="Sunday">
                <div type="textpart" subtype="incipit" xml:lang="gez">
                   <ab>ተሰመይኪ፡ ፍቅርተ፡ ኦቡርክት፡ እምአንስት፡ አንቲ፡ ውእቱ፡ ዳግሚት፡ ቀመር፡</ab>
                </div>

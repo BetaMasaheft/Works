@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT3985Mazmura">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3985Mazmura">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -32,25 +26,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Poetry"/>
@@ -64,6 +52,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="SG" when="2016-09-13">CREATED: text record</change>
          <change who="MV" when="2017-04-20">Added keywords and bibliography, fixed title</change>
          <change who="DR" when="2018-07-24">Added textparts</change>
+         <change when="2020-03-16" who="DE">Added textparts.</change>
+         <change when="2020-03-17" who="DE">Added textparts.</change>
+         <change when="2020-03-18" who="DE">Added textparts.</change>
+         <change when="2020-03-23" who="DE">Completed the encoding of textparts.</change>
+         <change when="2020-03-23" who="DE">Changed subtype value.</change>
+         <change when="2020-11-14" who="DE">Added relations.</change>
+         <change when="2020-11-17" who="DE">Updated corresps.</change>
+
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -80,531 +76,924 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:PietruschkaSokolinskaia2007Mazmura"/>
                </bibl>
             </listBibl>
+            <listRelation>
+              <relation name="saws:contains" active="LIT3985Mazmura" passive="LIT4009Naahab"></relation>
+              <relation name="saws:contains" active="LIT3985Mazmura" passive="LIT2000Mazmur"></relation>
+              <relation name="saws:contains" active="LIT3985Mazmura" passive="LIT1828Mahale"></relation>
+              <relation name="saws:contains" active="LIT3985Mazmura" passive="LIT2362Songof"></relation>
+            </listRelation>
          </div>
          <div type="edition" xml:lang="gez">
             <note>This division into textparts follows <bibl>
                   <ptr target="bm:Raineri2005Salmi"/>
                </bibl>.</note>
-            <div type="textpart" xml:id="Intro" corresp="LIT4009Naahab">
+
+            <div type="textpart" xml:id="Intro">
                <label>Introduction</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT4009Naahab" xml:id="IntroD"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="IntroV"/>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="Ps1" n="1">
+
+              <div type="textpart" subtype="Psalms" xml:id="Psalms">
+
+              <div type="textpart" subtype="Psalm" xml:id="Ps1" n="1">
                <label>Psalm 1</label>
-               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps1" xml:id="PsD1"></div>
-               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV1"></div>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps1" xml:id="PsD1"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV1"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps2" n="2">
                <label>Psalm 2</label>
-               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps2" xml:id="PsD2"></div>
-               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV2"></div>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps2" xml:id="PsD2"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV2"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps3" n="3">
                <label>Psalm 3</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps3" xml:id="PsD3"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV3"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps4" n="4">
                <label>Psalm 4</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps4" xml:id="PsD4"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV4"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps5" n="5">
                <label>Psalm 5</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps5" xml:id="PsD5"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV5"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps6" n="6">
                <label>Psalm 6</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps6" xml:id="PsD6"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV6"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps7" n="7">
                <label>Psalm 7</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps7" xml:id="PsD7"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV7"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps8" n="8">
                <label>Psalm 8</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps8" xml:id="PsD8"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV8"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps9" n="9">
                <label>Psalm 9</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps9" xml:id="PsD9"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV9"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps10" n="10">
                <label>Psalm 10</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps10" xml:id="PsD10"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV10"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps11" n="11">
                <label>Psalm 11</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps11" xml:id="PsD11"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV11"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps12" n="12">
                <label>Psalm 12</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps12" xml:id="PsD12"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV12"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps13" n="13">
                <label>Psalm 13</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps13" xml:id="PsD13"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV13"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps14" n="14">
                <label>Psalm 14</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps14" xml:id="PsD14"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV14"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps15" n="15">
                <label>Psalm 15</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps15" xml:id="PsD15"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV15"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps16" n="16">
                <label>Psalm 16</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps16" xml:id="PsD16"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV16"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps17" n="17">
                <label>Psalm 17</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps17" xml:id="PsD17"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV17"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps18" n="18">
                <label>Psalm 18</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps18" xml:id="PsD18"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV18"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps19" n="19">
                <label>Psalm 19</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps19" xml:id="PsD19"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV19"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps20" n="20">
                <label>Psalm 20</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps20" xml:id="PsD20"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV20"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps21" n="21">
                <label>Psalm 21</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps21" xml:id="PsD21"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV21"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps22" n="22">
                <label>Psalm 22</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps22" xml:id="PsD22"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV22"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps23" n="23">
                <label>Psalm 23</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps23" xml:id="PsD23"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV23"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps24" n="24">
                <label>Psalm 24</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps24" xml:id="PsD24"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV24"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps25" n="25">
                <label>Psalm 25</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps25" xml:id="PsD25"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV25"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps26" n="26">
                <label>Psalm 26</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps26" xml:id="PsD26"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV26"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps27" n="27">
                <label>Psalm 27</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps27" xml:id="PsD27"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV27"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps28" n="28">
                <label>Psalm 28</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps28" xml:id="PsD28"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV28"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps29" n="29">
                <label>Psalm 29</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps29" xml:id="PsD29"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV29"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps30" n="30">
                <label>Psalm 30</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps30" xml:id="PsD30"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV30"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps31" n="31">
                <label>Psalm 31</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps31" xml:id="PsD31"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV31"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps32" n="32">
                <label>Psalm 32</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps32" xml:id="PsD32"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV32"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps33" n="33">
                <label>Psalm 33</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps33" xml:id="PsD33"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV33"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps34" n="34">
                <label>Psalm 34</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps34" xml:id="PsD34"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV34"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps35" n="35">
                <label>Psalm 35</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps35" xml:id="PsD35"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV35"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps36" n="36">
                <label>Psalm 36</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps36" xml:id="PsD36"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV36"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps37" n="37">
                <label>Psalm 37</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps37" xml:id="PsD37"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV37"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps38" n="38">
                <label>Psalm 38</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps38" xml:id="PsD38"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV38"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps39" n="39">
                <label>Psalm 39</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps39" xml:id="PsD39"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV39"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps40" n="40">
                <label>Psalm 40</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps40" xml:id="PsD40"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV40"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps41" n="41">
                <label>Psalm 41</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps41" xml:id="PsD41"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV41"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps42" n="42">
                <label>Psalm 42</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps42" xml:id="PsD42"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV42"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps43" n="43">
                <label>Psalm 43</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps43" xml:id="PsD43"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV43"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps44" n="44">
                <label>Psalm 44</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps44" xml:id="PsD44"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV44"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps45" n="45">
                <label>Psalm 45</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps45" xml:id="PsD45"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV45"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps46" n="46">
                <label>Psalm 46</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps46" xml:id="PsD46"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV46"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps47" n="47">
                <label>Psalm 47</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps47" xml:id="PsD47"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV47"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps48" n="48">
                <label>Psalm 48</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps48" xml:id="PsD48"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV48"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps49" n="49">
                <label>Psalm 49</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps49" xml:id="PsD49"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV49"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps50" n="50">
                <label>Psalm 50</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps50" xml:id="PsD50"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV50"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps51" n="51">
                <label>Psalm 51</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps51" xml:id="PsD51"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV51"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps52" n="52">
                <label>Psalm 52</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps52" xml:id="PsD52"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV52"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps53" n="53">
                <label>Psalm 53</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps53" xml:id="PsD53"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV53"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps54" n="54">
                <label>Psalm 54</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps54" xml:id="PsD54"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV54"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps55" n="55">
                <label>Psalm 55</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps55" xml:id="PsD55"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV55"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps56" n="56">
                <label>Psalm 56</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps56" xml:id="PsD56"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV56"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps57" n="57">
                <label>Psalm 57</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps57" xml:id="PsD57"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV57"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps58" n="58">
                <label>Psalm 58</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps58" xml:id="PsD58"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV58"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps59" n="59">
                <label>Psalm 59</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps59" xml:id="PsD59"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV59"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps60" n="60">
                <label>Psalm 60</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps60" xml:id="PsD60"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV60"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps61" n="61">
                <label>Psalm 61</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps61" xml:id="PsD61"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV61"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps62" n="62">
                <label>Psalm 62</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps62" xml:id="PsD62"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV62"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps63" n="63">
                <label>Psalm 63</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps63" xml:id="PsD63"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV63"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps64" n="64">
                <label>Psalm 64</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps64" xml:id="PsD64"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV64"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps65" n="65">
                <label>Psalm 65</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps65" xml:id="PsD65"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV65"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps66" n="66">
                <label>Psalm 66</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps66" xml:id="PsD66"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV66"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps67" n="67">
                <label>Psalm 67</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps67" xml:id="PsD67"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV67"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps68" n="68">
                <label>Psalm 68</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps68" xml:id="PsD68"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV68"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps69" n="69">
                <label>Psalm 69</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps69" xml:id="PsD69"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV69"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps70" n="70">
                <label>Psalm 70</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps70" xml:id="PsD70"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV70"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps71" n="71">
                <label>Psalm 71</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps71" xml:id="PsD71"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV71"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps72" n="72">
                <label>Psalm 72</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps72" xml:id="PsD72"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV72"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps73" n="73">
                <label>Psalm 73</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps73" xml:id="PsD73"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV73"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps74" n="74">
                <label>Psalm 74</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps74" xml:id="PsD74"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV74"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps75" n="75">
                <label>Psalm 75</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps75" xml:id="PsD75"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV75"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps76" n="76">
                <label>Psalm 76</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps76" xml:id="PsD76"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV76"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps77" n="77">
                <label>Psalm 77</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps77" xml:id="PsD77"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV77"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps78" n="78">
                <label>Psalm 78</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps78" xml:id="PsD78"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV78"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps79" n="79">
                <label>Psalm 79</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps79" xml:id="PsD79"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV79"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps80" n="80">
                <label>Psalm 80</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps80" xml:id="PsD80"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV80"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps81" n="81">
                <label>Psalm 81</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps81" xml:id="PsD81"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV81"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps82" n="82">
                <label>Psalm 82</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps82" xml:id="PsD82"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV82"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps83" n="83">
                <label>Psalm 83</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps83" xml:id="PsD83"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV83"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps84" n="84">
                <label>Psalm 84</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps84" xml:id="PsD84"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV84"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps85" n="85">
                <label>Psalm 85</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps85" xml:id="PsD85"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV85"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps86" n="86">
                <label>Psalm 86</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps86" xml:id="PsD86"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV86"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps87" n="87">
                <label>Psalm 87</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps87" xml:id="PsD87"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV87"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps88" n="88">
                <label>Psalm 88</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps88" xml:id="PsD88"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV88"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps89" n="89">
                <label>Psalm 89</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps89" xml:id="PsD89"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV89"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps90" n="90">
                <label>Psalm 90</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps90" xml:id="PsD90"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV90"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps91" n="91">
                <label>Psalm 91</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps91" xml:id="PsD91"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV91"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps92" n="92">
                <label>Psalm 92</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps92" xml:id="PsD92"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV92"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps93" n="93">
                <label>Psalm 93</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps93" xml:id="PsD93"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV93"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps94" n="94">
                <label>Psalm 94</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps94" xml:id="PsD94"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV94"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps95" n="95">
                <label>Psalm 95</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps95" xml:id="PsD95"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV95"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps96" n="96">
                <label>Psalm 96</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps96" xml:id="PsD96"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV96"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps97" n="97">
                <label>Psalm 97</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps97" xml:id="PsD97"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV97"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps98" n="98">
                <label>Psalm 98</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps98" xml:id="PsD98"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV98"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps99" n="99">
                <label>Psalm 99</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps99" xml:id="PsD99"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV99"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps100" n="100">
                <label>Psalm 100</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps100" xml:id="PsD100"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV100"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps101" n="101">
                <label>Psalm 101</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps101" xml:id="PsD101"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV101"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps102" n="102">
                <label>Psalm 102</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps102" xml:id="PsD102"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV102"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps103" n="103">
                <label>Psalm 103</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps103" xml:id="PsD103"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV103"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps104" n="104">
                <label>Psalm 104</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps104" xml:id="PsD104"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV104"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps105" n="105">
                <label>Psalm 105</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps105" xml:id="PsD105"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV105"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps106" n="106">
                <label>Psalm 106</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps106" xml:id="PsD106"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV106"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps107" n="107">
                <label>Psalm 107</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps107" xml:id="PsD107"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV107"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps108" n="108">
                <label>Psalm 108</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps108" xml:id="PsD108"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV108"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps109" n="109">
                <label>Psalm 109</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps109" xml:id="PsD109"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV109"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps110" n="110">
                <label>Psalm 110</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps110" xml:id="PsD110"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV110"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps111" n="111">
                <label>Psalm 111</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps111" xml:id="PsD111"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV111"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps112" n="112">
                <label>Psalm 112</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps112" xml:id="PsD112"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV112"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps113" n="113">
                <label>Psalm 113</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps113" xml:id="PsD113"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV113"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps114" n="114">
                <label>Psalm 114</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps114" xml:id="PsD114"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV114"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps115" n="115">
                <label>Psalm 115</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps115" xml:id="PsD115"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV115"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps116" n="116">
                <label>Psalm 116</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps116" xml:id="PsD116"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV116"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps117" n="117">
                <label>Psalm 117</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps117" xml:id="PsD117"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV117"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps118" n="118">
                <label>Psalm 118</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps118" xml:id="PsD118"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV118"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps119" n="119">
                <label>Psalm 119</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps119" xml:id="PsD119"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV119"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps120" n="120">
                <label>Psalm 120</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps120" xml:id="PsD120"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV120"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps121" n="121">
                <label>Psalm 121</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps121" xml:id="PsD121"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV121"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps122" n="122">
                <label>Psalm 122</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps122" xml:id="PsD122"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV122"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps123" n="123">
                <label>Psalm 123</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps123" xml:id="PsD123"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV123"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps124" n="124">
                <label>Psalm 124</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps124" xml:id="PsD124"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV124"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps125" n="125">
                <label>Psalm 125</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps125" xml:id="PsD125"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV125"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps126" n="126">
                <label>Psalm 126</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps126" xml:id="PsD126"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV126"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps127" n="127">
                <label>Psalm 127</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps127" xml:id="PsD127"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV127"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps128" n="128">
                <label>Psalm 128</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps128" xml:id="PsD128"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV128"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps129" n="129">
                <label>Psalm 129</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps129" xml:id="PsD129"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV129"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps130" n="130">
                <label>Psalm 130</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps130" xml:id="PsD130"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV130"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps131" n="131">
                <label>Psalm 131</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps131" xml:id="PsD131"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV131"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps132" n="132">
                <label>Psalm 132</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps132" xml:id="PsD132"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV132"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps133" n="133">
                <label>Psalm 133</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps133" xml:id="PsD133"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV133"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps134" n="134">
                <label>Psalm 134</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps134" xml:id="PsD134"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV134"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps135" n="135">
                <label>Psalm 135</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps135" xml:id="PsD135"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV135"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps136" n="136">
                <label>Psalm 136</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps136" xml:id="PsD136"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV136"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps137" n="137">
                <label>Psalm 137</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps137" xml:id="PsD137"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV137"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps138" n="138">
                <label>Psalm 138</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps138" xml:id="PsD138"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV138"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps139" n="139">
                <label>Psalm 139</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps139" xml:id="PsD139"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV139"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps140" n="140">
                <label>Psalm 140</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps140" xml:id="PsD140"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV140"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps141" n="141">
                <label>Psalm 141</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps141" xml:id="PsD141"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV141"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps142" n="142">
                <label>Psalm 142</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps142" xml:id="PsD142"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV142"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps143" n="143">
                <label>Psalm 143</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps143" xml:id="PsD143"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV143"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps144" n="144">
                <label>Psalm 144</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps144" xml:id="PsD144"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV144"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps145" n="145">
                <label>Psalm 145</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps145" xml:id="PsD145"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV145"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps146" n="146">
                <label>Psalm 146</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps146" xml:id="PsD146"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV146"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps147" n="147">
                <label>Psalm 147</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps147" xml:id="PsD147"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV147"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps148" n="148">
                <label>Psalm 148</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps148" xml:id="PsD148"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV148"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps149" n="149">
                <label>Psalm 149</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps149" xml:id="PsD149"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV149"/>
             </div>
             <div type="textpart" subtype="Psalm" xml:id="Ps150" n="150">
                <label>Psalm 150</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps150" xml:id="PsD150"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV150"/>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="SupplicationScribe">
-               <label>Supplication for the scribe</label>
+            <div type="textpart" subtype="Psalm" xml:id="Ps151" n="151">
+               <label>Psalm 151</label>
+               <div type="textpart" subtype="PsalmofDavid" corresp="LIT2000Mazmur#Ps151" xml:id="PsD151"/>
+               <div type="textpart" subtype="PsalmoftheVirgin" xml:id="PsV151"/>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="FirstMoses">
-               <label>First Prayer of Moses</label>
-            </div>
-            <div type="textpart" subtype="Psalm" xml:id="SecondMoses">
-               <label>Second Prayer of Moses</label>
-            </div>
-            <div type="textpart" subtype="Psalm" xml:id="ThirdMoses">
+              </div>
+
+              <div type="textpart" xml:id="Canticles">
+
+                <div type="textpart" xml:id="Canticle1">
+                  <div type="textpart" subtype="Canticle" xml:id="FirstMoses" corresp="LIT1828Mahale#Moses1">
+                    <label>First Prayer of Moses</label>
+                  </div>
+                  <div type="textpart" subtype="Canticle" xml:id="MarianPrayer1"></div>
+                </div>
+
+                <div type="textpart" xml:id="Canticle2">
+                  <div type="textpart" subtype="Canticle" xml:id="SecondMoses" corresp="LIT1828Mahale#Moses2">
+                    <label>Second Prayer of Moses</label>
+                  </div>
+                  <div type="textpart" subtype="Canticle" xml:id="MarianPrayer2"></div>
+                </div>
+
+            <div type="textpart" xml:id="Canticle3">
+              <div type="textpart" subtype="Canticle" xml:id="ThirdMoses" corresp="LIT1828Mahale#Moses3">
                <label>Third Prayer of Moses</label>
+             </div>
+             <div type="textpart" subtype="Canticle" xml:id="MarianPrayer3"></div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="Hannah">
+
+            <div type="textpart" xml:id="Canticle4">
+              <div type="textpart" subtype="Canticle" xml:id="Hannah" corresp="LIT1828Mahale#Hannah">
                <label>Prayer of Hannah</label>
+             </div>
+             <div type="textpart" subtype="Canticle" xml:id="MarianPrayer4"></div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="Ezekiel">
-               <label>Prayer of Ezekiel</label>
+
+            <div type="textpart" xml:id="Canticle5">
+              <div type="textpart" subtype="Canticle" xml:id="Hezekiah" corresp="LIT1828Mahale#Hezekiah">
+               <label>Prayer of Hezekiah</label>
+             </div>
+             <div type="textpart" subtype="Canticle" xml:id="MarianPrayer5"></div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="Manasseh">
+
+            <div type="textpart" xml:id="Canticle6">
+              <div type="textpart" subtype="Canticle" xml:id="Manasseh" corresp="LIT1828Mahale#Manasseh">
                <label>Prayer of Manasseh</label>
+             </div>
+             <div type="textpart" subtype="Canticle" xml:id="MarianPrayer6"></div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="Jonah">
+
+            <div type="textpart" xml:id="Canticle7">
+              <div type="textpart" subtype="Canticle" xml:id="Jonah" corresp="LIT1828Mahale#Jonah">
                <label>Prayer of Jonah</label>
+             </div>
+             <div type="textpart" subtype="Canticle" xml:id="MarianPrayer7"></div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="Daniel">
+
+            <div type="textpart" xml:id="Canticle8">
+              <div type="textpart" subtype="Canticle" xml:id="Daniel" corresp="LIT1828Mahale#ThreeYouths1">
                <label>Prayer of Daniel</label>
+             </div>
+             <div type="textpart" subtype="Canticle" xml:id="MarianPrayer8"></div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="FirstChildren">
-               <label>First Prayer of the three children</label>
+
+            <div type="textpart" xml:id="Canticle9">
+              <div type="textpart" subtype="Canticle" xml:id="FirstChildren" corresp="LIT1828Mahale#ThreeYouths2">
+               <label>Prayer of the three children</label>
+             </div>
+             <div type="textpart" subtype="Canticle" xml:id="MarianPrayer9"></div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="SecondChildren">
-               <label>Second Prayer of the three children </label>
+
+            <div type="textpart" xml:id="Canticle10">
+              <div type="textpart" subtype="Canticle" xml:id="SecondChildren" corresp="LIT1828Mahale#ThreeYouths3">
+               <label>Third Prayer of the three children </label>
+              </div>
+              <div type="textpart" subtype="Canticle" xml:id="MarianPrayer10"></div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="Habakkuk">
+
+            <div type="textpart" xml:id="Canticle11">
+              <div type="textpart" subtype="Canticle" xml:id="Habakkuk" corresp="LIT1828Mahale#Habakkuk">
                <label>Prayer of Habakkuk</label>
+             </div>
+             <div type="textpart" subtype="Canticle" xml:id="MarianPrayer11"></div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="Isaiah">
+
+            <div type="textpart" xml:id="Canticle12">
+              <div type="textpart" subtype="Canticle" xml:id="Isaiah" corresp="LIT1828Mahale#Isaiah">
                <label>Prayer of Isaiah</label>
+             </div>
+             <div type="textpart" subtype="Canticle" xml:id="MarianPrayer12"></div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="Mary">
+
+            <div type="textpart" xml:id="Canticle13">
+              <div type="textpart" subtype="Canticle" xml:id="Mary" corresp="LIT1828Mahale#Mary">
                <label>Prayer of Mary</label>
+             </div>
+             <div type="textpart" subtype="Canticle" xml:id="MarianPrayer13"></div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="Zekariah">
+
+            <div type="textpart" xml:id="Canticle14">
+              <div type="textpart" subtype="Canticle" xml:id="Zekariah" corresp="LIT1828Mahale#Zachariah">
                <label>Prayer of Zekariah</label>
+             </div>
+             <div type="textpart" subtype="Canticle" xml:id="MarianPrayer14"></div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="Simon">
+
+            <div type="textpart" xml:id="Canticle15">
+              <div type="textpart" subtype="Canticle" xml:id="Simon" corresp="LIT1828Mahale#Simeon">
                <label>Prayer of Simon</label>
+             </div>
+             <div type="textpart" subtype="Canticle" xml:id="MarianPrayer15"></div>
+              </div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="FirstCanticle">
-               <label>First Canticle</label>
+
+            <div type="textpart" xml:id="SongOfSongs">
+
+              <div type="textpart" xml:id="Song1">
+                <div type="textpart" subtype="Canticle" xml:id="FirstCanticle" corresp="LIT2362Songof#FirstCanticle">
+                </div>
+                <div type="textpart" subtype="Canticle" xml:id="FirstMarianCanticle"></div>
+              </div>
+
+            <div type="textpart" xml:id="Song2">
+              <div type="textpart" subtype="Canticle" xml:id="SecondCanticle" corresp="LIT2362Songof#SecondCanticle">
+              </div>
+              <div type="textpart" subtype="Canticle" xml:id="SecondMarianCanticle"></div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="SecondCanticle">
-               <label>Second Canticle</label>
+
+            <div type="textpart" xml:id="Song3">
+              <div type="textpart" subtype="Canticle" xml:id="ThirdCanticle" corresp="LIT2362Songof#ThirdCanticle">
+              </div>
+              <div type="textpart" subtype="Canticle" xml:id="ThirdMarianCanticle"></div>
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="ThirdCanticle">
-               <label>Third Canticle</label>
+
+          <div type="textpart" xml:id="Song4">
+            <div type="textpart" subtype="Canticle" xml:id="FourthCanticle" corresp="LIT2362Songof#FourthCanticle">
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="FourthCanticle">
-               <label>Fourth Canticle</label>
+            <div type="textpart" subtype="Canticle" xml:id="FourthMarianCanticle"></div>
+          </div>
+
+          <div type="textpart" xml:id="Song5">
+            <div type="textpart" subtype="Canticle" xml:id="FifthCanticle" corresp="LIT2362Songof#FifthCanticle">
             </div>
-            <div type="textpart" subtype="Psalm" xml:id="FifthCanticle">
-               <label>Fifth Canticle</label>
+            <div type="textpart" subtype="Canticle" xml:id="FifthMarianCanticle"></div>
+          </div>
             </div>
+
          </div>
       </body>
    </text>

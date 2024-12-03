@@ -1,19 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1957Mashaf">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1957Mashaf">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Mäṣḥafä Qälemǝnṭos</title>
+            <title xml:id="t1" xml:lang="gez">መጽሐፈ፡ ቀሌምንጦስ፡</title>
+            <title corresp="#t1" type="normalized">Maṣḥafa Qalemǝnṭos</title>
+            <title corresp="#t1" xml:lang="en">Book of Clement</title>
+            <title xml:id="t2" xml:lang="gez">ቀሌምንጦስ፡</title>
+            <title corresp="#t2" type="normalized">Qalemǝnṭos</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
+         <editionStmt>
+          <p>Digital text based on  <ref corresp="BLorient751" type="mss"></ref>.</p>
+         </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
@@ -25,15 +26,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
+
          </publicationStmt>
+
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+           <listWit>
+              <witness corresp="BLorient751"></witness>
+           </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -41,21 +48,158 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+           <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Translation"/>
+               <term key="CanonLaw"/>
+               <term key="Apocrypha"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2020-05-20" who="DE">Added text devisions, relations, bibliography, text edition.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <listBibl type="secondary">
+          <bibl>
+            <ptr target="bm:Bausi2010Qalementos"/>
+          </bibl>
+        </listBibl>
+        <listRelation>
+          <relation name="saws:isRelatedTo" active="LIT1957Mashaf#Book1" passive="LIT1721Kitaba">
+            <desc>Book 1 closely corresponds to <ref corresp="LIT1721Kitaba" type="work"></ref></desc>
+          </relation>
+          <relation name="saws:isRelatedTo" active="LIT1957Mashaf#Book1" passive="LIT1236Caveof">
+            <desc>Book 1 incorporates the translation of <ref corresp="LIT1236Caveof" type="work"></ref></desc>
+          </relation>
+          <relation name="saws:isRelatedTo" active="LIT1957Mashaf#Book1" passive="LIT2457Testam">
+            <desc>Book 1 incorporates the translation of <ref corresp="LIT2457Testam" type="work"></ref></desc>
+          </relation>
+          <relation name="saws:isRelatedTo" active="LIT1957Mashaf#Book1" passive="LIT1415GadlaA">
+          </relation>
+          <relation name="ecrm:P129_is_about" active="LIT1957Mashaf" passive="PRS3129Clement"></relation>
+          <relation name="ecrm:P129_is_about" active="LIT1957Mashaf" passive="PRS7805Peter"></relation>
+          </listRelation>
+
+        <div type="edition">
+
+          <div type="textpart" subtype="introduction" xml:id="Introduction">
+            <label>Introduction</label>
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+              <ab>
+              በስመ፡ አብ፡ <gap reason="ellipsis" resp="PRS10171Wright"></gap> ይቤ፡ ቅዱስ፡ ቀሌምንጦስ፡
+              እምድኅረ፡ ዕርገቱ፡ ለእግዚእነ፡ ወአምላክነ፡ ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ፡ ውስተ፡ ሰማያት፡ ተፈልጡ፡ አርድእት፡ እስከ፡ አጽናፈ፡
+              ዓለም፡ ከመ፡ ይስብኩ፡ ዜና፡ ወንጌል፡ ቅዱስ፡ ወይሚጥዎሙ፡ ለአሕዛብ፡ ውስተ፡ አሚን፡ ወአእምሮ፡ ወያጥምቅዎሙ፡ በቅድስት፡
+              ጥምቀት፡ ዘሐዲስ፡ ልደት። ወበእንተዝ፡ ፈቀዱ፡ ይኅሥሡ፡ ውስተ፡ በሓውርት። ወእምዝ፡ ነሥአኒ፡ ሊተ፡ ስምዖን፡ ጴጥሮስ፡ ወረሰየኒ፡
+              ረድአ፡ ዚአሁ፡ እስመ፡ አመንኩ፡ ቦቱ፡ ወበዘፈነዎ። ወጠየቁ፡ ከመ፡ ውእቱ፡ ርእሶሙ፡ ለሐዋርያት፡ በእንተ፡ ቃል፡ ዘይቤ፡ እግዚእነ፡
+              ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ፡ ለረድኡ፡ ጴጥሮስ፡ አንተ፡ ኰኵሕ፡ ወዲበ፡ ዛቲ፡ ኰኵሕ፡ አሐንጻ፡ ለቤተ፡ ክርስቲያንየ፡ ወኢይክልዋ፡
+              አናቅጸ፡ ሲኦል፡ አማስኖታ፡ ወኢይኄይልዋ። ወእሁበከ፡ ለከ፡ መራኁተ፡ መንግሥተ፡ ሰማያት። ወእምድኅረ፡ ጕንዱይ፡ ዕለት፡ ነሥአ፡ ክልኤ፡
+              አኃወ፡ ወረሰዮሙ፡ አርድእተ፡ ዚአሁ። ወእምዝ፡ ሶበ፡ ነበርኩ፡ ምስሌሁ፡ ዓሠርተ፡ ዓመተ፡ ነሥአኒ፡ ወአብጽሐኒ፡ ኀበ፡ አቡየ፡ ወእምየ፡ እንተ፡
+              ስማ፡ ምጥሮርያ፤ ወከሠተ፡ ሊተ፡ ምሥጢረ፡ ዘመሀሮ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ በደብረ፡ ዘይት፤ ወውእተ፡ ጊዜ፡ ነበሩ፡ ሐዋርያት፡
+              ወኵሎሙ፡ መሃይምናን፡ ውስተ፡ ዐቢይ፡ ምንዳቤ፡ ወስደት፡ እምኀበ፡ ዕልዋን፡ ወከሓድያን፡ አይሁድ። እስመ፡ አይሁድ፡ ነበሩ፡ እንዘ፡
+              ይቀትሉ፡ ኵሎ፡ ዘረከቡ፡ መሃይምናን። ወእምዝ፡ ሖረ፡ ኄር፡ ጴጥሮስ፡ ወቦአ፡ ውስተ፡ አሐቲ፡ ሀገር፡ ወአነሂ፡ ምስሌሁ። ወበህየ፡ ረከበኒ፡
+              ዐቢይ፡ ምንዳቤ፡ እምተጋዕዞቶሙ፡ ለከሓድያን፡ አይሁድ። ወተስእሎቶሙ፡ በእንተ፡ ልደታ፡ ለማርያም፡ ቅድስት፡ እስመ፡ ይስእሉ፡ በእንቲአሃ፡
+              እስመ፡ ኢኮነት፡ እምትዝምደ፡ ይሁደ፡ ከመ፡ ያብጥሉ፡ ምጽአቶ፡ ለእግዚእነ፡ ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ፡ ውስተ፡ ዓለም። እስመ፡
+              እሙንቱ፡ ነበሩ፡ እንዝ፡ ይሁቡ፡ ንዋየ፡ ብዙኃ፡ ለሰብአ፡ ጽርዕ፡ ወለሰብአ፡ ሮሜ፡ ከመ፡ ይርድእዎሙ፡ በእንተ፡ ጥፍአቶሙ፡
+              ለመሃይምናን፡ ወከልእዎሙ፡ ለሐዋርያት፡ አንብቦ፡ ኦሪት፡ ከመ፡ ያእምሩ፡ ቀዳሚ፡ ፍጥረተ፡ ዓለም። ወሶበ፡ ርኢኩ፡ ዘንተ፡ ኵሎ፡
+              ሕማመ፡ ወምንዳቤ፡ ዘመጽአ፡ ላዕሌነ፡ እምኀበ፡ አይሁድ፡ ከሓድያን፡ ኀሠሥኩ፡ አነ፡ ኀበ፡ መምህርየ፡ ስምዖን፡ ጴጥሮስ። ወተስእልክዎ፡
+              ከመ፡ ያለብወኒ፡ ወይንግረኒ፡ በከመ፡ ኮነ፡ ቀዳሚ፡ ፍጥረተ፡ ዓለም። እስመ፡ ውእቱ፡ አእመረ፡ ኵሎ፡ ምሥጢራተ፡ እምኀበ፡ እግዚእነ፡
+              ኢየሱሱ፡ ክርስቶስ፡ ወአንሰ፡ አአምር፡ በነገረ፡ ጽርዕ፡ ወበመጻሕፍቲሆሙ፡ ወኵሎ፡ ምሥጢራቲሆሙ፡ ወጥበባቲሆሙ። ወነገርክዎ፡ ኵሎ፡
+              ለመምህርየ፡ ዘመጽአ፡ ላዕሌየ፡ ቂመ፡ ወቅንዓተ፡ በእንተ፡ ዘጸልኡኒ፡ ወተጋዓዙኒ፡ አይሁድ፡ በእንተ፡ ማርያም፡ ቅድስት፡ እስመ፡ አልብየ፡
+              አእምሮ፡ በኦሪት፡ ወበነቢያት፡ ወብዙኃን፡ ይጽዕሉኒ፡ በእንተ፡ ፍጥረቱ፡ ለአዳም፡ አቡነ፡ ወፈድፋደ፡ ይጸርፉ፡ ላዕለ፡ እግዚእትነ፡ ማርያም፡
+              ቅድስት፡ ወኢረክቡ፡ ምክንያተ፡ በዘአአትት፡ እከዮሙ፡ ወርኩሰ፡ ቃሎሙ። ወሶበ፡ ነገርክዎ፡ ዘንተ፡ ኵሎ፡ ለመምህርየ፡ ተከዘ፡ ፈድፋደ፡ ወቦአ፡
+              ላዕሌሁ፡ ቅንዓት፡ ወይቤለኒ፡ አነ፡ እከሥት፡ ለከ፡ ኦወልድ፡ ኵሎ፡ ዘሰአልከኒ፡ ወአሌብወከ፡ ዘእምፍጥረተ፡ ዓለም፡ ቀዳሚ፡ ወአጤይቀከ፡ በእንተ፡
+              ቅድስት፡ ማርያም፡ እሙ፡ ለብርሃን፡ ከመ፡ ይእቲ፡ ጥይቅት፡ ዘእንበለ፡ አስትቶ፡ እምትዝምደ፡ ይሁደ፡ ወልደ፡ ያዕቆብ። ወዓዲ፡ እዜንወከ፡ ዘከመ፡
+              ወድቀ፡ ሰይጣን፡ እምሰማይ።
+              </ab>
+            </div>
+          </div>
+          <div type="textpart" subtype="Book" n="1" xml:id="Book1">
+            <label>An account of the creation, and a resumé of Scripture
+              history down to the reign of Jehoram</label>
+
+          </div>
+          <div type="textpart" subtype="Book" n="2" xml:id="Book2">
+            <label>Mysteries revealed by St Peter to Clement</label>
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+              <ab>
+                በስመ፡ አብ፡ <gap reason="ellipsis" resp="PRS10171Wright"></gap> ቀዳሜ፡ ምስጢራት፡
+            ዘከሠተ፡ ቅዱስ፡ ጴጥሮስ፡ ለረድኡ፡ ቀሌምንጦስ። ይቤ፡ ቅዱስ፡ ጴጥሮስ፡ ሶበ፡ ተፈጸመ፡ አርብዓ፡ ዕለት፡
+          እምድኅረ፡ ትንሣኤሁ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ እሙታን፡ ፈቀደ፡ ይዕርግ፡ ውስተ፡ ሰማይ፡
+        ወይትመየጥ፡ ውስተ፡ ስብሐቲሁ፡ ወግሩም፡ ማኅደሩ።
+              </ab>
+            </div>
+          </div>
+          <div type="textpart" subtype="Book" n="3" xml:id="Book3">
+            <label>The power and the wonders which God displayed to St Peter</label>
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+              <ab>
+              በስመ፡ አብ፡ <gap reason="ellipsis" resp="PRS10171Wright"></gap> ንቀድም፡
+              ንጽሐፍ፡ ኀይለ፡ ወተአምረ፡ ዘአርአዮ፡ እግዚአብሔር፡ ለብፁዕ፡ ጴጥሮስ፡ ርእሰ፡ ሐዋርያት፡ ዓዋዴ፡ መንግሥተ፡
+              ሰማያት፡ መጋቢ፡ ዘተወፈየ፡ እምኀበ፡ ሊቁ፡ መራሑተ፡ ጽድቅ፡ ከመ፡ ይፍታሕ፡ ወያርኁ፡ ወያበ፡ ዘፈቀደ፡
+              ለዘኢይደልዎ፡ በጽድቅ፡ ወበርትዕ። ወካዕበ፡ ለዘኢይደልዎ፡ ከመ፡ ይዕፁ፡ ውስተ፡ ገጹ፡ አንቀጸ፡ መንግሥተ፡
+              ሰማያተ፡ ሰማያት።
+              </ab>
+            </div>
+          </div>
+          <div type="textpart" subtype="Book" n="4" xml:id="Book4">
+            <label>Discourse of St Peter to Clement, concerning what shall take place
+            in heaven and on earth for mercy to mankind</label>
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+              <ab>
+                በስመ፡ አብ፡
+              <gap reason="ellipsis" resp="PRS10171Wright"></gap> ንጽሕፍ፡ ዘንተ፡ ነገረ፡ ዘተናገሮ፡
+            ጴጥሮስ፡ ርእሰ፡ ሐዋርያት፡ ለቀሌምንጦስ፡ ተልሚዱ። ዝውእቱ፡ ረድእ፡ ብሂል፡ በትርጓሜሁ፡ ወአለበዎ፡ ዘይከውን፡
+          ዘበሰማይኒ፡ ወዘበምድርኒ፡ በእንተ፡ ምሕረታተ፡ ውሉደ፡ ሰብእ። ወበእንተ፡ አፍቅሮቱ፡ ሰብአ፡ ለመድኃኔ፡ ዓለም፡ እንዘ፡
+        ውስተ፡ ላዕለ፡ ሕፅነ፡ አቡሁ፡ ፍሬ፡ መለኮት፡ ዘመዓዛሁ፡ ሠናይ፡ ወበእንተ፡ ፍቅረ፡ ዚአነ፡ በፈቃደ፡ አቡሁ፡ ወረደ፡
+      ዘበሕፅነ፡ አቡሁ፡ ሠረፀ፡ ፍሬ፡ ስብሐት። ወበመዓዛሁ፡ አምዓዘ፡ ኲሎ፡ ዓለመ።
+              </ab>
+            </div>
+          </div>
+          <div type="textpart" subtype="Book" n="5" xml:id="Book5">
+            <label>Ordinance of the Christian Church, given by our Lord to St Peter</label>
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+              <ab>
+              በስመ፡ አብ፡ <gap reason="ellipsis" resp="PRS10171Wright"></gap>
+            ዝንቱ፡ ነገረ፡ ሥርዓት፡ ዘቅድስት፡ ቤተ፡ ክርስቲያን፡ ዘነገሮ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ለጴጥሮስ፡ መሠረተ፡ ቤተ፡
+          ክርስቲያን፡ በደብረ፡ ዘይት፡ ምስለ፡ አኃዊሁ፡ ውእቱኒ፡ ነገሮ፡ ለቀሌምንጦስ፡ ረድኡ። እስመ፡ ቀዳሚኒ፡ ነገሮ፡ በደብረ፡ ሲና፡ ለሙሴ፡
+        ግብራ፡ ለደብተራ፡ ቅድስት፡ በከመ፡ ሠርዓ፡ ለቅድስት፡ ጽዮን፡ ለኢየሩሳሌም፡ እንተ፡ በሰማያት።
+        </ab>
+            </div>
+          </div>
+          <div type="textpart" subtype="Book" n="6" xml:id="Book6">
+            <label>On the rod of Moses</label>
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+              <ab>
+                በስመ፡ አብ፡ <gap reason="ellipsis" resp="PRS10171Wright"></gap>
+              በትር፡ ዘዘበጦ፡ ክርስቶስ፡ ውእቱ፡ በትረ፡ ሙሴ፡ እንተ፡ ገብረት፡ ተአምረ፡ በቃለ፡ እግዚአብሔር፡ በቀዳሚት፡ ሕግ፡ አርአያ፡
+            ትእምርተ፡ መስቀል፡ ይእቲ፡ በዘሰቀልዎ፡ ለክርስቶስ።
+              </ab>
+            </div>
+          </div>
+          <div type="textpart" subtype="Book" n="7" xml:id="Book7">
+            <label>The vision of Simon bar Jona</label>
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+              <ab>
+                በስመ፡ አብ፡ <gap reason="ellipsis" resp="PRS10171Wright"></gap>
+              ዝንቱ፡ ራእይ፡ ዘርእየ፡ ስምዖን፡ ወልደ፡ ዮና፡ ዘምስለ፡ ጸጋ፡ ረድኤቱ፡ ተዎህበ፡ ትንቢት፡ ወመድኃኒት። አኮ፡ ከመ፡ ባዕዳን፡
+            ነቢያት፡ ዘእንበለ፡ ይትነፋሕ፡ መንፈስ፡ ቅዱስ፡ በእንተ፡ ምጽአቱ፡ ለግዚእነ፡ ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ፡ ወልደ፡
+          እግዚአብሔር፡ ዘሎቱ፡ ክብር፡ ወስብሐት፡ ለዓለመ፡ ዓለም፡ አሜን። አላ፡ ዝንቱ፡ አብ፡ ወመምህር፡ ዘተመከዓበ፡ ወተወሰከ፡ ወረብሐ፡
+        ክልኤ፡ መካልየ፡ ወረከበ፡ ብዕዓ፡ እምኀበ፡ መድኃኔ፡ ዓለም፡ እንዘ፡ ይብሎ፡ ብፁዕ፡ አንተ፡ ስምዖን፡ ዘዮና፡ እስመ፡ ኢከሠተ፡ ለከ፡ ዘሥጋ፡
+      ወደም፡ አላ፡ አቡየ፡ ሰማያዊ።
+              </ab>
+            </div>
+          </div>
+        </div>
       </body>
    </text>
 </TEI>

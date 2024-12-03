@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1896Martyr">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1896Martyr">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Martyrium of Irenaeus, Bishop of Sirmium</title>
+            <title xml:lang="en" xml:id="t1">Martyrium of Irenaeus, Bishop of Sirmium</title>
+            <title xml:lang="gez" xml:id="t2">ስምዕ፡ ዘሄሬኔዎስ፡ ጳጳስ፡ ዘኤርሶም፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t2">Sǝmʿ za-Herenewos ṗāṗās za-ʾErsom</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -27,13 +23,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+           <listWit>
+             <witness corresp="BLorient686">BL Orient. 686,f. 285vb-c</witness>
+             <witness corresp="BNFabb179">BnF d'Abb. 179, f. 259va-c</witness>
+             <witness corresp="EMML1826">EMML 1826, f. 225ra-va</witness>
+             <witness corresp="EMML1827">EMML 1827, f. 205vb-206vb</witness>
+             <witness corresp="EMML2514">EMML 2514, f. 234ra-va</witness>
+             <witness corresp="EMML6244">EMML 6244, f. 126vb-127va</witness>
+             <witness corresp="EMML6834">EMML 6834, f. 177rb-177vb</witness>
+             <witness corresp="Tanasee122">Ṭānāsee 122 = Dāgā Esṭifānos 11, f. 155vb-156ra</witness>
+             <witness corresp="ESaqg005">ʿĀddi Qolqʷāl Giyorgis, AQG-005, f. 270ra-va</witness>
+           </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -41,10 +49,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
             <keywords>
@@ -59,11 +65,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-03-17">Added keywords</change>
+         <change who="MKr" when="2022-08-28">Added relation, witnesses, Ethiopic title</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+
+           <div type="bibliography">
+               <listRelation>
+                   <relation name="saws:formsPartOf" active="LIT1896Martyr" passive="LIT1493Gadlas"/>
+                   <relation name="ecrm:P129_is_about" active="LIT1896Martyr" passive="PRS13881Irenaeus"/>
+               </listRelation>
+           </div><!---->
+
       </body>
    </text>
 </TEI>

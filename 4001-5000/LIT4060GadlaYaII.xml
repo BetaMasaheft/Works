@@ -1,16 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT4060GadlaYaII">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0"
+   type="work" xml:lang="en" xml:id="LIT4060GadlaYaII">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Gadla Yāʿqob (Recension II, Falasha Version)</title>
+            <title xml:id="t1">Gadla Yāʿqob (Recension II, Beta ʾƎsrāʾel Version)</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -25,17 +20,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-         </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               
-            </listWit>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -43,14 +32,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p/>
+            <p>The Gadla Yāʿqob is one of the three so-called "Testaments of the three patriarchs". Its Beta ʾƎsrāʾel recension is based on a 
+            Christian recension.</p>
          </abstract>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language></langUsage>
          <textClass>
             <keywords>
                <term key="Hagiography"/>
@@ -62,11 +47,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-03-29">Added keywords</change>
+         <change who="DR" when="2020-03-27">Added references, relations and abstract</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <div type="bibliography"><!----></div>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Heide2014EAEGadlaYa"/></bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:isVersionOf" active="LIT4060GadlaYaII" passive="LIT1510GadlaY"/>
+               <relation name="ecrm:P129_is_about" active="LIT4060GadlaYaII" passive="PRS5650Jacob"/>
+            </listRelation>
+         </div>
       </body>
    </text>
 </TEI>

@@ -1,16 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2362Songof">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2362Songof">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Song of Songs</title>
             <title xml:lang="gez" xml:id="t2">መሓልየ፡ መሓልይ፡</title>
             <title xml:lang="gez" corresp="#t2" type="normalized">Maḥālǝya maḥālǝy</title>
             <title xml:lang="en" corresp="#t2">Song of Songs</title>
@@ -32,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -43,20 +36,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
 
 
          <textClass>
@@ -74,19 +61,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-09" who="ES">updated title and relations</change>
          <change when="2019-07-25" who="DE">Added relation</change>
+         <change when="2020-03-23" who="DE">Added textparts.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listBibl type="editions">
+            <bibl><ptr target="bm:Gleave1951Songof"/></bibl>
+         </listBibl>
+         <listBibl type="translation">
+            <bibl><ptr target="bm:Gleave1951Songof"/></bibl>
+         </listBibl>
          <listRelation>
-            <relation name="saws:formsPartOf"
-                      active="LIT2362Songof"
-                      passive="LIT2701Dawit"/>
-                      <relation name="ecrm:CLP46i_may_form_part_of"
-                                active="LIT2362Songof"
-                                passive="LIT3985Mazmura"/>
+            <relation name="saws:formsPartOf" active="LIT2362Songof" passive="LIT2701Dawit"/>
+                      <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2362Songof" passive="LIT3985Mazmura"/>
          </listRelation>
          <ab/>
+         <div type="edition" xml:lang="gez">
+           <note>This division into textparts follows <bibl>
+                 <ptr target="bm:Gleave1951Songof"/>
+              </bibl>.</note>
+           <div type="textpart" subtype="Psalm" xml:id="FirstCanticle">
+              <label>First Canticle (Song 1:1 - 2:7)</label>
+           </div>
+           <div type="textpart" subtype="Psalm" xml:id="SecondCanticle">
+              <label>Second Canticle (Song 2:8 - 3:5)</label>
+           </div>
+           <div type="textpart" subtype="Psalm" xml:id="ThirdCanticle">
+              <label>Third Canticle (Song 3:6 - 5:8)</label>
+           </div>
+           <div type="textpart" subtype="Psalm" xml:id="FourthCanticle">
+              <label>Fourth Canticle (Song 5:9 - 8:4)</label>
+           </div>
+           <div type="textpart" subtype="Psalm" xml:id="FifthCanticle">
+              <label>Fifth Canticle (Song 5:5 - 14)</label>
+           </div>
+         </div>
       </body>
    </text>
 </TEI>

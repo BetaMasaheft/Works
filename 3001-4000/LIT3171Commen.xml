@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT3171Commen">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3171Commen">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -32,7 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
                <listBibl type="clavis">
@@ -51,20 +45,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
+        <abstract>
+          <ab>
+            The short biography of John Chrysostom (<ref target="#Vita"></ref>), which is of a later origin and has been originally
+            composed in Ethiopic, is often attested as an introduction to the work.
+          </ab>
+        </abstract>
          <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-            <language ident="grc">Greek</language>
+           <language ident="en">English</language>
+           <language ident="ar">Arabic</language>
+           <language ident="gez">Gǝʿǝz</language>
+           <language ident="grc">Greek</language>
          </langUsage>
          <textClass>
             <keywords>
@@ -102,675 +100,348 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <citedRange>480-481</citedRange>
                   </bibl>
             </listBibl>
-            
+
             <listRelation>
-               <relation name="saws:isAttributedToAuthor"
-                         active="LIT3171Commen#t2greek"
-                         passive="PRS5720JohnChr"/>
-               <relation name="saws:isAttributedToAuthor"
-                         active="LIT3171Commen#t2arabic"
-                         passive="PRS1346AbulFa"/>
-               <relation name="saws:isAttributedToAuthor"
-                         active="LIT3171Commen#t1"
-                         passive="PRS3779enbaqom"/>
-               <relation name="saws:isAttributedToAuthor"
-                         active="LIT3171Commen#t1"
-                         passive="PRS7077Mikael"/>
-               <relation name="saws:isVersionInAnotherLanguageOf"
-                         active="LIT3171Commen#t2arabic"
-                         passive="LIT3171Commen#t2greek"/>
-               <relation name="saws:isVersionInAnotherLanguageOf"
-                         active="LIT3171Commen#t1"
-                         passive="LIT3171Commen#t2arabic"/>
-               <relation name="saws:isVersionInAnotherLanguageOf"
-                         active="LIT3171Commen#t3amharic"
-                         passive="LIT3171Commen#t1"/>
-               <relation name="saws:isCommentOn"
-                         active="LIT3171Commen"
-                         passive="LIT3524Epistle"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT3171Commen#t2greek" passive="PRS5720JohnChr"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT3171Commen#t2arabic" passive="PRS1346AbulFa"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT3171Commen#t1" passive="PRS3779enbaqom"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT3171Commen#t1" passive="PRS7077Mikael"/>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT3171Commen#t2arabic" passive="LIT3171Commen#t2greek"/>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT3171Commen#t1" passive="LIT3171Commen#t2arabic"/>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT3171Commen#t3amharic" passive="LIT3171Commen#t1"/>
+               <relation name="saws:isCommentOn" active="LIT3171Commen" passive="LIT3524Epistle"/>
+               <relation name="saws:hasUsed" active="LIT3171Commen#Vita" passive="LIT1239Chroni"></relation>
+              <relation name="saws:hasUsed" active="LIT3171Commen#Vita" passive="LIT1011Abusak"></relation>
+              <relation name="saws:hasUsed" active="LIT3171Commen#Vita" passive="LIT4723TarikaWaldaAmid"></relation>
+              <relation name="saws:hasUsed" active="LIT3171Commen#Vita" passive="LIT4968SenkessarSec"></relation>
             </listRelation>
          </div>
-         
+
          <div type="edition">
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Summary">
+           <div type="textpart" subtype="vita" xml:lang="gez" xml:id="Vita">
+             <label>Life of John Chrysostom</label>
+           </div>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Summary">
                <label>Summary, table of the 34 homilies </label>
             </div>
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Title">
                <label> Second title</label>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Introduction">
-               <label>Introduction by <persName ref="PRS5720JohnChr"/> 
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Introduction">
+               <label>Introduction by <persName ref="PRS5720JohnChr"/>
                </label>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homilies">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homilies">
                <label> 34 Homilies, each divided into a <foreign xml:lang="gez">dǝrsān</foreign> and a <foreign xml:lang="gez">tagśāṣ</foreign> with distinct titles</label>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily1">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily1">
                <label>Homily 1</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan1">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan1">
                   <label>Dǝrsān 1</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas1">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas1">
                   <label>Tagśāṣ 1</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily2">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily2">
                <label>Homily 2</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan2">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan2">
                   <label>Dǝrsān 2</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas2">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas2">
                   <label>Tagśāṣ 2</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily3">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily3">
                <label>Homily 3</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan3">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan3">
                   <label>Dǝrsān 3</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas3">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas3">
                   <label>Tagśāṣ 3</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily4">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily4">
                <label>Homily 4</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan4">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan4">
                   <label>Dǝrsān 4</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas4">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas4">
                   <label>Tagśāṣ 4</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily5">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily5">
                <label>Homily 5</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan5">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan5">
                   <label>Dǝrsān 5</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas5">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas5">
                   <label>Tagśāṣ 5</label>
                   <note>This section corresponds to the one before the 4th section of <ref type="work" corresp="LIT3171Commen#t2greek"/> beginning with
                      <foreign xml:lang="grc">Μὴ τοί ϑορυϐώμεθα μηδεὶς ὁρῶν ϖονηροὺς εὐπραγοῦντας ϑορυϐείσθω</foreign>. </note>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily6">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily6">
                <label>Homily 6</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan6">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan6">
                   <label>Dǝrsān 6</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas6">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas6">
                   <label>Tagśāṣ 6</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily7">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily7">
                <label>Homily 7</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan7">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan7">
                   <label>Dǝrsān 7</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas7">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas7">
                   <label>Tagśāṣ 7</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily8">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily8">
                <label>Homily 8</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan8">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan8">
                   <label>Dǝrsān 8</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas8">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas8">
                   <label>Tagśāṣ 8</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily9">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily9">
                <label>Homily 9</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan9">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan9">
                   <label>Dǝrsān 9</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas9">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas9">
                   <label>Tagśāṣ 9</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily10">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily10">
                <label>Homily 10</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan10">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan10">
                   <label>Dǝrsān 10</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas10">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas10">
                   <label>Tagśāṣ 10</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily11">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily11">
                <label>Homily 11</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan11">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan11">
                   <label>Dǝrsān 11</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas11">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas11">
                   <label>Tagśāṣ 11</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily12">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily12">
                <label>Homily 12</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan12">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan12">
                   <label>Dǝrsān 12</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas12">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas12">
                   <label>Tagśāṣ 12</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily13">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily13">
                <label>Homily 13</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan13">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan13">
                   <label>Dǝrsān 13</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas13">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas13">
                   <label>Tagśāṣ 13</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily14">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily14">
                <label>Homily 14</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan14">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan14">
                   <label>Dǝrsān 14</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas14">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas14">
                   <label>Tagśāṣ 14</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily15">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily15">
                <label>Homily 15</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan15">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan15">
                   <label>Dǝrsān 15</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas15">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas15">
                   <label>Tagśāṣ 15</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily16">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily16">
                <label>Homily 16</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan16">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan16">
                   <label>Dǝrsān 16</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas16">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas16">
                   <label>Tagśāṣ 16</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily17">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily17">
                <label>Homily 17</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan17">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan17">
                   <label>Dǝrsān 17</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas17">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas17">
                   <label>Tagśāṣ 17</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily18">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily18">
                <label>Homily 18</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan18">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan18">
                   <label>Dǝrsān 18</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas18">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas18">
                   <label>Tagśāṣ 18</label>
                </div>
             </div>
-               <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily19">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily19">
                   <label>Homily 19</label>
-                  <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan19">
+                  <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan19">
                      <label>Dǝrsān 19</label>
                   </div>
-                  <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas19">
+                  <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas19">
                      <label>Tagśāṣ 19</label>
                   </div>
                </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily20">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily20">
                <label>Homily 20</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan20">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan20">
                   <label>Dǝrsān 20</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas20">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas20">
                   <label>Tagśāṣ 20</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily21">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily21">
                <label>Homily 21</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan21">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan21">
                   <label>Dǝrsān 21</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas21">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas21">
                   <label>Tagśāṣ 21</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily22">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily22">
                <label>Homily 22</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan22">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan22">
                   <label>Dǝrsān 22</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas22">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas22">
                   <label>Tagśāṣ 22</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily23">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily23">
                <label>Homily 23</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan23">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan23">
                   <label>Dǝrsān 23</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas23">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas23">
                   <label>Tagśāṣ 23</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily24">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily24">
                <label>Homily 24</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan24">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan24">
                   <label>Dǝrsān 24</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas24">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas24">
                   <label>Tagśāṣ 24</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily25">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily25">
                <label>Homily 25</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan25">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan25">
                   <label>Dǝrsān 25</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas25">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas25">
                   <label>Tagśāṣ 25</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily26">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily26">
                <label>Homily 26</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan26">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan26">
                   <label>Dǝrsān 26</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas26">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas26">
                   <label>Tagśāṣ 26</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily27">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily27">
                <label>Homily 27</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan27">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan27">
                   <label>Dǝrsān 27</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas27">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas27">
                   <label>Tagśāṣ 27</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily28">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily28">
                <label>Homily 28</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan28">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan28">
                   <label>Dǝrsān 28</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas28">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas28">
                   <label>Tagśāṣ 28</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily29">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily29">
                <label>Homily 29</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan29">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan29">
                   <label>Dǝrsān 29</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas29">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas29">
                   <label>Tagśāṣ 29</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily30">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily30">
                <label>Homily 30</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan30">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan30">
                   <label>Dǝrsān 30</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas30">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas30">
                   <label>Tagśāṣ 30</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily31">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily31">
                <label>Homily 31</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan31">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan31">
                   <label>Dǝrsān 31</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas31">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas31">
                   <label>Tagśāṣ 31</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily32">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily32">
                <label>Homily 32</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan32">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan32">
                   <label>Dǝrsān 32</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas32">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas32">
                   <label>Tagśāṣ 32</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily33">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily33">
                <label>Homily 33</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan33">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan33">
                   <label>Dǝrsān 33</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas33">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas33">
                   <label>Tagśāṣ 33</label>
                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Homily34">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homily34">
                <label>Homily 34</label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Dersan34">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Dersan34">
                   <label>Dǝrsān 34</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Tagsas34">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tagsas34">
                   <label>Tagśāṣ 34</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Subscriptio">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Subscriptio">
                   <label> Subscriptio</label>
                </div>
             </div>

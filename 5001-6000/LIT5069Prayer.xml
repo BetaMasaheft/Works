@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT5069Prayer"
-     xml:lang="en"
-     type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5069Prayer" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Prayer before meal</title>
+                <title xml:lang="gez" xml:id="t1">ሰአልናከ፡ መሐሪ፡ ሰአልናከ፡ ፈጣሪ፡ </title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Saʾalnāka maḥari saʾalnāka faṭāri</title>
+                <title xml:lang="en" corresp="#t1">We have asked you, O Merciful One, we have asked you, O Creator...</title>
+
+                <title xml:lang="en" xml:id="t2">We have asked thee, O Merciful One, we have asked thee, O Creator...</title>
+
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DE"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine multimediale
                             Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
@@ -31,8 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -41,30 +40,71 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>A supplicative table prayer, also described in catalogues as prayer
+                    over bread and wine of the Eucharist.
+                     It exists in several recensions;
+                     this is a longer recension, cp. <bibl><ptr target="bm:Grebaut1935Formules"/>
+                           <citedRange unit="chapter">I</citedRange></bibl> that seems to have been
+                           attested in a small number of witnesses.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
-                    <term key="Magic"/>
+                    <term key="Prayers"/>
                 </keywords>
             </textClass>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DE" when="2018-11-30">Created entity</change>
+            <change who="DR" when="2020-04-28">Added abstract</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography"/>
-         <!---->
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>The following incipit is taken from <bibl>
+                          <ptr target="bm:Grebaut1935Formules"/>
+                          <citedRange unit="page">50</citedRange></bibl>.</note>
+                    <ab>ሰአልናከ፡ መሐሪ፡ ሰአልናከ፡ ፈጣሪ፡ ሰአልናከ፡ ገባሪ፡ ሰአልናከ፡ እግዚኦ፡ ወአስተብቋዕናከ፡
+                      ዘኢትፈልጥ፡ ወኢትሌሊ፡ ለዘሰአሉከ።
+                      የማንከ፡ ነቅዓ፡ ሕይወት፡ የማንከ፡ ፈልፈለ፡ ፍሥሓ፡ ወኃሤት፡ የማንከ፡ ፈልፈለ፡ ጽዋዕ፡ ወኅብስት፡ የማንከ፡ ፈልፈለ፡ በረከት፡ ወረድኤት፡
+                      የማንከ፡ ፈልፈለ፡ ሣህል፡ ወምሕረት፡
+                    </ab>
+                </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <note>The following explicit is taken from <bibl>
+                          <ptr target="bm:Grebaut1935Formules"/>
+                          <citedRange unit="page">52</citedRange></bibl>.</note>
+                    <ab>ወለእመቦ፡ ዘተገብረ፡ በውስቴቱ፡ ሕምዝ፡ ወሥራይ፡ ይሠዓር፡ በስምከ፡ ቅዱስ፡ ወይዘርዘር፡ በስምከ፡ ቅዱስ፡
+                        ወይኵነነ፡ መብልዓ፡ ጽድቅ፡ ዘበአማን፡ ውስቴ፡ ሕይወት፡ ዘበአማን፡
+                        ባርክ፡ ለነ፡ ክርስቶስ፡ አምላክነ፡ ዘንተ፡ ኅብስተ፡ ወዘንተ፡ ፅዋዓ።
+                        ቀድስ፡ ለነ፡ ክርስቶስ፡ አምላክነ፡ ዘንተ፡ ኅብስተ፡ ወዘንተ፡ ፅዋዓ።
+                        አንጽሕ፡ ለነ፡ ክርስቶስ፡ ዘንተ፡ ኅብስተ፡ ወዘንተ፡ ፅዋዓ።
+                        አምዕዝ፡ ለነ፡ ክርስቶስ፡ ዘንተ፡ ኅብስተ፡ ወዘንተ፡ ፅዋዓ፡ እስመ፡ ኵሉ፡ ዘጸውዓ፡ ስመ፡ እግዚአብሔር፡ ይድኅን።
+                        አቡነ፡ ዘበሰማያት፡ ወጸሎተ፡ ሃይማኖት፡ በል።
+                        ቀዳሚሁ፡ ቃል፡ ውእቱ፡ ወውእቱ፡ ቃል፡ ኀበ፡ እግዚአብሔር፡ ውእቱ፡ ወእግዚአብሔር፡ ውእቱ።
+                        ወከማሁ፡ ቃዳሚሁ፡ እምቀዲሙ፡ ሀሎ፡ ኀበ፡ እግዚአብሔር፡ ውእቱ። ወኵሉ፡ ቦቱ፡ ወዘእንበሌሁሰ፡ አልቦ፡ ዘኮነ።
+                    </ab>
+                    </div>
+            </div>
+            <div type="bibliography">
+                <listBibl type="secondary">
+                    <bibl>
+                        <ptr target="bm:Grebaut1935Formules"/>
+                        <citedRange unit="page">50-52</citedRange>
+                        <citedRange unit="item">I</citedRange>
+                    </bibl>
+                </listBibl>
+            </div>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="saws:formsPartOf" active="LIT5069Prayer" passive="LIT6205Saalnaka"/>
+                  <relation name="lawd:hasAttestation" active="LIT5069Prayer" passive="BNFet343"/>
+                    <relation name="lawd:hasAttestation" active="LIT5069Prayer" passive="EMIP00103"/>
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>

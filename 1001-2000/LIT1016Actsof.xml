@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1016Actsof">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1016Actsof">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Acts of Paul</title>
+            <title xml:id="t1" xml:lang="en">Acts of Paul</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -27,35 +21,160 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract><p>The Acts of St Paul to be read on <date ref="ethiocalHamle5">5 Ḥamle</date>.</p></abstract>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Apocrypha"/>
+               <term key="Hagiography"/>
+               <term key="Translation"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2020-02-20">Added abstract, keywords, bibliography, textparts and relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Bausi2000Osservazioni"/>
+                  <citedRange>Pa2</citedRange>
+                  <citedRange unit="page">84</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Wright1877BM"/>
+                  <citedRange unit="page">63a-64a</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Budge1899ContendingsText"/>
+                  <citedRange>436-598</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Budge1901ContendingsTransl"/>
+                  <citedRange>527–707</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:formsPartOf" active="LIT1016Actsof" passive="LIT1461Gadlah"/>
+               <relation name="saws:formsPartOf" active="LIT1016Actsof" passive="LIT5817GHV"/>
+               <relation name="saws:formsPartOf" active="LIT1016Actsof" passive="LIT5818GHVI"/>
+               <relation name="ecrm:P129_is_about" active="LIT1016Actsof" passive="PRS7743Paul"/>
+            </listRelation>
+         </div>
+         
+         <div type="edition">
+            
+            <note>The following division into textparts follows the one proposed in  <bibl>
+               <ptr target="bm:Wright1877BM"/>
+               <citedRange unit="page">63a-64a</citedRange>
+            </bibl>.</note>
+            
+            <div type="textpart" subtype="chapter" n="1" xml:id="Introduction" xml:lang="gez">
+               <label xml:lang="en">Introduction</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="2" xml:id="Part1" xml:lang="gez">
+               <label xml:lang="gez">፩፡ ጽድቅ፡ ውእቱ፡ ቃሉ፡ ለእግዚእነ፡ ወአምላክነ፡ ወመድኀኒነ፡ ኢየሱስ፡ ክርስቶስ፡ ዘይቤ፡ በወንጌሉ፡ ቅዱስ፡ በእንቲአሁ።
+                  እስመ፡ ቀደምት፡ ይከውኑ፡ ድኅረ። ወደኅርት፡ ይከውኑ፡ ቅድመ።</label>
+         </div>
+            
+            <div type="textpart" subtype="chapter" n="3" xml:id="Part2" xml:lang="gez">
+               <label xml:lang="gez">፪፡ ስምዑ፡ ይእዜ፡ ኦሕዝብ፡ መፍቀርያነ፡ ክርስቶሰ፡ ዘጸውዐክሙ፡ ጸጋሁ፡ ውስተ፡ ዛቲ፡ ቤተ፡ ክርስቲያን፡ ቅድሰት፡ ከመ፡ ትግበሩ፡ በዓሎ፡ 
+                  ለዝንቱ፡ ኅሩይ፡ ወውዱስ፡ ወሰባኪ፡ ብፁዕ፡ ወክቡር፡ መተንብል፡ በእንተ፡ ኵልክሙ፡ ኀበ፡ እግዚአሔር፡ አምላክ፡ ዐቢይ፡ በውስተ፡ ቅዱሳን።</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="4" xml:id="Part3" xml:lang="gez">
+               <label xml:lang="gez">፫፡ ይቤ፡ ሉቃስ፡ ወንጌላዊ፡ ወዝንቱ፡ ሳውል፡ ነሥአ፡ መባሕተ፡ እምኀበ፡ ሊቃነ፡ ካህናት፡ ከመ፡ ይስድድ፡ ኵሎ፡ እለ፡ የአምኑ፡ በክርስቶስ፡ 
+                  እምኢየሩሳሌም፡ እስከ፡ አህጉር፡ ርኍቃት።</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="5" xml:id="Part4" xml:lang="gez">
+               <label xml:lang="gez">፬፡ ወእምዝ፡ ኃለፉ፡ እምነ፡ ፋቁስ፡ እንተ፡ መንገለ፡ ባሕር፡ ጳውሎስ፡ ወበርናባስ፡ ወበጽሑ፡ ጰርጌን፡ ዘጵንፍልያ፡
+                  ወኀደጎሙ፡ ዮሐንሰ፡ ወተሰውጠ፡ ኢየሩሳሌም።</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="6" xml:id="Part5" xml:lang="gez">
+               <label xml:lang="gez">፭፡ ወሶቤሃ፡ ወፅኡ፡ እምቤተ፡ ሞቅሕ፡ ወሖሩ፡ ኀበ፡ ተስሎንቄ፡ ወቦአ፡ ሐዋርያ፡ ጳውሎስ፡ ኀበ፡ በተ፡ ክርስተያን።</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="7" xml:id="Part6" xml:lang="gez">
+               <label xml:lang="gez">ወእምድኅረ፡ ዝንቱ፡ ወፅአ፡ እምኀቤሆሙ፡ ወሖረ፡ ሀገረ፡ ሐለብ፡ ወይእቲ፡ አሐተ፡ እምአህጉረ፡ አይሁድ፡ ወረከበ፡ በህየ፡ ብእሴ፡ 
+                  በውስተ፡ ፍኖት፡ ዘስሙ፡ ከዋርስጥስ።</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="8" xml:id="Part7" xml:lang="gez">
+               <label xml:lang="gez">ወእንዘ፡ የሐውር፡ በፍኖት፡ ናሁ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ አስተርአዮ፡ ወይቤሎ፡ ሰላም፡ ለከ፡ ኦኅሩይየ፡ ጳውሎስ፡</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="9" xml:id="Part8" xml:lang="gez">
+               <label xml:lang="gez">ወእምዝ፡ ሖረ፡ ጳውሎስ፡ እንዘ፡ ይትፈሣሕ፡ ወድትኃሣይ፡ ወበጽሐ፡ ውስተ፡ ሀገር፡ በ፲፡ ሰዓተ፡ መዓልት፡ ወአእመርዎ፡ አይሁድ፡ 
+                  እለ፡ ሀለዉ፡ ህየ።</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="10" xml:id="Part9" xml:lang="gez">
+               <label xml:lang="gez">ወወፅአ፡ ሐዋርያ፡ ጳውሎስ፡ እምነ፡ ሀገረ፡ አካ፡ ወበጽሐ፡ ኀበ፡ ሀገረ፡ አቴና፡ ወፈነወ፡ ጳውሎስ፡ ሐዋርያ፡ መጽሐፈ፡ ኀበ፡ ሲላስ፡ 
+                  ወጢሞቴዎስ፡ ከመ፡ ይበጽሑ፡ ኀቤሁ።</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="11" xml:id="Part10" xml:lang="gez">
+               <label xml:lang="gez">ወኮነ፡ በውእቱ፡ መዋዕል፡ ምንዳቤ፡ ብዙኅ፡ ላዕለ፡ እለ፡ የዐቅቡ፡ ሕገ፡ እግዚአብሔር።</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="12" xml:id="Part11" xml:lang="gez">
+               <label xml:lang="gez">ወአሜሃ፡ አስተርአዮ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ለቅዱስ፡ ፈልጶስ፡ እንዘ፡ ሀሎ፡ በቂሳርያ። ወይቤሎ፡ ተንሥእ፡ ወሖር፡ ሀገረ፡ 
+                  ልስጥራን፡ ወኢቆንዮን።</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="13" xml:id="Part12" xml:lang="gez">
+               <label xml:lang="gez">ወእምድኅረዝ፡ ወፅኡ፡ ፪፡ አርድእት፡ እምሀገረ፡ ልስጥራን፡ ሌሊተ፡ ወበጽሑ፡ ሐይቀ፡ ባሕር፡ እንዘ፡ የኀሥሡ፡ ሐመረ፡ ዘይወስዶሙ፡
+                  ሀገረ፡ ኢቆንዮን።</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="14" xml:id="Part13" xml:lang="gez">
+               <label xml:lang="gez">፲ወ፩፡ ወእምድኅረ፡ ዝንቱ፡ ወፅአ፡ ቅዱስ፡ ጳወሎስ፡ እምቤተ፡ መቅደስ፡ ከመ፡ ይሖር፡ ወይስብክ፡ ውስተ፡ አሕዛበ፡ ምድር፡ እለ፡ ኢቦአ፡
+                  ውስቴቶን።</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="15" xml:id="Part14" xml:lang="gez">
+               <label xml:lang="gez">፲ወ፪፡ ስምዑ፡ እምኔየ፡ ኦአኅዛብ፡ ምእመናን፡ ከመ፡ እዜኑክሙ፡ ዘንተ፡ ዜና፡ ቡሩከ፡ ዘገብሮ፡ እግዚአብሔር፡ በእደዊሁ፡ ለቅዱስ፡ 
+                  ጳውሎስ፡ ልሳነ፡ ዕፍረት።</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="16" xml:id="Part15" xml:lang="gez">
+               <label xml:lang="gez"> ፲ወ፫፡ ወዓዲ፡ እምስብከተ፡ ጳውሎስ፡ ውስተ፡ ደሴት፡ እንተ፡ ትሰመያ፡ መናፍቅት።</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="17" xml:id="Part16" xml:lang="gez">
+               <label xml:lang="gez">፲ወ፬፡ ወካዕበ፡ ስምዑ፡ አኃዊነ፡ ስብከቶ፡ ለቅዱስ፡ ጳውሎስ፡ በሀገረ፡ ዋሪቆን።</label>
+            </div>
+            
+            <div type="textpart" subtype="chapter" n="18" xml:id="Part17" xml:lang="gez">
+               <label xml:lang="gez">፲ወ፭፡ ዘከመ፡ ሖረ፡ ቅዱስ፡ ጴጥሮስ፡ ኀበ፡ ሀገረ፡ ዋሪቆን፡ ወርእያ፡ ወአጽንዖሙ፡ ለሰብኣ፡ ውስተ፡ ሃይማኖት፡ ርትዕት።</label>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

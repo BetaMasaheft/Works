@@ -1,19 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT4033Senkessar">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4033Senkessar">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ስንክሳር፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Sǝnkǝssār (Group B)</title>
-            <title xml:lang="en" corresp="#t1">Synaxarium</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Sǝnkǝssār (First Recension B)</title>
+            <title xml:lang="en" corresp="#t1">Synaxarion</title>
             <title xml:lang="en" xml:id="t2">Synaxary</title>
+            <title xml:lang="en" xml:id="t3">Synaxarium</title>
             <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,30 +26,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
                <witness corresp="EMIP01859"/>
                <witness corresp="EMML6952"/>
                <witness corresp="BNFet677"/>
+               <witness corresp="ESam019"/>
+               <witness corresp="ESqdq004"/>
+               <witness corresp="EMML4398"/>
+               <witness corresp="EStzm001"/>
+               <witness corresp="EStzm002"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -67,6 +63,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="DR" when="2016-10-19">Created file</change>
          <change who="DR" when="2017-03-28">Added keywords</change>
+         <change who="DR" when="2021-08-25">Updatedlist of witnesses and edition with textparts for all attested commemorations</change>
+         <change who="DR" when="2024-10-11">Updated title</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -83,13 +81,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             
             <div type="textpart" xml:id="FirstHalf">
                <label>First half of the year</label>
-               <note>This record lists all commemorations attested at least once in <ref type="mss" corresp="EMML6952"/>,
-                  <ref type="mss" corresp="BNFet677"/> 
-                  <!--and ʾabuna Yoḥanni-->, all known manuscripts of 
-                  this recension containing the first half of the year or part of it. The commemorations of each manuscript are described in the
-                  respective manuscript records.</note>
-   
-            
+               <note>This record lists all commemorations attested at least once in all known manuscripts of 
+                  this recension containing the first half of the year or part of it. It therefore does not represent an articulation
+                  of commemorations as present in a specific witness. The commemorations of each manuscript are described in the
+                  respective manuscript records. Commemorations which deviate from the standard of commemorations attested in all manuscripts
+               are indicated as 'non-standard'.</note>
             
                <!--the following arrangement of the textparts and text of Maskaram to Yakkātit follows EMML6952-->
 
@@ -105,6 +101,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask1">
+                     <label>1st Maskaram</label>
                   
                      <div type="textpart" xml:id="Mask1Beginning">
                         <label>Beginning of the year</label>
@@ -115,10 +112,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <persName ref="PRS5691Job"/>'s washing in the river</label>
                      </div>
                   
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Mask1Bartolomewos"
-                          corresp="NAR0017SBartalomewos">
+                     <div type="textpart" subtype="commemoration" xml:id="Mask1Bartolomewos" corresp="NAR0017SBartalomewos">
                         <label>Death of <persName ref="PRS2481Bartholo"/>
                         </label>
                      </div>
@@ -131,6 +125,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask2">
+                     <label>2nd Maskaram</label>
+                     
                      <div type="textpart" subtype="commemoration" xml:id="Mask2JohnBaptist">
                         <label>Decapitation of <persName ref="PRS5741Johnthe"/>
                         </label>
@@ -142,9 +138,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask3">
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Mask3CouncilAlexandria">
+                     <label>3rd Maskaram</label>
+                     <div type="textpart" subtype="commemoration" xml:id="Mask3CouncilAlexandria">
                         <label>Commemoration of the council of Alexandria under <persName ref="PRS11854Dionysios"/>
                         </label>
                      </div>
@@ -156,6 +151,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask4">
+                     <label>4th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask4Maqares">
                         <label>Commemoration of <persName ref="PRS6425Macarius"/>
                         </label>
@@ -163,12 +159,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask5">
+                     <label>5th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask5Sofya">
                         <label>Commemoration of <persName ref="PRS11893Sofya"/>, different version in the second recension.</label>
                      </div>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask6">
+                     <label>6th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask6Isaiah">
                         <label>Commemoration of <persName ref="PRS5584Isaiah"/>
                         </label>
@@ -178,6 +176,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                
                
                   <div type="textpart" subtype="chapter" xml:id="Mask7">
+                     <label>7th Maskaram</label>
                   
                      <div type="textpart" subtype="commemoration" xml:id="Mask7Dioscorus">
                         <label>Commemoration of <persName ref="PRS3591Dioscoru"/>
@@ -195,7 +194,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask8">
-                  
+                     <label>8th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask8Zakaryas">
                         <label>Commemoration of <persName ref="PRS10509Zachary"/>
                         </label>
@@ -214,7 +213,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask9">
-                  
+                     <label>9th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask9Bisora">
                         <label>Commemoration of <persName ref="PRS11938Bisora"/>
                         </label>
@@ -222,8 +221,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask10">
+                     <label>10th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask10Mary">
-                        <label>Commemoration of Maqārǝs and the birth of Mary in Upper Egypt
+                        <label>Commemoration (sic) of Maqārǝs and the celebration of the birth of Mary in Upper Egypt
                      </label>
                      </div>
                   
@@ -234,6 +234,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask11">
+                     <label>11th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask11Fasiladas">
                         <label>Commemoration of <persName ref="PRS2548Basilide"/>
                         </label>
@@ -241,7 +242,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask12">
-                  
+                     <label>12th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask12Ephesus">
                         <label>Commemoration of the council of Ephesus</label>
                      </div>
@@ -252,31 +253,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask13">
-                  
+                     <label>13th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask13Baselyos">
                         <label>Commemoration of a miracle of <persName ref="PRS2546Basilth"/>.</label>
                      </div>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask14">
+                     <label>14th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask14Agaton">
                         <label>Commemoration of  <persName ref="PRS11984Agaton"/>.</label>
                      </div>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask15">
+                     <label>15th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask15Estifanos">
                         <label>Commemoration of  the translatio of <persName ref="PRS8974Stephen"/>.</label>
                      </div>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask16">
+                     <label>16th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask16Consecration">
                         <label>Commemoration of the consecration of the temple in Jerusalem.</label>
                      </div>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask17">
+                     <label>17th Maskaram</label>
                   
                      <div type="textpart" subtype="commemoration" xml:id="Mask17Cross">
                         <label>Feast of the cross.</label>
@@ -292,6 +297,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
 
                   <div type="textpart" subtype="chapter" xml:id="Mask18">
+                     <label>18th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask18Marqoryos">
                         <label>Commemoration of Mercurius.</label> 
                      </div>
@@ -303,13 +309,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                
                
                   <div type="textpart" subtype="chapter" xml:id="Mask19">
-                  
+                     <label>19th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask19Gorgoryos">
                         <label>Commemoration of <persName ref="PRS4825Gregory"/>.</label>
                      </div>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask20">
+                     <label>20th Maskaram</label>
                   
                      <div type="textpart" subtype="commemoration" xml:id="Mask20Athanasius">
                         <label>Commemoration of <persName ref="PRS11991Athanasius"/>.</label> 
@@ -317,12 +324,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask21">
+                     <label>21st Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask21Qopreyanos">
                         <label>Commemoration of <persName ref="PRS3247Cyprian"/> and <persName ref="PRS5801Justina"/>.</label>
                      </div>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask22">
+                     <label>22nd Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask22Kotlos">
                         <label>Commemoration of <persName ref="PRS11994Kotlos"/> and <persName ref="PRS11995Aksu"/>
                         </label>
@@ -334,6 +343,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask23">
+                     <label>23rd Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask23Awnabyos">
                         <label>Commemoration of <persName ref="PRS11996Awnabyos"/> and <persName ref="PRS11997Endreyas"/>.</label>
                      </div>
@@ -344,6 +354,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask24">
+                     <label>24th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask24Gorgoryos">
                         <label>Commemoration of <persName ref="PRS11998Gorgoryos"/>.</label>
                      </div>
@@ -354,42 +365,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask25">
+                     <label>25th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask25Yonas">
                         <label>Commemoration of <persName ref="PRS5754Jonah"/>.</label>
                      </div>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask26">
+                     <label>26th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask26JohnBaptist">
                         <label>Birth of <persName ref="PRS5741Johnthe"/>.</label>
                      </div>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask27">
+                     <label>27th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask27Ewostatewos">
                         <label>Commemoration of <persName ref="PRS3915Eustathi"/>.</label>
                      </div>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask28">
+                     <label>28th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask28Abadir">
                         <label>Commemoration of <persName ref="PRS1005Abadir"/> and <persName ref="PRS12000Irai"/>.</label>
                      </div>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask29">
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Mask29TranslatioJohn">
-                        <label>Translatio of <persName ref="PRS5695John"/>.</label>
-                     </div>
-                  
+                     <label>29th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask29Arsima">
                         <label>Commemoration of <persName ref="PRS8126Rhipsime"/> and <persName ref="PRS12001Agata"/>.</label>
                      </div>
                   </div>
                
                   <div type="textpart" subtype="chapter" xml:id="Mask30">
+                     <label>30th Maskaram</label>
                      <div type="textpart" subtype="commemoration" xml:id="Mask30Athanasius">
                         <label>Commemoration of the miracle of the salvation of <persName ref="PRS2209Athanasi"/>.</label>
                      </div>
@@ -400,11 +411,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" subtype="chapter" xml:id="Teqemt">
                   <label>Commemorative notices for the month of <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
                   </label>
-                 
-                  <div type="textpart" subtype="chapter" xml:id="TeqeIntroduction">
-                     <label>Introduction for <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
-                     </label>
-                  </div>
             
                   <div type="textpart" subtype="chapter" xml:id="Teqe1">
                      <label>
@@ -464,6 +470,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
              
                      <div type="textpart" subtype="chapter" xml:id="Teqe5Pawlos">
                         <label>Commemoration of Ṗāwlos, patriarch of Constantinople</label>
+                        <note>The commemorated patriarch is called in Yoḥannǝs in <ref type="work" corresp="LIT4032SenkessarS"/>.</note>
                      </div>
                   </div>
             
@@ -509,7 +516,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
                   
                      <div type="textpart" subtype="commemoration" xml:id="Teqe8Agaton">
-                        <label>Commemoration of ʾabbā ʾAgāton</label>
+                        <label>Commemoration of ʾabbā ʾAgāton (originally part of the previous commemoration)</label>
                      </div>
                   </div>
             
@@ -528,7 +535,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
                   
                      <div type="textpart" subtype="commemoration" xml:id="Teqe9Semon">
-                        <label>Commemoration of Sǝmʿon</label>
+                        <label>Commemoration of Sǝmʿon (non-standard)</label>
                      </div>
                   
                      <div type="textpart" subtype="commemoration" xml:id="Teqe9Eclipse">
@@ -632,6 +639,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <date>17th <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
                         </date>
                      </label>
+                     
+                     <div type="textpart" subtype="chapter" xml:id="Teqe17Gorgoryos">
+                        <label>Commemoration of Gorgoryos</label>
+                     </div>
              
                      <div type="textpart" subtype="chapter" xml:id="Teqe17Diyosqoros">
                         <label>Commemoration of ʾabbā Diyosqoros</label>
@@ -686,9 +697,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Teqe21TranslatioLazarus">
+                     <div type="textpart" subtype="commemoration" xml:id="Teqe21TranslatioLazarus">
                         <label>Commemoration of the translatio of <persName ref="PRS6208Lazarus"/>
                         </label>
                      </div>
@@ -744,7 +753,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
                
                      <div type="textpart" subtype="commemoration" xml:id="Teqe24Pawlos">
-                        <label>Commemoration of Ṗāwlos and his friend and Zenā</label>
+                        <label>Commemoration of Ṗāwlos and his friend and Zenā (non-standard)</label>
                      </div>
                   </div>
             
@@ -755,12 +764,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </label>
                
                      <div type="textpart" subtype="commemoration" xml:id="Teqe25Abib">
-                        <label>Commemoration of <persName ref="PRS1246AbibBu"/>
-                        </label>
-                     </div>
-               
-                     <div type="textpart" subtype="commemoration" xml:id="Teqe25Ablo">
-                        <label>Commemoration of <persName ref="PRS1254Ablo"/>
+                        <label>Commemoration of <persName ref="PRS1246AbibBu"/> and <persName ref="PRS1254Ablo"/>
                         </label>
                      </div>
                
@@ -865,11 +869,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Heda3Kirakos">
+                     <div type="textpart" subtype="commemoration" xml:id="Heda3Kirakos" corresp="NAR0198SenKirakos">
                         <label>Commemoration of Kirākos</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Heda3Atnasyos">
+                     <div type="textpart" subtype="commemoration" xml:id="Heda3Atnasyos" corresp="NAR0199SenAtnIrai">
                         <label>Commemoration of ʾAtnāsyos and his sister ʾIrāʾi</label>
                      </div>
                   </div>
@@ -899,7 +903,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Heda5Langinos">
+                     <div type="textpart" subtype="commemoration" xml:id="Heda5Langinos" corresp="NAR0200SenLanginos">
                         <label>Commemoration of Langinos</label>
                      </div>
                   
@@ -908,7 +912,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
                   
                      <div type="textpart" subtype="commemoration" xml:id="Heda5Timotewos">
-                        <label>Commemoration of Ṭimotewos</label>
+                        <label>Commemoration of Ṭimotewos, translatio of Tewodros</label>
                      </div>
                   </div>
             
@@ -933,7 +937,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Heda7Giyorgis">
+                     <div type="textpart" subtype="commemoration" xml:id="Heda7Giyorgis" corresp="NAR0201SenGiyorgis">
                         <label>Commemoration of Giyorgis of Alexandria</label>
                      </div>
                
@@ -1014,9 +1018,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Heda12MikaelDortawos">
+                     <div type="textpart" subtype="commemoration" xml:id="Heda12MikaelDortawos">
                         <label>Commemoration of Michael, history of Dortāwos and Tāwobǝstā</label>
                      </div>
                   </div>
@@ -1042,7 +1044,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
          
-                     <div type="textpart" subtype="commemoration" xml:id="Heda14Matewos">
+                     <div type="textpart" subtype="commemoration" xml:id="Heda14Matewos" corresp="NAR0202SenQonitos">
                         <label>Commemoration of Mātewos or Bartinos</label>
                      </div>
                   </div>
@@ -1053,7 +1055,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
          
-                     <div type="textpart" subtype="commemoration" xml:id="Heda15Minas">
+                     <div type="textpart" subtype="commemoration" xml:id="Heda15Minas" corresp="NAR0203SenMinas">
                         <label>Commemoration of Minās</label>
                      </div>
                   </div>
@@ -1079,9 +1081,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
          
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Heda17DeathChrysostom">
+                     <div type="textpart" subtype="commemoration" xml:id="Heda17DeathChrysostom">
                         <label>Commemoration of the death of John Chrysostom</label>
                      </div>
          
@@ -1096,7 +1096,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
          
-                     <div type="textpart" subtype="commemoration" xml:id="Heda18Yona">
+                     <div type="textpart" subtype="commemoration" xml:id="Heda18Yona" corresp="NAR0204SenAtrakis">
                         <label>Commemoration of Yonā</label>
                      </div>
          
@@ -1154,7 +1154,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
          
                      <div type="textpart" subtype="commemoration" xml:id="Heda21Palfa">
-                        <label>Commemoration of Ṗalfā and others</label>
+                        <label>Commemoration of Ṗalfā and others (non-standard)</label>
                      </div>
                   </div>
       
@@ -1238,9 +1238,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <div type="textpart" subtype="commemoration" xml:id="Heda28Sarabamon">
                         <label>Commemoration of Sārābāmon</label>
                         <listRelation>
-                           <relation name="saws:isRelatedTo"
-                                     active="LIT4033Senkessar#Heda28Sarabamon"
-                                     passive="LIT5236MiracleSarabamun"/>
+                           <relation name="saws:isRelatedTo" active="LIT4033Senkessar#Heda28Sarabamon" passive="LIT5236MiracleSarabamun"/>
                         </listRelation>
                      </div>
                   </div>
@@ -1408,9 +1406,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Tahs10TranslatioSawiros">
+                     <div type="textpart" subtype="commemoration" xml:id="Tahs10TranslatioSawiros">
                         <label>Commemoration of the translatio of Sāwiros</label>
                      </div>
                
@@ -1451,10 +1447,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Tahs13Hanna">
-                        <label>Commemoration of the conception of Ḥannā</label>
-                     </div>
-               
                      <div type="textpart" subtype="commemoration" xml:id="Tahs13Barsenufyos">
                         <label>Commemoration of Barṣǝnufyos</label>
                      </div>
@@ -1485,7 +1477,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Tahs15Gorgoryos">
+                     <div type="textpart" subtype="commemoration" xml:id="Tahs15Gorgoryos" corresp="NAR0197SenGorgoryos">
                         <label>Commemoration of <persName ref="PRS4825Gregory"/>
                         </label>
                      </div>
@@ -1535,9 +1527,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <label>Commemoration of Lakārkǝlā and Filmunā</label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Tahs18TranslatioTito">
+                     <div type="textpart" subtype="commemoration" xml:id="Tahs18TranslatioTito">
                         <label>Commemoration of the translatio of <persName ref="PRS9534Titus"/>
                         </label>
                      </div>
@@ -1800,9 +1790,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <label>Commemoration of the circumcision</label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Terr6TranslatioElyas">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr6TranslatioElyas">
                         <label>Commemoration of the translatio of <persName ref="PRS3721Elijah"/>
                         </label>
                      </div>
@@ -1834,9 +1822,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Terr8ConsecrationMaqares">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr8ConsecrationMaqares">
                         <label>Commemoration of the consecration of the church of ʾabbā Maqārǝs</label>
                      </div>
                
@@ -1945,11 +1931,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr16Filatawos">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr16Filatawos" corresp="NAR0073Filatawos">
                         <label>Commemoration of Filātāwos</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr16Yohannes">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr16Yohannes" corresp="NAR0074Yohannes">
                         <label>Commemoration of Yoḥannǝs the patriarch</label>
                      </div>
                   </div>
@@ -1960,7 +1946,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr17Maksimos">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr17Maksimos" corresp="NAR0075Maksimos">
                         <label>Commemoration of Maksimos and Damātewos</label>
                      </div>
                   </div>
@@ -1971,7 +1957,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr18Yaqob">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr18Yaqob" corresp="NAR0076Yaqob">
                         <label>Commemoration of Yāʿqob of Nisibis</label>
                      </div>
                   </div>
@@ -1982,7 +1968,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr19Behura">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr19Behura" corresp="NAR0077Bahor">
                         <label>Commemoration of Bahor and his sister Surā</label>
                      </div>
                   </div>
@@ -1993,16 +1979,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr20Abrokoros">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr20Abrokoros" corresp="NAR0078Abrokoros">
                         <label>Commemoration of <persName ref="PRS7953Prochoru"/>
                         </label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr20Luh">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr20Luh" corresp="NAR0079Luh">
                         <label>Commemoration of ʾabbā Luḥ</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr20Behnu">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr20Behnu" corresp="NAR0081Marbehnam">
                         <label>Commemoration of Marbǝhnām and consecration of the church of Yoḥannǝs</label>
                      </div>
                   </div>
@@ -2013,16 +1999,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr21DeathMary">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr21DeathMary" corresp="NAR0082DeathMary">
                         <label>Commemoration of the death of <persName ref="PRS6819Mary"/>
                         </label>
                      </div>
+                     
+                     <div type="textpart" subtype="commemoration" xml:id="Terr21Yohannes" corresp="NAR0103Yohannes">
+                        <label>Commemoration of Yoḥannǝs (non-standard)</label>
+                     </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr21Alarya">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr21Alarya" corresp="NAR0083Alarya">
                         <label>Commemoration of ʾArʾayā</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr21Gorgoryos">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr21Gorgoryos" corresp="NAR0084Gorgoryos">
                         <label>Commemoration of <persName ref="PRS4824Gregory"/>
                         </label>
                      </div>
@@ -2034,7 +2024,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr22Entonyos">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr22Entonyos" corresp="NAR0085Entonyos">
                         <label>Commemoration of <persName ref="PRS1962Anthony"/>
                         </label>
                      </div>
@@ -2046,7 +2036,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr23Timotewos">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr23Timotewos" corresp="NAR0086Timotewos">
                         <label>Commemoration of Ṭimotewos</label>
                      </div>
                   </div>
@@ -2057,11 +2047,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr24Maryam">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr24Maryam" corresp="NAR0087Maryam">
                         <label>Commemoration of Māryām</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr24Absadi">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr24Absadi" corresp="NAR0088Absadi">
                         <label>Commemoration of ʾabbā ʾAbsādi</label>
                      </div>
                   </div>
@@ -2072,11 +2062,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr25Petros">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr25Petros" corresp="NAR0089Petros">
                         <label>Commemoration of Ṗeṭros</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr25Askila">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr25Askila" corresp="NAR0090Askila">
                         <label>Commemoration of an unnamed martyr or Saklā</label>
                      </div>
                   </div>
@@ -2087,11 +2077,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr26Martyrs">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr26Martyrs" corresp="NAR0091Martyrs">
                         <label>Commemoration of 49 martyrs of Scetis</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr26Anestasya">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr26Anestasya" corresp="NAR0092Anestasya">
                         <label>Commemoration of ʾAnǝsṭāsyā</label>
                      </div>
                   </div>
@@ -2102,21 +2092,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr27Sarabyon">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr27Sarabyon" corresp="NAR0093Sarabyon">
                         <label>Commemoration of Sarābyon</label>
                      </div>
                      
-                     <div type="textpart" subtype="commemoration" xml:id="Terr27Befam">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr27Befam" corresp="NAR0094Befam">
                         <label>Commemoration of Bǝfām</label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Terr27TranslatioTimotewos">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr27TranslatioTimotewos" corresp="NAR0095TranslatioTimotewos">
                         <label>Commemoration of the translatio of Ṭimotewos</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr27Suryal">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr27Suryal" corresp="NAR0096Suryal">
                         <label>Commemoration of Suryāl</label>
                      </div>
                   </div>
@@ -2127,12 +2115,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr28Qalementos">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr28Qalementos" corresp="NAR0097Qalementos">
                         <label>Commemoration of ʾAklemǝnṭos</label>
-                     </div>
-               
-                     <div type="textpart" subtype="commemoration" xml:id="Terr28Bifamon">
-                        <label>Commemoration of Bifāmon</label>
                      </div>
                   </div>
             
@@ -2142,11 +2126,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr29Aksani">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr29Aksani" corresp="NAR0098Aksani">
                         <label>Commemoration of ʾAksǝni</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr29Seryaqos">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr29Seryaqos" corresp="NAR0099Seryaqos">
                         <label>Commemoration of Sǝryāqos</label>
                      </div>
                   </div>
@@ -2157,7 +2141,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Terr30Pistis">
+                     <div type="textpart" subtype="commemoration" xml:id="Terr30Pistis" corresp="NAR0100Pistis">
                         <label>Commemoration of Bistis, Halǝbis, ʾAqābis and their mother Sofyā</label>
                      </div>
                   </div>
@@ -2188,14 +2172,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <label>Commemoration of the council of Constantinople</label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Yakk1ConsecrationPetros">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk1ConsecrationPetros">
                         <label>Commemoration of the consecration of the church of Ṗeṭros</label>
                      </div>
                
                      <div type="textpart" subtype="commemoration" xml:id="Yakk1Pawlos">
-                        <label>Commemoration of Ṗāwlos the Syrian</label>
+                        <label>Commemoration of Ṗāwlos the Syrian (non-standard)</label>
                      </div>
                   </div>
             
@@ -2255,7 +2237,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
                
                      <div type="textpart" subtype="commemoration" xml:id="Yakk5Abulidas">
-                        <label>Commemoration of  Bulidās</label>
+                        <label>Commemoration of  Bulidās (non-standard)</label>
                      </div>
                   </div>
             
@@ -2368,11 +2350,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk13Sargis">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk13Sargis" corresp="NAR0126SenSargis">
                         <label>Commemoration of Sargiyos</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk13Timotewos">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk13Timotewos" corresp="NAR0127SenTimotewos">
                         <label>Commemoration of ʾabbā Ṭimotewos the patriarch</label>
                      </div>
                   </div>
@@ -2383,12 +2365,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk14Sawiros">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk14Sawiros" corresp="NAR0104Sawiros">
                         <label>Commemoration of <persName ref="PRS8790Severus"/>
                         </label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk14Yaqob">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk14Yaqob" corresp="NAR0105Yaqob">
                         <label>Commemoration of Yāʿqob the patriarch of Alexandria</label>
                      </div>
                   </div>
@@ -2399,17 +2381,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk15Zakaryas">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk15Zakaryas" corresp="NAR0106SenZakarya">
                         <label>Commemoration of Zakāryā the prophet</label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Yakk15ConsecrationSebestya">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk15ConsecrationSebestya" corresp="NAR0107SenConsSebestya">
                         <label>Commemoration of the consecration of the church of the martyrs of Sǝbǝsṭyā</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk15Bafnotyos">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk15Bafnotyos" corresp="NAR0108SenBafnotyos">
                         <label>Commemoration of <persName ref="PRS2311Babnuda"/>
                         </label>
                      </div>
@@ -2421,7 +2401,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk16Elsabet">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk16Elsabet" corresp="NAR0109SenElsabet">
                         <label>Commemoration of ʾElsābeṭ</label>
                      </div>
                   </div>
@@ -2432,7 +2412,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk17Minas">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk17Minas" corresp="NAR0110SenMinas">
                         <label>Commemoration of Minās</label>
                      </div>
                   </div>
@@ -2443,7 +2423,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk18Malanyos">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk18Malanyos" corresp="NAR0111SenMalaniwos">
                         <label>Commemoration of Malāniwos the patriarch of Antiochia</label>
                      </div>
                   </div>
@@ -2454,9 +2434,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Yakk19TranslatioMarteyanos">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk19TranslatioMarteyanos" corresp="NAR0112SenMarteyanos">
                         <label>Commemoration of the translatio of Martǝyānos</label>
                      </div>
                   </div>
@@ -2467,11 +2445,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk20Petros">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk20Petros" corresp="NAR0113SenPetros">
                         <label>Commemoration of Ṗeṭros the patriarch</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk20Baselyos">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk20Baselyos" corresp="NAR0114SenBaselyos">
                         <label>Commemoration of Bāsǝlyos, Tāʾodǝs and Ṭimotewos</label>
                      </div>
                   </div>
@@ -2482,22 +2460,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk21Gabreel">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk21Gabreel" corresp="NAR0115SenGabreel">
                         <label>Commemoration of Gabrǝʾel the patriarch</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk21Zakaryas">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk21Zakaryas" corresp="NAR0116SenZakaryas">
                         <label>Commemoration of Zakāryās the bishop</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk21Onisimos">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk21Onisimos" corresp="NAR0117SenAwkensimon">
                         <label>Commemoration of ʾAwkǝnsimon</label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Yakk21GabreelEthiopia">
-                        <label>Commemoration of Gabrǝʾel, Patriarch of Ethiopia, and of Marqorewos of Dabra Ḥaraykǝwā</label>
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk21GabreelEthiopia">
+                        <label>Commemoration of Gabrǝʾel, Patriarch of Ethiopia, and of Marqorewos of Dabra Ḥaraykǝwā (non-standard)</label>
                      </div>
                   </div>
             
@@ -2507,7 +2483,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk22Maruna">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk22Maruna" corresp="NAR0118SenMaruna">
                         <label>Commemoration of ʾabbā Mārunā</label>
                      </div>
                   </div>
@@ -2518,7 +2494,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk23Awsabyos">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk23Awsabyos" corresp="NAR0119Awsenyos">
                         <label>Commemoration of ʾAwsǝnyos</label>
                      </div>
                   </div>
@@ -2529,20 +2505,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk24Agabitos">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk24Agabitos" corresp="NAR0120SenAgabitos">
                         <label>Commemoration of ʾAgābiṭos</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk24Timotewos">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk24Timotewos" corresp="NAR0129SenTimMin">
                         <label>Commemoration of Ṭimotewos the bishop of Gāzā</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk24Minas">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk24Minas" corresp="NAR0129SenTimMin">
                         <label>Commemoration of Minās</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk24TimMinas">
-                        <label>Commemoration of Ṭimotewos and Minās</label>
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk24TimMinas" corresp="NAR0129SenTimMin">
+                        <label>Commemoration of Ṭimotewos and Minās (non-standard)</label>
                      </div>
                   </div>
             
@@ -2552,11 +2528,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk25Awsyos">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk25Awsyos" corresp="NAR0121SenArsinos">
                         <label>Commemoration of ʾArsinos, Filmona and Lekiyā</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk25Qona">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk25Qona" corresp="NAR0128SenQona">
                         <label>Commemoration of a deacon and Minās</label>
                      </div>
                   </div>
@@ -2567,11 +2543,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk26Hose">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk26Hose" corresp="NAR0122SenHose">
                         <label>Commemoration of Hoseʿ</label>
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk26Sadoq">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk26Sadoq" corresp="NAR0130SenSadoq">
                         <label>Commemoration of Sādoq</label>
                      </div>
                   </div>
@@ -2582,7 +2558,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk27Ewestatewos">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk27Ewestatewos" corresp="NAR0123SenEnsegtewos">
                         <label>Commemoration of ʾEnsǝgtewos, patriarch of Antioch</label>
                      </div>
                   </div>
@@ -2593,7 +2569,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk28Tewodros">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk28Tewodros" corresp="NAR0131SenTewodros">
                         <label>Commemoration of Tewodros the Roman</label>
                      </div>
                   </div>
@@ -2604,7 +2580,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk29Bolikarbos">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk29Bolikarbos" corresp="NAR0124SenBalikeryos">
                         <label>Commemoration of Bālikǝryos</label>
                      </div>
                   </div>
@@ -2615,7 +2591,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Yakk30Yohannes">
+                     <div type="textpart" subtype="commemoration" xml:id="Yakk30Yohannes" corresp="NAR0125SenBaptist">
                         <label>Commemoration of the invention of the head of <persName ref="PRS5741Johnthe"/>
                         </label>
                      </div>
@@ -2634,12 +2610,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             
             <div type="textpart" xml:id="SecondHalf">
                <label>Second half of the year</label>
-               <note>This record lists all commemorations attested at least once in <ref type="mss" corresp="EMIP01859"/>, <ref type="mss" corresp="EMML4398"/>
-                  and <!--<ref type="mss" corresp="EMML6952"/>-->
-                  the only known witnesses of
-                  this recension containing the second half of the year. The commemorations of each manuscript are described in the
+               <note>This record lists all commemorations which are attested in at least one of all currently known witnesses of group B for the second half of the year:
+                  <ref type="mss" corresp="EMIP01859"/>, <ref type="mss" corresp="EMML4398"/>,
+                  <ref type="mss" corresp="EMML6952"/>, <ref type="mss" corresp="EStzm002"/>, <ref type="mss" corresp="ESqdq004"/>, 
+                  and <ref type="mss" corresp="ESam019"/>. Commemorations which are not common to all witnesses of the respective day are marked 
+                  as non-standard. The commemorations of each manuscript are described in the
                   respective manuscript records.</note>
-               <!--the following arrangement of the textparts and text of Maggābit to Ṗāgwǝmen follows EMIP01859-->
                
                <div type="textpart" subtype="month" xml:id="Maggabit" n="7">
                   <label>Commemorative notices for the month of <foreign xml:lang="gez">Maggābit</foreign>
@@ -2652,40 +2628,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                
                   <div type="textpart" subtype="day" xml:id="Magg1">
                      <label>
-                        <date>1st <foreign xml:lang="gez">Maggābit</foreign>
+                        <date ref="ethiocal:Maggabit1">1st <foreign xml:lang="gez">Maggābit</foreign>
                         </date>
                      </label>
                   
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg1Barkisos"
-                          n="1"
-                          corresp="NAR0019SBarkisos">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg1Barkisos" n="1" corresp="NAR0019SBarkisos">
                         <label>Commemoration of <persName ref="PRS12017Barkisos"/>
                         </label>
                      </div>
                      
-                     <div type="textpart"
-                        subtype="commemoration"
-                        xml:id="Magg1Bishop"
-                        n="2">
-                        <label>Commemoration of a bishop
+                     <div type="textpart" subtype="commemoration" xml:id="Magg1Marqora" n="2" corresp="NAR0072Marqora">
+                        <label>Commemoration of Marqorā (non-standard)
                         </label>
                      </div>
                      
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg1Eskenderos"
-                          n="3"
-                          corresp="NAR0020SEskenderos">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg1Eskenderos" n="3" corresp="NAR0020SEskenderos">
                         <label>Commemoration of <persName ref="PRS12019Eskenderos"/>
                         </label>
                      </div>
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg1Marqoryos"
-                          n="4"
-                          corresp="NAR0021SMarqoryos">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg1Marqoryos" n="4" corresp="NAR0021SMarqoryos">
                         <label>Commemoration of <persName ref="PRS12018Marqoryos"/>
                         </label>
                      </div>
@@ -2698,10 +2659,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </date>
                   </label>
                
-                  <div type="textpart"
-                       subtype="commemoration"
-                       xml:id="Magg2Makrawi"
-                       n="1">
+                  <div type="textpart" subtype="commemoration" xml:id="Magg2Makrawi" n="1" corresp="NAR0022Makrawi">
                      <label>Commemoration of <persName ref="PRS12020Makrawi"/>
                      </label>
                   </div>
@@ -2713,18 +2671,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg3Qozmos"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg3Qozmos" n="1" corresp="NAR0023Qozmos">
                         <label>Commemoration of <persName ref="PRS3203CosmasI"/>
                         </label>
                      </div>
             
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg3Barfonyos"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg3Barfonyos" n="2" corresp="NAR0024Barfonyos">
                         <label>Commemoration of <persName ref="PRS12021Barfonyos"/>
                         </label>
                      </div>
@@ -2736,17 +2688,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg4Council"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg4Council" n="1" corresp="NAR0025CouncilGazira">
                         <label>Commemoration of the Council of Ǧazīra Banī ʿUmar</label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg4Hanelyos"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg4Hanelyos" n="2" corresp="NAR0026Habolyos">
                         <label>Commemoration of <persName ref="PRS12022Hanelyos"/>
                         </label>
                      </div>
@@ -2758,19 +2704,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg5Sarabamun"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg5Sarabamun" n="1" corresp="NAR0027Sarabamon">
                         <label>Commemoration of <persName ref="PRS12023Sarabemon"/>
                         </label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg5Odokiya"
-                          corresp="NAR0018SOdokiya"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg5Odokiya" corresp="NAR0018SOdokiya" n="2">
                         <label>Commemoration of <persName ref="PRS12024Odokiya"/>
                         </label>
                      </div>
@@ -2782,19 +2721,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg6Diyosqoros"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg6Diyosqoros" corresp="NAR0028Diyosqoros" n="1">
                         <label>Commemoration of <persName ref="PRS12025Diyosqoros"/>
                         </label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg6Tewodotos"
-                          n="2">
-                        <label>Commemoration of <persName ref="PRS12026Tewodotos"/>
+                     <div type="textpart" subtype="commemoration" xml:id="Magg6Tewodotos" corresp="NAR0029Tewodotos" n="2">
+                        <label>Commemoration of <persName ref="PRS12026Tewodotos"/> (non-standard)
                         </label>
                      </div>
                   </div>
@@ -2805,10 +2738,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg7Filmon"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg7Filmon" corresp="NAR0030Filmon" n="1">
                         <label>Commemoration of <persName ref="PRS12027Filmon"/> and  <persName ref="PRS12046Ablanyos"/>
                         </label>
                      </div>
@@ -2820,26 +2750,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg8Aryanos"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg8Aryanos" corresp="NAR0031Aryanos" n="1">
                         <label>Commemoration of <persName ref="PRS12031Aryanos"/>
                         </label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg8Matyas"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg8Matyas" corresp="NAR0032Matyas" n="2">
                         <label>Commemoration of <persName ref="PRS11023Mathias"/>
                         </label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg8Yulyanos"
-                          n="3">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg8Yulyanos" corresp="NAR0033Yolyanos" n="3">
                         <label>Commemoration of <persName ref="PRS12032Julian"/>
                         </label>
                      </div>
@@ -2851,18 +2772,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg9Andyanos"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg9Andyanos" corresp="NAR0034Endreyanos" n="1">
                         <label>Commemoration of <persName ref="PRS12033Andyanos"/>, his wife, 
                         <persName ref="PRS12034Awsabyos"/>, ʾArmā and forty martyrs</label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg9Kuten"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg9Kuten" corresp="NAR0035Kuten" n="2">
                         <label>Commemoration of <persName ref="PRS12035Kuten"/>
                         </label>
                      </div>
@@ -2874,10 +2789,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg10Cross"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg10Cross" corresp="NAR0036Cross" n="1">
                         <label>Invention of the cross</label>
                      </div>
                   </div>
@@ -2888,10 +2800,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg11Basilaos"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg11Basilaos" corresp="NAR0037Baselaos" n="1">
                         <label>Commemoration of <persName ref="PRS12047Basilaos"/>
                         </label>
                      </div>
@@ -2903,19 +2812,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg12Demetreyos"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg12Demetreyos" corresp="NAR0038Demetreyos" n="1">
                         <label>Commemoration of  <persName ref="PRS3499Demetriu"/>
                         </label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg12Malazi"
-                          n="2">
-                        <label>Commemoration of  Malāki</label>
+                     <div type="textpart" subtype="commemoration" xml:id="Magg12Malazi" corresp="NAR0039Malaki" n="2">
+                        <label>Commemoration of  Malāki  (non-standard)</label>
                      </div>
                   </div>
             
@@ -2925,29 +2828,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg13Sebestya"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg13Sebestya" corresp="NAR0040Sebestya" n="1">
                         <label>Commemoration of the <persName ref="PRS12049MartyrsSebaste"/>
                         </label>
                      </div>
                   
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg13Diyonasyos"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg13Diyonasyos" corresp="NAR0041Diyonasyos" n="2">
                         <label>Commemoration of <persName ref="PRS11854Dionysios"/>
                         </label>
                      </div>
-               
-                     <!--<div type="textpart"
-                       subtype="commemoration"
-                       xml:id="Magg13Qerellos"
-                       n="2">
-                     <label>Commemoration of <persName ref="PRS3257CyrilII"/>
-                     </label>
-                  </div>-->
                   </div>
             
                   <div type="textpart" subtype="day" xml:id="Magg14">
@@ -2956,26 +2845,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg14Sinoda"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg14Sinoda" corresp="NAR0042Sinoda" n="1">
                         <label>Commemoration of <persName ref="PRS12050Sinoda"/>
                         </label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg14Awganyos"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg14Awganyos" corresp="NAR0043Awganyos" n="2">
                         <label>Commemoration of <persName ref="PRS12051Awganyos"/>, <persName ref="PRS12052Awganudros"/>, <persName ref="PRS12053Alibidyos"/>
                         </label>
                      </div>
                   
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg14Qerellos"
-                          n="3">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg14Qerellos" corresp="NAR0044Qerellos" n="3">
                         <label>Commemoration of <persName ref="PRS3257CyrilII"/>
                         </label>
                      </div>
@@ -2987,18 +2867,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg15Sara"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg15Sara" corresp="NAR0045Sara" n="1">
                         <label>Commemoration of <persName ref="PRS12054Sara"/>
                         </label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg15Helyanos"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg15Helyanos" corresp="NAR0046Elyanos" n="2">
                         <label>Commemoration of <persName ref="PRS12080Helyanos"/>
                         </label>
                      </div>
@@ -3010,15 +2884,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg16Mikael"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg16Mikael" corresp="NAR0047Mikael" n="1">
                         <label>Commemoration of <persName ref="PRS7051Michael"/>
                         </label>
                      </div>
-               
-               
                   </div>
             
                   <div type="textpart" subtype="day" xml:id="Magg17">
@@ -3027,18 +2896,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg17Alazar"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg17Alazar" corresp="NAR0048Alazar" n="1">
                         <label>Commemoration of <persName ref="PRS6208Lazarus"/>
                         </label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg17Giyorgis"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg17Giyorgis" corresp="NAR0049Giyorgis" n="2">
                         <label>Commemoration of Giyorgis, Talāsyos and Yosef</label>
                      </div>
                   </div>
@@ -3048,10 +2911,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <date>18th <foreign xml:lang="gez">Maggābit</foreign>
                         </date>
                      </label>
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg18Isderos"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg18Isderos" corresp="NAR0050Isderos" n="1">
                         <label>Commemoration of ʾIsdǝros</label>
                      </div>
                   </div>
@@ -3062,17 +2922,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg19Arestupawlos"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg19Arestupawlos" corresp="NAR0051Arestupawlos" n="1">
                         <label>Commemoration of ʾArǝsṭuṗāwlos</label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg19Seven"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg19Seven" corresp="NAR0052Seven" n="2">
                         <label>Commemoration of seven martyrs</label>
                      </div>
                   </div>
@@ -3083,25 +2937,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg20Mikael"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg20Mikael" corresp="NAR0053Mikael20" n="1">
                         <label>Commemoration of Mikāʾel</label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg20Alazar"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg20Alazar" corresp="NAR0054Alazar" n="2">
                         <label>Commemoration of <persName ref="PRS6208Lazarus"/>
                         </label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg20Asqaran"
-                          n="3">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg20Asqaran" corresp="NAR0055Asqaran" n="3">
                         <label>Consecration of the Church of ʾAsqarān</label>
                      </div>
                   </div>
@@ -3112,25 +2957,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg21Anointing"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg21Anointing" corresp="NAR0056Anointing" n="1">
                         <label>Commemoration of the Anointing of Jesus</label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg21Alazar"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg21Alazar" corresp="NAR0057AlazarPriests" n="2">
                         <label>Commemoration of the priests' conspiracy to kill <persName ref="PRS6208Lazarus"/>
                         </label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg21Tewodros"
-                          n="3">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg21Tewodros" corresp="NAR0058Tewodros" n="3">
                         <label>Commemoration of Tewodros and Ṭimotewos</label>
                      </div>
                   </div>
@@ -3141,10 +2977,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg22Qerellos"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg22Qerellos" corresp="NAR0059Qerellos2" n="1">
                         <label>Commemoration of Qerǝllos</label>
                      </div>
                   </div>
@@ -3155,10 +2988,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg23Danel"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg23Danel" corresp="NAR0060Danel" n="1">
                         <label>Commemoration of <persName ref="PRS3337Daniel"/>
                         </label>
                      </div>
@@ -3171,10 +3001,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg24Maqares"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg24Maqares" corresp="NAR0061Maqares" n="1">
                         <label>Commemoration of <persName ref="PRS6424Macarius"/>
                         </label>
                      </div>
@@ -3186,10 +3013,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <date>25th <foreign xml:lang="gez">Maggābit</foreign>
                         </date>
                      </label>
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg25Onisifores"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg25Onisifores" corresp="NAR0062Onisifores" n="1">
                         <label>Commemoration of ʾOnisiforǝs</label>
                      </div>
                   </div>
@@ -3199,10 +3023,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <date>26th <foreign xml:lang="gez">Maggābit</foreign>
                         </date>
                      </label>
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg26Iyoparaqesya"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg26Iyoparaqesya" corresp="NAR0063Iyoparaqesya" n="1">
                         <label>Commemoration of ʾIyoṗarāqǝsyā</label>
                      </div>
                   </div>
@@ -3213,18 +3034,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg27Maqares"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg27Maqares" corresp="NAR0064Maqares2" n="1">
                         <label>Commemoration of <persName ref="PRS6692Maqares"/>
                         </label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg27Crucifixion"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg27Crucifixion" corresp="NAR0065Crucifixion" n="2">
                         <label>Commemoration of the Crucifixion</label>
                      </div>
                   </div>
@@ -3234,10 +3049,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <date>28th <foreign xml:lang="gez">Maggābit</foreign>
                         </date>
                      </label>
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg28Qwastantinos"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg28Qwastantinos" corresp="NAR0066Qwastantinos" n="1">
                         <label>Commemoration of <persName ref="PRS3175Constant"/>
                         </label>
                      </div>
@@ -3248,18 +3060,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <date>29th <foreign xml:lang="gez">Maggābit</foreign>
                         </date>
                      </label>
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg29Annunciation"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg29Annunciation" corresp="NAR0067Annunciation" n="1">
                         <label>Commemoration of the Annunciation</label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg29Resurrection"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg29Resurrection" corresp="NAR0068Resurrection" n="2">
                         <label>Commemoration of the Resurrection</label>
+                     </div>
+                     
+                     <div type="textpart" subtype="commemoration" xml:id="Magg29AnRe" n="3">
+                        <label>Commemoration of the Annunciation and Resurrection (non-standard)</label>
                      </div>
                   </div>
             
@@ -3269,26 +3079,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg30Gabriel"
-                          n="1">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg30Gabriel" corresp="NAR0069Gabreel" n="1">
                         <label>Commemoration of <persName ref="PRS4377Gabriel"/>
                         </label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg30Samson"
-                          n="2">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg30Samson" corresp="NAR0070Samson" n="2">
                         <label>Commemoration of <persName ref="PRS8469Samson"/>
                         </label>
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Magg30Yaqob"
-                          n="3">
+                     <div type="textpart" subtype="commemoration" xml:id="Magg30Yaqob" corresp="NAR0071Yaqob" n="3">
                         <label>Commemoration of the ascension of Yāʿqob</label>
                      </div>
                   </div>
@@ -3502,7 +3303,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
                
                      <div type="textpart" subtype="commemoration" xml:id="Miya13Demdeyos">
-                        <label>Commemoration of Dǝmdǝyos</label>  
+                        <label>Commemoration of Dǝmdǝyos (non-standard)</label>  
                      </div>
                   </div>
             
@@ -3618,17 +3419,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
                
                      <div type="textpart" subtype="commemoration" xml:id="Miya22Eskenderos">
-                        <label>Commemoration of <persName ref="PRS1658Alexande"/>
+                        <label>Commemoration of <persName ref="PRS1658Alexande"/> (non-standard)
                         </label>  
                      </div>
                
                      <div type="textpart" subtype="commemoration" xml:id="Miya22Michael">
-                        <label>Commemoration of <persName ref="PRS12091MichaelII"/>
+                        <label>Commemoration of <persName ref="PRS12091MichaelII"/> (non-standard)
                         </label>  
                      </div>
                   
                      <div type="textpart" subtype="commemoration" xml:id="Miya22Marqos">
-                        <label>Commemoration of Mārqos, Patriarch of Alexandria
+                        <label>Commemoration of Mārqos, Patriarch of Alexandria (non-standard)
                      </label>  
                      </div>
                
@@ -3754,13 +3555,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <label>Commemorative notices for the month of <foreign xml:lang="gez">Gǝnbot</foreign>
                   </label>
                  
+                 <div type="textpart" subtype="commemoration" xml:id="GenbIntro" corresp="NAR0182SenIntroGen">
+                    <label>Introduction for <foreign xml:lang="gez">Gǝnbot</foreign></label>  
+                 </div>
+                 
                   <div type="textpart" subtype="chapter" xml:id="Genb1">
                      <label>
                         <date>1st <foreign xml:lang="gez">Gǝnbot</foreign>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb1Mary">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb1Mary" corresp="NAR0132SenMary">
                         <label>Commemoration of the birth of <persName ref="PRS6819Mary"/>
                         </label>  
                      </div>
@@ -3772,12 +3577,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb2Iyob">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb2Iyob" corresp="NAR0133SenJob">
                         <label>Commemoration of <persName ref="PRS5691Job"/>
                         </label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb2Tewodros">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb2Tewodros" corresp="NAR0134SenTewodros">
                         <label>Commemoration of Taʾodoros</label>  
                      </div>
                   </div>
@@ -3788,7 +3593,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb3Yason">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb3Yason" corresp="NAR0135SenYason">
                         <label>Commemoration of Yonāson</label>  
                      </div>
                   </div>
@@ -3799,7 +3604,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb4Yohannes">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb4Yohannes" corresp="NAR0136SenYohannes">
                         <label>Commemoration of <persName ref="PRS12092JohnI"/>
                         </label>  
                      </div>
@@ -3811,7 +3616,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb5Ermeyas">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb5Ermeyas" corresp="NAR0137SenJeremiah">
                         <label>Commemoration of <persName ref="PRS5680Jeremiah"/>
                         </label>  
                      </div>
@@ -3823,15 +3628,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb6Yeshaq">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb6Yeshaq" corresp="NAR0138SenYeshaq">
                         <label>Commemoration of Yǝsḥaq of Dafrā</label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb6Maqares">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb6Maqares" corresp="NAR0139SenMaqaryos">
                         <label>Commemoration of ʾabbā Maqāryos</label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb6Babnuda">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb6Babnuda" corresp="NAR0140SenBabnuda">
                         <label>Commemoration of ʾabbā Babnudā</label>  
                      </div>
                   </div>
@@ -3842,7 +3647,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb7Atnasyos">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb7Atnasyos" corresp="NAR0141SenAthanasius">
                         <label>Commemoration of <persName ref="PRS2209Athanasi"/>
                         </label>  
                      </div>
@@ -3854,16 +3659,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb8Yohannes">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb8Yohannes" corresp="NAR0142SenYohannes">
                         <label>Commemoration of Yoḥannǝs of Sǝnḥut</label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb8Ascension">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb8Ascension" corresp="NAR0143SenAscension">
                         <label>Commemoration of the ascension of <persName ref="PRS5684JesusCh"/>
                         </label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb8Danel">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb8Danel" corresp="NAR0144SenDanel">
                         <label>Commemoration of ʾabbā Dānʾel</label>  
                      </div>
                   </div>
@@ -3874,7 +3679,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb9Eleni">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb9Eleni" corresp="NAR0145SenHelena">
                         <label>Commemoration of <persName ref="PRS5276Helena"/>
                         </label>  
                      </div>
@@ -3886,7 +3691,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb10Youths">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb10Youths" corresp="NAR0146SenYouths">
                         <label>Commemoration of <persName ref="PRS11288AnAzMi"/>
                         </label>  
                      </div>
@@ -3898,11 +3703,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb11Taokelya">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb11Taokelya" corresp="NAR0147SenTaakla">
                         <label>Commemoration of Taʾaklā</label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb11Bafnotyos">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb11Bafnotyos" corresp="NAR0148SenBafnotyos">
                         <label>Commemoration of Bafnotyos</label>  
                      </div>
                   </div>
@@ -3913,13 +3718,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb12Chrysostom">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb12Chrysostom" corresp="NAR0149SenChrysostom">
                         <label>Commemoration of <persName ref="PRS5720JohnChr"/>
                         </label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb12Cross">
-                        <label>Commemoration of an apparition of the cross in Jerusalem</label>  
+                     <div type="textpart" subtype="commemoration" xml:id="Genb12Cross" corresp="NAR0150SenCross">
+                        <label>Commemoration of an apparition of the cross in Jerusalem (non-standard)</label>  
                      </div>
                   </div>
             
@@ -3929,7 +3734,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb13Arsanyos">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb13Arsanyos" corresp="NAR0151SenArsanyos">
                         <label>Commemoration of ʾArsānyos</label>  
                      </div>
                   </div>
@@ -3940,13 +3745,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb14Pakwemis">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb14Pakwemis" corresp="NAR0152SenPachomius">
                         <label>Commemoration of <persName ref="PRS7696Pachomiu"/>
                         </label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb14Bimakos">
-                        <label>Commemoration of Abimākos</label>  
+                     <div type="textpart" subtype="commemoration" xml:id="Genb14Bimakos" corresp="NAR0153SenAbimakos">
+                        <label>Commemoration of ʾAbimākos</label>  
                      </div>
                   </div>
             
@@ -3956,16 +3761,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb15Semon">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb15Semon" corresp="NAR0154Semon">
                         <label>Commemoration of <persName ref="PRS11431Simon"/>
                         </label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb15Danadera">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb15Danadera" corresp="NAR0155SenDadera">
                         <label>Commemoration of 400 martyrs of Dādǝra</label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb15Minas">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb15Minas" corresp="NAR0156SenMes">
                         <label>Commemoration of Mes the deacon</label>  
                      </div>
                   </div>
@@ -3976,7 +3781,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb16Yohannes">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb16Yohannes" corresp="NAR0157SenYohannes">
                         <label>Commemoration of <persName ref="PRS5695John"/>
                         </label>  
                      </div>
@@ -3988,7 +3793,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb17Epefanyos">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb17Epefanyos" corresp="NAR0158SenEpiphanius">
                         <label>Commemoration of <persName ref="PRS3828Epiphani"/>
                         </label>  
                      </div>
@@ -4000,7 +3805,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb18Gaorgi">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb18Gaorgi" corresp="NAR0159SenGargaha">
                         <label>Commemoration of ʾabbā Gārgāha</label>  
                      </div>
                   </div>
@@ -4011,11 +3816,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb19Yeshaq">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb19Yeshaq" corresp="NAR0160SenYeshaq">
                         <label>Commemoration of ʾabbā Yǝsḥaq</label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb19Isderos">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb19Isderos" corresp="NAR0161SenAysderos">
                         <label>Commemoration of ʾAysdǝros</label>  
                      </div>
                   </div>
@@ -4026,7 +3831,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb20Amonyos">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb20Amonyos" corresp="NAR0162SenAmonyos">
                         <label>Commemoration of ʾabbā ʾAmonyos</label>  
                      </div>
                   </div>
@@ -4037,12 +3842,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb21Mary">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb21Mary" corresp="NAR0163SenMary">
                         <label>Commemoration of <persName ref="PRS6819Mary"/>
                         </label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb21Martiyanos">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb21Martiyanos" corresp="NAR0164SenMarteyanos">
                         <label>Commemoration of Martǝyānos</label>  
                      </div>
                   </div>
@@ -4053,7 +3858,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb22Anderniqos">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb22Anderniqos" corresp="NAR0165SenAndaroniqos">
                         <label>Commemoration of ʾAndaroniqos</label>  
                      </div>
                   </div>
@@ -4064,16 +3869,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb23Yulyas">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb23Yulyas" corresp="NAR0166SenYulyanos">
                         <label>Commemoration of Yulyānos</label>  
                      </div>
             
-                     <div type="textpart" subtype="commemoration" xml:id="Genb23Yulyanos">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb23Yulyanos" corresp="NAR0167SenYulyanos2">
                         <label>Commemoration of Yulyānos and his mother</label>  
                      </div>
                   
-                     <div type="textpart" subtype="commemoration" xml:id="Genb23Miracle">
-                        <label>Commemoration of a miracle by ʾAbuqalamsis</label>  
+                     <div type="textpart" subtype="commemoration" xml:id="Genb23Miracle" corresp="NAR0168SenAbuqalamsis">
+                        <label>Commemoration of a miracle by ʾAbuqalamsis (non-standard)</label>  
                      </div>
                   </div>
             
@@ -4083,11 +3888,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb24Egypt">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb24Egypt" corresp="NAR0169SenEgypt">
                         <label>Commemoration of the arrival of <persName ref="PRS5684JesusCh"/> in Egypt</label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb24Enbaqom">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb24Enbaqom" corresp="NAR0170SenHabakkuk">
                         <label>Commemoration of  <persName ref="PRS4914Habakkuk"/>
                         </label>  
                      </div>
@@ -4099,12 +3904,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb25Kolotos">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb25Kolotos" corresp="NAR0171SenKolotos">
                         <label>Commemoration of Koloṭos</label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb25Hiruda">
-                        <label>Commemoration of Hirodā</label>  
+                     <div type="textpart" subtype="commemoration" xml:id="Genb25Hiruda" corresp="NAR0172SenHiroda">
+                        <label>Commemoration of Hirodā (non-standard)</label>  
                      </div>
                   </div>
             
@@ -4114,7 +3919,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb26Tomas">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb26Tomas" corresp="NAR0173SenThomas">
                         <label>Commemoration of <persName ref="PRS9496Thomas"/>
                         </label>  
                      </div>
@@ -4126,12 +3931,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb27Yohannes">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb27Yohannes" corresp="NAR0174SenYohannes">
                         <label>Commemoration of <persName ref="PRS5700JohnII"/>
                         </label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb27Alazar">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb27Alazar" corresp="NAR0175SenLazarus">
                         <label>Commemoration of <persName ref="PRS6208Lazarus"/>
                         </label>  
                      </div>
@@ -4143,7 +3948,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb28Tranlatio">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb28Tranlatio" corresp="NAR0176SenEpiphanius">
                         <label>Commemoration of the translatio of the body of <persName ref="PRS3828Epiphani"/>
                         </label>  
                      </div>
@@ -4155,12 +3960,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb29Birth">
-                        <label>Commemoration of the birth of <persName ref="PRS5684JesusCh"/>
+                     <div type="textpart" subtype="commemoration" xml:id="Genb29Birth" corresp="NAR0177SenBirth">
+                        <label>Commemoration of the birth of <persName ref="PRS5684JesusCh"/> (non-standard)
                         </label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb29Semon">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb29Semon" corresp="NAR0178SenSemon">
                         <label>Commemoration of ʾabbā Sǝmʿon</label>  
                      </div>
                   </div>
@@ -4171,17 +3976,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb30Mikael">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb30Mikael" corresp="NAR0179SenMichael">
                         <label>Commemoration of <persName ref="PRS7053Michael"/>
                         </label>  
                      </div>
                
-                     <div type="textpart" subtype="commemoration" xml:id="Genb30Qoros">
+                     <div type="textpart" subtype="commemoration" xml:id="Genb30Qoros" corresp="NAR0180SenQoros">
                         <label>Commemoration of Qoros</label>  
                      </div>
                   </div>
             
-                  <div type="textpart" subtype="commemoration" xml:id="GenbSubscription">
+                 <div type="textpart" subtype="commemoration" xml:id="GenbSubscription" corresp="NAR0181SenGenSubscription">
                      <label>Subscription for <foreign xml:lang="gez">Gǝnbot</foreign>
                      </label>  
                   </div>
@@ -4350,7 +4155,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
                
                      <div type="textpart" subtype="commemoration" xml:id="Sane11Consecration">
-                        <label>Commemoration of the consecration of the church of the 40 martyrs in Alexandria</label>  
+                        <label>Commemoration of the consecration of the church of the 40 martyrs in Alexandria (non-standard)</label>  
                      </div>
                   </div>
             
@@ -4361,17 +4166,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </label>
                   
                      <div type="textpart" subtype="commemoration" xml:id="Sane12Yostos">
-                        <label>Commemoration of Yǝsṭos</label>  
+                        <label>Commemoration of Yǝsṭos (non-standard)</label>  
                         <!--Q1276477-->
                      </div>
                
                      <div type="textpart" subtype="commemoration" xml:id="Sane12Mikael">
-                        <label>Commemoration of <persName ref="PRS7049Michael"/>
+                        <label>Commemoration of <persName ref="PRS7049Michael"/> (non-standard)
                         </label>  
                      </div>
                
                      <div type="textpart" subtype="commemoration" xml:id="Sane12Awfimya">
-                        <label>Commemoration of ʾAfomyā and the institution of the feast of <persName ref="PRS7049Michael"/>
+                        <label>Commemoration of ʾAfomyā and the institution of the feast of <persName ref="PRS7049Michael"/> (non-standard)
                         </label>  
                      </div>
                   </div>
@@ -4739,7 +4544,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
                
                      <div type="textpart" subtype="commemoration" xml:id="Haml8Aberoh">
-                        <label>Commemoration of ʾAbirom and ʾAtām</label>  
+                        <label>Commemoration of ʾAbirom and ʾAtām (non-standard)</label>  
                      </div>
                
                      <div type="textpart" subtype="commemoration" xml:id="Haml8Belane">
@@ -4751,7 +4556,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
                
                      <div type="textpart" subtype="commemoration" xml:id="Haml8Kiros">
-                        <label>Commemoration of Gerās</label>  
+                        <label>Commemoration of Gerās (non-standard)</label>  
                      </div>
                   </div>
             
@@ -4780,9 +4585,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <label>Commemoration of Tāʾodros, bishop of the Pentapolis</label>  
                      </div>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Haml10TewodrosQorontos">
+                     <div type="textpart" subtype="commemoration" xml:id="Haml10TewodrosQorontos">
                         <label>Commemoration of Taʾudrās, bishop of Qorontos</label>  
                      </div>
                   </div>
@@ -4863,7 +4666,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </label>
                
                      <div type="textpart" subtype="commemoration" xml:id="Haml16Yohannes">
-                        <label>Commemoration of Yoḥannǝs wangelu za-warq</label>  
+                        <label>Commemoration of <persName ref="PRS12917JohnRome"/></label>  
                      </div>
                   </div>
             
@@ -4965,7 +4768,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
                
                      <div type="textpart" subtype="commemoration" xml:id="Haml24Semon">
-                        <label>Commemoration of Sǝmʿon</label>  
+                        <label>Commemoration of Sǝmʿon (non-standard)</label>  
                         <!--Q1262913-->
                      </div>
                   </div>
@@ -5072,6 +4875,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <label>Commemoration of Marqorā and ʾAfrem</label>  
                      </div>
                   </div>
+                  
+                  <div type="textpart" subtype="chapter" xml:id="HamlSubscription">
+                     <label>
+                        <date>Subscription for<foreign xml:lang="gez">Ḥamle</foreign>
+                        </date>
+                     </label>
+                  </div>
                </div>
             
             
@@ -5163,9 +4973,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Naha7AnnunciationMary">
+                     <div type="textpart" subtype="commemoration" xml:id="Naha7AnnunciationMary">
                         <label>Commemoration of the annunciation of Mary's birth</label>  
                      </div>
                   
@@ -5174,7 +4982,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
                   
                      <div type="textpart" subtype="commemoration" xml:id="Naha7Timotewos">
-                        <label>Commemoration of Ṭimotewos the patriarch</label>  
+                        <label>Commemoration of Ṭimotewos the patriarch (non-standard)</label>  
                      </div>
                   </div>
             
@@ -5211,7 +5019,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </div>
                
                      <div type="textpart" subtype="commemoration" xml:id="Naha10Bikabes">
-                        <label>Commemoration of Yoḥannǝs</label>  
+                        <label>Commemoration of Yoḥannǝs (non-standard)</label>  
                      </div>
                   </div>
             
@@ -5246,9 +5054,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <date>13rd <foreign xml:lang="gez">Naḥāse</foreign>
                         </date>
                      </label>
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Naha13Transfiguration">
+                     <div type="textpart" subtype="commemoration" xml:id="Naha13Transfiguration">
                         <label>Commemoration of the transfiguration of <persName ref="PRS5684JesusCh"/>
                         </label>  
                      </div>
@@ -5317,9 +5123,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </date>
                      </label>
                
-                     <div type="textpart"
-                          subtype="commemoration"
-                          xml:id="Naha19TranslatioMaqares">
+                     <div type="textpart" subtype="commemoration" xml:id="Naha19TranslatioMaqares">
                         <label>Commemoration of the translation of Maqāryos</label>  
                      </div>
                   </div>

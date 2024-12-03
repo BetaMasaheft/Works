@@ -1,23 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT4991Months"
-     xml:lang="en"
-     type="work">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4991Months" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Names of the months in Ethiopic, Latin, Hebrew, Arabic, and Coptic</title>
+                <title xml:lang="gez" xml:id="t1">Names of the months in Ethiopic and various other languages, such as
+                   Arabic, Coptic, Greek, Latin, Hebrew etc. (General record)</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DE"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine multimediale
                             Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
@@ -31,8 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -41,29 +35,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>Lists of names of the months in various
+                  languages and their Ethiopic correspondances, of various origin.
+                  The range of languages, apart from Ethiopic, may be different (in rarest cases,
+                  one non-Ethiopian language only).
+                  The terms may be treated in one continuous text or in several separate register-like texts.
+                  The lists frequently include some calendrical
+                  information.
+                  The lists can be inserted in treatises on lexicon (<foreign xml:lang="gez">Sawāsǝw</foreign>), or
+                  on calendar and computus, or transmitted as additional notes.
+                </p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="Other"/>
                 </keywords>
             </textClass>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DE" when="2018-06-29">Created entity</change>
+              <change who="DN" when="2022-10-11">Revision, upgrading to general record</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography"/>
-         <!---->
+
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT4991Months" passive="BNFabb134"/>
+                    <relation name="lawd:hasAttestation" active="LIT4991Months" passive="BNFet160#ms_i2.4"/>
+                    <relation name="saws:isDifferentTo" active="LIT4991Months" passive="LIT6251Months"/>
+                    <relation name="lawd:hasAttestation" active="LIT4991Months" passive="IVorlov20"/>
+                    <relation name="lawd:hasAttestation" active="LIT4991Months" passive="BLadd16211"/>
+                    <relation name="lawd:hasAttestation" active="LIT4991Months" passive="EMIP00636"/>
+                    <relation name="lawd:hasAttestation" active="LIT4991Months" passive="BDLaeth34"/>
+                    <relation name="lawd:hasAttestation" active="LIT4991Months" passive="BNFabb39"/>
+                    <relation name="lawd:hasAttestation" active="LIT4991Months" passive="BLadd24990"/>
+                    <relation name="lawd:hasAttestation" active="LIT4991Months" passive="BMLor148"/>
+                      <relation name="lawd:hasAttestation" active="LIT4991Months" passive="BLorient766"/>
+                      <relation name="lawd:hasAttestation" active="LIT4991Months" passive="BAVet40"/>
+                        <relation name="lawd:hasAttestation" active="LIT4991Months" passive="BAVet24"/>
+                        <relation name="lawd:hasAttestation" active="LIT4991Months" passive="BAVet15"/>
+                    <relation name="dcterms:isPartOf" active="LIT4991Months" passive="LIT2293Sawase"/>
+                </listRelation>
+                </div>
         </body>
     </text>
 </TEI>

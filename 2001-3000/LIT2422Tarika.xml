@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2422Tarika">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2422Tarika">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -15,7 +9,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="en" corresp="#t1">Chronicle of the kings</title>
             <title xml:lang="am" xml:id="t2amharic">የነገሥት፡ ታሪክ፡</title>
             <title xml:lang="am" corresp="#t2amharic" type="normalized">Ya-nagaśt tārik</title>
-            <!-- See issue #85 on this topic, and also LIT1146Argano-->
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -32,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -42,20 +35,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="am">Amharic</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <abstract><p><foreign xml:lang="gez">Tārika nagaśt</foreign> is an Amharic historiographic work. The title has been used 
+         historically to refer to various texts or collections.</p></abstract>
+         <langUsage><language ident="en">English</language><language ident="am">Amharic</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -70,24 +59,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-11-07">textparts added</change>
          <change who="DR" when="2017-03-27">Minor correction and keywords added</change>
+         <change who="DR" when="2020-06-15">Added abstract</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          
          <listRelation>
-            <relation name="saws:contains"
-                      active="LIT2422Tarika"
-                      passive="LIT3854KingList"/>
+            <relation name="saws:contains" active="LIT2422Tarika" passive="LIT3854KingList"/>
          </listRelation>
          
          
          <div type="edition">
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="am"
-                 xml:id="Genealogy"
-                 corresp="LIT3854KingList">
+            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="Genealogy" corresp="LIT3854KingList">
                <label>Genealogy and History of the kings of Ethiopia from <persName ref="PRS1386Adam"/> to 
                   <persName ref="PRS9142TaklaGi"/>/ʾAdbǝʾal, successor of Fǝre Śannāy</label>
             </div>
@@ -97,50 +81,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </label>
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="am"
-                 xml:id="Christianization">
+            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="Christianization">
                <label>On the Christianization in Ethiopia</label>
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="am"
-                 xml:id="ExtractYamaranWag">
+            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="ExtractYamaranWag">
                <label>Extract of <ref type="work" corresp="LIT2341serata"/>
                </label>
                <!--  not explicitely mentioned in BLadd16253-->
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="am"
-                 xml:id="Chronicle">
+            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="Chronicle">
                <label>Chronicle of the kings from <persName ref="PRS10303Yekunno">Yǝkunno ʾAmlāk</persName> to <persName ref="PRS5636IyoasI">ʾIyoʾas</persName>
                </label>
                <!--not in BNFet144-->
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="am"
-                 xml:id="GenealogyMonks">
+            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="GenealogyMonks">
                <label>Genealogical list of the main Ethiopian monks starting with <persName ref="PRS1962Anthony"/>
                </label>
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="am"
-                 xml:id="GenealogyApostels">
+            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="GenealogyApostels" corresp="LIT5849GenealogyApostles">
                <label>Genealogy of the twelve apostles</label>
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="am"
-                 xml:id="HistoryGran">
+            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="HistoryGran">
                <label>History of  <persName ref="PRS1522Ahmadb"/>
                </label>
             </div>
@@ -150,10 +116,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </label>
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="am"
-                 xml:id="HistoryDavid">
+            <div type="textpart" subtype="chapter" xml:lang="am" xml:id="HistoryDavid">
                <label>History of <persName ref="PRS3417David">David</persName>, king of Ethiopia</label>
             </div>
          </div>

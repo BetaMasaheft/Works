@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1295Dersan">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1295Dersan">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -31,12 +25,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
           <!--   <witness corresp="SBB or. 394"></witness> --><!--mini mss for mss in Bachmann's edition have to be created-->
-               <witness corresp="BerOr394"/>
+               <witness corresp="BerOrFol394"/>
                <witness corresp="BLorient691"/>
                <witness corresp="BLorient4849"/>
                <witness corresp="BMLacq776"/>
@@ -45,12 +39,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <witness corresp="EMML44"/>
                <witness corresp="BNFet346"/>
                <witness corresp="BAVet82"/>
+               <witness corresp="BAVet21"/>
                <!--create mini ms-->
             </listWit>
             <!-- list from ESam004 
             <listBibl type="mss">
                <bibl>BritMus Orient. 4849 (17th-18th cent.), <locus from="37r" to="108v">37r-108v</locus> (StrBritLib 94, n<locus target="#58">58</locus>);</bibl>
                <bibl>VatLib Aeth. 82 (19th cent.), <locus from="15" to="83">15-83</locus> (GréTisVat I, 298-307);</bibl>
+                <bibl>VatLib Aeth. 121 (19th cent.),   <locus from="5r" to="89r">52-89r</locus> (GréTisVat I, 488-491);</bibl>
                <bibl>EMML n° 424 (19th-20th cent.), <locus from="1a" to="124b">1a-124b</locus> (EMML II, 143);</bibl>
                <bibl>EMML n°301 (20th cent.), <locus from="2a" to="138a">2a-138a</locus> (EMML II, 1);</bibl>
                <bibl>EMML n°44 (20th cent.), <locus from="2a" to="15a">2a-15a</locus>, 31b-53b, 64a-83a (EMML I, 48);</bibl>
@@ -61,20 +57,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -91,6 +81,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <ptr target="bm:Lusini2005EAEDersanaM"/>
                   </bibl>
                </listBibl>
+               
             </p>
          </abstract>
       </profileDesc>
@@ -103,6 +94,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="MV" when="2017-05-17">Added textpart</change>
          <change who="DR" when="2018-04-25">Added xml:lang to label</change>
          <change when="2019-03-26" who="ES">bits of data from ESam004 added + relation</change>
+         <change who="MV" when="2024-11-04">Updated labels of the textparts</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -112,6 +104,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Lusini2005EAEDersanaM"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Marrassini1987manoscrittietiopici"/>
+                  <citedRange unit="page">69-110</citedRange>
+                  
                </bibl>
                <bibl>
                   <ptr target="bm:Dillmann1847BM"/>
@@ -134,6 +131,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Tasfa1954DersanaM"/>
                </bibl>
             </listBibl>
+            <listBibl type="text">
+               <bibl>
+                  <ptr target="bm:budge1894stmichael"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:1961DersanaMikael"/>
+               </bibl>
+               
+            </listBibl>
          </div>
          
          <div type="edition">
@@ -143,12 +149,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             
             <!--pagwmen?-->
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Introduction"><!-- Added after BAVet82 (MV - 2017-05-17); text of incipit from ESam004 -->
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Introduction"><!-- Added after BAVet82 (MV - 2017-05-17); text of incipit from ESam004 -->
                <div type="textpart" subtype="incipit">
                   <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩ዱ፡ አምላክ፡ ንቀድም፡ በረድኤተ፡ እግዚአብሔር፡ ልዑል፡ ጺሒፈ፡ ዜና፡ ዕበዩ፡ ወክብሩ፡ ወልዕልሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ይስአል፡ ለነ፡ እምኀበ፡ እግዚአብሔር፡ አምላኩ፡ መሐሪ፡ ምሕረት፡ ወሣህል።</ab>
+               </div>
+               
+               <div type="textpart" subtype="Introduction">
+                  <label>Introduction</label>             
                </div>
             </div>
             
@@ -157,77 +164,52 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <foreign xml:lang="gez">Ḫǝdār</foreign>
                </label>
                
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    corresp="LIT1637Homily"
-                    xml:id="HomilyHedar">
+               <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT1637Homily" xml:id="HomilyHedar">
                   <label xml:lang="en">Homily for <foreign xml:lang="gez">Ḫǝdār</foreign> by <persName ref="PRS9523Timothy"/>
                   </label>
                </div>
                
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="IntroductionMiracles">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionMiracles">
                   <label xml:lang="en">Introduction to the miracles performed by St Michael</label>
+                  <!-- This introduction is transmitted in the section for Ḫǝdār in BAVet82, but in the section for Maskaram in BAVet121 (instead of the miracle). -->
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="MiracleHedar">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ḫǝdār</foreign> on the Egyptian sailors saved by St Michael</label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleHedar">
+                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ḫǝdār</foreign> on the Egyptian sailors whose boat was troubled by a strong wind</label>
+                  <!-- This miracle is transmitted in the section for Ḫǝdār in BAVet82, but in the section for Hamle in BAVet121.
+                  The indication of the month should be removed from the title in order to avoid confusion in the MSS descriptions where it is not transmitted in Ḫǝdār.
+                  -->
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="CommemorativeHedar">
-                  <label xml:lang="en">Commemorative Notice for <foreign xml:lang="gez">Ḫǝdār</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeHedar">
+                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Ḫǝdār</foreign> on St Michael's appearance to Joshua  
                   </label>
                </div>
                
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="SalamHedar">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamHedar">
                   <label xml:lang="en">
                      <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Ḫǝdār</foreign>
                   </label>
                </div>
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Tahsas">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tahsas">
                <label xml:lang="en">
                   <foreign xml:lang="gez">Tāḫśāś</foreign>
                </label>
                
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="HomilyTahsas">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyTahsas">
                   <label xml:lang="en">Anonymous homily for <foreign xml:lang="gez">Tāḫśāś</foreign>
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="MiracleTahsas">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Tāḫśāś</foreign> on the poor peasant who found a treasure</label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleTahsas">
+                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Tāḫśāś</foreign> on the poor peasant who found a treasure in a fish</label>
+                  <!-- This miracle is transmitted in the section for Tāḫśāś in BAVet82, but in the section for Gǝnbot in BAVet121  -->
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="CommemorativeTahsas">
-                  <label xml:lang="en">Commemorative Notice for <foreign xml:lang="gez">Tāḫśāś</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeTahsas">
+                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Tāḫśāś</foreign> about the three youths in the furnace
+                     <!-- This is indicated as a miracle by GrebTiss about BAVet82 and BAVet121-->
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="SalamTahsas">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamTahsas">
                   <label xml:lang="en">
                      <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Tāḫśāś</foreign>
                   </label>
@@ -238,53 +220,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <label xml:lang="en">
                   <foreign xml:lang="gez">Ṭǝrr</foreign>
                </label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="HomilyTerr">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyTerr">
                   <listRelation>
-                     <relation name="saws:isAttributedToAuthor"
-                               active="LIT1295Dersan#HomilyTerr"
-                               passive="PRS3828Epiphani"/>
+                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyTerr" passive="PRS3828Epiphani"/>
                   </listRelation>
                   <label xml:lang="en">Homily for <foreign xml:lang="gez">Ṭǝrr</foreign> by <persName ref="PRS3828Epiphani"/>
+                     <!-- This homily is transmitted in the section for Ṭǝrr in BAVet82, but in the section for Miyāzyā in BAVet121  -->
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="MiracleTerr">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ṭǝrr</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleTerr">
+                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ṭǝrr</foreign> about the rich man who became poor
+                     <!-- This miracle is transmitted in the section for Ṭǝrr in BAVet82, but in the section for Miyāzyā in BAVet121  -->
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="CommemorativeTerr">
-                  <label xml:lang="en">Commemorative Notice for <foreign xml:lang="gez">Ṭǝrr</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeTerr">
+                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Ṭǝrr</foreign> on St Michael's appearance to Jacob
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="SalamTerr">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamTerr">
                   <label xml:lang="en">
                      <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Ṭǝrr</foreign>
                   </label>
                </div>
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Yakkatit">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Yakkatit">
                <label xml:lang="en">
                   <foreign xml:lang="gez">Yakkātit</foreign>
                </label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="HomilyYakkatit">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyYakkatit">
                   <label xml:lang="en">Anonymous homily for <foreign xml:lang="gez">Yakkātit</foreign>
                   </label>
                   <listBibl type="editions">
@@ -294,42 +258,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </bibl> 
                   </listBibl>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="MiracleYakkatit">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Yakkātit</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleYakkatit">
+                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Yakkātit</foreign> on the poor who sent the money to the church custodian inside a fish <!-- check this content; it is given after GrebTiss's Latin title -->
+                     <!-- This miracle is transmitted in the section for Yakkātit in BAVet82, but in the section for Naḥase in BAVet121  -->
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="CommemorativeYakkatit">
-                  <label xml:lang="en">Commemorative Notice for <foreign xml:lang="gez">Yakkātit</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeYakkatit">
+                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Yakkātit</foreign> on St Michael's appearance to Samson
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="SalamYakkatit">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamYakkatit">
                   <label xml:lang="en">
                      <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Yakkātit</foreign>
                   </label>
                </div>
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Maggabit">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Maggabit">
                <label xml:lang="en">
                   <foreign xml:lang="gez">Maggābit</foreign>
                </label>
                
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="HomilyMaggabit">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyMaggabit">
                   <label xml:lang="en">Homily for <foreign xml:lang="gez">Maggābit</foreign> by a patriarch of Antioch</label>
                   <listBibl type="editions">
                      <bibl corresp="#BLorient691">
@@ -338,9 +288,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </bibl>
                   </listBibl>
                   <listRelation>
-                     <relation name="saws:isAttributedToAuthor"
-                               active="LIT1295Dersan#HomilyMaggabit"
-                               passive="PRS8790Severus">
+                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyMaggabit" passive="PRS8790Severus">
                         <desc>The homily for <foreign xml:lang="gez">Maggābit</foreign> is attributed in many manuscripts to a 
                            patriarch of Antioch, identified in <bibl>
                               <ptr target="bm:Zotenberg1877Catalogue"/>
@@ -349,53 +297,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            and <bibl>
                               <ptr target="bm:budge1894stmichael"/>
                            </bibl> as <persName ref="PRS8790Severus"/>. His name is often omitted,
-                           leaving only his title "patriarch of Antioch". Occassionally it is also attributed to other authors.
+                           leaving only his title "patriarch of Antioch". Occasionally it is also attributed to other authors.
                         </desc>
                      </relation>
                   </listRelation>
                </div>
                
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="MiracleMaggabit">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Maggābit</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleMaggabit">
+                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Maggābit</foreign> on the woman suffering from elephantiasis
+                     <!-- This miracle is transmitted in the section for Maggābit in BAVet82, but in the section for Yakkātit in BAVet121  -->
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="CommemorativeMaggabit">
-                  <label xml:lang="en">Commemorative Notice for <foreign xml:lang="gez">Maggābit</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeMaggabit">
+                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Maggābit</foreign> on St Michael's appearance to Balaam
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="SalamMaggabit">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamMaggabit">
                   <label xml:lang="en">
                      <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Maggābit</foreign>
                   </label>
                </div>
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Miyazya">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Miyazya">
                <label xml:lang="en">
                   <foreign xml:lang="gez">Miyāzyā</foreign>
                </label>
                
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="HomilyMiyazya">
-                  
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyMiyazya">
+                  <!-- This homily is within the section for Miyāzyā in BAVet82, but in the section for Tāḫśāś in BAVet121 (here attributed to PRS10425Yohanne) -->
                   <listRelation>
-                     <relation name="saws:isAttributedToAuthor"
-                               active="LIT1295Dersan#HomilyMiyazya"
-                               passive="PRS10425Yohanne">
+                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyMiyazya" passive="PRS10425Yohanne">
                         <desc>The Homily for <foreign xml:lang="gez">Miyāzyā</foreign> is attributed in
                            <bibl>
                               <ptr target="bm:Lusini2005EAEDersanaM"/>
@@ -404,57 +336,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            according to Denis Nosnitsin, it is attributed in most manuscripts to <persName ref="PRS8121RetuaH"/>
                            without mention of <persName ref="PRS10425Yohanne"/>.</desc>
                      </relation>
-                     <relation name="saws:isAttributedToAuthor"
-                               active="LIT1295Dersan#HomilyMiyazya"
-                               passive="PRS8121RetuaH"
-                               resp="DN"/>
+                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyMiyazya" passive="PRS8121RetuaH" resp="DN"/>
                   </listRelation>
                   
                   <label xml:lang="en">Homily for <foreign xml:lang="gez">Miyāzyā</foreign> by <persName ref="PRS8121RetuaH"/>
                   </label>
                </div>
                
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="MiracleMiyazya">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Miyāzyā</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleMiyazya">
+                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Miyāzyā</foreign> on the Christian whose hand had become dry and on the conversion of a pagan
+                     <!-- This homily is transmitted in the section for Miyāzyā in BAVet82, but in the section for Ṭǝrr in BAVet121  -->
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="CommemorativeMiyazya">
-                  <label xml:lang="en">Commemorative Notice for <foreign xml:lang="gez">Miyāzyā</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeMiyazya">
+                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Miyāzyā</foreign> on Jeremiah freed by St Michael's
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="SalamMiyazya">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamMiyazya">
                   <label xml:lang="en">
                      <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Miyāzyā</foreign>
                   </label>
                </div>
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Genbot">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Genbot">
                <label xml:lang="en">
                   <foreign xml:lang="gez">Gǝnbot</foreign>
                </label>
                
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="HomilyGenbot">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyGenbot">
                   
                   <listRelation>
-                     <relation name="saws:isAttributedToAuthor"
-                               active="LIT1295Dersan#HomilyGenbot"
-                               passive="PRS10390Yohanne">
+                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyGenbot" passive="PRS10390Yohanne">
                         <desc>This homily is attributed in  <bibl>
                               <ptr target="bm:Lusini2005EAEDersanaM"/>
                            </bibl> 
@@ -465,26 +378,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   
                   <label xml:lang="en">Homily for <foreign xml:lang="gez">Gǝnbot</foreign> by <persName ref="PRS10390Yohanne"/>
                   </label>
-                  <label>Homily Concerning John (Yoḥannəs), Metropolitan of Aksum, for the 12th day of Gənbot</label>
+                  <label>Homily Concerning John (Yoḥannǝs), Metropolitan of Aksum, for the 12th day of Gǝnbot</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="MiracleGenbot">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Gǝnbot</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleGenbot">
+                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Gǝnbot</foreign> on the sterile woman
+                     <!-- This miracle is within the section for Gǝnbot in BAVet82, but in the section for Ḫǝdār in BAVet121  -->
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="CommemorativeGenbot">
-                  <label xml:lang="en">Commemorative Notice for <foreign xml:lang="gez">Gǝnbot</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeGenbot">
+                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Gǝnbot</foreign> on St Michael's appearance to Habakkuk
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="SalamGenbot">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamGenbot">
                   <label xml:lang="en">
                      <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Gǝnbot</foreign>
                   </label>
@@ -496,37 +401,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <foreign xml:lang="gez">Sane</foreign>
                </label>
                
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="HomilySane">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilySane">
                   <listRelation>
-                     <relation name="saws:isAttributedToAuthor"
-                               active="LIT1295Dersan#HomilySane"
-                               passive="PRS10382Yohanne"/>
+                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilySane" passive="PRS10382Yohanne"/>
                   </listRelation>
                   <label xml:lang="en">Homily for <foreign xml:lang="gez">Sane</foreign> by <persName ref="PRS10382Yohanne"/>
                   </label>
-                  <label>Homily of John (Yoḥannəs), Metropolitan of Aksum, for the 12th day of Sane</label>
+                  <label>Homily of John (Yoḥannǝs), Metropolitan of Aksum, for the 12th day of Sane</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="MiracleSane">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Sane</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleSane">
+                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Sane</foreign> on the healing of the leprous Jew
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="CommemorativeSane">
-                  <label xml:lang="en">Commemorative Notice for <foreign xml:lang="gez">Sane</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeSane">
+                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Sane</foreign> on the conversion of the temple in Alexandria into a church dedicated to St Michael
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="SalamSane">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamSane" corresp="LIT6631SalMikMahari">
                   <label xml:lang="en">
                      <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Sane</foreign>
                   </label>
@@ -537,168 +428,106 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <label xml:lang="en">
                   <foreign xml:lang="gez">Ḥamle</foreign>
                </label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="HomilyHamle">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyHamle">
                   <listRelation>
-                     <relation name="saws:isAttributedToAuthor"
-                               active="LIT1295Dersan#HomilyHamle"
-                               passive="PRS10382Yohanne"/>
+                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyHamle" passive="PRS10382Yohanne"/>
                   </listRelation>
                   <label xml:lang="en">Homily for <foreign xml:lang="gez">Ḥamle</foreign> by <persName ref="PRS10382Yohanne"/>
                   </label>
-                  <label>Homily of John (Yoḥannəs), Bishop of Aksum, for the 12th day of Ḥamle</label>
+                  <label>Homily of John (Yoḥannǝs), Bishop of Aksum, for the 12th day of Ḥamle</label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="MiracleHamle">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ḥamle</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleHamle">
+                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ḥamle</foreign> on a man freed from an evil spirit
+                     <!-- This miracle is within the section for Ḥamle in BAVet82, but in the section for Tāḫśāś in BAVet121  -->
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="CommemorativeHamle">
-                  <label xml:lang="en">Commemorative Notice for <foreign xml:lang="gez">Ḥamle</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeHamle">
+                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Ḥamle</foreign> on St Michael's intervention against King Sennacherib 
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="SalamHamle">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamHamle">
                   <label xml:lang="en">
                      <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Ḥamle</foreign>
                   </label>
                </div>
             </div>
            
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Nahase">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Nahase">
                <label xml:lang="en">
                   <foreign xml:lang="gez">Naḥase</foreign>
                </label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="HomilyNahase">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyNahase">
                   <label xml:lang="en">Anonymous homily for <foreign xml:lang="gez">Naḥase</foreign>
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="MiracleNahase">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Naḥase</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleNahase">
+                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Naḥase</foreign> on the healing of a blind man
+                     <!-- This miracle is transmitted in the section for Naḥase in BAVet82, but in the section for Ṭǝqǝmt in BAVet121  -->
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="CommemorativeNahase">
-                  <label xml:lang="en">Commemorative Notice for <foreign xml:lang="gez">Naḥase</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeNahase">
+                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Naḥase</foreign> on St Michael's appearance to King Constantine
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="SalamNahase">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamNahase">
                   <label xml:lang="en">
                      <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Naḥase</foreign>
                   </label>
                </div>
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Maskaram">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Maskaram">
                <label xml:lang="en">
                   <foreign xml:lang="gez">Maskaram</foreign>
                </label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="HomilyMaskaram">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyMaskaram">
                   <label xml:lang="en">Anonymous homily for <foreign xml:lang="gez">Maskaram</foreign>
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="MiracleMaskaram">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Maskaram</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleMaskaram">
+                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Maskaram</foreign> on Dorotheus and Theopista, who found a treasure in the belly of a fish
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="CommemorativeMaskaram">
-                  <label xml:lang="en">Commemorative Notice for <foreign xml:lang="gez">Maskaram</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeMaskaram">
+                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Maskaram</foreign> on St Michael's appearance to Isaiah
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="SalamMaskaram">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamMaskaram">
                   <label xml:lang="en">
                      <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Maskaram</foreign>
                   </label>
                </div>
             </div>
             
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Teqemt">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Teqemt">
                <label xml:lang="en">
                   <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
                </label>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="HomilyTeqemt">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyTeqemt">
                   <label xml:lang="en">Anonymous homily for <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="InvocationTeqemt">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="InvocationTeqemt">
                   <label xml:lang="en">Rhymed invocation for <foreign xml:lang="gez">Ṭǝqǝmt</foreign> 
                      <!-- see BAVet82#p1_i1.13.2 -->
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="MiracleTeqemt">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleTeqemt">
+                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ṭǝqǝmt</foreign> on the healing of the paralytic
+                     <!-- This miracle is transmitted in the section for Ṭǝqǝmt in BAVet82, but in the section for Maggābit in BAVet121  -->
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="CommemorativeTeqemt">
-                  <label xml:lang="en">Commemorative Notice for <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeTeqemt">
+                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Ṭǝqǝmt</foreign> on St Michael's appearance to Samuel
                   </label>
                </div>
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="SalamTeqemt">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamTeqemt">
                   <label xml:lang="en">
                      <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
                   </label>
                </div>
                
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Prayer">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Prayer">
                   <label>Za-ʾaqrabku māḥleta… </label>
                   <div type="textpart" subtype="inplicit">
                      <ab>ዘአቅረብኩ፡ ማሕሌተ፡<foreign xml:lang="en">The song I am offering</foreign>
@@ -714,9 +543,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             
          </div>
          <listRelation>
-            <relation name="ecrm:P129_is_about"
-                      active="LIT1295Dersan"
-                      passive="PRS7049Michael"/>
+            <relation name="ecrm:P129_is_about" active="LIT1295Dersan" passive="PRS7049Michael"/>
          </listRelation>
       </body>
    </text>

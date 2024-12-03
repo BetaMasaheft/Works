@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2332serata">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2332serata">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Śǝrʿāta beta krǝstiyān</title>
+            <title xml:lang="gez" xml:id="t1">ስርዓተ፡ ቤት፡ ክርስቲያን፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Śǝrʿāta beta krǝstiyān</title>
+            <title xml:lang="en" corresp="#t1">Order of the church</title>
+            <title xml:lang="en" xml:id="t2">Structure of the church</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -27,35 +24,75 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+          <creation/>
+          <abstract>
+              <p>A group of widely varying texts, mostly in Amharic, that present
+                symbolical interpretations for
+                the parts of the church building, the sacred objects and the ministers.</p>
+          </abstract>
+          <textClass>
+              <keywords>
+                  <term key="ChristianLiterature"/>
+                  <term key="AmharicLiterature"/>
+                  <term key="Commentary"/>
+              </keywords>
+          </textClass>
+          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language><language ident="am">Amharic</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DN" when="2020-11-25">Expanded, disambiguated</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
-      </body>
+     <body>
+         <div type="bibliography">
+           <listRelation>
+              <relation name="lawd:hasAttestation" active="LIT2332serata" passive="IVef35"/>
+                  <relation name="saws:isDifferentTo" active="LIT2332serata" passive="LIT4020RegulaeHierarchia"/>
+                  <relation name="lawd:hasAttestation" active="LIT2332serata" passive="IVEf77"/>
+              </listRelation>
+             <listBibl type="editions">
+                 <bibl>
+               <ptr target="bm:Griaule1932Serat"/>
+            </bibl>
+            <bibl>
+          <ptr target="bm:Schneider1988Nouveaux"/>
+           </bibl>
+
+           <bibl>
+         <ptr target="bm:Nosnitsin2010Seratabet"/>
+          </bibl>
+             </listBibl>
+             </div>
+             <div type="edition">
+             <note>The text follows <bibl>
+            <ptr target="bm:Griaule1932Serat"/>
+           <citedRange unit="page">4</citedRange></bibl>.</note>
+             <div type="textpart" subtype="incipit" xml:lang="am">
+                 <ab>
+                     ሥርዓተ፡ ቤተ፡ ክርስቲያን፡ ቄስ፡ ማለት፡ ሰዋዒ፡ ሠራዒ፡ አስተጋባዒ፡ አስተሰራኢ፡ ሐማሚ፡ ለኵሉ፡ አበ፡ ብዙኃን፡ ኖላዊ፡ ነው።
+                     ካቡ፡ በድን፡ ነው፡ ኃጥአን፡ ናቼው። ገረገራው፡ መላእክት፡ ናቼው። ሣእሩ፡ ምዕመናን፡ ናቼው። ደገፋው፡ አርድእት፡ ናቼው።
+                     ሰብሳቡ፡ ነቢያት፡ ናቼው፤ ግድግዳው፡ ጻድቃን፡ ናቼው። ጭቃው፡ እንደ፡ ሥጋቼው፡ ነው። ጭዱ፡ እንደ፡ ጅማታቼው፡ ነው።
+                     ምድሩ፡ አዳም፡ ነው። ፀርቡ፡ ነገደ፡ መላእክት፡ ናቼው። ምስሶ፡ እግዚአብሔር፡ ነው፡
+                 </ab>
+             </div>
+         </div>
+
+     </body>
    </text>
 </TEI>

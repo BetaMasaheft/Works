@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1615Homily">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1615Homily">
+
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Homily for Lenten Fast</title>
-            <author>Theophilos of Alexandria</author>
+            <title xml:lang="gez" xml:id="t1">ምዕዳን፡ ዘሊቀ፡ ጳጳሳት፡ ቴዮፍሎስ፡ ዘትትነበብ፡ በዕለተ፡ ሰኑይ፡ በቀዳሚ፡ ሰሙን፡ እምነ፡ ጾም፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Mǝʿdān za-liqa ṗāṗāsāt Teyoflos za-tǝtnabbab ba-ʿǝlata
+            sanuy ba-qadāmi samun ʾǝmǝnna ṣom</title>
+            <title xml:lang="en" xml:id="t2">Homily for Lenten Fast</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,13 +26,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -42,21 +39,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
+           <language ident="en">English</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+           <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Translation"/>
+               <term key="Homily"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2021-12-27">Added incipit, Ethiopic title, keywords</change>
+         <change when="2024-11-25" who="JK">Updated transcription</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+<listRelation>
+<relation name="saws:isAttributedToAuthor" active="LIT1615Homily" passive="PRS9486Theophil"/>
+</listRelation>
+
+        <div xml:lang="gez" type="edition">
+           <note>The incipit is taken from <ref type="mss" corresp="EMML1956"/></note>
+           <div type="textpart" subtype="incipit">
+            <ab xml:lang="gez">ኢይንአስ፡ ልብከ፡ ኦብእሲ፡ በእንተ፡ ጾም፡ ወተፀምዶት፡ በበይነ፡ እግዚአብሔር፡ እስመ፡ አንተ፡ ትሴባሕ፡ ምስሌሁ።</ab>
+           </div>
+        </div>
       </body>
    </text>
 </TEI>

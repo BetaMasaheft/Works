@@ -1,18 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT4872MaqdemaWangel"
-     xml:lang="en"
-     type="work">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4872MaqdemaWangel" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">መቅድመ፡ ወንጌል፡</title>
                 <title xml:lang="gez" corresp="#t1" type="normalized">Maqdǝma wangel</title>
-                <title xml:lang="en" xml:id="t2">Introduction to the Alexandrian Vulgate</title>
+                <title xml:lang="en" corresp="#t1">Introduction to the Gospels</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -27,7 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
                 <p/>
@@ -35,8 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -45,7 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>Ethiopic adaptation of the Arabic introduction to the Alexandrian Vulgate in seven chapters. Contained in mss. from at least the 16th century onwards.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -54,58 +47,101 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="NewTestament"/>
                 </keywords>
             </textClass>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2018-01-11">Created entity</change>
+            <change who="SD" when="2020-01-07">Added refrerence, title translation and abstract</change>
+            <change who="ABr" when="2020-11-13">Added Preface with incipit and explicit</change>
+            <change who="ABr" when="2020-11-14">Added titles, incipits and explicits to Chapters 1-7</change>
+            <change who="ABr" when="2020-11-18">Added value textsubunit to Preface and Chapters 1-7</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography">
-                <listBibl type="secondary">
-                    <bibl>
-                  <ptr target="bm:Zuurmond1989EvangeliumMarc"/>
-                  <citedRange unit="page">14-16</citedRange>
-               </bibl>
-                </listBibl>
+          <div type="bibliography">
+          <listBibl type="secondary">
+            <bibl>
+          <ptr target="bm:Zuurmond1989EvangeliumMarc"/>
+            <citedRange unit="page">14-16</citedRange>
+            </bibl>
+            <bibl>
+              <ptr target="bm:Cowley1977NT"/>
+              <citedRange unit="page">144-165</citedRange>
+            </bibl>
+            </listBibl>
             </div>
-            <div type="edition">
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Chapter1"/>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Chapter2"/>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Chapter3"/>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Chapter4"/>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Chapter5"/>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Chapter6"/>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Chapter7"/>
+        <div type="edition">
+
+            <note>The following division in textual sub-units is based on
+              <bibl><ptr target="bm:Cowley1977NT"/><citedRange unit="page">147-160</citedRange></bibl> and on
+              <bibl><ptr target="bm:Zuurmond1989EvangeliumMarc"/><citedRange unit="page">14-15</citedRange></bibl>
+              while the incipits and explicits are taken from <ref type="mss" corresp="GCA001"/>
+
+            </note>
+            <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="Preface">
+              <label>Preface</label>
+              <div type="textpart" subtype="incipit"><ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩፡ አምላክ። ንቀድም፡
+                በረድኤተ፡ እግዚኣብሔር፡ ሎቱ፡ ስብሐት፡ ወይትለዓል፡ ዝክሩ፡ ወፍጽምናሁ፡ ዘእምኔሁ፡ ሢመተ፡ ኵሉ፡ ኃይል፡ ወቦቱ፡ ተፍጻሜተ፡
+
+                ኵሉ፡ ስእለት። ወኀቤሁ፡ ምብጻሓ፡ ኵሉ፡ ኣስተብቍዖት፡ በጽሒፈ፡ <seg type="title inscriptio">መቅድመ፡ ፬፡ ወንጌላት፡ ቅዱሳት፡ ወ፲፡ አቅማራት፡</seg>
+                በሰላመ፡ እግዚአብሔር፡ አሜን።</ab></div>
+
+              <div type="textpart" subtype="explicit"><ab>ወናሁ፡ ጸውዓተኒ፡ መፍቅድ፡ ኀበ፡ ኃሢሠ፡ ዘክሮታ፡ ወጽሕፈቱ፡
+                ውስተ፡ ዝንቱ፡ መጽሐፍ፡ ንጹሕ፡ ከመ፡ ይኩን፡ ብጽሓተ፡ ለረባሕ። ወመርሓ፡ ለዘየኃሥሥ፡ ዘይፈቅድ። ወዛቲ፡ ይእቲ፡ ግብር፡ ቀዳማዊት፡
+                ወካልኡ፡ ብቍዔት። ወሣልሱ፡ ሥርዓት። ወራብዑ፡ ትእምርት፡ ወኃምሱ፡ እምአይቴ። ወሳድሱ፡ ምስማክ። ወሳብዑ፡ ኣርእስተ፡ ነገር።</ab></div>
             </div>
+            <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="Chapter1">
+              <label>Preface</label>
+              <div type="textpart" subtype="title" xml:id="TitleChapter1"><ab>ግብር፡ ቀዳማዊ፡</ab></div>
+              <div type="textpart" subtype="incipit"><ab>ወግብሩሰ፡ ለዝንቱ፡ መጽሓፍ፡ ማሕየዊ፡ ከመ፡ ይርባሕ፡ ቦቱ፡ ሕይወት፡
+              ዘለዓለም፡ ለደቂቀ፡ እጓለ፡ እመሕያው። ወበጺሖቶሙ፡ ኀበ፡ ፈጣሪሆሙ፡ በቃል፡ ወበምግባር።</ab></div>
+              <div type="textpart" subtype="explicit"><ab>ወበተግሣጻቲሁ፡ ወበተካይዶቱ፡ ወበነጊሮቱ፡ ረሰዮሙ፡ ለደቂቀ፡ እጓለ፡
+              እመሕያው፡ ልጹቃን፡ ኀበ፡ ፈጣሪሆሙ፡ ይግበሩ፡ ምግባራቲሁ፡ ወይረሱ፡ መንግሥቶ።</ab></div>
+            </div>
+            <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="Chapter2">
+              <label>Preface</label>
+              <div type="textpart" subtype="title" xml:id="TitleChapter2"><ab>ወካልኡ፡ በቍዔት፡</ab></div>
+              <div type="textpart" subtype="incipit"><ab>ወበቍዔተ፡ ዝንቱ፡ መጽሓፍ፡ ብጹሕ፡ ካዕበ፡ እስመ፡ ውእቱ፡ ዘይትነበብ፡
+              እምኔሁ፡ ወይጤየቅ፡ ግብረ፡ መድኃኒቱ፡ ለአዳም፡ ወለዘርኡ፡ እምፂዋዌ፡ ሰይጣን።</ab></div>
+              <div type="textpart" subtype="explicit"><ab>ወናሁ፡ ጸንዓ፡ በቍዔተ፡ ዝንቱ፡ መጽሐፍ፡ ንጹሕ፡ ወብዙኅ፡ ወባሕቱ፡
+              ተኃሥሦ፡ መፍቅድ፡ ኀበ፡ አንብቦቱ፡ ለዘኮነ፡ ልብወ፡ ወማእምረ።</ab></div>
+            </div>
+            <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="Chapter3">
+              <label>Preface</label>
+              <div type="textpart" subtype="title" xml:id="TitleChapter3"><ab>ወሣልስ፡ ሥርዓት፡</ab></div>
+              <div type="textpart" subtype="incipit"><ab>ወሥርዓተ፡ ዝንቱ፡ መጽሐፍ፡ ክቡር፡ ወይእቲኬ፡ አንብቦቱ፡ ኵሎ፡ ጊዜ፡
+              ወኀዲገ፡ ሕሊናት፡ ለዓቂበ፡ አቅማሪሁ፡ ወተአምራቲሁ፡ ወትእኅዘ፡ ቦቱ።</ab></div>
+              <div type="textpart" subtype="explicit"><ab>ወናሁ፡ ተጠየቀት፡ ሥርዓት፡ ወጸንዓት፡ ንብረቱ።</ab></div>
+            </div>
+            <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="Chapter4">
+              <label>Preface</label>
+              <div type="textpart" subtype="title" xml:id="TitleChapter4"><ab>ወራብዕ፡ ትእምርት፡</ab></div>
+              <div type="textpart" subtype="incipit"><ab>ወትእምርተ፡ ዝንቱ፡ መጽሐፍ፡ ክቡር፡ ወንጌል፡ ወወንጌል፡ ብሂል፡ በልሳነ፡
+              ፅርዕ፡ ወትርጓሜሁ፡ ስብከት፡ እንተ፡ ወሰከ፡ ውእቱ።</ab></div>
+              <div type="textpart" subtype="explicit"><ab>ወናሁ፡ ተበየነ፡ ትምህርቱ። ወምክንያተ፡ ስሙ።</ab></div>
+            </div>
+            <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="Chapter5">
+              <label>Preface</label>
+              <div type="textpart" subtype="title" xml:id="TitleChapter5"><ab>ወኃምስ፡ እምአይቴ፡</ab></div>
+              <div type="textpart" subtype="incipit"><ab>ወመሠረተ፡ ዝንቱ፡ መጽሓፍ፡ ክቡር፡ በኀበ፡ እግዚኣብሔር፡ ዓቢይ፡ ወዓዚዝ።</ab></div>
+              <div type="textpart" subtype="explicit"><ab>ወናሁ፡ ነበረት፡ መሠረቱ፡ ኀበ፡ ላዕሉ፡ ወጸሓፍቲሁ።</ab></div>
+            </div>
+            <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="Chapter6">
+              <label>Preface</label>
+              <div type="textpart" subtype="title" xml:id="TitleChapter6"><ab>ወሳድስ፡ ምስማክ፡</ab></div>
+              <div type="textpart" subtype="incipit"><ab>ወውእቱ፡ ለአይ፡ ግብር፡ ይሴኒ ወለኣይ፡ ገጽ፡ መክፈልተ፡ ጥበብ፡ ዘይትፈቀድ።</ab></div>
+              <div type="textpart" subtype="explicit"><ab>ወናሁ፡ ተበየነ፡ ምስማከ፡ ዝንቱ፡ መጽሓፍ፡ ወለአይ፡ ግብር፡ ይኄይስ።</ab></div>
+            </div>
+            <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="Chapter7">
+              <label>Preface</label>
+              <div type="textpart" subtype="title" xml:id="TitleChapter7"><ab>ወሳብዕ፡ አርእስተ፡ ነገር፡</ab></div>
+              <div type="textpart" subtype="incipit"><ab>ወአርእስተ፡ ነገረ፡ ዝንቱ፡ መጽሓፍ፡ ክቡር፡ እስመ፡ ይእቲ፡ ብይንት፡ ወውስቴታ፡
+              ብያኔ፡ ክሡት፡ በቃል፡ ወበገቢር።</ab></div>
+              <div type="textpart" subtype="explicit"><ab>ቀመር፡ ዓሥር፡ በዘተሌለዩ፡ ቦቱ። ኵሉ፡ ለለ፩፡ እምሰባክያን፡ ፪፻፶፬፡ መስመር፡
+              ማቴዎስ፡ ፷፪፡ መስመር። ማርቆስ፡ ፳፩፡ መስመር። ሉቃስ፡ ፸፪፡ መስመር፡ ዮሓንስ፡ ፺፱፡ መስመር።</ab></div>
+            </div>
+         </div>
         </body>
     </text>
 </TEI>

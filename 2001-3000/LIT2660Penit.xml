@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2660Penit">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2660Penit">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Penitential Canons of our Lord to S. Peter</title>
+            <title xml:lang="gez" xml:id="t1">አብስሊጢስ፡ ቀኖና፡ በእንተ፡ ንስሐ፡ ትምህርት፡ ዘተሠርዓ፡ እምኀበ፡ እግዚአብሔር፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">ʾAbsǝliṭis qanonā baʾǝnta nǝssǝḥa tǝmhǝrt za-taśarʿa ʾǝmḫaba
+            ʾƎgziʾabǝḥer ʾǝgziʾǝna ʾIyasus Krǝstos</title>
+            <title type="main" xml:lang="en" xml:id="t2">Penitential Canons of our Lord to S. Peter</title>
             <editor role="generalEditor" key="AB"/>
+            <editor role="editor" key="MKr"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -27,13 +25,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         
+
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -41,28 +38,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
+       </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="CanonLaw"/>
                <term key="Translation"/>
-               
+
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="MKr" when="2020-11-29">Added bibliography</change>
          <change when="2019-03-22" who="ES">added keywords</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <div type="bibliography">
+          <listRelation>
+              <relation name="saws:formsPartOf" active="LIT2660Penit" passive="LIT2317Senodo"/>
+          </listRelation>
+          <listBibl type="editions">
+              <bibl><ptr target="bm:Guerrier1918Canons"/></bibl>
+          </listBibl>
+        </div>
       </body>
    </text>
 </TEI>

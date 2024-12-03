@@ -1,20 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1968Mashaf">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1968Mashaf">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">መጽሐፈ፡ ሥርዓት፡ ዘወጽአ፡ እመንበረ፡ ማርቆስ፡ ሐዋርያ፡ እመካነ፡ መዓልቃ፡ </title>
             <title corresp="#t1" xml:lang="gez" type="normalized">Maṣḥafa śǝrʿāt za-waṣʾa ʾǝm-manbara Mārqos ḥawāryā ʾǝm-makāna maʿāllǝqā</title>
             <title corresp="#t1" xml:lang="en">Book of the Rules</title>
-            <title xml:id="t2" xml:lang="en">Canon of Muʿallaqa</title>
-            <title xml:id="t3" xml:lang="en">Introductory Rite</title>
+            <title xml:id="t2" xml:lang="en" type="main">Canon of al-Muʿallaqa</title>
+            <title xml:id="t3" xml:lang="en">Introductory Rite of al-Muʿallaqa</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -31,34 +26,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Liturgy"/>
-               <term key="Translation"/>
             </keywords>
          </textClass>
          <abstract>
-            <ab>The Canon of <placeName ref="LOC4885Mualla">Muʿallaqa</placeName> is an introduction to the <ref type="work" corresp="LIT2384Taamme"/>. It was purportedly translated from Arabic in <date when="1441"/> at the order of <persName ref="PRS10626ZaraY"/>,
+            <ab>The Canon of the church of <placeName ref="LOC4885Mualla">Muʿallaqa</placeName> is an introduction to the <ref type="work" corresp="LIT2384Taamme"/>. It was purportedly translated from Arabic in <date when="1441"/> at the order of <persName ref="PRS10626ZaraY"/>,
             but no Arabic version is known. It can be followed or preceded by
             <ref type="work" corresp="LIT3584Intro"/>.</ab>
          </abstract>
@@ -74,6 +62,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div type="translation">
+            <bibl><ptr target="bm:Budge1923Miracles"/><citedRange unit="page">xlvi-liv</citedRange></bibl>
+         </div>
          <div type="edition" xml:lang="gez">
             
             <note>The following division into paragraphs, as well as all Gǝʿǝz text is, if not otherwise indicated, 
@@ -297,9 +288,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          
          <div type="bibliography">
             <listRelation>
-               <relation name="saws:formsPartOf"
-                         active="LIT1968Mashaf"
-                         passive="LIT2384Taamme"/>
+               <relation name="saws:formsPartOf" active="LIT1968Mashaf" passive="LIT2384Taamme">
+                  <desc><ref type="work" corresp="LIT1968Mashaf"/> is one of several introductory
+                     texts attested in varying sequence in manuscripts
+                     containing the <ref type="work" corresp="LIT2384Taamme"/>.</desc>
+               </relation>
             </listRelation>
             <listBibl type="editions">
                

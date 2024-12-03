@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2252salota">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2252salota">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -33,25 +27,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -66,6 +54,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-03-06" who="ES">updated title keywords</change>
          <change when="2018-03-26" who="ES">added textparts from ESagm009</change>
+         <change when="2020-03-12" who="DE">Corrected transliteration.</change>
+         <change when="2024-09-19" who="JK">Added incipits and corrected transliteration.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -75,160 +65,254 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <ptr target="bm:SalotaEtan1951"/>
             </bibl>
             <bibl>
-               <ptr target="bm:Rome1952Saatat"/> 
+               <ptr target="bm:Rome1952Saatat"/>
                <citedRange unit="page">381-410</citedRange> (Ṣalota mabāʾa ʿǝṭān “Prayer of offering incense”)
             </bibl>
          </listBibl>
          <ab/>
          <div type="edition">
+            <note>Whenever possible, the incipits have been taken from <bibl><ptr target="bm:Rome1952Saatat"/></bibl>.</note>
+            
             <div type="textpart" xml:id="Basalam">
-               <label>Introductory prayers (Ba-salām ʾәmḫāba ʾәgziʾābәḥer ʾab…) </label>
+               <label>Introductory prayers (Ba-salām ʾǝmḫāba ʾǝgziʾābǝḥer ʾab…) </label>
+               <ab>
+                  
+               </ab>
                <note>see <bibl>
                      <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">20-22</citedRange>
-                  </bibl>
+                  </bibl>.
                </note>
-            </div>            
-            <div type="textpart" xml:id="Tawakkafetan">            
-               <label>Prayer of offering incense (Tawakkaf ʾәgziʾo ʾәṭānana…)</label>
-               <note>see <bibl>
+            </div>
+            
+            <div type="textpart" xml:id="Tawakkafetan">
+               <label>Prayer of offering incense (Tawakkaf ʾǝgziʾo ʾǝṭānana…)</label>
+               <note>See <bibl>
                      <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">123</citedRange>
-                  </bibl>
+                  </bibl>.
                </note>
-            </div>            
-            <div type="textpart" xml:id="Nesel">          
-               <label> Supplication for offering the incense (Nәsʾәl wa-nāstabaqwәʾ ḫiruta śanāyātika ʾәgziʾo…) </label>
-               <note>see <bibl>
+            </div>
+            
+            <div type="textpart" xml:id="Nesel">
+               <label> Supplication for offering the incense (Nǝsǝʾǝl wa-nāstabaqqʷǝʾ ḫiruta śannāyātika ʾǝgziʾo…) </label>
+               <note>See <bibl>
                      <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">147</citedRange>
-                  </bibl>
+                  </bibl>.
                </note>
-            </div>            
-            <div type="textpart" xml:id="Egziabherabiy">           
-               <label> ʾƎgziʾābәḥer ʿabiy wәʾәtu la-ʿālam ba-qadāmi za-ʾiyaḫallәq…</label>
-            </div>            
-            <div type="textpart" xml:id="Tawakkafemneya">            
-               <label>Prayer of offering incense (Tawakkaf ʾәgziʾo ʾәmneya ʾāna ḫāṭʾә waʾābāsi zanta ʿәṭān…) </label>
-               <note>see <bibl>
+            </div>
+            
+            <div type="textpart" xml:id="Egziabherabiy">
+               <label> ʾƎgziʾābǝḥer ʿabiy wǝʾǝtu la-ʿālam ba-qadāmi za-ʾi-yaḫallǝq…</label>
+            </div>
+            
+            <div type="textpart" xml:id="Tawakkafemneya">
+               <label>Prayer of offering incense (Tawakkaf ʾǝmǝnneya ʾəgziʾo, ʾana ḫāṭǝʾ wa-ʾabāsi, zanta ʿǝṭāna nəṣuḥa…) </label>
+               <ab>
+                  ተወከፍ፡ እምኔየ፡ እግዚኦ፤ አነ፡ ኃጥእ፡ ወአባሲ፤ ዘንተ፡ ዕጣነ፡ ንጹሐ፡ ለስርየተ፡ ኀጢአትየ፡ ወለኵሉ፡ ሕዝብከ። 
+                  ተወከፈኒ፡ ጸሎትየ፡ ከመ፡ ዕጣን፡ በቅድሜከ። ስምዐኒ፡ አምላኪየ፡ ስእለትየ፤ እማዕምቅ፡ ጸዋዕኩ፡ እግዚኦ።
+               </ab>
+               <note>See <bibl>
                      <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">383</citedRange>
-                  </bibl>
+                  </bibl>.
                </note>
-            </div>            
-            <div type="textpart" xml:id="Neselakka">            
-               <label>Supplication for offering the incense (Nәsʾәlakka ʾәgziʾo wa-nāstabaqwәʾ ʾāmlakәnā bakama śamarka qwәrbāna ʾābel…) </label>
-               <note>see <bibl>
-                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page"> 383-384</citedRange> 
-                  </bibl> , and <bibl>
+            </div>
+            
+            <div type="textpart" xml:id="Neselakka">
+               <label>Supplication for offering the incense (ʾƎsǝʾǝlakka ʾəgziʾo wa-ʾāstabaqqʷǝʿakka bakama 
+                  śamarka qʷǝrbāna ʾAbel fəqurəka wa-maśwāʿta Henok wa-Noḫ wa-ʾAbrəhām…) </label>
+               <ab>
+                  እስእለከ፡ እግዚኦ፡ ወኣስተበቍዐከ፡ በከመ፡ ሠመርከ፡ ቍርባነ፡ አቤል፡ ፍቁርከ፡ ወመሥዋዕተ፡ ሄኖክ፡ ወኖኅ፡ ወአብርሃም።
+               </ab>
+               <note>See <bibl>
+                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page"> 383-384</citedRange>
+                  </bibl>, and <bibl>
                      <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">131</citedRange>
-                  </bibl>
+                  </bibl>.
                </note>
-            </div>            
-            <div type="textpart" xml:id="Monitions">            
-               <label>Monitions</label> 
-               <note>see <bibl>
-                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">384</citedRange> 
-                  </bibl> , and <bibl>
-                     <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page"> 131-132</citedRange>
-                  </bibl>
+            </div>
+            
+            <div type="textpart" xml:id="Monitions">
+               <label>Monitions</label>
+               <note>See <bibl>
+                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">384</citedRange>
+                  </bibl>, and <bibl>
+                     <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">131-132</citedRange>
+                  </bibl>.
                </note>
-            </div>           
-            <div type="textpart" xml:id="Sagga">           
-               <label>Benediction (Ṣaggā za-ʾāb ḫirut za-wald sutāfe za-manfas tafāqro…) </label>
-               <note>see <bibl>
+            </div>
+            
+            <div type="textpart" xml:id="Sagga">
+               <label>Benediction (Ṣaggā za-ʾab wa-ḫirut za-wald sutāfe za-manfas qəddus tafāqǝro za-ʾəgzəʾtəna Māryām…) </label>
+               <ab>
+                  ጸጋ፡ ዘአብ፡ ወኂሩት፡ ዘወልድ፡ ሱታፌ፡ ዘመንፈስ፡ ቅዱስ፡ ተፋቅሮ፡ ዘእግዝእትነ፡ ማርያም፡ ዘነቢያት፡
+                  ወሐዋርያት፡ ዘጻድቃን፡ ወሰማዕት፡ ዘደናግል፡ ወመነኮሳት፡ ዘትጉሃን፡ መላእክት፡ ዘአበው፡ ቀደምት፡ 
+                  የሀሉ፡ ምስሌየ፡ ወምስለ፡ ኵልክሙ። አሜን።
+               </ab>
+               <note>See <bibl>
                      <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">394</citedRange>
-                  </bibl> , and <bibl>
+                  </bibl>, and <bibl>
                      <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">132</citedRange>
-                  </bibl>
+                  </bibl>.
                </note>
-            </div>            
-            <div type="textpart" xml:id="Egzyahabo">           
-               <label>Prayer for the hierarchy (ʾƎgziʾabәḥer yahābo la-bәḍuʿ walaqәddus liqa ṗāṗāsāt…) </label>
-               <note>see <bibl>
-                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">394-395</citedRange> 
-                  </bibl> , and <bibl>
+            </div>
+            
+            <div type="textpart" xml:id="Egzyahabo">
+               <label>Prayer for the hierarchy (ʾƎgziʾabǝḥer yahabbo la-bǝḍuʿ wa-la-qǝddus liqa ṗāṗāsāt…) </label>
+               <ab>
+                  እግዚአብሔር፡ የሀቦ፡ ለብፁዕ፡ ወለቅዱስ፡ ሊቀ፡ ጳጳሳት፡ አባ፡ <hi rend="rubric">እገሌ፡</hi>
+                  ወብፁዕ፡ ወቅዱስ፡ ጳጳስነ፡ አባ፡ <hi rend="rubric">እገሌ፡</hi>
+               </ab>
+               <note>See <bibl>
+                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">394-395</citedRange>
+                  </bibl>, and <bibl>
                      <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">132-134</citedRange>
-                  </bibl>
+                  </bibl>.
                </note>
-            </div>            
-            <div type="textpart" xml:id="Abawe">          
-               <label>Prayer of offering incense (ʾAbawәʿ laka ʾәṭān mәsla ḫārāgit karbe…) </label>
-               <note>see <bibl>
-                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">395-396</citedRange> 
-                  </bibl> , and <bibl>
+            </div>
+            
+            <div type="textpart" xml:id="Abawe">
+               <label>Prayer of offering incense (ʾĀbawwǝʿ laka ʿǝṭāna mǝsla ḥarāgit karbe…) </label>
+               <ab>
+                  ኣበውእ፡ ለከ፡ ዕጣነ፡ ምስለ፡ ሐራጊት፡ ከርቤ፡ ወቀንአት፡ ወሰሊኆት፡ እምነ፡ አልባሲከ።
+                  ተወከፈኒ፡ ጸሎትየ፡ ከመ፡ ዕጣን፡ በቅድሜከ። ኣቄርብ፡ ለከ፡ ዘንተ፡ ዕጣነ፡ ቅድሜከ፡ 
+                  በእንተ፡ ኀጢአትየ፡ ወበእንተ፡ ኀጢአቶሙ፡ ለሕዝብከ፡ ከመ፡ ትኅድግ፡ አበሳሆሙ፡ 
+                  ወትሣሀሎሙ፡ እስመ፡ መሓሪ፡ አንተ፡ ወለከ፡ ስብሐት፡ ለዓለመ፡ ዓለም። አሜን።
+               </ab>
+               <note>See <bibl>
+                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">395-396</citedRange>
+                  </bibl>, and <bibl>
                      <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">131</citedRange>
-                  </bibl>
+                  </bibl>.
                </note>
-            </div>            
-            <div type="textpart" xml:id="Nesebhaka">            
-               <label>Intercessory prayer (Nәsebḥāka ʾәgziʾo la-ʾāḫze kwullu ʾālam…) </label>
-               <note>see <bibl>
-                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">396-402</citedRange> 
-                  </bibl> , and <bibl>
+            </div>
+            
+            <div type="textpart" xml:id="Nesebhaka">
+               <label>Intercessory prayer (Nǝsebbǝḥākka ʾəgziʾo la-ʾaḫāze kʷǝllu ʿālam…) </label>
+               <ab>
+                  ንሴብሐከ፡ እግዚኦ፡ ለአኃዜ፡ ኵሉ፡ ዓለም፡ አቡሁ፡ ለእግዚእነ፡ ወመድኀኒነ፡ ኢየሱስ፡ ክርስቶስ፡ 
+                  ወንብለከ፤ ሕገ፡ ሰብእ፡ ዘሥጋ፡ እኩይ፡ አናሕሲ፡ ለነ፡ ወለዓለምሰ፡ ኢትትመዐዐነ፤ ወአብዝኅ፡ ምሕረተከ፡ 
+                  ላዕሌነ፤ ወፍጡነ፡ ፈኑ፡ ሣህለከ፡ ዲቤነ። 
+               </ab>
+               <note>See <bibl>
+                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">396-402</citedRange>
+                  </bibl>, and <bibl>
                      <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">137-142</citedRange>
-                  </bibl>
+                  </bibl>. This section includes a series of phrases beginning 
+                  <foreign xml:lang="gez">Nəsəʾəlakka wa-nāstabaqqʷəʿakka…</foreign>
                </note>
-            </div>           
-            <div type="textpart" xml:id="Jeremy">           
-               <label> Prayer of Jeremy (Qәddus, qәddus, qәddus, ʾānta maʿāza ṭәʿum…) </label>
-               <note>see <bibl>
-                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">402-403</citedRange> 
-                  </bibl> , and <bibl>
+            </div>
+            
+            <div type="textpart" xml:id="Jeremy">
+               <label> Prayer of Jeremy (Wa-ṣallaya ʾErməyās ba-beta maqdas ʾənza yəbl: Qǝddus, qǝddus, qǝddus, ʾanta maʿazā ṭǝʿum…) </label>
+               <ab>
+                  ወጸለየ፡ ኤርምያስ፡ በቤተ፡ መቅደስ፡ እንዘ፡ ይብል፤ ቅዱስ፡ ቅዱስ፡ ቅዱስ፤ አንተ፡ መዐዛ፡ ጥዑም፡ 
+                  ለሰብእ፡ ወብርሃን፡ ዘበአማን፡ ዘያበርህ፡ ሊተ፡ እስከ፡ አነ፡ እበጽሕ፡ ቅድሜከ።
+               </ab>
+               <note>See <bibl>
+                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">402-403</citedRange>
+                  </bibl>, and <bibl>
                      <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">142-143</citedRange>
-                  </bibl>
+                  </bibl>.
                </note>
-            </div>            
-            <div type="textpart" xml:id="Chrism">            
-               <label>Prayer for chrism and incense (Naʾākkwәtaka ʾābuhu la-ʾәgziʾәna…)</label>
-               <note>see <bibl>
-                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">403</citedRange> 
-                  </bibl> , and <bibl>
+            </div>
+            
+            <div type="textpart" xml:id="Chrism">
+               <label>Prayer for chrism and incense (Nāʾakkʷǝtakka ʾabuhu la-ʾəgziʾǝna wa-madḫanina ʾIyasus Krəstos…)</label>
+               <ab>
+                  ናአኵተከ፡ አቡሁ፡ ለእግዚእነ፡ ወመድኀኒነ፡ ኢየሱስ፡ ክርስቶስ፡ ወበእንተ፡ ቅድስት፡ ጼና፡ 
+                  እስመ፡ አኮ፡ ባሕቲታ፡ እለ፡ ዘፍጥረት፡ አላ፡ ዘመንፈስ፡ ቅዱስ፡ ለነ፡ ጼና፡ ወሀብከነ።
+                  ናአኵተከ፡ በእንተ፡ መንክራተ፡ ምግባር፡ ወኵሎ፡ ጸጋቲከ፡ ዘጸጎከነ፤ በአሐዱ፡ ወልድከ፡ 
+                  ኢየሱስ፡ ክርስቶስ፡ እግዚእነ፡ ወመድኀኒነ፡ ለዓለመ፡ ዓለም። አሜን።
+               </ab>
+               <note>See <bibl>
+                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">403</citedRange>
+                  </bibl>, and <bibl>
                      <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">152</citedRange>
-                  </bibl>
+                  </bibl>.
                </note>
-            </div>            
-            <div type="textpart" xml:id="Request">           
-               <label>Prayer for request (ʾƎgziʾābәḥer ʾәgziʾәya ʾIyasus Krәstos wa-manfas qәddus sәmāʿ ʾәgziʾo zanta sәʾәläta…) </label>
-               <note>see <bibl>
-                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">403-404 </citedRange>
-                  </bibl> , and <bibl>
+            </div>
+            
+            <div type="textpart" xml:id="Request">
+               <label>Prayer for request (ʾƎgziʾābǝḥer ʾǝgziʾǝya ʾIyasus Krǝstos wa-manfas qǝddus sǝmāʿ ʾəgziʾo zanta sǝʾlata…) </label>
+               <ab>
+                  እግዚአብሔር፡ እግዚእየ፡ ኢየሱስ፡ ክርስቶስ፡ ስማዕ፡ እግዚኦ፡ ዘንተ፡ ስእለትየ፡ ወፈጽም፡ ሊተ፡ ኵሎ፡ 
+                  ፈቃድየ፡ ለገብርከ፡ <hi rend="rubric">እገሌ፡</hi> በብዕለ፡ ስብሐቲከ፡ ወበብዝኀ፡ ምሕረትከ፤
+                  ወዘኒ፡ ዘወሀብከኒ፡ ኢትሂደኒ፡ እግዚኦ፤ ሀበኒ፡ ሞገሰ፡ ወሕይወተ፡ ወኀይለ፡ ወጽንዐ፤ አግርር፡ ፀርየ፡ 
+                  ወጸላእትየ፤ ወስረይ፡ ሊተ፡ ለገብርከ፡ ኵሎ፡ ኀጢአትየ፡ ወጸሐፍ፡ ስምየ፡ ውስተ፡ መጽሐፈ፡ ሕይወት፤
+                  ተዘከረኒ፡ በመንግሥትከ፡ ምስለ፡ ኵሎሙ፡ ጻድቃኒከ፡ እለ፡ አሥመሩከ፡ በሕይወቶሙ፡ ለዓለመ፡ ዓለም።
+                  አሜን።
+               </ab>
+               <note>See <bibl>
+                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">403-404</citedRange>
+                  </bibl>, and <bibl>
                      <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">143</citedRange>
-                  </bibl>
+                  </bibl>.
                </note>
-            </div>           
-            <div type="textpart" xml:id="PrayerDead">            
+            </div>
+            
+            <div type="textpart" xml:id="PrayerDead">
                <label>Prayer for the dead</label>
                <note>See <bibl>
                      <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">143-144</citedRange>
-                  </bibl>
+                  </bibl>.
                </note>
             </div>
-            <div type="textpart" xml:id="Dead">            
-               <label>Prayer for the dead (ʾƎgziʾo gәbar tazkāra śanāya la-ʾāgbәrtika…)</label>
+            
+            <div type="textpart" xml:id="Dead">
+               <label>Prayer for the dead (ʾƎgziʾo gǝbar tazkāra śannāya la-ʾāgbǝrtika…)</label>
                <note>Similar but not identical to <bibl>
                      <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">143-144</citedRange>
-                  </bibl>
+               </bibl>. Probably identical to <ref type="work" corresp="LIT6452Prayer"/>.
                </note>
-            </div>           
-            <div type="textpart" xml:id="Thanksaakkweto">           
-               <label>Prayer of thanksgiving (ʾAʾākkwәto wa-ʾāleʿәlo wa-ʾәsebbәḥo…) </label>
-               <note>see <bibl>
-                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">404 </citedRange>
-                  </bibl> , and <bibl>
-                     <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page"> 146</citedRange>
-                  </bibl>
+            </div>
+            
+            <div type="textpart" xml:id="Thanksaakkweto">
+               <label>Prayer of thanksgiving (ʾĀʾakkʷǝto la-ʾəgziʾa ṣədq wa-ʾāleʿǝl səmo la-neguśa ʿālam…) </label>
+               <ab>
+                  ኣአኵቶ፡ ለእግዚአ፡ ጽድቅ፡ ወኣሌዕል፡ ስሞ፡ ለንጉሠ፡ ዓለም፡ ወእሴብሕ፡ ዕበዮ፡ ለአምላከ፡ ሰማይ።
+                  ነፍስየ፡ ትባርኮ፡ ለእግዚአብሔር፡ ለንጉሥ፡ ዐቢይ፡ ወትትፌሣሕ፡ ቦቱ፡ ለዓለመ፡ ዓለም። አሜን። 
+                  እሴብሖ፡ ለእግዚአብሔር፡ ዘረድአኒ፡ ወእዜምር፡ ለስሙ፡ <sic corresp="JK">ለ</sic>ዑል፡ ዘፈነወ፡ 
+                  ወልዶ፡ መድኅነ፡ ማሕየዌ።
+               </ab>
+               <note>See <bibl>
+                     <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">404</citedRange>
+                  </bibl>, and <bibl>
+                     <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">146</citedRange>
+                  </bibl>.
                </note>
-            </div>            
-            <div type="textpart" xml:id="Thanksemmesraw">           
-               <label>Prayer of thanksgiving (ʾƎm-mәśraq wa-ʾәm-mәʿәrab yәtʾākkwat…) </label>
-               <note>see <bibl>
+            </div>
+            
+            <div type="textpart" xml:id="Aakkweto">
+               <label>Prayer while censing (ʾĀʾakkʷǝto la-ʾāb ʾāʾakkʷǝto la-wald ʾāʾakkʷǝto la-manfās qəddus…) </label>
+               <ab>
+                  ኣአኵቶ፡ ለአብ፡ ኣአኵቶ፡ ለወልድ፡ ኣአኵቶ፡ ለመንፈስ፡ ቅዱስ።
+               </ab>
+               <note>See <bibl>
+                  <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">405</citedRange>
+               </bibl>.
+               </note>
+            </div>
+            
+            <div type="textpart" xml:id="Thanksemmesraw">
+               <label>Prayer of thanksgiving (ʾƎm-mǝśrāq ʾəska mǝʿrāb yǝtʾakkʷat wa-yəssebbāḥ səmu la-ʾƎgziʾabəḥer…) </label>
+               <ab>
+                  እምሥራቅ፡ እስከ፡ ምዕራብ፡ ይትአኰት፡ ወይሴባሕ፡ ስሙ፡ ለእግዚአብሔር። እምሰሜን፡ እስከ፡ ድቡብ፡ 
+                  ይትአኰት፡ ወይሴባሕ፡ ስሙ፡ ለእግዚአብሔር። እምአዜብ፡ እስከ፡ መስዕ፡ ይትአኰት፡ ወይሴባሕ፡ ስሙ፡ 
+                  ለእግዚአብሔር።
+               </ab>
+               <note>See <bibl>
                      <ptr target="bm:Rome1952Saatat"/>, <citedRange unit="page">405-410</citedRange>
-                  </bibl> , and <bibl>
-                     <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page"> 147-152</citedRange>
-                  </bibl>
+                  </bibl>, and <bibl>
+                     <ptr target="bm:SalotaEtan1951"/>, <citedRange unit="page">147-152</citedRange>
+                  </bibl>.
                </note>
-            </div>         
+            </div>
          </div>
-         
-         
-        
+         <listRelation>
+            <relation name="saws:isDifferentTo" active="LIT2252salota" passive="LIT1960Mashaf#Incense">
+            </relation>
+         </listRelation>
+
+
       </body>
    </text>
 </TEI>

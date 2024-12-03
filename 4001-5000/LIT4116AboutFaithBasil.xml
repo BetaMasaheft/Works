@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT4116AboutFaithBasil">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4116AboutFaithBasil">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Homily on the Angels, God and Faith by Basil the Great</title>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘባስልዮስ፡ ኤጲስ፡ ቆጶስ፡ ርቱዐ፡ ሃይማኖት፡ በእንተ፡ መላእክት፡ ወመለኮት፡ ወበእንተ፡ ሃይማኖት፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān za-Bāsǝlyos ʾeṗṗis qoṗos rǝtuʿa haymānot baʾǝnta malāʾǝkt
+            wa-malakot wa-baʾǝnta haymānot</title>
+            <title xml:lang="en" type="main" corresp="#t1">Homily by the Righteous Bishop Basil on the Angels, God and Faith</title>
+            <title xml:lang="en" xml:id="t2">Homily on the Angels, God and Faith</title>
+            <title xml:lang="la" xml:id="t3">De fide</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -25,7 +24,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+           <listBibl type="clavis">
+            <bibl type="CPG">
+               <ptr target="bm:CPG2"/>
+               <citedRange unit="item">2859</citedRange>
+            </bibl>
+         </listBibl>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -35,8 +39,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -47,11 +50,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p/>
          </abstract>
          <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+          <language ident="en">English</language>
+          <language ident="gez">Gǝʿǝz</language>
+          <language ident="la">Latin</language>
+       </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -64,11 +66,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-12-16">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-04-01">Added keywords and adjustments</change>
+         <change who="MKr" when="2020-11-03">Added clavis and Ethiopic title</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+      <div type="bibliography">
+      <listRelation>
+      <relation name="saws:isAttributedToAuthor" active="LIT4116AboutFaithBasil" passive="PRS2546Basilth"/>
+         <relation name="betmas:formerlyAlsoListedAs" active="LIT4116AboutFaithBasil" passive="LIT1632Homily"></relation>
+         
+      </listRelation>
+      </div>
       </body>
    </text>
 </TEI>

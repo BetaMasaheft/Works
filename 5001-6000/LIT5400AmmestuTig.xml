@@ -1,26 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT5400AmmestuTig"
-     xml:lang="en"
-     type="work">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5400AmmestuTig" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">AmmestuTig</title>
-                <title xml:lang="gez" xml:id="t1">ቁጽር᎓ በዓላት᎓ ዘዓቢይ᎓ ወዘንኡስ᎓</title>
-                <title xml:lang="gez" corresp="#t1" type="normalized">Quṣǝr baʿālāt za-ʿābiy
-                wa-za-nǝʾus</title>
+                <title xml:lang="en" xml:id="t1">Explications to the treatise ʾAmmǝstu ʾaʿmāda mǝśṭir 
+                    (‘The Five Pillars of Mystery’)</title>
+                
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine multimediale
                             Forschungsumgebung / beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
@@ -34,8 +27,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -44,8 +36,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p>The work seems to be a Tǝgrǝñña version of ʾAmmǝstu ʾaʿǝmada mǝśṭir.</p>
-                   Tegrenna
+                <p>The work seems to be a Tigrinya version of <ref type="work" corresp="LIT1097Ammest"/>.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -54,25 +45,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="TigrinyaLiterature"/>
                 </keywords>
             </textClass>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DN" when="2019-03-18">Created entity</change>
+            <change who="DR" when="2020-04-20">Added relation</change>
+            <change who="DR" when="2020-05-04">Corrected title</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="lawd:hasAttestation"
-                         active="LIT5400AmmestuTig"
-                         passive="DSEthiop7"/>
+                    <relation name="lawd:hasAttestation" active="LIT5400AmmestuTig" passive="DSEthiop7"/>
+                    <relation name="saws:isRelatedTo" active="LIT5400AmmestuTig" passive="LIT1097Ammest"/>
                 </listRelation>
             </div>
         </body>

@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1932Mashaf">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1932Mashaf">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -29,7 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -40,20 +34,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -67,25 +55,90 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="MV" when="2016-08-12">Added witness</change>
          <change who="DR" when="2017-04-04">Added keywords and div</change>
+         <change when="2020-04-23" who="ES">Added divs and labels</change>
+         <change who="DR" when="2024-01-12">Added bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Fritsch2005EAeGessawe"/></bibl>
+            </listBibl>
+         </div>
          <div type="edition">
-            <div type="textpart" subtype="chapter" xml:id="Maskaram"/>
-            <div type="textpart" subtype="chapter" xml:id="Teqemt"/>
-            <div type="textpart" subtype="chapter" xml:id="Hedar"/>
-            <div type="textpart" subtype="chapter" xml:id="Tahsas"/>
-            <div type="textpart" subtype="chapter" xml:id="Terr"/>
-            <div type="textpart" subtype="chapter" xml:id="Yakkatit"/>
-            <div type="textpart" subtype="chapter" xml:id="Maggabit"/>
-            <div type="textpart" subtype="chapter" xml:id="Miyazya"/>
-            <div type="textpart" subtype="chapter" xml:id="Genbot"/>
-            <div type="textpart" subtype="chapter" xml:id="Sane"/>
-            <div type="textpart" subtype="chapter" xml:id="Hamle"/>
-            <div type="textpart" subtype="chapter" xml:id="Nahase"/>
-            <div type="textpart" subtype="chapter" xml:id="Pagwemen"/>
+            <div type="textpart" subtype="chapter" xml:id="Daily"><label>Maṣḥafa gǝṣṣāwe, Lectionary, Daily scriptural readings</label>            
+               <div type="textpart" subtype="chapter" xml:id="FirstHalf"><label>Maṣḥafa gǝṣṣāwe, Lectionary for the first half of the year</label>
+                          
+               <div type="textpart" subtype="chapter" xml:id="DailyFirstHalf"><label>Daily scriptural readings for the first half of the year</label>
+               <div type="textpart" subtype="chapter" xml:id="Maskaram"><label>Maskaram (1st month)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Teqemt"><label>Ṭǝqǝmt (2nd month)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Hedar"><label>Ḫǝdār (3rd month)</label></div>
+                  <div type="textpart" subtype="chapter" xml:id="Tahsas"><label>Tāḫśāś (4th month)</label></div>
+                  <div type="textpart" subtype="chapter" xml:id="Terr"><label>Ṭǝrr (5th month)</label></div>
+            <div type="textpart" subtype="chapter" xml:id="Yakkatit"><label>Yakkatit (6th month)</label></div>
+               </div>
+                  
+               </div>
+            <div type="textpart" subtype="chapter" xml:id="SecondHalf"><label>Maṣḥafa gǝṣṣāwe, Lectionary for the second half of the year</label>
+                  <div type="textpart" subtype="chapter" xml:id="DailySecondHalf"><label>Daily scriptural readings for the second half of the year</label>
+                     <div type="textpart" subtype="chapter" xml:id="Maggabit"><label>Maggābit (7th month)</label></div>
+                  <div type="textpart" subtype="chapter" xml:id="Miyazya"><label>Miyāzyā (8th month)</label></div>
+                  <div type="textpart" subtype="chapter" xml:id="Genbot"><label>Gǝnbot (9th month)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Sane"><label>Sane (10th month)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Hamle"><label>Ḥamle (11th month)</label></div>
+                  <div type="textpart" subtype="chapter" xml:id="Nahase"><label>Naḥāse (12 month)</label></div>
+                     <div type="textpart" subtype="chapter" xml:id="Pagwemen"><label>agʷǝmen (intercalary  month)</label></div>
+            </div>
+            </div></div>
+            <!-- the following is the structure used in ESap026 -->
+            <div type="textpart" subtype="chapter" xml:id="Sundays"><label>Scriptural readings for Sundays</label>            
+            <div type="textpart" subtype="chapter" xml:id="SundaysFirstHalf"><label>Scriptural readings for Sundays, with Psalms, for the first half of the year</label>
+              
+                  <div type="textpart" subtype="chapter" xml:id="Yohannes"><label>Maskaram 1 to 8 (liturgical period called Yoḥannǝs, “John the Forerunner”)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Zakaryas"><label>Maskaram 8 (Zakāryās)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Fere"><label>Maskaram 9 to 15 (liturgical period called Fǝre,“the Fruits”)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Hensata"><label>Maskaram 16 (Ḥǝnṣata beta krǝstiyān)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Masqal"><label>Maskaram 16 to 25 (liturgical period called Masqal, “the Cross”)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Sege"><label>Maskaram 26 to Ḫǝdār 5 (liturgical period called Ṣǝge, “the Flowers”)</label></div>
+
+               <div type="textpart" subtype="chapter" xml:id="Astamhero"><label>Ḫǝdār 6 to Tāḫśāś 7 (liturgical period called ʾAstamḥǝro, “the Supplication”)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Sebkat"><label>Sunday of the Preaching to the following Saturday (liturgical period called Sǝbkat, “the Preaching”)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Berhan"><label>The following Sunday to the following Saturday (liturgical period called Bǝrhān, “the Light”)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Nolawi"><label>The following Sunday to Tāḫśāś 27 (Nolāwi “the Sheperd”)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Marawi"><label>Tāḫśāś 28 (Marʿāwi “the Bridegroom”)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Ledat"><label>Tāḫśāś 29 to Ṭǝrr 10 (Nāzrǝt, Ḫǝḍnat) (liturgical period called Lǝdat, “the Nativity”)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Gahad"><label>The Eve of the Epiphany (Gahād) to the Sunday of the Encounter (Qabbalā ṣom)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Nanawe"><label>Fast of Nineveh (Nanawe)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Herqal"><label>Fast of Heraclius (Ḥǝrqāl)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="LentMonday"><label>Monday, beginning of the Lent</label></div>
+               <div type="textpart" subtype="chapter" xml:id="LentFriday"><label>Friday, end of the Lent</label></div>
+               
+            </div>
+               <div type="textpart" subtype="chapter" xml:id="SundaysSecondHalf"><label>Scriptural readings for Sundays, with Psalms, for the second half of the year</label>
+               </div>
+            </div>
+            <!-- the following is the structure used in ESdd039 -->
+            <div type="textpart" subtype="chapter" xml:id="SaturdaySunday"><label>Scriptural readings for Saturdays (sanbata ʾayhud) and Sundays (sanbata krǝstiyān)</label>
+            
+            <div type="textpart" subtype="chapter" xml:id="SMaskaram"><label>For Maskaram (1st month)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="STeqemt"><label>For Ṭǝqǝmt (2nd month)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="SHedar"><label>For Ḫǝdār (3rd month)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="STahsas"><label>For Tāḫśāś (4th month)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="STerr"><label>For Ṭǝrr (5th month)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="SYakkatit"><label>For Yakkatit (6th month)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="LentSaturday"><label>Saturday, beginning of the Lent</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Lent"><label>Lent</label></div>
+               <div type="textpart" subtype="chapter" xml:id="PassionWeek"><label>Passion Week</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Easter"><label>Easter</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Ascension"><label>Ascension</label></div>
+               <div type="textpart" subtype="chapter" xml:id="Pentecost"><label>Pentecost</label></div>
+               <div type="textpart" subtype="chapter" xml:id="SGenbot"><label>For Gǝnbot (9th month)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="SSane"><label>For Sane (10th month)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="SHamle"><label>For Ḥamle (11th month)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="SNahase"><label>For Naḥāse (12 month)</label></div>
+               <div type="textpart" subtype="chapter" xml:id="SPagwemen"><label>For agʷǝmen (intercalary  month)</label></div>
+            </div>
          </div>
       </body>
    </text>

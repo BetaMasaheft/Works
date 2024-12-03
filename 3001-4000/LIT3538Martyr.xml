@@ -1,19 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT3538Martyr">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3538Martyr">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ስምዑ፡ ለቅዱስ፡ እንድርያስ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Sǝmʿu la-qǝddus ʾƎndrǝyās</title>
             <title xml:lang="en" corresp="#t1" type="main">The Martyrdom of St Andrew</title>
-            
+            <title type="short">An2</title>
+            <title xml:lang="it" xml:id="t2">Martirio di Andrea</title>
             <editor role="generalEditor" key="AB"/>
          </titleStmt>
          <publicationStmt>
@@ -29,7 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listBibl type="clavis">
@@ -37,12 +32,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:BHO"/>
                   <citedRange unit="item">54</citedRange>
                </bibl>
+               <bibl type="CANT"><ptr target="bm:CANT"/><citedRange unit="item">235</citedRange></bibl>
             </listBibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -50,14 +45,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p/>
+            <p>The Martyrdom of St Andrew on <date ref="ethiocal:Tahsas1">1 Tāḫśāś</date>.</p>
          </abstract>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="it">Italian</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -73,6 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="MV" when="2017-03-24">Added keywords</change>
          <change who="MV" when="2017-11-28">Updated</change>
          <change who="ES" when="2019-03-04">Updated bibl title</change>
+         <change who="DR" when="2019-12-20">Added relation and abstract</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -81,7 +72,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Bausi2000Osservazioni"/>
-                  <citedRange>An2</citedRange>
+                  <citedRange unit="page">102</citedRange>
                </bibl>
             </listBibl>
             <listBibl type="editions">
@@ -97,9 +88,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             <listRelation>
-               <relation name="saws:formsPartOf"
-                         active="LIT3538Martyr"
-                         passive="LIT1461Gadlah"/>
+               <relation name="saws:formsPartOf" active="LIT3538Martyr" passive="LIT1461Gadlah"/>
+               <relation name="ecrm:P129_is_about" active="LIT3538Martyr" passive="PRS11326Andrew"/>
             </listRelation>
          </div>
          <div type="edition">

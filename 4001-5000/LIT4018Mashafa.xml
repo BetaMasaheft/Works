@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT4018Mashafa">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4018Mashafa">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -14,7 +8,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa faws manfasāwi
                (Anonymous)</title>
             <title xml:lang="en" corresp="#t1">Book of Spiritual Medicine</title>
-            <title xml:lang="ar" xml:id="t2arabic">Arabic Vorlage</title>
+            <title xml:lang="ar" xml:id="t2arabic">Kitāb aṭ-ṭibb ar-rūḥānī</title>
             <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -31,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -46,38 +40,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <witness corresp="BLorient549"/>
                <witness corresp="BLorient752"/>
                <witness corresp="BLorient799"/>
-               <!--Katholische Mission Keren/Eritrea 22, bm:ContiRossini1904manoscritti  268-->
-               <witness corresp="SBBorquart998"/>
+               <witness corresp="Cheren22"/>
+               <witness corresp="BerOrQuart998"/>
                <witness corresp="Tanasee52"/>
                <witness corresp="BAVcerulli81"/>
-               <witness type="external" corresp="EMML1941"/>
-               <witness type="external" corresp="EMML1952"/>
-               <witness type="external" corresp="EMML2358"/>
-               <witness type="external" corresp="EMML4754"/>
+               <witness corresp="EMML1941"/>
+               <witness corresp="EMML1952"/>
+               <witness corresp="EMML2358"/>
+               <witness corresp="EMML4754"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="ar">Arabic</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <abstract>
             <p>There exist two distinct works under the title of <foreign xml:lang="gez">Maṣḥafa
                   faws manfasāwi</foreign>, both penitential manuals for confessors having an Arabic
                origin.</p>
             <p>
-               <ref type="work" corresp="LIT4017Mashafa"/> was compiled by <persName ref="PRS7054Michael"/>, while <ref target="#t1"/> was transmitted anonymously.
+               <ref type="work" corresp="LIT4017Mashafa"/> was compiled by <persName ref="PRS7054Michael"/>, while <ref target="#t1" type="title"></ref> was transmitted anonymously.
                   <listBibl type="secondary">
                   <bibl>
                      <ptr target="bm:Kleiner2005EAEFaws"/>
@@ -100,7 +88,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2016-10-14">Changes</change>
          <change who="DR" when="2017-03-28">Added keywords</change>
          <change who="DR" when="2017-06-29">Added keywords</change>
-
+<change when="2022-04-27" who="ES">updated witnesses</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -116,19 +104,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </listBibl>
 
          <listRelation>
-            <relation name="saws:isVersionOf"
-                      active="LIT4018Mashafa#t1"
-                      passive="LIT4018Mashafa#t2arabic">
+            <relation name="saws:isVersionOf" active="LIT4018Mashafa#t1" passive="LIT4018Mashafa#t2arabic">
                <desc>
                   <bibl>
                      <ptr target="bm:Kleiner2005EAEFaws"/>
                   </bibl> suggests an Arabic Vorlage
-                  for <ref target="#t1"/> which would have borrowed parts from the Introduction of
+                  for <ref target="#t1" type="title"/> which would have borrowed parts from the Introduction of
                      <ref type="work" corresp="LIT4017Mashafa#t2arabic"/>.</desc>
             </relation>
-            <relation name="saws:isDifferentTo"
-                      active="LIT4018Mashafa"
-                      passive="LIT4017Mashafa"/>
+            <relation name="saws:isDifferentTo" active="LIT4018Mashafa" passive="LIT4017Mashafa"/>
          </listRelation>
 
 
@@ -141,30 +125,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
 
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Introduction">
-               <label>Introduction, consisting either of one or three chapters</label>
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Introduction">
+               <label>Introduction, consisting either of only the first or all three chapters</label>
 
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Introduction1">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Introduction1">
                   <label>Introduction, chapter 1</label>
                   <desc>The content of this introduction corresponds exactly to <ref type="work" corresp="LIT4017Mashafa#Chapter1"/>, but the gǝʿǝz wording is completely
                      different.</desc>
                </div>
 
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Introduction2">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Introduction2">
                   <label>Introduction, chapter 2: <foreign xml:lang="gez">ካልእ፡ ጾታ፡
                      መጽሐፍ፡</foreign>
                   </label>
                   <desc>The first half of this chapter is identical to <ref type="work" corresp="LIT4017Mashafa#Chapter2"/>. The second half is a translation of the
-                     treatise faṣl fī faḍīlat al-iʿtirāf wa-taṯbītihī. <listBibl type="secondary">
+                     treatise <foreign xml:lang="ar">faṣl fī faḍīlat al-iʿtirāf wa-taṯbītihī</foreign>.  This chapter is also attested 
+                     preceding or following the <ref type="work" corresp="LIT4018Mashafa"/> in manuscripts in which it does not form part of the introduction.
+                     <listBibl type="secondary">
                         <bibl>
                            <ptr target="bm:Kleiner2000Faws"/>
                            <citedRange unit="page">28-30</citedRange>
@@ -180,10 +157,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </desc>
                </div>
 
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Introduction3">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Introduction3">
                   <head>
                      <title xml:id="t3" xml:lang="gez">ነገር፡ ዘከመ፡ እፎ፡ ይደሉ፡ ለዐቃቤ፡ ሥራይ፡
                         አእምሮ፡</title>
@@ -191,90 +165,70 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         ṭ-ṭabīb maʿrifatihī ʾaʿnī muʿallim al-iʿtirāf</title>
                   </head>
                   <desc> The third chapter contains the translation of the treatise <foreign xml:lang="ar">faṣl fī-mā yaǧibu ʿalā ṭ-ṭabīb maʿrifatihī ʾaʿnī muʿallim
-                        al-iʿtirāf</foreign>. <listBibl type="editions">
+                     al-iʿtirāf</foreign>. This chapter is also attested 
+                     preceding or following the <ref type="work" corresp="LIT4018Mashafa"/> in manuscripts in which it does not form part of the introduction.<listBibl type="editions">
                         <bibl>
                            <ptr target="bm:Coeln1908Nomokanon3"/>
                            <citedRange unit="page">210-217</citedRange>
                         </bibl>
+                        <bibl>
+                           <ptr target="bm:Kleiner2000Faws"/>
+                           <citedRange unit="page">28-30</citedRange>
+                        </bibl>
                         <!--Arabic-->
                      </listBibl>
-                     <listRelation>
-                        <relation name="saws:isVersionInAnotherLanguageOf"
-                                  active="LIT4018Mashafa#Introduction3"
-                                  passive="LIT4018Mashafa#t3arabic"/>
-                     </listRelation>
+                     
                   </desc>
+                  <listRelation>
+                     <relation name="saws:isVersionInAnotherLanguageOf" active="LIT4018Mashafa#Introduction3" passive="LIT4018Mashafa#t3arabic"/>
+                  </listRelation>
                </div>
             </div>
 
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="QanonaHebu">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="QanonaHebu">
                <label>
                   <foreign xml:lang="gez">ቀኖና፡ ኅቡእ፡</foreign>
                </label>
                <desc>Exhortations and canons attributed to <persName ref="PRS11239Theodorus"/>,
                   divided into ca. 25 parts.</desc>
                <listRelation>
-                  <relation name="saws:isAttributedToAuthor"
-                            active="LIT4018Mashafa#QanonaHebu"
-                            passive="PRS11239Theodorus"/>
+                  <relation name="saws:isAttributedToAuthor" active="LIT4018Mashafa#QanonaHebu" passive="PRS11239Theodorus"/>
                </listRelation>
 
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="QanonaHebu1">
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="QanonaHebu1">
                   <label>First part of canons and exhortations attributed to <persName ref="PRS11239Theodorus"/>.</label>
                   <listRelation>
-                     <relation name="saws:isAttributedToAuthor"
-                               active="LIT4018Mashafa#QanonaHebu"
-                               passive="PRS11239Theodorus"/>
+                     <relation name="saws:isAttributedToAuthor" active="LIT4018Mashafa#QanonaHebu1" passive="PRS11239Theodorus"/>
+                  </listRelation>
+                  
+                  <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Homosexuality">
+                     <label>
+                        <foreign xml:lang="gez">ነገር፡ በእንተ፡ ዘይሰብክ፡ ተባዕተ፤ ወውእቱ፡ ዲበ፡ ፫
+                           <sic>ዘዘዚአሁ</sic>።</foreign>
+                     </label>
+                     <desc>Treatise on three variants of homosexuality </desc>
+                  </div>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="QanonaHebu2">
+                  <label>Second partpart of canons and exhortations attributed to <persName ref="PRS11239Theodorus"/>.</label>
+                  <listRelation>
+                     <relation name="saws:isAttributedToAuthor" active="LIT4018Mashafa#QanonaHebu" passive="PRS11239Theodorus"/>
                   </listRelation>
                </div>
-
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="Homosexuality">
-                  <label>
-                     <foreign xml:lang="gez">ነገር፡ በእንተ፡ ዘይሰብክ፡ ተባዕተ፤ ወውእቱ፡ ዲበ፡ ፫
-                           <sic>ዘዘዚአሁ</sic>።</foreign>
-                  </label>
-                  <desc>Treatise on three variants of homosexuality included in <ref target="#QanonaHebu"/>
-                  </desc>
-               </div>
+               
             </div>
 
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="QanonaHebu2">
-               <label>Second partpart of canons and exhortations attributed to <persName ref="PRS11239Theodorus"/>.</label>
-               <listRelation>
-                  <relation name="saws:isAttributedToAuthor"
-                            active="LIT4018Mashafa#QanonaHebu"
-                            passive="PRS11239Theodorus"/>
-               </listRelation>
-            </div>
+            
 
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="OtherRules">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="OtherRules">
                <label>Other penitential rules attributed to other authors and synods.</label>
                <listRelation>
-                  <relation name="saws:isAttributedToAuthor"
-                            active="LIT4018Mashafa#OtherCanons"
-                            passive="PRS2546Basilth PRS2209Athanasi PRS9523Timothy"/>
-               </listRelation>
+                  <relation name="saws:isAttributedToAuthor" active="LIT4018Mashafa#OtherCanons" passive="PRS2546Basilth"/>
+                  <relation name="saws:isAttributedToAuthor" active="LIT4018Mashafa#OtherCanons" passive="PRS2209Athanasi"/>
+                  <relation name="saws:isAttributedToAuthor" active="LIT4018Mashafa#OtherCanons" passive="PRS9523Timothy"/></listRelation>
             </div>
 
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Sunday">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Sunday">
                <label>
                   <foreign xml:lang="gez">ነገር፡ በእንተ፡ አዕርፎ፡ በእሑድ።</foreign>
                </label>
@@ -285,18 +239,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <label>Other short pentitenial rules</label>
             </div>
 
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="OtherCanons">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="OtherCanons">
                <label>
                   <foreign xml:lang="gez">እምቀኖና፡ አበዊነ፡ ሐዋርያት፡</foreign>
                </label>
                <desc>Ca. 20 short canons</desc>
                <listRelation>
-                  <relation name="saws:isAttributedToAuthor"
-                            active="LIT4018Mashafa#OtherCanons"
-                            passive="PRS2546Basilth PRS2209Athanasi PRS9523Timothy"/>
+                  <relation name="saws:isAttributedToAuthor" active="LIT4018Mashafa#OtherCanons" passive="PRS2546Basilth"/>
+                  <relation name="saws:isAttributedToAuthor" active="LIT4018Mashafa#OtherCanons" passive="PRS2209Athanasi"/>
+                  <relation name="saws:isAttributedToAuthor" active="LIT4018Mashafa#OtherCanons" passive="PRS9523Timothy"/>
                </listRelation>
             </div>
 

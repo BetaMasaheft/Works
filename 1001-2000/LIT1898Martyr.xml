@@ -1,17 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1898Martyr">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1898Martyr">
 
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Martyrium of Mamas, Tewodoṭos and his wife Tewofina</title>
+            <title xml:id="t1" xml:lang="en">Martyrium of Mammes, Theodotus and his wife Rufina</title>
+            <title xml:id="t2" xml:lang="gez">ዜናሁ፡ ለቅዱስ፡ ማማስ፡ ሰማዕት፡ ወአቡሁ፡ ቴዎዶጦስ፡ ወእሙ፡ ቴዎፊና፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Zenāhu la-qǝddus Māmās samāʿt
+            wa-ʾabuhu Tewodoṭos wa-ʾǝmmu Tewofinā</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,13 +25,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+
+         </sourceDesc>
+         <sourceDesc>
+           <listWit>
+             <witness corresp="BLorient689">BL Orient. 686 (1755-69), fols. 5rc-10vc (fol. 5r: 5 Maskaram).</witness>
+             <witness corresp="BLorient687">BL Orient. 687-688 (XVIII c.), fols. 9ra-15r (fol. 9r: 5 Maskaram).</witness>
+             <witness corresp="BLorient689">BL Orient. 689 (XV c.), fols. 7vb-15ra (fol. 7v: 5 Maskaram).</witness>
+             <!-- BNZ 131: 1 (XIII s.): ff. 1ra-18va (f. 1r: 5 Maskaram); -->
+             <witness corresp="BNFabb110">BnF Éthiopien d'Abbadie 110 (XVIII c.), fols. 8ra-14vc (5 Maskaram)</witness>
+             <witness corresp="EMML1479">EMML 1479 (1459-60), fols. 7vb-15va.</witness>
+             <witness corresp="EMML1766">EMML 1766 (XIV-XV c.), fols. 14ra-27va.</witness>
+             <witness corresp="EMML2514">EMML 2514 (1382-88), fols. 44ra-50va.</witness>
+             <witness corresp="EMML6903">EMML 6903 (XV c.), fols. 11ra-20v (fol. 11r: 5 Maskaram).</witness>
+             <witness corresp="EMML6951">EMML 6951 (XV c.), fols. 2ra-8vb (fol. 2r: 5 Maskaram).</witness>
+             <witness corresp="EMML6965">EMML 6965 (XIV c.): fols. 8ra-15vb (fol. 8r: 5 Maskaram).</witness>
+             <witness corresp="Tanasee121">Ṭānāsee 121 = Dāgā Esṭifānos 10 (1416): fols. 10ra-19ra (fol. 10r: 5 Maskaram).</witness>
+<!--  Dabra Libānos (XV s.) 2;-->
+            <witness corresp="Tanasee105">Ṭānāsee 105 = Rēmā 16: fols. 1r-v, 4r-v, 272r-v.</witness>
+
+           </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -42,11 +58,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language ident="en"/>
-            <language ident="ar"/>
-            <language ident="it">Italian</language>
+            <language ident="en">English</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -55,7 +70,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </keywords>
          </textClass>
          <abstract>
-            <p>The Acts (Martyrdom) of Martyrium of <persName ref="PRS6620Mamas"/>, 
+            <p>The Acts (Martyrdom) of Martyrium of <persName ref="PRS6620Mamas"/>,
             <persName ref="PRS9427Tewodoto"/> and his wife <persName ref="PRS9448Tewofina"/> are read on <date>5 Maskaram</date>
             </p>
          </abstract>
@@ -65,29 +80,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-03-17">Added keywords</change>
+         <change when="2021-12-14" who="DE">Added keywords, witnesses and bibliography according to the information collected by Alessandro Bausi</change>
+         <change when="2024-09-24" who="MKr">Added editions bibliography and a relation</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         
+
          <div type="bibliography">
             <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Surius1618Augustus"/>
                   <citedRange unit="page">173-176</citedRange>
                </bibl>
+               <bibl>
+                  <ptr target="bm:Graf1947GCALI"/>
+                  <citedRange unit="page">520</citedRange>
+               </bibl>
+               
+               <listBibl type="editions">
+                  <bibl><ptr target="bm:Witakowski2024Mamas"/></bibl>                  
+               </listBibl>
+               
+               
             </listBibl>
             <!--from Zotenberg  196, not translation from Ethiopic-->
          </div>
-         
+
          <div type="bibliography">
             <listRelation>
-               <relation name="ecrm:CLP46i_may_form_part_of"
-                         active="LIT1898Martyr"
-                         passive="LIT1493Gadlas"/>
+               <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1898Martyr" passive="LIT1493Gadlas"/>
+               <relation name="ecrm:P129_is_about" active="LIT1898Martyr" passive="PRS6620Mamas"/>
             </listRelation>
-            
-            
+
+
          </div>
       </body>
    </text>

@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT4145Onausp">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4145Onausp">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">On auspicious and inauspicious days</title>
+            <title xml:id="t1" xml:lang="gez">ሐሳበ፡ ጽንዕት፡ ወጽንጽንት፡</title>
+            <title corresp="#t1" xml:lang="gez">Ḥasāba ṣǝnǝʿt wa-ṣǝnṣǝnt</title>
+            <title corresp="#t1" xml:lang="en">Reckoning of auspicious and inauspicious (days)</title>
+            <title xml:id="t2" xml:lang="gez">ሐሳበ፡ ተአምር፡ ጽንዕት፡ ወጽንጽንት፡</title>
+            <title corresp="#t2" xml:lang="gez">Ḥasāba taʾammǝr ṣǝnǝʿt wa-ṣǝnṣǝnt</title>
+            <title corresp="#t2" xml:lang="en">Reckoning of sign(s) of auspicious and inauspicious (days)</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -25,17 +24,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
                <witness corresp="BAVet24"/>
+               <witness corresp="BLorient9798"/>
+               <witness corresp="PetermannIINachtrag32"/>
+               <witness corresp="IVorlov37"/>
+               <witness corresp="BLorient614"/>
+               <witness corresp="BNFabb186"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -45,12 +48,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <abstract>
             <p/>
          </abstract>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language>
+            <language ident="fr">French</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -61,19 +60,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-12-16">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-04-02">Added keywords and adjustments</change>
+         <change when="2024-07-18" who="CH">Updated titles and added bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="edition">
-            <div type="textpart"
-                 subtype="incipit"
-                 xml:id="Incipit"
-                 xml:lang="gez">
+            <div type="textpart" subtype="incipit" xml:id="Incipit" xml:lang="gez">
                <ab>ሐሳበ፡ ጽንዕት፡ ወጽንጽንት። በመስከረም። ፭፡ ጽንዕት። ወእምዝ፡ ጽንጽንት፡ በጥቅምት፡ ፳ወ፫። ጽንዕት። ወእምዝ፡ ጽንጽንት። </ab>
             </div>
          </div>
-       
+       <div type="bibliography">
+          <listBibl type="secondary">
+             <bibl><ptr target="bm:Grebaut1913Joursfastes"/></bibl>
+             <bibl><ptr target="bm:Gasparini1946Vocabili"/></bibl>
+          </listBibl>
+       </div>
       </body>
    </text>
 </TEI>

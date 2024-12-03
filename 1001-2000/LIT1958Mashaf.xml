@@ -1,18 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1958Mashaf">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1958Mashaf">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ቀንዲል፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t1">Maṣḥafa qandil</title>
-            <title xml:lang="en" corresp="#t1">Book of the Lamp</title>  
+
+            <title xml:lang="en" corresp="#t1">Book of the Lamp (General record)</title>  
+
             <title xml:lang="ar" type="normalized" xml:id="t2arabic">Qandīl</title>
             <title xml:lang="grc" xml:id="t3greek"/>
             <editor role="generalEditor" key="AB"/>
@@ -31,29 +28,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <ab/>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-            <language ident="cop">Coptic</language>
-            <language ident="grc">Greek</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="ar">Arabic</language><language ident="gez">Gǝʿǝz</language><language ident="grc">Greek</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -63,13 +52,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </textClass>
          <abstract>
             <p>
-             The <foreign xml:lang="gez">Maṣḥafa qandil</foreign> is the ritual for the Unction of the Sick in the Ethiopian Church. Each of its seven sections consists of the following elements:
-             the lighting of a wick, a supplication, an epistle, the Trisagion, the Prayer of the Gospel with incensing and a <foreign xml:lang="gez">mǝsbak</foreign>, a Gospel reading and a prayer.
-             Its two recensions <ref type="work" corresp="LIT3952MashafaQ"/> and <ref type="work" corresp="LIT3953MashafaQ"/> correspond to the same Vorlage <ref target="#t2arabic"/>, 
-               but are different translations.
+               This record is the general record for the <foreign xml:lang="gez">Maṣḥafa qandil</foreign>, in cases where its recension
+               is not known.
+             The <foreign xml:lang="gez">Maṣḥafa qandil</foreign> is the ritual for the Unction of the Sick in the Ethiopian Church. 
+               Each of its seven sections consists of the following elements:
+             the lighting of a wick, a supplication, an epistle, the Trisagion, the Prayer of the Gospel with incensing and a 
+               <foreign xml:lang="gez">mǝsbāk</foreign>, a Gospel reading and a prayer.
+               Two recensions, which  correspond to the same  <ref target="#t2arabic">Arabic Vorlage</ref>, 
+               but are different translations have been identified by
                <bibl>
                   <ptr target="bm:Zanetti2010Qandil"/>
-               </bibl>
+               </bibl> on the basis of printed editions.
+               <ref type="work" corresp="LIT3952MashafaQ"/> corresponds to   <bibl>
+                  <ptr target="bm:Chaine1913Qandil"/> 
+               </bibl> and the church editions, e.g.
+               <bibl>
+                  <ptr target="bm:Tasfa1993Mashafa"/> 
+               </bibl> and
+               <bibl>
+                  <ptr target="bm:TasfaQandil"/> 
+               </bibl>.
+               <ref type="work" corresp="LIT3953MashafaQ"/> corresponds to the edition     <bibl>
+                  <ptr target="bm:1967Qandil"/> 
+               </bibl>.
             </p>
          </abstract>
       </profileDesc>
@@ -80,6 +85,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2016-09-05">Bibliography, witness and abstract added</change>
          <change who="DR" when="2016-12-02">Minor correction</change>
          <change who="DR" when="2017-03-30">Added keywords</change>
+         <change who="DR" when="2020-12-01">Edited abstract</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -104,15 +110,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>
             
             <listRelation>
-               <relation name="saws:isVersionInAnotherLanguageOf"
-                         active="LIT1958Mashaf#t1"
-                         passive="LIT1958Mashaf#t2arabic"/>
-               <relation name="saws:isVersionInAnotherLanguageOf"
-                         active="LIT1958Mashaf#t2arabic"
-                         passive="LIT1958Mashaf#t3greek"/>
-               <relation name="saws:isDifferentTo"
-                         active="LIT1958Mashaf#t1"
-                         passive="LIT1918Mashaf"/>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1958Mashaf#t1" passive="LIT1958Mashaf#t2arabic"/>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1958Mashaf#t2arabic" passive="LIT1958Mashaf#t3greek"/>
+               <relation name="saws:isDifferentTo" active="LIT1958Mashaf" passive="LIT1919Mashaf"/>
             </listRelation>
          </div>
          

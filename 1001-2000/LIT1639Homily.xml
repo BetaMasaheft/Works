@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1639Homily">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1639Homily">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -30,25 +24,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+           <listBibl type="clavis">
+                <bibl type="CPG">
+                   <ptr target="bm:CPG2"/>
+                   <citedRange unit="item">3603</citedRange>
+                </bibl>
+                <bibl type="CANT">
+                   <ptr target="bm:CANT"/>
+                   <citedRange unit="item">152</citedRange>
+                </bibl>
+             </listBibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract><p>Translated by ʾabbā <persName role="translator" ref="PRS8387SalamaI">Salāmā</persName>.</p></abstract>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -64,19 +61,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2018-06-06" who="ES">updated title relation</change>
          <change when="2018-08-20" who="DR">Added title, keywords and bibliography</change>
+         <change when="2021-07-21" who="MKr">Added clavis and abstract</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
          <listRelation>
-            <relation name="saws:isAttributedToAuthor"
-                      active="LIT1638Homily"
-                      passive="PRS3255CyrilI"/>
+            <relation name="saws:isAttributedToAuthor" active="LIT1638Homily" passive="PRS3255CyrilI"/>
+            <relation name="saws:isDifferentTo" active="LIT1639Homily" passive="LIT1640Homily"/>
+            <relation name="saws:isDifferentTo" active="LIT1639Homily" passive="LIT1638Homily"/>
             
-            <relation name="syriaca:different-from"
-                      active="LIT1639Homily"
-                      passive="LIT1640Homily LIT1638Homily LIT4971MalkeaErgata LIT2932RepCh213"/>
+            <relation name="saws:isDifferentTo" active="LIT1639Homily" passive="LIT2932RepCh213"/>
          </listRelation>
          <listBibl type="editions">
             <bibl>

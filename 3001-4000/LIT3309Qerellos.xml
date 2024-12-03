@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT3309Qerellos">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3309Qerellos">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -16,6 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
+         <editionStmt>
+          <p></p>
+         </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
@@ -29,7 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -43,20 +40,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -70,6 +61,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-02-14">Added keywords</change>
          <change who="MV" when="2017-12-27">Added witnesses, keywords, bibl</change>
+         <change when="2020-05-26" who="DE">Added textparts and relations.</change>
+         <change when="2020-05-27" who="DE">Added corresps to textparts.</change>
+         <change when="2020-09-11" who="DE">Added textparts and relations.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -109,7 +103,132 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Bausi2010EAEQerellos"/>
                </bibl>
             </listBibl>
+            <listRelation>
+              <relation name="dcterms:creator" active="LIT3309Qerellos#Prosphoneticus1" passive="PRS3255CyrilI"></relation>
+              <relation name="dcterms:creator" active="LIT3309Qerellos#Prosphoneticus2" passive="PRS3255CyrilI"></relation>
+              <relation name="dcterms:creator" active="LIT3309Qerellos#Dialogue" passive="PRS3255CyrilI"></relation>
+              <relation name="saws:hasUsed" active="LIT3309Qerellos#VitaOfCyril" passive="LIT2375Synaxa"></relation>
+              <relation name="saws:hasUsed" active="LIT3309Qerellos#JohnOfNikiu79" passive="LIT1239Chroni#Chapter79">
+                <desc>This part of the short biography of Cyril contains an almost verbatim quotation of
+                Chapter 79 of the Chronicle of John of Nikiu.</desc>
+              </relation>
+              <relation name="saws:hasUsed" active="LIT3309Qerellos#JohnOfNikiu87" passive="LIT1239Chroni#Chapter87">
+                <desc>This part of the short biography of Cyril contains a concise paraphrase of
+                Chapter 87 of the Chronicle of John of Nikiu.</desc>
+              </relation>
+              <relation name="saws:hasUsed" active="LIT3309Qerellos#VitaOfCyril" passive="LIT1011Abusak"></relation>
+              <relation name="saws:hasUsed" active="LIT3309Qerellos#VitaOfCyril" passive="LIT4723TarikaWaldaAmid"></relation>
+            </listRelation>
          </div>
+            <div type="edition">
+              <note>Following text structure is based on
+                <bibl>
+                  <ptr target="bm:Bausi2010EAEQerellos"/>
+               </bibl>.</note>
+               <div type="textpart" subtype="vita" xml:id="VitaOfCyril" corresp="LIT2630Zenahu">
+                 <label>Short biography of Cyril</label>
+                 <div type="textpart" xml:id="Introduction"></div>
+                 <div type="textpart" xml:id="JohnOfNikiu79"></div>
+                 <div type="textpart" xml:id="Synaxar"></div>
+                 <div type="textpart" xml:id="JohnOfNikiu87"></div>
+               </div>
+              <div type="textpart" subtype="section" n="1" xml:id="Section1">
+              <div type="textpart" subtype="treatise" xml:id="Prosphoneticus1" corresp="LIT3310Prosph">
+                <label>Prosphoneticus to the Emperor Theodosius II on the right faith</label>
+              </div>
+              <div type="textpart" subtype="treatise" xml:id="Prosphoneticus2" corresp="LIT3311Prosph">
+                <label>Prosphoneticus to the Princesses Arcadia and Marina on the right faith</label>
+              </div>
+              <div type="textpart" subtype="treatise" xml:id="Dialogue" corresp="LIT3312Unity">
+                <label>Dialogue on the Unity of Christ</label>
+              </div>
+              <div type="textpart" subtype="homily" xml:id="HomilyByTheodotus1" corresp="LIT1036Agains">
+                <label>Homily by Theodotus of Ankyra</label>
+              </div>
+              <div type="textpart" subtype="homily" xml:id="HomilyByCyril1" corresp="LIT3328Cyril">
+                <label>Homily by Cyril of Alexandria for the feast of John the Apostle</label>
+              </div>
+              <div type="textpart" subtype="homily" xml:id="HomilyBySeverus" corresp="LIT3313Severus">
+                <label>Homily by Severus of Synnada</label>
+              </div>
+              <div type="textpart" subtype="homily" xml:id="HomilyByAcacius" corresp="LIT3314Acacius">
+                <label>Homily by Acacius of Melitene</label>
+              </div>
+              <div type="textpart" subtype="homily" xml:id="HomilyByJuvenal" corresp="LIT3315Juvenal">
+                <label>Homily by Juvenal of Jerusalem</label>
+              </div>
+              <div type="textpart" subtype="homily" xml:id="HomilyByCyril2" corresp="LIT3329Cyril">
+                <label>Homily by Cyril of Alexandria</label>
+              </div>
+              <div type="textpart" subtype="homily" xml:id="HomilyByRheginus" corresp="LIT3316Rheginus">
+                <label>Homily by Rheginus of Constantia</label>
+              </div>
+              <div type="textpart" subtype="homily" xml:id="HomilyByCyril3" corresp="LIT3330Cyril">
+                <label>Homily by Cyril of Alexandria</label>
+              </div>
+              <div type="textpart" subtype="homily" xml:id="HomilyByEusebius" corresp="LIT3317Eusebius">
+                <label>Homily by Eusebius of Heracleia</label>
+              </div>
+              <div type="textpart" subtype="homily" xml:id="HomilyByTheodotus2" corresp="LIT3318Theodo">
+                <label>Homily By Theodotus of Ankyra</label>
+              </div>
+              <div type="textpart" subtype="homily" xml:id="HomilyByFirmus" corresp="LIT3319Firmus">
+                <label>Homily By Firmus of Caesarea</label>
+              </div>
+              <div type="textpart" subtype="letter" xml:id="LetterOfTheCouncil" corresp="LIT3320Letter">
+                <label>Letter of the Council of Ephesus to John of Antioch</label>
+              </div>
+              <div type="textpart" subtype="homily" xml:id="HomilyOfCyril4" corresp="LIT5622HomilyCyrilJohnMiyazya">
+                <label>Homily of Cyril of Alexandria</label>
+              </div>
+              <div type="textpart" subtype="letter" xml:id="LetterOfJohn" corresp="LIT3321Letter">
+                <label>Letter of John of Antioch to Cyril of Alexandria</label>
+              </div>
+              <div type="textpart" subtype="letter" xml:id="LetterOfCyril" corresp="LIT3322Letter">
+                <label>Letter of Cyril of Alexandria to John of Antioch</label>
+              </div>
+              </div>
+              <div type="textpart" subtype="section" xml:id="Section2">
+                <div type="textpart" subtype="homily" xml:id="HomilyByEpiphanius" corresp="LIT1267Dersan">
+                  <label>Homily of Epiphanius of Cyprus</label>
+                </div>
+                <div type="textpart" subtype="symbol" xml:id="SymbolByEpiphanius" corresp="LIT1266Dersan">
+                  <label>Symbol of faith by Epiphanius of Cyprus</label>
+                </div>
+                <div type="textpart" subtype="homily" xml:id="HomilyByProclus" corresp="LIT3323Proclus">
+                  <label>Homily by Proclus of Cyzicus, Patriarch of Constantinople</label>
+                </div>
+                <div type="textpart" subtype="homily" xml:id="HomilyBySeverianus" corresp="LIT3324Severi">
+                  <label>Homily by Severianus of Gabala</label>
+                </div>
+                <div type="textpart" subtype="symbol" xml:id="SymbolByGregory" corresp="LIT3325Gregory">
+                  <label>Symbol of faith by Gregory of Neocaesaria</label>
+                </div>
+                <div type="textpart" subtype="homily" xml:id="HomilyOnMelchizedek1" corresp="LIT3326Melchiz1">
+                  <label>First homily by Cyril of Alexandria on Melchizedek</label>
+                </div>
+                <div type="textpart" subtype="homily" xml:id="HomilyOnMelchizedek2" corresp="LIT3327Melchiz2">
+                  <label>Second homily by Cyril of Alexandria on Melchizedek</label>
+                </div>
+              </div>
+              <div type="textpart" subtype="section" xml:id="Section3">
+                <div type="textpart" subtype="treatise" xml:id="TreatiseOnMelchizedek" corresp="LIT3332Melchiz">
+                  <label>Treatise on Melchizedek</label>
+                </div>
+                <div type="textpart" subtype="treatise" xml:id="TreatiseOn318Bishops" corresp="LIT3333Treatise">
+                  <label>Small treatise on 318 Bishops of Nicaea</label>
+                </div>
+                <div type="textpart" xml:id="OnBirthAndLife" corresp="LIT3334Ontheb">
+                  <label>Text on birth and life of Jesus</label>
+                </div>
+                <div type="textpart" subtype="treatise" xml:id="AntihereticalTreatise" corresp="LIT3335Antihe">
+                  <label>Antiheretical treatise (on Arians, Chalcedonians, Nestorians,
+                    severus of Antioch, Macedonius, Paul of Samosata, etc.)</label>
+                </div>
+              </div>
+
+            </div>
+
       </body>
    </text>
 </TEI>

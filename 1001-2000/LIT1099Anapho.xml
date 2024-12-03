@@ -1,21 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1099Anapho">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1099Anapho">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">አኰቴተ፡ ቍርባን፡ ዘቅዱስ፡ ህርያቆስ፡ ዘሀገረ፡ ብህንሳ፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t1">ʾAkkʷateta qʷǝrbān za-qǝddus Hǝryāqos za-hagara Bǝhnǝsā</title>
-            <title xml:lang="en" corresp="#t1">Anaphora of Our Lady Mary by Cyriacus of Behnesa</title>
-            
+            <title xml:lang="en" corresp="#t1">Anaphora by St Cyriacus of Behnesa</title>
+
             <title xml:lang="gez" xml:id="t2">አኰቴተ፡ ቍርባን፡ ዘአባ፡ ህርያቆስ፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t2">ʾAkkʷateta qʷǝrbān za-ʾabbā Hǝryāqos</title>
+            
+            <title xml:lang="en" xml:id="t3" type="main">Anaphora of Our Lady Mary by Cyriacus of Behnesa</title>
+
             <editor role="generalEditor" key="AB"/>
          </titleStmt>
          <publicationStmt>
@@ -31,7 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listBibl type="clavis">
@@ -43,20 +41,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="ChristianLiterature"/>
@@ -70,19 +62,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-02-09">Added keywords, title, incipit, bibliography</change>
          <change who="MV" when="2017-12-18">Added clavis id</change>
+         <change when="2020-03-12" who="DE">Corrected transliteration.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
-            <relation name="saws:isAttributedToAuthor"
-                      active="LIT1099Anapho"
-                      passive="PRS3251Cyriacus"/>
-            <relation name="saws:formsPartOf"
-                      active="LIT1099Anapho"
-                      passive="LIT3189Anapho"/>
+            <relation name="saws:isAttributedToAuthor" active="LIT1099Anapho" passive="PRS3251Cyriacus"/>
+            <relation name="saws:formsPartOf" active="LIT1099Anapho" passive="LIT3189Anapho"/>
          </listRelation>
-         
+
          <div type="bibliography">
             <listBibl type="secondary">
                <bibl>
@@ -94,28 +83,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             <listBibl type="editions">
+               <bibl><ptr target="bm:Euringer1937AnaphMaria"/></bibl>
                <bibl>
                   <ptr target="bm:Petrus1548Test"/>
                   <citedRange unit="page">170-174</citedRange>
                </bibl>
             </listBibl>
          </div>
-         
+
          <div type="edition">
-            <div type="textpart"
-                 subtype="incipit"
-                 xml:lang="gez"
-                 xml:id="Incipit">
+            <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit">
                <ab>
                   ጐሥዓ፡ ልብየ፡ ቃለ፡ ሠናየ፡
                </ab>
             </div>
-            <div type="textpart"
-                 subtype="incipit"
-                 xml:lang="gez"
-                 corresp="#Incipit">
+            <div type="textpart" subtype="incipit" xml:lang="gez" corresp="#Incipit">
                <ab>
-                  Gwaśʿā lǝbbǝya qāla śannāya
+                  Gʷaśʿā lǝbbǝya qāla śannāya
                </ab>
             </div>
          </div>

@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2001Mazmur">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2001Mazmur">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -37,7 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -56,21 +50,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-            <language ident="la">Latin</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language><language ident="la">Latin</language></langUsage>
          <textClass>
             <keywords>
                
@@ -80,7 +67,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </textClass>
          
          <abstract>
-            <p>Collection of the <foreign xml:lang="gez">ʿĀrke</foreign> hymns included in the <ref type="work" corresp="LIT2375Synaxa"/>. <persName ref="PRS6378Ludolf"/> used it to compile his calendar in 
+            <p>A type of ʾƎgziʾabǝḥer nagśa collection which developed from  <ref type="work" corresp="LIT1326egziab"/>.
+               Its <foreign xml:lang="gez">ʿĀrke</foreign>-hymns seem to have been included in the <ref type="work" corresp="LIT2375Synaxa"/>.
+               <persName ref="PRS6378Ludolf"/> used it to compile his calendar in 
             <bibl>
                   <ptr target="bm:Ludolf1691Commentarius"/>
                   <citedRange unit="page">389-427</citedRange>
@@ -94,14 +83,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2016-10-18">Title updated and bibliography added</change>
          <change when="2017-02-09" who="ES">relations and keywords updated</change>
          <change when="2017-07-13" who="PL">test change</change>
+         <change who="DR" when="2022-03-21">Added abstract and relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
-            <relation name="saws:isAttributedToAuthor"
-                      active="LIT2001Mazmur"
-                      passive="PRS2036Arkasel"/>
+            <relation name="saws:isAttributedToAuthor" active="LIT2001Mazmur" passive="PRS2036Arkasel"/>
+            <relation name="saws:isVersionOf" active="LIT2001Mazmur" passive="LIT1325egziab"/>
+            <relation name="lawd:hasAttestation" active="LIT2001Mazmur" passive="EMML2706"/>
+            <relation name="lawd:hasAttestation" active="LIT2001Mazmur" passive="EMML7324"/>
          </listRelation>
          
          <div type="bibliography">
@@ -116,6 +107,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
                <bibl>
                   <ptr target="bm:Habtemichael2005EAEEgziabeherNagsa"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Getatchew1983Nags"/>
                </bibl>
                <bibl>
                   <ptr target="bm:Zotenberg1877Catalogue"/>

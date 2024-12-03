@@ -1,31 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT5188MashafaMadbal"
-     xml:lang="en"
-     type="work">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5188MashafaMadbal" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ መድበል፡</title>
-                <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa Madbal</title>
-                
+                <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa madbal</title>
+
                 <title xml:lang="gez" xml:id="t2">ጉባዔ፡ ምሥጢራተ፡ ዘመናት፡</title>
-                <title xml:lang="gez" corresp="#t2" type="normalized">Gubāʿe Mǝśṭirata Zamanāt</title>
-                <title xml:lang="en" corresp="#t2">Collection of the Mysteries of the Times</title>
-                <title xml:lang="gez" xml:id="t3">ምሥጢራ፡ ዘመን፡</title>
-                <title xml:lang="gez" corresp="#t3" type="normalized">Mǝśṭira Zaman</title>
-                <title xml:lang="en" corresp="#t3">The Mystery of Time</title>
+                <title xml:lang="gez" corresp="#t2" type="normalized">Gubāʿe mǝśṭirāta zamanāt</title>
+                <title xml:lang="en" corresp="#t2">Collection of the mysteries of the times</title>
+                <title xml:lang="gez" xml:id="t3">ምሥጢረ፡ ዘመን፡</title>
+                <title xml:lang="gez" corresp="#t3" type="normalized">Mǝśṭira zaman</title>
+                <title xml:lang="en" corresp="#t3">The mystery of time</title>
                 <editor role="generalEditor" key="AB"/>
-      
+
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine multimediale
                             Forschungsumgebung / beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
@@ -39,8 +33,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -49,41 +42,86 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>The work appears to be the Biblical history turned into verses.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="Chronography"/>
+                    <term key="ChristianLiterature"></term>
                 </keywords>
             </textClass>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="SG" when="2019-02-12">Created entity</change>
+            <change when="2020-10-20" who="DE">Added textparts and relations.</change>
+            <change when="2020-11-12" who="DE">Corrected relations and added
+              relations descriptions.</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
+          <listRelation>
+            <relation name="saws:hasUsed" active="LIT5188MashafaMadbal#PartI"
+              passive="LIT3530OldTes"><desc>Mǝśṭira zaman bǝluy contains a paraphrase
+            of the Old Testament and its Apocrypha in verses.</desc></relation>
+            <relation name="saws:hasUsed" active="LIT5188MashafaMadbal#PartII"
+                passive="LIT2072NewTes"><desc>Mǝśṭira zaman ḥaddis contains a paraphrase
+              of the New Testament and its Apocrypha in verses.</desc></relation>
+              <relation name="saws:hasUsed" active="LIT5188MashafaMadbal#OldTestament"
+                passive="LIT3530OldTes"></relation>
+            <relation name="saws:hasUsed" active="LIT5188MashafaMadbal#FourGospels"
+                    passive="LIT1560Gospel"></relation>
+            <relation name="saws:hasUsed" active="LIT5188MashafaMadbal#Testament"
+                            passive="LIT1938Mashaf"></relation>
+            <relation name="saws:hasUsed" active="LIT5188MashafaMadbal#DoctrinaArcanorum"
+                                    passive="LIT2444Temher"></relation>
+            <relation name="saws:hasUsed" active="LIT5188MashafaMadbal#Draught"
+                                            passive="LIT1560Gospel"></relation>
+            <relation name="saws:hasUsed" active="LIT5188MashafaMadbal#HistoryOfMary"
+                              passive="LIT2051Nagara"></relation>
+          </listRelation>
             <div type="edition">
-                <div type="textpart"
-                 subtype="Part 1"
-                 xml:lang="gez"
-                 xml:id="Introduction">
-                    <label>Introduction</label>
+
+                <div type="textpart" subtype="part" xml:lang="gez" xml:id="PartI">
+                    <label xml:lang="gez">Mǝśṭira zaman bǝluy</label>
+                    <div type="textpart" subtype="introduction" xml:lang="gez" xml:id="IntroductionI">
+                        <label xml:lang="en">Introduction to the first part</label>
+                    </div>
+                    <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="OldTestament">
+                      <label xml:lang="en">The Old Testament and its Apocrypha in verses</label>
+                    </div>
+                    <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HistoryOfMary">
+                      <label xml:lang="gez">Nagara Māryām</label>
+                    </div>
                 </div>
-                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="PartI">
-                    <label>Part I</label>
+
+                <div type="textpart" subtype="part" xml:lang="gez" xml:id="PartII">
+                  <label xml:lang="gez">Mǝśṭira zaman ḥaddis</label>
+                  <div type="textpart" subtype="introduction" xml:lang="gez" xml:id="IntroductionII">
+                    <label xml:lang="en">Introduction to the second part</label>
+                  </div>
+                  <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Verses">
+                    <label xml:lang="en">Verses addressed to the Holy Trinity</label>
+                  </div>
+                  <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="FourGospels">
+                    <label xml:lang="en">The four Gospels in verses</label>
+                  </div>
+                  <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Testament">
+                    <label xml:lang="en"><foreign xml:lang="gez">Maṣḥafa kidān</foreign>in verses</label>
+                  </div>
+                  <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="DoctrinaArcanorum">
+                    <label xml:lang="en"><foreign xml:lang="gez">Tǝmhǝrta ḫǝbuʾāt</foreign>in verses</label>
+                  </div>
+                  <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Draught">
+                    <label xml:lang="en">Miraculous Draught of Fishes</label>
+                  </div>
+                  <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Ascension">
+                    <label xml:lang="en">Ascension</label>
+                  </div>
                 </div>
-                
-                
-            
-                
+
+
             </div>
         </body>
     </text>

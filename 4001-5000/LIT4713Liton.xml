@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT4713Liton"
-     xml:lang="en"
-     type="work">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4713Liton" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">ሊጦን፡ ዘመስቀል፡</title>
                 <title corresp="#t1" xml:lang="gez">Liṭon za-masqal</title>
                 <title corresp="#t1" xml:lang="en">Litany of the Cross</title>
+                <title xml:lang="gez" xml:id="t2">መስተብቍዕ፡ ዘመስቀል፡ </title>
+                <title corresp="#t2" xml:lang="gez">Mastabqʷǝʿ za-Masqal</title>
+                <title corresp="#t2" xml:lang="en">Supplication to the Cross</title>
+                <title xml:lang="gez" xml:id="t3">መስተብቍዕ፡ ዘመድኃኔ፡ ዓለም፡ </title>
+                <title corresp="#t3" xml:lang="gez">Mastabqʷǝʿ za-Madḫane ʿālam</title>
+                <title corresp="#t3" xml:lang="en">Supplications to the Saviour of the World</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -27,16 +27,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+                <listWit>
+                    <witness corresp="ESakm009"/>
+                    <witness corresp="ESam007"/>
+                    <witness corresp="EMML4190"/>
+                </listWit> 
          </sourceDesc>
-         <sourceDesc>
-                <p/>
-            </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -45,24 +45,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p>
-                    The office contains prayers for the sick, the pilgrims, the rain, the fruits of the earth, the water of the rivers, the king, the sleepers, the offerers, the 
-                    catechumens, the peace, the Church.
-                </p>
+                <p>The office contains prayers for the sick, the pilgrims, the rain, the fruits of the earth, the water of the rivers, the king, the sleepers, the offerers, the 
+                    catechumens, the peace, the Church.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="Liturgy"/>
                     <term key="ChristianLiterature"/>
+                    <term key="Prayers"/>
                 </keywords>
             </textClass>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="MV" when="2017-09-06">Created entity</change>
@@ -70,16 +63,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
       <body>
+
         <div type="edition">
-            <div type="textpart"
-                 subtype="incipit"
-                 xml:lang="gez"
-                 xml:id="Incipit">
+            <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit">
                 <ab>
                     ወካዕበ፡ ናስተበቍዖ፡ ለዕፀ፡ መስቀል፡ ቅዱስ፡ ጽኑአ፡ ሥልጣን፡ ወኃይል፡
                 </ab>
             </div>
+            <div type="textpart" subtype="explicit" xml:lang="gez" xml:id="Explicit">
+                <ab>
+                    ለእሉ፡ ክልኤ፡ ፍጡራን፡ ስብሐተ፡ ፈጣሪ፡ ይደልዎሙ፡ እስመ፡ ተዐረዩ፡ በክብሮሙ፡ ይእዜኒ፡ ወዘልፈኒ፡ ወለዓለመ፡ ዓለም፡ አሜን።
+                </ab>              
+            </div>
+            <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:Getachew2004Estifanos"/>
+                        <citedRange unit="page">38-41</citedRange>
+                    </bibl>
+                </listBibl>
+            </div>
         </div>
+
       </body>
     </text>
 </TEI>

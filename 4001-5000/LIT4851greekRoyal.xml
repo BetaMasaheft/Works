@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT4851greekRoyal"
-     xml:lang="en"
-     type="work">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4851greekRoyal" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
@@ -26,24 +20,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
                 <listWit>
                     <witness corresp="RIE185and270"/>
                     <witness corresp="RIE185bisand270bis"/>
                 </listWit>
-                <listRelation>
-               <relation name="saws:isVersionInAnotherLanguageOf"
-                         passive="LIT4850pseudotrilingual"
-                         active="LIT4851greekRoyal"/>
-            </listRelation>
+                
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -59,13 +48,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="HistoryAndHistoriography"/>
                 </keywords>
             </textClass>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="PL" when="2017-11-27">Created and encoded catalogue entry</change>
@@ -92,6 +75,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Littmann1913DAEIV"/>
                </bibl>
                 </listBibl>
+                <listRelation>
+                    <relation name="saws:isVersionInAnotherLanguageOf" passive="LIT4850pseudotrilingual" active="LIT4851greekRoyal"/>
+                </listRelation>
             </div>
             <div type="edition" xml:lang="grc">
                 <ab> Ἀειζανᾶς βασιλεὺς 
@@ -101,10 +87,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <placeName ref="LOC3843HBS" resp="#EBernand">Αἰθιόπων<!--this is supported by the other copies, which have Habashat--></placeName> καὶ 
                     <placeName ref="LOC5395Saba">Σαβαειτῶν</placeName> καὶ 
                     τοῦ <placeName ref="LOC5491Salhen" resp="Dillmann">
-                  <certainty locus="value"
-                             match="../@ref"
-                             assertedValue="http://dare.ht.lu.se/places/42554"
-                             resp="salt">
+                  <certainty locus="value" match="../@ref" assertedValue="http://dare.ht.lu.se/places/42554" resp="salt">
                      <desc>Zeyla<cit>
                            <bibl>
                               <ptr target="bm:Salt1809III"/>
@@ -115,9 +98,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </desc>
                   </certainty>
                         <listRelation>
-                            <relation name="skos:closeMatch"
-                               active="http://dare.ht.lu.se/places/42554"
-                               passive="https://pleiades.stoa.org/places/39304"/>
+                            <relation name="skos:closeMatch" active="http://dare.ht.lu.se/places/42554" passive="https://pleiades.stoa.org/places/39304"/>
                         </listRelation>Σιλεῆ</placeName> καὶ 
                     τοῦ <placeName ref="pleiades:40338">
                         <certainty locus="value" match="../@ref" resp="salt">
@@ -131,14 +112,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </cit>
                      </desc>
                   </certainty>
-                        <certainty locus="value"
-                             match="../@ref"
-                             assertedValue="pleiades:39399"
-                             resp="littmann"/>
-                        <certainty locus="value"
-                             match="../@ref"
-                             assertedValue="pleiades:39307"
-                             resp="littmann"/>Τιαμῶ</placeName> καὶ
+                        <certainty locus="value" match="../@ref" assertedValue="pleiades:39399" resp="littmann"/>
+                        <certainty locus="value" match="../@ref" assertedValue="pleiades:39307" resp="littmann"/>Τιαμῶ</placeName> καὶ
                     <placeName ref="pleiades:40079">
                         <certainty locus="value" match="../@ref">
                      <desc>
@@ -158,10 +133,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     βασιλέων, υἱὸς θεοῦ ἀνικήτου Ἄρεως, ἀτακτησάντων κατὰ καιρὸν τοῦ ἔθνους τῶν
                     <placeName type="ethnic" ref="pleiades:40079">
                   <listRelation>
-                        <relation name="skos:closeMatch"
-                               active="https://pleiades.stoa.org/places/795790"
-                               passive="https://pleiades.stoa.org/places/40079"
-                               cert="low"/>
+                        <relation name="skos:closeMatch" active="https://pleiades.stoa.org/places/795790" passive="https://pleiades.stoa.org/places/40079" cert="low"/>
                     </listRelation>Βουγαειτῶν</placeName> ἀπεστίλαμεν τοὺς ἡμετέρους ἀδελφοὺς Σαϊαζανᾶ καὶ τὸν Ἀδηφᾶν τούτους
                     πολεμῆσαι, καὶ παραδεδωκότων αὐτῶν ὑποτάξαντες αὐτοὺς ἤγαγον πρὸς ἡμᾶς μετὰ καὶ
                     τῶν θρεμμάτων αὐτῶν, βοῶν τέ γριβ καὶ πρ<supplied reason="lost">ο</supplied>βάτων ςσκδ καὶ κτηνῶν νωτοφόρω<supplied reason="lost">ν</supplied>,

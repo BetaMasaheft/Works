@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT4915PhysA"
-     xml:lang="en"
-     type="work">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4915PhysA" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
@@ -22,6 +16,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>Digital text of <ref target="#ed1"/> based on <bibl>
                   <ptr target="bm:Hommel1877Physiologus"/>
                </bibl>.</p>
+                <p>Edition in <ref target="#ed2"></ref> is produced by Massimo Villa.</p>
             </editionStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -33,7 +28,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
                 <listWit>
@@ -45,8 +40,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -69,13 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="Translation"/>
                 </keywords>
             </textClass>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language><language ident="it">Italian</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="MV" when="2018-02-06">Created entity</change>
@@ -85,9 +73,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <text xml:base="https://betamasaheft.eu/">
         <body>
             <listRelation>
-                <relation name="saws:isVersionOf"
-                      active="LIT4915PhysA"
-                      passive="LIT1401Physio"/>
+                <relation name="saws:isVersionOf" active="LIT4915PhysA" passive="LIT1401Physio"/>
             </listRelation>
             <div type="bibliography">
                 <listBibl type="editions">
@@ -176,11 +162,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </div>
                 </div>
                 
-                <div n="3"
-                 xml:id="ed1ch3"
-                 type="textpart"
-                 subtype="chapter"
-                 corresp="NAR0014caladrius">
+                <div n="3" xml:id="ed1ch3" type="textpart" subtype="chapter" corresp="NAR0014caladrius">
                     <div n="1" xml:id="ed1ch3se1" type="textpart" subtype="sentence">
                         <ab> ፫ ፍካሬ፡ በእንተ፡ ዖፍ፡ ዘስሙ፡ ከራድዮን፡ </ab>
                     </div>
@@ -205,16 +187,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </div>
                 </div>
                 
-                <div n="4"
-                 xml:id="ed1ch4"
-                 type="textpart"
-                 subtype="chapter"
-                 corresp="NAR0013pelican">
+                <div n="4" xml:id="ed1ch4" type="textpart" subtype="chapter" corresp="NAR0013pelican">
                     <div n="1" xml:id="ed1ch4se1" type="textpart" subtype="sentence">
                         <ab> ፬ፍካሬ፡ በእንተ፡ ዖፍ፡ ዘስሙ፡ ጰልቃን፡ ዘውእቱ፡ ግራብ። </ab>
                     </div>
                     <div n="2" xml:id="ed1ch4se2" type="textpart" subtype="sentence">
-                        <ab>ይቤ፡ ዳዊት፤ <ref cRef="urn:dts:betmas:LIT2000Mazmur:101.7">ተመሰልኩ፡ ጰልቃነ፡ ዘገዳም።</ref> 
+                        <ab>ይቤ፡ ዳዊት፤ <ref cRef="betmas:LIT2000Mazmur.101.7">ተመሰልኩ፡ ጰልቃነ፡ ዘገዳም።</ref> 
                   </ab>
                     </div>
                     <div n="3" xml:id="ed1ch4se3" type="textpart" subtype="sentence">
@@ -1138,11 +1116,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
             
             <div type="edition" xml:lang="gez" xml:id="ed2" resp="MV">
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:id="ed2ch4"
-                 n="4"
-                 corresp="NAR0013pelican"> 
+                <div type="textpart" subtype="chapter" xml:id="ed2ch4" n="4" corresp="NAR0013pelican"> 
                     <div type="textpart" subtype="sentence" xml:id="ed2ch4se1" n="1">
                         <ab>
                      <app>
@@ -1152,7 +1126,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             በእንተ፡ ዖፍ፡ ዘስሙ፡ ጰልቃን፡ ዘውእቱ፡ ግራብ።</ab>
                     </div>
                     <div type="textpart" subtype="sentence" xml:id="ed2ch4se2" n="2">
-                        <ab> ይቤ፡ ዳዊት፡ <ref cRef="urn:dts:betmas:LIT2000Mazmur:101.7">ተመሰልኩ፡ ጰልቃነ፡ ዘገዳም፡</ref> 
+                        <ab> ይቤ፡ ዳዊት፡ <ref cRef="betmas:LIT2000Mazmur.101.7">ተመሰልኩ፡ ጰልቃነ፡ ዘገዳም፡</ref> 
                   </ab>
                     </div>
                     <div type="textpart" subtype="sentence" xml:id="ed2ch4se3" n="3">

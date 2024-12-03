@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2743RepCh27">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2743RepCh27">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to Jacob who was cut in pieces</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ያዕቆብ፡ ዘግሙድ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Yāʿqob za-Gəmud</title>
+            <title corresp="#t1" xml:lang="en">Image of Jacob Intercisus</title>
+            <title xml:id="t2">Malkǝʾ-hymn to Jacob who was cut in pieces</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="AD"></editor>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -20,36 +18,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+            
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Poetry"/>  
@@ -61,25 +49,88 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-02">Added keywords and incipit</change>
+         <change who="ES" when="2024-10-02">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT2743RepCh27" passive="PRS5663JamesIn"></relation>
+               <relation name="skos:exactMatch" active="LIT2743RepCh27" passive="https://w3id.org/malke/2743/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">27</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለመንኮብ፡ እዴከ፡ እምነ፡ አፃብዕ፡ ዐሠርቱ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <note>The following text reproduced after <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለመንኮበ፡ እዴከ፡ እምነ፡ አፃብዕ፡ ዐሠርቱ፨</l>
+                  <l n="2">ጥንተ፡ ተገምዶ፡ ዘኮነ፡ እስመ፡ በኵረ፡ ልደት፡ ውእቱ፨</l>
+                  <l n="3">ያዕቆብ፡ ትቤሎ፡ ለዘይክሕድ፡ ትንሣኤ፡ ዝንቱ፨</l>
+                  <l n="4">ኢትሬኢኑ፡ ሥርወ፡ ወይን፡ እምድኅረ፡ ገመድዎ፡ ሎቱ፨</l>
+                  <l n="5">ዓፅቀ፡ ሐመልማል፡ ዘይሤኒ፡ ከመ፡ ይሠርፅ፡ ቦቱ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለካልኢት፡ አፃባዕትከ፡ እንታክቲ፨</l>
+                  <l n="2">እምሥርወ፡ የማናይ፡ እዴከ፡ እንተ፡ አውቀይዋ፡ ላቲ፨</l>
+                  <l n="3">ያዕቆብ፡ ትቤ፡ በቃለ፡ ሃይማኖት፡ አእኳቲ፨</l>
+                  <l n="4">ክልኤ፡ አዕፁቀ፡ ዘተመትሩ፡ እምተክለ፡ የማንከ፡ ዛቲ፨</l>
+                  <l n="5">እግዚአብሔር፡ ተወከፍ፡ ወተፈሣሕ፡ ባቲ፨</l>
+               </lg>
+               <lg type="stanza" n="51">
+                  <l n="1">ሰላም፡ ለተወክፎትከ፡ ጽእለተ፡ ብዑላን፡ በአርምሞ፨</l>
+                  <l n="2">እንበለ፡ በቀል፡ ወተቀይሞ፨</l>
+                  <l n="3">ያዕቆብ፡ ጽጌ፡ ወመዓዛ፡ ሕይወት፡ ቀናንሞ፨</l>
+                  <l n="4">ለገብርከ፡ ድውየ፡ ሥጋ፡ እስመ፡ ትፌውስ፡ ሕማሞ፨</l>
+                  <l n="5">መናፍስተ፡ ድዌ፡ አሰ|ስል፡ ኢይስብሩ፡ አጽሞ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለከ፡ ያዕቆብ፡ ግሙድ፡ ተወካፌ፡ መስቀል፡ ቡሩክ፨</l>
+                  <l n="2">ከመ፡ አምኃ፡ ሰላመ፡ ልሳነ፡ መልአክ፨</l>
+                  <l n="3">ለድንግል፡ እመ፡ አምላክ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለከ፡ ኣመ፡ በመጥባሕት፡ መተሩ፡ አባላቲከ፡ ወመሌሊተከ፡ ኵሎ፨</l>
+                  <l n="2">አድከምከአ፡ ለሰይጣን፡ ኀይሎ፨</l>
+                  <l n="3">ወቆምከ፡ በተጋድሎ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለከ፡ ቤተ፡ ክርስቲያን፡ ታስቆቁ፡ ቀዊማ፡ ወላሀ፡ ማርታ፡ ትላሁ፨</l>
+                  <l n="2">ርእያ፡ ሥጋከ፡ እንዘ፡ ይጠብሑ፨</l>
+                  <l n="3">ወደመከ፡ እንዘ፡ ይቀድሑ፨</l>
+               </lg>
+               <lg type="stanza" n="4">
+                  <l n="1">ሰላም፡ ለከ፡ እደ፡ ልቡና፡ ሐፀብከ፡ በማየ፡ አእምሮ፡ መጽሐፍ፨</l>
+                  <l n="2">ወክሳደ፡ አብድ፡ መተርከ፡ በብልሐ፡ ሰይፍ፨</l>
+                  <l n="3">ያዕቆብ፡ አበ፡ አእላፍ፨</l>
+               </lg>
+               <lg type="stanza" n="5">
+                  <l n="1">ሰላም፡ ለከ፡ ትደነግፅ፡ ነፍስ፡ ወያንቀለቅል፡ ሥጋ፨</l>
+                  <l n="2">ሶበ፡ ለለ፡ ጊዜ፡ ይትነገር፡ ቅድመ፡ እንግልጋ፨</l>
+                  <l n="3">ገድልከ፡ ሥርግወ፡ ጸጋ፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለከ፡ እምኮከብ፡ ኮከብ፡ ከመ፡ ይኄይስ፡ ክብሩ፨</l>
+                  <l n="2">ክብርከ፡ ይኄይስ፡ እምእለ፡ ተነግሩ፨</l>
+                  <l n="3">ጻድቃን፡ በበ፡ ብሔሩ፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለከ፡ ለዘይትቀነይ፡ ለከ፡ ማኅሌተከ፡ አምጣነ፡ ኵሉ፡ ማኅሠሥ፨</l>
+                  <l n="2">ወዘአንበቦ፡ እንዘ፡ ይደርስ፨</l>
+                  <l n="3">ሊቀ፡ ካህናት፡ ኢየሱስ፡ ክርስቶስ፡ ያንጽሐነ፡ እምጌጋይ፡ ወርኵስ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

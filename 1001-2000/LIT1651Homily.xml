@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1651Homily">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1651Homily">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘ፬እንስሳ፡ መንፈሳውያን፡ ወብርሃናውያን፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān za-4 ʾǝnsǝsā manfasāwǝyān wa-bǝrhānāwǝyān</title>
-            <title xml:lang="en" xml:id="t2">Homily on the Four Living Creatures</title>
+            <title xml:lang="en" corresp="#t1">Homily on the Four Living Creatures (general record)</title>
+            <title xml:lang="gez" xml:id="t2">ድርሳን፡ ዘ፬እንስሳ፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Dǝrsān za-4 ʾǝnsǝsā</title>
+            <title xml:lang="gez" xml:id="t3">ድርሳን፡ ዘ፬እንስሳ፡ መንፈሳውያን፡ ወብርሃናውያን፡</title>
+            <title xml:lang="gez" corresp="#t3" type="normalized">Dǝrsān za-4 ʾǝnsǝsā manfasāwǝyān wa-bǝrhānāwǝyān</title>
+            <title xml:lang="en" corresp="#t3">Homily on the Four Living Creatures, Spiritual and Lighteous</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="DN"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -29,25 +28,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+           <listBibl type="clavis">
+            <bibl type="CPG">
+               <ptr target="bm:CPG6"/>
+               <citedRange unit="item">5150.9</citedRange>
+            </bibl>
+         </listBibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract><p>The homily exists in two distinct recensions. <ref type="work" corresp="LIT6405Dersan4recB"/> is probably older
+         (attested in <date notBefore="1336" notAfter="1340">1336-1340</date>) and appears less frequently than
+       <ref type="work" corresp="LIT6404Dersan4recA"/>.</p></abstract>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -60,16 +60,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2018-04-23">Added title, keywords and relation</change>
+         <change who="MKr" when="2021-01-06">Added clavis and bibliography</change>
+         <change who="MKr" when="2021-04-06">Added info on the two recensions</change>
+         <change who="MKr" when="2021-08-24">Corrected work record ID</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+        <div type="bibliography">
+          <listBibl type="secondary">
+              <bibl><ptr target="bm:Lusini1988patristica"/><citedRange unit="page">487-488</citedRange></bibl>
+              <bibl>
+   <ptr target="bm:nasscal"/>
+   <citedRange unit="item">ECCA 685</citedRange>
+  <ref target="https://www.nasscal.com/e-clavis-christian-apocrypha/encomium-on-the-four-bodiless-creatures-by-pseudo-john-chrysostom/"/>
+</bibl>
+          </listBibl>
         <listRelation>
-           <relation name="saws:isAttributedToAuthor"
-                      active="LIT1651Homily"
-                      passive="PRS5720JohnChr"/>
+           <relation name="saws:isAttributedToAuthor" active="LIT1651Homily" passive="PRS5720JohnChr"/>
         </listRelation>
          <ab/>
+         </div>
       </body>
    </text>
 </TEI>

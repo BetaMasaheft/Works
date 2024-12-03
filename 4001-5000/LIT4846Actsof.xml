@@ -1,19 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT4846Actsof">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4846Actsof">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">፫ግብር፡ ዘቶማስ፡ በእንተ፡ ትእምርተ፡ ከይሲ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">3gǝbr za-Tomās baʾǝnta tǝʾmǝrta kaysi</title>
             <title xml:lang="en" corresp="#t1" type="main">Acts of Thomas, III (on the miracle of the dragon)</title>
-            
+            <title type="short" xml:id="t2">Th5</title>
+            <title xml:id="t3" xml:lang="la">De dracone. De asina</title>
             <editor key="MV"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -31,7 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listBibl type="clavis">
@@ -39,24 +34,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:BHO"/>
                   <citedRange unit="item">1207</citedRange>
                </bibl>
+               <bibl type="CANT"><ptr target="bm:CANT"/><citedRange unit="item">245.II</citedRange></bibl>
             </listBibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language><language ident="la">Latin</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -65,10 +55,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="Translation"/>
             </keywords>
          </textClass>
+         <abstract>
+            <p>The Act of St Thomas on <date ref="ethiocal:Yakkatit2">2 Yakkātit</date>.</p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="MV" when="2017-11-27">Created text record</change>
          <change who="ES" when="2019-04-03">updated</change>
+         <change who="DR" when="2019-12-20">Added relation and abstract</change>
+         <change who="DR" when="2020-03-03">Added titles and CANT ID</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -78,7 +73,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Bausi2000Osservazioni"/>
-                  <citedRange>Th5</citedRange>
+                  <citedRange unit="page">107</citedRange>
                </bibl>
             </listBibl>
             <listBibl type="editions">
@@ -94,9 +89,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             <listRelation>
-               <relation name="saws:formsPartOf"
-                         active="LIT4846Actsof"
-                         passive="LIT1461Gadlah"/>
+               <relation name="saws:formsPartOf" active="LIT4846Actsof" passive="LIT1461Gadlah"/>
+               <relation name="ecrm:P129_is_about" active="LIT4846Actsof" passive="PRS9496Thomas"/>
             </listRelation>
          </div>
          <div type="edition">

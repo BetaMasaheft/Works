@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1952Mashaf">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1952Mashaf">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -21,12 +15,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <funder>ERC</funder>
             <respStmt>
                <resp>digitization and annotation</resp>
-               
+
                <persName ref="HE" from="2015" to="2018"/>
-               
+
             </respStmt>
          </titleStmt>
-         
+
          <editionStmt>
             <p>Digital text based on  <bibl>
                   <ptr target="bm:Hiruie2007MM"/>
@@ -46,12 +40,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
          <sourceDesc>
             <listWit>
-               
+
                <listWit rend="edition">
                   <witness corresp="GasecaMashafaMestir1" xml:id="gmm"/>
                   <witness corresp="EMML714" xml:id="emml714"/>
                   <witness corresp="EMML1191" xml:id="emml1191"/>
-                  
+
                </listWit>
             </listWit>
          </sourceDesc>
@@ -65,8 +59,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>.</p>
          </projectDesc>
          <editorialDecl>
-            
-            
+
+
             <normalization>
                <p>Original spelling and typography is retained.</p>
             </normalization>
@@ -74,24 +68,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <tagsDecl>
             <!-- the format for the tagsDecl to be specified -->
          </tagsDecl>
-         
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
-         
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+
          <creation when="1424">The work is said to have been authored by <persName ref="PRS4709Giyorgis"/> in 1424.</creation>
-         
+
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -107,6 +95,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2016-09-21">Information added</change>
          <change who="DR" when="2017-04-03">Added keywords</change>
          <change when="2018-07-02" who="ES">TraCES metadata added</change>
+         <change when="2021-06-23" who="DE">Added corresp</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -137,17 +126,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             <listRelation>
-               <relation name="saws:isAttributedToAuthor"
-                         active="LIT1952Mashaf"
-                         passive="PRS4709Giyorgis"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1952Mashaf" passive="PRS4709Giyorgis"/>
             </listRelation>
          </div>
-         
+
          <div type="edition">
             <div type="textpart" subtype="chapter" xml:id="Introduction">
                <label>Introduction</label>
             </div>
-            <div type="textpart" subtype="chapter" xml:id="Enumeration">
+            <div type="textpart" subtype="chapter" xml:id="Enumeration" corresp="LIT6467Heresies">
                <label>Enumeration of the 27 (?) heresies described in this work</label>
             </div>
             <div type="textpart" subtype="chapter" xml:id="Chapter1">
@@ -226,7 +213,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <label/>
             </div>
             <div type="textpart" subtype="chapter" xml:id="Chapter26">
-               <label>Against the abrogation of the observation of Sabbath</label> 
+               <label>Against the abrogation of the observation of Sabbath</label>
                <!--sub-chapters in Zotenberg-->
             </div>
             <div type="textpart" subtype="chapter" xml:id="Chapter27">
@@ -242,7 +229,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <label>Against those who deny the resurrection of the dead</label>
             </div>
          </div>
-         
+
       </body>
    </text>
 </TEI>

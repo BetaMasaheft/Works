@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2144OntheT">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2144OntheT">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -14,6 +8,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān za-qǝddus Yoḥannǝs ʾafa warq baʾǝnta ʿaśru danāgǝl</title>
             <title xml:lang="en" corresp="#t1">Homily by St John Chrysostom on the Ten Virgins</title>
             <title xml:lang="la" corresp="#t1">De decem Virginibus</title>
+            <title xml:id="t2">Homily for the Wednesday of the Passion Week</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -30,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listBibl type="clavis">
@@ -42,20 +37,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -71,10 +60,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-15" who="ES">keywords relation</change>
          <change who="MV" when="2017-12-21">Updated</change>
+         <change who="MKr" when="2021-01-18">Corrected bibliography, added relation</change>
+         <change when="2022-02-16" who="ES">added text from EMML 2430 and relation on merging with LIT2695Hom</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div type="edition" xml:lang="gez"><div type="textpart" subtype="incipit"><note>after <ref type="mss" corresp="EMML2430">EMML 2430 , 103r-104v</ref></note><ab>አኃውየ፡ ፍቁራንየ፡ ተዘከሩ፡ ሞተ፡ ዘአልቦ፡ ገብአት፡ ወኢምንተኒ፡ 
+            ድርሳን፡ ዘብጹዕ፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ በረቡዓ፡ ፋሲካ፡ ዘይትነበብ፡ በሰላመ፡ እግዚአብሔር፡ አሜን።</ab></div></div>
          <div type="bibliography">
             <listBibl type="secondary">
                <bibl>
@@ -87,14 +80,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange>484</citedRange>
                </bibl>
                <bibl>
-                  <ptr target="bm:Bausi2007John"/>
+                  <ptr target="bm:Witakowski2007JohnChry"/>
                   <citedRange>294b</citedRange>
                </bibl>
             </listBibl>
             <listRelation>
-               <relation name="saws:isAttributedToAuthor"
-                         active="LIT2144OntheT"
-                         passive="PRS5720JohnChr"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT2144OntheT" passive="PRS5720JohnChr"/>
+               <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2144OntheT" passive="LIT1544Gebrah"/>
+               <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2144OntheT" passive="LIT2317Senodo"/>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT2144OntheT" passive="LIT2695Hom"></relation>
             </listRelation>
          </div>
       </body>

@@ -1,12 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT3178Deggwa">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3178Deggwa">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -30,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -41,20 +36,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Chants"/>
@@ -76,19 +65,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
             <listRelation>
-               <relation name="saws:isAttributedToAuthor"
-                         active="LIT3178Deggwa"
-                         passive="PRS10245Yared">
+               <relation name="saws:isAttributedToAuthor" active="LIT3178Deggwa" passive="PRS10245Yared">
                   <desc>The work is traditionally attributed to <persName ref="PRS10245Yared">Yāred māḫletāwi</persName>
                   </desc>
                </relation>
             </listRelation>
          </div>
          <div type="edition">
-            <!--On which manuscripts is this description based? DR 2017-12-01-->
+            <note>Here the text division is provided after <ref type="mss" corresp="BLadd16195">BL additional 16195</ref></note>
             <div type="textpart" xml:id="part1">
                <label>Part 1, from the feast of St John the Baptist to the
-               feast of Simon, 8 Yakkātit</label> 
+               feast of Simon, 8 Yakkātit</label>
               <div type="textpart" corresp="LIT4350JohnTheBaptist">
                   <label>Hymn for the feast of John the Baptist (<foreign xml:lang="gez">ዋዜማ፡ ዘቅዱስ፡ ዮሐንስ፡</foreign>)</label>
                </div>
@@ -193,10 +180,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </div>
             </div>
             
+            <div type="textpart" xml:id="Lent" corresp="LIT2361somade">
+               <label>Lent</label>
+            </div>
+
             <div type="textpart" xml:id="part2">
                <label>Part 2, from Easter to the end of
-               the liturgical year</label> 
-            
+               the liturgical year</label>
+
                <div type="textpart" corresp="LIT4382Fast">
                   <label>Hymn for the beginning of the Fast (<foreign xml:lang="gez">ዋዜማ፡ ዘቅድስት፡</foreign>)</label>
                </div>
@@ -215,9 +206,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <div type="textpart" corresp="LIT4386EasterEve">
                   <label/>
                </div>
-
-
-               <div type="textpart" xml:id="Table" corresp="LIT1110Anqasa"/>
+               
                <div type="textpart" xml:id="Index"/>
 
 
@@ -336,6 +325,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <label>Hymn for the feast of the Cross</label>
                </div>
             </div>
+            <div type="textpart" xml:id="Haleta" corresp="LIT1110Anqasa">
+              <label>Table of melodic variations for the Hallelujah <foreign xml:lang="gez">አንቀጸ፡ ሃሌታ፡</foreign></label>
+            </div>
+
          </div>
       </body>
    </text>

@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT4117Interpretation">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4117Interpretation">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Interpretation and Symbolic Commentary on Genesis and Exodus</title>
+            <title xml:id="t1">Interpretation and Symbolic Commentary on Genesis and Exodus (general record)</title>
+            <title xml:lang="gez" xml:id="t2">መምህር፡ ተስኢልየ፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Mamhǝr tasʾilǝya</title>
+            <title xml:lang="gez" xml:id="t3">መምህረ፡ ተስኢልየ፡</title>
+            <title xml:lang="gez" corresp="#t3" type="normalized">Mamhǝra tasʾilǝya</title>
+            <title xml:lang="gez" xml:id="t4">መምህረ፡ ኦሪት፡</title>
+            <title xml:lang="gez" corresp="#t4" type="normalized">Mamhǝra ʾorit</title>
+            <title xml:lang="en" corresp="#t4">The Teacher of the Old Testament</title>
+
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -25,7 +27,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -34,8 +36,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -43,13 +44,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p/>
+            <p>According to R. Cowley, this is a collection of commentaries on Old Testament books (from Genesis to Ruth) in Gǝʿǝz and Amharic with parts showing great variability, 
+               but also sharing a common core. 'The monk Yǝsḥaq', which appears to be the name of the compiler (<foreign xml:lang="gez"> ዘአስተጋባእክዎ፡</foreign>) of the work <ref type="work" corresp="LIT4117Interpretation"/> 
+               is mentioned in only one of the known witnesses (<ref type="mss" corresp="BNFabb39"/>.</p>
          </abstract>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
+         <langUsage><language ident="en">English</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="am">Amharic</language>
          </langUsage>
          <textClass>
             <keywords>
@@ -61,18 +62,73 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-04-01">Added keywords and adjustments</change>
+         <change who="DN" when="2023-06-01">Added internal structure and abstract</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <div type="edition">
-            <div type="textpart"
-                 subtype="incipit"
-                 xml:id="Incipit"
-                 xml:lang="gez">
-               <ab>መላእክት፡ ሰማይ፡ ወምድር፡ ወብርሃን፡ ምስለ፡ ጽልመት፡ ፰፡ ወምድርሰ፡</ab>
+            <div type="bibliography">             
+                 <listBibl type="secondary">                                 
+                
+                  <bibl>
+                      <ptr target="bm:Cowley1988Exeget"/>
+                      <citedRange unit="page">116-117, 433–435</citedRange>
+                  </bibl>
+                  
+                </listBibl>
+
+                <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT4117Interpretation" passive="BNFabb195"/>
+                    <relation name="lawd:hasAttestation" active="LIT4117Interpretation" passive="BNFabb157"/>
+                   <relation name="lawd:hasAttestation" active="LIT4117Interpretation" passive="BNFabb156"/>
+                   <relation name="lawd:hasAttestation" active="LIT4117Interpretation" passive="BNFabb39"/>
+                   <relation name="lawd:hasAttestation" active="LIT4117Interpretation" passive="BNFet150"/>
+                   <relation name="saws:isAttributedToAuthor" active="LIT4117Interpretation" passive="PRS14035Yeshaq"/>
+                   <relation name="betmas:formerlyAlsoListedAs" active="LIT4117Interpretation" passive="LIT6824CommentariesOldTest"/>
+                   <relation name="saws:isCommentOn" active="LIT4117Interpretation" passive="LIT2083Octate"/>
+                </listRelation>
+
             </div>
+        <div type="edition">
+           <note>The text edition follows <ref type="mss" corresp="BNFabb157"/>.</note>         
+                 
+            <div type="textpart" subtype="section" xml:lang="gez" xml:id="Genesis">
+                    <label>Commentary on Genesis</label>
+                    <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <ab>
+                       በስመ፡ እግዚአብሔር፡ መሐሪ፡ ወመስተሣህል፡ ርኁቀ፡ መዓት፡ ወብዙኃ፡ ምሕረት፡ ወጻድቅ፨ እወጥን፡ ጽሒፈ፡
+                       መጽሐፍ፡ ዘይሰመይ፡ መምህረ፡ ተስኢልየ፡ እማእምራን፡ መጻሕፍት፨ ወረባሑሰ፡ ለዝ፡ መጽሐፍ፤ ይሜህር፡ ወይተረጐሞ፡ ቃላተ፡ ወነገራተ፡
+                       እንተ፡ የዓፅብ፡ ወይሰአን፡ ዘይትኀባእ፡ ወዘይሴወር፡ ለዘኢየአምር፡ ብእሲ፨ ወትርጓሜሁሰ፡ ቦኀበ፡ ይነግር፡  
+                    </ab>
+                 </div>
+                 
+                 <div type="textpart" subtype="section" xml:lang="gez" xml:id="Exodus">                       
+                    <label>Commentary on Exodus</label>
+                 </div>
+                 <div type="textpart" subtype="section" xml:lang="gez" xml:id="Leviticus">
+                    <label>Commentary on Leviticus</label>
+                 </div>
+                 <div type="textpart" subtype="section" xml:lang="gez" xml:id="Numbers">
+                    <label>Commentary on Numbers</label>
+                 </div>
+                 <div type="textpart" subtype="section" xml:lang="gez" xml:id="Deuteronomy">
+                    <label>Commentary on Deuteronomy</label>
+                    
+                 </div>
+                 <div type="textpart" subtype="section" xml:lang="gez" xml:id="Joshua">
+                    <label>Commentary on Joshua</label>
+                 </div>
+                 
+                 <div type="textpart" subtype="section" xml:lang="gez" xml:id="Judges">
+                    <label>Commentary on Judges</label>
+                 </div>
+                 
+                 <div type="textpart" subtype="section" xml:lang="gez" xml:id="Ruth">
+                    <label>Commentary on Ruth</label>
+                 </div>
+              </div>
          </div>
+
       </body>
    </text>
 </TEI>

@@ -1,12 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2505Weddas">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2505Weddas">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -18,7 +13,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+               Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -28,7 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -37,7 +33,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <witness corresp="BLadd16225#ms_i.1"/>
                   <witness corresp="BNFet89#ms_i1"/>
                   <witness corresp="BNFet90#ms_i1">According to <persName ref="PRS10747Zotenbe"/>,
-                     this version belongs to another recension or translation as <ref type="mss" corresp="BNFet89#ms_i1"/> and <ref type="mss" corresp="BNFet91#ms_i3"/>.</witness>
+                     this version belongs to another recension or translation as <ref type="mss"
+                        corresp="BNFet89#ms_i1"/> and <ref type="mss" corresp="BNFet91#ms_i3"
+                     />.</witness>
                   <witness corresp="BNFet91#ms_i3"/>
                   <witness corresp="BAVet83#ms_i1"/>
                </listWit>
@@ -46,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -55,8 +53,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
@@ -65,6 +61,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
+
+         <abstract>
+            <p> The work comprises devotional prayers, is arranged for the days of the week, and
+               serves for edification. </p>
+         </abstract>
+
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google spreadsheet </change>
@@ -73,6 +75,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2016-09-14"> Added witnesses and bibliography</change>
          <change who="DR" when="2017-02-14">added keywords</change>
          <change who="MV" when="2017-05-26">Added witness and textpart</change>
+         <change who="SH" when="2020-05-08">Changed structure of the work and added function of the work</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -92,34 +95,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
          <div type="edition">
 
+            <div type="textpart" subtype="incipit" xml:id="Incipit">
+               <label>Incipit of the work</label>
+            </div>
+
             <div type="textpart" subtype="chapter" xml:id="Monday">
                <listRelation>
-                  <relation name="saws:isAttributedToAuthor"
-                            active="LIT2505Weddas#Monday"
-                            passive="PRS2546Basilth">
+                  <relation name="saws:isAttributedToAuthor" active="LIT2505Weddas#Monday"
+                     passive="PRS2546Basilth">
                      <desc>Attributed to <persName ref="PRS2546Basilth">Bāsǝlyos</persName>
                      </desc>
                   </relation>
                </listRelation>
             </div>
 
-            <div type="textpart" subtype="chapter" xml:id="Monday2">
-               <listRelation>
-                  <relation name="saws:isAttributedToAuthor"
-                            active="LIT2505Weddas#Monday2"
-                            passive="PRS2546Basilth">
-                     <desc>Addendum to <ref target="#Monday"/>, equally attributed to <persName ref="PRS2546Basilth">Bāsǝlyos</persName> and placed at the end of the
-                        work in <ref type="mss" corresp="BAVet83#ms_i1.8"/>
-                     </desc>
-                  </relation>
-               </listRelation>
-            </div>
+
 
             <div type="textpart" subtype="chapter" xml:id="Tuesday">
                <listRelation>
-                  <relation name="saws:isAttributedToAuthor"
-                            active="LIT2505Weddas#Tuesday"
-                            passive="PRS3827Ephrem">
+                  <relation name="saws:isAttributedToAuthor" active="LIT2505Weddas#Tuesday"
+                     passive="PRS3827Ephrem">
                      <desc>Attributed to <persName ref="PRS3827Ephrem">Ephrem the
                         Syrian</persName>.</desc>
                   </relation>
@@ -128,9 +123,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <div type="textpart" subtype="chapter" xml:id="Wednesday">
                <listRelation>
-                  <relation name="saws:isAttributedToAuthor"
-                            active="LIT2505Weddas#Wednesday"
-                            passive="PRS3827Ephrem">
+                  <relation name="saws:isAttributedToAuthor" active="LIT2505Weddas#Wednesday"
+                     passive="PRS3827Ephrem">
                      <desc>Attributed to <persName ref="PRS3827Ephrem">Ephrem the
                         Syrian</persName>.</desc>
                   </relation>
@@ -139,55 +133,71 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <div type="textpart" subtype="chapter" xml:id="Thursday">
                <listRelation>
-                  <relation name="saws:isAttributedToAuthor"
-                            active="LIT2505Weddas#Thursday"
-                            passive="PRS5740JohnSab">
+                  <relation name="saws:isAttributedToAuthor" active="LIT2505Weddas#Thursday"
+                     passive="PRS5740JohnSab">
                      <desc>Attributed to <persName ref="PRS5740JohnSab">John Saba</persName>
                      </desc>
                   </relation>
                </listRelation>
             </div>
 
-            <div type="textpart" subtype="chapter" xml:id="Pachomius">
-               <note>The section mentioning <persName ref="PRS7696Pachomiu">Pachomius</persName> can
-                  be a part of <ref target="#Thursday"/> or <ref target="#Friday"/>.</note>
-            </div>
-
             <div type="textpart" subtype="chapter" xml:id="Friday">
-               <listRelation>
-                  <relation name="saws:isAttributedToAuthor"
-                            active="LIT2505Weddas#Friday"
-                            passive="PRS8823Shenute">
-                     <desc>Attributed to <persName ref="PRS8823Shenute">Shenute of
-                        Atripe</persName>.</desc>
-                  </relation>
-                  <relation name="saws:isAttributedToAuthor"
-                            active="LIT2505Weddas#Friday"
-                            passive="PRS7696Pachomiu">
-                     <desc>A text by <persName ref="PRS7696Pachomiu">Pachomius</persName> is inserted in the prayer.</desc>
-                  </relation>
-               </listRelation>
+               <div type="textpart" subtype="chapter" xml:id="FridayShenute">
+                  <listRelation>
+                     <relation name="saws:isAttributedToAuthor" active="LIT2505Weddas#FridayShenute"
+                        passive="PRS8823Shenute">
+                        <desc>Attributed to <persName ref="PRS8823Shenute">Shenute of
+                              Atripe</persName>.</desc>
+                     </relation>
+                  </listRelation>
+               </div>
+
+               <div type="textpart" subtype="chapter" xml:id="FridayPachomius">
+                  <listRelation>
+                     <relation name="saws:isAttributedToAuthor"
+                        active="LIT2505Weddas#FridayPachomius" passive="PRS7696Pachomiu">
+                        <desc>A text by <persName ref="PRS7696Pachomiu">Pachomius</persName> is
+                           inserted in the prayer.</desc>
+                     </relation>
+                  </listRelation>
+               </div>
             </div>
 
             <div type="textpart" subtype="chapter" xml:id="Saturday">
                <listRelation>
-                  <relation name="saws:isAttributedToAuthor"
-                            active="LIT2505Weddas#Saturday"
-                            passive="PRS2209Athanasi">
-                     <desc>Attributed to <persName ref="PRS2209Athanasi">Athanasius</persName>.</desc>
+                  <relation name="saws:isAttributedToAuthor" active="LIT2505Weddas#Saturday"
+                     passive="PRS2209Athanasi">
+                     <desc>Attributed to <persName ref="PRS2209Athanasi"
+                        >Athanasius</persName>.</desc>
                   </relation>
                </listRelation>
             </div>
 
             <div type="textpart" subtype="chapter" xml:id="Sunday">
                <listRelation>
-                  <relation name="saws:isAttributedToAuthor"
-                            active="LIT2505Weddas#Sunday"
-                            passive="PRS3255CyrilI">
+                  <relation name="saws:isAttributedToAuthor" active="LIT2505Weddas#Sunday"
+                     passive="PRS3255CyrilI">
                      <desc>This prayer is attributed to <persName ref="PRS3255CyrilI">Cyril
                            I</persName> in <ref type="mss" corresp="BNFet90#ms_i1.7"/>, but not in
                            <ref type="mss" corresp="BNFet91#ms_i3.7"/>. Probably the prayers are not
                         the same.</desc>
+                  </relation>
+               </listRelation>
+            </div>
+
+            <div type="textpart" subtype="explicit" xml:id="Explicit">
+               <label>Explicit of the work</label>
+            </div>
+
+
+            <div type="textpart" subtype="chapter" xml:id="Monday2">
+               <listRelation>
+                  <relation name="saws:isAttributedToAuthor" active="LIT2505Weddas#Monday2"
+                     passive="PRS2546Basilth">
+                     <desc>Addendum to <ref target="#Monday"/>, equally attributed to <persName
+                           ref="PRS2546Basilth">Bāsǝlyos</persName> and placed at the end of the
+                        work in <ref type="mss" corresp="BAVet83#ms_i1.8"/>
+                     </desc>
                   </relation>
                </listRelation>
             </div>

@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1914Mashaf">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1914Mashaf">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
@@ -34,8 +28,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </licence>
                 </availability>
             </publicationStmt>
+            
             <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+                <p><ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc894877">BnF Arabe 214</ref> contains some of these Questions, entitled
+                    <foreign xml:lang="ar">كتب بعض الابا المعلمين الى الاب الطاهر اتناسيوس بطريرك مدينة الاسكندرية</foreign>. According  to   <bibl>
+                        <ptr target="bm:Zotenberg1877Catalogue"/>
+                        <citedRange unit="page">257b</citedRange>
+                    </bibl>, this translation was not the Vorlage of the Gǝʿǝz text.
+                    
+                </p>
+               
          </sourceDesc>
          <sourceDesc>
                 <listBibl type="clavis">
@@ -44,34 +46,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">2257</citedRange>
                </bibl>
                 </listBibl>
-                <listWit>
-                    <witness type="external" corresp="BnF Arabe 214">BnF Arabe 214 contains some of these Questions, entitled
-                 <foreign xml:lang="ar">كتب بعض الابا المعلمين الى الاب الطاهر اتناسيوس بطريرك مدينة الاسكندرية</foreign>. According  to   <bibl>
-                            <ptr target="bm:Zotenberg1877Catalogue"/>
-                            <citedRange unit="page">257b</citedRange>
-                        </bibl>, this translation was not the Vorlage of the Gǝʿǝz text.
-                 <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc894877"/>
-                    </witness>
-                </listWit>
+                
             </sourceDesc>
         </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
         <profileDesc>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="gez">Gǝʿǝz</language>
-                <language ident="grc">Greek</language>
-                <language ident="la">Latin</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language><language ident="ar">Arabic</language><language ident="gez">Gǝʿǝz</language><language ident="grc">Greek</language><language ident="la">Latin</language></langUsage>
             <textClass>
                 <keywords scheme="#ethioauthlist">
                     <term key="ChristianLiterature"/>
@@ -95,6 +81,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <bibl>
                         <ptr target="bm:Zotenberg1877Catalogue"/>
                         <citedRange unit="page">257b</citedRange>
+                        
                     </bibl>
                     <bibl>
                         <ptr target="bm:Ewald1844Tuebingen"/>
@@ -109,6 +96,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <ptr target="bm:Graf1944GCALI"/>
                         <citedRange unit="page">312-313</citedRange>
                     </bibl>
+                    
+                   
+                        
+                    
                 </listBibl>
                 
                 <listBibl type="editions">
@@ -124,17 +115,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </bibl>
                 </listBibl>
                 <listRelation>
-               <relation name="saws:isAttributedToAuthor"
-                         active="LIT1914Mashaf"
-                         passive="PRS2209Athanasi">
+               <relation name="saws:isAttributedToAuthor" active="LIT1914Mashaf" passive="PRS2209Athanasi">
                         <desc>The attribution to <persName ref="PRS2209Athanasi"/> already occurs in <ref target="#t3greek"/> and <ref target="#t4arabic"/>.</desc>
                     </relation>
-               <relation name="saws:isVersionInAnotherLanguageOf"
-                         active="LIT1914Mashaf#t4arabic"
-                         passive="LIT1914Mashaf#t3greek"/>
-               <relation name="saws:isVersionInAnotherLanguageOf"
-                         active="LIT1914Mashaf#t1"
-                         passive="LIT1914Mashaf#t4arabic"/>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1914Mashaf#t4arabic" passive="LIT1914Mashaf#t3greek"/>
+               <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1914Mashaf#t1" passive="LIT1914Mashaf#t4arabic"/>
             </listRelation>
             </div>
             <div type="edition">
@@ -146,473 +131,239 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <ptr target="bm:Zotenberg1877Catalogue"/>
                         <citedRange unit="page">257b</citedRange>
                     </bibl>.</note>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question2">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question2">
                     <label>Question 2</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question12">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question12">
                     <label>Question 12</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question14">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question14">
                     <label>Question 14</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question18">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question18">
                     <label>Question 18</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question29">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question29">
                     <label>Question 29</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question30">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question30">
                     <label>Question 30</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question31">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question31">
                     <label>Question 31</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question33">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question33">
                     <label>Question 33</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question42">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question42">
                     <label>Question 42</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question43">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question43">
                     <label>Question 43</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question44">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question44">
                     <label>Question 44</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question48">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question48">
                     <label>Question 48</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question53">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question53">
                     <label>Question 53</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question54">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question54">
                     <label>Question 54</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question56">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question56">
                     <label>Question 56</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question58">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question58">
                     <label>Question 58</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question60">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question60">
                     <label>Question 60</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question61">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question61">
                     <label>Question 61</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question62">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question62">
                     <label>Question 62</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question63">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question63">
                     <label>Question 63</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question66">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question66">
                     <label>Question 66</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question67">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question67">
                     <label>Question 67</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question68">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question68">
                     <label>Question 68</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question69a">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question69a">
                     <label>Question 69a</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question69b">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question69b">
                     <label>Question 69b</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question70">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question70">
                     <label>Question 70-72</label>
                     <note>Questions 70-72 of the Greek are joined into one paragraph and abridged.</note>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question73">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question73">
                     <label>Question 73</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question74">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question74">
                     <label>Question 74</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question75">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question75">
                     <label>Question 75</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question76">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question76">
                     <label>Question 76</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question77">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question77">
                     <label>Question 77</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question78">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question78">
                     <label>Question 78</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question79">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question79">
                     <label>Question 79</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question80">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question80">
                     <label>Question 80</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question81">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question81">
                     <label>Question 81</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question82">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question82">
                     <label>Question 82</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question83">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question83">
                     <label>Question 83</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question84">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question84">
                     <label>Question 84</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question85">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question85">
                     <label>Question 85</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question86">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question86">
                     <label>Question 86</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question87">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question87">
                     <label>Question 87</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question88">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question88">
                     <label>Question 88</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question89">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question89">
                     <label>Question 89</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question90">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question90">
                     <label>Question 90</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question91">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question91">
                     <label>Question 91</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question92">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question92">
                     <label>Question 92</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question93">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question93">
                     <label>Question 93</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question94">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question94">
                     <label>Question 94</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question96">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question96">
                     <label>Question 96</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question97">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question97">
                     <label>Question 97</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question98">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question98">
                     <label>Question 98</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question99">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question99">
                     <label>Question 99</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question100">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question100">
                     <label>Question 100</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question103">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question103">
                     <label>Question 103</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question104">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question104">
                     <label>Question 104</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question105">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question105">
                     <label>Question 105</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question107">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question107">
                     <label>Question 107</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question108">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question108">
                     <label>Question 108</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question109">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question109">
                     <label>Question 109</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question110">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question110">
                     <label>Question 110</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question111">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question111">
                     <label>Question 111</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question112">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question112">
                     <label>Question 112</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question114">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question114">
                     <label>Question 114</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question116">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question116">
                     <label>Question 116</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question117">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question117">
                     <label>Question 117</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question120">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question120">
                     <label>Question 120</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question121">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question121">
                     <label>Question 121</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question119">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question119">
                     <label>Question 119</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question125">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question125">
                     <label>Question 125</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question126">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question126">
                     <label>Question 126</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question127">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question127">
                     <label>Question 127</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question128">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question128">
                     <label>Question 128</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question129">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question129">
                     <label>Question 129</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question130">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question130">
                     <label>Question 130</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question131">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question131">
                     <label>Question 131</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question133">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question133">
                     <label>Question 133</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question134">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question134">
                     <label>Question 134</label>
                 </div>
-                <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Question135">
+                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Question135">
                     <label>Question 135</label>
                 </div>
             </div>

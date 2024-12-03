@@ -1,17 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1626Homily">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1626Homily">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Homily on Mary and Joseph</title>
-            <author>Jacob of Serug</author>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘአባ፡ ያዕቆብ፡ ወተመይጠት፡ ማርያም፡ ትግባእ፡ ቤታ፡ እምድኅረ፡ ዝንቱ፡ እስመ፡
+            በጽሐ፡ ጊዜ፡ ትለድ፡ ወለተ፡ ሌዋዊያን፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān za-ʾabbā Yāʿqob wa-tamayṭat Māryām tǝgbāʾ
+            betā ʾǝm-dǝḫra zǝntu ʾǝsma baṣḥa gize tǝlad walatta Lewāwiyān</title>
+            <title xml:lang="en" xml:id="t2">Homily on Mary and Joseph</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,30 +25,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
+        <textClass>
+               <keywords>
+                   <term key="ChristianLiterature"/>
+                   <term key="Homily"/>
+                   <term key="Translation"/>
+               </keywords>
+           </textClass>
          <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2021-03-28">Added Ethiopic title, incipit, updated the record</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -59,4 +61,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <ab/>
       </body>
    </text>
+   <text>
+    <body>
+        <div type="bibliography">
+            <listRelation>
+                <relation name="saws:isAttributedToAuthor" active="LIT1626Homily" passive="PRS5655Jacobof"/>
+            </listRelation>
+        </div><!---->
+    </body>
+</text>
+<text>
+      <body>
+            <div xml:lang="gez" type="edition">
+            <note>The incipit is taken from <ref type="mss" corresp="EMML1763"/></note>
+            <div type="textpart" subtype="incipit">
+             <ab xml:lang="gez">ተወክፋ፡ ዮሴፍ፡ ወአእመረ፡ ከመ፡ ፀንሰት፡ ማርያም። ደንገፀ፡ ጻድቅ፡ በራእይ፡ ሐዲስ፡ ወአንከፈት፡ ድንግል፡ ንጽሐት፡
+             ወምልእተ፡ ድንግልና።</ab>
+            </div>
+          </div>
+      </body>
+    </text>
 </TEI>

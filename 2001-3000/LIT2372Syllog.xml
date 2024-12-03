@@ -1,17 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2372Syllog">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2372Syllog">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Sylloge</title>
-            <author>Timotheus Ailouros</author>
+            <title xml:id="t1">Sylloge of Timotheus Ailouros</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,35 +22,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2020-11-19" who="ES">added relations and textparts</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <listRelation>
+            <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2372Syllog" passive="LIT1952Mashaf"/>
+            <relation name="saws:formsPartOf" active="LIT2372Syllog" passive="LIT1047Aksumi"/>
+            <relation name="saws:isAttributedToAuthor" active="LIT2372Syllog" passive="PRS9523Timothy"/>
+         </listRelation>
+  
+  <div type="edition">
+     <div type="textpart" xml:id="Timotheus1" corresp="LIT1785Letter"><label>Epistle to the Alexandrinians</label></div>
+     <div type="textpart" xml:id="Timotheus2" corresp="LIT1786Letter"><label>Epistle to the Constantinopolitans</label></div>
+     <div type="textpart" xml:id="Timotheus3" corresp="LIT6252TimothyCyril"><label>Twelve chapters of Cyril of Alexandria</label></div>
+     <div type="textpart" xml:id="Timotheus4" corresp="LIT2220Refuta"><label>Refutation of the council of Chalcedon</label></div>
+     <div type="textpart"  xml:id="Timotheus5" corresp="LIT6253TimothyGregory"><label>Treatises of Gregory of Nazianzus</label></div>
+  </div>
       </body>
    </text>
 </TEI>

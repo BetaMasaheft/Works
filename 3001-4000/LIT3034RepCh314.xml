@@ -1,17 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT3034RepCh314">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3034RepCh314">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to Jesus Christ</title>
+           <title xml:lang="gez" xml:id="t1">ልሳነ፡ ሰብእ፡</title>
+           <title xml:lang="gez" corresp="#t1" type="normalized">Lǝssāna sabʾ</title>
+           <title xml:lang="en" corresp="#t1">The Tongue of Men</title>
+           <title xml:lang="gez" xml:id="t2">መልክአ፡ ልሳን፡</title>
+           <title xml:lang="gez" corresp="#t2" type="normalized">Malkǝʾa lǝssān</title>
+           <title xml:lang="en" corresp="#t2">Image of the Tongue</title>
+            <title xml:lang="gez" xml:id="t3">ጸሎት፡ በእንተ፡ ኵሎሙ፡ ልሳናት፡</title>
+             <title corresp="#t3" xml:lang="gez" type="normalized">Ṣalot baʾǝnta kʷǝllomu lǝssānāt</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="AD"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -27,7 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -36,30 +38,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="ChristianLiterature"/>
                <term key="Poetry"/>
+               <term key="Magic"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
+         <change who="AD" when="2020-09-08">Merged with duplicate entry LIT4696MagicPr</change>
+         <change who="AD" when="2020-09-10">Updated bibliography and incipit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -70,15 +69,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">314</citedRange>
                </bibl>
+               <bibl>
+                  <ptr target="bm:Grebaut1935LesanaSab"/>
+               </bibl>
+            </listBibl>
+
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:HabtemichaelNosnitsin2007Lessanasab"/>
+               </bibl>
             </listBibl>
          </div>
          <div type="edition">
+           <note>The incipit follows <ref type="mss" corresp="EMIP00185"/>.</note>
+
             <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ናሁ፡ ተማኅፀንኩ፡ በኆኅያተ፡ ስምከ፡ ካፍ።
-               </ab>
+              <ab>ጸሎት፡ በእንተ፡ ልሳነ፡ ሰብእ፡ ልሳነ፡ ምቀኛ፡ ወተንኮለኛ፡ ልሳነ፡ እስላም፡ ወክርስቲያን።</ab>
+              <ab>
+                <lg  n="1" type="stanza" xml:id="s1">
+                  <l n="1">ናሁ፡ ተማኅፀንኩ፡ በኆኅያተ፡ ስምከ፡ ካፍ።</l>
+                  <l n="2">ወበቀዳማይ፡ የውጣ፡ ዘጥንተ፡ ፊደሉ፡ አሌፍ።</l>
+                  <l n="3">ከመ፡ ታድኅነኒ፡ ክርስቶስ፡ እምትንሣኤ፡ ልሳን፡ ወአፍ።</l>
+                  <l n="4">እስመ፡ ልሳን፡ ቀተሎሙ፡ ለማኅበረ፡ ሰማዕት፡ አእላፍ።</l>
+                  <l n="5">በነገሩ፡ ውዴት፡ ጽኑዕ፡ ዘይበልሕ፡ እምሰይፍ።</l>
+                </lg>
+              </ab>
             </div>
          </div>
+         <listRelation>
+           <relation name="betmas:formerlyAlsoListedAs" active="LIT3034RepCh314" passive="LIT4696MagicPr"/>
+            <relation name="betmas:formerlyAlsoListedAs" active="LIT3034RepCh314" passive="LIT1770Lessan"/>
+         </listRelation>
       </body>
    </text>
 </TEI>

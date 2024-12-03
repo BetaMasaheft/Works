@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1353Epistu">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1353Epistu">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Epistula ad Marcellinum</title>
+            <title xml:lang="la" xml:id="t1">Epistula ad Marcellinum</title>
+            <title xml:lang="gez" xml:id="t2">ግጻዌ፡ ዘብፁዕ፡ አትናሲስ፡ ሊቀ፡ ጳጳሳት፡ ዘእለስክንድርያ፡ በእንተ፡ መጽሐፈ፡ መዝሙር፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t2">Gǝṣṣāwe za-bǝḍuʿ ʾAtnāsis liqa ṗāṗāsāt za-ʾƎlǝskǝndǝrǝyā baʾǝnta maṣḥafa mazmur</title>
+            <title xml:lang="en" corresp="#t2">Explanation of the blessed Athanasius, patriarch of Alexandria, concerning the Book of Psalms</title>
             <author>Athanasius</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -26,9 +23,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-         </publicationStmt>
+            </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listBibl type="clavis">
@@ -38,10 +35,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
          </sourceDesc>
+         <sourceDesc>
+<listWit>
+<witness corresp="Tanasee134">Ṭānāsee 134, f. 202vc-209rc</witness>
+</listWit>
+         </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -49,22 +50,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
+           <language ident="en">English</language>
+           <language ident="la">Latin</language>
+           <language ident="gez">Gǝʿǝz</language>
          </langUsage>
+         <textClass>
+           <keywords>
+<term key="ChristianLiterature"></term>
+<term key="Translation"></term>
+           </keywords>
+        </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2018-11-27">Specified clavis</change>
+         <change who="MKr" when="2024-06-05">Added witnesses, Ethiopic title, keywords, relation</change>
+         <change who="MKr" when="2024-06-06">Corrected relation</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="saws:isCommentOn" active="LIT1353Epistu" passive="LIT2000Mazmur"/>
+                </listRelation>
+            </div><!---->
+
       </body>
    </text>
 </TEI>

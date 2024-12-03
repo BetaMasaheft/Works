@@ -1,22 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT4265Litonz">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4265Litonz">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1" xml:lang="gez">ሊጦን፡ ዘነግህ፡ </title>
-            <title corresp="#t1" xml:lang="gez" type="normalized">Liṭon za-nagh</title>
-            <title corresp="#t1" xml:lang="en">Litany for the morning</title>
-            
-            <title xml:id="t2" xml:lang="gez">ሊጦን፡ ዘቀዳም፡</title>
-            <title corresp="#t2" xml:lang="gez" type="normalized">Liṭon za-qadām</title>
-            <title corresp="#t2" xml:lang="en">Litany of Saturday</title>
+            <title xml:id="t1" xml:lang="gez">ቀዳሜ፡ ጸጋ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Qadāme ṣaggā</title>
+            <title corresp="#t1" xml:lang="en">The beginning of grace</title>
+            <title xml:id="t2" xml:lang="gez">ሊጦን፡ ቀዳሜ፡ ጸጋ፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Liṭon qadāme ṣaggā</title>
+            <title corresp="#t2" xml:lang="en">Litany: 'The beginning of grace'</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -41,23 +35,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <abstract>
-            <p/>
-         </abstract>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+            <abstract>
+               <p>This litany is attested as the Litany for Thursday in many manuscripts, and in modern printed editions as the Litany for Saturday.</p>
+            </abstract>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -70,33 +58,41 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-12-16">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-04-03">Added keywords and adjustments</change>
          <change when="2019-03-28" who="ES">updated title, added bibl</change>
+         <change when="2020-06-10" who="DR">Added text provided by Leonard Bahr</change>
+         <change when="2024-06-06" who="CH">Updated titles according to Leonard Bahrs request</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listRelation>
-               <relation name="saws:isDifferentTo"
-                         active="LIT4265Litonz"
-                         passive="LIT1807Litonz"/>
-               <relation name="saws:isDifferentTo"
-                         active="LIT4265Litonz"
-                         passive="LIT4264Salota"/>
+               <relation name="saws:isDifferentTo" active="LIT4265Litonz" passive="LIT1807Litonz"/>
+               <relation name="saws:isDifferentTo" active="LIT4265Litonz" passive="LIT4264Salota"/>
+               <relation name="saws:formsPartOf" active="LIT4265Litonz" passive="LIT4860Litanies"/>
             </listRelation>
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:MashafaSalotaKidan1960"/>
-                  <citedRange>13</citedRange>
+                  <!--<citedRange>13</citedRange>-->
                </bibl>
+               <bibl><ptr target="bm:1957Qeddase"/>
+                  <citedRange unit="page">187</citedRange></bibl>
             </listBibl>
             
          </div>
          <div type="edition">
-            <div type="textpart"
-                 subtype="incipit"
-                 xml:id="Incipit"
-                 xml:lang="gez">
-               <ab> ለትሩጽ፡ እግዚኦ፡ ምሕረትከ፡ ላዕሌነ፡ ወብርሃነ፡ ገጽከ፡ ላዕለ፡ ነፍስነ፡ ይምጻእ፡ ምሕረትከ፡ ዘያሐይወነ፡ ወያስተርኢ፡ ኂሩትከ፡ ዘያስተፌሥሐነ፡</ab>
+            <note>The following text is taken from <bibl><ptr target="bm:1957Qeddase"/>
+               <citedRange unit="page">187</citedRange></bibl>.</note>
+            <div type="textpart" xml:lang="gez">
+               <ab>ይ፡ ካ፡ ቀዳሜ፡ ጸጋ፡ ኢየሱስ፡ ክርስቶስ፡ ኃይሉ፡ ወጥበቡ፡ ለአቡሁ፡ እስመ፡ አንተ፡ ውእቱ፡ በግዑ፡ ለእግዚአብሔር፡
+                  ዘያአትት፡ ኃጢአተ፡ ዓለም፡ ተሣሃለነ፡ እስመ፡ ወረድከ፡ እምሰማይ፡ በመስፈርተ፡ ጥበቡ፡ ለአቡከ፡ ከመ፡ ታድኅን፡
+                  ልሕኵተከ፡ ዘአንተ፡ ለሐኰ፡ መዋቴ፡ ዘይማስን። ዘየሐውር፡ በክነፈ፡ ነፋስ፡ ዘይሬስዮሙ፡ ለመላእክቲሁ፡ መንፈሰ፡ ወለእለ፡
+                  ይትለአክዎ፡ ነደ፡ እሳት። ዘይኔጽራ፡ ለምድር፡ ወይሬስያ፡ ከመ፡ ትርዐድ፡ ዘይገሥሦሙ፡ ለአድባር፡ ወይጠይሱ፡ በመንፈሰ፡
+                  ጸጋከ፡ አጽንዖሙ፡ ለሕዝብከ፡ አንተ፡ አኃዜ፡ ዓለም፡ እግዚአብሔር፡ አምላክነ። ይ፡ ዲ፡ ጸልዩ። ይ፡ ሕ፡ አቡነ፡
+                  ዘበሰማያት። ይ፡ ካ፡ እወ፡ እግዚኦ፡ አምላክነ፡ በመንፈሰ፡ ጸጋከ፡ አስተፍሖሙ፡ ለሕዝብከ። እስመ፡ አንተ፡ ውእቱ፡
+                  መቅለሌ፡ ዕፁብ፡ ረዳኤ፡ ምንዱብ። ሠርጎሙ፡ ለሐዋርያት፡ ንዋዮሙ፡ ለነዳያን፣ ተስፋሆሙ፡ ለቅቡፃን፡ መንሥኢሆሙ፡ ለሙታን፡
+                  ኢየሱስ፡ ክርስቶስ፡ ኀይሉ፡ ወጥበቡ፡ ለአቡሁ። ኪያከ፡ ነአኵት፡ ይእዜኒ፡ ወዘልፈኒ፡ ወለዓለመ፡ ዓለም። ይ፡ ሕ፡ አሜን።
+               </ab>
             </div>
          </div>
       </body>

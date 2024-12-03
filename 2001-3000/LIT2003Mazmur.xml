@@ -1,19 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2003Mazmur">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2003Mazmur">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">መዝሙረ፡ ክርስቶስ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Mazmura Krǝstos</title>
             <title xml:lang="en" corresp="#t1">Psalter of Jesus Christ</title>
-            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -30,25 +23,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          
          <textClass>
             <keywords>
@@ -59,9 +46,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          
          <abstract>
             <p>A <date notBefore="1400" notAfter="1500">15th century</date> composition in honour
-            of <persName ref="PRS5684JesusCh">Jesus Christ</persName> attributed to <persName ref="PRS6956Mazmura" role="author"/> 
-            </p>
-         </abstract>
+            of <persName ref="PRS5684JesusCh">Jesus Christ</persName> attributed to <persName ref="PRS6956Mazmura" role="author"/>.</p>
+          </abstract>
          
       </profileDesc>
       <revisionDesc>
@@ -69,19 +55,93 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-09" who="ES">updated record</change>
+         <change when="2020-07-27" who="DR">Added information from catalogue</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div type="bibliography">
          <listRelation>
-            <relation name="saws:isAttributedToAuthor"
-                      active="LIT2003Mazmur"
-                      passive="PRS6956Mazmura"/>
-            <relation name="ecrm:P129_is_about"
-                      active="LIT2003Mazmur"
-                      passive="PRS5684JesusCh"/>
+            <relation name="saws:isAttributedToAuthor" active="LIT2003Mazmur" passive="PRS6956Mazmura"/>
+            <relation name="ecrm:P129_is_about" active="LIT2003Mazmur" passive="PRS5684JesusCh"/>
          </listRelation>
-         <ab/>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Getatchew2007EAEMazmuraKr"/></bibl>
+               <bibl>
+                  <ptr target="bm:Wright1877BM"/>
+                  <citedRange unit="page">82a-83b</citedRange>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <note>The following division into textparts follows the description in <bibl><ptr target="bm:Getatchew2007EAEMazmuraKr"/></bibl>.</note>
+            
+            <div type="textpart" xml:id="Intro">
+               <label>Introduction</label>
+               <note>The introduction explains in seven sections the plan of the work and enumerates the books which were used in its composition, listed here 
+                  according to the description of <ref type="mss" corresp="BLorient534"/> in 
+                  <bibl>
+                     <ptr target="bm:Wright1877BM"/>
+                     <citedRange unit="page">82ab</citedRange>
+                  </bibl>:
+                  <ref type="work" corresp="LIT2477Penta"/>, <ref type="work" corresp="LIT1700Judges"/>, <ref type="work" corresp="LIT1696Joshua"/>, 
+                  <ref type="work" corresp="LIT1697Jubilees"/>, <ref type="work" corresp="LIT1340EnochE"/>, <ref type="work" corresp="LIT1688Job"/>, 
+                  <ref type="work" corresp="LIT1719Bookso"/>, <ref type="work" corresp="LIT2701Dawit"/>, <ref type="work" corresp="LIT2195Prover"/>, 
+                  <ref type="work" corresp="LIT2516Wisdom"/>, <ref type="work" corresp="LIT1320Eccles"/>, <ref type="work" corresp="LIT2362Songof"/>, 
+                  <ref type="work" corresp="LIT2358Sirach"/>, <ref type="work" corresp="LIT1672Isaiah"/>, <ref type="work" corresp="LIT1685Bookof"/>, 
+                  <ref type="work" corresp="LIT1373Bookof"/>, <ref type="work" corresp="LIT1259Daniel"/>, <ref type="work" corresp="LIT1374Bookof"/>, 
+                  <ref type="work" corresp="LIT1820Maccab"/>, <ref type="work" corresp="LIT1336Vision"/>, <ref type="work" corresp="LIT1315Dodeka"/>, 
+                  <ref type="work" corresp="LIT1560Gospel"/>, <ref type="work" corresp="LIT4664Introduction"/>, <ref type="work" corresp="LIT1352Epistl"/>, 
+                  <ref type="work" corresp="LIT1019Actsof"/>, <ref type="work" corresp="LIT3179Revela"/>, <ref type="work" corresp="LIT2317Senodo"/>, 
+                  <ref type="work" corresp="LIT1309Didesq"/>, <foreign xml:lang="gez">ኪዳን፡</foreign>, <ref type="work" corresp="LIT1957Mashaf"/>, 
+                  works by <persName ref="PRS2546Basilth"/> and <persName ref="PRS2209Athanasi"/>, <ref type="work" corresp="LIT1586Hayman"/>, 
+                  works by <persName ref="PRS5720JohnChr"/>, 
+                  the Book of the 318 Fathers, a Chronicle (<foreign xml:lang="gez">ታሪክ፡</foreign>), <ref type="work" corresp="LIT1395Fethan"/>,
+                  works by <persName ref="PRS4822Gregory"/>, <persName ref="PRS3828Epiphani"/>, <persName ref="PRS5651JacobBa"/>,
+                  <ref type="work" corresp="LIT1919Mashaf"/>,  <foreign xml:lang="gez">ረድእ፡ ወመምህር፡</foreign>, 
+                  <ref type="work" corresp="LIT2375Synaxa"/>, 
+                  works by <persName ref="PRS3827Ephrem"/>, <persName ref="PRS5655Jacobof"/>, <persName ref="PRS2659Benjamin"/>, 
+                  <persName ref="PRS3252Cyriacus"/>, 
+                  <ref type="work" corresp="PRS8788Severos"/>, 
+                  <ref type="work" corresp="LIT3989Aragawi"/>, <ref type="work" corresp="LIT1399Filkes"/>, <ref type="work" corresp="LIT2382Taamme"/>, 
+                  <ref type="work" corresp="LIT2598Yosipp"/>, <ref type="work" corresp="LIT1925Mashaf"/>, <ref type="work" corresp="LIT1705Kalila"/>, 
+                  <ref type="work" corresp="LIT1401Physio"/>,  <ref type="work" corresp="LIT1199Barala"/>, <ref type="work" corresp="LIT2611Zenaab"/>, 
+                  <ref type="work" corresp="LIT2384Taamme"/>, <ref type="work" corresp="LIT1952Mashaf"/>, <ref type="work" corresp="LIT1046Aksima"/>.
+               </note>
+            </div>
+            
+            <div type="textpart" subtype="Psalms" xml:id="Psalms">
+               <label>Psalms</label>
+               
+               <div type="textpart" subtype="section" xml:id="Book1">
+                  <label>Book 1 of the Psalter</label>
+               </div>
+               
+               <div type="textpart" subtype="section" xml:id="Book2">
+                  <label>Book 2 of the Psalter</label>
+               </div>
+               
+               <div type="textpart" subtype="section" xml:id="Book3">
+                  <label>Book 3 of the Psalter</label>
+               </div>
+               
+               <div type="textpart" subtype="section" xml:id="Book4">
+                  <label>Book 4 of the Psalter</label>
+               </div>
+               
+               <div type="textpart" subtype="section" xml:id="Book5">
+                  <label>Book 5 of the Psalter</label>
+               </div>
+            </div>
+            
+            <div type="textpart" xml:id="Canticles">
+               <label>Canticles</label>
+            </div>
+            
+            <div type="textpart" xml:id="Concl">
+               <label>Conclusion</label>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

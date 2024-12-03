@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT3970GadlaTHH">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3970GadlaTHH">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -29,25 +23,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Hagiography"/>
@@ -60,19 +48,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="MV" when="2017-04-20">Added keywords</change>
          <change when="2019-06-27" who="ES">corrected relation</change>
       </revisionDesc>
+      <!-- Cp. Mss. EMML 1834 (EMML V, 310-14); BN, Éth. 342 (GrébGriaule II, 18-20),
+                           Ṭānāsee 162 (SixTana III, 202-06), BN Éth. 697 (uncatalogued, see C. CONTI-ROSSINI, 1910, “I
+                        principali studi pubblicati in occasione della missione Duchesne-Fournet in
+                        Abissinia (manoscritti etiopici e ricerche antropologiche)”, Bolletino della
+                        Societa Geografica Italiana ser. 4, 11: 1060-1071.). also ESbmqm013, partially ESap030
+-->
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="Introduction"><label>Introduction to the Gadla Takla Haymānot</label></div>
+            <div type="textpart" xml:id="Vita"><label>Vita of Takla Haymānot (Ḥayq recension)</label></div>
+            <div type="textpart" subtype="colophon" xml:id="coloph">
+               <ab><note> given after <ref type="mss" corresp="ESbmqm013"></ref></note>
+               ወይእዚኒ፡ ንነግረክሙ፡ ዘተከሥተ፡ መጽሐፈ፡ ገድሉ፡ ለክቡር፡ ብእሲ፡ እግዚአብሔር፡ አቡነ፡ ተክለ፡ ሃይማኖት፡ በ፪፻ወ፯ዓመተ፡ ወ፱አውራኃ፡ ተከሥተ፡ ዝንቱ፡ መጽሐፍ፡ በ፯ትውልድ፡ በከመ፡ እምአዳም፡ እስከ፡ ወልደ፡ ያሬድ፡
+               ወአርአዮ፡ ሄኖክ፡ ፊደለ፡ በጸፍጸፈ፡ ሰማይ፡ ዘይብል፡ አልፋ፡ ወኦ[ሜጋ]፡ የውጣ፡ ወቤጣ፡ ወበከመ፡ ከሠተ፡ ሎቱ፡
+               በ፯ትውልድ፡ እምነ፡ ተክለ፡ ሃይማኖት፡ እስከ፡ እስከ፡[sic] ዮሓንስ፡ ከመ፡[sic] (…)  ዛቲ፡ መጽሐፍ፡ በ፸ወ፯ ዓመተ፡ ምሕረት፡ በመንግሥተ፡ ገብረ፡ መስቀል፡ መፍቀሬ፡
+               እግዚአብሔር።</ab></div>
+         </div>
          <div type="bibliography">
+<listBibl type="translation">
+   <bibl><ptr target="bm:Duchesne1909MissionI"></ptr><citedRange>340-431</citedRange></bibl>
+</listBibl>            
             <listRelation>
-               <relation name="saws:isVersionOf"
-                         active="LIT3970GadlaTHH"
-                         passive="LIT3973GadlaT">
+               <relation name="saws:isVersionOf" active="LIT3970GadlaTHH" passive="LIT3973GadlaT">
                   <desc>The Ḥayq recension is a version of the Gadla Takla Haymānot</desc>
                </relation>
-               <relation name="ecrm:P129_is_about"
-                         active="LIT3970GadlaTHH"
-                         passive="PRS9162TaklaHa"/>
+               <relation name="ecrm:P129_is_about" active="LIT3970GadlaTHH" passive="PRS9162TaklaHa"/>
             </listRelation>
          </div>
       </body>

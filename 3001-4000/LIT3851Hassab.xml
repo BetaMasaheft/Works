@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT3851Hassab">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3851Hassab">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Chronological treatise</title>
+           <title xml:id="t1" xml:lang="gez">ጸሐፍነ፡ በዘንዜከር፡ ኀሳበ፡ ከመ፡ ኢንደመር፡ ምስለ፡ ከሓድያን፡</title>
+           <title xml:lang="gez" corresp="#t1" type="normalized">Ṣaḥafna ba-za-nǝzzekkar ḫassāba kama ʾinǝddammar mǝsla kaḥādǝyān</title>
+           <title xml:lang="en" corresp="#t1" type="main">We have written a computus that we will remember in order not to congregate with apostates...</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -19,13 +15,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
                   <p>
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                    This file is licensed under the Creative Commons
+                      Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -34,8 +30,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -43,23 +38,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p>Calendarian and chronological treatise beginning with a chapter on the chronology of the Old Testament and 
+            <p>Treatise on calendar and chronology beginning with a
+              chapter on the chronology of the Old Testament and
             the history of Ethiopia. The following chapters deal with the 13 cycles, the jubilees, the ten weeks of Enoch, the nine
             suns of the Sybil, the computus of the four Evangelists, the days of the week and their place in the calendar, the indictions, the
-            complementary days, the epacts, St John's day, the Golden Number, the time of fasting, the days of the four Evangelists, the time 
-            of the beginning of fasting and of Eastern, new moons, sunrises, etc.
+            complementary days, the epacts, St John's day, the Golden Number, the time of fasting, the days of the four Evangelists, the time
+            of the beginning of fasting and of Eastern, new moons, sunrises, etc. Possibly a version of or related to
+            <ref type="work" corresp="LIT6563HassabHeg"/>.
                <bibl>
                   <ptr target="bm:Zotenberg1877Catalogue"/>
                   <citedRange unit="page">72a</citedRange>
                </bibl>
             </p>
          </abstract>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="Chronography"/>
@@ -76,28 +68,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
-          
             <listBibl type="editions">
-               <bibl>
+                 <bibl>
                   <ptr target="bm:Grebaut1918Comput"/>
                   <citedRange unit="page">324-326, 329</citedRange>
                </bibl>
             </listBibl>
-          
+
             <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Grebaut1918Comput"/>
                   <citedRange unit="page">326-328, 330</citedRange>
                </bibl>
             </listBibl>
-         </div>
-         
+
+         <listRelation>
+           <relation name="saws:isRelatedTo" active="LIT385Hassab" passive="LIT6563HassabHeg"/>
+             <relation name="lawd:hasAttestation" active="LIT6563HassabHeg" passive="BNFet64"/>
+         </listRelation>
+     </div>
          <div type="edition">
+             <note>The following text is taken from <ref type="mss" corresp="BNFet64"/>.</note>
             <div type="textpart" xml:id="incipit" xml:lang="gez">
-               <ab>ጸሐፍነ፡ በዘንዜከር፡ ኀሳበ፡ ከመ፡ ኢንደመር፡ ምስለ፡ ከሓድያን። ካህን፡ ወመነኮስ፡
-                ዘኢያአምር፡ ኀሳበ፡ ይመስል፡ ከመ፡ ፈለግ፡ ዘአልቦ፡ ማየ፡ ወከመ፡ ሀገር፡ ዘአልቦ፡ ሰብአ።</ab>
+               <ab>ጸሐፍነ፡ በዘንዜከር፡ ኀሳበ፡ ከመ፡ ኢንደመር፡ ምስለ፡ ከሓድያን፡ ካህን፡ ወመነኮስ፡
+                ዘኢያአምር፡ ኀሳበ፡ ይመስል፡ ከመ፡ ፈለግ፡ ዘአልቦ፡ ማየ፡ ወከመ፡ ሀገር፡ ዘአልቦ፡ ሰብአ፡ በዘታአምር፡
+              ዓመታተ፡ ዓለም፡ እምአዳም፡ እስከ፡ ልደት፡ ኖኅ፡ ፲፻ወ፮፻፶ወ፮ዓመት፡ ወበዮቤልዩ፡ ፴ወወ፭ሱባኤ፡
+              ወአርባዕቱ፡ ዓመት፡
+            </ab>
+            <div type="textpart" xml:id="explicit" xml:lang="gez">
+               <ab>በሠሉስ፡ ለእመ፡ ሠረቀ፡ ኣመ፡ ፳ወ፫ግበር፨ ምህልላ፡ ኣመ፡ ፲ወ፱ኢታውሕድ፨
+                 ወአመ፡ ፳ወ፬ኢታብዝሕ፡ ዘንተ፡ ዕቀብ፡ ለዓለመ፡ ዓለም፨
+            </ab>
             </div>
          </div>
+            </div>
       </body>
    </text>
 </TEI>

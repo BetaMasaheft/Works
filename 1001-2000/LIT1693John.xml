@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1693John">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1693John">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -30,7 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
 
@@ -38,20 +32,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="Bible"/>
@@ -66,19 +54,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-04-04">Added keywords</change>
          <change who="ES" when="2018-05-09">added main type</change>
+         <change who="ABr" when="2020-11-27">added Preface to the Gospel of John (with title inscriptio),
+           Eusebian sections, tituli, headline (with title inscriptio), incipits and explicits from GCA001</change>
+         <change who="ABr" when="2020-12-04">Deleted BioJohn (BiographyJohn was already present); added colophon (with title subscriptio) to xml:id="Postscript"</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div type="bibliography">
+         <listBibl type="editions">
+            <bibl><ptr target="bm:Platt1830novum"/></bibl>
+            <bibl><ptr target="bm:Petrus1548Test"/><citedRange unit="page">77-100</citedRange></bibl>
+            <bibl><ptr target="bm:Wangel1953"/><citedRange unit="page">139-179</citedRange></bibl>
+            <bibl><ptr target="bm:wechsler2005EvangeliumIoh"/></bibl>
+         </listBibl>
+         <note>The incipits and explicits are taken from <ref type="mss" corresp="GCA001"/></note>
+         </div>
 
          <div type="edition">
 
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="BiographyJohn">
-               <label>Introduction and Biography of John</label>
-               <listBibl type="secondary">
+            <listBibl type="secondary">
                   <bibl>
                      <ptr target="bm:Dillmann1848Catalogus"/>
                      <citedRange unit="page">16</citedRange>
@@ -88,51 +83,61 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <citedRange unit="page">18</citedRange>
                   </bibl>
                </listBibl>
-            </div>
 
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="TituliJohn">
-               <label>Tituli of the Gospel of John</label>
-            </div>
 
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="IntroJohn">
-               <label>Introduction to the Gospel of John</label>
-            </div>
-
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="BioJohn">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroJohn">
+            <label>Preface to the Gospel of John</label>
+            <div type="textpart" subtype="title expanded" xml:id="TitlePrefaceJohn"><ab>በስመ፡
+             እግዚአብሔር፡ ዘይትዋሓድ፡ በመለኮት፡ ወይሤለስ፡ በኣካላት፡ መቅድመ፡ ወንጌሉ፡ ለዮሐንስ፡ ፈጻሜ፡ ብስራት።</ab></div>
+            <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="BiographyJohn">
                <label>Biography of John</label>
+               <div type="textpart" subtype="incipit"><ab>ዝንቱሰ፡ ዮሐንስ፡ ፩፡ እም፲ወ፪፡ ሓዋርያት። ስማ፡ ለእሙ፡
+               ባውፍልያ፡ ወካዕበ፡ ተሰምየት፡ ማርያም። ወውእቱ፡ እምነገደ፡ ዛብሎን፡ ወእምነ፡ ቤተ፡ ሳይዳ፡ ጸሓፈ፡ ወንጌሎ፡ በልሳነ፡ ዮናናውያን፡
+               በ፰፡ ዓመት፡ እመንግሥተ፡ ኔሮን፡ ወልደ፡ አቅሎንድዮስ፡ ዘቀተሎሙ፡ ለጴጥሮስ፡ ወለጳውሎስ። በ፲ወ፫፡ ዓመተ፡ መንግሥቱ፡ እምድኅረ፡
+               ዕርገቱ፡ ለእግዚእነ፡ በ፴፡ ዓመት።</ab></div>
+               <div type="textpart" subtype="explicit"><ab>ወተብህለ፡ ከመ፡ ዮሐንስ፡ ኣወፈዮ፡ መጽሓፈ፡ አቡቀለምሲስ፡ ለፋጊር።</ab></div>
+            </div>
+            <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="EusebianSectionsJohn">
+              <label>Statement about the Eusebian Sections in the Gospel of John</label>
+              <div type="textpart" subtype="incipit"><ab>ወኍልቈ፡ ምዕራፈ፡ ወንጌሉ፡ ንኡሳን። ፪፻፡ ፴ወ፪፡</ab></div>
+              <div type="textpart" subtype="explicit"><ab>ወምዕራፋቲሁ፡ በልሳነ፡ ሮሜ። ፳</ab></div>
+            </div>
+            <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="TituliJohn">
+              <label>Tituli of the Gospel of John</label>
+              <div type="textpart" subtype="incipit"><ab>፩፡ ተአምር፡ ዘቃና፡ ዘገሊላ። ፪፡ ዘከመ፡ ሰደደ፡ እምኰራብ። ፫፡ ኒቆዲሞስ።</ab></div>
+              <div type="textpart" subtype="explicit"><ab>፲፰፡ ዘከመ፡ ነሥኣ፡ ዮሴፍ፡ ሥጋሁ። ፲፱፡ ዘከመ፡ ዜነዉ፡ መላእክት፡ ትንሣኤ፡ ለአንስት።
+              ፳፡ በዊኦቱ፡ ኀበ፡ አርድእት፡ እንዘ፡ ዕፅው፡ ኃዋኅው።</ab></div>
+            </div>
             </div>
 
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 corresp="LIT2715John">
+            <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT2715John">
                <label>Bǝsrāta Yoḥannǝs</label>
+               <div type="textpart" subtype="subtextunit" xml:lang="gez" xml:id="JohnGospelHeadline">
+               <label>Headline of the Gospel of John</label>
+               <ab><seg type="title inscriptio expanded">ብስራተ፡ አብ፡ ቅዱስ፡ ትሩፍ፡ ረድእ፡ ተናገሪ፡ በመለኮት፡ ዮሓንስ፡ ወልደ፡
+                ዘብዴዎስ፡ ፍቁረ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ።</seg> ጸሎቱ፡ ወበረከቱ፡ የሀሉ፡ ምስለ፡ ገብሩ፡ <gap reason="ellipsis" resp="Abr"/> ለዓመለ፡ ዓለም፡ አሜን፡</ab>
+            </div>
+            <div type="textpart" subtype="coretext" xml:lang="gez" xml:id="JohnGospel">
+               <label>Gospel of John</label>
+               <div type="textpart" subtype="incipit"><ab>ቀዳሚሁ፡ ውእቱ፡ ቃል፡ ወውእቱ፡ ቃል፡ ኀበ፡ እግዚኣብሔር፡ ሀለወ፡ ወእግዚኣብሔር፡ ውእቱ፡
+                ቃል፡ ዝንቱ፡ እምቀዲሙ፡ ሀሎ፡ ኀበ፡ እግዚኣብሔር። ኵሉ፡ ቦቱ፡ ኮነ፡ ወዘእንበሌሁሰ፡ አልቦ፡ ዘኮነ፡</ab></div>
+               <div type="textpart" subtype="explicit"><ab>ወሶበ፡ ተጽሕፈ፡ ኵሉ፡ በበ፡ ኣሓዱ፡ እምኢያግመረ፡ ጥቀ፡ መጻሕፍቲሁ፡ ዘተጽሕፈ፡ አሜን፡ ወአሜን፡</ab></div>
+            </div>
+            <div type="textpart" subtype="colophon" xml:lang="gez" xml:id="Postscript">
+              <label>Colophon of the Gospel of John</label>
+              <div type="textpart" subtype="incipit"><ab>መልአ፡ <seg type="title subscriptio expanded">ስብከተ፡ ዮሓንስ፡ ወልደ፡ ዘብዴዎስ፡ ሓዋርያ፡
+              ፩፡ እም፲ወ፪፡</seg> እንተ፡ ጸሓፎ፡ በዮናኒ፡ ለሰብኣ፡ ሀገረ፡ ኤፌሶን።</ab></div>
+              <div type="textpart" subtype="explicit"><ab>በ፰፡ ዓመተ፡ መንግሥቱ፡ ለጢባርዮስ፡ ቄሳር። ጸሎቱ፡ ወበረከቱ፡ ለቅዱስ፡ ዮሓንስ፡
+              የሀሉ፡ ምስለ፡ ገብሩ፡ <gap reason="ellipsis" resp="Abr"/> ወፍቁሩ፡ <gap reason="ellipsis" resp="Abr"/>
+              ወጻሓፊሃ፡ ኃጥእ፡ <gap reason="ellipsis" resp="Abr"/> ለዓለመ፡ ዓለም፡ አሜን፡ ወአሜን።</ab></div>
             </div>
 
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Stichometry">
+
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Stichometry">
                <label>Stichometry to the Gospel of John</label>
             </div>
-            
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="Postscript">
-               <label>Postscript to the Gospel of John</label>
-            </div>
-
-         </div>
+          </div>
+        </div>
 
       </body>
    </text>

@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT3100RepCh380">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3100RepCh380">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to St George</title>
+            <title xml:lang="gez" xml:id="t1">መልክአ፡ ጊዮርጊስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Malkǝʾa Giyorgis</title>
+            <title xml:lang="en" corresp="#t1"><hi rendition="simple:italic">Malkǝʾ</hi>-hymn to St George</title>
+            
+            <title xml:lang="gez" xml:id="t2">ኦፍጡነ፡ ረድኤት፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">ʾO-fǝṭuna radʾet</title>
+            <title xml:lang="en" corresp="#t2">Oh you, quick of help...</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -27,29 +29,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-         </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <abstract>
+            <p>A prayer to St George in several stanzas beginning with <foreign xml:lang="gez">ኦፍጡነ፡ ረድኤት፡</foreign>. The number of stanzas
+               varies in the manuscripts. In several manuscripts, this prayer is followed immediately by a prayer to St Mary beginning with
+               <foreign xml:lang="gez">ኦፈጣኒተ፡ ረድኤት፡</foreign>. </p>
+         </abstract>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Poetry"/>
@@ -61,6 +57,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
+         <change who="DR" when="2020-04-24">Added information from LIT3999Ofetun</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -72,12 +69,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">380</citedRange>
                </bibl>
             </listBibl>
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT3100RepCh380" passive="PRS4585Georgeo"/>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT3100RepCh380" passive="LIT3999Ofetun"/>
+            </listRelation>
          </div>
          <div type="edition">
+            <note>The beginning of the following stanzas is taken from <ref type="mss" corresp="EMIP02065"/>.</note>
+            <div type="textpart" subtype="stanza" xml:id="stanza1" xml:lang="gez">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  ኦፍጡነ፡ ረድኤት፡ ለጽኑዕ፡ ወለድኩም፡ ወለነፍሰ፡ ኵሉ፡ ቃውም፡ 
+               </ab>
+            </div>
+            </div>
+            <div type="textpart" subtype="stanza" xml:id="stanza2" xml:lang="gez">
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ኦፍጡነ፡ ረድኤት፡ ለብዙኅ፡ ፆታ፡
+                  </ab>
+               </div>
+            </div>
+            <div type="textpart" subtype="stanza" xml:id="stanza3" xml:lang="gez">
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
                   ኦፍጡነ፡ ረድኤት፡ እምሩጸት፡ ነፋስ፡ ወዓውሎ። 
                </ab>
+            </div>
             </div>
          </div>
       </body>

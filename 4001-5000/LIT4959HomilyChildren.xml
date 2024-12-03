@@ -1,23 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT4959HomilyChildren"
-     xml:lang="en"
-     type="work">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4959HomilyChildren" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:id="t1">Homily on the children</title>
+                <title xml:id="t1" xml:lang="gez">ድርሳነ፡ ሕፃናት፡</title>
+                <title corresp="#t1" xml:lang="gez" type="normalized">Dǝrsāna ḥǝḍānāt</title>
+                <title corresp="#t1" xml:lang="en">Homily on the children</title>
+                <title xml:id="t2" xml:lang="en" type="main">Homily on the Massacre of the Innocents and on the Magi for 3 Ṭǝrr,
+                   ascribed to John Chrysostom</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine multimediale
                             Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
@@ -26,7 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
                 <p/>
@@ -34,8 +32,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -52,13 +49,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="Homily"/>
                 </keywords>
             </textClass>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2018-04-24">Created entity</change>
@@ -68,11 +59,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="saws:isAttributedToAuthor"
-                         active="LIT4959HomilyChildren"
-                         passive="PRS5720JohnChr"/>
+                    <relation name="saws:isAttributedToAuthor" active="LIT4959HomilyChildren" passive="PRS5720JohnChr"/>
+                    <relation name="lawd:hasAttestation" active="LIT4959HomilyChildren" passive="DSEthiop11"/>
                 </listRelation>
             </div>
+            <div type="edition">
+              <div type="textpart" subtype="incipit" xml:lang="gez">
+                <note>The incipit is taken from <ref type="mss"
+                  corresp="DSEthiop11" target="ms_i10"/></note>
+                 <ab>
+                በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ፡ ድርሳነ፡ ሕፃናት፡ ዘጸሐፎ፡ ብፁዕ፡
+                   ወቅዱስ፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ በእንተ፡ ሰብአ፡ ሰገል፨
+                   ዘመጽኡ፡ እምሥራቅ፡ ከመ፡ ይስግዱ፡ ለክርስቶስ፡ ወበእንተ፡ ሕፃናት፡ ዘቀተሎሙ፡
+                   ሄሮድስ፡ በእንተ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ አመ፡ ፫ለወርኃ ጥር፡ ወኍልቆሙ፡ ፲ወ፬፻፻ ወ፵፻፡
+                    በረከተ፡ ጸሎቶሙ፡ ወአሰተብቍዖቶሙ፡ የሃሉ፡ ምስለ፡ ጸሐፊ፡ ዝንቱ፡ ዜናሆሙ፡ ገብረ፡ እግዚአብሔር፡
+                   ወልደ፡ ማርያም፡ ወምስለ፡
+                   ኵሎሙ፡ ወሉደ፡ ጥምቀት፡ ለዓለመ፡ ዓለም፡ አሜን፡
+                    ይቤ፡ ንዑ፡ ይእዜ፡ ኀበ፡ ዝንቱ፡ ገድል፡ ዘኮነ፡ በዛቲ፡ ዕለት፡ ወናርኅቅ፡
+                   እምኔነ፡ እከዮ፡ ለሄሮድስ፡ መናፍቅ፡ ዘአዘዘ፡ በቀቲለ፡ ሕፃናት፡ ዘእንበለ፡ ዘመን፡ ዘኮኑ፡ ሰማዕተ። አመ፡ ቀዳሚ፡
+                   መዋዕሊሆሙ፡ በእንተ፡ እግዚእነ፡
+
+                      </ab>
+
+              </div>
+              </div>
         </body>
     </text>
 </TEI>

@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1011Abusak">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1011Abusak">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">አቡሻክር</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">ʾAbušākǝr</title>
+            <title xml:lang="gez" xml:id="t2">ሐሳበ፡ አቡሻክር፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Ḥassāba ʾAbušākǝr</title>
+            <title xml:lang="en" corresp="#t2">Chronology of ʾAbušākǝr</title>
+            <title xml:lang="la" xml:id="t3">Chronicon Orientale</title>
+            <title xml:lang="ar" xml:id="t4">كتاب التواريخ</title>
+            <title xml:lang="en" xml:id="t5">Chronology</title>
             <title type="short">Abush.</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -21,28 +21,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">This file is licensed under the Creative Commons
+                Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
+
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
+
          <sourceDesc>
             <listWit>
                <listWit>
-                  <witness corresp="BLadd16252"/>
-                  <witness corresp="BAVet106"/>
+                  <witness corresp="BLadd16252" xml:id="B"/>
+                  <witness corresp="BAVet106" xml:id="V"/>
                </listWit>
             </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -50,15 +49,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
+           <language ident="en">English</language>
+           <language ident="gez">Gǝʿǝz</language>
+           <language ident="ar">Arabic</language>
+           <language ident="la">Latin</language>
          </langUsage>
+         <abstract>
+           <p>This work has been originally composed by the well-known
+           Christian Arab <persName ref="PRS1376Abusaker"></persName>
+           in <placeName ref="LOC2085Cairo"></placeName> in
+         <date when="1257"></date>. Nothing is known about the time and
+       authorship of the translation from Arabic to Ethiopic.</p>
+         </abstract>
          <textClass>
             <keywords>
                <term key="Chronography"/>
                <term key="ChristianLiterature"/>
+               <term key="Translation"></term>
+               <term key="HistoryAndHistoriography"></term>
             </keywords>
          </textClass>
       </profileDesc>
@@ -67,6 +75,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="MV" when="2016-09-01">Added bibliography and one witness</change>
+         <change when="2020-11-18" who="DE">Added titles and bibliography.</change>
+         <change when="2020-12-14" who="DE">Added labels, bibliography and relations.</change>
+         <change when="2021-01-12" who="DE">Added further text parts.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -80,180 +91,246 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <bibl>
                      <ptr target="bm:Neugebauer1988Abushaker"/>
                   </bibl>
+                  <bibl>
+                    <ptr target="bm:Uhlig2003Abushaker"/>
+                  </bibl>
+                  <bibl>
+                    <ptr target="bm:Ricci1967Enbaqom"/>
+                  </bibl>
+                  <bibl>
+                    <ptr target="bm:ContiRossini1899Manoscritti"/>
+                  </bibl>
+                  <bibl>
+                    <ptr target="bm:Neugebauer1979Astronomy"></ptr>
+                    <citedRange>15-16</citedRange>
+                  </bibl>
                </listBibl>
             </listBibl>
+            <listRelation>
+              <relation name="dcterms:creator" active="LIT1011Abusak" passive="PRS1376Abusaker">
+              </relation>
+              <relation name="saws:isRelatedTo" active="LIT1011Abusak" passive="LIT1141Aposto">
+                <desc>Chapter 2, Chapter 38, Chapter 39, Chapter 42, Chapter 44 contain
+                quotations from Apostolic Canons.</desc>
+              </relation>
+              <relation name="saws:isRelatedTo" active="LIT1011Abusak" passive="LIT1309Didesq">
+                <desc>Chapter 14, Chapter 21, Chapter 38, Chapter 39, Chapter 43 and Chapter 44 contain
+                quotations from Didascalia.</desc>
+              </relation>
+              <relation name="saws:isRelatedTo" active="LIT1011Abusak" passive="LIT2598Yosipp">
+                <desc>The author mentions this work in connection with the desctruction
+                  of the Second Temple in Chapter 19 and Chapter 55.</desc>
+              </relation>
+              <relation name="saws:isRelatedTo" active="LIT1011Abusak" passive="LIT1697Jubilees">
+                <desc>The Book of Jubilees is cited in Chapter 4 for the subdivision of the
+                zodiac.</desc>
+              </relation>
+              <relation name="ecrm:P129_is_about" active="LIT1011Abusak" passive="PRS5655Jacobof">
+                <desc>Chapter 13 and Chapter 14 refer to Jacob of Sarug for the creation
+                  of the moon as full moon.</desc>
+              </relation>
+            </listRelation>
          </div>
          <div type="edition">
+           <note>The following text division is provided by <bibl>
+             <ptr target="bm:Uhlig2003Abushaker"/>
+           </bibl> and <bibl>
+              <ptr target="bm:Neugebauer1988Abushaker"/><citedRange>13-21</citedRange>
+           </bibl>, the content description follow <bibl>
+              <ptr target="bm:Neugebauer1988Abushaker"/><citedRange>13-21</citedRange>
+           </bibl>.</note>
+           <div type="textpart" xml:id="Index">
+             <label>Index</label>
+           </div>
             <div type="textpart" xml:id="Chapter1">
-               <label>Chapter 1</label>
+               <label xml:lang="en">Chapter 1: Introduction</label>
             </div>
             <div type="textpart" xml:id="Chapter2">
-               <label>Chapter 2</label>
+               <label xml:lang="en">Chapter 2: The Islamic lunar calendar</label>
             </div>
             <div type="textpart" xml:id="Chapter3">
-               <label>Chapter 3</label>
+               <label xml:lang="en">Chapter 3: The Jewish lunar calendar</label>
             </div>
             <div type="textpart" xml:id="Chapter4">
-               <label>Chapter 4</label>
+               <label xml:lang="en">Chapter 4: Subdivision of the year</label>
             </div>
             <div type="textpart" xml:id="Chapter5">
-               <label>Chapter 5</label>
+               <label xml:lang="en">Chapter 5: Era of Alexander et alia</label>
             </div>
             <div type="textpart" xml:id="Chapter6">
-               <label>Chapter 6</label>
+               <label xml:lang="en">Chapter 6: The months of the Romans and the Franks</label>
             </div>
             <div type="textpart" xml:id="Chapter7">
-               <label>Chapter 7</label>
+               <label xml:lang="en">Chapter 7: Persian chronology and calendar</label>
             </div>
             <div type="textpart" xml:id="Chapter8">
-               <label>Chapter 8</label>
+               <label xml:lang="en">Chapter 8: The Coptic calendar</label>
             </div>
             <div type="textpart" xml:id="Chapter9">
-               <label>Chapter 9</label>
+               <label xml:lang="en">Chapter 9: Chronological transformations in general</label>
             </div>
             <div type="textpart" xml:id="Chapter10">
-               <label>Chapter 10</label>
+               <label xml:lang="en">Chapter 10: Chronological transformations</label>
             </div>
             <div type="textpart" xml:id="Chapter11">
-               <label>Chapter 11</label>
+               <label xml:lang="en">Chapter 11: Expansion of Islamic lunar years into days</label>
             </div>
             <div type="textpart" xml:id="Chapter12">
-               <label>Chapter 12</label>
+               <label xml:lang="en">Chapter 12: On the ranking of day and light versus night and darkness</label>
             </div>
             <div type="textpart" xml:id="Chapter13">
-               <label>Chapter 13</label>
+               <label xml:lang="en">Chapter 13: Creation of Sun and Moon; calendrical data</label>
             </div>
             <div type="textpart" xml:id="Chapter14">
-               <label>Chapter 14</label>
+               <label xml:lang="en">Chapter 14: Theories about the weekdays at Creation; criticism</label>
             </div>
             <div type="textpart" xml:id="Chapter15">
-               <label>Chapter 15</label>
+               <label xml:lang="en">Chapter 15: 1 of Thoth 654 A.H. in 3 different chronological systems</label>
             </div>
             <div type="textpart" xml:id="Chapter16">
-               <label>Chapter 16</label>
+               <label>Chapter 16: Intervals between 5 different eras (mainly A.H. 1 and 654)</label>
             </div>
             <div type="textpart" xml:id="Chapter17">
-               <label>Chapter 17</label>
+               <label xml:lang="en">Chapter 17: Intervals between 6 "historical" eras
+                 (mainly Alexander, Augustus, Diocletian)</label>
             </div>
             <div type="textpart" xml:id="Chapter18">
-               <label>Chapter 18</label>
+               <label xml:lang="en">Chapter 18: Chronology of Christ</label>
             </div>
             <div type="textpart" xml:id="Chapter19">
-               <label>Chapter 19</label>
+               <label xml:lang="en">Chapter 19: Chronology of Biblical history</label>
             </div>
             <div type="textpart" xml:id="Chapter20">
-               <label>Chapter 20</label>
+               <label xml:lang="en">Chapter 20: The "Weeks" and Prophesis of Daniel;
+                 Revelation to John</label>
             </div>
             <div type="textpart" xml:id="Chapter21">
-               <label>Chapter 21</label>
+               <label xml:lang="en">Chapter 21: Chronology of Christ</label>
             </div>
             <div type="textpart" xml:id="Chapter22">
-               <label>Chapter 22</label>
+               <label xml:lang="en">Chapter 22: Chronology of Christ (duplicating Chapter 21)</label>
             </div>
             <div type="textpart" xml:id="Chapter23">
-               <label>Chapter 23</label>
+               <label xml:lang="en">Chapter 23: Weekdays and Alexandrian years</label>
             </div>
             <div type="textpart" xml:id="Chapter24">
-               <label>Chapter 24</label>
+               <label xml:lang="en">Chapter 24: Solar epact (t) for the eras of Diocletian,
+                 Incarnation, Alexander</label>
             </div>
             <div type="textpart" xml:id="Chapter25">
-               <label>Chapter 25</label>
+               <label xml:lang="en">Chapter 25: Epact; 19-year cycle</label>
             </div>
             <div type="textpart" xml:id="Chapter26">
-               <label>Chapter 26</label>
+               <label xml:lang="en">Chapter 26: Epact</label>
             </div>
             <div type="textpart" xml:id="Chapter27">
-               <label>Chapter 27</label>
+               <label xml:lang="en">Chapter 27: Easter</label>
             </div>
             <div type="textpart" xml:id="Chapter28">
-               <label>Chapter 28</label>
+               <label xml:lang="en">Chapter 28: Epact</label>
             </div>
             <div type="textpart" xml:id="Chapter29">
-               <label>Chapter 29</label>
+               <label xml:lang="en">Chapter 29: Passover</label>
             </div>
             <div type="textpart" xml:id="Chapter30">
-               <label>Chapter 30</label>
+               <label xml:lang="en">Chapter 30: Saʿid ibn-Baṭriq</label>
             </div>
             <div type="textpart" xml:id="Chapter31">
-               <label>Chapter 31</label>
+               <label xml:lang="en">Chapter 31: Saʿid ibn-Baṭriq</label>
             </div>
             <div type="textpart" xml:id="Chapter32">
-               <label>Chapter 32</label>
+               <label xml:lang="en">Chapter 32: Pseudo luni-solar period of 313 years</label>
             </div>
             <div type="textpart" xml:id="Chapter33">
-               <label>Chapter 33</label>
+               <label xml:lang="en">Chapter 33: Calendar-years</label>
             </div>
             <div type="textpart" xml:id="Chapter34">
-               <label>Chapter 34</label>
+               <label xml:lang="en">Chapter 34: Transformation of solar to lunar dates and vice versa</label>
             </div>
             <div type="textpart" xml:id="Chapter35">
-               <label>Chapter 35</label>
+               <label xml:lang="en">Chapter 35: The 2 "Days of the Wise"</label>
             </div>
             <div type="textpart" xml:id="Chapter36">
-               <label>Chapter 36</label>
+               <label xml:lang="en">Chapter 36: Use of the lunar epact</label>
             </div>
             <div type="textpart" xml:id="Chapter37">
-               <label>Chapter 37</label>
+               <label xml:lang="en">Chapter 37: The length of the solar year</label>
             </div>
             <div type="textpart" xml:id="Chapter38">
-               <label>Chapter 38</label>
+               <label xml:lang="en">Chapter 38: Rules of Christian feasts</label>
             </div>
             <div type="textpart" xml:id="Chapter39">
-               <label>Chapter 39</label>
+               <label xml:lang="en">Chapter 39: On the Birthday of Christ</label>
             </div>
             <div type="textpart" xml:id="Chapter40">
-               <label>Chapter 40</label>
+               <label xml:lang="en">Chapter 40: The date for the celebration of the
+               Resurrection; ten rules</label>
             </div>
             <div type="textpart" xml:id="Chapter41">
-               <label>Chapter 41</label>
+               <label xml:lang="en">Chapter 41: The days of Passover and Easter</label>
             </div>
             <div type="textpart" xml:id="Chapter42">
-               <label>Chapter 42</label>
+               <label xml:lang="en">Chapter 42: Discrepancies of Easter Dates</label>
             </div>
             <div type="textpart" xml:id="Chapter43">
-               <label>Chapter 43</label>
+               <label xml:lang="en">Chapter 43: Years of Discord and 95-year "cycle"</label>
             </div>
             <div type="textpart" xml:id="Chapter44">
-               <label>Chapter 44</label>
+               <label xml:lang="en">Chapter 44: On the erroneous "reforms" suggested
+               by Abba Mark ibn-Qanbar</label>
             </div>
             <div type="textpart" xml:id="Chapter45">
-               <label>Chapter 45</label>
+               <label xml:lang="en">Chapter 45: Different eras, their norms and epoch dates</label>
             </div>
             <div type="textpart" xml:id="Chapter46">
-               <label>Chapter 46</label>
+               <label xml:lang="en">Chapter 46: Conversion tables for Coptic and Roman/Syrian
+               dates</label>
             </div>
             <div type="textpart" xml:id="Chapter47">
-               <label>Chapter 47</label>
+               <label xml:lang="en">Chapter 47: On the tables in Chapter 46</label>
             </div>
             <div type="textpart" xml:id="Chapter48">
-               <label>Chapter 48</label>
+               <label xml:lang="en">Chapter 48: Chronological data from Adam to the Hijra</label>
             </div>
             <div type="textpart" xml:id="Chapter49">
-               <label>Chapter 49</label>
+               <label xml:lang="en">Chapter 49: List of the Chalifs</label>
             </div>
             <div type="textpart" xml:id="Chapter50">
-               <label>Chapter 50</label>
+               <label xml:lang="en">Chapter 50: History of the Alexandrian Patriarchs</label>
+               <div type="textpart" xml:id="ListPatriarchs">
+                 <label xml:lang="en">List of the Patriarchs of Alexandria</label>
+               </div>
+               <div type="textpart" xml:id="SevenWonders">
+                 <label xml:lang="en">Seven Wonders of the World</label>
+               </div>
             </div>
             <div type="textpart" xml:id="Chapter51">
-               <label>Chapter 51</label>
+               <label xml:lang="en">Chapter 51: The Roman Patriarchs</label>
             </div>
             <div type="textpart" xml:id="Chapter52">
-               <label>Chapter 52</label>
+               <label xml:lang="en">Chapter 52: The Fathers</label>
             </div>
             <div type="textpart" xml:id="Chapter53">
-               <label>Chapter 53</label>
+               <label xml:lang="en">Chapter 53: The Synods</label>
             </div>
             <div type="textpart" xml:id="Chapter54">
-               <label>Chapter 54</label>
+               <label xml:lang="en">Chapter 54: On the eras of the Copts, Romans,
+               Franks and Syrians.</label>
             </div>
             <div type="textpart" xml:id="Chapter55">
-               <label>Chapter 55</label>
+               <label xml:lang="en">Chapter 55: Varia on eras</label>
             </div>
             <div type="textpart" xml:id="Chapter56">
-               <label>Chapter 56</label>
+               <label xml:lang="en">Chapter 56: Jewish chronology</label>
             </div>
             <div type="textpart" xml:id="Chapter57">
-               <label>Chapter57</label>
+               <label xml:lang="en">Chapter 57: The Miracles of Jesus</label>
+            </div>
+            <div type="textpart" xml:id="Chapter58">
+              <label xml:lang="en">Chapter 58: Beginning and End of the World</label>
+            </div>
+            <div type="textpart" xml:id="Chapter59">
+              <label>Chapter 59: Passover and Easter until 7000 of the era since Creation</label>
             </div>
          </div>
       </body>

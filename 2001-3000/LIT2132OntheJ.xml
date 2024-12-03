@@ -1,19 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2132OntheJ">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2132OntheJ">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">በእንተ፡ ኵነኔ፡ ኃጥኣን፡</title>
             <title corresp="#t1" xml:lang="gez" type="normalized">Baʾǝnta kʷǝnnane ḫāṭǝʾān</title>
             <title corresp="#t1" xml:lang="en">On the Judgement of the Sinners</title>
-            
+
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -30,46 +24,71 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Theology"/>
+               <term key="ApocalypticLiterature"/>
             </keywords>
          </textClass>
          <abstract>
-            <p>An eschatological treatise, often transmitted together with the <ref type="work" corresp="LIT1127Apocal"/>, dealing with Peter and Clement.</p>
+            <p>An eschatological treatise, often
+              transmitted together with the <ref type="work" corresp="LIT1254Dagemm"/>,
+               dealing with Peter and Clement.</p>
          </abstract>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
+         <change who="PL" when="2016-03-21">Created file from google
+            spreadsheet</change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-15" who="ES">keywords abstract</change>
          <change when="2017-03-03" who="DR">correction</change>
+           <change who="DN" when="2022-04-13">Updated</change>
       </revisionDesc>
    </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
+   <text>
+     <body>
+        <listRelation>
+        <relation name="saws:isRelatedTo" active="LIT2132OntheJ" passive="LIT1127Apocal"/>
+      <relation name="lawd:hasAttestation" active="LIT2132OntheJ" passive="BNFabb51"/>
+        <relation name="lawd:hasAttestation" active="LIT2132OntheJ" passive="Tanasee35"/>
+      </listRelation>
+
+      <div type="bibliography">
+          <listBibl type="editions">
+              <bibl><ptr target="bm:Grebaut1907Litterature"/></bibl>
+              </listBibl>
+
+              <listBibl type="translation">
+                  <bibl><ptr target="bm:Grebaut1908Litterature"/></bibl>
+                  </listBibl>
+
+                  <listBibl type="secondary">
+                      <bibl><ptr target="bm:Bausi2016TowardsPeter"/></bibl>
+                      </listBibl>
+        </div>
+      <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+                <note>The following text is taken from <ref type="mss" corresp="BNFabb51"/>.</note>
+                <ab>ነገረ፡ ምሥጢር፡ ክቡር፡ ወስውር፡
+                  ወተሐሥሦቱ፡ ለዝንቱ፡ ነገር፡ በእንተ፡ ኵነኔ፡
+                  ኃጥኣን፡ ወሐተቶ፡ ጴጥሮስ፡ ለእግዚአብሔር፡ በእንተ፡ ምሕረተ፡ አዳም። ወሐልይዎ፡ ኦአኃውየ፡ ወኢያእብድክሙ፡ ወኢያእብድክሙ፡ ግብረ፡ ዝንቱ፡ ዓለም፡
+                  ወኢወርቅ፡ ወኢብሩር፡</ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

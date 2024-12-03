@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT3082RepCh362">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3082RepCh362">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to Our Lady Mary</title>
+            <title xml:lang="gez" xml:id="t1">መልክአ፡ ኪዳነ፡ ምሕረት፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Malkǝʾa kidāna mǝḥrat</title>
+            <title xml:lang="en" corresp="#t1">Image of the Covenant of Mercy</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -27,29 +24,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
-         </sourceDesc>
-         <sourceDesc>
             <listWit>
-               <witness/>
+               <witness corresp="BLorient9051"/>
+               <witness corresp="BAVet91"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Poetry"/>
@@ -60,22 +49,56 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
+         <change who="DR" when="2020-06-15">Added information from deleted LIT3080RepCh360</change>
+         <change who="AD" when="2020-10-01">Merged with LIT 1854Malkea and LIT1855Malkea, updated titles and bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
-            <listBibl type="editions">
+            <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
+                  <citedRange unit="item">360</citedRange>
                   <citedRange unit="item">362</citedRange>
                </bibl>
             </listBibl>
+
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Dillmann1866Chrestomathia"/>
+                  <citedRange unit="page">136-146</citedRange>
+               </bibl>
+
+               <bibl>
+                  <ptr target="bm:MalkaGubae1974"/>
+                  <citedRange unit="page">112-122</citedRange>
+               </bibl>
+            </listBibl>
+
+            <listRelation>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT3082RepCh362" passive="LIT1854Malkea"/>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT3082RepCh362" passive="LIT1855Malkea"/>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT3082RepCh362" passive="LIT3080RepCh360"/>
+            </listRelation>
          </div>
+
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
-                እግዚአብሔር፡ ወሃቤ፡ ብርሃን፡ ዘይሤለስ፡ በአካሉ።
+                 <lg>
+                   <l n="1">እግዚአብሔር፡ ወሃቤ፡ ብርሃን፡ ዘይሤለስ፡ በአካሉ።</l>
+                   <l n="2">እንዘ፡ ተዋሕዶ፡ ያጸንዕ፡ በመለኮቱ፡ ወኀይሉ።</l>
+                   <l n="3">ዓይነ፡ ልቡናየ፡ ያብርህ፡ በማኅቶተ፡ ጥበብ፡ ሥነ፡ ጸዳሉ።</l>
+                   <l n="4">ከመ፡ እርአይ፡ ገጸ፡ ነገር፡ ለኪዳንኪ፡ ዘይደሉ።</l>
+                   <l n="5">ማርያም፡ እግዝእተ፡ ኵሉ፡ ዘታሕቱ፡ ወላዕሉ።</l>
+                 </lg>
+               </ab>
+            </div>
+
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  እግዚአብሔር፡ አብ፡ ወሃቤ፡ ብርሃን፡ ዘይሤለስ፡ በአካሉ።
                </ab>
             </div>
          </div>

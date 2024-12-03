@@ -1,17 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1750LahaMa">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1750LahaMa">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Lāḥā Māryām</title>
-            <title xml:id="t2">Lāḥā Dǝngǝl</title>
+            <title xml:id="t1" xml:lang="gez">ላሐ፡ ማርያም፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Lāḥa Māryām</title>
+            <title xml:lang="en" type="normalized" corresp="#t1">Lamentation of Mary</title>
+            <title xml:lang="gez" xml:id="t2">ላሐ፡ ድንግል፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#2">Lāḥa dǝngǝl</title>
+            <title xml:lang="en" type="normalized" corresp="#t2">Lamentation of the Virgin</title>
+            <title xml:lang="gez" xml:id="t3">ድርሳን፡ ዘደረሰ፡ አባ፡ ህርያቆስ፡ ኤጲስ፡ ቆጶስ፡ ዘሀገረ፡ ብህንሳ፡ በእንተ፡ ክብራ፡ ለድንግል፡</title>
+            <title xml:lang="gez" corresp="#t3" type="normalized">Dǝrsān za-darasa ʾabbā Hǝryāqos ʾeṗis qoṗos za-hagara Bǝhnǝsā baʾǝnta kǝbrā la-dǝngǝl</title>
+            <title xml:lang="en" type="normalized" corresp="#t3">Homily composed by Cyriacus, bishop of the city of Behnesa on the glory of the Virgin</title>
             <author ref="PRS3251Cyriacus">Cyriacus of Behnesa</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -29,37 +31,58 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+         </sourceDesc>
+         <sourceDesc>
+           <listBibl type="clavis">
+                  <bibl type="CANT">
+                     <ptr target="bm:CANT"/>
+                     <citedRange unit="item">74</citedRange>
+                  </bibl>
+               </listBibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <textClass>
+         <keywords>
+             <term key="Apocrypha"/>
+            <term key="ChristianLiterature"/>
+            <term key="Homily"/>
+         </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change when="2019-11-21" who="ES">added explicit</change>
+         <change when="2019-11-21" who="ES">Added explicit</change>
+         <change when="2020-09-13" who="MKr">Added bibliography</change>
+         <change when="2021-01-26" who="DR">Updated title, included information from deleted LIT3998Dersan</change>
+         <change when="2021-08-07" who="MKr">Added clavis</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <body>
+     <body>
+       <div type="bibliography">
+<listBibl type="editions">
+<bibl><ptr target="bm:Oudenrijn1959Gamaliel"/>
+<citedRange unit="page">2-83</citedRange></bibl>
+</listBibl>
+
+
+       </div>
+
          <div type="edition" xml:lang="gez">
-            <div type="textpart" subtype="incipit"></div>
+            <div type="textpart" subtype="incipit"/>
             <div type="textpart" subtype="explicit subscriptio" xml:id="colophon">
                <ab>ዛቲ፡ መጽሐፍ፡ ዘተርጐማ፡ ብፁዕ፡ ወርቱዐ፡ ሃይማኖት፡ አቡነ፡ አባ፡ ሰላማ፡ ይጽሐፍ፡ ስሞ፡ ውስተ፡ መጽሐፈ፡
                ሕይወት፡ በመንግሥተ፡ ሰማያት፡ ምስለ፡ ጸሐፊሃ፡ ወአጽሐፊሃ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
@@ -67,9 +90,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   the translation of the homily by <persName ref="PRS8387SalamaI">ʾabbā Salāma</persName>. </note>
                </div>
          </div>
-         <listRelation><relation name="lawd:hasAttestation" active="LIT1750LahaMa#colophon" passive="ESgmg001"></relation>
-            <relation name="saws:isAttributedToAuthor" active="LIT1750LahaMa" passive="PRS3251Cyriacus"></relation>
-            <relation name="betmas:isAuthorOfEthiopicTranslation" active="LIT1750LahaMa" passive="PRS8387SalamaI"></relation>
+         <listRelation><relation name="lawd:hasAttestation" active="LIT1750LahaMa#colophon" passive="ESgmg001"/>
+            <relation name="saws:isAttributedToAuthor" active="LIT1750LahaMa" passive="PRS3251Cyriacus"/>
+            <relation name="betmas:isAuthorOfEthiopicTranslation" active="LIT1750LahaMa" passive="PRS8387SalamaI"/>
+            <relation name="saws:isDifferentTo" active="LIT1750LahaMa" passive="LIT1278Dersan">
+               <desc>These two works are probably different from each other.</desc></relation>
+            <relation name="betmas:formerlyAlsoListedAs" active="LIT1750LahaMa" passive="LIT3998Dersan"/>
          </listRelation>
       </body>
    </text>

@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2365Storyo">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2365Storyo">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -27,7 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listBibl type="clavis">
@@ -41,10 +35,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </bibl>
             </listBibl>
          </sourceDesc>
+         <sourceDesc>
+<listWit>
+<witness corresp="BNFabb94">BnF d'Abb. 94, f. 34r-41v</witness>
+<witness corresp="PetermannIINachtrag40">Petermann II Nachtrag 40, f. 79r-85v</witness>
+<witness type="external" corresp="https://www.vhmml.org/readingRoom/view/500195">EMDA (Ethiopian Manuscript Digital Archive) 00059 [Shelfmark G1-IV-120]</witness>
+</listWit>
+
+         </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -52,10 +53,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
+           <language ident="en">English</language>
+           <language ident="en">Gǝʿǝz</language>
          </langUsage>
          <textClass>
             <keywords>
@@ -69,11 +68,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2024-09-20">Added relations, witnesses, incipit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
-      </body>
+     <body>
+                 <div type="bibliography">
+                     <listRelation>
+                         <relation name="ecrm:P129_is_about" active="LIT2365Storyo" passive="PRS6988Melchize"/>
+                     </listRelation>
+                 </div>
+                 <div type="bibliography"/>
+
+                 <div type="bibliography">
+              <listBibl type="secondary">
+                  <bibl><ptr target="bm:Bausi2007Melchizedek"/></bibl>
+              </listBibl>
+            </div>
+
+          <div xml:lang="gez" type="edition">
+            <note>The incipit is taken from <ref type="mss" corresp="BNFabb94"/>.</note>
+            <div type="textpart" subtype="incipit">
+             <ab xml:lang="gez">ነገር፡ ዘበእንተ፡ መልከ፡ ጼዴቅ፡ ዘሞአ፡ ለሞት፡ በድካመ፡ ፍጥረት። ከመ፡ ያቅድም፡ አርአዮታ፡ ሠናየ። ወቦኑ፡ በእንቲአሁ፡ ዘተጽሐፈ።
+             ከመ፡ ተገንዘ፡ ወተከብተ፡ ከመ፡ ሄኖክ፡ ከመ፡ ኢይርአዮ፡ ለሞት።</ab>
+            </div>
+          </div>
+
+             </body>
+
    </text>
 </TEI>

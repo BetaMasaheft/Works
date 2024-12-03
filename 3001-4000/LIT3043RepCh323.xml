@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT3043RepCh323">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3043RepCh323">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to ʾEwosṭātewos</title>
+            <title xml:id="t1">Hymn to the Miracles of ʾEwosṭātewos</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -27,29 +21,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
+          <p/>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="ChristianLiterature"/>
@@ -61,6 +47,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keyword and incipit</change>
+         <change who="AD" when="2020-10-08">Corrected incipit</change>
+         <change who="AD" when="2020-10-15">Added relation to the collection of hymns (LIT6201Hymn).</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -76,10 +64,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
-                  አናሳኩ፡ ነቢበ፡ ወከሠትኩ፡ አፈ።
+                  አና<choice resp="AD">
+                     <sic>ሳ</sic>
+                     <corr>ኅ</corr>
+                  </choice>ኩ፡ ነቢበ፡ ወከሠትኩ፡ አፈ።
                </ab>
             </div>
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+              <ab>
+                አናኅኩ፡ ነፍስየ፡ ወከሠትኩ፡ አፈ። ኤዎስጣቴዎስ፡ እዜኑ፡ ተአምሪከ፡ ትሩፈ። አናብስተ፡ ገዳም፡ መፍርሐን፡ እንዘ፡ ይትለአኩከ፡ ዘልፈ። አሐዱ፡ ዘይጸውር፡ አጽፈ።
+              </ab>
+            </div>
          </div>
+         <listRelation>
+           <relation name="ecrm:P129_is_about" active="LIT6200Hymn" passive="PRS3934Ewostate"/>
+
+           <relation name="dcterms:isPartOf" active="LIT3043RepCh323" passive="LIT6201Hymn">
+             <desc>The hymn may be found as part of a collection of hymns to the miracles of ʾEwosṭātewos.</desc>
+           </relation>
+         </listRelation>
       </body>
    </text>
 </TEI>

@@ -1,19 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2000Mazmur">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2000Mazmur">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="en" xml:id="t1">Psalms of David</title>
-            <title xml:lang="gez" xml:id="t2">መዝሙረ፡ ዳዊት፡</title>
-            <title xml:lang="gez" corresp="#t2" type="normalized">Mazmura Dāwit</title>
-            <title xml:lang="en" corresp="#t2">Psalms of David</title>
+            <title xml:lang="gez" xml:id="t1">መዝሙረ፡ ዳዊት፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Mazmura Dāwit</title>
+            <title xml:lang="en" corresp="#t1">Psalms of David</title>
             <title type="short">Ps.</title>
             <editor role="generalEditor" key="AB"/>
             <editor key="RHC"/>
@@ -44,7 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </publicationStmt>
 
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
@@ -54,18 +48,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </projectDesc>
          </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italiano</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
-
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract><p>The <foreign xml:lang="gez">Mazmura Dāwit</foreign>, the Biblical Psalms attributed to David, usually circulates in the Ethiopic 
+            manuscript tradition as the first part of the
+            <ref type="work" corresp="LIT2701Dawit"/>, followed by the <ref type="work" corresp="LIT1233Cantic"/>, 
+            <ref type="work" corresp="LIT2509Weddas"/> and  <ref type="work" corresp="LIT1113Anqasa"/>.</p></abstract>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Bible"/>
                <term key="OldTestament"/>
                <term key="ChristianLiterature"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -80,17 +73,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2017-10-31" who="AB">Reviewed and approved correction proposed by Augustine Dickinson https://github.com/BetaMasaheft/Works/pull/2</change>
          <change when="2019-07-24" who="DE">Added relation.</change>
          <change when="2019-11-25" who="DR">Corrected typo in Ps151, l. 6.</change>
+         <change when="2020-03-11" who="DR">Added abstract and relation</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <listRelation>
-            <relation name="saws:formsPartOf"
-                      active="LIT2000Mazmur"
-                      passive="LIT2701Dawit"/>
-                      <relation name="ecrm:CLP46i_may_form_part_of"
-                                active="LIT2000Mazmur"
-                                passive="LIT3985Mazmura"></relation>
+            <relation name="saws:formsPartOf" active="LIT2000Mazmur" passive="LIT2701Dawit"/>
+                      <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2000Mazmur" passive="LIT3985Mazmura"/>
+            <relation name="saws:isAttributedToAuthor" active="LIT2000Mazmur" passive="PRS3417David"/>
          </listRelation>
          <div type="edition" xml:lang="gez">
             <div type="textpart" subtype="Psalmus" xml:id="Ps1" n="1">
@@ -6079,7 +6070,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <l n="3">
                      <lb n="1"/> ብፁዓን ፡ እለ ፡ የዐቅቡ ፡ ፍትሐ ፤<lb n="2"/>ወይገብሩ ፡ ጽድቀ ፡ በኵሉ ፡ ጊዜ ።</l>
                   <l n="4">
-                     <lb n="1"/> ተዘከረነ ፡ እግዚኦ ፡ ብሣህልከ ፡ ሕዝበከ
+                     <lb n="1"/> ተዘከረነ ፡ እግዚኦ ፡ በሣህልከ ፡ ሕዝበከ
                         ፤<lb n="2"/>ወተሣሀለነ ፡ በአድኅኖትከ ።</l>
                   <l n="5">
                      <lb n="1"/> ከመ ፡ ንርአይ ፡ ሠናይቶሙ ፡
@@ -7310,6 +7301,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      ለገብርከ ፡ እስመ ፡ ትእዛዘከ ፡ ኢረሳዕኩ ።<lb n="3"/> </l>
                </ab>
             </div>
+            
+            <div type="textpart" subtype="Psalmus" xml:id="Ps118Spiritual">
+               <label>Psalm 118 including the Spritual Meaning of the Hebrew Letters</label>
+            <!--   <note>This ID is to be used in cases where Psalm 118 contains, in a sentence after the name of the letters,
+                  the spiritual meanings of the Hebrew letters.</note>-->
+            </div>
+            
             <div type="textpart" subtype="Psalmus" xml:id="Ps119" n="119">
                <label>Psalmus 119</label>
                <ab>

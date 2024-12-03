@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1558Matthew">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1558Matthew">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -30,26 +24,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>It includes tituli, biography and Bǝsrāta Mātewos “Gospel of Matthew”</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="Bible"/>
@@ -62,19 +50,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-04-04">Added keywords</change>
+         <change who="ABr" when="2020-11-20">Added incipits and explicits from GCA001 and Eusebian sections</change>
+         <change who="ABr" when="2020-11-21">Added headline (with title inscriptio); incipits and explicits from GCA001</change>
+         <change who="ABr" when="2020-12-04">Added corresp="LIT4875Reliability" to xml:id="SecondIntroduction" and label Relialibity of the Gospel;
+           colophon (with title subscriptio) of the Gospel in the textpart xml:id:="PostScriptMatthew"</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="edition">
 
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="SecondIntroduction">
-               <label>New introduction to the gospels, see <ref type="mss" corresp="BNFet33"/>
-               </label>
-               <listBibl type="secondary">
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SecondIntroduction" corresp="LIT4875Reliability">
+               <label>Relialibity of the Gospel</label>
+                <listBibl type="secondary">
                   <bibl>
                      <ptr target="bm:Dillmann1848Catalogus"/>
                      <citedRange unit="page">13</citedRange>
@@ -83,37 +71,63 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <ptr target="bm:Nicoll1821Bodleianae"/>
                      <citedRange unit="page">17</citedRange>
                   </bibl>
+                  <bibl>
+                     <ptr target="bm:Zuurmond1989EvangeliumMarc"/>
+                     <citedRange unit="page">22-23, 26-27, 29</citedRange>
+                  </bibl>
                </listBibl>
-
-               <div type="textpart"
-                    subtype="chapter"
-                    xml:lang="gez"
-                    xml:id="BiographyMatthew">
-                  <label>Biography of Matthew</label>
-               </div>
+              <note>The incipit and explicit are taken from
+                 <ref type="mss" corresp="GCA001"/>
+               </note>
             </div>
 
-            <!--Is the Note on the division of the Gospel of Matthew part of the Biography or the Tituli or is it an own textpart?-->
-
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="TituliMatthew">
-               <label>Tituli of the Gospel of Matthew</label>
+             <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="BiographyMatthew">
+                <label>Biography of Matthew</label>
+                <div type="textpart" subtype="incipit"><ab>ወለማቴዎስ፡ ስሙ፡ ሌዊ፡ ወትርጓሜሁ፡ ኅሩይ፡ ወውእቱ፡
+                 እምነገደ፡ ይሳኮር፡ እምሀገረ፡ ናዝሬት። ስመ፡ አቡሁ፡ ዲቁ፡ ወስመ፡ እሙ፡ ካሩትያስ።</ab></div>
+                <div type="textpart" subtype="explicit"><ab>ወሰበከ፡ ባቲ፡ በህንድ፡ ወበኢየሩሳሌም።</ab></div>
+             </div>
+             <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="EusebianSectionsMatthew">
+                <label>Statement about the Eusebian Sections in the Gospel of Matthew</label>
+                <div type="textpart" subtype="incipit"><ab>ወኍልቈ፡ ምዕራፋቲሁ፡ ንኡሳን፡ ፫፻፶፭፡</ab></div>
+                <div type="textpart" subtype="explicit"><ab>ወምዕራፉ፡ በልሳነ፡ ሮሜ። ፷፰፡</ab></div>
+             </div>
+             <div type="textpart" subtype="textsubunit" xml:lang="gez" xml:id="TituliMatthew">
+                <label>Tituli of the Gospel of Matthew</label>
+                <div type="textpart" subtype="incipit"><ab>
+                <l n="1">፩፡ ሰብአ፡ ሰገል።</l>
+                <l n="2">፪፡ ቅትለተ፡ ሕፃናት።</l>
+                <l n="3">፫፡ ስብከተ፡ ዮሓንስ።</l></ab></div>
+                <div type="textpart" subtype="explicit"><ab>
+                <l n="66">፷፮፡ ክሕደተ፡ ጴጥሮስ።</l>
+                <l n="67">፷፯፡ ነስሖተ፡ ይሁዳ።</l>
+                <l n="68">፷፰፡ ዘከመ፡ ነሥአ፡ ዮሴፍ፡ ራማዊ፡ ሥጋሁ፡ ለእግዚእ።</l></ab></div>
+              </div>
+              <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT2709Matthew">
+                <label>Bǝsrāta Mātewos</label>
+               <div type="textpart" subtype="subtextunit" xml:id="MatthewGospelHeadline">
+                 <label>Headline of the Gospel of Matthew</label>
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩፡ አምላክ። <seg type="title inscriptio expanded">ብስራተ፡ ወንጌል፡
+                   ማቴዎስ፡ ሐዋርያ። አሓዱ፡ እምዓሠርቱ፡ ወክልኤቱ።</seg> ጸሎቱ፡ ወበረከቱ፡ የሀሉ፡ ምስለ፡ ገብሩ፡ <gap reason="ellipsis" resp="Abr"/>
+                    ለዓለመ፡ ዓለም፡ አሜን።</ab>
+                </div>
+                <div type="textpart" subtype="coretext" xml:id="MatthewGospel">
+                  <label>Gospel of Matthew</label>
+                  <div type="textpart" subtype="incipit"><ab>መጽሐፈ፡ ልደቱ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ።
+                  ወልደ፡ ዳዊት፡ ወልደ፡ አብርሃም። አብርሃምኒ፡ ወለዶ፡ ለይስሓቅ። ወይስሓቅኒ፡ ወለዶ፡ ለያዕቆብ።</ab></div>
+                  <div type="textpart" subtype="explicit"><ab>ወናሁ፡ አነ፡ ሀሎኩ፡ ምስሌክሙ፡ በኵሉ፡ መዋዕል፡ እስከ፡
+                  ኅልቀተ፡ ዓለም፡ አሜን።</ab></div>
+                </div>
+                <div type="textpart" subtype="colophon" xml:lang="gez" xml:id="PostscriptMatthew">
+                  <label>Colophon of the Gospel of Matthew</label>
+                  <div type="textpart" subtype="incipit"><ab>መልአ፡ ጽሕፈተ፡ <seg type="title subscriptio">ብስራቱ፡
+                  ለማቴዎስ፡ ሐዋርያ።</seg> ወኮነ፡ ጸሓፎ፡ በምድረ፡ ፍልስጥዔም፡</ab></div>
+                  <div type="textpart" subtype="explicit"><ab>በቀዳሚሁ፡
+                  ዓ<choice><sic>ም</sic><corr resp="ABr">መ</corr></choice><supplied reason="omitted" resp="ABr">ተ</supplied>፡
+                  እምቀላውዴዎስ፡ ቄሳር፡ ንጉሠ፡ ሮሜ። ጸሎቱ፡ ወበረከቱ፡ ለቅዱስ፡ ማቴዎስ፡ የሀሉ፡ ምስለ፡ ገብሩ፡ <gap reason="ellipsis" resp="Abr"/>
+                  ለዓለመ፡ ዓለም፡ አሜን።</ab></div>
+                </div>
             </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 corresp="LIT2709Matthew">
-               <label>Bǝsrāta Mātewos</label>
-            </div>
-            <div type="textpart"
-                 subtype="chapter"
-                 xml:lang="gez"
-                 xml:id="PostscriptMatthew">
-               <label>Postscript to the Gospel of Matthew</label>
-            </div>
-
          </div>
       </body>
    </text>

@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT4717TaammerLi"
-     xml:lang="en"
-     type="work">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4717TaammerLi" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
@@ -27,16 +21,45 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
                 <p/>
+             <!-- list of MSS taken from MKL-014
+                                 <listBibl type="mss">
+                        <bibl>Asmara, Library of the Pavoni Social Center (1674)</bibl>
+                        <bibl>
+                           <locus target="#32rb">32rb</locus> – 76rb</bibl>
+                        <bibl>(cp. BAUSI 2003, IX).</bibl>
+                        <bibl>Asmara, Library of the Pavoni Social Center (20th cent.)</bibl>
+                        <bibl>
+                           <locus target="#26vb">26vb</locus> – 81va</bibl>
+                        <bibl>(cp. BAUSI 2003, IX).</bibl>
+                        <bibl>Conti Rossini (text copied from a ms. kept in Dabra Libānos,
+                           Eritrea)</bibl>
+                        <bibl>s. Conti Rossini 1903a, 34-41</bibl>
+                        <bibl>(cp. BAUSI 2003, IX).</bibl>
+                        <bibl>StrANL Conti Rossini 26 (1934),</bibl>
+                        <bibl>
+                           <locus from="22ra" to="64ra">22ra-64ra</locus>
+                        </bibl>
+                        <bibl>(StrANL 91-99).</bibl>
+                        <bibl>StrANL Conti Rossini 88 (1939),</bibl>
+                        <bibl>
+                           <locus from="20rb" to="52ra">20rb-52ra</locus>
+                        </bibl>
+                        <bibl>(StrANL 225-31).</bibl>
+                        <bibl>VatLib Cerulli Etiop. 198 (early 19th cent.),</bibl>
+                        <bibl>
+                           <locus from="62ra" to="70vc">62ra-70vc</locus>
+                        </bibl>
+                        <bibl>(cp. BAUSI 2003, IX).</bibl>
+                     </listBibl>-->
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -55,21 +78,102 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="Miracle"/>
                 </keywords>
             </textClass>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="MV" when="2017-09-08">Created entity</change>
+            <change when="2020-02-01" who="ES">updated after MGM-012</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
-            <p/>
+            <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:Bausi2003Libanos"/>
+                    </bibl>
+                </listBibl>
+            </div>
+            <div type="edition">
+                <div type="textpart" xml:id="praise"><label>Preamble</label>
+                    <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="verse">182-186</citedRange></bibl></div>
+                <div type="textpart" xml:id="miracle1"><label>Miracle 1</label>
+                    <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="verse">187-202</citedRange></bibl>
+                    </div>
+                <div type="textpart" xml:id="miracle2"><label>Miracle 2</label>
+                    <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="verse">203-207</citedRange></bibl>
+                </div>
+                <div type="textpart" xml:id="miracle3"><label>Miracle 3</label>
+                    <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="verse">208-211</citedRange></bibl></div>
+                <div type="textpart" xml:id="miracle4"><label>Miracle 4</label>
+                    <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="verse">212-214</citedRange></bibl></div>
+                <div type="textpart" xml:id="miracle5"><label>Miracle 5</label>
+                    <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="verse">215-216</citedRange></bibl></div>
+                <div type="textpart" xml:id="miracle6"><label>Miracle 6</label>
+                    <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="verse">217-221</citedRange></bibl></div>
+                <div type="textpart" xml:id="miracle7"><label>Miracle 7</label>
+                    <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="verse">222-225</citedRange></bibl></div>
+                <div type="textpart" xml:id="miracle8"><label>Miracle 8</label>
+                    <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="verse">227-228</citedRange></bibl></div>
+                <div type="textpart" xml:id="miracle9"><label>Miracle 9</label>
+                    <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="verse">229-250</citedRange></bibl></div>
+                <div type="textpart" xml:id="miracle10"><label>Miracle 10</label>
+                    <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="verse">251-255</citedRange></bibl>
+                    </div>
+                <div type="textpart" xml:id="miracle11"><label>Miracle 11</label>
+                    <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="verse">256-261</citedRange></bibl></div>
+                <div type="textpart" xml:id="miracle12"><label>Miracle 12</label>
+                </div>
+                <div type="textpart" xml:id="miracle13"><label>Miracle 13</label>
+                </div>
+                <div type="textpart" xml:id="miracle14"><label>Miracle 14</label>
+                </div>
+                <div type="textpart" xml:id="miracle15"><label>Miracle 15</label>
+                </div>
+                <div type="textpart" xml:id="miracle16"><label>Miracle 16</label>
+                </div>
+                <div type="textpart" xml:id="miracle17"><label>Miracle 17</label>
+                </div>
+                <div type="textpart" xml:id="miracle18"><label>Miracle 18</label>
+                </div>
+                <div type="textpart" xml:id="miracle19"><label>Miracle 19</label>
+                </div>
+                <div type="textpart" xml:id="miracle20"><label>Miracle 20</label>
+                </div>
+                <div type="textpart" xml:id="miracle21"><label>Miracle 21</label>
+                </div>
+                <div type="textpart" xml:id="miracle22"><label>Miracle 22</label>
+                </div>
+                <div type="textpart" xml:id="miracle23"><label>Miracle 23</label>
+                </div>
+                <div type="textpart" xml:id="miracle24"><label>Miracle 24</label>
+                </div>
+                <div type="textpart" xml:id="miracle25"><label>Miracle 25</label>
+                </div>
+                <div type="textpart" xml:id="miracle26"><label>Miracle 26</label>
+                </div>
+                <div type="textpart" xml:id="miracle27"><label>Miracle 27</label>
+                </div>
+                <div type="textpart" xml:id="miracle28"><label>Miracle 28</label>
+                </div>
+                <div type="textpart" xml:id="miracle29"><label>Miracle 29</label>
+                </div>
+                <div type="textpart" xml:id="miracle30"><label>Miracle 30</label>
+                </div>
+                <div type="textpart" xml:id="miracle31"><label>Miracle 31</label>
+                </div>
+                <div type="textpart" xml:id="miracle32"><label>Miracle 32</label>
+                    <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="verse">372-374</citedRange></bibl>
+                </div>
+                <div type="textpart" xml:id="miracle33"><label>Miracle 33</label>
+                    <bibl><ptr target="bm:Bausi2003Libanos"/><citedRange unit="verse">376-378</citedRange></bibl>
+                </div>
+                <div type="textpart" xml:id="miracle34"><label>Miracle 34</label>
+                </div>
+                <div type="textpart" xml:id="miracle35"><label>Miracle 35</label>
+                </div>
+            </div>
+            <listRelation><relation name="ecrm:P129_is_about" active="LIT4717TaammerLi" passive="PRS6298Libanos"></relation></listRelation>
         </body>
     </text>
 </TEI>

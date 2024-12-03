@@ -1,17 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1299Dersan">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1299Dersan">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dǝrsanä Sawiros</title>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ሳዊሮስ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa Sāwiros</title>
+            <title xml:lang="gez" xml:id="t2">ክብረ፡ ሃይማኖት፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Kǝbra hāymānot</title>
+            <title xml:lang="gez" xml:id="t3">ድርሳን፡ በእንተ፡ ሃይማኖት፡</title>
+            <title xml:lang="gez" corresp="#t3" type="normalized">Dǝrsān baʾǝnta hāymānot</title>
+            <title xml:lang="gez" xml:id="t4">መጽሐፈ፡ ኅዳር፡</title>
+            <title xml:lang="gez" corresp="#t4" type="normalized">Maṣḥafa Ḫǝdār</title>
+            <title xml:lang="ar" xml:id="t5">كتاب الإيضاح </title>
+            <title xml:lang="ar" corresp="#t5" type="normalized">Kitāb al-Īḍāḥ</title>
+            <title xml:lang="en" xml:id="t6">12 homilies of Severus, bishop of Ašmunayn, on Christian doctrine</title>
             <author>Severus of Ašmunayn</author>
+            <editor key="MKr"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -28,35 +33,109 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="ar">Arabic</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <textClass>
+           <keywords>
+            <term key="ChristianLiterature"/>
+            <term key="Homily"></term>
+            <term key="Translation"></term>
+
+          </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2020-06-22">Addes titles of the homilies</change>
+         <change when="2021-06-28" who="DE">Small corrections.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <div type="bibliography">
+        <listBibl type="secondary">
+           <bibl><ptr target="bm:Getatchew2007Hedar"/></bibl>
+           <bibl><ptr target="bm:Tedros2010Severos"/></bibl>
+        <bibl><ptr target="bm:Graf1947GCALII"/>
+        <citedRange unit="page">309-311</citedRange>
+          </bibl>
+          <bibl><ptr target="bm:Tedros2006Sawiros"/></bibl>
+          </listBibl>
+           <listBibl type="editions">
+             <bibl><ptr target="bm:Tedros2017Sawiros"/></bibl>
+           </listBibl>   
+          <listRelation>
+             <relation name="saws:isAttributedToAuthor" active="LIT1299Dersan" passive="PRS8788Severos"/>
+             <relation name="betmas:formerlyAlsoListedAs" active="LIT1299Dersan" passive="LIT1963Mashaf"/>
+             <relation name="betmas:formerlyAlsoListedAs" active="LIT1299Dersan" passive="LIT1707Kebrah"/>
+             <relation name="betmas:formerlyAlsoListedAs" active="LIT1299Dersan" passive="LIT1729Kitaba"/>
+          </listRelation>
+                  </div>
+ <div type="edition">
+   <div type="textpart" subtype="homily" n="1" xml:lang="gez" xml:id="Sev1OnThreeNatures">
+      <label xml:lang="gez">ድርሳን: ቀዳማይ: በእንተ: ፍካሬ: ሠለስቱ: ሕላዌሁ: ለእግዚአብሔር: ወተዋሕዶቶሙ።</label>
+      <label xml:lang="en">On the three natures of God and their Union</label></div>
+
+      <div type="textpart" subtype="homily" n="2" xml:lang="gez" xml:id="Sev2OnIncarnation">
+         <label xml:lang="gez">ድርሳን: ደግማይ: በእንተ: ከሢተ: ትስብእቱ: ለወልደ: እግዚአብሔር: ወስቅለቱ።</label>
+         <label xml:lang="en">On the incarnation of the Son and His Crucifixion</label></div>
+
+         <div type="textpart" subtype="homily" n="3" xml:lang="gez" xml:id="Sev3OnPentateuch">
+            <label xml:lang="gez">ድርሳን: ሣልሳይ: በእንተ: ትርጓሜ: ብዙኅ: ነገር: እምኦሪት: ወኢያሱ: ወልደ: ነዌ: ያጤይቅ: ክብረ: ሃያምኖተ: ክርስቲያን: ርትዕት።</label>
+            <label xml:lang="en">On various passages of the Pentateuch and Joshua, which demonstrate
+            the glory of the Christian Faith</label></div>
+
+            <div type="textpart" subtype="homily" n="4" xml:lang="gez" xml:id="Sev4OnPassover">
+               <label xml:lang="gez">ድርሳን: ራብዕ: በእንተ: ከሢተ: ትርጓሜ: ፍሥሕ: ወበግዕ: ወእፎ: ይከውን: ኅብስት: ወወይን: ሥጋሁ: ወደሙ: ለክርስቶስ።</label>
+               <label xml:lang="en">On the Passover (the Lord's Supper)</label></div>
+
+               <div type="textpart" subtype="homily" n="5" xml:lang="gez" xml:id="Sev5OnDemons">
+                  <label xml:lang="gez">ድርሳን: ኃሙስ: በእንተ: ከሢተ: ፀብእ: ዘይፀብኡ: ቦቱ: ሰይጣናት: መሃይምናነ: ወበእፎ: ይመውእዎሙ።</label>
+                  <label xml:lang="en">On the warring of demons against the faithful and how they may be conquered</label></div>
+
+                  <div type="textpart" subtype="homily" n="6" xml:lang="gez" xml:id="Sev6OnSunday">
+                     <label xml:lang="gez">ድርሳን: ሳድስ: በእንተ: ከሢተ: ክብሩ: ለዕለተ: እሑድ: ወፍጻሜሁ።</label>
+                     <label xml:lang="en">On the glory of the first day (Sunday)</label></div>
+
+                     <div type="textpart" subtype="homily" n="7" xml:lang="gez" xml:id="Sev7OnWednesday">
+                        <label xml:lang="gez">ድርሳን: ሳብዕ: በእንተ: ከሢተ: ምክንያት: ጾመ:  ፪ዕለተ: ረቡዕ: ወዓርብ።</label>
+                        <label xml:lang="en">On the feast of Wednesday and Friday</label></div>
+
+                        <div type="textpart" subtype="homily" n="8" xml:lang="gez" xml:id="Sev8OnFasting">
+                           <label xml:lang="gez">ድርሳን: ሳምን: በእንተ: ከሢተ: ጾም: ምንት: ውእቱ: ወእፎ: ይደሉ: ከመ: ይኩን።</label>
+                           <label xml:lang="en">On fasting</label></div>
+
+                           <div type="textpart" subtype="homily" n="9" xml:lang="gez" xml:id="Sev9OnDeath">
+                              <label xml:lang="gez">ርሳን: ታስዕ: በእንተ: ከሢተ: ውእቱ: ሞት: ዘሞአ: እግዚአብሔር: በዲበ: መስቀል: ወያበጥል: ቃሎ: ለዘይቤ: ከመ: ውእቱ: መልአክ: እምኀበ: እግዚአብሔር: ሥሩዕ: ያሙቶሙ: ለሰብአ።</label>
+                              <label xml:lang="en">On the death which God conquered on the cross and refutation of the opinion that an angel had been appointed by God to slay men</label></div>
+
+                              <div type="textpart" subtype="homily" n="10" xml:lang="gez" xml:id="Sev10OnJacobiteFaith">
+                                 <label xml:lang="gez">ድርሳን: ዓሥር: በእንተ: ከሢተ: ጽንዓ: ሃይማኖት: ርትዕት: ያዕቆባዊት: ወይከሥት: ኵሉ: ሃያማኖት: ውሉጣት።</label>
+                                 <label xml:lang="en">On the stability of the orthodox Jacobite faith and on the other faiths</label></div>
+
+                                 <div type="textpart" subtype="homily" n="11" xml:lang="gez" xml:id="Sev11OnMoses">
+                                    <label xml:lang="gez">ድርሳን: ፲ወ፩: በእንተ: ትርጓሜ: ስብሐተ: ሙሴ: ወማርያም: እኅተ: ሙሴ: ወመዝሙር:  ፻፴፭ወዘ፻ወ፶: ወርእዩ: ራብዕ: ዘዳንኤል: ወስብሐተ: ፫ደቂቅ።</label>
+                                    <label xml:lang="en">xposition of the Songs of Moses and of Miriam, of Pss. 135 and cl., of the fourth Vision of Daniel and of the song of the three holy children</label></div>
+
+                                    <div type="textpart" subtype="homily" n="12" xml:lang="gez" xml:id="Sev12OnConsolation">
+                                       <label xml:lang="gez">ድርሳን: ዓሠርቱ: ወክልኤቱ: በእንተ: ኑዛዜ: መሃይምናን: ወትዕግሥቶሙ: ለእለ: ኃዘናት።</label>
+                                       <label xml:lang="en">On the consolation of believers and their patience under afflictions</label></div>
+   </div>
+
+
       </body>
    </text>
 </TEI>

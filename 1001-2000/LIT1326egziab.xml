@@ -1,20 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT1326egziab">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1326egziab">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">እግዚአብሔር፡ ነግሠ፡ ዘዓርኬ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">ʾƎgziʾabǝḥer nagśa za-ʿĀrke</title>
-            <author>
-               <persName ref="PRS2036Arkasel">ʾArka Śǝllus (ʾArke)</persName>
-            </author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -31,7 +22,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -47,24 +38,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <abstract><p>A type of ʾƎgziʾabǝḥer nagśa collection which then developed into <ref type="work" corresp="LIT2001Mazmur"/>.</p></abstract>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Poetry"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -74,6 +61,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-10-19">Information added</change>
          <change who="DR" when="2017-02-20">Keywords added</change>
+         <change who="DR" when="2020-03-05">Corrected relation</change>
+         <change who="DR" when="2022-03-21">Added abstract and relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -97,14 +86,87 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>            
             
             <listRelation>
-               <relation name="saws:isAttributedToAuthor"
-                         active="LIT1326egziab"
-                         passive="PRS2036Arkasel"/>
-               <relation name="saws:isAncestorOf"
-                         active="LIT1326egziab"
-                         passive="LIT2001Mazmur"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1326egziab" passive="PRS2036Arkasel"/>
+               <relation name="saws:isRelatedTo" active="LIT1326egziab" passive="LIT2001Mazmur"/>
+               <relation name="saws:isVersionOf" active="LIT1326egziab" passive="LIT1325egziab"/>
+               <relation name="lawd:hasAttestation" active="LIT1326egziab" passive="EMML1542"/>
+               <relation name="lawd:hasAttestation" active="LIT1326egziab" passive="EMML2081"/>
+               <relation name="lawd:hasAttestation" active="LIT1326egziab" passive="EMML2090"/>
+               <relation name="lawd:hasAttestation" active="LIT1326egziab" passive="BNFabb113"/>
+               <relation name="lawd:hasAttestation" active="LIT1326egziab" passive="BNFabb211"/>
+               <relation name="lawd:hasAttestation" active="LIT1326egziab" passive="BLorient569"/>
+               <relation name="lawd:hasAttestation" active="LIT1326egziab" passive="BLorient542"><desc>According to 
+                  <bibl>
+                     <ptr target="bm:Getatchew1983Nags"/><citedRange unit="page">14</citedRange>
+                  </bibl>, <ref type="mss" corresp="BLorient542"/> contains the 
+                  ʾƎgziʾabǝḥer nagśa za-ʿĀrke. However, this manuscript is, according to its catalogue description, a Psalter without additional texts.
+               </desc></relation>
             </listRelation>
             
+         </div>
+         
+         <div type="edition">
+            <note>The following division into texparts is based on <ref type="mss" corresp="BLorient569"/>.</note>
+            <div type="textpart" xml:id="Introduction" subtype="chapter" xml:lang="gez">
+               <label>Introduction</label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="HedarFirstPart" subtype="chapter" xml:lang="gez">
+               <label>First part of the hymns for <date ref="ethiocal:Hedar">Ḫǝdār</date>, for 12th-30th Ḫǝdār</label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Tahsas" subtype="chapter" xml:lang="gez">
+               <label>Hymns for   <date ref="ethiocal:Tahsas">Tāḫśāś</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Terr" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Terr">Ṭǝrr</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Yakkatit" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Yakkatit">Yakkātit</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Maggabit" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Maggabit">Maggābit</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Miyazya" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Miyazya">Miyāzyā</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Genbot" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Genbot">Gǝnbot</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Sane" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Sane">Sane</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Hamle" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Hamle">Ḥamle</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Nahase" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Nahase">Naḥase</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Pagwemen" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Pagwemen">Ṗāgwǝmen</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Maskaram" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Maskaram">Maskaram</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Teqemt" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Teqemt">Ṭǝqǝmt</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="HedarSecondPart" subtype="chapter" xml:lang="gez">
+               <label>Second part of the hymns for <date ref="ethiocal:Hedar">Ḫǝdār</date>, for 1st-11th Ḫǝdār</label>
+               <ab/>
+            </div>
          </div>
       </body>
    </text>

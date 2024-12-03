@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT4031EgziabeherN">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4031EgziabeherN">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -27,7 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
             <listWit>
@@ -37,20 +31,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <abstract><p>A type of ʾƎgziʾabǝḥer nagśa collection attributed to <persName ref="PRS10626ZaraY"/>.</p></abstract>
+         <langUsage><language ident="en">English</language></langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -63,17 +52,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2016-10-19">Created file</change>
          <change who="DR" when="2017-03-28">Added keywords</change>
          <change who="DR" when="2018-11-23">Added keyword, deleted catalogue bibliography</change>
+         <change who="DR" when="2022-03-21">Added abstract and relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
             <listRelation>
-               <relation name="saws:contains"
-                      active="LIT4031EgziabeherN"
-                      passive="LIT3133Salam LIT3134Salam LIT3135Salam LIT3136Salam LIT3137Salam"/>
-               <relation name="saws:isDifferentTo"
-                      active="LIT4031EgziabeherN"
-                      passive="LIT2001Mazmur">
+               <relation name="saws:contains" active="LIT4031EgziabeherN" passive="LIT3133Salam"/>
+               <relation name="saws:contains" active="LIT4031EgziabeherN" passive="LIT3134Salam"/>
+               <relation name="saws:contains" active="LIT4031EgziabeherN" passive="LIT3135Salam"/>
+               <relation name="saws:contains" active="LIT4031EgziabeherN" passive="LIT3136Salam"/>
+               <relation name="saws:contains" active="LIT4031EgziabeherN" passive="LIT3137Salam"/>
+               <relation name="lawd:hasAttestation" active="LIT4031EgziabeherN" passive="BAVet43"/>
+               <relation name="lawd:hasAttestation" active="LIT4031EgziabeherN" passive="EMML56"/>
+               <relation name="lawd:hasAttestation" active="LIT4031EgziabeherN" passive="EMML375"/>
+               <relation name="lawd:hasAttestation" active="LIT4031EgziabeherN" passive="EMML1057"/>
+               <relation name="lawd:hasAttestation" active="LIT4031EgziabeherN" passive="EMML1089"/>
+               <relation name="lawd:hasAttestation" active="LIT4031EgziabeherN" passive="EMML1647"/>
+               <relation name="lawd:hasAttestation" active="LIT4031EgziabeherN" passive="EMML2665"/>
+               <relation name="lawd:hasAttestation" active="LIT4031EgziabeherN" passive="EMML3128"/>
+               <relation name="lawd:hasAttestation" active="LIT4031EgziabeherN" passive="EMML7061"/>
+               <relation name="lawd:hasAttestation" active="LIT4031EgziabeherN" passive="BAVabb211"/>
+               <relation name="lawd:hasAttestation" active="LIT4031EgziabeherN" passive="BLorient568"/>
+               <relation name="lawd:hasAttestation" active="LIT4031EgziabeherN" passive="BNFet130"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT4031EgziabeherN" passive="PRS10626ZaraY"/>
+               <relation name="saws:isDifferentTo" active="LIT4031EgziabeherN" passive="LIT2001Mazmur">
                   <desc>Both works have often be confused with each other, for example in <bibl>
                         <ptr target="bm:Ewald1846Tuebingen"/>
                         <citedRange unit="page">37-38</citedRange>
@@ -103,11 +106,75 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>
 
             <listRelation>
-               <relation name="saws:isAttributedToAuthor"
-                         active="LIT4031EgziabeherN"
-                         passive="PRS10626ZaraY"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT4031EgziabeherN" passive="PRS10626ZaraY"/>
+               <relation name="saws:isVersionOf" active="LIT4031EgziabeherN" passive="LIT1325egziab"/>
             </listRelation>
 
+         </div>
+         
+         <div type="edition">
+            <note>The following division into texparts is based on <ref type="mss" corresp="BLorient568"/>
+               and <ref type="mss" corresp="BNFet130"/>.</note>
+            <div type="textpart" xml:id="Introduction" subtype="chapter" xml:lang="gez">
+               <label>Introduction</label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="HedarFirstPart" subtype="chapter" xml:lang="gez">
+               <label>First part of the hymns for <date ref="ethiocal:Hedar">Ḫǝdār</date>, for 12th-30th Ḫǝdār</label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Tahsas" subtype="chapter" xml:lang="gez">
+               <label>Hymns for   <date ref="ethiocal:Tahsas">Tāḫśāś</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Terr" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Terr">Ṭǝrr</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Yakkatit" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Yakkatit">Yakkātit</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Maggabit" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Maggabit">Maggābit</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Miyazya" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Miyazya">Miyāzyā</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Genbot" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Genbot">Gǝnbot</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Sane" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Sane">Sane</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Hamle" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Hamle">Ḥamle</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Nahase" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Nahase">Naḥase</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Pagwemen" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Pagwemen">Ṗāgwǝmen</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Maskaram" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Maskaram">Maskaram</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="Teqemt" subtype="chapter" xml:lang="gez">
+               <label>Hymns for <date ref="ethiocal:Teqemt">Ṭǝqǝmt</date></label>
+               <ab/>
+            </div>
+            <div type="textpart" xml:id="HedarSecondPart" subtype="chapter" xml:lang="gez">
+               <label>Second part of the hymns for <date ref="ethiocal:Hedar">Ḫǝdār</date>, for 1st-11th Ḫǝdār</label>
+               <ab/>
+            </div>
          </div>
       </body>
    </text>

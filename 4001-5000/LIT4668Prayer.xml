@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT4668Prayer"
-     xml:lang="en"
-     type="work">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4668Prayer" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Protective prayers for the seven weekdays</title>
+                <title xml:lang="gez" xml:id="t1">ጸሎቱ፡ ለጴጥሮስ፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalotu la-Ṗeṭros</title>
+                <title xml:lang="en" corresp="#t1">The Prayer of Peter</title>
+
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -25,18 +22,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
          <sourceDesc>
                 <listWit>
-                    <witness corresp="BAVet20#ms_i1"/>
+                    <witness corresp="BAVet92#ms_i1"/>
                 </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -47,74 +43,173 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <abstract>
                 <p/>
             </abstract>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language></langUsage>
             <textClass>
                 <keywords>
                     <term key="Prayers"/>
                     <term key="ChristianLiterature"/>
+                    <term key="Magic"/>
                 </keywords>
             </textClass>
         </profileDesc>
         <revisionDesc>
             <change who="MV" when="2017-07-11">Created entity</change>
             <change when="2018-11-13" who="DE">Added text division</change>
+            <change when="2020-10-21" who="AD">Updated title, bibliography, and text</change>
         </revisionDesc>
     </teiHeader>
+
     <text xml:base="https://betamasaheft.eu/">
-        <body>
-            <div type="edition">
-                <div type="textpart" xml:id="Monday">
-               <label>Prayer for Monday</label>
+      <body>
+
+        <div type="bibliography">
+          <listBibl type="editions">
+            <bibl>
+              <ptr target="bm:Petros2012SalotaPetros"/>
+            </bibl>
+            <bibl>
+              <ptr target="bm:SalotaPetros1992"/>
+            </bibl>
+          </listBibl>
+        </div>
+
+        <div type="edition">
+          <note>The incipits follow the published manuscript facsimile (<bibl><ptr target="bm:SalotaPetros1992"></ptr></bibl>) used as the basis for the critical edition (<bibl><ptr target="bm:Petros2012SalotaPetros"></ptr></bibl>), which only includes the prayers from Monday to Sunday.</note>
+
+          <div type="textpart" xml:id="Monday">
+            <label>Prayer for Monday</label>
+            <div type="textpart" subtype="incipit">
+              <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ጸሎቱ፡ ለጴጥሮስ፡ ዘየዓቢ፡ እምሐዋርያት፡ ዝውእቱ፡ ዘኃረዮ፡ ክርስቶስ፡ እምኵሎሙ፡ ሐዋርያቲሁ።</ab>
             </div>
-                <div type="textpart" xml:id="Tuesday1">
-               <label>Prayer for Tuesday</label>
+          </div>
+
+          <div type="textpart" xml:id="Tuesday">
+            <label>Prayers for Tuesday</label>
+
+            <div type="textpart" xml:id="Tuesday1">
+              <label>First Prayer for Tuesday</label>
+              <div type="textpart" subtype="incipit">
+                <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ጸሎት፡ በእንተ፡ መልከ፡ ጼዴቅ፡ ወበእንተ፡ ጰራቅሊጦስ፡ መንፈሰ፡ ጽድቅ።</ab>
+              </div>
             </div>
-                <div type="textpart" xml:id="Tuesday2">
-               <label>Another prayer for Tuesday</label>
+
+            <div type="textpart" xml:id="Tuesday2">
+              <label>Second Prayer for Tuesday</label>
+              <div type="textpart" subtype="incipit">
+                <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ጸሎተ፡ ምሕረት፡ ዘጸለዩ፡ መላእክት፡ ወሰማዕት፡ ጳጳሳት፡ ወካህናት፡ መነኮሳት፡ ወዲያቆናት፡ እድ፡ ወአንስት፡ ወኵሎሙ፡ ተጋቢዖሙ፡ ጸለዩ፡ ዘንተ፡ ጸሎተ፡ ኀበ፡ እግዚአብሔር፡</ab>
+              </div>
             </div>
-                <div type="textpart" xml:id="Tuesday3">
-               <label>Another prayer for Tuesday</label>
+
+            <div type="textpart" xml:id="Tuesday3">
+              <label>Third Prayer for Tuesday</label>
+              <div type="textpart" subtype="incipit">
+                <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ዘኢይቀርበከ፡ ሰይጣን፡ ዘንተ፡ ድግም፡</ab>
+              </div>
             </div>
-                <div type="textpart" xml:id="Tuesday4">
-               <label>Another prayer for Tuesday</label>
+
+            <div type="textpart" xml:id="Tuesday4">
+              <label>Fourth Prayer for Tuesday</label>
+              <div type="textpart" subtype="incipit">
+                <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። መሐረኒ፡ ክርስቶስ፡ ተሣሃለኒ፡ ክርስቶስ፡ አድኅነኒ፡ ለገብርከ፡</ab>
+              </div>
             </div>
-                <div type="textpart" xml:id="Wednesday1">
-               <label>Prayer for Wednesday</label>
+
+            <div type="textpart" xml:id="Tuesday5">
+              <label>Fifth Prayer for Tuesday</label>
+              <div type="textpart" subtype="incipit">
+                <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ነገር፡ ዘከመ፡ ተሰአለቶ፡ እግዝእትነ፡ ማርያም፡ ለፍቁር፡ ወልዳ፡ ኢየሱስ፡ ክርስቶስ።</ab>
+              </div>
             </div>
-                <div type="textpart" xml:id="Wednesday2">
-               <label>Another prayer for Wednesday</label>
+
+          </div>
+
+          <div type="textpart" xml:id="Wednesday">
+            <label>Prayers for Wednesday</label>
+
+            <div type="textpart" xml:id="Wednesday1">
+              <label>First Prayer for Wednesday</label>
+              <div type="textpart" subtype="incipit">
+                <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ጸሎተ፡ መድኃኒት፡ አስማተ፡ ኃይል፡ ዘወረደ፡ እምሰማያት፡ ዘወሀቦ፡ እግዚእነ፡ ለረድኡ፡ ለዘክሮቱ፡ ይድሉ፡ ስብሐት፡ ጸሎቱ፡ ወበረከቱ፡ የሃሉ፡ ምስለ፡ ገብሩ፡</ab>
+              </div>
             </div>
+
+            <div type="textpart" xml:id="Wednesday2">
+              <label>Second Prayer for Wednesday</label>
+              <div type="textpart" subtype="incipit">
+                <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ወይቤልዎ፡ መላእክት፡ ታሰተሐፍሮሙ፡ ለሰብእ፡ ለእመ፡ ደገምዎ፡ ለዝንቱ፡ አስማት፡ በበ፯ቱ፡ ጊዜ።</ab>
+              </div>
+            </div>
+
             <div type="textpart" xml:id="Wednesday3">
-               <label>Another prayer for Wednesday</label>
+              <label>Another prayer for Wednesday</label>
+              <div type="textpart" subtype="incipit">
+                <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። አስማተ፡ ልፋፈ፡ ጽድቅ፡ ሚካኤል፡ ወገብርኤል፡ ሱራፌል፡ ወኪሩቤል፡ ኢያኤል፡ ወሳቁኤል፡ ፯ቱ፡ ሊቃናት፡</ab>
+              </div>
             </div>
-                <div type="textpart" xml:id="Thursday">
-               <label>Prayer for Thursday</label>
+
+          </div>
+
+          <div type="textpart" xml:id="Thursday">
+            <label>Prayer for Thursday</label>
+            <div type="textpart" subtype="incipit">
+              <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ለነ፡ ለሐዋርያት፡ ወሀበነ፡ ዘንተ፡ አስማተ፡ በደብረ፡ ዘይት።</ab>
             </div>
-                <div type="textpart" xml:id="Friday">
-               <label>Prayer for Friday</label>
+          </div>
+
+          <div type="textpart" xml:id="Friday">
+            <label>Prayer for Friday</label>
+            <div type="textpart" subtype="incipit">
+              <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። አስማቲሁ፡ ለክርስቶስ፡ ሲድላዊ፡ ቢድጋዊ፡</ab>
             </div>
-                <div type="textpart" xml:id="Saturday">
-               <label>Prayer for Saturday</label>
+          </div>
+
+          <div type="textpart" xml:id="Saturday">
+            <label>Prayers for Saturday</label>
+
+            <div type="textpart" xml:id="Saturday1">
+              <label>First Prayer for Saturday</label>
+              <div type="textpart" subtype="incipit">
+                <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ጸሎተ፡ ሥርየተ፡ ኃጢአት፡ እምነቶሙ፡ ለሐዋርያት፡ ወለኵሎሙ፡ ፸ወ፪ አርድእት፡</ab>
+              </div>
             </div>
-                <div type="textpart" xml:id="Sunday">
-               <label>Prayer for Sunday</label>
+
+            <div type="textpart" xml:id="Saturday2">
+              <label>Second Prayer for Saturday</label>
+              <div type="textpart" subtype="incipit">
+                <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ጸሎተ፡ መድኃኒት፡ ወመጽሐፈ፡ ሕይወት፡ ዘትሰመይ፡ ልፋፈ፡ ጽድቅ። ወዘንተ፡ ነገራ፡ ክርስቶስ፡ ለእግዝእትነ፡ ማርያም፡ አመ፡ ፲ወ፮ ለየካቲት፡</ab>
+              </div>
             </div>
-                <div type="textpart" xml:id="Andrew">
-               <label>Prayer on the names that Jesus Christ revealed to Andrew the apostle</label>
+
+          </div>
+
+          <div type="textpart" xml:id="Sunday">
+            <label>Prayer for Sunday</label>
+            <div type="textpart" subtype="incipit">
+              <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ብርሃናኤል፡ አጉዳ፡ አግፍለሳኤል፡ ዘንተ፡ አስማተ፡ ዘወሀቦሙ፡ እግዚአብሔር፡ ለአናንያ፡ ወአዛርያ፡ ወሚሳኤል፡ እንዘ፡ ይትናገሮሙ፡ ቅዱስ፡ ሚካኤል፡ ቀዊሞ፡ ማዕከለ፡ ዕቶነ፡ እሳት።</ab>
             </div>
-                <div type="textpart" xml:id="Daily">
-               <label>Daily prayer</label>
+          </div>
+
+          <div type="textpart" xml:id="Andrew">
+            <label>Names Revealed to Andrew the Apostle by Jesus Christ</label>
+            <div type="textpart" subtype="incipit">
+              <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። እግዚእነ፡ ነገሮ፡ ለእንድርያስ፡ ረድእ፡ ወሐዋርያ፡ ወሰማዕት፡ ጸሎቱ፡ ወበረከቱ፡ የሃሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
             </div>
-                <div type="textpart" xml:id="Enoch">
-               <label>Prayer on the names that the angels revealed to Enoch</label>
+          </div>
+
+          <div type="textpart" xml:id="Daily">
+            <label>Daily Prayer</label>
+            <div type="textpart" subtype="incipit">
+              <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ተማኅፀንኩ፡ ከመ፡ ኢይሙት፡ ወከመ፡ ሠራቄ፡ ሌሊት፡ ወከመ፡ ቀታሌ፡ ነፍስ፡ መዓልተ፡</ab>
             </div>
+          </div>
+
+          <div type="textpart" xml:id="Enoch">
+            <label>Names Revealed to Enoch by the Angels</label>
+            <div type="textpart" subtype="incipit">
+              <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። አስማት፡ ዘነገርዎ፡ መላእክት፡ ለሄኖክ፡ ዘንተ፡ መሐርዎ፡</ab>
             </div>
-        </body>
+          </div>
+        </div>
+      </body>
     </text>
 </TEI>

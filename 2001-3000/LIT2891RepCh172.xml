@@ -1,33 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="work"
-     xml:lang="en"
-     xml:id="LIT2891RepCh172">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2891RepCh172">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to Our Lady Mary</title>
+
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ማርያም፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Māryām</title>
+            <title corresp="#t1" xml:lang="en"><hi rendition="simple:italic">Malkǝʾ</hi>-hymn to
+               Mary</title>
+            <title xml:lang="en" corresp="#t1">Image of Mary</title>
+
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+               Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                  <p> This file is licensed under the Creative Commons Attribution-ShareAlike 4.0.
+                  </p>
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>A Work part of Ethiopian Literature</p>
+            <listWit>
+               <witness corresp="BLorient13270"/>
+            </listWit>
          </sourceDesc>
          <sourceDesc>
             <ab/>
@@ -35,7 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -44,32 +47,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
-               <term key="Poetry"/>        
+               <term key="Poetry"/>
                <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
          <abstract>
-            <p>The hymns listed by Chaîne as items 172 and 220 seem to be identical, apart from a slight variance, the repetition of the word
-            <foreign xml:lang="gez">ሰላም፡</foreign> in the first verse. Another variant is witnessed by <ref type="mss" corresp="BAVet18"/>, <ref type="mss" corresp="BAVet24"/>, 
-            <ref type="mss" corresp="BAVet56"/> and <ref type="mss" corresp="EMIP00028"/>, which instead of the
-            repeated <foreign xml:lang="gez">ሰላም፡</foreign> have <foreign xml:lang="gez">ካልእ፡</foreign> in the first verse. </p>
+            <p>The hymns listed by Chaîne as items 172 and 220 seem to be identical, apart from a
+               slight variance, the repetition of the word <foreign xml:lang="gez">ሰላም፡</foreign> in
+               the first verse. Another variant is witnessed by <ref type="mss" corresp="BAVet18"/>,
+                  <ref type="mss" corresp="BAVet24"/>, <ref type="mss" corresp="BAVet56"/> and <ref
+                  type="mss" corresp="EMIP00028"/>, which instead of the repeated <foreign
+                  xml:lang="gez">ሰላም፡</foreign> have <foreign xml:lang="gez">ካልእ፡</foreign> in the
+               first verse. </p>
          </abstract>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="PL" when="2016-07-26">Created XML record from Ethio authority google
+            spreadsheet</change>
          <change who="MV" when="2017-05-15">Added keywords and incipit</change>
          <change who="DR" when="2018-07-04">Added abstract, incipit variants</change>
+         <change who="MKr" when="2023-05-28">Added translation bibliography</change>
+         <change when="2024-09-17" who="ES">added automatically extracted text</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT2891RepCh172"
+                  passive="LIT2939RepCh220"/>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT2891RepCh172"
+                  passive="LIT1858Malkea"/>
+            </listRelation>
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
@@ -77,23 +90,185 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="item">220</citedRange>
                </bibl>
             </listBibl>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Tedros2008Malkea"/>
+               </bibl>
+            </listBibl>
          </div>
-         <div type="edition">
+         <div type="edition" xml:lang="gez">
             <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምኪ፡ ሐዋዝ።
-               </ab>
+               <ab> ሰላም፡ ለዝክረ፡ ስምኪ፡ ሐዋዝ። </ab>
             </div>
             <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ሰላም፡ ለዝክረ፡ ስምኪ፡ ሐዋዝ፡ 
-               </ab>
+               <ab> ሰላም፡ ሰላም፡ ለዝክረ፡ ስምኪ፡ ሐዋዝ፡ </ab>
             </div>
             <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ካልእ፡ ለዝክረ፡ ስምኪ፡ ሐዋዝ፡ 
-               </ab>
+               <ab> ሰላም፡ ካልእ፡ ለዝክረ፡ ስምኪ፡ ሐዋዝ፡ </ab>
             </div>
+         </div>
+
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="stanza1"><ab> ሰላም፡ ሰላም፡ ለዝክረ፡ ስምኪ፡ ሐዋዝ፣ እምነ፡ ከልበኔ፡ ወዮስጥ፡ ወእምነ፡
+               ሰንበልት፡ ምዑዝ፣ ማርያም፡ ድንግል፡ ለባሲተ፡ ዐቢይ፡ ትእዛዝ፣ ይሥቅየኒ፡ ለለጽባሑ፡ ወይነ፡ ፍቅርኪ፡ አዚዝ፣ ከመ፡ ይሠቅዮ፡ ዉቲዝ፡
+               ለሠናይ፡ አርዝ። </ab></div>
+            <div type="textpart" xml:id="stanza2"><ab> ሰላም፡ ለሥዕርተ፡ ርእስኪ፡ ዘተንእደ፡ ፅፍሮሁ፣ ለአቡኪ፡ በከናፍሪሁ፣
+               ማርያም፡ ድንግል ለእግዚአብሔር፡ ጽርሑ፣ ለገብርኪ፡ እግዚእትየ፡ ኢትኅድግኒ፡ እላሁ፣ ከመ፡ ኢይበሉኒ፡ ፀር አይቴኑመ፡ ምክሑ። </ab></div>
+            <div type="textpart" xml:id="stanza3"><ab> ሰላም፡ ለርእስኪ፡ በቅብዐ፡ ቅዳሴ፡ ርሑስ፣ አኮ፡ አኮ፡ በቅብዐ፡ ደነስ፣
+               ማርያም፡ ድንግል ንጽሕተ፡ ሥጋ፡ ወነፍስ፣ ያንጽሐኒ፡ እምነ፡ ርኩስ፡ በፍሕመ፡ ሞርባኑ፡ ቅዱስ፣ አዝዚዮ ለሱራፊ፡ ዘሰማይ፡ ቀሲስ። </ab></div>
+            <div type="textpart" xml:id="stanza4"><ab> ሰላም፡ ለገጽኪ፡ ዘጥቀ፡ ይልሂ፣ እምሥነ፡ ከዋክብት፡ ወወርኀ፡ ወእምሥነ፡
+               ፀሐይ፡ መብርሂ፣ ማርያም፡ ድንግል፡ ፍናዋትየ፡ ሠርጊ፣ በመዓልት፡ ወበሌሊት፡ ኢይርከበኒ፡ ጸናሒ፣ መሥገርተ፡ አበሳ፡ ዘይጠፍር፡ ወግበ፡
+               ዘይድሂ። </ab></div>
+            <div type="textpart" xml:id="stanza5"><ab> ሰላም፡ ለቀራንብትኪ፡ ደመናተ፡ ብካይ፡ እለ፡ ኮና፣ አመ፡ አሕመመ፡ ወልደኪ፡
+               ቅንአተ፡ ቀያፍ ወሐና፣ ማርያም፡ ድንግል፡ ለባሲተ፡ ንጽሕ፡ ወቅድስና፣ አስምዕኒ፡ ነገረ፡ ጽድቅ ዘያስተፌሥሕ፡ ሕሊና፣ ከመ፡
+               አስተፍሥሐኪ፡ ጥቀ፡ ዘመልአክ፡ ዜና። </ab></div>
+            <div type="textpart" xml:id="stanza6"><ab> ሰላም፡ ለአዕይንትኪ፡ ዘተመሰላ፡ አብያዘ፣ እለ፡ ይፌጽማ፡ ትእዛዘ፣ ማርያም፡
+               ድንግል፡ እንተ ኢተአምሪ፡ ጋዕዘ፣ ናዝዝኒ፡ በንባብኪ፡ እመ፡ ልብየ፡ ተከዘ፣ በሐብለ፡ ሰቆቃዉ፡ ጽኑዕ፡ ኢይኩን እጉዘ። </ab></div>
+            <div type="textpart" xml:id="stanza7"><ab> ሰላም፡ ለአዕዛንኪ፡ እለ፡ ሰምዓ፡ ቃሎ፣ እግዚአብሔር፡ እግዚእ፡ ሶበ፡
+               ለገብርኤል፡ ተመሰሎ። ማርያም፡ ድንግል፡ ጽሕቅት፡ ለተሣህሎ፣ ሶበ፡ ለልብየ፡ እሳተ፡ ኅዘን፡ አሕለሎ፣ ያፅምአኒ፡ እላ ነገርየ፡ ኩሎ። </ab></div>
+            <div type="textpart" xml:id="stanza8"><ab> ሰላም፡ ለመላትሕኪ፡ በእሳተ፡ አንብዕ፡ እለ፡ ዉዕያ፣ ጊዜ፡ ሰቀሉ፡ በኩረኪ፡
+               ዉሉደ፡ ራጌል ወልያ፣ ማርያም፡ ድንግል፡ ለነፍስየ፡ ደብረ፡ ምስካያ፣ አድኅንኒ፡ እምአፍ፡ ደም፡ ዘአናብስተ ሐቅል፡ አርአያ፣ ከመ፡
+               ማኅፈር፡ ጠቢብ፡ ወምእመን፡ ኬንያ። </ab></div>
+            <div type="textpart" xml:id="stanza9"><ab> ሰላም፡ ለአዕናፍኪ፡ መሳክወ፡ ሠናይ፡ መዓዛ፣ ይጌይስ፡ ፈድፋደ፡ እምፄና፡
+               ስቲን፡ ዘጠረጴዛ፣ ማርያም፡ ድንግል፡ ለሕይወትየ፡ ምርጉዛ፣ ሰዋስዉ፡ ዘምድረ፡ ሎዛ፡ እንተ፡ ርእየኪ፡ ወሬዛ፣ አመ፡ ዕለተ፡ ፍዳ፡
+               ኩንኒ፡ ቃዉመ፡ ወቤዛ። </ab></div>
+            <div type="textpart" xml:id="stanza10"><ab> ሰላም፡ ለከናፍርኪ፡ ከመ፡ ፍሕሶ፡ ቀይሕ፣ ሥርጉተ፡ ቅድሴ፡ ወንጽሕ፣ ማርያም፡
+               ድንግል ኖኃተ፡ ጽባሕ፣ ባልሕኒ፡ እምነ፡ ወይሌ፡ ወአንግፍኒ፡ እምላህ፣ እስመ፡ ለልብየ፡ ኅዘኑ፡ ብዙኅ። </ab></div>
+            <div type="textpart" xml:id="stanza11"><ab> ሰላም፡ ለአፍኪ፡ ዘሰዐመ፡ ርስነ፣ እንዘ፡ አበ፡ አዕሩግ፡ ዉእቱ፡ በጊዜ፡
+               ኮነ፡ ሕፃነ፣ ማርያም ድንግል፡ ዘትፄንዊ፡ ስቲነ፣ ኅፍረተ፡ አበሳ፡ ሶበ፡ ገጽየ፡ ተከድነ፣ ለናዝዞትየ፡ እሙ፡ ብጽሒ ፍጡነ። </ab></div>
+            <div type="textpart" xml:id="stanza12"><ab> ሰላም፡ ለአስናንኪ፡ ሐሊበ፡ ዕጐልት፡ ዘተዛወጋ፣ ወመራዕየ፡ ቅሩፃተ፡ እለ፡
+               እምሕፃብ፡ ዐርጋ፣ ማርያም፡ ድንግል፡ ለደብተራ፡ ስምዕ፡ ታቦተ፡ ሕጋ፣ አፍቅርኒ፡ እንበለ፡ ንትጋ፡ ለብእሴ፡ ደም ወሥጋ፣ ዘየዐቢ፡
+               እምዝ፡ ኢየኀሥሥ፡ ጸጋ። </ab></div>
+            <div type="textpart" xml:id="stanza13"><ab> ሰላም፡ ለልሳንኪ፡ ሙኃዘ፡ ሐሊብ፡ ወመዓር፣ ዘተነብዮ፡ ወፍቅር፣ ማርያም፡
+               ድንግል፡ ወለተ ድኀኃን፣ አድባር፣ ኅብእኒ፡ እምዐይነ፡ ፀር፡ ወአንጽሕኒ፡ እምነዉር፣ እስመ፡ ተስፋየ፡ አንቲ በሰማይ፡ ወምድር። </ab></div>
+            <div type="textpart" xml:id="stanza14"><ab> ሰላም፡ ለቃልኪ፡ እምአስካለ፡ ወይን፡ ጥዑም፣ ወእምድምፀ፡ ናብሊስ፡ አዳም፡
+               ዘያረስዖ ለሕማም፣ ማርያም፡ ድንግል፡ ዘብርሃነ፡ ሕይወት፡ ተቅዋም፣ እመ፡ ተሀዉከ፡ በላዕሌየ፡ ማዕበለ ዝንቱ፡ ዓለም፣ ከመ፡ ያርምም፡
+               ገሥሂዮ፡ መሓሪት፡ እም። </ab></div>
+            <div type="textpart" xml:id="stanza15"><ab> ሰላም፡ ለእስትንፋስኪ፡ ዘመዓዛሁ፡ ሕይወት፣ ከመ፡ መፀዛ፡ ዕፅ፡ ኅሩይ፡
+               ዘዉስተ፡ ገነት፣ ማርያም፡ ድንግል፡ ቤተ፡ ቅድሳት፣ጽንሕኒ፡ ዉስተ፡ ሠናይ፡ ወሠዉርኒ፡ እሞት፣ በአክናፍኪ ርግብየ፡ ኅሪት። </ab></div>
+            <div type="textpart" xml:id="stanza16"><ab> ሰላም፡ ለጐርዔኪ፡ ሠናይ፡ እምወይን፣ በከመ፡ ይቤ፡ ሰሎሞን፣ ማርያም፡
+               ድንግል፡ ለባሲተ ዐቢይ፡ ብርሃን፣ ክድንኒ፡ ገርዜነ፡ ጸጋ፡ ኢያዕፅበኒ፡ ዕርቃን፣ ዘኢአነምዎ፡ ጠቢባን፡ በኪን። </ab></div>
+            <div type="textpart" xml:id="stanza17"><ab> ሰላም፡ ለክሳድኪ፡ ቃማ፡ ንጽሕ፡ ዘዐነቀ፣ ከመ፡ አዋልድ፡ አኮ፡ ብሩረ፡
+               ወወርቀ፣ ማርያም ድንግል፡ ዘተመሰልኪ፡ ማዕነቀ፣ ሕይወትየ፡ በንዝህላል፡ እመ፡ ተሠልጠ፡ ወኀልቀ፣ ወስክኒ ክራማተ፡ እስከ፡ እገብር፡
+               ጽድቀ። </ab></div>
+            <div type="textpart" xml:id="stanza18"><ab> ሰላም፡ ለመታክፍትኪ፡ እለ፡ ግሣት፡ እማንቱ፣ ለጌጋይ፡ እምነ፡ አርዑቱ፣
+               ማርያም፡ ድንግል ለሆሜዕ፡ ሠርጐ፡ ትርሲቱ፣ በልኒ፡ እግዝእትየ፡ ጸሕቀ፡ ሕሊናየ፡ ዝንቱ፣ ፍኖተ፡ የማን ይምራሕከ፡ ወተአኩት፡ ቦቱ። </ab></div>
+            <div type="textpart" xml:id="stanza19"><ab> ሰላም፡ ለዘባንኪ፡ እምዘባነ፡ ኪሩብ፡ ዘዐብየ፣ ሐዚሎ፡ እሳተ፡ ወእምርስነ፡
+               ነዱ፡ ኢዉዕየ፣ ማርያም፡ ድንግል፡ ፈጻሚተ፡ ኩሉ፡ ጻሕቅየ፣ ሀብኒ፡ እግዝእትየ፡ ዘተመነይኩ፡ ሠናየ፣ እንበለ አፅርዖ፡ ፍጡነ፡ በጺሐኪ፡
+               ዝየ። </ab></div>
+            <div type="textpart" xml:id="stanza20"><ab> ሰላም፡ ለእንግድዓኪ፡ ለእሳተ፡ መለኮት፡ ምርፋቁ፣ ዘይቄድስ፡ ነፍሰ፡ ወያጥዒ፡
+               ሞቁ፣ ማርያም ድንግል፡ ለነዳይ፡ ንዋየ፡ ወርቁ፣ እመ፡ ነገደ፡ ርኅቀ፡ ወሖረ፡ ዕራቁ፣ ኢያኀዝኖ፡ ሲሳይ፡ እስመ አንቲ፡ ስንቁ። </ab></div>
+            <div type="textpart" xml:id="stanza21"><ab> ሰላም፡ ለኅፅንኪ፡ ለጥበበ፡ ሰማይ፡ ምዕራፋ፣ ዘኢትረከብ፡ ሱታፋ፣ ማርያም፡
+               ድንግል፡ ጸጋዊተ ሰላም፡ ወተስፋ፣ ኩንኒ፡ እግዚእተየ፡ ቅድመ፡ ፀርየ፡ ሐገፋ፣ ከመ፡ ዖፍ፡ አፍኅርቲሃ፡ ትሜጫዉር በክንፋ። </ab></div>
+            <div type="textpart" xml:id="stanza22"><ab> ሰላም፡ ለአእዳዉኪ፡ እሳተ፡ መለኮት፡ እለ፡ ገሠሣ፣ አውቃፈ፡ ብሩረ፡ ወወርቅ፡
+               ለሥርጋዌሆን ኢኀሠሣ፣ ማርያም፡ ድንግል፡ ለመካን፡ ህንባበ፡ ከርሣ፣ አንጽሕኒ፡ እግዝእትየ፡ ለፍትወተ ዓለም፡ እምርኩሳ፣ በዲበ፡ ሥጋየ፡
+               ኢትንበር፡ ነጊሣ። </ab></div>
+            <div type="textpart" xml:id="stanza23"><ab> ሰላም፡ ለመዛርዕኪ፡ ዘተረሰያ፡ ኃይለ፣ ከመ፡ ይፁራ፡ ነበልባለ፣ ማርያም፡
+               ድንግል፡ እንተ ኅጣእኪ፡ መምሰለ፣ ኃጢአትየ፡ ለገብርኪ፡ ከመ፡ ፈድፈደ፡ ተለዐለ፣ ከመ፡ ጥቅም፡ ዘባቢል ረስዩ፡ ንጉለ። </ab></div>
+            <div type="textpart" xml:id="stanza24"><ab> ሰላም፡ እብል፡ ለኩርናዕኪ፡ እዌድሶ፣ ለእሳተ፡ መለኮት፡ በላዒ፡ አምጣነ፡
+               ኮነ፡ ትርአሶ፣ ማርያም፡ ድንግል፡ ምዕዝት፡ ዘእምአንክሶ፣ ሀልዊ፡ ደርገ፡ ምስሌየ፡ እንዘ፡ አልብኪ፡ ተግኅሦ፣ ለሕሊና፡ ልብየ፡ ወትረ፡
+               እንግርኪ፡ ማኅሠሣ። </ab></div>
+            <div type="textpart" xml:id="stanza25"><ab> ሰላም፡ ለእመታትኪ፡ እለ፡ ጸንዓ፡ ይፍትላ፣ ሜላተ፡ ወወርቀ፡ በናዝሬት፡
+               ወበገሊላ፣ ማርያም ድንግል፡ ለዮዲት፡ ጥበበ፡ ቃላ፣ ብጽሒ፡ በሠረገላ፡ ንትመሐል፡ መሐላ፣ ከመ፡ ታኅድርኒ በብሔር፡ ዘተድላ። </ab></div>
+            <div type="textpart" xml:id="stanza26"><ab> ሰላም፡ ለእራኃትኪ፡ እለ፡ ስፉሐት፡ ለመጥዎ፣ ማርያም፡ ድንግል፡ እስእለኪ፡
+               በተስፋዎ፣ ከመ እክሀል፡ በበፆታሁ፡ ስብሐታተኪ፡ ዜንዎ፣ ለገብርኪ፡ ዓብድ፡ ምልእኒ፡ ለብዎ። </ab></div>
+            <div type="textpart" xml:id="stanza27"><ab> ሰላም፡ ለአፃብፅኪ፡ እምእራኃ፡ እዴኪ፡ እለ፡ ሠረፃ፣ እምጉልቄ፡ ሠላድ፡
+               ወስብዕ፡ እንዘ ኢየሐፃ፣ ማርያም፡ ድንግል፡ ደብረ፡ ኤልያስ፡ ነቢየ፡ ፋጻ፣ ዕቀብኒ፡ በረድኤትኪ፡ እምነ፡ እርዌ ዘፕፃ፣ ህየንተ፡
+               ሠናይ፡ ለሰብእ፡ ዘይሁብ፡ ዐመፃ። </ab></div>
+            <div type="textpart" xml:id="stanza28"><ab> ሰላም፡ ለአፅፋረ፡ እዴኪ፡ መልዕልተ፡ አፃብዕ፡ እለ፡ ሠረቃ፣ በበሕቅ፡ ዘልፈ፡
+               እንዘ፡ ይልኅቃ፣ ማርያም፡ ድንግል፡ ማኅቶትየ፡ በውስተ፡ ጣቃ፣ኢትሰድኒ፡ ለገበርኪ፡ ለዓመትየ፡ በንፍቃ፣ ዝንቱ ውእቱ፡ ለልብየ፡ ጻሕቃ። </ab></div>
+            <div type="textpart" xml:id="stanza29"><ab> ሰላም፡ ለአጥባትኪ፡ እለ፡ አውኃዛ፡ ፍጹመ፣ ድንግልናዌ፡ ሐሊበ፡ ዉስተ፡ አፈ፡
+               አምላክ ቅድመ፣ ማርያም፡ ድንግል፡ እንተ፡ አምጻእኪ፡ ሰላመ፣ኅፅንኒ፡ በአጥባትኪ፡ ለእመ፡ ኮንኩ ደክታመ፣ ዘእንበሌኪ፡ ኢየኀሥሥ፡ እመ። </ab></div>
+            <div type="textpart" xml:id="stanza30"><ab> ሰላም፡ ለገቦኪ፡ ዘሐመልማለ፡ ወርቅ፡ ክዳኑ፣ በከመ፡ ዳዊት፡ ይዜኑ፣ ማርያም፡
+               ድንግል ለያዕቆብ፡ ሞገሰ፡ ሥኑ፣ በልኒ፡ እግዝእትየ፡ አፈቅረከ፡ አኮኑ፣ እንዘ፡ ረዳኢትከ፡ አነ፡ ዘይክለከ መኑ። </ab></div>
+            <div type="textpart" xml:id="stanza31"><ab> ሰላም፡ ለከርሥኪ፡ ዘአፈድፈደ፡ ተበፅዖ፣ እምታቦተ፡ ሙሴ፡ ነቢይ፡ ለጽሌ፡
+               ትእዛዝ፡ ዘየኀብኦ፣ ማርያም፡ ድንግል፡ ጊዜ፡ ጽዋዕኩኪ፡ በአስተብቀዖ፣ ለፀርየ፡ ብእሴ፡ ዐመፃ፡ ኃይለ፡ ዚአኪ ይጽብዖ፣ እስከነ፡
+               ያስቆቁ፡ ጥቀ፡ ድኅሪተ፡ ገቢኦ። </ab></div>
+            <div type="textpart" xml:id="stanza32"><ab> ሰላም፡ ለልብኪ፡ እምነ፡ በቀል፡ ርጉቅ፣ አምጣነ፡ ዐረብ፡ ወሠርቅ፣ ማርያም፡
+               ድንግል፡ ገነት ኅሩያን፡ ደቂቅ፣ ክድንኒ፡ ልብሰ፡ ከብካብ፡ ለቅኑይኪ፡ ዕሩቅ፣ ከመ፡ ጾደሬ፡ ጽጌሁ፡ ዘወርቅ። </ab></div>
+            <div type="textpart" xml:id="stanza33"><ab> ሰላም፡ እብል፡ ለኩልያትኪ፡ ክልኤ፣ ዘቅብዐ፡ ክህነት፡ ቀርን፡ ወዘወይነ፡
+               ትፍሥሕት፡ ግምዔ፣ ማርያም፡ ድንግል፡ በልኒ፡ ቅድመ፡ ጉባኤ፣ ሕፃንየ፡ በእንቲአየ፡ ይከዉነከ፡ ረዳኤ፣ እመራደ ፀርከ፡ ሕቀ፡ ኢትፍራህ፡
+               ትንሣኤ። </ab></div>
+            <div type="textpart" xml:id="stanza34"><ab> ሰላም፡ ለሕሊናኪ፡ ሐልዮ፡ ሠናያት፡ ልማዱ፣ ወገቢረ፡ ምሕረት፡ መፍቅዱ፣
+               ማርያምን ድንግል፡ ለዳዊት፡ ወለተ፡ ወልዱ፣ ንዝሕኒ፡ በአዛብኪ፡ ዘይትረከብ፡ ዘመዱ፣ ወበማየ፡ ሕይወት ሕፀብኒ፡ እምበረደ፡ እፃዕዱ። </ab></div>
+            <div type="textpart" xml:id="stanza35"><ab> ሰላም፡ ለአማዑትኪ፡ ነበልባለ፡ ኀዘን፡ ዘአውዐዮ፣ እመ፡ ወዐለ፡ ወልድኪ፡
+               ስቁለ፡ በቀራንዮ፣ ማርያም፡ ድንግል፡ ፀምረ፡ ጠል፡ ዘተነብዩ፣ ጌጋይየ፡ ለአስተሥርዮ፡ እንተ፡ አልብኪ፡ ተፈልዮ፣ በሥርዐተ፡ ካህን፡
+               ላዕሌየ፡ አንቲ፡ ጸልዮ። </ab></div>
+            <div type="textpart" xml:id="stanza36"><ab> ሰላም፡ ለንዋየ፡ ዉሥጥኪ፡ አምሳለ፡ ንዋያ፡ ለደብተራ፣ ስብሐተ፡ ልዑል፡
+               ዘይሜዉራ፣ ማርያም ድንግል፡ ትምክሕተ፡ ደቂቃ፡ ለሣራ፣ ባልሕኒ፡ ወለተ፡ ቅስራ፡ ለዓለመ፡ ጽልመት፡ እምፃዕራ፣ እስመ፡ መቅዓን፡
+               ወጠዋይ፡ ምሕዋራ። </ab></div>
+            <div type="textpart" xml:id="stanza37"><ab> ሰላም፡ ለንዋየ፡ ውሥጥኪ፡ አምሳለ፡ ንዋያ፡ ለመቅደስ፣ ንዋይኪሰ፡ ኢየሱስ፡
+               ክርስቶስ፣ ማርያም፡ ድንግል፡ ዘገዳመ፡ ሲና፡ ጳጦስ፣ ከመ፡ ያነቅሖ፡ ለልበ፡ ዘፋኒ፡ ናብሊስ፣ ፍቅርኪ ያንቅሐኒ፡ በሥጋ፡ ወነፍስ። </ab></div>
+            <div type="textpart" xml:id="stanza38"><ab> ሰላም፡ ለኅንብርትኪ፡ ከመ፡ ማዕከክ፡ ርእየቱ፣ ዘኢየዓርቅ፡ እምቱስሕቱ፣
+               ማርያም፡ ድንግል ለካህን፡ ዕፀ፡ ኅርየቱ፣ ከመ፡ ኢይኩን፡ ፅሩዐ፡ ንባበ፡ አፍየ፡ ዝንቱ፣ በጽዋዐ፡ ኪሩብ፡ ደዩዮ ወሥጢዮ፡ ሎቱ። </ab></div>
+            <div type="textpart" xml:id="stanza39"><ab> ሰላም፡ ለማኅፀንኪ፡ ለእግዚአብሔር፡ ማኅፈዱ፣ ዘሐነፀኪ፡ የማነ፡ እዱ፣
+               ማርያም፡ ድንግል ምዕዝት፡ ዘእምናርዱ፣ ኀቤኪ፡ ያንቀዐዱ፡ ለረኪበ፡ ኩሉ፡ መፍቅዱ፣ ምስለ፡ ካልኡ፡ ዐይንየ አሐዱ። </ab></div>
+            <div type="textpart" xml:id="stanza40"><ab> ሰላም፡ ለማኅፀንኪ፡ ለእግዚአብሔር፡ ዘውጉ፣ ብዑድ፡ ሥርዐቱ፡ ወፍሉጥ፡ ሕጉ፣
+               ማርያም ድንግል፡ ለአስካለ፡ ሕይወት፡ ሐረጉ፣ በልኒ፡ እግዝእትየ፡ ኃጢአተከ፡ ኀደጉ፣ ወመኃልየከ ስማየ፡ አዕረጉ። </ab></div>
+            <div type="textpart" xml:id="stanza41"><ab> ሰላም፡ እብል፡ ለድንግልናኪ፡ ዕፅው፣ እንተ፡ እምኔሁ፡ ሠረቀ፡ ፀሐየ፡
+               መለኮት፡ ኅትው፣ ማርያም፡ ድንግል፡ ዘሥነ፡ ንጽሕኪ፡ ፍትው፣ ለኀዲር፡ በበፍናዉ፡ በአህጉር፡ ወበድው፣ ዕቀብኒ ወለቶሙ፡ ለጌራን፡
+               አበዉ። </ab></div>
+            <div type="textpart" xml:id="stanza42"><ab> ሰላም፡ ለሐቋኪ፡ በትረ፡ ሌዋዊ፡ ሣዉዕ፣ ዘኢሐፀነኪ፡ ጠል፡ ወዘኢ፡ ሠቀየኪ፡
+               ነቅዕ፡ ማርያም ድንግል፡ እግዝእተ፡ መላእክት፡ ወሰብእ፣ ሰድኒ፡ ብሔረ፡ ፍግዕ፡ በትንባሌኪ፡ ባቀኑዕ፣ ምስለ ኅሩያንኪ፡ ደርገ፡ አሀሉ፡
+               በስንዕ። </ab></div>
+            <div type="textpart" xml:id="stanza43"><ab> ሰላም፡ ለአዮያጽኪ፡ እለ፡ ይነብራ፡ ድርገተ፣ እምነ፡ አብራክኪ፡ ላዕለ፡
+               ወእምነ፡ ሐቋኪ ታሕተ፣ ማርያም፡ ድንግል፡ እንተ፡ ኢተአምሪ፡ ርስሐተ፣ ጽባሐ፡ ወምሴተ፡ ኩሎ፡ ዕለተ፣ ዘይሰማዕ፡ ምሕረተኪ፡ ግብሪ፡
+               ሊተ። </ab></div>
+            <div type="textpart" xml:id="stanza44"><ab> ሰላም፡ ለአብራክኪ፡ በስብሐተ፡ ልዑል፡ ዘአስተብረካ፣፥፡ እምአመ፡ ወሀቡኪ፡
+               ብፅዐ፡ ውስተ ኦሪታዊት፡ ታዕካ፣ ማርያም፡ ድንግል፡ መንበር፡ ዘእብነ፡ ፔካ፣ ጊዜ፡ ስደቶሙ፡ ለኃጥአን እምዐፀደ፡ ዐባይ፡ ፋሲካ፣
+               ፄውዉኒ፡ መንገሌኪ፡ እኩንኪ፡ ምህርካ። </ab></div>
+            <div type="textpart" xml:id="stanza45"><ab> ሰላም፡ ለአእጋርኪ፡ እለ፡ ፃመዋ፡ በረዊፅ፣ እምቤተ፡ ልሔም፡ ዘይሁዳ፡ እስከ፡
+               ምድረ፡ ግብጽ፣ ማርያም፡ ድንግል፡ ሥርጉተ፡ ነበልባል፡ ፅፅ፣ ለኀዲር፡ በቤተ፡ ናሕስ፡ እንተ፡ መልዕልተ፡ ኩኩሕ ሕኑጽ፣ አጥብብኒ፡
+               በተግሣፅ፡ ወሥቅኒ፡ እምዳኅፅ። </ab></div>
+            <div type="textpart" xml:id="stanza46"><ab> ሰላም፡ እብል፡ ለዘዚአኪ፡ ሰኩና፣ ዘኢድኅፀ፡ በውስተ፡ ፍና፣ ማርያም፡
+               ድንግል፡ ትእምርተ ኪዳን፡ ቀስተ፡ ደምና፣ አምዕዝኒ፡ በዕፍረትኪ፡ ወጸግውኒ፡ ጥዒና፣ በከመ፡ ትገብር፡ እም ለንኡስ፡ ሕፃና። </ab></div>
+            <div type="textpart" xml:id="stanza47"><ab> ሰላም፡ ለመከየድኪ፡ እለ፡ ረከቦን፡ መከራ፣ እምፍርሃተ፡ ቀተልት፡ ሐራ፣
+               እንበለ፡ አሣእን፡ አመ ሖራ፣ ማርይም፡ ድንግል፡ ታቦተ፡ ቃለ፡ ጽድቅ፡ መንፈቀ፡ ዕሥራ፣ ዕጐላት፡ እምዕጐሊሆን ከመ፡ ኪያኪ፡ አፍቅራ፣
+               አፍቀርኩኪ፡ አፍቅርኒ፡ እምይእዜ፡ ለግሙራ። </ab></div>
+            <div type="textpart" xml:id="stanza48"><ab> ሰላም፡ እብል፡ ዘአእጋርኪ፡ አፃብዐ፣ ሐሳበ፡ ጉልቆን፡ ዘኮነ፡ ምስለ፡ ስድስ፡
+               ርብዐ፣ ማርያም ድንግል፡ ዘተሰመይኪ፡ ምሥዋዐ፣ በረዊፅ፡ ወብጉጉዓ፡ አፍጥኒ፡ መጺአ፣ ሶብ፡ አፋየ፡ ስመኪ ጸውዐ። </ab></div>
+            <div type="textpart" xml:id="stanza49"><ab> ሰላም፡ ለአፅፋረ፡ እግርኪ፡ ዘኢፈቀዳ፡ ለሥርጋዌ፣ ጥምዐታተ፡ ሕምር፡ ምድራዌ፣
+               ማርያም ድንግል፡ ሐውልተ፡ ስምዕ፡ ዘወልደ፡ ነዌ፣ ሥቅኑ፡ እምትንታኔ፡ ወባልሕኒ፡ እምአርቄ፣ ላዕለ እምየ፡ ዘአምጽአ፡ ደዌ። </ab></div>
+            <div type="textpart" xml:id="stanza50"><ab> ሰላም፡ ለቆምኪ፡ በቀልተ፡ ዘተመሰለ፣ ኀበ፡ ሙኃዘ፡ ማይ፡ ዘበቁለ፣ ማርያም፡
+               ድንግል እስእለኪ፡ ስኢለ፣ ኢይረድ፡ ታሕቲተ፡ ምጥቅኒ፡ ላዕለ፣ ኢረከብኩ፡ በርኅራጌ፡ ከማኪ ዘብዕለ። </ab></div>
+            <div type="textpart" xml:id="stanza51"><ab> ሰላም፡ ለመልክዕኪ፡ ዘተሠርገወ፡ አሚረ፣ ዘያበርህ፡ ወትረ፣ ፍቅርትየ፡ አንቲ፡
+               እንተ፡ ታበድሪ ፍቅረ፣ አርእይኒ፡ ገጸ፡ ዚአኪ፡ ማርያም፡ ምዕረ፣ ዘኢይሰምዖ፡ ካልእ፡ እንግርኪ፡ ነገረ። </ab></div>
+            <div type="textpart" xml:id="stanza52"><ab> ሰላም፡ ለፀአተ፡ ነፍስኪ፡ እንበለ፡ ፃዕር፡ ወፃማ፣ ለነቢር፡ ዘልፈ፡ በየማነ፡
+               ወልድኪ፡ ፌማ፣ ማርያም፡ ድንግል፡ ክልልተ፡ ሞገሰ፡ ወግርማ፣ አጽንዒ፡ በረድኤትኪ፡ ለሕይወትየ፡ ድካማ፣ እምሕይወተ፡ ጌራን፡ አበው፡
+               ኢታሕጽጺ፡ ዐቅማ። </ab></div>
+            <div type="textpart" xml:id="stanza53"><ab> ሰላም፡ እብል፡ ለበድነ፡ ሥጋኪ፡ ጽሩየ፣ ዘተመሰለ፡ ባሕርየ፣ ማርያም፡
+               ድንግል፡ ዐፀደ፡ ወይንየ፣ ንስቲተ፡ ለዕበይኪ፡ እንተ፡ አቅረብኩ፡ ግናየ፣ ኢይትኅደግ፡ ዲበ፡ ምድር፡ ምሥጢ፡ ሰማየ። </ab></div>
+            <div type="textpart" xml:id="stanza54"><ab> ሰላም፡ ለግንዘተ፡ ሥጋኪ፡ በእደ፡ ሐዋርያት፡ አርጋብ፣ በአፈወ፡ ዕፍረት፡
+               ቅድው፡ ዘሐሳበ፡ ጫጡ ዕፁብ፣ ማርያም፡ ድንግል፡ ወለተ፡ ኅሩያን፡ ሕዝብ፣ ረሰይኩኪ፡ እግዝእትየ፡ ህየንተ፡ እም ወአብ፣ ይኅፅነኒ፡
+               ከመ፡ ጥብ፡ ፍቅርኪ፡ ሐሊብ። </ab></div>
+            <div type="textpart" xml:id="stanza55"><ab> ሰላም፡ ለመቃብርኪ፡ ለጌቴሴማኒ፡ በመርኅባ፣ እንተ፡ ይእቲ፡ ለኢየሩሳሌም፡
+               ቅሩባ፣ ማርያም ድንግል፡ ለሀገረ፡ መንግሥት፡ ርግባ፣ ትትሜጦ፡ ወርቀ፡ እምአፌር፡ ወጸበለ፡ አፈው፡ እምሳባ፣ ጌቴሴማኒ፡ ለሥጋኪ፡
+               ምስካባ። </ab></div>
+            <div type="textpart" xml:id="stanza56"><ab> ሰላም፡ ለመቃብርኪ፡ ለኢየሩሳሌም፡ በአድያማ፣ እንተ፡ ይእቲ፡ ጌቴሴማኒ፡ ስማ፣
+               ማርያም ሰንበት፡ ዕረፍተ፡ ጽዑራን፡ እምፃማ፣ አመ፡ ኅደረ፡ ላዕሌኪ፡ ፀሐየ፡ ቅዱሳን፡ ዘራማ፣ ኃይለ ልዑል፡ ጸለለኪ፡ በመንክር፡
+               ግርማ። </ab></div>
+            <div type="textpart" xml:id="stanza57"><ab> ሰላም፡ ለፍልሰተ፡ ሥጋኪ፡ መካነ፡ ፍሥሓ፡ ምጡቀ፣ በአእባነ፡ ባሕርይ፡
+               ዘተነድቀ፣ ማርያም ድብተራ፡ እንተ፡ ኢትትከደኒ፡ ሠቀ፣ ጽሒፈ፡ ውዳሴኪ፡ እምኢኀልቀ፡ ሶበ፡ ኮነ፡ ጥቀ፣ ዝናመ ክረምት፡ ቀለመ፡
+               ወሰማይ፡ ረቀ። </ab></div>
+            <div type="textpart" xml:id="stanza58"><ab> ሰላም፡ ለፍልሰተ፡ ሥጋኪ፡ ወለተ፡ ንጉሥ፡ ይሁዳ፣ ወወለተ፡ ሌዊ፡ እጐሁ፡
+               ዘሀብተ፡ ክህነቱ አገዳ፣ ማርያም፡ ድንግል፡ ምዕዝት፡ ዘእምጽጌ፡ ረዳ፣ በጽሒፍ፡ ኢይፌጽሞ፡ ለስብሐትኪ እንግዳ፣ እመ፡ ኮነ፡ በቅድሜየ፡
+               ስፍሐ፡ ምድር፡ ሠሌዳ። </ab></div>
+            <div type="textpart" xml:id="stanza59"><ab> ሰላም፡ ለፍልሰተ፡ ሥጋኪ፡ ደባትረ፡ ብርሃን፡ ኀበ፡ ተተክሉ፣ ለገነተ፡ ጽባሕ፡
+               በማእከሉ፣ ውድስት፡ አንቲ፡ ወስብሕት፡ በአፈ፡ ኩሉ፣ እምነ፡ ጻድቃን፡ ዘታሕቱ፡ ወእምትጉሃን፡ ዘላዕሉ፣ ማርያም፡ ለኪ፡ ስብሐተ፡
+               አደሉ። </ab></div>
+            <div type="textpart" xml:id="stanza60"><ab> በዝንቱ፡ ቃለ፡ ማኅሌት፡ ወበዝንቱ፡ ይባቤ፣ ለዘይስእለኪ፡ ብእሲ፡ ጊዜ፡
+               ረከቦ፡ ምንዳቤ፣ ብጽሒ ፍጡነ፡ ትሠጠዊዮ፡ ዘይቤ፣ ማርያም፡ ዕንቁየ፡ ክርስቲሎቤ፣ ወምዕዝተ፡ ምግባር፡ እምከርቤ፣ ዘጸገየ፡ ማኅፀንኪ፡
+               አፈወ፡ ነባቤ። </ab></div>
+            <div type="textpart" xml:id="stanza61"><ab> ስብሐት፡ ለኪ፡ ማርያም፡ በጉልቄ፡ ኩሉ፡ ሥዕርትየ፣ ስብሐት፡ ለኪ፡ ማርያም፡
+               በጉልቄ፡ ኩሉ አዕፅምትየ፣ ስብሐት፡ ለኪ፡ ማርያም፡ በጉልቄ፡ ኩሉ፡ ዘተርአየ፣ ስብሐት፡ ለኪ፡ ንግሥትየ በጉልቁቄ፡ ኩሉ፡
+               ዘኢያስተርአየ፣ ስብሐተ፡ ድንግልናኪ፡ ዘልፈ፡ ይነግር፡ አፉየ። </ab></div>
+            <div type="textpart" xml:id="stanza62"><ab> እግዚአብሔር፡ ኅቤኪ፡ ፈነወ፡ ቃሎ፣ ገብርኤልሃ፡ አስተማሲሎ፣ ማርያም፡
+               አምላክ፡ ዘወለድኪ በተደንግሎ፣ ሰላም፡ ሰላም፡ ወሰላም፡ እብሎ፣ለመልክዕኪ፡ ፈጺምየ፡ ኩሎ። </ab></div>
+            <div type="textpart" xml:id="stanza63"><ab> ለዘኢያፈቅረኪ፡ እግዚትየ፡ ማርያም፡ ውኩፈ፡ ኢይኩን፡ ጽሎቱ፣ ይትገዘም፡ ኑኀ፡
+               ዓመቱ ወይጥፋእ፡ በከንቱ፣ በአፈ፡ መላእክት፡ ወሰብእ፡ ይትረገም፡ ለለሰዓቱ፣ ዘአስተማሰሎ በተውኔት፡ ለማኅሌተ፡ ንግሥኪ፡ ዝንቱ፣
+               ጌጋዩ፡ ወኃጢአቱ፡ ኢይትኃደግ፡ ሎቱ። </ab></div>
+            <div type="textpart" xml:id="stanza64"><ab> ኦ፡ እግዝእትየ፡ ማርያም፡ ዕቀብኒ፡ ወአድኅንኒ፡ እመከራ፡ ሥጋ፡ ወነፍስ፡
+               ሊተ፡ ለገበርኪ፣ ሊተ ለአመትኪ።</ab></div>
          </div>
       </body>
    </text>

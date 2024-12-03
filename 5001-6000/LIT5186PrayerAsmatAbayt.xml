@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="LIT5186PrayerAsmatAbayt"
-     xml:lang="en"
-     type="work">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5186PrayerAsmatAbayt" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">PrayerAsmatAbayt</title>
+              <title xml:lang="gez" xml:id="t1">ጸሎተ፡ አስማት፡ ዓበይት፡</title>
+              <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalota ʾasmāt ʿābbayt</title>
+              <title xml:lang="en" corresp="#t1">Prayer of the Great <hi rendition="simple:italic">ʾAsmāt</hi></title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine multimediale
                             Forschungsumgebung / beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
@@ -31,8 +27,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -46,16 +41,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="Magic"/>
-                    <term key="Medicine"/>
+                    <term key="Prayers"/>
+                    <term key="ChristianLiterature"/>
                 </keywords>
             </textClass>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DN" when="2019-02-07">Created entity</change>
@@ -64,11 +54,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
-             <!--   <listRelation>
-                    <relation name="lawd:hasAttestation" active="LIT5186PrayerAsmatAbayt" passive=""/>
-                </listRelation>-->
+             <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT5186PrayerAsmatAbayt" passive="DSEthiop10"/>
+                </listRelation>
             </div>
-         <!---->
+            <div type="edition" xml:lang="gez">
+                <note>The following Gǝʿǝz text is taken
+                  from <ref type="mss" corresp="DSEthiop10" target="ms_i11"/>.
+               <!--If this is changed due to a better understanding of this work's articulation in manuscripts, please always clearly indicate your source
+               outside of a comment next to the modified, added, or deleted text parts-->
+               </note>
+
+               <div type="textpart" subtype="incipit">
+                   <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ፡ ወትብል፡ በትሑት፡ ቃል፡ እሎንተ፡ አስማተ፡
+                    ዓበይተ፡ ወክቡራተ፡ ኤኮስ፡ አሜዕ፡ ለኪ፡ ኤንካ፡ ካዜእ፡ ኤናናኪ፡ ኪምካዮን፡ ጥላ፡ ጌሎ፡ አዕ፡ ቤቅ፡ ኤቅ፡
+                    ዓሣ፡ ኮሞስ፡ ሬው፡ ያብሲት፡ ጋውሳክር፡ ኤብት፡ እብስ፡ ሬፌኤ፡ ኤሊክ፡
+                    ልያክ፡ ኢዊ፡ አብስላኪፍ፡ አስሎኤቴ፡
+                </ab>
+               </div>
+               </div>
         </body>
     </text>
 </TEI>
