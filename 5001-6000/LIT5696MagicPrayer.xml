@@ -4,8 +4,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ሐጹረ፡ መስቀል፡</title>
-                <title xml:lang="gez" type="normalized" corresp="#t1">Ḥaṣura Masqal</title>
+                <title xml:lang="en" xml:id="t1">Rampart of the Cross (General record)</title>
+                <title xml:lang="gez" xml:id="t2">ሐጹረ፡ መስቀል፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t2">Ḥaṣura masqal</title>
+
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DE"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -35,7 +37,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p><foreign xml:lang="gez">Ḥaṣura masqal</foreign> is a generic title for protective prayers that
+                  refer, in one way or another, to <ref type="authFile" corresp="TrueCross">the Holy Cross</ref>
+                  and its apotropaic function (with or without the use of
+                  <foreign>ʾasmāt</foreign>).</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -51,16 +56,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
-        <body>
-            <div type="bibliography"/>
-         <!---->
-            <div type="edition">
-              <div type="textpart" xml:id="incipit" xml:lang="gez">
-                <ab>
-                  በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ጸሎት፡ በእንተ፡ ሕማመ፡ ዓይነ፡ ባርያ፡ ወሌጌዎን፡ ዝንቱ፡ ሐፁረ፡ መስቀል፡
-                </ab>
-              </div>
-            </div>
-        </body>
-    </text>
+          <body>
+              <div type="bibliography">
+                  <listRelation>
+                        <relation name="saws:isRelatedTo" active="LIT5696MagicPrayer" passive="LIT5888AsmatPrayer"/>
+                        <relation name="ecrm:P129_is_about" active="LIT5696MagicPrayer" passive="TrueCross"/>
+                        <relation name="betmas:formerlyAlsoListedAs" active="LIT5696MagicPrayer" passive="LIT1580hasura"/>
+                      </listRelation>
+                    </div>
+
+                    </body>
+          </text>
 </TEI>

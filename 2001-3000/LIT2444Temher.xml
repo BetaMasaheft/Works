@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2444Temher">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2444Temher">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ትምህርተ፡ ኅቡኣት፡</title>
             <title xml:lang="gez" type="normalized" corresp="#t1">Tǝmhǝrta ḫǝbuʾāt</title>
             <title xml:lang="en" corresp="#t1">Teaching of Mysteries</title>
-            <title xml:lang="en" xml:id="t2">Doctrine of Mysteries</title>
+            <title xml:lang="en" corresp="#t1">Doctrine of Mysteries</title>
             <title xml:lang="la" corresp="#t1">Doctrina Arcanorum</title>
             <editor key="DR"/>
             <editor role="generalEditor" key="AB"/>
@@ -54,10 +55,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <ref type="work" corresp="LIT2461Testam"/> (as  <ref type="work" corresp="LIT2461Testam#Chapter22">Chapter 22</ref>),
                <ref type="work" corresp="LIT1586Hayman"/>, and <ref type="work" corresp="LIT1544Gebrah"/>.
                Sometimes it is bound together with the <ref type="work" corresp="LIT1960Mashaf"/>.</p>
-            <p>Not to be confused with the text also known as <ref type="work" corresp="LIT3978Elmastoagya"/>
+            <p>Not to be confused with the text also known as <ref type="work" corresp="LIT3978Elmastoagya"/>.
+            For texts in the versions that cannot be immediately identified, see
+            <ref type="work" corresp="LIT6688TeachingMysteries"/>.
             </p>
          </abstract>
-         
+
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -67,15 +70,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change when="2016-12-21" who="ES">relation added</change>
          <change who="DR" when="2017-03-23">Added keywords, bibliography and textparts</change>
          <change who="DR" when="2020-07-29">Added reference</change>
+         <change who="DN" when="2022-05-29">Added Ethiopic text</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         
+
          <div type="bibliography">
+            
             <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Burtea2010EAETemherta"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Hammerschmidt1960Texte"/>
+                  <citedRange unit="page">42-47</citedRange>
                </bibl>
                <bibl>
                   <ptr target="bm:Lifchitz1940textes"/>
@@ -86,7 +95,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Lifchitz1940textes"/>
                   <citedRange unit="page">40-52</citedRange>
                </bibl>
-               <bibl><ptr target="bm:Hammerschmidt1960Texte"/><citedRange unit="page">48-70</citedRange></bibl>
+               <bibl>
+                  <ptr target="bm:Hammerschmidt1960Texte"/><citedRange unit="page">48-70</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Velat1966MeerafText"/><citedRange unit="page">30-33</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="translation">
                <bibl>
@@ -94,17 +108,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <citedRange unit="page">41-52</citedRange>
                </bibl>
                <bibl><ptr target="bm:Hammerschmidt1960Texte"/><citedRange unit="page">49-71</citedRange></bibl>
+               <bibl><ptr target="bm:Velat1966MeerafTrad"/><citedRange unit="page">279-283</citedRange></bibl>
             </listBibl>
             <listRelation>
                <relation name="saws:isVariantOf" active="LIT2444Temher" passive="LIT3978Elmastoagya"/>
                <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2444Temher" passive="LIT2461Testam#Chapter22"/>
+                  <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2444Temher" passive="LIT1586Hayman" cert="medium"/>
             </listRelation>
          </div>
-         
+
          <div type="edition">
-            <!-- arrangement of textparts according to <bibl><ptr target="bm:Lifchitz1940textes"/><citedRange unit="page">40-52</citedRange></bibl>-->
+             <note>
+             Arrangement of textparts and text quotation according to <bibl><ptr target="bm:Lifchitz1940textes"/>
+             <citedRange unit="page">40-52</citedRange></bibl>.</note>
             <div type="textpart" subtype="chapter" n="1" xml:lang="gez" xml:id="Chapter1">
                <label>Chapter 1</label>
+               <ab xml:lang="gez">በእንተ፡ ትምሕርተ፡ ኅቡዓት፡ ቅድመ፡ ዘትትነገር፡ እምጵርስ፡ ፎራ። ለምዕመናን፡ ኅቡዓት። ትምሕርተ፡ ኅቡዓትሰ፡
+               ከመዝ፡ ንግር። ዘቅድመ፡ ሀሎ፡ ወይሄሉ። ዘመጽአ። ዘሐመ። ወሞተ። ወተቀብረ። ወተንሥአ። ፃዕረ፡ ዘሞት፡ ፈትሐ።
+                ወዘእሙታን፡ ተንሥአ። ኢኮነ፡ ባሕቲቱ፡ ከዊኖ፡ ሰበእ፡ ዘእምመንፈስ፡ ቅዱስ፡ ሥጋሁ፡ ለአዳም፡ ምስለ፡ ነፍሱ። ዘኢኃደገ፡ ነፍሶ፡ ውስተ፡ ሞት።
+              ዘበመንፈስ፡ ለአዳም፡ ፀወኖ፡ ወአሕየዎ።<gap reason="ellipsis" resp="DN"/></ab>
             </div>
             <div type="textpart" subtype="chapter" n="2" xml:lang="gez" xml:id="Chapter2">
                <label>Chapter 2</label>
@@ -117,6 +139,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </div>
             <div type="textpart" subtype="chapter" n="5" xml:lang="gez" xml:id="Chapter5">
                <label>Chapter 5</label>
+               <ab xml:lang="gez">እሙታን፡ ተንሢኦ፡ ሲኦል፡ ከይዶ። በሞቱ፡ ለሞት፡
+               ደምስሶ። እምድኅረ፡ ተንሥኦ፡ በሣልስት፡ እለት፡ አእኰቶ፡ ለአብ። እንዘ፡ ይብል፡ ዘአምላክ፡ ቃል፡ ጥዕጡዕ፡ ከምዝ
+               ዘበመንፈስ፡ ለአዳም፡ ፀወኖ፡ ወአሕየዎ።<gap reason="ellipsis" resp="DN"/>
+             በከመ፡ ይቤ፡ ሙሴ፡ ባዕዳንሂ፡ ነቢያት፡ ንሕነሂ፡ ቦቱ፡ ተወኪለነ፡ ሎቱ፡ ነሀብ፡ ስብሐተ። ዘሎቱ፡
+           ስብሐተ፡ ወጽንዕ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
+
             </div>
          </div>
       </body>

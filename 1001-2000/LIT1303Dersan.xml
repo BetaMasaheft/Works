@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dǝrsanä Yared</title>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ወገድል፡ ዘያሬድ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān wa-gadl za-Yāred</title>
+            <title xml:lang="en" corresp="#t1">Homily and Vita of Yāred</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,17 +35,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+         <creation/>
+         <abstract>
+            <p>Part of the Vita of <persName ref="PRS10245Yared">Yared</persName>.</p>
+         </abstract>
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
+         <change when="2024-07-04" who="CH">Added relations, witness and abstract</change>
+         <change who="PL" when="2016-03-21">Created file from google spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1303Dersan" passive="LIT1512GadlaY"/>
+               <relation name="ecrm:P129_is_about" active="LIT1303Dersan" passive="PRS10245Yared"/>
+            </listRelation>
+         </div>
       </body>
    </text>
 </TEI>

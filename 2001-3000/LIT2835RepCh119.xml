@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2835RepCh119">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2835RepCh119">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -18,18 +19,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                 
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
-         </sourceDesc>
-         <sourceDesc>
             <listWit>
                <witness corresp="DSEthiop10"/>
+               <witness corresp="BNFet346"/>
+               <witness corresp="BAVet82"/>
+               <witness corresp="EMML301"/>
+               <witness corresp="BLorient13270"/>
                         </listWit>
          </sourceDesc>
       </fileDesc>
@@ -53,6 +55,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-05">Added keywords and incipit</change>
+         <change who="DR" when="2022-03-07">Transferred information from deleted LIT1860Malkea</change>
+         <change who="MV" when="2024-10-31">Corrected listWit</change>
+         <change when="2024-11-04" who="ES">added text and bibl from Augustine Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -63,15 +68,67 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">119</citedRange>
                </bibl>
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
+               <bibl><ptr target="bm:Malkea2020Am"/></bibl>
+               <bibl><ptr target="bm:MalkaGubae1974"/></bibl>
+               <bibl><ptr target="bm:ZekraAbaw"/></bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምከ፡ ምስለ፡ ስመ፡ ልዑል፡ ዘተሳተፈ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="masgabiya">
+               <lg type="stanza" n="1">
+                  <l n="1">በስመ፡ እግዚአብሔር፡ ዘይነብር፡ ማኔ፨</l>
+                  <l n="2">ወበስመ፡ እግዚአብሔር፡ ወልድ፡ ሥጋ፡ ማርያም፡ ተከዳኔ፨</l>
+                  <l n="3">ወበስመ፡ እግዚአብሔር፡ መንፈስ፡ ቅዱስ፡ ዘይሥዕር፡ ግማኔ፨</l>
+                  <l n="4">እወጥን፡ ዝክረ፡ ውዳሴከ፡ በሐዳስ፡ ኵርጓኔ፨</l>
+                  <l n="5">ቤዝወኒ፡ ሚካኤል፡ እምሲኦል፡ ኵነኔ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ምስለ፡ ስመ፡ ልዑል፡ ዘተሳተፈ፨</l>
+                  <l n="2">ወልደ፡ ያሬድ፡ ሄኖክ፡ በከመ፡ ጸሐፈ፨</l>
+                  <l n="3">ሶበ፡ እጼውዕ፡ ስመከ፡ ከሢትየ፡ አፈ፨</l>
+                  <l n="4">ራዳኤ፡ ምንዱባን፡ ሚካኤል፡ በከመ፡ ታለምድ፡ ዘልፈ፨</l>
+                  <l n="5">ለረዲኦትየ፡ ነዓ፡ ሰፊሐከ፡ ክንፈ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለሥዕርተ፡ ርእስከ፡ ዘኢይጤየቅ፡ ግዕዛ፨</l>
+                  <l n="2">ሚካኤል፡ ካህን፡ አጸንሓሔ፡ ሠናይ፡ ጼና፡ መዐዛ፨</l>
+                  <l n="3">በጺሐከ፡ ግብተ፡ ለነፍስየ፡ አመ፡ ትካዛ፨</l>
+                  <l n="4">ለልበ፡ ዚአየ፡ በትንባሌከ፡ ናዝዛ፨</l>
+                  <l n="5">እንበለ፡ ጊዜ፡ ወላሕ፡ ኢይርሳዕ፡ ወሬዛ፨</l>
+               </lg>
+               <lg type="stanza" n="44">
+                  <l n="1">ሰላም፡ ለቆምከ፡ ዘአሕመልመለ፡ ከመ፡ ዘግባ፨</l>
+                  <l n="2">ለጽርሐ፡ አርያም፡ በዐውደ፡ መርኅባ፨</l>
+                  <l n="3">ሚካኤል፡ የዋህ፡ ለገነተ፡ ሰማይ፡ ርግባ፨</l>
+                  <l n="4">ከመ፡ ይዜውራኒ፡ ለመርቄ፡ ኀጢአት፡ እምላህባ፨</l>
+                  <l n="5">አክናፊከ፡ ክልኤ፡ ዲቤየ፡ ይርብባ፨</l>
+               </lg>
+               <lg type="stanza" n="45">
+                  <l n="1">ሰላም፡ ሰላም፡ ለመላክኢከ፡ ኵሎን፨</l>
+                  <l n="2">በበ፡ አስማቲሆን፨</l>
+                  <l n="3">ሚካኤል፡ ካህን፡ ሥርግወ፡ ብርሃን፨</l>
+                  <l n="4">ሠናይ፡ ተዐርኮትከ፡ በኵሉ፡ ዘመን፨</l>
+                  <l n="5">ሰራዬ፡ ኀጢአት፡ አንተ፡ ዐርከ፡ ነፍስ፡ ምእመን፨</l>
+               </lg>
+               <lg type="stanza" n="46">
+                  <l n="1">አምኃ፡ ሰላም፡ አቅረብኩ፡ ለመላክኢከ፡ ኵሉ፨</l>
+                  <l n="2">ለለ፡ አሐዱ፡ አሐዱ፡ ዘበበ፡ ክፍሉ፨</l>
+                  <l n="3">ሚካኤል፡ ብኩር፡ ለልዑል፡ መልአከ፡ ኀይሉ፨</l>
+                  <l n="4">ተወኪፈከ፡ አምኃየ፡ እምኑኀ፡ ሰማያት፡ ዘላዕሉ፨</l>
+                  <l n="5">ዕሤተ፡ ጸሎትየ፡ ፈኑ፡ ወዐስብየ፡ ድሉ፨</l>
+               </lg>
             </div>
          </div>
+
+      
+         <listRelation>
+            <relation name="ecrm:P129_is_about" active="LIT2835RepCh119" passive="PRS7049Michael"/>
+            <relation name="betmas:formerlyAlsoListedAs" active="LIT2835RepCh119" passive="LIT1860Malkea"/>
+            <relation name="skos:exactMatch" active="LIT2835RepCh119" passive="https://w3id.org/malke/2835/"></relation>
+         </listRelation>
       </body>
    </text>
 </TEI>

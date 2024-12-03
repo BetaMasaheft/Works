@@ -7,6 +7,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <title xml:lang="gez" xml:id="t1">መልክአ፡ ሥላሴ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Malkǝʾa Śǝllāse</title>
             <title xml:lang="en" corresp="#t1">Image of the Trinity</title>
+            <title xml:lang="gez" xml:id="t2">ሰላም፡ ለህላዌክሙ፡ ዘይመውእ፡ ህላዌያተ።</title>
+            <title xml:lang="gez" type="normalized" corresp="#t2">Salām la-həllāwekəmu za-yəmawwəʾ həllāweyāta</title>
+            <title xml:lang="en" corresp="#t2">Salutation to Your substance, which wins over the elements</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -16,9 +19,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -39,8 +41,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </xi:fallback>
          </xi:include>
       </encodingDesc>
-      <profileDesc>
+      <profileDesc>         
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract><p>Hymn composed on the occasion of the consecration of the church of Dabra Bərhān Śəllāse (1694 A.D.) and attributed to <persName ref="PRS8671SebhatL">ʾAbbā Səbḥat Laʾab</persName> (†1702 A.D.).</p>
+            <p>According to <bibl><ptr target="bm:Loefgren1974Katalog"/><citedRange unit="page">45</citedRange></bibl>,
+               the text was written under one <foreign xml:lang="gez-tr">nəguś</foreign> ʾIyāsu mentioned in the 
+               <foreign xml:lang="gez-tr">malkəʾ</foreign>, i.e. either under 
+               <persName ref="PRS5616IyasuI">ʾIyāsu I (r. 1682–1706)</persName> or
+               <persName ref="PRS5617IyasuII">ʾIyāsu II (r. 1730–1755)</persName>.</p>
+         </abstract>
          <textClass>
             <keywords>
                <term key="Poetry"/>
@@ -53,18 +62,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2016-11-25">witnesses added</change>
          <change who="MV" when="2017-03-14">Added title, keywords and incipit</change>
+         <change who="JK" when="2024-07-23">Added reference to Löfgren 1974</change>
+         <change who="ES" when="2024-09-27">Added the text, title, relations and bibl (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor" active="LIT2736RepCh20" passive="PRS8671SebhatL"></relation>
+               <relation name="skos:exactMatch" active="LIT2736RepCh20" passive="https://w3id.org/malke/2736/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">20</citedRange>
                </bibl>
             </listBibl>
             <listBibl type="secondary">
+               <bibl><ptr target="bm:Tedros2008Malk"/></bibl>
+               <bibl><ptr target="bm:Gabre1970Consider"/></bibl>
                <bibl>
                   <ptr target="bm:Habtemichael2007EAEmalke"/>
                   <citedRange unit="page">701b</citedRange>
@@ -75,12 +94,341 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
+         <div type="edition" xml:lang="gez">
+            <note>The following text reproduced after <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለህላዌክሙ፡ ዘይመውእ፡ ህላዌያተ፨</l>
+                  <l n="2">ለረኪበ፡ ስሙ፡ ኅቡእ፡ አመ፡ ወጠኑ፡ ተምኔተ፨</l>
+                  <l n="3">እምግብርክሙ፡ ሥላሴ፡ ሶበ፡ ረከብኩ፡ አስማተ፨</l>
+                  <l n="4">መለኮተ፡ ለለ፡ አሐዱ፡ ዘዚአክሙ፡ ገጻተ፨</l>
+                  <l n="5">እንበለ፡ ትድምርት፡ እሰሚ፡ ወእሁብ፡ ትድምርተ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምክሙ፡ ዘኢይትጋባእ፡ እምተከፍሎ፨</l>
+                  <l n="2">እንዘ፡ እምተከፍሎ፡፨</l>
+                  <l n="3">ይትጋባእ፡ በተሰምዮ፡ አምላክ፡ ወይመስሎ፨</l>
+                  <l n="4">ሥሉስ፡ ቅዱስ፡ ጸግዉኒ፡ በተሣህሎ፨</l>
+                  <l n="5">ፍሬ፡ ጽድቅ፡ ከርካዕክሙ፡ ዘእዴክሙ፡ ተከሎ፨</l>
+                  <l n="6">ወፍሬ፡ ወይንክሙ፡ ርትዕ፡ ምስሌሁ፡ ዘሀሎ፨</l>
+               </lg>
+               <lg type="stanza" n="44">
+                  <l n="1">ሰላም፡ ለመልክእክሙ፡ ዘኢኀደገ፡ አምሳለ፨</l>
+                  <l n="2">እምጾታ፡ ኵሉ፡ መልክእ፡ ዘውስተ፡ መጻሕፍት፡ ተብህለ፨</l>
+                  <l n="3">ዋሕድናክሙ፡ ሥላሴ፡ ሶበ፡ አርዮስ፡ ከፈለ፨</l>
+                  <l n="4">ሰይፍክሙ፡ ንዋየ፡ ውስጡ፡ ከመ፡ ይፍድዮ፡ በቀለ፨</l>
+                  <l n="5">ዘእንበለ፡ ሰይፍ፡ ኪያሁ፡ ቀተለ፨</l>
+               </lg>
+               <lg type="stanza" n="45">
+                  <l n="1">ሥላሴክሙ፡ ሥላሴ፡ ይረስየኒ፡ መካነ፨</l>
+                  <l n="2">ድኅረ፡ ተዋሐድኩሰ፡ ዘሥላሴሁ፡ ብርሃነ፨</l>
+                  <l n="3">ዮርዳኖስክሙ፡ ዝየ፡ እስመ፡ ኵለንታየ፡ ኮነ፨</l>
+                  <l n="4">ኢየኀሥሥ፡ እምዮርዳኖስ፡ ሰማዕተክሙ፡ ምእመነ፨</l>
+                  <l n="5">ወኢይትሜነዮ፡ ለታቦር፡ እስመ፡ ታቦር፡ አነ፨</l>
+               </lg>
+               <lg type="stanza" n="46">
+                  <l n="1">ሥሉስ፡ ቅዱስ፡ እለ፡ ልብሰ፡ ጥበብ፡ ትለብሱ፨</l>
+                  <l n="2">በልብስክሙ፡ ጸሐፉ፡ ስመ፡ ወልደ፡ ኂሩት፡ ኢያሱ፨</l>
+                  <l n="3">በዓመተ፡ ሐሩር፡ ነፍሳዊ፡ ድኅረ፡ ነገሥተ፡ ምድር፡ ነግሡ፨</l>
+                  <l n="4">ዘያረዊ፡ ማየ፡ ሕይወት፡ ሕንጻ፡ ደብረ፡ ብርሃን፡ መቅደሱ፨</l>
+                  <l n="5">እስመ፡ ለጽሙዓን፡ አውሐዘ፡ ነቅዕክሙ፡ ከርሡ፨</l>
+               </lg>
+               <lg type="stanza" n="47">
+                  <l n="1">ለዘበሰጊድ፡ አቅረብኩ፡ መካልየ፡ ልሳን፡ ስብሐታተ፨</l>
+                  <l n="2">መጠነ፡ አርባዕ፡ ዓሥር፡ እንዘ፡ አተሉ፡ ሰብዓተ፨</l>
+                  <l n="3">ህየንተ፡ አሐዱ፡ ሥላሴ፡ እለ፡ ትፈድዩ፡ ምእተ፨</l>
+                  <l n="4">ጸግዉኒ፡ እምገጽክሙ፡ ንዋየ፡ ገጽ፡ ትፍሥሕተ፨</l>
+                  <l n="5">ወዲበ፡ ዓሥር፡ አህጉር፡ ሀቡኒ፡ ሢመተ፨</l>
+               </lg>
+            </div>
+         </div>
+         
+         <div type="edition" xml:lang="gez">
+            <note>taken from the modern published edition as appears at <ptr target="https://debelodatastore.blob.core.windows.net/debelocontainer/Files/SundaySchool/MelkeaSelassie.pdf"/></note>
+            <div type="textpart" subtype="stanza" xml:lang="gez">
                <ab>
-                  ሰላም፡ ለህላዌክሙ፡ ዘይመውእ፡ ህላዌያተ።
+                  ሰላም ለህላዌክሙ ዘይመውዕ ህላዌያተ፤<lb/>
+                  ለረኪበ ስሙ ኅቡእ አመ ወጠንኩ ተምኔተ፤<lb/>
+                  እምግብርክሙ ሥላሴ ሶበ ረከብኩ አስማተ<lb/>
+                  (ማ) መለኮተ ለለአሃዱ ዘዚኣክሙ ገጻተ፤<lb/>
+                  እንበለ ትድምርት እሰሚ ወእሁብ ትድምርተ።
                </ab>
             </div>
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab>
+                  ሰላም ለስእርተ ርእስክሙ ዘጽድላዌ በረድ ጽላሎቱ፤<lb/>
+                  ነገሥተ ባሕታዊ ሥላሴ ዘጋዳክሙ ጸሎቱ፤<lb/>
+                  ሥላሴክሙ መሀሩ ቅድስያተ ሠለስቱ፤<lb/>
+                  ወብሂለ በዘወሰኩ እግዚአ ሃይላት ዝንቱ፤<lb/>
+                  ለዋህድናክሙ ምስጢሮ ከሠቱ።
+               </ab>
+            </div>
+            
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab>            ሰላም ለዝክረ ስምክሙ ዘኢይትጋባእ እምተከፍሎ<lb/>
+            ወዘእምተከፍሎ ይትጋባእ ለተሰምዮ አምላክ ወዘይመስሎ፤<lb/>
+            ሥሉስ ቅዱስ ሴስዩኒ በተሣህሎ፤<lb/>
+            ፍሬ ጽድቅ ከርካዕክሙ ዘእዴክሙ ተከሎ፤<lb/>
+            ወፍሬ ወይንክሙ ዘያፀግብ ኵሎ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab>  ሰላም ለርእስክሙ ዘአስተዋደደ ርእሰ፤<lb/>
+               አጋዕዝተ ሥጋ ሥላሴ ኢትሌልዩ ነፍሰ፤<lb/>
+               በርእሰ ኢያሱ አንብሩ አክሊለክሙ ሞገሰ፤<lb/>
+               በስምክሙ አሐዱ እስመ ያመልክ ሥሉሰ፤<lb/>
+            ወበስምክሙ ሐነጸ መቅደሰ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab> ሰላም ለገጽክሙ እምዐይነ ፍጡራን ዘተኃብአ፤<lb/>
+               ስብሐቲክሙ ሥላሴ ውስተ አፈ ኵሉ ዘመልዐ፤<lb/>
+               አሐዱ መልአክ ሶበ እምቤትክሙ ወፅአ፤<lb/>
+               ዲበ ፍጡራን ከመ ይሰመይ እግዚአ፤<lb/>
+            በአምሳሊክሙ ፈጠርክሙ ሰብአ። </ab></div>
+            
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab> ሰላም ለቀራንብቲክሙ እለ የሐትታ ዐማፄ፤<lb/>
+               ፍዳ ዐመጻሁ ብዙኅ እስከ ይረክቦ ድንጋፄ፤<lb/>
+               መዛግብትየ ሥላሴ ዘየኀፍረክሙ ፃፄ፤<lb/>
+               ይኵነኒ ምሕረትክሙ አመ ዕለተ ፍዳ ሐዋፄ፤<lb/>
+            ዘእሳተ ሰማይ ያጠፍእ ወይቀትል ዕፄ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab> ሰላም ለአዕይንቲክሙ እለ ተኬነዋ አዕይንተ፤<lb/>
+               ቅድምናክሙ ሥላሴ ዘኢያመክነየ ጥንተ፤<lb/>
+               ሲሳየ ውሳጤ ይኩነኒ ወክዳነ አፍአ ሜላተ፤<lb/>
+               ዘአንደደ ጥበብክሙ እንበለ እሳት እሳተ፤<lb/>
+            ወእንበለ ማይ አቍረረ ማያተ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab> ሰላም ለአዕዛኒክሙ አናቅጸ ጸሎት ሠናይ፤<lb/>
+               ምሥጢራተ ሰሚዕ ሥላሴ ዘይተልዎ ርእይ፤<lb/>
+               በአብትረ ያዕቆብ በርሀ ሥላሴክሙ ፀሀይ፤<lb/>
+               ወተመሰሉ ሰብአ ዓይን አባግዓ ላባ ወማይ፤<lb/>
+            ለሀበ አባግዕ ዘዮም ወጥምቀት አባይ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab>ሰላም ለመላትሒክሙ እምቅድመ ብርሃናት እለ በርሁ፤<lb/>
+               ሥሉስ ቅዱስ ባልሑኒ እመከራሁ፤<lb/>
+               ለንጉሠ ዓለም ተውላጥ ዘትካዛት ሐራሁ፤<lb/>
+               እንዘ እሳት ቅንዓቱ ወእንዘ ሓሜት ዕፄሁ፤<lb/>
+            እስመ ውስተ ምድር ገሃነም ለሊሁ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab>ሰላም ለአእናፊክሙ እለ ዓፄነዋ ስብሐታተ፤<lb/>
+               ጥበብክሙ ሥላሴ ዘበግብራቲሁ ተከሥተ፤<lb/>
+               በዓመተ ሕንፃ ፈንዉ ሊቀ ነደቅት ምጽዋተ፤<lb/>
+               ነዳያነ ወምስኪናነ እንዘ ይሬሲ ጸረበተ፤<lb/>
+            ለነፍሰ ዚአየ ከመ ይሕንጽ ቤተ። </ab></div>
+            
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab> ሰላም ዕብል ለዘዚአክሙ ከናፍር፤<lb/>
+               ተሣህሉኒ ሥላሴ በሣህለ ቤትክሙ ፍቅር፤<lb/>
+               እስመ ሃይማኖትየ ሞተት እምነ ሕይወታ ምግባር፤<lb/>
+               እንዘ ብየ ተስፋ ጽሙዕ ጽዋዓ ማይ ቆሪር፤<lb/>
+            ወሐዋጼ ብእሲ ድውይ እንዘ ብየ እግር።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab> ሰላም ለአፉክሙ ዘማዕጾሁ ሰላም፤<lb/>
+               ጽጌያቲሁ ሥላሴ ለተዋህዶ ገዳም፤<lb/>
+               መንገለ አሐዱ አምላክ ንዋየ መጻዒት ዓለም፤<lb/>
+               ወልጡ አምልኮትየ በጸጋሙ ፍጹም፤<lb/>
+            እምአምልኮ ጣዖት ግሉፍ በዋኅድ ድኅርም።</ab></div>
+          <div type="textpart" subtype="stanza" xml:lang="gez">
+             <ab>  ሰላም ለአስናኒክሙ አስናናተ ሥጋ ዘኢኮና፤<lb/>
+            ዝናማቲሁ ሥላሴ ለተዋህዶ ደመና፤
+            አመ ወደይክሙ ሕገ ውሳጤ ነፍሳዊት ልቡና፤
+            ተአተተት ምስለ አይሁድ ሕገ ደብረ ጽልመት ሲና፤
+            ወለሕግክሙ ኀደገት መካና።</ab></div>
+           <div type="textpart" subtype="stanza" xml:lang="gez">
+              <ab> ሰላም ለልሳንክሙ እምቅድመ ነገር ዘተናገረ፤<lb/>
+                 መንበርክሙ ሥላሴ ዘያደነግፅ መንበረ፤<lb/>
+                 ሶበ ዐለወክሙ ሕገ ወተጓሕለወክሙ ምክረ፤<lb/>
+                 ገጸ ኃጉል ዘይደልዎ ዓይነ ቴዎዳስ ነጸረ፤<lb/>
+            ወገሊላዊ ይሁዳ ፍና ሞት ሖረ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab> ሰላም ለቃልክሙ መታሬ እሳት ነዳዲ፤<lb/>
+              ሥሉስ ቅዱስ ንዋያተ ዕፁብ ነጋዲ፤<lb/>
+              አመ በንስሓ ተወልዱ እምጸጋክሙ ወላዲ፤<lb/>
+              ተወፈየ መርኆ ሰማይ የማነ ጴጥሮስ ከሀዲ፤<lb/>
+            ወመምህረ ወንጌል ኮነ ጳውሎስ ሰዳዲ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab> ሰላም ለእስትንፋስክሙ ሕይወተ ሕያዋን ፍጥረታት፤<lb/>
+               ካህናተ ሰማይ ሥላሴ ዘደምክሙ ሥርየት፤<lb/>
+               እምደምክሙ ንዝኁ ራግዛተ ነፍስየ ቤት፤<lb/>
+               እስመ አነ ተሐዘብክዎ ወፈተንክዎ ትካት፤<lb/>
+            ለደመ እንስሳ ድኩም ወጽኑስ ጣዖት።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab>  ሰላም ለጉርዔክሙ ስቴ አንብዓ ደም ዘኀሠሠ፤<lb/>
+               ብዑላነ ሞገስ ሥላሴ ኢታንድዩኒ ሞገሰ፤<lb/>
+               እመ ትትኄየዩኒሰ ወተኀድጉኒ ጽኑሰ፤<lb/>
+               ሚካኤልኑ ለአምጽኦ ሥጋየ ጌሠ፤<lb/>
+            ወእመ አኮ ገብርኤል ወሀበኒ ነፍሰ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab> ሰላም ለክሣድክሙ ክሣደ አዳም ዘሠዐለ፤<lb/>
+               እምኃይልክሙ ሥላሴ አስተሳትፉኒ ኃይለ፤<lb/>
+               በጠፈረ ሥጋየ አቅም ፀሐየ አርሳንዮስ ገድለ፤<lb/>
+               ዘሀለወ ታሕተ ኢያሱ ከመ በኃይልክሙ ክህለ፤<lb/>
+            አቅሞ ፀሀይ ዘሀለወ ላዕለ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab> ሰላም ለመታክፍቲክሙ መሠረተ ዓለም እለ ጾሩ፤<lb/>
+               ኖትያተ ኖኅ ሥላሴ ወዕፀወ ዓባይ ሐመሩ፤<lb/>
+               ዲበ መንበርክሙ ሰብአ አሐደ ሶበ አምላከ ነጸሩ፤<lb/>
+               ኪሩቤል ወሱራፌል ታሕተ እገሪሁ ገረሩ፤<lb/>
+            እስመ ለሊሁ አዘዞ ወእሉ ተፈጥሩ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab>ሰላም ለአእናፊክሙ እሳታውያን አክናፍ፤<lb/>
+               እለ በማዕበል ሀለዉ ወእለ ሀለዉ በጽንፍ፤<lb/>
+               አለብዉኒ ሥላሴ ቀትለ መስተጋድል መጽሐፍ፤<lb/>
+               ከመ ወትረ ይትዋሥአኒ ትምይንተ ቃሉ ትሩፍ፤<lb/>
+            ወጉሕሉተ ታድራ ምስሌየ ይዛዋዕ በአፍ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab>ሰላም ለዘባንክሙ እምቅድመ ዓለማት ዘተቀሥፈ፤<lb/>
+               በበትረ ቅድምና ኅቡዕ ከመ ወስተ መጽሐፍ ተጽሕፈ፤<lb/>
+               ሥሉስ ቅዱስ እለ ትትዋሐዱ ዘልፈ፤<lb/>
+               ዕቀብዎ እምድቀታት ወረስይዎ ምዕራፈ፤<lb/>
+            ለውሳጣዊ ሕንጻየ በአፍአሁ ዘገዝፈ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab>ሰላም ለእንግድዓክሙ ትዕይንተ ንጉሥ ምክር፤<lb/>
+               ሥሉስ ቅዱስ መልሕቃተ ሰማይ ሐመር፤<lb/>
+               ሶበ ይዴግነኒ ባዕስ መልአከ ቅንዓቱ ለፀር፤<lb/>
+               ምስለ ኃይል ይባልሐኒ ባሕረ ምሕረትክሙ ፍቅር፤<lb/>
+            ከመ ለእስራኤል ቅድመ ባልሖሙ ባሕር።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab>ሰላም ለሕፅንክሙ ምርፋቀ ጻድቃን አግብርቲሁ፤<lb/>
+               ማያተ ኢያሱ ሥላሴ ዘትውኅዙ እምኅሊናሁ፤<lb/>
+               እስመ በአፍአሁ አንትሙ ወአንትሙ በውሳጤሁ፤<lb/>
+               ኢነጸረ ኀበ ሐይመት ከመ አብርሃም አቡሁ፤<lb/>
+            ወመስኮተ ነቢይ ዳንኤል ኢፈቀደ ያርሁ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab>ሰላም ለአእዳዊክሙ እለ ተኬነዋ ብእሴ፤
+               ኦ ኄራን አጋዕዝትየ ሥላሴ፤<lb/>
+               ድኅረ ጸሐፈ ኦሪተ ሊቀ ነቢያት ሙሴ፤<lb/>
+               መሀረኒ ሥላሴክሙ መጽሐፈ መምህሩ ለአውሴ፤<lb/>
+            ወወልደ ነጐድጓድ ዮሐንስ ዘመልዖ ውዳሴ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab> ሰላም ለመዝራዕትክሙ መዝራዕተ አዳም ዘአፅንዐ፤<lb/>
+               እምአጽናፈ ምድር ሥላሴ እለ ትስዕሩ ጸብዓ፤<lb/>
+               ውስተ ልብየ አብኡ ሀብተ ነሳሕያን መባአ፤<lb/>
+               ከመ አብእ ለንግሥክሙ ጸባሕተ አዕይንት አንብዐ፤<lb/>
+            ወበፍቅርክሙ ከመ አሥምር ሰብአ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab> ሰላም ለኵርናዕክሙ ኵርናዐ ድካም ዘሠበረ፤<lb/>
+               ሐረሳውያን ሥላሴ እለ ኢትጻምዉ ወትረ፤<lb/>
+               አምጣነ ረሰይክሙ ዘርዐ ሥርናየ ቤትክሙ ፍቅረ፤<lb/>
+               ዘያቀድም ወርኀ ዘርዕ ወዘያተሉ ማዕረረ፤<lb/>
+            ውስተ ገራህትክሙ ሰብእ ፍሬ ጽድቅ ሠምረ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab>ሰላም ለእመታቲክሙ መስፈርታተ ምድር ወሰማይ፤<lb/>
+               አሰርግዉኒ ሥላሴ በቀጠንተ ምጽዋት ሠናይ፤<lb/>
+               ወረስዩኒ ሐዲሰ እምነ ልማዱ ብሉይ፤<lb/>
+               ለባዕል ዘተሣለቆ ወዘተጓሕለዎ ንዋይ፤<lb/>
+            እንዘ በዴዴሁ ይግዕር አልአዛር ነዳይ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab>ሰላም ለእራኃቲክሙ እለ አኀዛ ዓለመ፤<lb/>
+               ደኃራውያን ሥላሴ ወእለ ነበርክሙ ቅድመ፤<lb/>
+               ውስተ ልብየ አዝንሙ ዝናመክሙ ሰላመ፤<lb/>
+               ኤልያስሰ ኢወሀበኒ ዝናመ፤<lb/>
+            እምነ አሐዱ ገራህት ዘያረዊ ትልመ።</ab></div>
+            
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab> ሰላም ለአፃብዒክሙ እለ እምአጽፋር ኢይትሌለዩ፤<lb/>
+               ለቤትክሙ ሥላሴ ዘኢየኃልቅ ንዋዩ፤<lb/>
+               አመ አብዐልክሙ ሰብአ ድኅረ አንደዮ ጌጋዩ፤<lb/>
+               ዘኢርእዩ እምቅድመ ዮም መላእክተ ሰማይ ርእዩ፤<lb/>
+            ወአግብርተ ሰብእ መላእክት ተሰምዩ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><ab>ሰላም ለገበዋቲክሙ እለ ዕሩቃን እምልብሰ ወርቅ፤<lb/>
+               ሥሉስ ቅዱስ ሥርግዋነ መፍርህ መብረቅ፤<lb/>
+               መንገለ ፍኖቱ ምጽዋት ለቆርነሌዎስ ጻድቅ፤<lb/>
+               ይምርሐኒ ወንጌልክሙ እግዚአ ፍኖት ረቂቅ፤<lb/>
+            ዘጸያሔሁ ዮሐንስ መጥምቅ።</ab></div>
+            
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab>ሰላም ለከርሥክሙ ከርሠ ፍጡራን ዘፈጠረ፤<lb/>
+                  ኅዱራነ ሰማይ ሥላሴ ወእለ ትመልኡ ምድረ፤<lb/>
+                  ህላዌክሙ እምባዕድ ዘኢተለቅሐ ምክረ፤<lb/>
+                  ይሣርር መሠረታተ እንዘ ይጼዓን ቀመረ፤<lb/>
+            ወእንዘ ይጸውር ድደ ይነብር ጠፈረ።</ab></div>
+           <div type="textpart" subtype="stanza" xml:lang="gez">
+              <ab> ሰላም ለልብክሙ ዘኢይትሌለይ ፈቃዱ፤<lb/>
+                 በተዋህዶ ሥላሴ እለ ትሰገዱ፤<lb/>
+                 አዳም ኮነ እምኔነ ከመ አሐዱ፤<lb/>
+                 ቀርነ ንግሥክሙ ሶበ ተነፍሐ በዐውዱ፤<lb/>
+            ሁከተ ሰባልዮስ ኀድአ ወጠፍአ ሞገዱ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab>ሰላም ለኵልያቲክሙ እለ ዕሩያን በአካል፤<lb/>
+                  ዓለመክሙ ሥላሴ አመ ሐወጸ ለሣህል፤<lb/>
+                  እምኔክሙ አሐዱ እግዚአብሔር ቃል፤<lb/>
+                  ተፈጸመ ተስፋ አበው በማርያም ድንግል<lb/>
+            ወበቀራንዮ ተተክለ መድኃኒት መስቀል።</ab></div>
+           <div type="textpart" subtype="stanza" xml:lang="gez">
+              <ab> ሰላም ለህሊናክሙ በከዊነ ኄር ዘተሐምየ፤<lb/>
+                 እምከላውዴዎን አብርሃም ዘምድረ ካራን ኀረየ፤<lb/>
+                 ሥላሴክሙ ሥላሴ ሶበ ይኔጽር ዕሩየ፤<lb/>
+                 ሠለስተ ዕደወ ሊሉያነ ውስተ ርዕሰ ሐይመት ርእየ፤<lb/>
+            ወለአሐዱ ነገሮ ረሰየ።</ab></div>
+           <div type="textpart" subtype="stanza" xml:lang="gez">
+              <ab> ሰላም ዕብል ለንዋየውስጥ ምሕረትክሙ፤<lb/>
+                 ትሩፋተ ገድል ኩኑኒ ሥላሴ አምጣነ ትሩፋት አንትሙ፤<lb/>
+                 ሶበ ሖርኩሰ ከመ እሳተፍ ገድሎሙ፤<lb/>
+                 ጊዮርጊስ ኢወሀበኒ መጠነ ነጥበ ጠል እምደሙ፤<lb/>
+            ወተክለ ሃይማኖት ከልአኒ ስባረ እምዐፅሙ።</ab></div>
+            
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab>ሰላም ለሐቌክሙ ዘቅናተ ኂሩት ቅናቱ፤<lb/>
+                  ሊሉያነ ፆታ ሥላሴ እምአምላከ በለዓም ከንቱ፤<lb/>
+                  ኀበ መስፈርትክሙ ጽድቅ እስመ ያበጽሕ ትእምርቱ፤<lb/>
+                  ተደለዉ ከመ ይሑሩ ምሕዋረ ዕለታት ሠለስቱ፤<lb/>
+            በዓለ መሥዋዕት አብርሃም ወይስሐቅ መሥዋዕቱ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab>ሰላም አቍያጺክሙ እለ ተኀብአ እምዐይን፤<lb/>
+                  አናምያኒሁ ሥላሴ ለሜላተ ሰማይ ብርሃን፤<lb/>
+                  ልብሰ ሰማዕትና ይኵነኒ ምሕረትክሙ ክዳን፤<lb/>
+                  ላዕሌየ እስመ ኢሀሎ ልብሰ እስጢፋኖስ እብን፤<lb/>
+            ወሥርጋዌሁ እሳት ለቂርቆስ ሕጻን።</ab></div>
+           <div type="textpart" subtype="stanza" xml:lang="gez">
+              <ab> ሰላም ለአብራኪክሙ እለ አስገዳ አብራከ፤<lb/>
+                 ወእለ ኢያብአ ምዕረ ላሕመ ሰማርያ ተውሳከ፤<lb/>
+                 ሥሉስ ቅዱስ እንዘ ትሬስዩኒ ዐርከ፤<lb/>
+                 አብሑኒ ለገብርክሙ ከመ እኰንን መልአከ፤<lb/>
+            ወከመ እምሰብእ እሰመይ አምላከ።</ab></div>
+           <div type="textpart" subtype="stanza" xml:lang="gez">
+              <ab> ሰላም ለአእጋሪክሙ እለ ውስተ ገነት አንሶሰዋ፤<lb/>
+                 ሥሉስ ቅዱስ አማልክተ አዳም ወሔዋ፤<lb/>
+                 ድካመ ጣዖታት ሞዐ ኀይልክሙ ግዕዛነ ፄዋ፤<lb/>
+                 ድካምሰ ለዕፀ ኃጢአት ሥርዋ፤<lb/>
+            ላዕለ አርጤምስ ዘተረሰያ ነዋ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab>ሰላም ለሰኳንዊክሙ ዘተረሰያ ብርሃናተ፤<lb/>
+                  ምሕረትክሙ ሥላሴ ያለብወኒ ምሕረተ፤<lb/>
+                  ለነዳያን ከመ ወሀበ መንፈቀ ንዋዩ ምጽዋተ፤<lb/>
+                  ወፈደየ ለዘዐመፆ ህየንተ አሐዱ ትርብዕተ፤<lb/>
+            ሊቀ መጸብሓን ዘኬዎስ ዘይሁብ ጻባሕተ።</ab></div>
+            
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab>ሰላም ለአጻብዒክሙ እለ ይከይዳ መብረቀ፤<lb/>
+                  ኢታኅጥኡኒ ሥላሴ ንዋየክሙ ረቂቀ፤<lb/>
+                  ሶበ እደ ፈያት ነሥአኒ ጥሪተ ቤትክሙ ጽድቀ፤<lb/>
+                  ዘይበኪ በእንቲአየ ወዘያስተሐምም ጥቀ፤<lb/>
+            ተመሳሌ አባ ይስሪን እስመ ኄር ኀልቀ።</ab></div>
+           <div type="textpart" subtype="stanza" xml:lang="gez">
+              <ab> ሰላም ለአጻብዒክሙ እለ ምስለ አጽፋር ተዋደዱ፤<lb/>
+                 በኀይልክሙ ሥላሴ ዘኢይደክም ልማዱ፤<lb/>
+                 እምንጉሠ ባቢሎን ዐብየ ነቢይክሙ አሐዱ፤<lb/>
+                 ወለስብእ ሐዋርያት ሰብአ ልስጥራን ሰገዱ፤<lb/>
+            እስከ ለእሉ አልሕምተ ሠዊዐ ፈቀዱ።</ab></div>
+            <div type="textpart" subtype="stanza" xml:lang="gez">
+               <ab>ሰላም ዕብል ለዘዚአክሙ ቆም፤<lb/>
+                  ዓለማተ ዓለም ሥላሴ ዘአልብክሙ ዓለም፤<lb/>
+                  እምኔክሙ አሐዱ በእንተ አሐዱ አዳም፤<lb/>
+                  እመኒ በምድር ተወክፎ ለነግደ ጲላጦስ ሕማም፤<lb/>
+            ሆሳዕና በአርያም ሆሳዕና በአርያም ሆሳዕና በአርያም።</ab></div>
+         <div type="textpart" subtype="stanza" xml:lang="gez"><ab>
+            ሰላም ለመልክእክሙ ዘኢኀደገ አምሳለ፤<lb/>
+            እምፆታ ኵሉ መልክአ ከመ ውስተ መጽሐፍ ተብህለ፤<lb/>
+            ዋህድናክሙ ሥላሴ ሶበ አርዮስ ከፈለ፤<lb/>
+            ሰይፍክሙ ንዋየ ውስጡ ከመ ይፍድዮ በቀለ፤<lb/>
+            ዘእንበለ ሰይፍ ኪያሁ ቀተለ።</ab></div>
+         <div type="textpart" subtype="stanza" xml:lang="gez"><ab>
+            ሥላሴክሙ ሥላሴ ይረስየኒ መካነ፤<lb/>
+            ድኅረ ተዋሓድኩሰ ዘሥላሴሁ ብርሃነ፤<lb/>
+            ዮርዳኖሰክሙ ዝየ እስመ ኵለንታየ ኮነ፤<lb/>
+            ኢየኀሥሥ እምዮርዳኖስ ሰማዕተክሙ ምእመነ፤<lb/>
+            ወኢይትሜነዮ ለታቦር እስመ ታቦር አነ።</ab></div>
+         <div type="textpart" subtype="stanza" xml:lang="gez"><ab>
+            ሥሉስ ቅዱስ እለ ልበሰ ጥበብ ትለብሱ፤<lb/>
+            በልብስክሙ ጸሐፉ ስመ ወልደ ንጉሥ ኢያሱ፤<lb/>
+            በዓመተ ሐሩር ነፍሳዊ ድኅረ ነገሥተ ምድር ነግሡ፤<lb/>
+            ዘያረዊ ማየ ሕይወት ሕንጻ ደብረ ብርሃን መቅደሱ፤<lb/>
+            እስመ ለጽሙዓን አውሐዘ ነቅዕክሙ ከርሡ።</ab></div>
+         <div type="textpart" subtype="stanza" xml:lang="gez"><ab>
+            ለዘበነጊድ አቅረብኩ መካልየ ልሳን ስብሐታተ፤<lb/>
+            መጠነ ራብዕ ዐሥር እንዘ አተሉ ሰብዓተ፤<lb/>
+            ህየንተ አሐዱ ሥላሴ እለ ትፈድዩ ምእተ፤<lb/>
+            ጸግውኒ እምገጽክሙ ንዋየ ገጽ ትፍሥሕተ፤<lb/>
+            ወዲበ ዐሠርቱ አህጉር ሀቡኒ ሢመተ።</ab></div>
+         <div type="textpart" subtype="stanza" xml:lang="gez"><ab>
+            ኦ ሥሉስ ቅዱስ ዕቀቡኒ እመከራ ሥጋ ወነፍስ ሊተ ለ_______<lb/>
+            ለዓለመ ዓለም አሜን።
+         </ab></div>
+         
          </div>
       </body>
    </text>

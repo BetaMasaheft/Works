@@ -7,6 +7,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <title xml:lang="gez" xml:id="t1">ፍካሬ፡ ፊደል፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Fǝkkāre fidal</title>
             <title xml:lang="en" corresp="#t2">Interpretation of the alphabet</title>
+            <title xml:lang="gez" xml:id="t2">ትርጓሜ፡ ፊደል፡</title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">Tǝrgʷāme fidal</title>
+            <title xml:lang="en" corresp="#t2">Interpretation of the alphabet</title>
+            <title xml:lang="fr" xml:id="t3">Petit Terguâmê fidel</title>
+            <title xml:lang="en" corresp="#t3">small Tǝrgʷāme fidal</title>
             <editor role="generalEditor" key="AB"/>
          </titleStmt>
          <publicationStmt>
@@ -22,11 +27,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
-         </sourceDesc>
-         <sourceDesc>
             <listWit>
-               <witness/>
+               <witness corresp="BLorient9798"/>
+               <witness corresp="IVEf79"/>
+               <witness corresp="BNFet71"/>
+               <witness corresp="BLorient570"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -39,25 +44,43 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p/>
+            <p>A short Tǝrgʷāme fidal, e.g. a symbolic explanation of the characters of the Ethiopic 'alphabet' in the 
+               <foreign xml:lang="gez-tr">halḥam</foreign>-order.</p>
          </abstract>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language>
+            <language ident="fr">French</language><language ident="gez-tr">Gǝʿǝz transliterated</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Vocabulary"/>
+               <term key="Theology"/>
+               <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change when="2024-07-17" who="CH">Update titles, secondary literature and list of witnesses.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
-            <listRelation>
-               <relation name="lawd:hasAttestation" active="LIT3975FekkareF" passive="BNFet71"/>
-            </listRelation>
+            <listBibl type="editions">
+               <bibl><ptr target="bm:Grebaut1936TerguameFidel"/></bibl>
+            </listBibl>
+         </div>
+         <listRelation>
+            <relation name="saws:isDifferentTo" active="LIT3975FekkareF" passive="LIT2452Tergwa"/>
+            <relation name="saws:isDifferentTo" active="LIT3975FekkareF" passive="LIT4099MashafaT"/>
+         </listRelation>
+         <div type="edition">
+            <div type="edition" subtype="incipit" xml:lang="gez">
+               <note>The following incipit is taken from <ref type="mss" corresp="BLorient9798 "/>.</note>
+               <ab>ሀ፡ ብ፡ ሀልዎቱ፡ ለአብ፡ እምቅድመ፡ ዓለም።
+                  ለ፡ ብ፡ ለብሰ፡ ሥጋ፡ ቃል፡ እምድንግል።
+                  ሐ፡ ብ፡ ሐመ፡ ወሞተ፡ በእንቲአነ።
+                  መ፡ ብ፡ መንክር፡ እግዚአብሔር።</ab>
+            </div>
          </div>
       </body>
    </text>
