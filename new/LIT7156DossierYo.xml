@@ -1,13 +1,11 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7153MiraclesY" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7156DossierYo" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ተአምሪሁ፡ ለአባ፡ ዮሐኒ፡ ዘደብረ፡ ዐሣ፡</title>
-                <title xml:lang="gez" corresp="#t1" type="normalized">Taʾāmrihu la-ʾAbbā Yoḥanni za-Dabra ʿAśā</title>
-                <title xml:lang="en" corresp="#t1">Miracles of ʾAbbā Yoḥanni of Dabra ʿAśā</title>
+                <title xml:lang="en" xml:id="t1">Hagiographical dossier on ʾAbbā Yoḥanni of Dabra ʿAśā</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -36,17 +34,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
             <abstract>
                 <p>
-                    This is a cycle of 24 miracles appended to <ref type="work" corresp="LIT7152GadlaY"/>.
-                    It is part of <ref type="work" corresp="LIT7156DossierYo"/>.
-                </p>
+                    This is the hagiographical dossier on ʾAbbā Yoḥanni of Dabra ʿAśā, comprising <ref type="work" corresp="LIT7152GadlaYo">the long version of the Life</ref>, 
+                    a <ref type="work" corresp="LIT7153MiraclesY">cycle of miracles</ref>, and two hymns in honour of the saints
+                    (<ref type="work" corresp="LIT7154MalkeaYo"/> and <ref type="work" corresp="LIT7155MalkeaYo"/>).
+                    The dossier is attested in MS Ethio-SPaRe ADMY-014 <!-- ms record missing --> 
+                   </p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Hagiography"/>
                     <term key="Miracle"/>
+                    <term key="Poetry"/>
                 </keywords>
-            </textClass>         
+            </textClass>
         </profileDesc>
         <revisionDesc>
             <change who="MV" when="2024-12-03">Created entity</change>
@@ -56,23 +57,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body>
             <div type="bibliography">            
                 <listRelation>
-                    <relation name="ecrm:P129_is_about" active="LIT7153MiraclesY" passive="PRS10428Yohanni"/>
-                    <relation name="saws:formsPartOf" active="LIT7153MiraclesY" passive="LIT7156DossierYo"/>
+                    <relation name="ecrm:P129_is_about" active="LIT7156DossierYo" passive="PRS10428Yohanni"/>
+                    <relation name="saws:contains" active="LIT7156DossierYo" passive="LIT7152GadlaYo"/>
+                    <relation name="saws:contains" active="LIT7156DossierYo" passive="LIT7153MiraclesY"/>
+                    <relation name="saws:contains" active="LIT7156DossierYo" passive="LIT7154MalkeaYo"/>
+                    <relation name="saws:contains" active="LIT7156DossierYo" passive="LIT7155MalkeaYo"/>
                 </listRelation>
-            </div>
-            <div type="edition">
-                <note>The following incipits are taken from MS Ethio-SPaRe ADMY-014 <!-- ms record missing -->.</note>
-                <div type="textpart" xml:id="">
-                    <label>First miracle of ʾAbbā Yoḥanni</label>
-                    <div type="textpart" subtype="incipit" xml:lang="gez">
-                        <ab>
-                            ...
-                        </ab>
-                    </div>                    
-                </div>
-                
-                
-                
             </div>
         </body>
     </text>
