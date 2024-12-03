@@ -4,9 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ገድለ፡ ዮሐኒ፡ ዘደብረ፡ ዐሣ፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Yoḥanni za-Dabra ʿAśā</title>
-            <title xml:lang="en" corresp="#t1">Vita of Yoḥanni of Dabra ʿAśā</title>
+            <title xml:lang="gez" xml:id="t1">ገድለ፡ አባ፡ ዮሐኒ፡ ዘደብረ፡ ዐሣ፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Gadla ʾAbbā Yoḥanni za-Dabra ʿAśā</title>
+            <title xml:lang="en" corresp="#t1">Vita of ʾAbbā Yoḥanni of Dabra ʿAśā (short recension)</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -53,7 +53,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
+         <abstract>
+            <p>
+               This is the short recension of the hagiography. In all likelihood older than <ref type="work" corresp="LIT7152GadlaYo"/>, it is also much more widespread.
+               It was edited and translated in <bibl><ptr target="bm:Basset1884ViedAbba"/></bibl>.
+            </p>
+         </abstract>
          <textClass>
             <keywords>
                <term key="Hagiography"/>
@@ -69,6 +78,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="DR" when="2017-03-14">Added keywords</change>
          <change who="MV" when="2017-11-29">Updated</change>
          <change who="MKr" when="2021-03-28">Added relation</change>
+         <change who="MV" when="2024-12-03">Added relation</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -99,17 +109,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </listBibl>
             <listRelation>
               <relation name="ecrm:P129_is_about" active="LIT1521GadlaY" passive="PRS10428Yohanni"/>
+               <relation name="saws:isDifferentTo" active="LIT1521GadlaY" passive="LIT7152GadlaYo"/>
             </listRelation>
          </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
+            <div type="textpart" subtype="prologue" xml:lang="gez">
+               <note>The following prologue is taken from <bibl><ptr target="bm:Basset1884ViedAbba"/></bibl>.</note>
                <ab>
-                  ስምዑ፡ አኀውየ፡ ዜና፡ ገድሉ፡ <gap reason="omitted"/> ወሀሎ፡ ፩ብእሲ፡ ሥዩመ፡ ተምቤን፡ እስመ፡ ዐቢይ፡ ወክቡር፡ ውእቱ፡
+                  በስመ፡ እግዚአብሔር፡ ሥሉስ፡ ኅቡር፡ እላዌሁ፡ ልዑል፡ ዘኢይረክብዎ፡ ክቡት፡ ዘኢይሬእይዎ፡ እሳት፡ ዘኢይለክፍዎ፡
+                  መንፈስ፡ ዘኢይገሥሥዎ፡ ኀይል፡ ዘኢይሌብውዎ፡ ንጉሥ፡ ዘኢይሰይምዎ፡ አምላክነ፡ በመ<supplied reason="omitted">ለ</supplied>ኮቱ፡ ወአቡነ፡ በኂሩቱ፡
+                  ወአሐደ፡ ይጼልዩ፡ ወአሐደ፡ ይሰግድ፡ ወአሐደ፡ ይሴብሑ፡ ሎቱ፡ ስብሐት፡ እስከ፡ ለዓለመ፡ ዓለም፡ አሜን።
+                  ንጽሕፍ፡ መጽሐፈ፡ ገድሉ፡ ለቅዱስ፡ ወብፁዕ፡ አባ፡ ዮሐኒ፡ እስመ፡ ውእቱ፡ ኮከብ፡ ብሩህ፡ ዘብሔረ፡ አግዓዚ፡
+                  ወገባሬ፡ ተአምር፡ ዘደብረ፡ ዓሣ፡ ጸሎቱ፡ ወበረከቱ፡ የሀሉ፡ ምስሌነ፡ አሜን።
+               </ab>
+            </div>
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>The following incipit is taken from <bibl><ptr target="bm:Basset1884ViedAbba"/></bibl>.</note>
+               <ab>
+                  ስምዑ፡ አኀውየ፡ ዜና፡ ገድሉ፡ ለብእሴ፡ እግዚአብሔር፡ ቅዱስ፡ ወብፁዕ፡ አባ፡ ዮሐኒ። ወሀሎ፡ ፩ብእሲ፡ ሥዩመ፡ 
+                  ተምቤን፡ እስመ፡ ዓቢይ፡ ወክቡር፡ ውእቱ፡ እምነ፡ ሥዩማን፡ ዘይእቲ፡ ሀገር፡ ወጽኑዕ፡ ፈድፋደ፡ እምነ፡ ኵሉ፡ 
+                  ወሖረ፡ ውስተ፡ ጽብዕ፡ ምስለ፡ ብዙኅ፡ ጸባኢት፡ ኀበ፡ ብሔረ፡ ኖባ፡ ወሶባ፡    
                </ab>
             </div>
             <div type="textpart" subtype="explicit" xml:lang="gez">
                <ab>
-                 ወበዝሐ፡ ከመ፡ አዕዋም፡ ወሀሎ፡ ዝንቱ፡ ትእምርት፡ እስከ፡ ዮም። ስብሐት፡ <gap reason="omitted"/> አሜን።
+                  ስብሐት፡ ለአብ፡ ለዘኃረዮ፡ እምከርሠ፡ እሙ፡ ወሰጊድ፡ <choice><sic>ለውልድ፡</sic><corr resp="MV">ለወልድ፡</corr></choice> 
+                  በዘጸገዎ፡ ንጽሐ፡ ከመ፡ መላእክት፡ አኰቴት፡ ለመንፈስ፡ ቅዱስ፡ ለዘወሀቦ፡ ወሐብአ፡ እምገጸ፡ ሞት። ለዓለመ፡ ዓለም፡ አሜን፡
                </ab>
             </div>
          </div>
