@@ -52,24 +52,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </abstract>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
+         <change who="PL" when="2016-03-21"> Created file from google spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-09" who="ES">updated title keywords relation</change>
          <change when="2018-11-14" who="DR">Corrected transliteration, added keywords</change>
+         <change when="2023-07-06" who="CH">Added attestation, incipit and explicit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
             <relation name="saws:isAttributedToAuthor" active="LIT2041Nagarb" passive="PRS1980Aphrahat"/>
+            <relation name="lawd:hasAttestation" active="LIT2041Nagarb" passive="BMLor148"/>
          </listRelation>
          <listBibl type="editions">
             <bibl>
                <ptr target="bm:Cerulli1964Resurrectione"/>
             </bibl>
          </listBibl>
-         <ab/>
+         <div type="edition" subtype="incipit" xml:lang="gez">
+            <ab><hi rend="rubric">ነገር፡ በእንተ፡ እለ፡ ይክ</hi>ሕዱ፡ ትንሣኤ፡ ምው<hi rend="rubric">ታን፡ ወበእንተ፡ እለ፡ ይብ</hi>
+               ሉ፡ ጻድቃን፡ ኢይትነሥ<hi rend="rubric">ኡ፡ እመሬት፡ እስመ፡ ሰ</hi>ማያዊያን፡ እሙንቱ፡ ወ<hi rend="rubric">ሥጋ፡ ሰማያዊያን፡ ይለብሱ።</hi></ab>
+            <note>Incipit taken from <ref type="mss" target="BMLor148#ms_i4"/>.</note>
+         </div>
+         <div type="edition" subtype="explicit" xml:lang="gez">
+            <ab>ወይቤሎ፡ እግዚእነ፡ ኅድጎሙ፡ ለምዉታን፡ ይቅበሩ፡ በድኖሙ፡ ወአንተሰ፡ ሖር፡ ስብክ፡ መንግሥተ፡ እግዚአብሔር። ።</ab>
+            <note>Explicit taken from <ref type="mss" target="BMLor148#ms_i4"/>.</note>
+         </div>
       </body>
    </text>
 </TEI>

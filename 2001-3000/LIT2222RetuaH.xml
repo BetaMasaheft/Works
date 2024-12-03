@@ -5,10 +5,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ርቱዐ፡ ሃይማኖት፡</title>
-            <title type="normalized" corresp="#t1">Rǝtuʿa Hāymānot</title>
+            <title type="normalized" xml:lang="gez" corresp="#t1">Rǝtuʿa Hāymānot</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
+         <editionStmt>
+            <p>The text structure of the edition is based on
+               <ref type="mss" corresp="EMML2375">EMML 2375</ref>.</p>
+         </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
@@ -22,8 +26,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+            <listWit>
+               <witness corresp="EMML2375"></witness>
+            </listWit>
+
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -42,6 +48,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Homily"/>
+               <term key="Theology"/>
             </keywords>
          </textClass>
 <abstract>
@@ -49,13 +56,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
   Ethiopian production. Its author must have lived ca. 1375 and there is some ground to identify him
   with <persName ref="PRS4709Giyorgis">Giyorgis of Saglā</persName>. It should not be confused with a collection of homilies
 preserved in <ref type="mss" corresp="EMML1763">EMML 1763</ref>, <ref type="mss" corresp="EMML8509">EMML 8509</ref>
-and <ref type="mss" corresp="BLorient8192">BL Or. 8192</ref>, with which however it shows some textual affinities.</p>
+and <ref type="mss" corresp="BLorient8192">BL Or. 8192</ref>.</p>
 </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2023-01-30">Added missing work IDs</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -73,13 +81,17 @@ and <ref type="mss" corresp="BLorient8192">BL Or. 8192</ref>, with which however
             <ptr target="bm:Getatchew1981Controversies"/>
             <citedRange unit="page">109-116</citedRange>
             </bibl>
+            <bibl>
+            <ptr target="bm:ErhoLee2022Shepherd"/>
+            <citedRange unit="page">455-460</citedRange>
+            </bibl>
          </listBibl>
          </div>
 
-<div type="edition">
-  <note>Following text structure is based on <ref type="mss" corresp="EMML2375">EMML 2375</ref>.</note>
+<div type="edition" xml:lang="gez">
 
-<div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Introduction">
+
+<div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Introduction" corresp="LIT6799RHintro">
 <div type="textpart" subtype="incipit">
    <ab>ስሉሥ፡ ቅዱስ፡ ዘያሌቡ፡ ወኢይትሌቡ፡ ዘያዔውቅ፡ ወኢይትዓወቅ፡ ዘያኤምር፡ ወኢይትአመር፡ ዘይሄሊ፡ ወኢይትሀለይ፡ ዘይጤይቅ፡ ወኢይጠየቅ፡ ዘይእኅዝ፡ ወኢይትአኃዝ፡</ab>
 </div>
@@ -110,17 +122,17 @@ and <ref type="mss" corresp="BLorient8192">BL Or. 8192</ref>, with which however
 <label>On fasting and meekness, for the third Sunday of Lent</label>
 </div>
 
-<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Sunday4">
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Sunday4" corresp="LIT6440Sunday4">
 </div>
 
-<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Sunday5">
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Sunday5" corresp="LIT6442Sunday5">
 </div>
 
-<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Sunday6">
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Sunday6" corresp="LIT6443Sunday6">
 </div>
 
 <div type="textpart" subtype="homily" xml:lang="gez" xml:id="Adoration" corresp="LIT6045SerataSegdat">
-<label>>Order of services for the Rite of Adoration, for the beginning of the Fast of the Apostles</label>
+<label>Order of services for the Rite of Adoration, for the beginning of the Fast of the Apostles</label>
 <note>This part is not a homily but a liturgical text. It appears very rarely in the collection.</note>
 </div>
 
@@ -158,11 +170,11 @@ on death, for the 9th hour of Good Friday</label>
 <label>On the transfiguration of Our Lord</label>
 </div>
 
-<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Mary">
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Mary" corresp="LIT1640Homily">
 <label>On Our Lady Mary</label>
 </div>
 
-<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Angels">
+<div type="textpart" subtype="homily" xml:lang="gez" xml:id="Angels" corresp="LIT2124OntheF">
 <label>On the angels</label>
 </div>
 

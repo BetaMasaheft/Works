@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" type="normalized" xml:id="t1">Qǝne</title>
+                <title xml:lang="gez" xml:id="t1">በምጽአተ፡ ክርስቶስ፡ ስንቃዊ፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t1">Ba-mǝṣʾata Krǝstos sǝnqāwi ... (Qǝne of kǝbr yǝʾǝti type)</title>
+                <title xml:lang="en" type="normalized" corresp="#t1">Through the advent of Christ, the musician, ...</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DE"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -34,12 +36,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>A <term key="Qene">qǝne poem</term>, without the indication of author and type (probably <term key="KebrYeeti">kǝbr yǝʾǝti</term> type, 
+                    for <term key="EzelMode">ʿǝzl</term> or <term key="GeezMode">gǝʿǝz</term>  modes).</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Poetry"/>
+                    <term key="Qene"/>
+                    <term key="KebrYeeti"/>
                 </keywords>
             </textClass>
             <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
@@ -50,15 +55,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography"/>
-         <!---->
-            <div type="edition" xml:lang="gez">
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT5129Qene" passive="IVEf45"/>
+                </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" xml:lang="gez">
+                    <note>The text follows the description of <ref type="mss" corresp="IVEf45"/>, see <bibl><ptr target="bm:Turaev1906rukopisi"/>
+                            <citedRange unit="page">130</citedRange></bibl>.</note>                   
               <ab>
-                <l>በምጽአተ፡ ክርስቶስ፡ ስንቃዊ፡</l>
-                <l>በከናፍረ፡ ብእሲት፡ ዘማ፡ ወበመሥገርትየ፡ አፈ፡ ነዓዊ፡</l>
-                <l>ኦካህን፡ ትምክህተ፡ ቤቱ፡ ለሌዊ፡</l>
-                <l>ለምንት፡ ሞትከ፡ እምትሙት፡ ዘማዊ።</l>
+                  <l n="1">በምጽአተ፡ ክርስቶስ፡ ስንቃዊ፡</l>
+                  <l n="2">በከናፍረ፡ ብእሲት፡ ዘማ፡ ወበመሥገርትየ፡ አፈ፡ ነዓዊ፡</l>
+                  <l n="3">ኦካህን፡ ትምክህተ፡ ቤቱ፡ ለሌዊ፡</l>
+                  <l n="4">ለምንት፡ ሞትከ፡ እምትሙት፡ ዘማዊ።</l>
               </ab>
+                </div>
+                
+                <div type="translation" xml:lang="en" xml:id="translationEthio" corresp="#etiopica">                    
+                        <ab>
+                            <l n="1">Through the advent of Christ, the musician,</l>
+                            <l n="2">Through the lips of a lady, the adulteress, and through my trap, the mouth of the hunter,</l>
+                            <l n="3">Oh priest, glory of the house of Levi,</l>
+                            <l n="4">You the adulterer, why (does) your death (come) before she would die?</l>
+                        </ab>
+                </div>
             </div>
         </body>
     </text>

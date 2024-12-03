@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ግንዘት፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa gǝnzat</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa gǝnzat (general record)</title>
             <title xml:lang="en" corresp="#t1">Book of the Funeral Ritual</title>
             <title type="short">Genz.</title>
             <editor role="generalEditor" key="AB"/>
@@ -109,14 +109,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <abstract>
             <p>
-               Collection of texts used for the funeral service and the preparation of the body for the burial. It is also supposed to grant forgiveness to the sins of the dead.
-               The time of the composition of the work is unknown. The oldest extant manuscripts date to the 15th century.
+               Collection of texts used for the funeral service and the preparation of the body for the burial.
+               It is also supposed to grant forgiveness to the sins of the dead.
+               The time of the composition of the work is unknown.
+               The oldest extant manuscripts date to the 15th century. There is a number of
+               versions of the work, apart from the standard text printed in the contemporary
+               church editions and found in recent manuscripts.
             </p>
          </abstract>
          <textClass>
             <keywords>
-               <term key="ChristianLiterature"/>
-               <term key="RitualsAndRites"/>
+              <term key="ChristianLiterature"/>
+              <term key="Liturgy"/>
+              <term key="Prayers"/>
+              <term key="Rituals"/>
+              <term key="RitualsAndRites"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -127,6 +134,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2016-09-06">Small change </change>
          <change who="DR" when="2017-04-04">Added keywords</change>
+         <change when="2021-08-02" who="DE">Updated text structure</change>
+         <change when="2022-09-07" who="DE">Updated abstract and bibliography, upgraded to general record</change>
+         <change when="2023-03-17" who="MV">Added additional textparts</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -136,7 +146,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <relation name="saws:contains" active="LIT1931Mashaf" passive="LIT3843BookTh"/>
             <relation name="saws:contains" active="LIT1931Mashaf" passive="LIT2177Prayer"/>
             <relation name="saws:contains" active="LIT1931Mashaf" passive="LIT3841Homily"/>
-            <relation name="saws:contains" active="LIT1931Mashaf" passive=" LIT1644Homily"/>
+            <relation name="saws:contains" active="LIT1931Mashaf" passive="LIT1644Homily"/>
             <relation name="saws:contains" active="LIT1931Mashaf" passive="LIT4500Mashaf"/>
             <relation name="saws:contains" active="LIT1931Mashaf" passive="LIT1629Homily">
                <desc>The <foreign xml:lang="gez">Dǝrsān baʾǝnta ʾǝlla nomu kāhǝnāt wa-diyāqonāt</foreign> is contained in most manuscripts of the <foreign xml:lang="gez">Maṣḥafa gǝnzat</foreign>.
@@ -148,12 +158,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <relation name="saws:contains" active="LIT1931Mashaf" passive="LIT4346Prayer">
                <desc>The Ṣalot baʾǝnta ʾǝlla nomu circulates independently in <ref type="mss" corresp="BAVet18"/>.</desc>
             </relation>
-            <relation name="saws:contains" active="LIT1931Mashaf" passive="LIT1758Lefafa                LIT1915Mashaf">
+            <relation name="saws:contains" active="LIT1931Mashaf" passive="LIT1758Lefafa">
+               <desc>The Lǝfāfa ṣǝdǝq and the Maṣḥafa ʾardǝʾt circulate both as independent works and as parts of the Maṣḥafa gǝnzat</desc>
+            </relation>
+            <relation name="saws:contains" active="LIT1931Mashaf" passive="LIT1915Mashaf">
                <desc>The Lǝfāfa ṣǝdǝq and the Maṣḥafa ʾardǝʾt circulate both as independent works and as parts of the Maṣḥafa gǝnzat</desc>
             </relation>
             <relation name="saws:contains" active="LIT1931Mashaf" passive="LIT3957SalotaB">
                <desc>The Ṣalota burāke za-Bāsǝlyos is also part of <ref type="work" corresp="LIT1960Mashaf"/> and occurs at least once independently
                   in <ref type="mss" corresp="BNFet71"/>.</desc>
+            </relation>
+            <relation name="betmas:formerlyAlsoListedAs" active="LIT1931Mashaf" passive="LIT6155MashafaGenzat">
+            <desc>The record was supposed to be for a shorter version of the work which was poorly identified.</desc>
             </relation>
          </listRelation>
          <div type="bibliography">
@@ -175,18 +191,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>
             </listBibl>
 
-       
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Dobberahn1997Begräbnis"/>
+               </bibl>
+
+               <bibl>
+                  <ptr target="bm:Dobberahn1997Gedenken"/>
+               </bibl>
+
+            </listBibl>
+
+
          </div>
 
          <div type="edition">
+           <note>This division into textparts follows strictly
+             neither specific manuscript nor church editions but gathers parts of the
+           work that can appear in manuscripts in varying form and sequence.</note>
             <div type="textpart" xml:id="Intro">
                <label>Introduction</label>
             </div>
             <div type="textpart" xml:id="Linen">
-               <label>Ṣalot lāʿla magnaz  (<foreign xml:lang="gez">ጸሎት፡ ላዕለ፡ መግነዝ፡</foreign>)</label>
+               <label>Ṣalot lāʿla magnaz (<foreign xml:lang="gez">ጸሎት፡ ላዕለ፡ መግነዝ፡</foreign>)</label>
             </div>
             <div type="textpart" xml:id="Departure">
-               <label>Prayer for the departure of the soul  (<foreign xml:lang="gez">ጸሎት፡ በእንተ፡ ፀአተ፡ ነፍስ፡</foreign>)</label>
+               <label>Prayer for the departure of the soul (<foreign xml:lang="gez">ጸሎት፡ በእንተ፡ ፀአተ፡ ነፍስ፡</foreign>)</label>
             </div>
             <div type="textpart" xml:id="Soul">
                <label>Supplication for the soul (<foreign xml:lang="gez">ናስተበቍዕ፡ በል፡ ፈኑ፡ ላዕሌነ፡</foreign>)</label>
@@ -238,13 +268,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <label>Funeral procession: readings and prayers for the "greeting of tabot" by the deceased</label>
                </div>
             </div>
-            <div type="textpart" corresp="LIT2042Nagarb"/>
-            <div type="textpart" corresp="LIT3843BookTh"/>
+            <div type="textpart" xml:id="Passing" corresp="LIT2042Nagarb">
+              <label>Prayer of Athanasius for the passing of the soul</label>
+              </div>
+            <div type="textpart" xml:id="Jerusalem" corresp="LIT3843BookTh">
+              <label>The book that came from Jerusalem</label>
+              </div>
             <div type="textpart" xml:id="RichMan">
                <label>Story of the release of an impure rich man from Hell</label>
             </div>
             <div type="textpart" xml:id="Tazkar">
-               <label>Discourse about the necessity of remembrance feast (<foreign xml:lang="gez">ተዝካር፡</foreign>)</label>
+               <label>Discourse about the necessity of the commemoration of the dead</label>
+               <note>The following incipit and explicit are taken from <ref type="mss" corresp="BDLaethf33"/>.</note>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ንግበር፡ ተዝካሮሙ፡ ለሙታን። በዕጣን፡ ወበቍርባን፡ እስመ፡ ይበቍዖሙ፡ ወይከውን፡ ዕረፍተ፡ ለነፍሳቲሆሙ። በከመ፡ ትቤሎ፡ እግዝእትነ፡ ማርያም፡ 
+                     ለብፁዕ፡ ጴጥሮስ፡ ሊቀ፡ ሐዋርያት፡ ወሶበ፡ ተስእለቶ። እንዘ፡ ይብላ፡ መሥዋዕተ፡ ወቍርባን፡ ዘይትገበር፡ በቤተ፡ ክርስቲያን፡ ምንተ፡ ይበቍዖሙ፡ 
+                     ለሙታን፡ ወአውሥአት፡ ወትቤሎ፡ እምጼና፡ ገነት።
+                  </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                     ሐየውነ፡ ላዕለ፡ ምድር፡ ከመ፡ ማቱሳላ፡ ዘሐይወ፡ ዘ፻ወ፰፡ ዓመት፡ አው፡ ከመ፡ ኖኃ፡ ዘሐየወ፡ ፺፡ ፻፡ ፶፡ ዓመት፡ አልብነ፡ ኀበ፡ ናመስጥ፡ 
+                     እምኔሁ፡ ወንስአሎ፡ ለእግዚአብሔር፡ ኢየሱስ፡ ክርስቶስ፡ ያድኅብ፡ እምኃጢአት፡ ዘሎቱ፡ ስብሐት፡ ወዕበይ፡ ወአኰቴት፡ ምስለ፡
+                     ኄር፡ አቡሁ፡ ወመንፈስ፡ ቅዱሳን፡ ይእዜኒ፡ ወዘልፈኒ፡ ለዓለመ፡ ዓለም፡ አሜን።
+                  </ab>
+               </div>
             </div>
             <div type="textpart" xml:id="Matthew">
                <label>Prayer of Matthew the Apostle over deceased men and women (<foreign xml:lang="gez">ጸሎተ፡ ማቴዎስ፡</foreign>)</label>
@@ -255,6 +304,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <div type="textpart" xml:id="Absolution">
                <label>Absolution and prayers</label>
             </div>
+            <div type="textpart" xml:id="RanksSupplications">
+              <label>Supplications or readings for the Dead of various ages and ranks</label>
             <div type="textpart" xml:id="Priests">
                <label>Supplications and prayers over deceased priests</label>
             </div>
@@ -291,9 +342,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <div type="textpart" xml:id="WomenHolyWeek">
                <label>Readings and prayers over women deceased during the Holy Week</label>
             </div>
+            </div>
             <div type="textpart" xml:id="AllDeceased">
                <label>Prayers over all the deceased (<foreign xml:lang="gez">ስእለት፡ ላዕለ፡ ኵሎሙ፡ ምዉታን፡</foreign>)</label>
             </div>
+            <div type="textpart" xml:id="ReadingsOccasions">
+              <label>Readings for various occasions</label>
             <div type="textpart" xml:id="Third">
                <label>Reading for the 3rd day after burial</label>
             </div>
@@ -303,6 +357,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <div type="textpart" xml:id="Twelfth">
                <label>Reading for the 12th day after burial</label>
             </div>
+               <div type="textpart" xml:id="Twentieth">
+                  <label>Reading for the 20th day after burial</label>
+               </div>
             <div type="textpart" xml:id="Thirtieth">
                <label>Reading for the 30th day after burial</label>
             </div>
@@ -323,6 +380,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </div>
             <div type="textpart" xml:id="Anniversary">
                <label>Reading for the anniversary of the burial </label>
+            </div>
             </div>
             <div type="textpart" xml:id="HolyWater">
                <label>Readings over the holy water</label>
@@ -370,7 +428,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </div>
             </div>
             <div type="textpart" xml:id="Peace">
-               <label>Prayer pronounced after the Gospel for those who died in the peace of God (<foreign xml:lang="gez">ጸሎት፡ ድኅረ፡ ወንጌል፡ ዘይትነበብ፡ ላዕለ፡ ኵሎሙ፡ ሙታን፡ በሰላመ፡ እግዚአብሔር፡</foreign>)</label>
+               <label>Prayer pronounced after the Gospel for those who
+                 died in the peace of God (<foreign xml:lang="gez">ጸሎት፡ ድኅረ፡ ወንጌል፡ ዘይትነበብ፡ ላዕለ፡ ኵሎሙ፡ ሙታን፡ በሰላመ፡ እግዚአብሔር፡</foreign>)</label>
             </div>
             <div type="textpart" xml:id="Forgiveness">
                <label>Prayer of forgiveness</label>
@@ -399,6 +458,96 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <div type="textpart" xml:id="AntiphonsPilgrims">
                   <label>Antiphons to the pilgrims (<foreign xml:lang="gez">መዋሥዕት፡ ዘፈላስያን፡</foreign>)</label>
                </div>
+            </div>
+            <div type="textpart" xml:id="Efficacy">
+              <label>Narrative regarding the efficacy of offerings and prayers for the dead</label>
+            </div>
+            <div type="textpart" xml:id="Exhortation">
+               <label>Exhortations to be read for all dead before the burial</label>
+               <note>The following incipit and explicit are taken from <ref type="mss" corresp="BDLaethf33"/>.</note>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ተግሣጽ፡ ዘይትነበብ፡ ላዕለ፡ ኵሎሙ፡ ምዉታን፡ በጊዜ፡ ግንዘት፡ ላዕሌሆሙ፡ ስብሐት፡ ለእግዚአብሔር፡ ፈጣሪ፡ ወመንሥኢ፡ ኃያል፡ መሐሪ፡ ዘውእቱ፡ 
+                     ዘውስተ፡ እዴሁ፡ ሥልጣነ፡ ሞት፡ ወሕይወት፡  ወትፍሥሕት፡ ወገሀናም። ዘይብል፡ ኀበ፡ ተጋብኡ፡ አው፡ በስምየ፡ እሄሉ፡ አነ፡ ውስተ፡ ማእከሎሙ፡
+                     ወኵሎ፡ ዘሰአልክምዎ፡ በስምየ፡ በእንቲአሁ፡ እገብር፡ ለክሙ፡
+                  </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                     እምድኅሬሁ፡ በአስተብቍዖተ፡ እግዝእትነ፡ ድንግል፡ ንጽሕት፡ ወበረከታተ፡ እለ፡ ምግባራት፡ ወሥምረታት፡ ወአስተብቍዖታተ፡ 
+                     ለዘተወክፈት። ወአስተብቍዖቶሙ፡ እምሰማዕት፡ ወቅዱሳን፡ ወዘአሥመሮ፡ ወዘያሠምሮ፡ አሜን። ወስብሐት፡ ለእግዚአብሔር፡ ወላዕሌነ፡ ይኩን፡ 
+                     ምሕረቱ፡ እስከ፡ ለዓለመ፡ ዓለም፡ አሜን።
+                  </ab>
+               </div>
+            </div>
+            <div type="textpart" xml:id="Order">
+               <label>Order to be read for the dead after the burial</label>
+               <note>The following incipit and explicit are taken from <ref type="mss" corresp="BDLaethf33"/>.</note>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ሥርዓት፡ ዘይትነበብ፡ ላዕለ፡ ምዉታን፡ እምድኅረ፡ ግንዘት፡ ስብሐት፡ ለእግዚአብሔር፡ ስፉሐ፡ ሀብት፡ ውዱስ፡ አምላክ፡ በእንተ፡ ጸጋቲሁ፡ ዘአስማቲሁ። 
+                     ስን፡ ዘአዘዘ፡ ወፈትሐ፡ ወፈጠረ፡ ወአስተዳለወ፡ ወሥሉሠ፡ በህላዌሁ፡ ማኅየዊት፡ ብሑት፡ ርእሱ፡ ባሕራዊት፡ ዘአጸገወ፡ ኵሎ፡ ዓለመ፡ በእንተ፡ አምልኮቱ፡ 
+                     ወአገበሮሙ፡ በእንተ፡ ስብሐቱ፡ ወረሰዮሙ፡ ታቦተ፡ መንፈሳዊት፡
+                  </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                     ይፈትዉ፡ ለተመይጦትከ፡ ወአኃዊከ፡ ወአግብርቲከ፡ ይጸንሕ፡ በጽሕትከ። ኮኑ፡ ኵሎሙ፡ እምድኅሬከ፡ እጓለ፡ ማውታ፡ ወረቦሙ፡ ሕማመ፡ 
+                     ወምንዳቤ፡ ወኀሳር፡ አይቴ፡ ስንከ፡ መዓድም፡ ወልብከ፡ ብሩህ፡ ወራእይከ፡ 
+                     መፍርህ።
+                  </ab>
+               </div>
+            </div>
+               <div type="textpart" xml:id="Penance2">
+                  <label>Prayer of penance</label>
+               <note>The following incipit and explicit are taken from <ref type="mss" corresp="BDLaethf33"/>.</note>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ጸሎተ፡ ንስሐ፡ ካልእ፡ እግዚእ፡ እግዚአብሔር፡ አኃዜ፡ ዓለም፡ ብሑተ፡ ሥልጣን፡ ወስም፡ ቀዳማዊ፡ ዘእንበለ፡ ጥንት፡ ወዳኅራዊ፡ ዘእንበለ፡ ፍጽም፡ ዘትነብር፡ 
+                     ውስተ፡ አርያም፡ መንበረ፡ ስብሐቲከ፡ ዘኢይተረጐም፡ ዘልብሰትከ፡ አፍሐም፡
+                  </ab>
+               </div>
+                  <div type="textpart" subtype="explicit" xml:lang="gez">
+                     <ab>
+                        ሀበነ፡ ንግበር፡ ሥምረትከ፡ በኵሉ፡ ጊዜ፡ ወጸሐፍ፡ አስማቲነ፡ በመንግሥተ፡ ሰማያት፡ ምስለ፡ ኵሎሙ፡ ቅዱሳን፡ ወሰማዕት፡ በኢየሱስ፡ 
+                        ክርስቶስ፡ እግዚእነ፡ ዘቦቱ፡ ለከ፡ ምስሌሁ፡ ወምስለ፡ ቅዱስ፡ መንፈስ፡ ስብሐት፡ ወእኂዝ፡ ይእዜኒ፡ ወዘልፈኒ፡ ወለዓለመ፡ ዓለም፡ አሜን።
+                     </ab>
+                  </div>
+            </div>
+               <div type="textpart" xml:id="Penance3">
+                  <label>Other prayer of penance</label>
+               <note>The following incipit and explicit are taken from <ref type="mss" corresp="BDLaethf33"/>.</note>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ጸሎተ፡ ንስሐ፡ እግዚአ፡ አኃዜ፡ ኵሉ፡ ዓለም፡ አንተ፡ ውእቱ፡ ዘትፌውስ፡ ቍስለ፡ ነፍስነ፡ ወሥጋነ፡ ወመንፈስነ፡ እስመ፡ አንተ፡ ውእቱ፡ ዘትቤ፡ በአፈ፡ 
+                     ወልድከ፡ ዋሕድ፡ እግዚእነ፡ ወአምላክነ፡ ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ፡ ዘይቤሎ፡ ለአቡነ፡ ጴጥሮስ፡ አንተ፡ ኰኵሕ፡ ወዲበ፡ ዛቲ፡ ኵኵሕ፡ አሐንጻ፡ 
+                     ለቤተ፡ ክርስቲያን፡
+                  </ab>
+               </div>
+                  <div type="textpart" subtype="explicit" xml:lang="gez">
+                     <ab>
+                        ወአናሕሲ፡ እስመ፡ ሰብእ፡ ዘእንበለ፡ ኃጢአት፡ አልቦ፡ ዘሞተ፡ ዘእንበለ፡ አንተ፡ ባሕቲትከ፡ ልዑል፡ እምሰማያት፡ ወንጹሕ፡ 
+                        እምኃጢአት፡ ወለከ፡ ይደሉ፡ ስብሐት፡ ወከብር፡ ኦሥሉስ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ እስከ፡ ነፍስ፡ ደኃሪት፡ ወላዕሌነ፡
+                        ይኩን፡ ሣህል፡ ወምሕረት፡ ይእዜኒ፡ ወዘልፈኒ፡ ወለዓለመ፡ ዓለም፡ አሜን።
+                     </ab>
+                  </div>
+               </div>  
+               <div type="textpart" xml:id="PrayerBlessing">
+                  <label>Prayer of blessing 'O holy Trinity, Father, Son and Holy Spirit, one God, bless your people'</label>
+               <note>The following incipit and explicit are taken from <ref type="mss" corresp="BDLaethf33"/>.</note>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     ጸሎተ፡ ቡራኬ። ኦሥሉስ፡ ቅዱስ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ። አብርክ፡ ዲበ፡ ሕዝብከ፡ ፍቁራን፡ ክርስቶሳዊያን፡ በበረከት፡ መንፈሳዊት፡ ወፈኑ፡ 
+                     ላዕሌነ፡ ጸጋ፡ መንፈስ፡ ቅዱስ። ወረሲ፡ ኃዋኅወ፡ ቤተ፡ ክርስቲያንከ፡ ቅድስት፡ ርኅወ፡ ለነ፡ በአሚን፡ ወበምሕረት።
+                  </ab>
+               </div>
+                  <div type="textpart" subtype="explicit" xml:lang="gez">
+                     <ab>
+                        ኢየሱስ፡ ክርስቶስ፡ ወለኵሎሙ፡ እለ፡ <gap reason="illegible" unit="chars" quantity="2"/>ዙነ፡ ከመ፡ ንዘክሮሙ፡ በምሕረትከ፡ በውስተ፡ ምንግሥትከ፡ ሰማያዊት፡
+                        ወሊተኒ፡ ለ<gap reason="illegible" unit="chars" quantity="2"/>እ፡ ገብርከ፡ ተዘ<gap reason="illegible" unit="chars" quantity="2"/> ኦእግዚኦ፡ አድኅ<gap reason="illegible" unit="chars" quantity="2"/>ዝበከ፡ 
+                        ወባረክ፡ ር<gap reason="illegible" unit="chars" quantity="2"/>ከ፡ ረአዮሙ፡ ወ<gap reason="illegible" unit="chars" quantity="3"/>ሎሙ፡ እስከ፡ ለዓለመ፡ ዓለም፡ አሜን።
+                     </ab>
+                  </div>
             </div>
          </div>
       </body>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1960Mashaf">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1960Mashaf">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -52,6 +53,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="DR" when="2017-03-27">Minor correction</change>
          <change who="DR" when="2017-04-04">Added keywords</change>
          <change when="2018-03-27" who="ES">added prayers/textparts from the Maṣḥāfa nǝfq in ESagm009</change>
+         <change when="2024-09-20" who="JK">added prayers/textparts from UppEt20</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -103,7 +105,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <!-- more textparts to be taken from ESam007 -->
                
                <div type="textpart" xml:id="Incense">
-                  <label>Prayers of the Incense</label>
+                  <label>Prayers of the Incense (services, with parts for the priest, the deacon, and the people)</label>
                   <div type="textpart" xml:id="Incense1" corresp="LIT5449Salotaetanmorning">
                
                      <label>Morning Prayer of the Incense, from Egypt</label>
@@ -113,11 +115,56 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   
                      <label>Evening Prayer of the Incense, from Egypt</label>
                   </div>
-               
-               
                </div>
                
                
+               
+               
+               <div type="textpart" xml:id="PrayerIncense" corresp="LIT2252salota">
+                  <label>Prayers of the Incense (collection of prayers)</label>
+                  <note>This section follows the attestation in <ref type="mss" corresp="UppEt20"></ref>. 
+                     The prayers are different from <ref target="#Incense"/>.</note>
+                  
+                  <div type="textpart" subtype="chapter" xml:id="Basalam" corresp="LIT2252salota#Basalam">
+                  </div>
+                  
+                  <div type="textpart" subtype="chapter" xml:id="Tawakkafetan" corresp="LIT2252salota#Tawakkafetan">
+                  </div>
+                  
+                  <div type="textpart" subtype="chapter" xml:id="Nesel" corresp="LIT2252salota#Nesel">
+                  </div>
+                  
+                  <div type="textpart" subtype="chapter" xml:id="Neselakka" corresp="LIT2252salota#Neselakka">
+                  </div>
+                  
+                  <div type="textpart" subtype="chapter" xml:id="Nesebhaka" corresp="LIT2252salota#Nesebhaka">
+                  </div>
+                  
+                  <div type="textpart" subtype="chapter" xml:id="Jeremy" corresp="LIT2252salota#Jeremy">
+                  </div>
+                  
+                  <div type="textpart" subtype="chapter" xml:id="Chrism" corresp="LIT2252salota#Chrism">
+                  </div>
+                  
+                  <div type="textpart" subtype="chapter" xml:id="Request" corresp="LIT2252salota#Request">
+                  </div>
+                  
+                  <div type="textpart" subtype="chapter" xml:id="Dead" corresp="LIT2252salota#Dead">
+                  </div>
+                  
+                  <div type="textpart" subtype="chapter" xml:id="Thanksaakkweto" corresp="LIT2252salota#Thanksaakkweto">
+                  </div>
+                  
+                  <div type="textpart" subtype="chapter" xml:id="Aakkweto" corresp="LIT2252salota#Aakkweto">
+                  </div>
+                  
+                  <div type="textpart" subtype="chapter" xml:id="Thanksemmesraw" corresp="LIT2252salota#Thanksemmesraw">
+                  </div>
+                  
+               </div>
+            
+            
+            
             
             
             

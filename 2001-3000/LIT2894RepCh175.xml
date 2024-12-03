@@ -4,8 +4,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to Our Lady Mary</title>
+           <title xml:lang="gez" xml:id="t1">መልክአ፡ ቍስቋም፡</title>
+           <title xml:lang="gez" corresp="#t1" type="normalized">Malkǝʾa Qʷǝsqʷām</title>
+           <title xml:lang="en" corresp="#t1">Image of Qʷǝsqʷām</title>
+            <title xml:lang="en" corresp="#t1">Image of [the Arrival of Mary at Mount] Koskam</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="AD"></editor>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -14,20 +18,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -48,25 +47,186 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-15">Added keywords and incipit</change>
+         <change who="AD" when="2021-04-11">Updated title</change>
+         <change who="ES" when="2024-09-27">Added the text, relations and bibl (A. Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+              
+               <relation name="skos:exactMatch" active="LIT2894RepCh175" passive="https://w3id.org/malke/2894/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT2894RepCh175" passive="PRS6819Mary"></relation>
+            </listRelation>
             <listBibl type="editions">
+               
+               <bibl><ptr target="bm:MgWebsite"/></bibl>               
+            
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">175</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምኪ፡ በመጽሐፈ፡ ሕይወት፡ ልኩዕ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <note>The following text reproduced after <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምኪ፡ በመጽሐፈ፡ ሕይወት፡ ልኩእ፨</l>
+                  <l n="2">ወለሥዕርትኪ፡ ጸሊም፡ ከመ፡ ሕብረ፡ ቋዕ፨</l>
+                  <l n="3">ፈላሲተ፡ ቍስቋም፡ ማርያም፡ ተስፋ፡ ፈላስያን፡ ሰብእ፨</l>
+                  <l n="4">ቤዛ፡ ይኩነኒ፡ ለገብርኪ፡ ተሰዶትኪ፡ በግፍዕ፨</l>
+                  <l n="5">ወእምዐይነ፡ ርግብ፡ ዐይንኪ፡ ዘወፅኣ፡ አንብዕ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለርእስኪ፡ ወለሥነ፡ ገጽኪ፡ ኮከብ፨</l>
+                  <l n="2">ለዐውደ፡ ቅርነ፡ ብኪ፡ ሥርግው፡ ወለዐይንኪ፡ ዘርግብ፨</l>
+                  <l n="3">ማርያም፡ ደክታም፡ በሞተ፡ እም፡ ወአብ፨</l>
+                  <l n="4">ሚመንክር፡ ኀዘንኪ፡ ወገዐርኪ፡ ዕፁብ፨</l>
+                  <l n="5">እስከ፡ ደብረ፡ ቍስቋም፡ ሰደዱኪ፡ መሪራን፡ ሕዝብ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለአእዛንኪ፡ ሰማዕያተ፡ ሕጉ፡ ለአምላክ፨</l>
+                  <l n="2">ለሥነ፡ መላትሕኪ፡ ጽጌ፡ ወለጼና፡ አንፍኪ፡ ምስክ፨</l>
+                  <l n="3">ማርያም፡ ቡርክት፡ ወላዲተ፡ ሕፃን፡ ቡሩክ፨</l>
+                  <l n="4">ባላሔ፡ ይኩነኒ፡ እመንሱት፡ ወእምነ፡ ኵሉ፡ ሀከክ፨</l>
+                  <l n="5">ውስተ፡ ፍኖተ፡ ቍስቋም፡ ምስሌኪ፡ ዘሖረ፡ መልአክ፨</l>
+               </lg>
+               <lg type="stanza" n="4">
+                  <l n="1">ሰላም፡ ለከናፍርኪ፡ ወለአፉኪ፡ ነቅዐ፡ ከርቤ፨</l>
+                  <l n="2">ለአስናንኪ፡ አዕናቍ፡ ምስለ፡ ልሳንኪ፡ ቀርነ፡ ይባቤ፨</l>
+                  <l n="3">ውስተ፡ ደብረ፡ ቍስቋም፡ ማርያም፡ እንዘ፡ ዕርቅተ፡ ገጽ፡ እምግልባቤ፨</l>
+                  <l n="4">ሚመጠነ፡ ተሰደድኪ፡ ወተመንደብኪ፡ ምንዳቤ፨</l>
+                  <l n="5">ባሕቱ፡ መንፈስ፡ ቅዱስ፡ ኮነኪ፡ ዐቃቤ፨</l>
+               </lg>
+               <lg type="stanza" n="5">
+                  <l n="1">ሰላም፡ ለቃልኪ፡ ወለእስትንፋስኪ፡ ምስለ፡ ጕርዔ፨</l>
+                  <l n="2">ለክሳድኪ፡ አሐቲ፡ ወለመከፍትኪ፡ ክልኤ፨</l>
+                  <l n="3">ውስተ፡ ደብረ፡ ቍስቋም፡ ማርያም፡ ጊዜ፡ ባርኮትኪ፡ ላዕለ፡ ጉባኤ፨</l>
+                  <l n="4">ባርክኒ፡ በንባብኪ፡ ወጸውዕኒ፡ ጽዋዔ፨</l>
+                  <l n="5">እስመ፡ ልደ፡ ቤትኪ፡ አነ፡ ወዘለኪ፡ ቍልዔ፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለዘባንኪ፡ ወለእንግድዓኪ፡ ምስለ፡ ሕፅኑ፨</l>
+                  <l n="2">ለአእዳውኪ፡ ቅዱሳት፡ ወለመዛርዕኪ፡ ዘበበ፡ በይኑ፨</l>
+                  <l n="3">ማርያም፡ በሊዮ፡ ለብርሃነ፡ ቍስቋም፡ ምሥራቀ፡ ስኑ፨</l>
+                  <l n="4">አንብዐ፡ ገብርከ፡ ዘኢይትዌሰን፡ ኀዘኑ፨</l>
+                  <l n="5">ፈጣሬ፡ አዕይትን፡ ወልድየ፡ ኢትሬኢ፡ ቦኑ፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለኵርናዕኪ፡ ወለእመታትኪ፡ ዘኢይትጋወሩ፨</l>
+                  <l n="2">ለእራኃትኪ፡ ክልኤ፡ ወለአጻብዕኪ፡ መጠነ፡ ዓሥሩ፨</l>
+                  <l n="3">ማርያም፡ ፃማዊት፡ ወንድፍት፡ በሐጸ፡ ፍቅሩ፨</l>
+                  <l n="4">ኣስተበፅዕ፡ አንሰ፡ ለበኵርኪ፡ አእባነ፡ ቍስቋም፡ ደብሩ፨</l>
+                  <l n="5">ወመሬተ፡ ዘኬደ፡ በእግሩ፨</l>
+               </lg>
+               <lg type="stanza" n="8">
+                  <l n="1">ሰላም፡ ለአጽፋረ፡ እዴኪ፡ ወለገቦኪ፡ ልፁቀ፡ ከርሥ፨</l>
+                  <l n="2">ለልብኪ፡ ንጹሕ፡ ዘኢይቀርቦ፡ ደነስ፨</l>
+                  <l n="3">አመ፡ ጐየይኪ፡ ማርያም፡ ውስተ፡ ደብረ፡ ቍስቋም፡ ሐዳስ፨</l>
+                  <l n="4">ቤዛ፡ ኮንዎ፡ ሕፃናት፡ ለሕፃንኪ፡ ክርስቶስ፨</l>
+                  <l n="5">ወህየንተ፡ ደሙ፡ ደሞሙ፡ ከዐወ፡ ሄሮድስ፨</l>
+               </lg>
+               <lg type="stanza" n="9">
+                  <l n="1">ሰላም፡ ለኵልያትኪ፡ ወለኅሊናኪ፡ ቀዲሙ፨</l>
+                  <l n="2">ለአማዑትኪ፡ ድኅረ፡ ወለንዋየ፡ ውሥጥኪ፡ በኍልቈ፡ ስሙ፨</l>
+                  <l n="3">ማርያም፡ ሐዳስ፡ ለብሉየ፡ መዋዕል፡ እሙ፨</l>
+                  <l n="4">ናሁ፡ ምስሌኪ፡ ኅሊናየ፡ በፍኖተ፡ ቍስቋም፡ ይፃሙ፨</l>
+                  <l n="5">ከመ፡ ሰሎሜ፡ ወዮሴፍ፡ ፃመዉ፡ ወደክሙ፨</l>
+               </lg>
+               <lg type="stanza" n="10">
+                  <l n="1">ሰላም፡ ለኅንብርትኪ፡ ወለድንግልናኪ፡ ስኑጽ፨</l>
+                  <l n="2">ለሐቌኪ፡ ሰላም፡ ቀዳሜ፡ አብራክ፡ አቍያጽ፨</l>
+                  <l n="3">ማርያም፡ ኅድሪ፡ ውስተ፡ ቤትየ፡ ሕኑጽ፨</l>
+                  <l n="4">አኮኑ፡ ኀደርኪ፡ በቍስቋም፡ ወአንሶሰውኪ፡ በግብጽ፨</l>
+                  <l n="5">እንዘ፡ በውስቴታ፡ ጣዖት፡ ዘብሩር፡ ወዕፅ፨</l>
+               </lg>
+               <lg type="stanza" n="11">
+                  <l n="1">ሰላም፡ ለአእጋርኪ፡ ወለሰኰናኪ፡ ምስለ፡ ቢጹ፨</l>
+                  <l n="2">ለመከየድኪ፡ ሰላም፡ ወለአፃብዕኪ፡ በበ፡ አንቀጹ፨</l>
+                  <l n="3">ሥዕለ፡ መንፈስ፡ ቅዱስ፡ ማርያም፡ ለእግዚአብሔር፡ ማሕተመ፡ ገጹ፨</l>
+                  <l n="4">መርቆሬዎስ፡ ወጊዮርጊስ፡ በመዐዛ፡ ፍቅርኪ፡ ሮጹ፨</l>
+                  <l n="5">ወማኅደረ፡ ስምዕ፡ ሎሙ፡ በቍስቋም፡ ሐነጹ፨</l>
+               </lg>
+               <lg type="stanza" n="12">
+                  <l n="1">ሰላም፡ ለአጽፋረ፡ እግርኪ፡ ወለቆምኪ፡ ቤተ፡ ሥጋ፨</l>
+                  <l n="2">ለዐቅመ፡ መልክእኪ፡ ሰላም፡ ወለፀአተ፡ ነፍስኪ፡ እመንሰጋ፨</l>
+                  <l n="3">ነጋዲተ፡ ቍስቋም፡ ማርያም፡ እንተ፡ ተሰመይኪ፡ ምልእተ፡ ጸጋ፨</l>
+                  <l n="4">ይትካፈሉ፡ በኂሩትኪ፡ ሕዋሳትየ፡ እንግልጋ፨</l>
+                  <l n="5">በረከተኪ፡ ዘምሉእ፡ እምንትጋ፨</l>
+               </lg>
+               <lg type="stanza" n="13">
+                  <l n="1">ሰላም፡ ለበድነ፡ ሥጋኪ፡ ወለግንዘትኪ፡ ዘአሜሃ፨</l>
+                  <l n="2">ለመቃብርኪ፡ ሕትምት፡ ወለፍልሰትኪ፡ ዘእምኔሃ፨</l>
+                  <l n="3">ምክሐ፡ ደብረ፡ ቍስቋም፡ ማርያም፡ ወለጌቴሴማን፡ ሥነ፡ ተድላሃ፨</l>
+                  <l n="4">አዕርጊ፡ ነፍሰ፡ ዚአየ፡ ኀበ፡ ብዕለ፡ ነፍስኪ፡ ሰፍሐ፨</l>
+                  <l n="5">ወኀበ፡ ሥጋኪ፡ አፍልሲ፡ ሥጋሃ፨</l>
+               </lg>
+               <lg type="stanza" n="14">
+                  <l n="1">በኍልቈ፡ ክልኤቱ፡ ሱባዔያት፡ ዘአቅረብኩ፡ ለኪ፡ ማሕሌተ፨</l>
+                  <l n="2">ወእግረ፡ ኅሊናየ፡ ኦደ፡ እስከ፡ ደብረ፡ ቍስቋም፡ ፍኖተ፨</l>
+                  <l n="3">ኢያሕፅፅኒ፡ ማርያም፡ እምነ፡ ጋድያን፡ ዕሤተ፨</l>
+                  <l n="4">ወኢትበልኒ፡ ድኅረ፡ እሁበከ፡ እንተ፡ ንእስ፡ መክፈልተ፨</l>
+                  <l n="5">እስመ፡ ከማሆሙ፡ በሥጋ፡ ኢጻመውከ፡ አንተ፨</l>
+               </lg>
+               <lg type="stanza" n="15">
+                  <l n="1">ፈላሲተ፡ ቍስቋም፡ ማርያም፡ ጸወነ፡ መድኃኒት፡ ኩኒ፨</l>
+                  <l n="2">ለገብርኪ፡ እምእኩየ፡ ግዕዝ፡ ዘይትቃረነኒ፨</l>
+                  <l n="3">ፈድፋደሰ፡ እምልሳን፡ ዘይፈቅድ፡ ይሳነነኒ፨</l>
+                  <l n="4">ከድንኒ፡ ወሰውርኒ፤ ዕቀብኒ፡ ወተማሕፀንኒ፨</l>
+                  <l n="5">አድኅንኒ፡ ወባልሕኒ፤ እስመ፡ ኪያኪ፡ እትአመን፡ ወለኪ፡ እገኒ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለኪ፡ ማርያም፡ ንጽሕት፡ በአፈ፡ ኵሉ፡ ውድስት፨</l>
+                  <l n="2">ታቦት፡ አንቲ፡ ዘሙሴ፡ ጽላት፨</l>
+                  <l n="3">ዘሕግ፡ ወዘሥርዓት፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለኪ፡ ገይበ፡ ብሩር፡ ጽሪት፡ ወመቅድሐ፡ ጽሩይ፡ ሐሊብ፨</l>
+                  <l n="2">ማርያም፡ መሶብ፡ ዘመና፡ ልጉብ፨</l>
+                  <l n="3">እንተ፡ ጾርኪ፡ ሲሳየ፡ ሕዝብ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለኪ፡ ትርሲተ፡ ቤቱ፡ ሠናይት፡ ዘነቢይ፡ ሐጌ፨</l>
+                  <l n="2">ወወለት፡ አንቲ፡ ዘሰሎሞን፡ ሐርጌ፨</l>
+                  <l n="3">ማርያም፡ ዘመነ፡ ጽጌ፨</l>
+               </lg>
+               <lg type="stanza" n="4">
+                  <l n="1">ሰላም፡ ለኪ፡ እመ፡ ቅድው፡ በግዕ፡ ዘቀተልዎ፡ በግፍዕ፨</l>
+                  <l n="2">ለደብተራ፡ ስምዕ፨</l>
+                  <l n="3">ዘጳውሎስ፡ ረድእ፨</l>
+               </lg>
+               <lg type="stanza" n="5">
+                  <l n="1">ሰላም፡ ለኪ፡ ኦርያሬስ፡ ሰማይ፡ ልብስኪ፡ ወአሣእንኪ፡ እብላ፨</l>
+                  <l n="2">ጽጌ፡ ደንጐላት፡ ቀይሕ፡ ዘምድረ፡ ቈላ፨</l>
+                  <l n="3">ማርያም፡ ዘመነ፡ ተድላ፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለኪ፡ በመድበለ፡ ማኅበር፡ ጽፉቅ፨</l>
+                  <l n="2">እዌድሰኪ፡ በጻሕቅ፨</l>
+                  <l n="3">ከመ፡ ትምዓድኒ፡ ነገራተ፡ ጽድቅ፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለኪ፡ ተደንግሎ፡ ሥጋ፡ ወነፍስ፡ ለባሕቲትኪ፡ ኮነ፨</l>
+                  <l n="2">አመኒ፡ ወለድኪ፡ ሕፃነ፨</l>
+                  <l n="3">ኢረስሐ፡ ወኢማሰነ፨</l>
+               </lg>
+               <lg type="stanza" n="8">
+                  <l n="1">ሰላም፡ ለኪ፡ እሙ፡ በሊዮ፡ በእንቲአየ፡ ለፍሬ፡ ከርሥኪ፡ እብኖዲ፨</l>
+                  <l n="2">ላዕሌሁ፡ ምሕረተከ፡ ኢታጐንዲ፨</l>
+                  <l n="3">እመ፡ አኅዘነከ፡ ብእሲ፡ አባዲ፨</l>
+                  <l n="4">ቤዛ፡ ነፍሱ፡ በጺሕየ፡ ፍዲ፨</l>
+               </lg>
             </div>
          </div>
+         
+         
+         <listRelation>
+           <relation name="saws:isDifferentTo" active="LIT2894RepCh175" passive="LIT1862Malkea"/>
+         </listRelation>
       </body>
    </text>
 </TEI>

@@ -1,73 +1,494 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2900RepCh181">
-   <teiHeader xml:base="https://betamasaheft.eu/">
-      <fileDesc>
-         <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to ʾArsimā</title>
-            <editor role="generalEditor" key="AB"/>
-            <funder>Akademie der Wissenschaften in Hamburg</funder>
-         </titleStmt>
-         <publicationStmt>
-            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
-            <pubPlace>Hamburg</pubPlace>
-            <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
-               </licence>
-            </availability>
-         </publicationStmt>
-         <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
-         </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
-      </fileDesc>
-      <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
-            <xi:fallback>
-               <p>Definitions of prefixes used.</p>
-            </xi:fallback>
-         </xi:include>
-      </encodingDesc>
-      <profileDesc>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
-         <textClass>
-            <keywords scheme="#ethioauthlist">
-               <term key="Poetry"/>        
-               <term key="ChristianLiterature"/>
-               <term key="Hagiography"/>
-            </keywords>
-         </textClass>
-      </profileDesc>
-      <revisionDesc>
-         <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
-         <change who="MV" when="2017-06-01">Added keywords and incipit</change>
-      </revisionDesc>
-   </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <div type="bibliography">
-            <listBibl type="editions">
-               <bibl>
-                  <ptr target="bm:Chaine1913Rep"/>
-                  <citedRange unit="item">181</citedRange>
-               </bibl>
-            </listBibl>
-         </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                ሰላም፡ ለዝክረ፡ ስምኪ፡ ዘኆኅያቲሁ፡ አርባዕ።
-               </ab>
-            </div>
-         </div>
-      </body>
-   </text>
+  <teiHeader xml:base="https://betamasaheft.eu/">
+    <fileDesc>
+        <titleStmt>
+          <title xml:lang="gez" xml:id="t1">መልክአ፡ አርሲማ፡</title>
+          <title xml:lang="gez" corresp="#t1" type="normalized">Malkəʾa ʾArsimā</title>
+          <title xml:lang="en" corresp="#t1">Image of Hripsime</title>
+
+          <editor role="generalEditor" key="AB"/>
+          <editor key="AD"/>
+
+          <funder>Akademie der Wissenschaften in Hamburg</funder>
+        </titleStmt>
+        <publicationStmt>
+          <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+          <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+          <pubPlace>Hamburg</pubPlace>
+          <availability>
+              <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
+                <p>This file is licensed under the Creative Commons Attribution-ShareAlike 4.0.</p>
+              </licence>
+          </availability>
+        </publicationStmt>
+        <sourceDesc>
+          <p>Work of the literatures of Ethiopia and Eritrea</p>
+        </sourceDesc>
+        <sourceDesc>
+          <listWit>
+            <witness corresp="BLorient577" xml:id="A"/>
+            <witness corresp="EMML6993" xml:id="B"/>
+        </listWit>
+        </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:fallback>
+          <p>Definitions of prefixes used.</p>
+        </xi:fallback>
+      </xi:include>
+    </encodingDesc>
+    <profileDesc>
+        <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+        <textClass>
+          <keywords scheme="#ethioauthlist">
+              <term key="Poetry"/>        
+              <term key="ChristianLiterature"/>
+              <term key="Hagiography"/>
+          </keywords>
+        </textClass>
+    </profileDesc>
+    <revisionDesc>
+        <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+        <change who="MV" when="2017-06-01">Added keywords and incipit</change>
+        <change who="AD" when="2024-05-13">Added encoded critical edition and translation</change>
+    </revisionDesc>
+  </teiHeader>
+  <text xml:base="https://betamasaheft.eu/">
+    <body>
+
+      <div type="bibliography">
+        <listBibl type="editions">
+          <bibl>
+            <ptr target="bm:Chaine1913Rep"/>
+            <citedRange unit="item">181</citedRange>
+          </bibl>
+
+          <bibl>
+            <ptr target="bm:Dickinson2023Arsima"/>
+          </bibl>
+        </listBibl>
+
+        <listBibl type="translation">
+          <bibl>
+            <ptr target="bm:Dickinson2023Arsima"/>
+          </bibl>
+        </listBibl>
+      </div>
+    
+      <div type="edition" xml:lang="gez">
+
+        <lg type="stanza" n="1">
+          <l n="1">
+            <pb edRef="#A" n="167v"/><cb edRef="#A" n="b"/>
+            <pb edRef="#B" n="125v"/><cb edRef="#B" n="c"/>
+            ሰላም፡ ለዝክረ፡ ስምኪ፡ <choice><corr resp="AD">ዘሆህያቲሁ፡</corr><sic>ዘኆኅያቲሁ፡</sic></choice> አርባዕ፨
+          </l>
+          <l n="2">ከመ፡ ግጻዌሁ፡ ግቡር፡ ለመስቀለ፡ ክርስቶስ፡ እግዚእ፨</l>
+          <l n="3">አርሲማ፡ <app type="orthographic"><lem wit="#A">ብፅዕት፡</lem><rdg wit="#B" type="orthographic">ብፅእት፡</rdg></app> ዕግሥተ፡ መከራ፡ <app type="orthographic"><lem wit="#A">ወስምዕ፨</lem><rdg wit="#B">ወስምእ፨</rdg></app></l>
+          <l n="4">ውግዕኒ፡ እምአጥባትኪ፡ ሐሊበ፡ ፍሥሐ፡ ወፍግዕ፨</l>
+          <l n="5">ነገረ፡ ውዳሴኪ፡ እንብብ፡ በልሳን፡ <choice><corr resp="AD">ጥእጡእ፨</corr><sic>ጥዕጡዕ፨</sic></choice></l>
+        </lg>
+        
+        <lg type="stanza" n="2">
+          <l n="1">ሰላም፡ ለሥዕርተ፡ ርእስኪ፡ ወለርእስኪ፡ ክሉል፨</l>
+          <l n="2">ወለገጽኪ፡ ቀይሕ፡ ከመ፡ ጽጌ፡ ሮማን፡ ወኮል፨</l>
+          <l n="3">አርሲማ፡ <app type="orthographic"><lem wit="#A">መዋኢት፡</lem><rdg wit="#B">መዋዒት፡</rdg></app> መኳንንተ፡ ስሕተት፡ ወሐጕል፨</l>
+          <l n="4">ጸግወኒ፡ ዝቀ፡ አእምሮ፡ እምውዳሴኪ፡ <app type="orthographic"><lem wit="#A">ምዕቃል፨</lem><rdg wit="#B">ምእቃል፨</rdg></app></l>
+          <l n="5">ንስቲተ፡ እቅዳሕ፡ <choice><corr resp="AD">ወእክዐው፡</corr><sic>ወእክዓው፡</sic></choice> <app><lem wit="#B">በዔል፨</lem><rdg wit="#A">በዒል፨</rdg></app></l>
+        </lg>
+        
+        <lg type="stanza" n="3">
+          <l n="1">ሰላም፡ ለቀራንብትኪ፡ ወለአዕይንትኪ፡ <choice><corr resp="AD">ወርኀ፡</corr><sic>ወርኃ፡</sic></choice> <app type="orthographic"><lem wit="#A">ገሃህ፨</lem><rdg wit="#B">ገሐህ፨</rdg></app></l>
+          <l n="2">ወለአእዛ<pb edRef="#A" n="168r"/><cb edRef="#A" n="a"/>ንኪ፡ ጽልዋት፡ ኀበ፡ ቃለ፡ መልአክ፡ ፍሡሕ፨</l>
+          <l n="3">ገሊላዊት፡ አርሲማ፡ ለባሲተ፡ አ<pb edRef="#B" n="126r"/><cb edRef="#B" n="a"/>ሚን፡ ስቡሕ፨</l>
+          <l n="4">እፎ፡ <choice><corr resp="AD">ኢያፍርሀኪ፡</corr><sic>ኢያፍርሃኪ፡</sic></choice> <app type="orthographic"><lem wit="#A">እቶነ፡</lem><rdg wit="#B">ዕቶነ፡</rdg></app> ነበልባል፡ መፍርህ፨</l>
+          <l n="5"><app type="orthographic"><lem wit="#A">ወኢያደንገፀኪ፡</lem><rdg wit="#B">ወኢያደንገጸኪ፡</rdg></app> ምንተ፡ ጤገኑ፡ ፍሉሕ፨</l>
+        </lg>
+        
+        <lg type="stanza" n="4">
+          <l n="1">ሰላም፡ ለመላትሕኪ፡ እለ፡ ተጸፍዓ፡ ወተሰትራ፨</l>
+          <l n="2">ሶበ፡ በአእናፍኪ፡ ቦአ፡ <app><lem wit="#A">ለመርዓተ፡</lem><rdg wit="#B">በመርዓተ፡</rdg></app> ቍስቋም፡ መዓዛ፡ ፍቅራ፨</l>
+          <l n="3">ርእሰ፡ ፀርየ፡ ምትሪ፡ አርሲማ፡ ወስቅሊ፡ ውስተ፡ ደብተራ፨</l>
+          <l n="4">ወለተ፡ <app><lem wit="#B">ሜራራ፡</lem><rdg wit="#A">ሚራራ፡</rdg></app> ለሆሎፎርኒስ፡ ፀራ፨</l>
+          <l n="5">ዲበ፡ ርእሰ፡ ተድባብ፡ ከመ፡ ሰቀለት፡ <app type="orthographic"><lem wit="#A">ክሳዶ፡</lem><rdg wit="#B">ክሣዶ፡</rdg></app> መቲራ፨</l>
+        </lg>
+        
+        <lg type="stanza" n="5">
+          <l n="1">ሰላም፡ ለከናፍርኪ፡ ወለአፉኪ፡ ወለአስናንኪ፡ <app type="orthographic"><lem wit="#A">ሥነ፡</lem><rdg wit="#B">ስነ፡</rdg></app> እብላ፨</l>
+          <l n="2"><app><lem wit="#A">ለልሳንኪኒ፡</lem><rdg wit="#B">ለልሳኒኪኒ፡</rdg></app> ምስለ፡ እስትንፋሳ፡ ወቃላ፨</l>
+          <l n="3">ተመየጥኒ፡ አርሲማ፡ ለነዳይ፡ <choice><corr resp="AD">ኀሣሤ፡</corr><sic>ኃሣሤ፡</sic></choice> ተድላ፨</l>
+          <l n="4">ከመ፡ ተሀብኒ፡ <app type="orthographic"><lem wit="#A">ለኅብ<cb edRef="#A" n="b"/>ስተ፡</lem><rdg wit="#B">ለሕብስተ፡</rdg></app> ጸጋኪ፡ ክፍላ፨</l>
+          <l n="5"><app type="orthographic"><lem wit="#B">ወኂሩትኪ፡</lem><rdg wit="#A">ወለሂሩትኪ፡</rdg></app> ከዋኒት፡ ብዕላ፨</l>
+        </lg>
+        
+        <lg type="stanza" n="6">
+          <l n="1">ሰላም፡ <app><lem wit="#A">እብል፡</lem><rdg wit="#B"/></app> <app type="orthographic"><lem wit="#A">ለጕርዔኪ፡</lem><rdg wit="#B">ለጉርዔኪ፡</rdg></app> <app type="orthographic"><lem wit="#A">ወለክሳድኪ፡</lem><rdg wit="#B">ወለክሣ<cb edRef="#B" n="b"/>ድኪ፡</rdg></app> <app><lem wit="#A">እሳለማ፨</lem><rdg wit="#B">አርሲማ፨</rdg></app></l>
+          <l n="2">ለመታክፍትኪ፡ ሰላም፡ ወለዘባንኪ፡ <app type="orthographic"><lem wit="#B">ዑጽፍተ፡</lem><rdg wit="#A">ዑፅፍተ፡</rdg></app> ግርማ፨</l>
+          <l n="3">ለድክምት፡ ወለትኪ፡ ለባሲተ፡ አጥናን፡ አርሲማ፨</l>
+          <l n="4">ንጽሒ፡ ፀረ፡ ነፍስየ፡ ውስተ፡ <app type="orthographic"><lem wit="#A">ጸድፈ፡</lem><rdg wit="#B">ፀድፈ፡</rdg></app> ሕማም፡ <app type="orthographic"><lem wit="#A">ወጻማ፨</lem><rdg wit="#B">ወፃማ፨</rdg></app></l>
+          <l n="5">ከመ፡ አስቴር፡ እመንበሩ፡ ነጽሐቶ፡ <app type="orthographic"><lem wit="#A">ለሓማ፨</lem><rdg wit="#B">ለሐማ፨</rdg></app></l>
+        </lg>
+        
+        <lg type="stanza" n="7">
+          <l n="1">ሰላም፡ ለእንግድዓኪ፡ <choice><corr resp="AD">ወለሕፅንኪ፡</corr><sic><app type="orthographic"><rdg wit="#A">ወለኅፅንኪ፡</rdg><rdg wit="#B">ወለሕጽንኪ፡</rdg></app></sic></choice> ክቡር፨</l>
+          <l n="2"><app><lem wit="#A">ወለአእዳውኪኒ፡</lem><rdg wit="#B">ወለአእዳዊኪኒ፡</rdg></app> ምስለ፡ መዛርዒሁ፡ ጽዑር፨</l>
+          <l n="3"><app type="orthographic"><lem wit="#A">ዓዲ፡</lem><rdg wit="#B">አዲ፡</rdg></app> አርሲማ፡ ለእግዝእትኪ፡ መጾር፨</l>
+          <l n="4">ሰላም፡ ለንግደታ፡ ወዜና፡ <choice><corr resp="AD">ግፍዐታ፡</corr><sic>ግፍዓታ፡</sic></choice> መንክር፨</l>
+          <l n="5">እንዘ፡ ንግሥት፡ ይእቲ፡ በሰማይ፡ ወምድር፨</l>
+        </lg>
+        
+        <lg type="stanza" n="8">
+          <l n="1">ሰላም፡ ለኵርናዕኪ፡ ወለእመታትኪ፡ ወለእ<pb edRef="#A" n="168v"/><cb edRef="#A" n="a"/>ራኅኪ፡ ሰላም፡ እብሎን፨</l>
+          <l n="2">ለአፃብዕኪ፡ <choice><corr resp="AD">ዐሥሮን፡</corr><sic>አሥሮን፡</sic></choice> <app><lem wit="#A">ወለአጽፋሪሆን፨</lem><rdg wit="#B">ወአጽፋሪሆን፨</rdg></app></l>
+          <l n="3">አርሲማ፡ ለድንግል፡ በእንተ፡ ንግደታ፡ ማኅዝን፨</l>
+          <l n="4">ሐድሲ፡ ላዕሌየ፡ መ<cb edRef="#B" n="c"/>ዋዕለ፡ ዝንቱ፡ አዝማን፨</l>
+          <l n="5">እስመ፡ በኀቤየ፡ አኀዞ፡ ርስዓን፨</l>
+        </lg>
+        
+        <lg type="stanza" n="9">
+          <l n="1">ሰላም፡ ለአጥባትኪ፡ ወለገቦኪ፡ ዘሐመልማለ፡ ወርቅ፡ ትርሲቱ፨</l>
+          <l n="2">ለከርሥኪኒ፡ ዘምስለ፡ ልቡ፡ ወኵልያቱ፨</l>
+          <l n="3">በእንተ፡ ንግደታ፡ ለማርያም፡ ወስደተ፡ ወልዳ፡ ባሕቱ፨</l>
+          <l n="4">ኪያየ፡ ኃጥአ፡ ወምኑነ፡ <app><lem wit="#B">ከመ፡</lem><rdg wit="#A"/></app> ታጽድቂ፡ በከንቱ፨</l>
+          <l n="5">አርሲማ፡ ለአምላክኪ፡ ሰአሊዮ፡ ሎቱ፨</l>
+        </lg>
+        
+        <lg type="stanza" n="10">
+          <l n="1">ሰላም፡ <choice><corr resp="AD">ለኅሊናኪ፡</corr><sic>ለሕሊናኪ፡</sic></choice> እንተ፡ <choice><corr resp="AD">ይኄሊ፡</corr><sic>ይሔሊ፡</sic></choice> ሠናየ፨</l>
+          <l n="2">ወአማዑትኪኒ፡ ወለንዋየ፡ <app type="orthographic"><lem wit="#B">ውስጥኪ፡</lem><rdg wit="#A">ውሥጥኪ፡</rdg></app> ዕሩየ፨</l>
+          <l n="3">ንቅሒ፡ እንከ፡ ለንስሐ፡ ከመ፡ ታ<cb edRef="#A" n="b"/>ንቅሂ፡ ልብየ፨</l>
+          <l n="4">እፎ፡ ይደፍን፡ አርሲማ፡ ጽልመተ፡ <choice><corr resp="AD">ኀጢአት፡</corr><sic>ኃጢአት፡</sic></choice> ኪያየ፨</l>
+          <l n="5">እንዘ፡ ማኅቶትኪ፡ የሐውር፡ ቅድሜየ፨</l>
+        </lg>
+        
+        <lg type="stanza" n="11">
+          <l n="1">ሰላም፡ <app type="orthographic"><lem wit="#B">ለሕንብርትኪ፡</lem><rdg wit="#A" type="orthographic">ለኅንብርትኪ፡</rdg></app> ወለድንግልናኪ፡ <app type="orthographic"><lem wit="#B">ሕቱም፨</lem><rdg wit="#A">ኅቱም፨</rdg></app></l>
+          <l n="2"><app><lem wit="#A">ለሐቌኪኒ፡</lem><rdg wit="#B">ለሐውቌኪኒ፡</rdg></app> ወለአቍያጽኪ፡ አዳም፨</l>
+          <l n="3"><pb edRef="#B" n="126v"/><cb edRef="#B" n="a"/>ሰላም፡ <app><lem wit="#B">እብለኪ፡</lem><rdg wit="#A">እብል፡</rdg></app> አርሲማ፡ ዘበሐዋዝ፡ ስዒም፨</l>
+          <l n="4">ዓዲ፡ ማኅደራ፡ ለቅድስት፡ <app><lem wit="#A">ማርያም፡</lem><rdg wit="#B"/></app> ሰላም፨</l>
+          <l n="5">ሰላም፡ ሰላም፡ ለኪ፡ <app type="orthographic"><lem wit="#A">ቍስቋም፨</lem><rdg wit="#B">ቁስቋም፨</rdg></app></l>
+        </lg>
+        
+        <lg type="stanza" n="12">
+          <l n="1">ሰላም፡ ለአብራክኪ፡ በሰጊድ፡ ለልዑል፡ ዘጻመዋ፨</l>
+          <l n="2">ምስለ፡ አእጋር፡ ወሰኰና፡ ዘቅሩቦን፡ ሀለዋ፨</l>
+          <l n="3">አርሲማ፡ ክፍልኒ፡ ምስሌኪ፡ ውስተ፡ ፍናዋ፨</l>
+          <l n="4">ለገነተ፡ ጽባሕ፡ <app type="orthographic"><lem wit="#B">እትለሀይ፡</lem><rdg wit="#A">እትለሐይ፡</rdg></app> <app><lem wit="#A">ወአንፈርዕፅ፡</lem><rdg wit="#B">እንፈርዕጽ፡</rdg></app> <app><lem wit="#A">በነሶሳዋ፨</lem><rdg wit="#B">በአንሶሳዋ፨</rdg></app></l>
+          <l n="5">ከመ፡ <app type="orthographic"><lem wit="#A">እጕለ፡</lem><rdg wit="#B">እጉለ፡</rdg></app> ላህም፡ ዘይሰመይ፡ ጣዕዋ፨</l>
+        </lg>
+        
+        <lg type="stanza" n="13">
+          <l n="1">ሰላም፡ ለመከየድኪ፡ ወለአፃብ<pb edRef="#A" n="169r"/><cb edRef="#A" n="a"/>ዕኪ፡ <app type="orthographic"><lem wit="#A">በመዐርይ፨</lem><rdg wit="#B">በመዓርይ፨</rdg></app></l>
+          <l n="2"><app type="orthographic"><lem wit="#A">ወለአጽፋርኪኒ፡</lem><rdg wit="#B">ወለአጽፋሪኪኒ፡</rdg></app> <app><lem wit="#B">ዘጽዕዳዌሆን፡</lem><rdg wit="#A">ዘፅዕዳዊሆን፡</rdg></app> ባሕርይ፨</l>
+          <l n="3">ሞቅሒ፡ ሊተ፡ አርሲማ፡ በልጓመ፡ መንፈስ፡ ሠናይ፨</l>
+          <l n="4">ኢይቅትለኒ፡ <app type="orthographic"><lem wit="#A">አሥጋሪሃ፡</lem><rdg wit="#B" type="orthographic">አስጋሪሃ፡</rdg></app> <app type="orthographic"><lem wit="#B">በሕምዘ፡</lem><rdg wit="#A">በኅምዘ፡</rdg></app> <app><lem wit="#B">ንባባ፡</lem><rdg wit="#A">ንባብ፡</rdg></app> እኩይ፨</l>
+          <l n="5">ንስቲት፡ እምአባልየ፡ <app type="orthographic"><lem wit="#B">ወድምፃ፡</lem><rdg wit="#A">ወድምጻ፡</rdg></app> ዐባይ፨</l>
+        </lg>
+        
+        <lg type="stanza" n="14">
+          <l n="1">ሰላም፡ ለቆምኪ፡ ዘይ<cb edRef="#B" n="b"/>መስል፡ በቀልተ፨</l>
+          <l n="2"><choice><corr resp="AD">ወለመልክእኪ፡</corr><sic>ወለመልክዕኪ፡</sic></choice> ኵሉ፡ <app><lem wit="#A">እንበለ፡</lem><rdg wit="#B"/></app> እኅድግ፡ አሐተ፨</l>
+          <l n="3">አርሲማ፡ ሀብኒ፡ አምጣነ፡ ብየ፡ ተምኔተ፨</l>
+          <l n="4">ለክርስቶስ፡ በቋዔ፡ ተድላ፡ ምስለ፡ <app type="orthographic"><lem wit="#A">አሥምሮቱ፡</lem><rdg wit="#B">አስምሮቱ፡</rdg></app> ሕይወተ፨</l>
+          <l n="5">እስመ፡ ፈድፋደ፡ እፈርህ፡ መዊተ፨</l>
+        </lg>
+        
+        <lg type="stanza" n="15">
+          <l n="1">ሰላም፡ <app type="orthographic"><lem wit="#A">ለፀአተ፡</lem><rdg wit="#B">ለፀዓተ፡</rdg></app> ነፍስኪ፡ በዕለተ፡ መተሩኪ፡ ርእሰ፨</l>
+          <l n="2">ለበድነ፡ ሥጋኪ፡ ወለግንዘትኪ፡ <choice><corr resp="AD">ኅውሠ፨</corr><sic><app type="orthographic"><rdg wit="#B">ኅውሰ፨</rdg><rdg wit="#A">ሕውሰ፨</rdg></app></sic></choice></l>
+          <l n="3">አርሲማ፡ <app><lem wit="#A">ብዕልት፡</lem><rdg wit="#B">ብጽዕት፡</rdg></app> ኢታርእይኒ፡ <choice><corr resp="AD">ተጽናሰ፨</corr><sic>ተፅናሰ፨</sic></choice></l>
+          <l n="4"><app><lem wit="#A">ሴስይኒ፡</lem><rdg wit="#B">ሴስየኒ፡</rdg></app> እመዝገብኪ፡ እስመ፡ ኢይክል፡ ሐሪሰ፨</l>
+          <l n="5">ወስኢለሂ፡ <choice><corr resp="AD">አኀፍር፡</corr><sic>አኃፍር፡</sic></choice> አንሰ፨</l>
+        </lg>
+        
+        <lg type="stanza" n="16">
+          <l n="1">ሰላም፡ ለመቃብርኪ፡ ወለፍልሰትኪ፡ ኅቡረ፨</l>
+          <l n="2">ከመ፡ እለ፡ አሳፍ፡ ሎቱ፡ እንዘ፡ አቄርብ፡ መዝሙረ፨</l>
+          <l n="3">አርሲማ፡ እግዝእት፡ እንተ፡ <app type="orthographic"><lem wit="#B">ትሰረገዊ፡</lem><rdg wit="#A">ትሠረገዊ፡</rdg></app> ክብረ፨</l>
+          <l n="4">ኢትሰድኒ፡ ፄዋ፡ እምኀበ፡ ፈጣሪ፡ ኢሠምረ፨</l>
+          <l n="5">ዘሕሊናየ፡ ሞቅሒ፡ አእጋረ፨</l>
+        </lg>
+        
+        <lg type="stanza" n="17">
+          <l n="1">እም<cb edRef="#B" n="c"/>ንዴትየ፡ ዘአቅረብኩ፡ ንዋየ፡ <choice><corr resp="AD">ማሕሌትኪ፡</corr><sic>ማኅሌትኪ፡</sic></choice> ዝንቱ፨</l>
+          <l n="2">ስብሐተ፡ <choice><corr resp="AD">መልክእኪ፡</corr><sic>መልክዕኪ፡</sic></choice> ኵሉ፡ እንተ፡ ሀለወ፡ ውስቱ፨</l>
+          <l n="3">አርሲማ፡ <app><lem wit="#A">ብፅዕት፡</lem><rdg wit="#B">ብዕልት፡</rdg></app> ለእግዚአብሔር፡ ሰማዕቱ፨</l>
+          <l n="4">አዕርጊ፡ ቅድመ፡ ገጽኪ፡ ወተወከፊዮ፡ ሎቱ፨</l>
+          <l n="5">ኀበ፡ ቅድመ፡ አምላክ፡ <app type="orthographic"><lem wit="#B">ዘዐርገ፡</lem><rdg wit="#A">ዘዓርገ፡</rdg></app> ለአቤል፡ መሥዋዕቱ፨</l>
+        </lg>
+
+        <app>
+          <lem wit="#A">
+
+            <ab><supplied resp="AD" reason="explanation">ተረፈ፡ መልክእ፡</supplied></ab>
+
+            <lg type="stanza" n="A">
+              <l n="1"><pb edRef="#A" n="169v"/><cb edRef="#A" n="a"/>ሰላም፡ ለኪ፡ አርሲማ፡ ኅሪት፨</l>
+              <l n="2">አመተ፡ ማርያም፡ ቡርክት፨</l>
+              <l n="3"><choice><corr resp="AD">ዘኢያፍርሀኪ፡</corr><sic>ዘኢያፍርሃኪ፡</sic></choice> እቶነ፡ እሳት፨</l>
+              <l n="4">ፅዕዱት፡ ዖፈ፡ ገነት፨</l>
+            </lg>
+
+            <lg type="stanza" n="B">
+              <l n="1">ሰላም፡ ለኪ፡ መዋግደ፡ ጽኑዕ፡ አዝማን፨</l>
+              <l n="2">አመ፡ አንሥአ፡ ሰይጣን፨</l>
+              <l n="3"><choice><corr resp="AD">ዘኢያፍርሀኪ፡</corr><sic>ዘኢያፍርሃኪ፡</sic></choice> እሳተ፡ እቶን፨</l>
+              <l n="4">አርሲማ፡ ሰማዕተ፡ መድኅን፨</l>
+            </lg>
+
+            <lg type="stanza" n="C">
+              <l n="1">ሰላም፡ ለኪ፡ ለብፅዕት፡ አርሲማ፨</l>
+              <l n="2">ሰማዕተ፡ ኢየሱስ፡ ፌማ፨</l>
+              <l n="3">እቶነ፡ እሳት፡ ዘኢያሕመማ፨</l>
+              <l n="4">ክልልት፡ በአክሊለ፡ ግርማ፨</l>
+            </lg>
+
+            <lg type="stanza" n="D">
+              <l n="1">ሰላም፡ ለኪ፡ ለንጉሠ፡ ስሕተት፡ <choice><corr resp="AD">በዐውዱ፨</corr><sic>በዓውዱ፨</sic></choice></l>
+              <l n="2">እንተ፡ ላዕሌኪ፡ ዕልዋን፡ ሥቃየ፡ ኵነኔ፡ አክበዱ፨</l>
+              <l n="3">እስከ፡ አባልኪ፡ በእሳት፡ አንደዱ፨</l>
+              <l n="4">ምዕዝት፡ እምናርዱ፨</l>
+            </lg>
+
+            <lg type="stanza" n="E">
+              <l n="1">ሰላም፡ ለኪ፡ አርሲማ፡ ሥጋኪ፡ ሶበ፡ ሰተሩ፨</l>
+              <l n="2"><choice><sic>ወአዕፅምትኪ፡</sic><corr resp="AD">ወአዕፅምተኪ፡</corr></choice> ሰበሩ፨</l>
+              <l n="3">ክሳደኪኒ፡ መጦኪ፡ በ<cb edRef="#A" n="b"/>መጥባሕት፡ ይምትሩ፨</l>
+              <l n="4">ለክርስቶስ፡ በእንተ፡ ፍቅሩ፨</l>
+            </lg>
+
+            <lg type="stanza" n="F">
+              <l n="1">ሰላም፡ ለኪ፡ አርሲማ፡ ባሕርይ፨</l>
+              <l n="2">ለነፍሰ፡ ኵሉ፡ ምስካይ፨</l>
+              <l n="3">ከማኪ፡ አልቦ፡ እምታሕተ፡ ሰማይ፨</l>
+              <l n="4">በሥን፡ ወበላሕይ፨</l>
+            </lg>
+
+            <lg type="stanza" n="G">
+              <l n="1">ሰላም፡ ለኪ፡ ሶበ፡ መተሩ፡ ክሳዳ፨</l>
+              <l n="2"><choice><corr resp="AD">ለስምዐ፡</corr><sic>ለስምዓ፡</sic></choice> ኵነኔ፡ <choice><corr resp="AD">በዐውዳ፨</corr><sic>በዓውዳ፨</sic></choice></l>
+              <l n="3">ደም፡ ውሕዘ፡ ወሐሊብ፡ ፀዓዳ፨</l>
+              <l n="4">ምዕዝት፡ እምጽጌ፡ ረዳ፨</l>
+            </lg>
+
+            <lg type="stanza" n="H">
+              <l n="1">ሰላም፡ ለኪ፡ መጠነ፡ አማኅኩኪ፡ ሊተ፡ አርሲማ፡ እምየ፨</l>
+              <l n="2">ልበ፡ መዋቲ፡ ዘኢሐለየ፨</l>
+              <l n="3"><choice><corr resp="AD">ወዐይነ፡</corr><sic>ወዓይነ፡</sic></choice> ሰብእ፡ ዘኢርእየ፨</l>
+              <l n="4">ለፍቁርኪ፡ <hi rend="rubric">ዘድንግል፡</hi> ድልዊ፡ <choice><corr resp="AD">ዐስብየ፨</corr><sic>ዓስብየ፨</sic></choice></l>
+            </lg>
+
+          </lem>
+          <rdg wit="#B"/>
+        </app>
+
+      </div>
+
+      <div type="translation" xml:lang="en">
+
+        <lg type="stanza" n="1">
+          <l n="1">Salutation to the memory of your name which has four letters</l>
+          <l n="2">Like the four fashioned parts of the Cross of Christ the Lord.</l>
+          <l n="3">Blessed Hripsime, patient through trial and martyrdom,</l>
+          <l n="4">Feed me from your breasts with the milk of joy and gladness</l>
+          <l n="5">So that I may read the words of your praise with an eloquent tongue.</l>
+        </lg>
+        
+        <lg type="stanza" n="2">
+          <l n="1">Salutation to your hair and your crowned head</l>
+          <l n="2">And to your face, red like a pomegranate or an apple.</l>
+          <l n="3">Hripsime, victorious over the judges of error and perdition,</l>
+          <l n="4">Give me a waterskin of knowledge from the pool (of) your praise</l>
+          <l n="5">So that I may draw a little and pour out a fountain.</l>
+        </lg>
+        
+        <lg type="stanza" n="3">
+          <l n="1">Salutation to your eyelashes and your eyes (which are like) a full moon,</l>
+          <l n="2">And to your ears which were inclined to the words of the glad angel.</l>
+          <l n="3">Galilean Hripsime, dressed in glorious faith,</l>
+          <l n="4">How were you not afraid of the frightening furnace of flames?</l>
+          <l n="5">And how were you not terrified at all by its boiling pot?</l>
+        </lg>
+        
+        <lg type="stanza" n="4">
+          <l n="1">Salutation to your cheeks which were beaten and lacerated</l>
+          <l n="2">When the fragrance of the Bride of Koskam's love entered your nostrils.</l>
+          <l n="3">Cut off the head of my enemy, Hripsime, and hang it in the tent</l>
+          <l n="4">(Like) the daughter of Merari did to Holofernes, her enemy,</l>
+          <l n="5">When, having cut his neck, she hung his head upon the top of his bed's canopy.</l>
+        </lg>
+        
+        <lg type="stanza" n="5">
+          <l n="1">Salutation to your lips, your mouth and your teeth, the beauty of ʾƎblā,</l>
+          <l n="2">Also to your tongue with its breath and voice.</l>
+          <l n="3">Hripsime, turn to me, a poor seeker of happiness,</l>
+          <l n="4">So that you will give me a portion of the bread of your grace</l>
+          <l n="5">And the richness of your existing goodness.</l>
+        </lg>
+        
+        <lg type="stanza" n="6">
+          <l n="1">‘Salutation,’ I say to your throat and your neck I salute;</l>
+          <l n="2">Salutation to your shoulders and your back, clothed in magnificence.</l>
+          <l n="3">For your weakened daughter you are a wearer of strength, Hripsime.</l>
+          <l n="4">Toss the enemy of my soul into a chasm of pain and toil</l>
+          <l n="5">Like Esther threw Haman from his couch.</l>
+        </lg>
+        
+        <lg type="stanza" n="7">
+          <l n="1">Salutation to your chest and your honoured bosom</l>
+          <l n="2">And to your hands, also, with their tormented arms.</l>
+          <l n="3">Hripsime, a litter for your Lady,</l>
+          <l n="4">Salutation to her flight and the story of her wondrous oppression,</l>
+          <l n="5">As she is Queen in heaven and on earth.</l>
+        </lg>
+        
+        <lg type="stanza" n="8">
+          <l n="1">Salutation to your elbows, your forearms and your palms; ‘Salutation,’ I say</l>
+          <l n="2">To your ten fingers and their nails.</l>
+          <l n="3">Hripsime, on account of the sorrowful flight of the Virgin,</l>
+          <l n="4">Renew the days of this season for me,</l>
+          <l n="5">For impiety has seized them from me.</l>
+        </lg>
+        
+        <lg type="stanza" n="9">
+          <l n="1">Salutation to your breasts and your sides which are adorned with a verdure of gold</l>
+          <l n="2">And to your belly with its heart and kidneys.</l>
+          <l n="5">Hripsime, intercede with your God</l>
+          <l n="3">On account of the flight of the Virgin and the exile of her only Son</l>
+          <l n="4">That you might freely make me, a worthless sinner, righteous.</l>
+        </lg>
+        
+        <lg type="stanza" n="10">
+          <l n="1">Salutation to your mind which ponders good things</l>
+          <l n="2">And to your intestines and your equal bowels.</l>
+          <l n="3">Be vigilant, that you might awaken my heart to repentance!</l>
+          <l n="4">O how the shadow of sin conceals me, Hripsime,</l>
+          <l n="5">As your lamp goes before me.</l>
+        </lg>
+        
+        <lg type="stanza" n="11">
+          <l n="1">Salutation to your navel and your sealed virginity</l>
+          <l n="2">And to your hips and your pleasant thighs.</l>
+          <l n="3">‘Salutation,’ I say to you, Hripsime, with a sweet kiss.</l>
+          <l n="4">Salutation, also, to holy Mary's dwelling place:</l>
+          <l n="5">Salutation, salutation to you, (Mount) Koskam.</l>
+        </lg>
+        
+        <lg type="stanza" n="12">
+          <l n="1">Salutation to your knees which laboured in prostrating to the Most High,</l>
+          <l n="2">With (your) feet and heels which are adjacent to them.</l>
+          <l n="3">Hripsime, grant that I may traverse with you the paths</l>
+          <l n="4">To the Eastern Paradise and leap for joy in wandering it</l>
+          <l n="5">Like the young of an ox, which is called a heifer.</l>
+        </lg>
+        
+        <lg type="stanza" n="13">
+          <l n="1">Salutation to the soles of your feet and your toes equally</l>
+          <l n="2">And to your toenails, whose whiteness (is like) a pearl.</l>
+          <l n="3">Bind me, Hripsime, with a cord of good spirit</l>
+          <l n="4">Lest (my tongue's) ensnarer kill me with the poison of its evil utterance,</l>
+          <l n="5">(For it is) a small (part) of my flesh (yet) its sound (is) loud.</l>
+        </lg>
+        
+        <lg type="stanza" n="14">
+          <l n="1">Salutation to your stature which resembles a date palm</l>
+          <l n="2">And to your entire image, lest I should forget a single part.</l>
+          <l n="3">Hripsime, give me, as much as I want,</l>
+          <l n="4">A life pleasing to Christ, the benefactor of delight,</l>
+          <l n="5">For I am exceedingly afraid to die.</l>
+        </lg>
+        
+        <lg type="stanza" n="15">
+          <l n="1">Salutation to the departure of your soul on the day that they cut off your head</l>
+          <l n="2">And to the remains of your body and your shrouding together.</l>
+          <l n="3">Wealthy Hripsime, lest poverty come upon me,</l>
+          <l n="4">Feed me from your storehouse, for I am unable to cultivate (anything for myself)</l>
+          <l n="5">And I am ashamed to beg.</l>
+        </lg>
+        
+        <lg type="stanza" n="16">
+          <l n="1">Salutation to your sepulchre together with the translation of your body,</l>
+          <l n="2">As I bring a psalm for it like those of Asaph.</l>
+          <l n="3">Hripsime, the lady adorned with honour,</l>
+          <l n="4">Do not cast me into exile from the Creator (because) He is displeased;</l>
+          <l n="5">Fetter the feet of my mind.</l>
+        </lg>
+        
+        <lg type="stanza" n="17">
+          <l n="1">Out of my poverty I have offered you the wealth of this song</l>
+          <l n="2">In which is the praise of your entire image.</l>
+          <l n="3">Blessed Hripsime, martyr of the Lord,</l>
+          <l n="4">Make it ascend before your face and receive it</l>
+          <l n="5">In the place where the offering of Abel rose before God.</l>
+        </lg>
+
+        <ab>[Tarafa Malkəʾ]</ab>
+        
+        <lg type="stanza" n="A">
+          <l n="1">Salutation to you, chosen Hripsime:</l>
+          <l n="2">Handmaiden of blessed Mary,</l>
+          <l n="3">You who did not fear the furnace of fire,</l>
+          <l n="4">A white bird of paradise.</l>
+        </lg>
+        
+        <lg type="stanza" n="B">
+          <l n="1">Salutation to you! When Satan aroused</l>
+          <l n="2">The waves of strong time,</l>
+          <l n="3">You were not afraid of a fiery furnace,</l>
+          <l n="4">Hripsime, the Saviour's martyr.</l>
+        </lg>
+        
+        <lg type="stanza" n="C">
+          <l n="1">Salutation to you, blessed Hripsime:</l>
+          <l n="2">Martyr of Jesus the Creator</l>
+          <l n="3">Whom a furnace of fire did not harm,</l>
+          <l n="4">Crowned with a crown of awesomeness.</l>
+        </lg>
+        
+        <lg type="stanza" n="D">
+          <l n="1">Salutation to you, Hripsime! In the king of error's court,</l>
+          <l n="2">The unbelievers burdened you with a torturous judgement</l>
+          <l n="3">Until they burned your flesh with fire,</l>
+          <l n="4">More fragrant than nard.</l>
+        </lg>
+        
+        <lg type="stanza" n="E">
+          <l n="1">Salutation to you, Hripsime! When they lacerated your flesh</l>
+          <l n="2">And broke your bones</l>
+          <l n="3">You surrendered your neck that they might cut it with a sword</l>
+          <l n="4">For the sake of the love of Christ.</l>
+        </lg>
+        
+        <lg type="stanza" n="F">
+          <l n="1">Salutation to you, Hripsime, a pearl</l>
+          <l n="2">For the soul of every desolate person.</l>
+          <l n="3">There is no one like you below heaven</l>
+          <l n="4">In splendour and beauty.</l>
+        </lg>
+        
+        <lg type="stanza" n="G">
+          <l n="1">Salutation to you! When they cut her neck</l>
+          <l n="2">In the arena of martyrdom’s suffering</l>
+          <l n="3">Blood flowed with white milk</l>
+          <l n="4">More fragrant than a rose.</l>
+        </lg>
+        
+        <lg type="stanza" n="H">
+          <l n="1">Salutation to you! As much as I have greeted you, Hripsime my mother,</l>
+          <l n="4">Prepare for me, your beloved Zadəngəl, a reward</l>
+          <l n="2">Of which the heart of mortals cannot conceive</l>
+          <l n="3">And which the eye of men cannot see. </l>
+        </lg>
+
+      </div>
+
+      <listRelation>
+        <relation name="ecrm:P129_is_about" active="LIT2900RepCh181" passive="PRS8126Rhipsime"/>
+      </listRelation>
+
+    </body>
+  </text>
 </TEI>

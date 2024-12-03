@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1281Dersan">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1281Dersan">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dǝrsanä Abrǝham wäsǝra bägǝbṣ</title>
+            <title xml:id="t1" xml:lang="gez">ድርሳነ፡ አብርሃም፡ ወስራ፡ በግብጽ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Dǝrsāna ʾAbrǝhām wa-Sǝrā ba-Gǝbṣ</title>
+            <title xml:lang="en" corresp="#t1" type="main">Homily on Abraham and Sarah in Egypt </title>
             <author>Ephrem</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -15,9 +18,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                 This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
+                Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -25,9 +28,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
-            <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
-         </sourceDesc>
+            
          <sourceDesc>
                
                <listBibl type="clavis">
@@ -47,16 +48,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="DR" when="2023-04-26">Merged with deleted LIT6820HomAbrSarah</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl><ptr target="bm:Caquot1988Homelie"/></bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Butts2013Reception"/></bibl>
+               <bibl><ptr target="bm:Kaplan2005EAeDersanaAbr"/></bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="lawd:hasAttestation" active="LIT1281Dersan" passive="GG00016"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1281Dersan" passive="PRS3827Ephrem"/>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT1281Dersan" passive="LIT6820HomAbrSarah"/>
+            </listRelation>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>The following incipit is based on the edition.</note>
+               <ab>ድርሳን፡ ዘይቤ፡ ቅዱስ፡ ማሪ፡ አፍሬም፡ በእንተ፡ አብርሃም፡ አበ፡ አባው፡ ዐርከ፡ እግዚአብሔር፡ ወበእንተ፡ ሳራ፡ ብእሲቱ፡ እንበይነ፡ በአቶሙ፡ ምድረ፡ ግብጽ። እስመ፡ እግዚአብሔር፡</ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
