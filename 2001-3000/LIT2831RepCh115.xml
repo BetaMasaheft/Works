@@ -1,66 +1,394 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2831RepCh115">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2831RepCh115">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to Mǝnilǝk II</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ምኒልክ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Mənilək</title>
+            <title corresp="#t1" xml:lang="en">Image of Mənilək II</title>
+            <title xml:id="t2">Malkǝʾ-hymn to Mǝnilǝk II</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="AD"></editor>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+               Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
-               </licence>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                  licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         
+
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+            href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
-               <term key="Poetry"/>    
+               <term key="Poetry"/>
                <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="PL" when="2016-07-26">Created XML record from Ethio authority google
+            spreadsheet</change>
          <change who="MV" when="2017-05-05">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-02">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT2831RepCh115" passive="PRS7006Menilek"/>
+               <relation name="skos:exactMatch" active="LIT2831RepCh115"
+                  passive="https://w3id.org/malke/2831/"/>
+            </listRelation>
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">115</citedRange>
                </bibl>
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
+               <bibl> <ptr target="bm:EstevesPereira1915Poesia"/></bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለክሙ፡ ለዝክረ፡ ስምከ፡ መልዕልተ፡ ኵሉ፡ ዘኮነ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ መልዕልተ፡ ኵሉ፡ ዘኮነ፨</l>
+                  <l n="2">ወበግርማሁ፡ ግሩም፡ እንተ አጥፍን፡ ኢጣሊያነ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ዘኢትዮጵያ፡ መድኅነ፨</l>
+                  <l n="4">ቀተልኮ፡ ለአላዊ፡ በምድረ፡ ትግሬ፡ መካነ፨</l>
+                  <l n="5">ምስለ፡ ባሺ፡ ብዙቂሁ፡ ዘርዘርኮ፡ ወረሰይኮ፡ በድነ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለስእርተ፡ ርእስከ፡ አምሳለ፡ ኀሪር፡ ፍቱል፨</l>
+                  <l n="2">ወስእነ፡ አርአያሁ፡ ጸሊም፡ አርአያ፡ ኵህል፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ፈጻሜ፡ ቃላተ፡ ወንጌል፨</l>
+                  <l n="4">እስመ፡ ተማኅጸንኩ፡ አነ፡ በዘዚአከ፡ ሳህል፨</l>
+                  <l n="5">ታከብርሂ፡ ወፍጡነ፡ ታብዕል፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለርእስከ፡ ዘበላዕሌሁ፡ ዘውደ፨</l>
+                  <l n="2">ዘይመስል፡ ቀስተ፡ ደመና፡ ወእንቈ፡ ጳዝዮን፡ ክቡደ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ዘተክለ፡ ገነት፡ ዓጸደ፨</l>
+                  <l n="4">መንግሥትከሰ፡ እምነ፡ ሰሎሞን፡ ፈድፈደ፨</l>
+                  <l n="5">ከፋ፡ ወባሕር፡ ረሰይከ፡ አሐደ፨</l>
+               </lg>
+               <lg type="stanza" n="4">
+                  <l n="1">ሰላም፡ ለገጽከ፡ ከመ፡ ገጸ፡ አንበሳ፡ ዘገዳም፨</l>
+                  <l n="2">ወጽዱል፡ ንጻሬሁ፡ ከመ፡ እንቈ፡ ሰም፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ዘመንበርከ፡ ግሩም፨</l>
+                  <l n="4">ቀተልከ፡ አላዌ፡ ዘመጽአ፡ እምብሔረ፡ ሮም፨</l>
+                  <l n="5">ወነፍሱሂ፡ ተወድየ፡ ውስተ፡ ገሃነም፨</l>
+               </lg>
+               <lg type="stanza" n="5">
+                  <l n="1">ሰላም፡ ለቀራንብቲከ፡ ከመ፡ ሜላት፡ ርሱይ፨</l>
+                  <l n="2">ጥቀ፡ አዳም፡ ወጥቀ፡ ሠናይ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ዘኢትዮጵያ፡ ፀሐይ፨</l>
+                  <l n="4">አጥፋዕኮ፡ ለባሺ፡ ብዙቅ፡ በምክረ፡ ዚአከ፡ ጊጉይ፨</l>
+                  <l n="5">ሥጋሁ፡ ለመጥባሕት፡ ወነፍሱ፡ ለእሳተ፡ ሰማይ፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለአዕይንቲከ፡ ከመ፡ ዐይነ፡ ጳውሎስ፡ ሐዋርያ፨</l>
+                  <l n="2">አምሳለ፡ ብረሌ፡ ጽዱል፡ ወመንክር፡ ለአርአያ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ለኢትዮጵያ፡ ፀሐያ፨</l>
+                  <l n="4">ሶበ ተፈጸመ፡ ወሞተ፡ አይሁዳዊ፡ ኢጣልያ፨</l>
+                  <l n="5">ወይሌ፡ ወላህ፡ ኮነ፡ በሮምያ፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለአዕዛኒከ፡ ስዕለተ፡ ነዳይ፡ ዘያጽምዓ፨</l>
+                  <l n="2">ሶበ፡ ይሰዕል፡ ኀቤከ፡ ወይጸርሕ፡ በውውዓ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ዘኢትዮጽያ፡ እግዚኣ፨</l>
+                  <l n="4">ዘይገርምሰ፡ ዘማዕድከ፡ መብልዓ፨</l>
+                  <l n="5">ዘይትሃረጽ፡ የፈ፡ ወለፈ፡ ገንዓ፨</l>
+               </lg>
+               <lg type="stanza" n="8">
+                  <l n="1">ሰላም፡ ለመላትኒከ፡ ከመ፡ ጽጌ፡ ሮማን፡ ቀይህ፨</l>
+                  <l n="2">ዘይዔድም፡ ጥቀ፡ እምነ፡ ፀሐይ፡ ወወርኅ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ኮከበ፡ ጽባሕ፡ ብሩኅ፨</l>
+                  <l n="4">ሶበ፡ ተንሣእከ፡ አንተ፡ ምስለ፡ ሠራዊትከ፡ ብዙኅ፨</l>
+                  <l n="5">ጀነራል፡ ጠፍን፡ ወደምሰሰ፡ አይኅ፨</l>
+               </lg>
+               <lg type="stanza" n="9">
+                  <l n="1">ሰላም፡ ለአዕናፊከ፡ ከመ፡ ፄና፡ ገነት፡ ምዑዝ፨</l>
+                  <l n="2">ሱራሬሆን፡ ሠናይ፡ ወጥቀ፡ ሐዋዝ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ዘኢትዮጵያ፡ አርዝ፡</l>
+                  <l n="4">ሶበ፡ ተለቅሃ፡ ኢጣሊያ፡ ወርቀ፡ አይሁደዊ፡ እንግሊዝ፨</l>
+                  <l n="5">ዘይከፍል፡ ስዕነ፡ አሐዞ፡ ትካዝ፨</l>
+               </lg>
+               <lg type="stanza" n="10">
+                  <l n="1">ሰላም፡ ለከናፍሪከ፡ እለ፡ ሰብሑ፡ ለእግዚአብሔር፨</l>
+                  <l n="2">ሤመከ፡ ትኩን፡ እግዚአ፡ ኵሉ፡ ፍጡር፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ መሐሪ፡ ወኄር፨</l>
+                  <l n="4">ሶበ፡ ተባረቀ፡ ፉዚግራ፡ ወተዘርአ፡ ዓረር፡</l>
+                  <l n="5">ኢጣሊያ፡ ደንገፀ፡ ወውሕጠቶ፡ ምድር፨</l>
+               </lg>
+               <lg type="stanza" n="11">
+                  <l n="1">ሰላም፡ ለአፉከ፡ ለፈጣሪ፡ ዘየአኵቶ፨</l>
+                  <l n="2">ኢይትናገር፡ ስላቀ፡ ወኢይነብብ፡ ከንቶ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ለኢትዮጵያ፡ ማኅቶቶ፨</l>
+                  <l n="4">ሐልቀ፡ ማንጆር፡ ወስዕነ፡ ፍኖቶ፨</l>
+                  <l n="5">ጀነራል፡ ባራቴሪ፡ ሶበ፡ ገብዓ፡ ደንገፀ፡ ዖምበርቶ፨</l>
+               </lg>
+               <lg type="stanza" n="12">
+                  <l n="1">ሰላም፡ ለአስናኒከ፡ እለ፡ ይጸአድዋ፡ እምበረድ፨</l>
+                  <l n="2">ሠናይ፡ ፍጥረቶን፡ ወጥቀ፡ ብዑድ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ሥዩመ፡ ክርስቶስ፡ ወልድ፨</l>
+                  <l n="4">ሶበ፡ ተባረቀ፡ ፉዚግራ፡ ከመ፡ ነጐድጓድ፨</l>
+                  <l n="5">ኢጣሊያ፡ ፈርሃ፡ ወአሐዞ፡ ረዓድ፨</l>
+               </lg>
+               <lg type="stanza" n="13">
+                  <l n="1">ሰላም፡ ለልሳንከ፡ እንተ፡ ምዕዝት፡ ይእቲ፨</l>
+                  <l n="2">ሠናይ፡ ትትናገር፡ ወእኩይ፡ አልባቲ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ሃይማኖትከ፡ አሐቲ፨</l>
+                  <l n="4">አጥፋዕኮ፡ ለኢጣሊያ፡ እህው፡ ሰይጣን፡ መስሐቲ፨</l>
+                  <l n="5">ጐየ፡ ግብጣን፡ ወሞተ፡ ትልንቲ፨</l>
+               </lg>
+               <lg type="stanza" n="14">
+                  <l n="1">ሰላም፡ ለቃልከ፡ እንተ፡ ኢይነብብ፡ ጽርፈተ፨</l>
+                  <l n="2">እንበለ፡ ዳዕሙ፡ ዘአምላክ፡ ስብሐተ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ወልደ፡ ሰሎሞን፡ አንተ፨</l>
+                  <l n="4">ሶበ፡ ሖርከ፡ ትግሬ፡ ሰሰለ፡ ጽልመተ፨</l>
+                  <l n="5">ተኃጕለ፡ ሰይጣን፡ ወጀነራል፡ ሞተ፨</l>
+               </lg>
+               <lg type="stanza" n="15">
+                  <l n="1">ሰላም፡ ለእስትንፋስከ፡ እስትንፋሰ፡ መልአክ፡ አምሳሉ፨</l>
+                  <l n="2">ዘአድኅኖ፡ ለድውይ፡ ዘሐመ፡ አባሉ፨</l>
+                  <l n="3">ወልደ፡ ሰሎሞን፡ ምኒልክ፡ እግዚአ፡ ኵሉ፨</l>
+                  <l n="4">ተበቀልኮሙ፡ ለአይሁድ፡ ሶበ፡ እግዚኦሙ፡ ሰቀሉ፨</l>
+                  <l n="5">ተፈጸመ፡ ኢተርፈ፡ ፩ደ፡ እምእሉ፨</l>
+               </lg>
+               <lg type="stanza" n="16">
+                  <l n="1">ሰላም፡ ለጉርዔከ፡ መዓርዔር፡ ጣዕሙ፨</l>
+                  <l n="2">ዘኢይፈርሁ፡ ሞተ፡ ሠራዊትከ፡ ኵሎሙ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ለአዕላፈ፡ አእላፋት፡ ሊቆሙ፨</l>
+                  <l n="4">አሐደ፡ ዕስላም፡ ማንጆር፡ ገልያኖ፡ ዘስሙ፨</l>
+                  <l n="5">ሠናየ፡ ፉዚግራ፡ ኮነ፡ ወተክእው፡ ደሙ፨</l>
+               </lg>
+               <lg type="stanza" n="17">
+                  <l n="1">ሰላም፡ ለክሣድከ፡ ከመ፡ አርማስቆስ፡ ስኑ፨</l>
+                  <l n="2">ቃማ፡ ወርቅ፡ ጽሩይ፡ ዘኮነ፡ ክዳኑ፨</l>
+                  <l n="3">ወልደ፡ሰሎሞን ምኒልክ ሰዳዴ፡ሰይጣናት በሥልጣኑ።</l>
+                  <l n="4">ሶበ፡ አተብከ፡ ሠይፈከ፡ አውአዮሙ፡ ርስኑ፨</l>
+                  <l n="5">ተዘርዉ፡ ከመ፡ ጢስ፡ ወአብድንተ፡ ኮኑ፨</l>
+               </lg>
+               <lg type="stanza" n="18">
+                  <l n="1">ሰላም፡ ለመትከፍትከ፡ ዓርዑተ፡ ወንጌል፡ ዘፆረ፡</l>
+                  <l n="2">ኢያዕመረ፡ ከልዓ፡ እምአመ፡ ተፈጥረ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ዕንቈ፡ ኢያሴጲድ፡ ክቡረ፨</l>
+                  <l n="4">ለጸብዕ፡ ሶበ፡ ኃለየ፡ ፈረሰ፡ እሳት፡ ሠረረ፨</l>
+                  <l n="5">አውአዮሙ፡ ነዱ፡ ወኮነ፡ ሐሠረ፨</l>
+               </lg>
+               <lg type="stanza" n="19">
+                  <l n="1">ሰላም፡ ለዘባንከ፡ ሜላተ፡ ወርቅ፡ ልብሱ፨</l>
+                  <l n="2">ጥቀ፡ ሠናይ፡ ወአዳም፡ ሞገሱ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ዘነደ፡ እሳት፡ ፈረሱ፨</l>
+                  <l n="4">ዘመጽኡ፡ እምሮሜ፡ ሶበ፡ ኪያሁ፡ ኃሡሡ፨</l>
+                  <l n="5">አክልብተ፡ አድዋ፡ በልዕዎሙ፡ ወደሞሙ፡ ለሐሱ፨</l>
+               </lg>
+               <lg type="stanza" n="20">
+                  <l n="1">ሰላም፡ ለእንግድኣከ፡ ዘይትሞጣሕ፡ ልብሰ፡ መንግሥት፨</l>
+                  <l n="2">ዘወሀበከ፡ ለሊሁ፡ እግዚአብሔር፡ ጸባዖት፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ወልደ፡ ወልዱ፡ ለዳዊት፡</l>
+                  <l n="4">ዘመጽኡ፡ ኀቤከ፡ ዓረማውያን፡ ጸላዕት፨</l>
+                  <l n="5">አውአዮሙ፡ ፉዚግራ፡ ወበልዖሙ፡ እሳት፨</l>
+               </lg>
+               <lg type="stanza" n="21">
+                  <l n="1">ሰላም፡ ለሕጽንከ፡ ከመ፡ ስሂን፡ ወርሄ፨</l>
+                  <l n="2">ዘይትዓኰት፡ እምኵሉ፡ ወይሴባሕ፡ ስባሔ፨</l>
+                  <l n="3">ወልደ፡ ሰሎሞን፡ ምኒልክ፡ ንጉሠ፡ ርኅራኄ፨</l>
+                  <l n="4">ዘመጽኡ፡ ጸላዕትከ፡ ተሰጥሙ፡ ኵለሄ፨</l>
+                  <l n="5">እስመ፡ ፈጻሜ፡ ፈቃዱ፡ አንተ፡ ለአምላክ፡ ዔሎሄ፨</l>
+               </lg>
+               <lg type="stanza" n="22">
+                  <l n="1">ሰላም፡ ለአዕደዊከ፡ እንተ፡ አኃዛ፡ ሰይፈ፨</l>
+                  <l n="2">ከመ ይምትራ፡ለባሺ፡ብዙቅ አምነፉዚግራ፡ዘተርፈ።</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ እንተ፡ ትኵንን፡ አዕላፈ፨</l>
+                  <l n="4">አፍቀረከ፡ አምላክ፡ ወጸሎተከ፡ ተወክፈ፨</l>
+                  <l n="5">ተፈጸሙ፡ ጸላዕትከ፡ አሐዱ፡ ኢተርፈ፨</l>
+               </lg>
+               <lg type="stanza" n="23">
+                  <l n="1">ሰላም፡ ለመዘርዒከ፡ ከመ፡ መዘርዓ፡ አንበሳ፡ ወድብ፨</l>
+                  <l n="2">በፈትለ፡ ወርቅ፡ ርሱይ፡ ወበልብሰ፡ ሜላት፡ ግልቡብ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ኰናኔ፡ ሕዝብ፡ ወአሕዛብ፨</l>
+                  <l n="4">በዘመንከ፡ ትፍሥሕት፡ ወጥቀ፡ ጽጋብ፨</l>
+                  <l n="5">ውኂዘ፡ መዓር፡ ወመልዓ፡ ሐሊብ፨</l>
+               </lg>
+               <lg type="stanza" n="24">
+                  <l n="1">ሰላም፡ ለኵርናዕከ፡ ኃይለ፡ ኢጣልያ፡ ዘአድከመ፨</l>
+                  <l n="2">ሶበ፡ ሰበሮ፡ ለሐመሩ፡ በከመ፡ ፈርዖን፡ ተሰጥመ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ አንተ፡ ትኵንን፡ ዓለመ፨</l>
+                  <l n="4">አጥፋዕኮ፡ ለዓላዊ፡ ዘአርአያ፡ ገጹ፡ ኅሡመ፨</l>
+                  <l n="5">እስከ፡ አውአዮ፡ ፉዚግራ፡ ወአንደደ፡ ፍህመ፨</l>
+               </lg>
+               <lg type="stanza" n="25">
+                  <l n="1">ሰላም፡ ለእመትከ፡ አምሳለ፡ መባርቅት፡ ኅብሩ፨</l>
+                  <l n="2">ጥቀ፡ ሠናይ፡ ወአዳም፡ ምሥጢሩ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ለእግዚአብሔር፡ ፍቁሩ፨</l>
+                  <l n="4">ርኁባነ፡ ከዊኖሙ፡ ሶበ፡ ርእዮሙ፡ ለፀሩ፨</l>
+                  <l n="5">አረረ፡ መጠዎሙ፡ ፉዚግራ፡ ተጻሩ፨</l>
+               </lg>
+               <lg type="stanza" n="26">
+                  <l n="1">ሰላም፡ ለእራኅከ፡ ኃይለ፡ ኃጥዓን፡ መቅሰሌ፨</l>
+                  <l n="2">ለፀሩ፡ ይትቤቀል፡ ወለፍቁራኒሁ፡ ከሃሌ፨</l>
+                  <l n="3">ወልደ፡ ሰሎሞን፡ ምኒልክ፡ ፅዱል፡ ከመ፡ ብረሌ፨</l>
+                  <l n="4">አይቴ፡ እግብእ፡ አነ፡ ሰዓተ፡ ብካይ፡ ወወይሌ፨</l>
+                  <l n="5">እንዘ፡ ይብል፡ አስቆቀወ፡ ማንጆር፡ ወመቀሌ፨</l>
+               </lg>
+               <lg type="stanza" n="27">
+                  <l n="1">ሰላም፡ ለአፃብኢከ፡ ህልቀተ፡ ወርቅ፡ ዘላዕሌሁ፨</l>
+                  <l n="2">ዘግሩም፡ ለራእዩ፡ ወመንክር፡ ለንጻሬሁ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ወልደ፡ ሰሎሞን፡ ለሊሁ፨</l>
+                  <l n="4">ሶበ፡ ርእዮሙ፡ ሰይፈ፡ እሳት፡ እኂዞ፡ ውስተ፡ እዴሁ፨</l>
+                  <l n="5">ሰብአ፡ ሮሜ፡ ጥቀ፡ ደንገፁ፡ ወፈርሁ፨</l>
+               </lg>
+               <lg type="stanza" n="28">
+                  <l n="1">ሰላም፡ ለአጽፋረ፡ እዴከ፡ ዘጥቀ፡ ሠናያን፨</l>
+                  <l n="2">ዘይዔድማ፡ ለእዝን፡ ወይጌርማ፡ ለዓይን፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ከመ፡ ዕንቍራ፡ ማይ፡ ዘልብን።</l>
+                  <l n="4">ሶበ፡ ሖርከ፡ ትግሬ፡ እኂዘከ፡ መስቀለ፡ ብርሃን፨</l>
+                  <l n="5">ጐየ፡ ሰይጣን፡ ምስለ፡ ባሺ፡ ብዙቂሁ፡ ጸዋጋን፨</l>
+               </lg>
+               <lg type="stanza" n="29">
+                  <l n="1">ሰላም፡ ለገቦከ፡ ዲበ፡ ዓራተ፡ ወርቅ፡ ዘሰከበ፨</l>
+                  <l n="2">ነቢሮ፡ ላዕሌሁ፡ ከመ፡ ይኴንን፡ አሕዛበ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ለእጓለ፡ ማውታ፡ አበ፨</l>
+                  <l n="4">ፍቁር፡ በኀበ፡ ማርያም፡ ወፍቁረ፡ ጊዮርጊስ፡ ካዕበ፨</l>
+                  <l n="5">ረሰየ፡ ትኩን፡ ዘመና፡ መሶበ፨</l>
+               </lg>
+               <lg type="stanza" n="30">
+                  <l n="1">ሰላም፡ ለከርስከ ኃዳጌ፡ በቀል፡ ውእቱ፨</l>
+                  <l n="2">ዘእንበለ፡ ምሕረት፡ ለአባስያን፡ ወካዕበ አልቦቱ፨</l>
+                  <l n="3">ወልደ፡ ሰሎሞን፡ ምኒልክ፡ ፍቁረ ኪሩባውያን፡ ፬ቱ፨</l>
+                  <l n="4">እምባሕረ፡ ወዳሴከ፡ አይኅ፡ ዘቶሳህኩ፡ ዝንቱ፨</l>
+                  <l n="5">ጸሐፌ፡ ትእዛዝ፡ ያንብቦ፡ ኢይኩን፡ ለክንቱ፨</l>
+               </lg>
+               <lg type="stanza" n="31">
+                  <l n="1">ሰላም፡ ለልብከ፡ ዘኢየአምር፡ ተቀይሞ፨</l>
+                  <l n="2">እንበለ፡ ዳዕሙ፡ አርመሞ፨</l>
+                  <l n="3">ወልደ፡ ሰሎሞን፡ ምኒልክ፡ ርኄ፡ አፈው፡ ዘቀናንሞ፨</l>
+                  <l n="4">ፈጸሞ፡ ለኢጣልያ፡ ወከዓዉ፡ ደሞ፨</l>
+                  <l n="5">ወለባሺ፡ ብዙቅኒ፡ በአፈ፡ መጥባሕት፡ ገዘሞ፨</l>
+               </lg>
+               <lg type="stanza" n="32">
+                  <l n="1">ሰላም፡ ለኵልያቲከ፡ ኵልያተ፡ መንፈስ፡ ቅብዓ፨</l>
+                  <l n="2">በፍቅረ፡ ክርስቶስ፡ ወይን፡ ዘኮነ፡ ጥብአ፨</l>
+                  <l n="3">ወልደ፡ ሰሎሞን፡ ምኒልክ፡ ንጉሠ፡ ውሳጤ፡ ወአፈአ፨</l>
+                  <l n="4">አሐዱ፡ ቃል፡ እምአፉከ፡ ሶበ፡ ወጽአ፨</l>
+                  <l n="5">አይሁዳዊ፡ ተፈጸመ፡ ወጠፍአ፨</l>
+               </lg>
+               <lg type="stanza" n="33">
+                  <l n="1">ሰላም፡ ለሕሊናከ፡ ሕሊና፡ ሠናይ፡ ማኅየዊ፨</l>
+                  <l n="2">አረማውያነ፡ ይጽልእ፡ ወለክርስቲያን፡ ጸጋዊ፨</l>
+                  <l n="3">ወልደ፡ ሰሎሞን፡ ምኒልክ፡ ፍቁረ፡ ኢየሱስ፡ ናዝራዊ፨</l>
+                  <l n="4">አጥፋእኮ፡ ለሰይጣን፡ ወቀጥቀጥከ፡ አርዊ፨</l>
+                  <l n="5">እስመ፡ ያፈቅረከ፡ ጥቀ፡ አምላክከ፡ ሰማያዊ፨</l>
+               </lg>
+               <lg type="stanza" n="34">
+                  <l n="1">ሰላም፡ ለሕንብርትከ፡ ከመ፡ ዓይነ፡ ማኅተም፡ አምሳሉ፨</l>
+                  <l n="2">ዘፈጠሮ፡ በጥበቢሁ፡ ጸባዖት፡ እግዚአ፡ ኵሉ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ለኢትዮጵያ፡ ፀዳሉ፨</l>
+                  <l n="4">ሶበ፡ ተባረቀ፡ ፉዚግራ፡ ከመ፡ ነጐድጓድ፡ ቃሉ፨</l>
+                  <l n="5">ተሰብረ፡ ወጨፎ፡ ወተክዕወ፡ አባሉ፨</l>
+               </lg>
+               <lg type="stanza" n="35">
+                  <l n="1">ሰላም፡ ለሐቌከ፡ ቅናተ፡ ወርቅ፡ ዘአጠቀ፨</l>
+                  <l n="2">ዘይኤድም፡ ለንጻሬሁ፡ እንዘ፡ ሀሎ፡ ርኁቀ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ወእግዚአ፡ፉዚግራ፡መብረቀ፨</l>
+                  <l n="4">ኀልቀ፡ እደዊሁ፡ ምስለ፡ ባሺ፡ ብዙቂሁ፡ ጥዩቀ፨</l>
+                  <l n="5">ወጀነራልኒ፡ እንዘ፡ ይጐይይ፡ ወድቀ፨</l>
+               </lg>
+               <lg type="stanza" n="36">
+                  <l n="1">ሰላም፡ ለአቈያጺካ፡ ከመ፡ አምደ፡ ወርቅ፡ ፍሉጠ፨</l>
+                  <l n="2">ኣይዴምን፡ ስኑ፡ ወኢየአምር፡ ተውላጠ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ዘኢየሩሳሌም፡ ሠግላጠ፨</l>
+                  <l n="4">ዘፉዚግራ፡ ቅብዕ፡ ዲበ፡ ርእሰ፡ ኢጣልያ፡ ሶበ፡ ተሠጠ፨</l>
+                  <l n="5">ተሰብረ፡ ናሁ፡ ወጥቀ፡ ተቀጥቀጠ፨</l>
+               </lg>
+               <lg type="stanza" n="37">
+                  <l n="1">ሰላም፡ እብል፡ ወዘዚአከ፡ አብራክ፨</l>
+                  <l n="2">በትሕትና፡ ሕሊና፡ ዘልፈ፡ እንተ፡ ትሰግዶ፡ ለአምላክ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ መሐሪ፡ ወቡሩክ፨</l>
+                  <l n="4">ተፈጸመ፡ አረማዊ፡ በሰንበተ፡ ጽባህ፡ ወሰርክ፨</l>
+                  <l n="5">ሶበ፡ ረድአከ፡ ለሊሁ፡ ልዳዊ፡ መልኣክ፨</l>
+               </lg>
+               <lg type="stanza" n="38">
+                  <l n="1">ሰላም፡ ለአእጋረከ፡ ብሔረ፡ ትግሬ፡ ዘሖራ፨</l>
+                  <l n="2">ከመ ይፈጽማ ለኢጣልያ፡ ወአእጋራ፡ ባሺ ብዙቅ ይመትራ።</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ወሊቀ፡ አዕላፍ፡ ሐራ፨</l>
+                  <l n="4">ዘደረስኩ፡ አነ፡ ለመልአክከ፡ ክብራ፨</l>
+                  <l n="5">ያንብባ፡ በቅድሜከ፡ ጸሓፌ፡ ትእዛዝ፡ ዕብራ፨</l>
+               </lg>
+               <lg type="stanza" n="39">
+                  <l n="1">ሰላም፡ ለሰኳንዊከ፡ እንተ፡ ይመስላ፡ አእማደ፡ ወርቅ፨</l>
+                  <l n="2">ዘህበሪሆን፡ ሠናይ፡ ወጥቀ፡ ጥንቁቅ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ እግዚአ፡ ፉዚግራ፡ መብረቅ፨</l>
+                  <l n="4">ሶበ፡ ሰአልከ፡ በይዋሄ፡ ለጊዮርጊስ፡ ጻድቅ፨</l>
+                  <l n="5">ፈጸሞሙ፡ ለጸላዕትከ፡ ዘመጽኡ፡ እምርሁቅ፨</l>
+               </lg>
+               <lg type="stanza" n="40">
+                  <l n="1">ሰላም፡ ለመኪየድከ፡ አሣእነ፡ ወርቅ፡ ተረሰየ፨</l>
+                  <l n="2">ዘያሐውር፡ በርትዕ፡ ወኢየአምር፡ ጌጋየ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ዘኢትዮጽያ፡ ፀሐየ፨</l>
+                  <l n="4">ተሐውከት፡ እምሮምያ፡ እንዘ፡ ሀሎከ፡ ዝየ፨</l>
+                  <l n="5">ሶበ፡ ሰምአት፡ በእዝና፡ ዘዚአከ፡ ዕበየ፨</l>
+               </lg>
+               <lg type="stanza" n="41">
+                  <l n="1">ሰላም፡ ለአጻብኢከ፡ በፍቅረ፡ ክርስቶስ፡ ቅብእ፨</l>
+                  <l n="2">ዘይመስል፡ ሮማነ፡ ወዕንቈ፡ ጳዝዮን፡ ስኩዕ፨</l>
+                  <l n="3">ወልደ፡ ሰሎሞን፡ ምኒልክ፡ ፈጻሜ፡ ኢጣልያ፡ በሰንእ፨</l>
+                  <l n="4">ዘመጽኡ፡ በሐመር፡ አረማውያን፡ ሰብእ፨</l>
+                  <l n="5">ማየ፡ ኢትዮጵያ፡ ውኅጦሙ፡ በኃይልከ፡ ጽኑዕ፨</l>
+               </lg>
+               <lg type="stanza" n="42">
+                  <l n="1">ሰላም፡ ለአጽፋረ፡ እግርከ፡ መጽሔተ ብርሃን ዘይመስላ።</l>
+                  <l n="2">ለመንግሥትከ፡ ሰላም፡ ዘኢይደመን፡ ጸዳላ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ ኰናኔ፡ ዓላማት፡ ኵላ፨</l>
+                  <l n="4">ፈጸምኮ፡ ለኢጣልያ፡ ለብሔረ፡ ትግሬ፡ በማእከላ፨</l>
+                  <l n="5">ተፈሥሐት፡ ኢትዮጵያ፡ ወገብረት፡ ተድላ፨</l>
+               </lg>
+               <lg type="stanza" n="43">
+                  <l n="1">ሰላም፡ ለቆምከ፡ እምስነ፡ በቀልት፡ ዘይሰኒ፨</l>
+                  <l n="2">ሠናይ፡ ውእቱ፡ ወአልቦቱ፡ ምንትኒ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ አጽናፈ፡ ዓለም፡ ኰናኒ፨</l>
+                  <l n="4">ከመ፡ አድኅንከ፡ ለኢትዮጵያ፡ እምደመ፡ ሰይጣን ተቃራኒ፨</l>
+                  <l n="5">ፉዚግራከ፡ ጽኑዕ፡ ወልታ፡ ይኵነኒ፨</l>
+               </lg>
+               <lg type="stanza" n="44">
+                  <l n="1">ሰላም፡ ለመልክእከ፡ ዘስነ፡ ራእዩ፡ ፍትው፨</l>
+                  <l n="2">መአድም፡ ስኑ፡ ወጥቀ፡ ቅድው፨</l>
+                  <l n="3">ወልደ፡ ሰሎሞን፡ ምኒልክ፡ ፍቁረ፡ ክርስቶስ፡ ሕያው ፡</l>
+                  <l n="4">ቦአ፡ ኢጣልያ፡ ውስተ፡ ሀገረ፡ ኅማም፡ ወበድው፨</l>
+                  <l n="5">ኀበ፡ አልቦቱ፡ እክል፡ ወአልቦቱ፡ ጼው፨</l>
+               </lg>
+               <lg type="stanza" n="45">
+                  <l n="1">ለዘአቅረብኩ፡ አምኃ፡ ከሢትየ፡ አፈ፨</l>
+                  <l n="2">በክብረ፡ ንግሥከ፡ ይጽሐፍ፡ ከመ፡ ይትነበብ፡ ዘልፈ፨</l>
+                  <l n="3">ንጉሠ፡ ነገሥት፡ ምኒልክ፡ እግዚአ፡ ፉዚግራ፡ አእላፈ፨</l>
+                  <l n="4">በከመ፡ አፍቀርከ፡ እግዚእ፡ ወጸሎትከ፡ ተወክፈ፨</l>
+                  <l n="5">ተወከፍ፡ ጸሎትየ፡ ኢይኪን፡ ግዱፈ፨</l>
+               </lg>
             </div>
          </div>
       </body>
