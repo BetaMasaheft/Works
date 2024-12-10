@@ -4,7 +4,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to the martyrs of ʾAkmim</title>
+            <title xml:id="t1">Tarafa malkǝʾ-hymn to the martyrs of ʾAkmim</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,6 +33,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+         <abstract><p>tarafa malk of <ref type="work" corresp="LIT2953RepCh234"></ref></p></abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
@@ -45,23 +46,65 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-05">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-10">Added the text, title, relations and bibl (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT2818RepCh102" passive="PRS13671Deyosqoros"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT2818RepCh102" passive="PRS13672Seklabyos"></relation>
+               <relation name="saws:formsPartOf" active="LIT2818RepCh102" passive="LIT2953RepCh234"></relation>
+               <relation name="skos:exactMatch" active="LIT2818RepCh102" passive="https://w3id.org/malke/2953/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>       
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">102</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለክሙ፡ ለርስትክሙ፡ አክሚም፡ ልሳናት፡ ኵሉ፡ ምካን።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለክሙ፡ ለርስትክሙ፡ አክሚም፡ ልሳናተ፡ ኵሉ፡ መካን፨</l>
+                  <l n="2">ሰማዕታቲሃ፡ አንትሙ፡ እስመ፡ ኅሩያን፨</l>
+                  <l n="3">ሰመይዋ፡ ደብረ፡ ጽዮን፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለክሙ፡ ሥጋክሙ፡ ልብሰ፡ ሰማዕታተ፡ ሀገር፡ አክሚም፨</l>
+                  <l n="2">በየማነ፡ መንግሥት፡ ትቁሙ፡ እምነ፡ ፀጋም፨</l>
+                  <l n="3">ሐፀብክሙ፡ በማየ፡ ደም፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለክሙ፡ ጥብሐ፡ በግዕ፡ ወላህም፡ በይነ፡ ክብረ፡ በዓል፡ ልማድ፨</l>
+                  <l n="2">ህየንተ፡ ዝንቱሰ፡ ዮም፡ ሰማዕታተ፡ ወልድ፨</l>
+                  <l n="3">ከዓውክሙ፡ ደመ፡ ክሳድ፨</l>
+               </lg>
+               <lg type="stanza" n="4">
+                  <l n="1">ሰላም፡ ለክሙ፡ መንግሥተ፡ ሰማያት፡ ለክሙ፡ እስመ፡ ይእቲ፡ ድሉት፨</l>
+                  <l n="2">ትግርምተ፡ መኰንን፡ ወሰይፍ፡ ከመ፡ ኢምንት፨</l>
+                  <l n="3">ኮነክሙ፡ ሰማዕታት፨</l>
+               </lg>
+               <lg type="stanza" n="5">
+                  <l n="1">ሰላም፡ ለክሙ፡ ለእሳተ፡ ምድር፡ መግርህ፡ አእንተ፡ ፍቅረ፡ አብ፡ ወወልዱ፨</l>
+                  <l n="2">ሰማዕታተ፡ አክሚም፡ አንትሙ፡ ለለ፩፨</l>
+                  <l n="3">ቆምክሙ፡ ውስተ፡ ዓፀዱ፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለክሙ፡ ሰማዕታተ፡ አክሙም፡ ጥዑም፡ ለተናግሮ፡ በአፍ፨</l>
+                  <l n="2">ዜና፡ ገድልክሙ፡ ጥቀ፡ ፍካሬ፡ መጽሐፍ፨</l>
+                  <l n="3">ክብርክሙ፡ እስመ፡ ትሩፍ፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለክሙ፡ አዕባነ፡ ህንደኬ፡ አክሚም፡ ሰማዕታተ፡ ክርስቶስ፡ ሥሉጥ፨</l>
+                  <l n="2">በኃፍረት፡ ኢይሑር፡ ውስተ፡ ምሥራጥ፨</l>
+                  <l n="3">ማኅቶተ፡ ብርሃን፡ ይኩነኒ፡ እንበለ፡ ተውላጥ፨</l>
+                  <l n="4">ገድልክሙ፡ ዘአፍአ፡ ወውሥጥ፨</l>
+               </lg>
             </div>
          </div>
       </body>
