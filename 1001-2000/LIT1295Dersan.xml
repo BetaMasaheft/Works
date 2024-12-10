@@ -39,7 +39,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <witness corresp="EMML44"/>
                <witness corresp="BNFet346"/>
                <witness corresp="BAVet82"/>
-               <witness corresp="BAVet21"/>
+               <witness corresp="BAVet121"/>
                <!--create mini ms-->
             </listWit>
             <!-- list from ESam004 
@@ -64,7 +64,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+            <language ident="la">Latin</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -122,6 +126,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Ewald1846Tuebingen"/>
                   <citedRange unit="page">32-33</citedRange>
                </bibl>
+               <bibl>
+                  <ptr target="bm:GrebTiss1935Codices"/>
+                  <citedRange unit="page">296-317</citedRange>
+               </bibl>
             </listBibl>
             <listBibl type="editions">
                <bibl>
@@ -138,364 +146,1206 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <bibl>
                   <ptr target="bm:1961DersanaMikael"/>
                </bibl>
-               
+               <bibl>
+                  <ptr target="bm:2006DersanaMikael"/>
+               </bibl>
             </listBibl>
          </div>
          
          <div type="edition">
-            
-            <!--This is a very preliminary outline following the first group of manuscripts described in bm:Lusini2005EAEDersanaM
-            The order and attribution of the homilies vary considerably -->
-            
-            <!--pagwmen?-->
-            
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Introduction"><!-- Added after BAVet82 (MV - 2017-05-17); text of incipit from ESam004 -->
+            <note>The following text is based on the account in <bibl><ptr target="bm:2006DersanaMikael"/></bibl>. 
+               The order and attribution of the textparts can vary considerably in manuscript witnesses.</note>   
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Introduction">
+               <label>Introduction to the work</label>
                <div type="textpart" subtype="incipit">
-                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩ዱ፡ አምላክ፡ ንቀድም፡ በረድኤተ፡ እግዚአብሔር፡ ልዑል፡ ጺሒፈ፡ ዜና፡ ዕበዩ፡ ወክብሩ፡ ወልዕልሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ይስአል፡ ለነ፡ እምኀበ፡ እግዚአብሔር፡ አምላኩ፡ መሐሪ፡ ምሕረት፡ ወሣህል።</ab>
+                  <ab>
+                     <l n="1">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ንቀድም፡ በረድኤተ፡ እግዚአብሔር፡ ልዑል፡ ጽሒፈ፡ ዜና፡ ዕበዩ፡ ወክብሩ፡ ወልዕልናሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ 
+                     መላእክት፡ ከመ፡ ይስአል፡ ለነ፡ እምኀበ፡ እግዚአብሔር፡ አምላኩ፡ መሓሪ፡ ምሕረተ፡ ወሣህለ። ጸሎቱ፡ ወስእለቱ፡ ወትንብልናሁ፡ ወአስተብቍዖቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ 
+                     ስማይውያን፡ ይዕቀበነ፡ ወያድኅነነ፡ ለዓለመ፡ አሜን።</l>
+                  </ab>
                </div>
-               
-               <div type="textpart" subtype="Introduction">
-                  <label>Introduction</label>             
+               <div type="textpart" subtype="explicit">
+                  <ab> 
+                     <l n="51">ነፍሳተ፡ ጻድቃን፡ አመ፡ ሰንዱነ፡ ብርሃን፡ ይትዐጸፋ፡ ለነፍሰ፡ ዕገሌ፡ ህየ፡ ይረሲ፡ ምዕራፋ፡ ወለነፍሳተ፡ አበዊሁ፡ ወአኀዊሁ፡ ወአማቲሁ፡ ወአኃቲሁ፡ ለዓለመ፡
+                        ዓለም፡ አሜን።</l>
+                  </ab>
                </div>
             </div>
-            
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Hedar">
-               <label xml:lang="en">
-                  <foreign xml:lang="gez">Ḫǝdār</foreign>
-               </label>
-               
-               <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT1637Homily" xml:id="HomilyHedar">
-                  <label xml:lang="en">Homily for <foreign xml:lang="gez">Ḫǝdār</foreign> by <persName ref="PRS9523Timothy"/>
-                  </label>
+               <label xml:lang="en">Ḫǝdār</label>
+               <div type="textpart" subtype="part" xml:id="AdmonitionHedar">
+                  <label>Admonition for Ḫǝdār</label>
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ዝንቱ፡ ድርሳን፡ ዘደረሰ፡ አባ፡ ደማቴዎስ፡ ሊቀ፡ ጳጳሳት፡ ዘእለ፡ እስከንድርያ፡ ዘይትነበብ፡ በዕለተ፡ በዓሉ፡ 
+                     ለዐቢይ፡ ወክቡር፡ ወቅዱስ፡ ሊቀ፡ መላእክት፡ ሚካኤል፡ አመ፡ ዐሠሩ፡ ወሰኑይ፡ ለወርኀ፡ ኅዳር። ያርአየነ፡ ኀይለ፡ ወተኣምረ፡ ወክብረ፡ ዘወሀቦ፡ እግዚአብሔር፡ እምኵሎሙ፡ 
+                     ቅዱሳን፡ መላእክት፡ ጸሎቱ፡ ወበረከቱ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ አሜን።</ab>
                </div>
-               
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionMiracles">
-                  <label xml:lang="en">Introduction to the miracles performed by St Michael</label>
-                  <!-- This introduction is transmitted in the section for Ḫǝdār in BAVet82, but in the section for Maskaram in BAVet121 (instead of the miracle). -->
+               <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT1637Homily" xml:id="HomilyTimothy">
+                  <label xml:lang="en">Homily by Timothy</label>
+                  <div type="textpart" subtype="incipit">
+                  <ab> 
+                     <l n="1">አውሎግሶን፡ አውሎግሶን፡ አውልግሶን። ዐቢይ፡ በዓል፡ ለነ፡ ዮም፡ ኦ፡ ፍቁራንየ፡ ለንትጋባእ፡ ወንትፈሣሕ፡ ወይትሐሠይ፡ ልብነ፡ ወናዕርፍ፡ በዛቲ፡ ዕለት፡ 
+                        ቅድስት።</l> 
+                     <l n="2">ወአነ፡ ርኢክዎ፡ ለዐቢይ፡ ወክቡር፡ ወኀያል፡ ወልዑል፡ ወመተንብል፡ ወኄር፡ ብፁዕ፡ ወቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ የሀበኒ፡ ቃለ፡ ጥዑመ፡ ዘመንፈስ፡ ቅዱስ፡ 
+                        በከመ፡ ይቤ፡ ዳዊት፡ በመዝሙር፡ እስመ፡ ለመላእክቲሁ፡ ይኤዝዞሙ፡ በእንቲ፡ ኣከ፡ ከመ፡ ይዕቀቡከ፡ በኵሉ፡ ፍናዊከ፡ ወበእደዊሆሙ፡ ያነሥኡከ፡ ለእመ፡ ወሀቡከ፡ መሥዋዕተ።</l>
+                     <l n="3">መልአከ፤ እግዚአብሔር፡ የሐጽሮሙ፡ ለእለ፡ ይፈርሁ፡ እምኔሁ፡ ወያወፅኦሙ፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት።</l>
+                     <l n="4">መኑ፡ ውእቱ፡ ዝ፡ መልአክ፡ ዘየሐጽሮሙ፡ ለእለ፡ ይፈርህዎ፡ ለእግዚአብሔር፡ ወያወፅአሙ፡ ለእለ፡ የአምኑ፡ ቦቱ፡ አኮኑ፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ በዛቲ፡
+                        ዕለት፡ ይስእል፡ ሎሙ፡ ከመ፡ ይምሐሮሙ፡ እግዚአብሔር።</l>
+                     <l n="5">ወይጼሊ፡ ኀበ፡ እግዚአብሔር፡ ወይቄድሶሙ፡ ወያነጽሓሙ፡ ወይመርሖሙ፡ ኀበ፡ ፍኖተ፡ ሕይወት፡ ወብርሃን።</l>
+                     <l n="6">አኮ፡ በእንተ፡ ጻድቃን፡ ባሕቲቶሙ፡ አላ፡ ለኃጥኣንሂ፡ ይስእል፡ ሎሙ፡ ከመ፡ ይምሐሮሙ፡ እግዚአብሔር።</l>
+                     <l n="7">ወለእመ፡ ወሀበ፡ ብእሲ፡ አሐደ፡ ኅብስተ፡ ለነዳይ፡ ኢይነውም፡ በእንቲኣሁ፡ ማር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወለእመ፡ ወሀበ፡ ጽዋዐ፡ ማይ፡ ቈሪር፡ ኢይነውም፡
+                        በእንቲኣሁ። ወለእመ፡ ሰመየ፡ ወልዶ፡ ወወለቶ፡ በስመ፡ ዚኣሁ፡ ለሚካኤል፡ ኢይነውም፡ በእንቲኣሆሙ፡ ቅዱስ፡ ሚካኤል፡ ወለዘይውህብ፡ በስሙ፡ ለነዳይ፡ እስከ፡ ፍተአሐዱ፡
+                        ኅብስት፡ ወጽዋዐ፡ ማይ፡ ኢይነውም፡ በእንቲአሁ፡ ለዓለመ፡ ዓለም።</l>
+                     <l n="8">ወለእመ፡ ፈቀድክሙ፡ ታእምሩ፡ ወታዕርፉ፡ (፩) ወትስምዑ፡ ነገሮ፡ ለሚካኤል፡ ስምዐ፡ ኮንኩ፡ አነ፡ አቡክሙ፡ ደማቴዎስ፡ ወዐረጉ፡ ኢየሩሳሌም፡ ከመ፡ እስግድ፡
+                        ለመስቀል፡ ክቡር፡ ወለመቃብረ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ዘተንሥአ፡ እሙታን።</l>
+                     <l n="9">ይእቲኬ፡ ዘታነግፈነ፡ እምላሕነ፡ ቤተ፡ ክርስቲያን፡ ወእንተ፡ አንሶሰወ፡ ውስቴታ፡ እግዚእነ።</l>
+                     <l n="10">ወቦእኩ፡ ቤተ፡ ማርያም፡ እሙ፡ ለዮሐንስ፡ ረድእ፡ ወንጌላዊ፡ ነጸርኩ፡ ወረከብኩ፡ መጽሐፈ፡ ቅዱሰ፡ ዘጸሐፎ፡ ዮሐንስ፡ ወንጌላዊ፡ ረድእ፡ ወይብል፡ ንባበ፡ 
+                        መጽሐፉ፡ ዝንቱ፡ ውእቱ፡ ዘይረድአነ፡ ወያጸንዐነ።</l>
+                     <l n="11">ወረከብኩ፡ ዘያሥተፌሥሐኒ፡ በከመ፡ ይቤ፡ ዮሐንስ፡ ወንጌላዊ፡ ወሰማዕት፡ ወይቤ፡ ሶበ፡ ቦእኩ፡ አነ፡ አንዘ፡ ሀሎ፡ በገባሁ፡ ጊዜ፡ የእግዚአብሔር፡ የሐውር፡
+                        ወውእቱ፡ አርአየኒ፡ ኵሎ፡ መንክራተ፡ ዘውስተ፡ ታምራትና፡ ብዙኀ፡ ወአዕረገኒ፡ ወወሰደኒ፡ ወይቤለኒ፡ ርኢ፡ ደይነ፡ መደንግፀ፡ ዐቢይ፡ ጥቀ።</l>
+                     <l n="12">ወዝንቱ፡ ደይን፡ ይርሕብ፡ እምነ፡ ዐዘቅት፡ ታሕቲት፡ ወሰማዕኩ፡ ገዓረ፡ ዐቢየ፡ ከመ፡ ድምፀ፡ ማይ፡ ብዙኅ፡ ወዕቤሎ፡ ለመልአክ፡ ዘየሐውር፡ ምስሌየ፡ ንግረኒ፡
+                        እግዚእየ፡ ምንትኑ፡ ዝ፡ ግብር፡ ዘእሬኢ፡ አነ፡ ዘየዐርግ፡ እምኔሁ፡ ዐቢይ፡ ጢስ፡ ዘየዐርግ፡ እምላዕለ፡ ሠለስቱ፡ ምእት፡ እምልዮን፡ ዘውእቱ፡ ግበ፡ እሳት፡ ዘኢይበጽሕዎ፡ በሠለስቱ፡
+                        ምእት፡ ዕለት።</l>
+                     <l n="13">ዓዲ፡ ይወፅኡ፡ አናብስተ፡ እሳት፡ ወአክይስተ፡ እሳት፡ እምሕንፉይ፡ ዘውእቱ፡ መሬተ፡ ደይን፡ ወእምሕንሲት፡ ዘውእቱ፡ መካነ፡ ሥቃይ፡ ወእምሕራንኮስ፡
+                        ዘውእቱ፡ በርባሮስ፡ ወህየ፡ ሀለዉ፡ ዘኢይቈርር፡ እሳት፡ ወዘኢይነውሙ፡ ዕፄያት።</l>
+                     <l n="14">ወኢይወፅኡ፡ ምዕረ፡ እምኔሁ፡ ነፍሳተ፡ ኃጥኣን፡ አእላፈ፡ አእላፋት፡ ወትእልፊተ፡ አእላፋት፡ ወኢይትሌዐሉ፡ ላዕለ፡ እምድር፡ ወይወርዱ፡ ውስተ፡ መትሕተ፡
+                        ታሕቲት፡ ዘደይን።</l>
+                     <l n="15">ወይቤለኒ፡ ውእቱ፡ መልአክ፡ ዘየሐውር፡ ምስሌየ፡ ኦ፡ ዮሐንስ፡ ፍቁርየ፡ ወፍቁረ፡ እግዚአብሔር፡ ርኢ፡ ዐቢየ፡ ደይነ፡ ዘያደነግፅ፡ እምኵሉ፡ ደይን።</l>
+                     <l n="16">ወዕቤ፡ አሌ፡ ሎሙ፡ ለኵሎሙ፡ ኃጥአን፡ እለ፡ ይወድይዎሙ፡ ውስቴቱ፡ ለዝንቱ፡ ደይን።</l>
+                     <l n="17">ወዝንቱ፡ የአኪ፡ እምኵሉ፡ ደይን፡ ዘርኢኩ፡ እንከ፡ ወራሕቡ፡ ይኪውን፡ መጠነ፡ ኵላ፡ ምድር፡ ወዕመቃቲሁ፡ ከመ፡ ዝ፡ ወአነ፡ እንግረከ፡ ኢይወፅእ፡ እምኔሁ፡
+                        ኵሉ እኩይ።</l>
+                     <l n="18">ወርኢኩ፡ ላዕለ፡ ኃጥኣን፡ ዘይወርድ፡ መቅሠፍተ፡ መከራ፡ ከመ፡ ክቡድ፡ ወጽኑዕ፡ ውእቱ፡ ላዕለ፡ እለ፡ ይነብሩ፡ ውስቴቱ።</l>
+                     <l n="19">ወያወርዶሙ፡ ድምፀ፡ መዓቱ፡ ለእግዚአብሔር፡ ታሕተ፡ ዕመቃቲሃ፡ ዘሑረታቲሃ፡ መጠነ፡ ሠለስቱ፡ ምእት፡ ዕለት፡ ይከውን፡ እንዘ፡ ይወርድ፡ ሰብእ፡ 
+                        ወኢይትሌዐል፡ በእመት። ወኵሎሙ፡ ኃጥኣን፡ እሱራን፡ እደዊሆሙ፡ ወእገሪሆሙ፡ ውስቴታ፡ ወመንገዶሙ፡ ለኵሎሙ፡ ኃጥኣን፡ ኀቤሃ።</l>
+                     <l n="20">ወአነ፡ ዮሐንስ፡ ሶበ፡ ርኢኩ፡ ዘይከውን፡ ላዕለ፡ እሉ፡ በከይኩ፡ ዐቢየ፡ ብካየ፡ በእንተ፡ ኵነኔሆሙ፡ ለኃጥኣን።</l>
+                     <l n="21">ወይቤለኒ፡ ዝኩ፡ መልአክ፡ ኦ፡ ዮሐንስ፡ ፍቁረ፡ እግዚአብሔር፡ ኢትብኪ፡ በእንተ፡ ዝ፡ እስመ፡ ሀለወከ፡ ዮም፡ ትርአይ፡ ፍሥሓ፡ እምነ፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡
+                        መላእክት፡ ዘላዕለ፡ ሰማይ፡ ንቡር፡ ዕበዩ፡ ወክብሩ።</l>
+                     <l n="22">ወእንዘ፡ ይብለኒ፡ ከመ፡ ዝ፡ መጽአ፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ እምሰማይ፡ ዘንቡር፡ ዲበ፡ ርእሱ፡ አክሊለ፡ ክብር፡ ወቅድሜሁ፡ ይሴብሑ፡ መላእክት፡ 
+                        ቅዱሳን፡ ወጸድቃን፡ ወየሐውሩ፡ ምስሌሁ፡ ነቢያት፡ ወሐዋርያት፡ ጳጳሳት፡ ወኤጲስ፡ ቆጶሳት፡ ወኵሎሙ፡ ሰማዕታት፡ ወይለብሱ፡ አልባሰ፡ ክብር፡ ዘኢይትከሀል፡ ለነጽሮ።</l>
+                     <l n="23">ወውስተ፡ እደዊሆሙ፡ አዕጹቀ፡ ዘይት፡ ወበቀልት፡ ወዕፀ፡ መስቀል፡ ይሴብሑ፡ ወያነብቡ፡ ቅድሚሁ፡ እስከ፡ ይወርድ፡ ኀበ፡ ሰብአ፡ ደይን።</l>
+                     <l n="24">ወሶበ፡ ወረደ፡ ወቦአ፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ውስቴታ፡ ጠፍኡ፡ እሳትወጢስ፡ ዘይመልእ፡ ወአርመሙ፡ ኵሎሙ፡ አራዊት፡ እለ፡ ውስተ፡ ደይን፡
+                        ወዘንተ፡ ርኢኩ፡ በይእቲ፡ ሰዓት።</l>
+                     <l n="25">ወሶቤሃ፡ አውረደ፡ ክንፎ፡ ዘየማን፡ ቅዱስ፡ ወክቡር፡ ወልዑል፡ ወግሩም፡ ሊቀ፡ መላእክት፡ ሚካኤል፡ ሚካኤል፡ ውስተ፡ ዕመቀ፡ ደይን፡ ወአውፅአ፡ እምህየ፡
+                        ዘአልቦ፡ ኍልቍ፡ ምሉዓነ፡ እምጽንፈ፡ ክንፉ፡ ዘየማን፡ ወአውፅአሙ፡ ላዕለ፡ ምድር፡ እምደይን፡ ቅዱስ፡ ወከቡር፡ ወስቡሕ፡ ሊቀ፡ መላእክት፡ ሚካኤል።</l>
+                     <l n="26">ወመልአ፡ ዐሠርተ፡ ወክልኤተ፡ ገራህተ፡ ዘይእቲ፡ ገነተ፡ ሀገረ፡ ዔዶም።</l>
+                     <l n="27">ወካዕበ፡ አውረደ፡ ክንፎ፡ ዘፀጋም፡ ኀያል፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወአውፅአ፡ ዘይበዝኅ፡ እምቀዳሚ።</l>
+                     <l n="28">ወሰአልዎ፡ ሱራፌል፡ ወኪሩቤል፡ እሳታውያን፡ ወጸድቃን፡ እለ፡ በአድባር፡ ወበኣታት፡ ወገዳም፡ ዘመጽኡ፡ ምስሌሁ፡ እምሰማይ፡ ለመልአክ፡ ያውርድ፡
+                        ሥልሰ፡ ክንፎ፡ ዘምሉዕ፡ ምሕረተ፡ እግዚአብሔር፡ ላዕሌሁ።</l>
+                     <l n="29">ወአውፅአ፡ ሥልሰ፡ ዘአልቦሙ፡ ኍልቍ፡ ወአልቦ፡ ዘይክል፡ ኈልቆቶሙ፡ መኑሂ፡ ዘእንበለ፡ ቅዱስ፡ ወክቡር፡ ወፍቁር፡ ሊቀ፡ መላእክት፡ ሚካኤል፡ ወሰኣሌ፡
+                        ምሕረት፡ ለውሉደ፡ ሰብእ፡ እምኀበ፡ እግዚአብሔር፡ ንጉሠ፡ ነገሥት፡ ወእግዚአ፡ አጋዕዝት፡ ዘይነብር፡ ዲበ፡ ኪሩቤል፡ ወሱራፌል፡ ወዲበ፡ አርባዕቱ፡ እንስሳ፡ ምሉዓነ፡ 
+                        አዕይንት።</l>
+                     <l n="30">ወአልቦሙ፡ መስፈርት፡ ለእለ፡ ወፅኡ፡ እምውስተ፡ ደይን፡ ግሩም፡ ወእምሲኦል፡ መሪር፡ መካነ፡ ምንዳቤ፡ ውኀዘን፡ ወአኀዝዎሙ፡ መላእክት፡ ለጻድቃን፡
+                        ወኀፀብዎሙ፡ በማየ፡ ሕይወት፡ መንጽሔ፡ ኀጢአት፡ ወሠራዬ፡ አበሳ፡ ወጌጋይ፡ ወቀብዕዎሙ፡ ቅብዐ፡ ቅዱሰ፡ በትፍሥሕት፡ ወበሐሤት፡ ወአምጽእዎሙ፡ ኀበ፡ ቅዱስ፡ ወቡሩክ፡
+                        ወስቡሕ፡ ወግሩም፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ትጉሃን።</l>
+                     <l n="31">ወሶቤሃ፡ ነሥኦሙ፡ ወአብጽሖሙ፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ሰርዌሆሙ፡ ለኃይላት፡ ሰማያውያን፡ ቅድመ፡ እግዚአብሔር፡ ለኵሎሙ፡ ወሰገዱ፡ 
+                        ሎቱ፡ ወአእኰትዎ፡ ለዘመሐሮሙ፡ በጸሎቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት።</l>
+                     <l n="32">ወነዋ፡ ወፅአ፡ ቃል፡ በይእቲ፡ ዕለት፡ ወበይእቲ፡ ሰዓት፡ እምውስተ፡ መንጦላዕቱ፡ ለአብ፡ ዘይብል፡ በጸሎቱ፡ ወበስእለቱ፡ ለቅዱስ፡ ሚካኤል፡ መልአከ፡ ምክርየ፡
+                        ወበእንተ፡ ቅድስት፡ ድንግል፡ ማርያም፡ እምየ፡ በእንተ፡ ጻድቃንየ፡ ወበእንተ፡ ኵሎሙ፡ ቅዱሳን፡ ሰማዕታት፡ ምስለ፡ እለ፡ ገብሩ፡ ፈቃዶ፡ ለአቡየ፡ እለ፡ ሀለዉ፡ ኃጥኣን፡ በዲበ፡
+                        ምድር፡ ይድኅኑ፡ ወይበውኡ፡ ውስተ፡ ሕይወት፡ ዘለዓለም።</l>
+                     <l n="33">ወሶቤሃ፡ ነሥኦሙ፡ ወአብኦሙ፡ ውስተ፡ ገነት፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት።</l>
+                     <l n="34">ወአነ፡ ዮሐንስ፡ ሶበ፡ ርኢኩ፡ ዘንተ፡ ኵሎ፡ ነገረ፡ እንዘ፡ ይወፅእ፡ እመንጦላዕቱ፡ ለአብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ተፈሣሕኩ፡ በእንተ፡ ምሕረተ፡
+                        እግዚአብሔር፡ አስተብቋዕኩ፡ ወአእኰትክዎ፡ ለአብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ በእንተ፡ ምሕረቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት።</l>
+                     <l n="35">ወይቤለኒ፡ ዝኩ፡ መልአክ፡ አእምርኬ፡ ኦ፡ ዮሐንስ፡ ፍቁረ፡ እግዚአብሔር፡ ከመ፡ ፍሉጥ፡ ዮም፡ ዕለተ፡ በዓሉ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ አመ፡ 
+                        ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ ሰኔ፡ ቀዳማይ፡ በዓሉ፡ ወአመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ ኅዳር፡ ደኃራይ፡ በዓሉ።</l>
+                     <l n="36">ወበውእቱ፡ ዕለት፡ ሤሞ፡ እግዚአብሔር፡ ላዕለ፡ ኵሉ፡ ዘሀሎ፡ ውስተ፡ ሰማይ፡ በእንተ፡ ትሕትናሁ፡ ወተአዝዞቱ፡ ወበእንተ፡ ዘሞኦ፡ ለሰይጣን፡ ጸላኤ፡ ሠናያት፡
+                        ዘአስተሐቀሮ፡ ለእግዚኡ።</l>
+                  </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                     <l n="101">ወእለኒ፡ ታነብቡ፡ ኢታንትጉ፡ ገቢረ፡ ወኢትወስኩ፡ አላኩኑ፡ እስትርኩባነ፡ ከመ፡ ኢትወልጡ፡ እምእሉ፡ አስማት።</l> 
+                     <l n="102">በትዕግሥት፡ ወበህድአት፡ አንብቡ፡ ከመ፡ ኢይትገደፍ፡ እምዝንቱ፡ አሐዱ፡ ቃል፡ እስከ፡ ይትነበብ፡ ገድል፡ ወድርሳን፡ ይቀውሙ፡ ህየ፡ ቅዱሳን፡ መላእክት፡
+                        ወጻድቃን፡ በዕለተ፡ ተዝካሮሙ፡ ወበዓሎሙ።</l>
+                     <l n="103">ወሶበ፡ ይትነበብ፡ ገድሎሙ፡ ወድርሳኖሙ፡ እመ፡ ይትገደፍ፡ ቃል፡ እምአንባቢ፡ ይበክዩ፡ ቅዱሳን፡ መላእክት፡ ጻድቃን፡ ወሰማዕት፡ ነቢያት፡ ወሐዋርያት፡ 
+                        ደናግል፡ ወመነኰሳት፡ ፍጹማን፡ በእንተ፡ ዘተገድፈ፡ አሐዱ፡ ቃል።</l>
+                     <l n="104">ኢትኅድጉ፡ ለጌሠም፡ ሶበ፡ ይነውኅ፡ ምንባብ፡ እስመ፡ ኢይሴስሉ፡ ቅዱሳን፡ እስከ፡ ይትፌጸም፡ ገድሎሙ፡ ወድርሳኖሙ፡ በከመ፡ ጽሑፍ፡ ውስተ፡ ገድለ፡ አባ፡
+                        ሲኖዳ፡ ወዐይነ፡ ኤርምያስ፡ ነቢይ፡ አንጠብጠበ፡ አንብፆ፡ ላዕለ፡ አሐዱ፡ ዘይብል፡ ዘንተ፡ አንባቢ፡ ሶበ፡ ይትገደፍ፡ አሐዱ፡ ቃል፡ እምቃላቲሁ፡ ወእምነገሩ።</l> 
+                     <l n="105">ወከማሁ፡ ሕዝቅኤልኒ፡ ወሚልክያስ፡ ብዙኀ፡ ቆሙ፡ ሶበ፡ ኖመ፡ አንባቢ።</l>
+                     <l n="106">አንትሙኒ፡ አንባብያን፡ አንብቡ፡ በፍርሀት፡ ወበንቁህ፡ ልብ፡ ወለእመ፡ ኢተአምሩ፡ አንብቦ፡ መጻሕፍት፡ ጸውዑ፡ ዘየ፡ አምር፡ አንብቦ።</l>
+                     <l n="107">ወጸልዩ፡ ላዕሌየ፡ ወላዕለ፡ ዘጸሐፎ፡ ወአጽሐፎ፡ ወዘአንበቦ፡ ወዘተርጐሞ፡ ወዘሰምዐ፡ ቃላቲሁ፡ ለዝንቱ፡ መጽሐፍ፡ ኅቡረ፡ ይምሐረነ፡ እግዚአብሔር።</l>
+                     <l n="108">በጸሎታ፡ ለእግዝእትነ፡ ማርያም፡ ወላዲተ፡ አምላክ፡ ወበጸሎቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወበስእለቱ፡ ለቅዱስ፡ ገብርኤል፡ ዜናዊ፡ ትፍሥሕት፡
+                        ወሐሤት፡ ወበጸሎቶሙ፡ ለዕሥራ፡ ወአርባዕቱ፡ ካህናተ፡ ሰማይ፡ ወበስእለቶሙ፡ ለአርባዕቱ፡ እንስሳ፡ ወበጸሎቶሙ፡ ለቅዱሳን፡ ወሰማዕት፡ ወኄራን፡ መላእክት፡ መንፈሳውያን፡ 
+                        ወለነኒ፡ ይምሐረነ፡ ወይሣህለነ፡ ለኵልነ፡ ውሉደ፡ ጥምቀት፤ ወያድኅነነ፡ እመሣግሪሁ፡ ለሰይጣን።</l>
+                     <l n="109">በረከተ፡ ጸሎቱ፡ ወሀብተ፡ ረድኤቱ፡ ለቅዱስ፡ ሚካኤል፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     <l n="110">ኤኮስ፡ አስሌ፡ ኤፓ፡ ኤፓስ፡ ኤነከምካም፡ ኤቦካ፡ ኪሮም፡ ለካፍ፡ ፌኤ፡ ሎኬ፡ ወአርናኬ፡ ጓ፡ አብሶላ፡ አስቤክ፡ አበሳኩ፡ አሜዕ፡ አውጽ፡ ኤቃ፡ ኤጴ፡ ካብዕ፡ 
+                        ሬው፡ አርሂሊ፡ አዮን፡ ያብሳት፡ ጸ።</l> 
+                     <l n="111">ለዘተአመነ፡ በጸሎቱ፡ ወበስእለቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ በትንብልናሃ፡ ወበአስተብቍዖታ፡ ለእግዝእትነ፡ ማርያም፡ ወላዲተ፡ አምላክ፡ ያድኅነነ፡ 
+                        ወልዳ፡ ለዓለመ፡ ዓለም።</l>
+                     <l n="112">አካዕ፡ ክስብኤል፡ ቤቃ፡ ጼቃ፡ ሴቃ፡ አልፋ፡ ወዖ፡ ቤጣ፡ የውጣ፡ ዮድ፡ አህያ፡ ሸራህያኤል፡ ሻዳይ፡ ጸባኦት፡ አዶናይ፡ ዐማኑኤል፡ እልመክኑን፡ ወእሎንተ፡ 
+                        አስማተ፡ ጸሐፈ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ላዕለ፡ አክናፊሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት።</l>
+                     <l n="113">ወበእሉ፡ አስማት፡ ወድቀ፡ ዲያብሎስ፡ ምስለ፡ ሠራዊቱ፡ ተዐጺፎ፡ ጽልመተ፡ ሌሊት፡ ከማሁ፡ አውደቆሙ፡ ለፀርየ፡ ወጸላእትየ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     <l n="114">ኦ፡ እግዚእየ፡ ኢየሱስ፡ ክርስቶስ፡ ወልደ፡ እግዚአብሔር፡ ሕያው፡ ወወልደ፡ ማርያም፡ ሥግው፡ በዝ፡ ቃል፡ ዕቀብ፡ ነፍስነ፡ ወሥጋነ፡ እምሀጕል፡ እንበይነ፡
+                        ሥጋከ፡ ቅዱስ፡ ወደምከ፡ ጥሉል።</l>
+                     <l n="115">በእንተ፡ ሚካኤል፡ ወገብርኤል፡ ወበእንተ፡ ሱራፌል፡ ወኪሩቤል፡ በእንተ፡ አፍኒን፡ ወሳቁኤል፡ በእንተ፡ ዑራኤል፡ ወሩፋኤል፡ ወፋኑኤል፡ ወበእንተ፡
+                        ነቢያት፡ ወሐዋርያት፡ ወበእንተ፡ ጻድቃን፡ ወሰማዕታት፡ እለ፡ ተጸውዐ፡ ስሞሙ፡ ወእለ፡ ኢተጽውዓ፡ አስማቲሆሙ፡ ኅቡረ፡ ይምሐረነ፡ እግዚአብሔር።</l>
+                     <l n="116">እንበይነ፡ ኪዳኑ፡ ለሚካኤል፡ መልአከ፡ ምክርከ፡ ወገብርኤል፡ አብሣሬ፡ ትስብእቱ፡ ለወልድከ፡ ሥረይ፡ ኀጢአትየ፡ ወኀጢአተ፡ ኵሉ፡ ሕዝብከ።</l>
+                     <l n="117">እስመ፡ አንተ፡ ውእቱ፡ እግዚአ፡ ሕያዋን፡ ወሙታን፡ ለዓለመ፡ ዓለም፡ አሜን፡ ወአሜን፡ ለይኩን፡ ለይኩን።</l>
+                     <l n="118">በስመ፡ እግዚአብሔር፡ ሥሉስ፡ እምኀበ፡ ኢሀሎ፡ ለዓለም፡ አምጻኢሁ፡ ወለኵሉ፡ ፍጡር፡ ፈጣሪሁ፡ ለሰማይ፡ ዘእንበለ፡ ዐምድ፡ ሰዋቂሁ፡ ወለምድር፡
+                        በላዕለ፡ ዘባና፡ ለባሕር፡ ሣራሪሁ፡ ለፀሓይ፡ ወለወርኅ፡ ዘፈጠሮሙ፡ ከመ፡ ያብርሁ፡ ወለአብያዝ፡ ዘፈጠሮሙ፡ በበ፡ ኑባሬሁ።</l>
+                     <l n="119">እስመ፡ ውእቱ፡ ይቤ፡ ወኮኑ፡ ወውእቱ፡ አዘዘ፡ ወተፈጥሩ። ወአቀሞሙ፡ ለዓለም፡ ወለዓለመ፡ ዓለም። ትእዛዘ፡ ወሀብሙ፡ ወኢኀለፉ።</l>
+                     <l n="120">በበ፡ ጊዜሁ፡ ወበበ፡ ዕድሜሁ፡ ከመ፡ ይኩኑ፡ ሊቃነ፡ በመዓልት፡ ወበሌሊት፡ በከመ፡ ሠርዐ፡ ለሊሁ፡ እምኀበ፡ መላእክት፡ ወሰብእ፡ ምሉዕ፡ ስብሐቲሁ፡
+                        ዘኢይነትግ፡ ወዘኢየኀልቅ፡ ብዕለ፡ ቅዳሴሁ።</l>
+                     <l n="121">ስብሐቲሁ፡ ዘእምኀቤሁ፡ ወውዳሴሁ፡ እምዚኣሁ፡ ጽልመተ፡ በርባሮስ፡ ዘኢይሴውሮ፡ እምንጻሬሁ፡ ወዕመቀ፡ አብሕርት፡ ዘይገስስ፡ በእዴሁ፡ እንዘ፡ ሀሎ፡
+                        ውስተ፡ አርያም፡ ጽርሑ፡ ዘኢይትነገር፡ በልሳነ፡ ሰብእ፡ ውዳሴሁ፡ ወኢይጤየቅ፡ አምሳሊሁ፡ ዘስዉር፡ እምሰብእ፡ እሳተ፡ መለኮቱ፡ ወእምፍጥረተ፡ ዚአሁ፡ ዘኢይትከሀል፡
+                        ለነጊር፡ ጥንተ፡ ክዋኔሁ፡ ወዘኢይት፡ ዐደው፡ እምልበ፡ ሰብእ፡ ወእምኅሊና፡ መላእክት፡ ዕመቀ፡ ጥበቢሁ።</l>
+                     <l n="122">ሎቱ፡ ክብር፡ ወስብሐት፡ ወአኰቴት፡ ለሰፋኒት፡ መለኮተ፡ ዚአሁ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     <l n="123">ንቀድም፡ በረድኤተ፡ እግዚአብሔር፡ ልዑል፡ ጽሒፈ፡ ተአምራቲሁ፡ ወኀይሉ፡ ለመልክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ ሰርዌሆሙ፡ ለመላእክት፡ ትጉሃን፡ እለ፡
+                        ሥዑላን፡ በነድ፡ ውዑይ፡ ትንብልናሁ፡ ወአስተብቍዖቱ፡ ያድኅነነ፡ እምዘመን፡ እኩይ፡ ከመ፡ ኢያስጥመነ፡ ዘባሕረ፡ ኀጢአት፡ ቀላይ፡ ለኵልነ፡ ውሉደ፡ ጥምቀት፡ ለዓለመ፡ 
+                        ዓለም፡ አሜን።</l>
+                     <l n="124">ይቤ፡ ዐቢይ፡ ውእቱ፡ እግዚአብሔር፡ ስቡሕ፡ ወጥቀ፡ ልዑል፡ ዲበ፡ ኵሉ፡ ፍጥረት፡ ዘኢያገምሮ፡ ኅሊና፡ ለብእ፡ ወኢይክሉ፡ አዕይንት፡ ደፊረ፡ ነጽሮቱ፡
+                        ለፈጣሪ፡ ኵሉ፡ ዘነፍስ፡ በቃለ፡ ጥበብ።</l>
+                     <l n="125">በከመ፡ ይቤ፡ ዳዊት፡ በመዝሙር፡ ዐቢይ፡ እግዚአብሔር፡ ወብዙኅ፡ አኰቴቱ፡ ወካዕበ፡ ይቤ፡ ዐቢይ፡ እግዚአብሔር፡ ወዐቢይ፡ ኀይሉ፡ ወአልቦ፡ ኍልቍ፡
+                        ለጥበቢሁ፡ ወካዕበ፡ ይቤ፡ ዳዊት፡ ጥቀ፡ ዐቢይ፡ ግብርከ፡ እግዚኦ፡ ወኵሎ፡ በጥበብ ገበርከ።</l>
+                     <l n="126">ወካዕበ፡ ይቤ፡ ዘይሬስዮሙ፡ ለመላእክቲሁ፡ መንፈሰ፡ ወለእለ፡ ይትለአክዎ፡ ነደ፡ እሳት።</l>
+                     <l n="127">ዓዲ፡ ይቤ፡ ይትአየን፡ መልአከ፡ እግዚአብሔር፡ ዐውዶሙ፡ ለእለ፡ ይፈርህዎ፡ ወያድኅኖሙ።</l>
+                     <l n="128">ዘገብረ፡ ኵሎ፡ ወዘፈጠረ፡ ኵሎ፡ እግዚአብሔር፡ አምላከ፡ ኀያላን፡ ዘይትዐጸፍ፡ ብርሃነ፡ ከመ፡ ልብስ፡ ዘእምቅድመ፡ ዓለም፡ ንጉሥ።</l>
+                     <l n="129">ዐቢይ፡ ውእቱ፡ ወመንክር፡ ኪነ፡ ጥበቡ፡ ጥቀ፡ ዘፈጠሮሙ፡ ለመላእክት፡ እምእሳት፡ ወነፋስ፡ አሐዱ፡ ዘኢይትረአይ፡ ወአሐዱ፡ ዘኢይትገሰስ፡ ከመ፡ 
+                        ይትለአክዎ፡ ወይስቡሑ፡ ለስሙ፡ ቅዱስ፡ ኵሎ፡ ጊዜ፡ ይእዜኒ፡ ወዘልፈኒ፡ ወለዓለመ፡ ዓለም፡ አሜን።</l>
+                  </ab>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleHedar">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ḫǝdār</foreign> on the Egyptian sailors whose boat was troubled by a strong wind</label>
-                  <!-- This miracle is transmitted in the section for Ḫǝdār in BAVet82, but in the section for Hamle in BAVet121.
-                  The indication of the month should be removed from the title in order to avoid confusion in the MSS descriptions where it is not transmitted in Ḫǝdār.
-                  -->
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleSailors">
+                  <label xml:lang="en">Miracle on the Egyptian sailors</label>
+                  <note>Miracle on the Egyptian sailors whose boat was troubled by a strong wind. This miracle is transmitted in the section for 
+                     Ḥamle in <ref type="mss" corresp="BAVet121"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        <l n="1">ተአምሪሁ፡ ለመልአክ፡ ክብር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ፍሡሕ፡ ወሥዑል፡ በነድ፡ መፍርህ፡ ትንብልናሁ፡ ወአስተበቍዖቱ፡ ይዕቀበነ፡ ወይትማሕፀነነ፡
+                           ያድኅነነ፡ ወይባልሐነ፡ እምዕደወ፡ ደም፡ ርሱሕ፡ በጽላሎተ፡ ክነፊሁ፡ ይሰውረነ፡ ሐፀ፡ ጸላኢ፡ ኢይንድፈነ፡ ይትዐየን፡ ዐውደነ፡ ወይጽቍን፡ ቅጽረነ፡ ፍኖተ፡ ሀጕል፡ ኢይርከበነ፡
+                           ለኵልነ፡ እለ፡ አመነ፡ ያድኅነነ፡ ወፈድፋደሰ፡ ለ<gap reason="ellipsis"/> ለዓለመ፡ ዓለም፡ አሜን። </l>
+                        <l n="2">እከሥት፡ በምሳሌ፡ አፉየ፡ ወእነግር፡ አምሳለ፡ ዘእምትካት፡ ወኀቡኣት፡ ዘእመሠረት፡ እነብብ፡ ወእፌክር፡ ተአምረ፡ ወመንክረ፡ ወኀይለ፡ ዘገብረ፡ ቅዱስ፡
+                           ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘኢይትዐጸፍ፡ ብርሃነ፡ እሳት።</l>
+                        <l n="3">ወዘልፈ፡ ይስእል፡ ምሕረተ፡ በኵሉ፡ ጊዜ፡ ወያስተብቍዕ፡ ኀበ፡ እግዚአብሔር፡ በእንተ፡ ኵሉ፡ ዘመደ፡ ዕጓለ፡ እመሕያው፡ ወያፈጥን፡ ወሪደ፡ ይርድኦሙ፡
+                           ወያድኅኖሙ፡ ለእለ፡ ይጼውዕዎ፡ ወይሰምዖሙ፡ ጸሎቶሙ፡ ወያድኅኖሙ፡ ለእለ፡ ይትአመንዎ፡ ወይሰጠምሙ፡ አልዎ፡ ወለእለ፡ ይዘክሩ፡ ስሞ፡ በአሚን።</l>
+                        <l n="4">እመሂ፡ በባሕር፡ ወበየብስ፡ ወበውስተ፡ ኵሉ፡ ፍኖት፡ ወበኵሉ፡ ዐጸባ፡ ወምንዳቤያት፡ ጽዑቃት፡ ያድኅኖሙ።</l>
+                        <l n="5">ነዋ፡ እንከ፡ ንዜንወክሙ፡ ለእለ፡ ተጋባእክሙ፡ ዝየ፡ በከመ፡ ኮነ፡ ቀዳሚ፡ በአሐዱ፡ እመዋዕል፡ ጌሡ፡ ብዙኃን፡ ሰብእ፡ እምብሔረ፡ ግብፅ፡ ወሖሩ፡ ኀበ፡
+                           ማዕዶተ፡ ባሕር፡</l>
+                     </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="12">ወሶቤሃ፡ ወረደ፡ እምሰማይ፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወአኀዞ፡ በእደዊሁ፡ ለውእቱ፡ ሐመር፡ ወሰሐቦ፡ ወለእለ፡ ሀለዉ፡ ቦቱ፡ አውፅኦሙ፡ እንተ፡
+                           የብስ፡ ወዐደዉ፡ ሕያዋኒሆሙ፡ ወኢነከዮሙ፡ ንስቲተ፡ ሕሡም፡ ለግሙራ።</l>
+                        <l n="13">ወዜነዉ፡ ዘንተ፡ ተአምረ፡ ለኵሉ፡ ሰብእ፡ ወሰብሕዎ፡ ለእግዚአብሔር፡ ዘአደኀኖሙ፡ እሞገደ፡ ባሕር፡ በእዴሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት።</l>
+                        <l n="14">ወእሉሰ፡ ነበሩ፡ እንዘ፡ ይገብሩ፡ ተዝካሮ፡ ለለ፡ ኵሉ፡ አውራኅ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ እስከ፡ ዕለተ፡ ሞቶሙ።</l> 
+                        <l n="15">ትንብልናሁ፡ ወአስተብቍዖቱ፡ ለዝንቱ፡ መልአክ፡ ክቡር፡ ዐቢይ፡ ሊቀ፡ መላእክት፡ ሚካኤል፡ ይዕቀበነ፡ ወይትማሕፀነነ፡ ወይሰውረነ፡ እምእደ፡ ጸላኢ፡ 
+                           ወፀር።</l>
+                        <l n="16">ወሊተኒ፡ ይክድነኒ፡ በጽላሎተ፡ ክነፊሁ፡ እምሕማመ፡ ሥጋ፡ ወነፍስ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeHedar">
-                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Ḫǝdār</foreign> on St Michael's appearance to Joshua  
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeJoshua">
+                  <label xml:lang="en">Commemorative notice on Michael's appearance to Joshua</label>
+                  <ab>
+                     <l n="1">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ።</l>
+                     <l n="2">አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለኅዳር፡ በዛቲ፡ ዕለት፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወርእሰ፡ ሠራዊተ፡ ሰማያውያን፡ መልአክ፡ 
+                        መሓሪ፡ ለዘመደ፡ ዕጓለ፡ እመሕያው፡ ዘይቀውም፡ ኵሎ፡ ጊዜ፡ ቅድመ፡ መንበሩ፡ ለእግዚአብሔር፡ ወይተነብል፡ ዕጓለ፡ እመሕያው።</l>
+                     <l n="3">ዝንቱ፡ ዘርእዮ፡ ኢያሱ፡ ወልደ፡ ነዌ፡ እንዘ፡ ውእቱ፡ በክብር፡ ዐቢይ፡ በአምሳለ፡ ሐራሁ፡ ለንጉሥ።</l>
+                     <l n="4">ወሶበ፡ ርእዮ፡ ደንገፀ፡ እምኔሁ፡ ወወድቀ፡ ዲበ፡ ምድር፡ በገጹ፡ ወሰገደ፡ ሎቱ።</l>
+                     <l n="5">ወይቤሎ፡ ኦ፡ እግዚእየ፡ እምኔነኑ፡ አንተ፡ አው፡ እምጸ፡ ላእትነኑ።</l>
+                     <l n="6">ወይቤሎ፡ አነ፡ ውእቱ፡ አሐዱ፡ እምሊቃናተ፡ ኀይላት፡ ሠራዊተ፡ ሰማያት፡ ወበዛቲ፡ ዕለት፡ እሜጥዎ፡ ለዐማሌቅ፡ ውስተ፡ እዴከ፡ ወአነግሠከ፡ ውስተ፡ ሀገረ፡
+                        ኢያሪኮ።</l>
+                     <l n="7">ዝንቱ፡ መልአክ፡ ዘኮነ፡ ምስለ፡ ኵሎሙ፡ ቅዱሳን፡ ወሰማዕት፡ ያጸንዖሙ፡ ወያስተዔግሦሙ፡ እስከ፡ ይፌጽሙ፡ ገድሎሙ።</l>
+                     <l n="8">ወግብሩ፡ ሎቱ፡ ተዝካረ፡ በዓላት፡ ወምጽዋታት፡ በአንተ፡ ስሙ፡ ለዝንቱ፡ መልአክ፡ በዐሠርቱ፡ ወክልኤቱ፡ ወርኅ፡ ለለዐሠርቱ፡ ወክልኤቱ፡ ለለ፡ አሐዱ፡ ወለለ፡
+                        ክልኤቱ፡ መዓልት፡ እስመ፡ ውእቱ፡ ይስእሎ፡ ለእግዚአብሔር፡ በእንተ፡ ፍሬያተ፡ ምድር፡ ወበእንተ፡ ርደተ፡ ዝናማት፡ ወበእንተ፡ ማያተ፡ አፍላግ፡ ወበእንተ፡ ነፋሳት፡ ሠናያት፡
+                        ከመ፡ ያፈጽሞሙ፡ እግዚአብሔር፡ በርትዕ፡ በፍሥሓ፡ ወበሐሤት።</l>
+                     <l n="9">ትንብልናሁ፡ ወአስተብቍዖቱ፡ ለዝንቱ፡ መልአክ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                  </ab>
                </div>
-               
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamHedar">
-                  <label xml:lang="en">
-                     <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Ḫǝdār</foreign>
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamCompassionate">
+                  <label xml:lang="en">Salām I say to you, compassionate angel</label>
+                  <ab>ሰላም፡ ዕብል፡ ኪያከ፡ መልአከ፡ ርኅሩኅ፡ ልብ፡ ለኵሉ፡ እንተ፡ ኢኮንከ፡ ድሩከ፡ ሚካኤል፡ ሊቅየ፡ ለለ፡ ዕቤለከ፡ ኅብአኒ፡ በጽላሎትከ፡ ነግህ፡ ወሠርከ፡ እስመ፡
+                        እምንእስየ፡ እፈርህ፡ ሀከከ።</ab> 
                </div>
-            </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamDesert">
+                  <label xml:lang="en">Salām, your dwelling place was in the desert...</label>    
+                  <ab>
+                     <l n="1">ሰላም፡ ለአስተርእዮትከ፡ ውስተ፡ ደብረ፡ ማህው፡ ዮም፡ ዘምስለ፡ ቅብዐ፡ ዘይትጥዑም፡ ቃለ፡ ዐዋዲ፡ ዮሐንስ፡ ዘንብረትከ፡ ገዳም፡ በትንባሌከ፡ ተፈኒዎ፡
+                        እምሥዋዐ፡ ልዑል፡ አርያም፡ ሦከ፡ ኀጢአትየ፡ ያውዒ፡ ሚካኤል፡ ፍሕም።</l>
+                     <l n="2">ዘአቅረብኩ፡ ማኅሌተ፡ አዘኪርየ፡ አእላፈ፡ ተዐምዱከ፡ ዘልፈ፡ ለለ፡ አነብብ፡ ተወከፍ፡ ዘንዴትየ፡ መጽሐፈ፡ እንተ፡ ረሰይከ፡ እግዚኦ፡ ጸሪቀ፡ መበለት፡
+                        ውኩፈ፡ እምእለ፡ አብኡ፡ ብዑላን፡ ዘተርፈ።</l>
+                     <l n="3">ነቢያት፡ ቅዱሳን፡ ወሐዋርያት፡ ሰባክያን፡ ሰማዕታት፡ ወጻድቃን፡ ወመላእክት፡ ትጉሃን፡ ደናግል፡ ዓዲ፡ ወመነኮሳት፡ ኄራን፡ ባርኮ፡ ባርኩ፡ ገባኤ፡ ዛቲ፡ 
+                        መካን፡ እስከ፡ አረጋዊ፡ ልሂቅ፡ እምንኡስ፡ ሕፃን።</l>
+                     <l n="4">ለዘጸሐፎ፡ በክርታስ፡ ወለዘአጽሐፎ፡ እንዘ፡ ይደርስ፡ ዘአንበቦ፡ ወለዘተርጐሞ፡ በልሳን፡ ሐዲስ፡ ወለዘሰምዐ፡ ቃሎ፡ በእዝነ፡ መንፈስ፡ በጸሎተ፡ እሙ፡ ማርያም፡
+                        ዐራቂተ፡ ኵሉ፡ እምባእስ፡ ኅቡረ፡ ይምሐረነ፡ ኢየሱስ፡ ክርስቶስ።</l>
+                  </ab>
+               </div>  
+            </div>            
             
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tahsas">
-               <label xml:lang="en">
-                  <foreign xml:lang="gez">Tāḫśāś</foreign>
-               </label>
-               
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyTahsas">
-                  <label xml:lang="en">Anonymous homily for <foreign xml:lang="gez">Tāḫśāś</foreign>
-                  </label>
+               <label xml:lang="en">Tāḫśāś</label>
+               <div type="textpart" subtype="part" xml:id="AdmonitionTahsas">
+                  <label>Admonition for Tāḫśāś</label>
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ድርሳን፡ ወነገር፡ ዘቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ ታኅሣሥ። በረከተ፡
+                     ጸሎቱ፡ ወሀብተ፡ ረድኤቱ፡ የሀሉ፡ ምስፍሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleTahsas">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Tāḫśāś</foreign> on the poor peasant who found a treasure in a fish</label>
-                  <!-- This miracle is transmitted in the section for Tāḫśāś in BAVet82, but in the section for Gǝnbot in BAVet121  -->
+               <div type="textpart" subtype="chapter" xml:lang="gez" corresp="LIT3958Homily" xml:id="HomilyDeratewos">
+                  <label xml:lang="en">Homily Dǝrātewos and Tewobǝstǝyā</label>
+                  <note>Ascribed to <persName ref="PRS10425Yohanne"/> in <ref type="mss" corresp="BMLacq776"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                  <ab>
+                     <l n="1">ስምዑ፡ ዘንተ፡ ኵልክሙ፡ አሕዛብ፡ ወአጽምዑ፡ ኵልክሙ፡ እለ፡ ትነብሩ፡ ውስተ፡ ዓለም፡ ዕድ፡ ወአንስት፡ እለ፡ ሀሎክሙ፡ ውስተ፡ ዝንቱ፡ ምስጢር፡ ከመ፡ 
+                        ታእምሩ፡ ኀይለ፡ ወተአምረ፡ ዘገብረ፡ እግዚአብሔር፡ ከመ፡ ያርኢ፡ ዕበዮ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ከመ፡ ይስአል፡ ኵሎ፡ ጊዜ፡ ወከመ፡ ይትወከፍ፡ ኵሎ፡ ሰብአ።</l>
+                     <l n="2">ይስእል፡ ኀበ፡ እግዚአብሔር፡ ለእለ፡ ይትአመኑ፡ በጸሎቱ፡ እስመ፡ ይውህቦሙ፡ ኀይለ፡ ወክብረ፡ በከመ፡ ምግባሮሙ።</l>
+                     <l n="3">ወሀሎ፡ አሐደ፡ ብእሲ፡ ዘርቱዕ፡ ሃይማኖቱ፡ ዘስሙ፡ <persName ref="PRS11306Deratewos">ዱራታኦስ፡</persName> ወስመ፡ ብእሲቱ፡ 
+                        <persName ref="PRS11307Tewobesteya">ቴዎብስትያ።</persName></l>
+                     <l n="4">ወይነብሩ፡ ውስተ፡ አሐቲ፡ ሀገር፡ እንተ፡ ስማ፡ <placeName ref="LOC6571Qalonya">ቆሎንያ፡</placeName> ወቦሙ፡ ብዙኅ፡ ንዋየ፡ 
+                        ወርቅ፡ ወብሩር፡ አልህምት፡ ወአባግዕ፡ አዕዱግ፡ ወአግማል፡ አብቅልት፡ ወአፍራስ።</l>
+                     <l n="5">ወይምሕሩ፡ ነዲያነ፡ ወምስኪናነ፡ <persName ref="PRS11306Deratewos">ዱራታኦስ፡</persName> ወብእሲቱ፡ 
+                        <persName ref="PRS11307Tewobesteya">ቴዎብስትያ፡</persName> ወይገብሩ፡ ብዙኀ፡ ምጽዋተ፡ ለለ፡ ኵሉ፡ አውራኅ፡ አመ፡ ዐሡሩ፡ ወሠኑዩ፡ ዕለት፡
+                        በበዓለ፡ ሚካኤል፡ ሊቀ፡ መላእክት።</l>
+                  </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="67"><persName ref="PRS11306Deratewos">ዱራታኦስ፡</persName> 
+                           ወ<persName ref="PRS11307Tewobesteya">ቴዎብስትያ፡</persName> አፈድፋዱ፡ ገቢረ፡ ሠናይ፡ እምቀዳሚ፡ ግብሮሙ፡ ወፈጸሙ፡ ገድሎሙ፡ 
+                           እስከ፡ ይበጽሕ፡ ዕለተ፡ ዕረፍቶሙ።</l>
+                        <l n="68">ወኵሎሙ፡ ሕዝብ፡ አምኑ፡ በጸሎቶሙ፡ ወበቃለ፡  ዚአሆሙ፡ በእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ዘሎቱ፡ ስብሐት፡ ምስለ፡ ኄር፡ አቡሁ፡ ወመንፈስ፡ ቅዱስ፡
+                           ማሕየዊ፡ እምይእዜ፡ ወእስከ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                        <l n="69">በረከቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወረድኤቶሙ፡ ለ<persName ref="PRS11306Deratewos">ዱራታኦስ፡</persName>
+                           ወለ<persName ref="PRS11307Tewobesteya">ቴዎብስትያ፡</persName> ይኩኖ፡ ሠራዬ፡ ኀጢአት፡ ለገብረ፡ እግዚአብሔር፡ ዕገሌ፡ ለዓለመ፡ ዓለም፡
+                           አሜን።</l>
+                     </ab>
+                  </div>
+               </div>        
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleTreasure">
+                  <label xml:lang="en">Miracle on the poor peasant who found a treasure in a fish</label>
+                  <note>This miracle is transmitted in the section for Gǝnbot in <ref type="mss" corresp="BAVet121"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                  <ab>
+                     <l n="1">ተአምሪሁ፡ ለቅዱስ፡ ሚካኤል፡ መልአከ፡ ኪዳኑ፡ ለክርስቶስ፡ ንጉሠ፡ ስብሐት፡ ትንብልና፡ ስእለቱ፡ ወአስተብቍዖቱ፡ ያድኅነነ፡ እምዕለት፡ እኪት፡ 
+                        ወእምሰዓታተ፡ መንሱት፡ እምሐጽ፡ ዘይሰርር፡ በመዓልት፡ ወእምግብር፡ ዘየሐውር፡ በጽልመት፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     <l n="2">ተብህለ፡ ከመ፡ ሀሎ፡ አሐዱ፡ ብእሲ፡ በውስተ፡ አሐቲ፡ ሀገር፡ መሀይምን፡ ወጻድቅ፡ ዘይፈርሆ፡ ለእግዚአብሔር፡ ወይገብር፡ ምሕረተ፡ ለነዳያን፡ ወለምስኪናን፡ 
+                        ወይሴፎ፡ ትንብልሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወይገብር፡ ተዝካሮ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለለ፡ ወርኁ፡ ወዝኩ፡ ብእሲ፡ ኮነ፡ ይትጌበር፡ ግብረ፡ ማሕረስ።</l>
+                     <l n="3">ወእምድኅረ፡ ዝንቱ፡ ነገር፡ በአሐቲ፡ ዓመት፡ ሐጸ፡ ወጠፍአ፡ ፍሬ፡ ምድሩ፡ ለውእቱ፡ ብሔር፡ ዘሀለወ፡ ቦቱ፡ ወውእቱ፡ ብእሲ፡ ፈራሄ፡ እግዚአብሔር፡ ኀለየ፡
+                        ወይቤ፡ ምንተ፡ እገብር፡ ተዝካሮ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት።</l>
+                     <l n="4">ወኮነ፡ ነዳየ፡ ወምስኪነ፡ ወጽኑሰ፡ ወኢተርፈ፡ ውስተ፡ ቤቱ፡ ምንትኒ፡ ወለብሰ፡ ጸርቀ፡ ወፈድፈደ፡ ላዕሌሁ፡ ዐቢይ፡ ተጽናስ፡ ወኃጥአ፡ ዘይበልዕ፡ ወይሰቲ፡
+                        ወይለብስ፡ ወኮነ፡ ኅጡአ፡ እምሲሳየ፡ ዕለት፡ ወአኀዞ፡ ረኃብ፡ ወጽምዕ፡ ወንዴት፡ ወረከቦ፡ ዐቢይ፡ ኀዘን፡ ወደክመ፡ ኀይሉ፡ ወለስሐ፡ ጽንዑ፡ ወኮነ፡ ከመ፡ ዘአንኮለሎ፡ ስካረ፡ ወይን፡
+                        ወስእነ፡ ተንሥኦ፡ እምስካቡ፡ ወእምን፡ ባሩ፡ ወእምብዝኀ፡ ረኃቡ፡ ኃዚኖ፡ ኖመ፡ ወኮነ፡ ከመ፡ ምዉት።</l>
+                  </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="17">ወእምድኅሬሁ፡ ሰብሕዎ፡ ለእግዚአብሔር፡ እንዘ፡ ይብሉ፡ ይባርክዎ፡ ኵሉ፡ ግብረ፡ እግዚእ፡ ለእግዚአብሔር፡ ስቡሕኒ፡ ውእቱ፡ ወልዑልኒ፡ ውእቱ፡
+                           ለዓለም። ዘንተኒ፡ ተነበዩ፡ ሠላሳ፡ ወዘሠለስተ፡ ጊዜያተ፡ ከመ፡ እምድኅረ፡ ተወልደ፡ ክርስቶስ፡ ይነብር፡ ውስተ፡ ዓለም፡ ሠላሳ፡ ወሠለስተ፡ ዓመተ።</l>
+                        <l n="18">ወበእንተ፡ ዝ፡ ሠርዑ፡ አበዊነ፡ ሐዋርያት፡ ከመ፡ ንግበር፡ በዓሎ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ አመ፡ ዐሠሩ፡ ወሰኑዩ፡ ለለ፡ ወርኁ።</l>
+                        <l n="19">ትንብልናሁ፡ ወአስተ፡ ብቍዖቱ፡ ወረድኤተ፡ ጸሎቱ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeTahsas">
-                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Tāḫśāś</foreign> about the three youths in the furnace
-                     <!-- This is indicated as a miracle by GrebTiss about BAVet82 and BAVet121-->
-                  </label>
-               </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamTahsas">
-                  <label xml:lang="en">
-                     <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Tāḫśāś</foreign>
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamAqabe" corresp="LIT6822SalamLakaAqabe">
+                  <label xml:lang="en"><foreign xml:lang="gez">Salām</foreign> to you Saints</label>
+                  <ab>ሰላም፡ ለከ፡ ዐቃቤ፡ ቅዱሳን፡ እምተሀውኮ፡ ወለፀረ፡ ነፍሶሙ፡ ዘሞቃሕኮ። አመ፡ መጽአ፡ ወልድ፡ በአፈ፡ ነቢያት፡ ተሰቢኮ፡ ከመ፡ ያስተፋኑ፡ ሐራ፡ መልአኮ፡
+                        እስከ ምጽንዓት፡ ኃምስ፡ ሚካኤል፡ ተለውኮ።</ab>
                </div>
             </div>
             
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Terr">
-               <label xml:lang="en">
-                  <foreign xml:lang="gez">Ṭǝrr</foreign>
-               </label>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyTerr">
+               <label xml:lang="en">Ṭǝrr</label>
+               <div type="textpart" subtype="part" xml:id="AdmonitionTerr">
+                  <label>Admonition for Ṭǝrr</label>
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ሥሉስ፡ ዘኢይትሌለይ፡ ዕሩይ፡ ዘኢይሴደቅ፡ ታሉት፡ ዘኢይት፡ በዐድ። ርድአኒ፡ ከመ፡ እንግር፡ ድርሳነ፡ ዘቅዱስ፡
+                     ወክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወመልአከ፡ ኀይል፡ ዘርኡስ፡ ላዕለ፡ ኵሎሙ፡ ሠራዊተ፡ መላእክት፡ ሰማያውያን፡ ዘውእቶሙ፡ አእላፈ፡ አእላፋት፡ ዘይትነበብ፡ በበዓሉ፡ ለሊቀ፡
+                     መላእክት፡ ሚካኤል፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ ጥር። ጸሎቱ፡ ወበረከቱ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyTalafinos" corresp="LIT3959Homily">
                   <listRelation>
-                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyTerr" passive="PRS3828Epiphani"/>
+                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyTalafinos" passive="PRS3828Epiphani"/>
+                     <relation name="saws:isDifferentTo" active="LIT1295Dersan#HomilyTalafinos" passive="LIT4155MiraclesMichael"/>
+                     <relation name="saws:isDifferentTo" active="LIT1295Dersan#HomilyTalafinos" passive="LITLIT1295Dersan#CommemorativeSane"/>
+                     <relation name="saws:isDifferentTo" active="LIT1295Dersan#HomilyTalafinos" passive="LIT1295Dersan#HomilyHamle"/>
                   </listRelation>
-                  <label xml:lang="en">Homily for <foreign xml:lang="gez">Ṭǝrr</foreign> by <persName ref="PRS3828Epiphani"/>
-                     <!-- This homily is transmitted in the section for Ṭǝrr in BAVet82, but in the section for Miyāzyā in BAVet121  -->
-                  </label>
+                  <label xml:lang="en">Homily by Epiphanius</label>
+                  <note>Homily on the angels and the child <persName ref="PRS11321Talafinos"/>, who was found at the sea. 
+                     Anonymous in <bibl><ptr target="bm:2006DersanaMikael"/></bibl>, but elsewhere attributed to 
+                     <persName ref="PRS3828Epiphani"/>. It is transmitted in <ref type="mss" corresp="BAVet121"/> in the section for 
+                     Miyāzyā.</note>
+                  <div type="textpart" subtype="incipit">
+                  <ab>
+                     <l n="1">መፍትው፡ ትስምዕዎ፡ በለብዎ፡ እለ፡ ተጋባእክሙ፡ ከመ፡ ታእምሩ፡ ዕበዮ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ እምካልኣን፡ አብያጺሁ፡ ሊቃነ፡ መላእክት፡
+                        እስመ፡ ለኵሉ፡ ቢጽ፡ ቦቱ፡ ሊቅ።</l>
+                     <l n="2">ወሎቱሰ፡ ዘእንበለ፡ እግዚአብሔር፡ ባሕቲቱ፡ ዘአልቦቱ፡ ላዕሌሁ፡ ወኢአሐዱኒ፡ እምአመ፡ ክንዮታት፡ አላ፡ አሐዱ፡ መለኮት፡ ፍጹም፡ እንዘ፡ ሥሉስ፡ ውእቱ።</l>
+                     <l n="3">ወመላእክትሰ፡ ፍጡራን፡ እሙንቱ፡ ኵሎሙ። ወተፈጥሮቶሙኒ፡ እምነፋስ፡ ወእሳት፡ ዝኬ፡ ውእቱ፡ ክልኤቱ፡ ጠባይዕ።</l>
+                     <l n="4">ወለመሬታውያንሰ፡ አርባዕቱ፡ ጠባይዖሙ፡ ዘውእቶሙ፡ ነፋስ፡ ወእሳት፡ ማይ፡ ወመሬት።</l>
+                  </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="110">ወበዕለተ፡ ኀሙስ፡ ፈጠረ፡ ኵሎ፡ ዘይትሐወስ፡ ውስተ፡ ባሕር፡ ምስለ፡ ኵሉ፡ ሲሳዮሙ።
+                        </l>
+                        <l n="111">ወበዕለተ፡ ዐርብ፡ ፈጠረ፡ አዳምሃ፡ ምስለ፡ ኵሉ፡ ዘይሰርር፡ ወዘይትበልዑ።</l>
+                        <l n="112">ወበዕለተ፡ ሰንበትሰ፡ አዕረፈ፡ እምኵሉ፡ ግብሩ፡ ዘሎቱ፡ ስብሐት፡ እስከ፡ ለዓለመ፡ ዓለም፡ ለአሜን።</l>
+                        <l n="113">ግበሩኬ፡ ምእመናነ፡ ቤተ፡ ክርስቲያን፡ በዓሎ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ለለ፡ ወርኁ፡ ከመ፡ የሀብክሙ፡ በረከተ፡ በዝ፡ ዓለም፡ ወበዘይ፡ መጽእ፡
+                           ዓለም፡ ከመ፡ ያዕድውክሙ፡ ባሕረ፡ እሳት፡ በአክናፊሁ፡ ወሊተኒ፡ ያዕድወኒ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleTerr">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ṭǝrr</foreign> about the rich man who became poor
-                     <!-- This miracle is transmitted in the section for Ṭǝrr in BAVet82, but in the section for Miyāzyā in BAVet121  -->
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleNeglect">
+                  <label xml:lang="en">Miracle on a man, who neglected worshipping Michael</label>
+                  <div type="textpart" subtype="incipit">
+                  <ab>
+                     <l n="1">ተአምሪሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘሥዑል፡ በነበልባል፡ ወበነደ፡ እሳት፡ ርሱን፡ ጸሎቱ፡ ወበረከቱ፡ ወአስተብቍዖቱ፡ የሀሉ፡ ምስለ፡ ኵልነ፡
+                        ሕዝበ፡ ክርስቲያን፡ ሠርጸ፡ ለዛቲ፡ መካን፡ አትክልተ፡ ወንጌል፡ ሐዲሳን፡ በደመ፡ ዋሕድ፡ እለ፡ ቅቡዓን፡ ወያድኅነነ፡ እመከራ፡ እኩይ፡ ዘመን፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     <l n="2">ተብህለ፡ ከመ፡ ሀሎ፡ አሐዱ፡ ብእሲ፡ ክርስቲያናዊ፡ ዘይነብር፡ በውስተ፡ አሐቲ፡ ሀገር፡ ወይፈርሆ፡ ለእግዚአብሔር፡ ወይገብር፡ ትእዛዞ፡ ወይጽሕቅ፡ ጥቀ፡
+                        ለገቢረ፡ ሠናይ፡ ወያፈቅሮ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወነበረ፡ እንዘ፡ ይገብር፡ ተዝካሮ፡ በዐቢይ፡ ፍሥሓ።</l>
+                     <l n="3">ውእቱኒ፡ ይነብር፡ በግብረ፡ ማሕረስ፡ ከመ፡ ይኩኖ፡ ሲሳየ፡ በዘያሐዩ፡ ነፍሶ፡ ወነፍሰ፡ ብእሲቱ፡ ወውሉዱ፡ ወአግብርቲሁ፡ ወሰብአ፡ ቤቱ።</l>
+                     <l n="4">ወነበረ፡ ውእቱ፡ ቀዲሙ፡ እንዘ፡ ይገብር፡ ተዝካረ፡ በዓሉ፡ ለሚካኤል፡ በዐቢይ፡ ፍሥሓ፡ ወተለዐለ፡ ፈድፋደ፡ ወረከበ፡ ብዕለ፡ ብዙኀ።</l>
+                     <l n="5">ወበአሐቲ፡ ዓመት፡ ሠምረ፡ ሎቱ፡ እክል፡ ዘዘርዐ፡ ውስተ፡ ገራህቱ፡ ብዙኅ፡ ሥርናይ፡ ወኵሉ፡ እክል፡ በበ፡ ዘመዱ፡ ወኢገብረ፡ በከመ፡ ቀዳሚ፡ ግብሩ፡
+                     ወኢተዘከረ፡ ተዝካረ፡ በዓሉ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወኢረሰየ፡ ምንተኒ።</l>
+                  </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="11">ወወረደ፡ ጸጋ፡ እግዚአብሔር፡ ላዕሌሁ፡ ወበረከቱ፡ ለቅዱስ፡ ሚካኤል፡ ውስተ፡ ቤቱ፡ ወውስተ፡ ገራህቱ፡ ኀበ፡ ኵሉ፡ ዘአጥረየ፡ ወበዝኀ፡ ብዕሉ፡ ፈድፋደ፡
+                           እምቀዳሚ፡ በትንብልናሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት።</l>
+                        <l n="12">ወውእቱኒ፡ ብእሲ፡ አፈድፈደ፡ ገቢረ፡ ሠናይ፡ ወሰፍሐ፡ እዴሁ፡ ለውሂበ፡ ምጽዋት፡ ለነዳያን፡ ወለምስኪናን፡ ወይገ፡ ብር፡ ምሕረተ፡ ለኵሉ፡ በስመ፡
+                           ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ በዕለተ፡ ተዝካሩ፡ ወእንዘ፡ ይገብር፡ ዘንተ፡ ከመ፡ ዝ፡ አዕረፈ፡ በሠናይ፡ ወቦአ፡ ውስተ፡ መንግሥተ፡ ሰማያት፡ በትንብልናሁ፡ ለቅዱስ፡
+                           ሚካኤል።</l>
+                        <l n="13">ጸሎቱ፡ ወበረከቱ፡ የሃሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeTerr">
-                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Ṭǝrr</foreign> on St Michael's appearance to Jacob
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeJacob">
+                  <label xml:lang="en">Commemorative notice on St Michael's appearance to Jacob</label>
+                     <ab>
+                        <l n="1">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ ጥር፡ በዛቲ፡ ዕለት፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡
+                           ሚካኤል፡ ሊቀ፡ መላእክት፡ እስመ፡ በዛቲ፡ ዕለት፡ ፈነዎ፡ እግዚአብሔር፡ ለሚካኤል፡ ሊቀ፡ መላእክት፡ ኀበ፡ ያዕቆብ፡ እስራኤል፡ እንዘ፡ ይፈርህ፡ እኍሁ፡ ዔሳውሃ፡ ወኣድኃኖ፡
+                           እምኔሁ፡ ወአኅለፎ፡ ፈለገ፡ ዮርዳኖስ፡ ወሖረ፡ ኀበ፡ ላባ፡ እኍሃ፡ ለእሙ፡ ወአስተዋሰቦ፡ ክልኤ፡ አዋልዲሁ፡ ልያሃ፡ ወራሔልሃ፡ ወአግብኦ፡ እንዘ፡ ይጸይሕ፡ ፍኖቶ፡ በዳኅና፡ 
+                           ወበሰላም፡ ምስለ፡ ሰብኡ፡ ወንዋዩ፡ ወውሉዱ፡ ወተቀበሎ፡ እኍሁ፡ ዔሳው፡ በሰላም፡ ወፍቅር።</l>
+                        <l n="2">ወበእንተ፡ ዝ፡ አዘዙነ፡ ከመ፡ ንግበር፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ አመ፡ ዐሠሩ፡ ወሰኑዩ፡ ለለ፡ ወርኁ፡ ትንብል፡ ናሁ፡
+                           ወአስተብቍዖቱ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ አለም፡ አሜን።</l>
+                     </ab>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamTerr">
-                  <label xml:lang="en">
-                     <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Ṭǝrr</foreign>
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamEldest">
+                  <label xml:lang="en">Salām to you Michael, one of eldest highest, servant of the Lord</label>
+                  <note>This salām is transmitted in <ref type="mss" corresp="BAVet82"/> in the section for Ṭǝrr.</note>
+                  <ab>ሰላም፡ ለከ፡ ሚካኤል፡ አሐዱ፡ እምነ፡ ሊቃናት፡ ልዑላን፡ ለእግዚአብሔር፡ ፀማዱ፡ አመ፡ ተፈኖከ፡ ትኩን፡ ረድኤተ፡ ቴዎድሮስ፡ ጊዜ፡ መራዱ፡ ከመ፡ 
+                        ቈጽል፡ እምነፋስ፡ ሰብአ፡ ቍዝርዕዱ፡ ሶበ፡ መጥባሕተከ፡ ነጸሩ፡ በእዱ።</ab>
                </div>
             </div>
             
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Yakkatit">
-               <label xml:lang="en">
-                  <foreign xml:lang="gez">Yakkātit</foreign>
-               </label>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyYakkatit">
-                  <label xml:lang="en">Anonymous homily for <foreign xml:lang="gez">Yakkātit</foreign>
-                  </label>
-                  <listBibl type="editions">
+               <label xml:lang="en">Yakkātit</label>
+               <div type="textpart" subtype="part" xml:id="AdmonitionYakkatit">
+                  <label>Admonition for Yakkātit</label>
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ድርሳን፡ ዘቅዱስ፡ ወክቡር፡ ወኃያል፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ 
+                     የካቲት። ጸሎቱ፡ ወበረከቱ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyPoor">
+                  <label xml:lang="en">Homily on a poor man of great faith</label>
+                  <note>Anonymous here and in <ref type="mss" corresp="BMLacq776 BAVet82"/>, but in other witnesses attributed to 
+                     "Severus, patriarch of Alexandria" as in <ref type="mss" corresp="BNFabb84"/> or to a "Bishop of Aksum" as for example in 
+                     <ref type="mss" corresp="EMML1433"/>.</note>
+                     <listBibl type="editions">
                      <bibl>
                         <ptr target="bm:Hammerschmidt1988Anthologia"/>
                         <citedRange unit="page">20-24</citedRange>
-                     </bibl> 
+                     </bibl>
                   </listBibl>
+                  <div type="textpart" subtype="incipit">
+                  <ab>
+                     <l n="1">ወኮነ፡ እምድኅረ፡ ዝንቱ፡ ነገር፡ ወሀሎ፡ አሐዱ፡ ብእሲ፡ ነዳይ፡ ዘዐቢይ፡ ሃይማኖቱ፡ ወይነብር፡ ውስተ፡ ውእቱ፡ ብሔር፡ ይስእል፡ ወይጼሊ፡ መዓልተ፡ ወሌሊተ፡ 
+                        ወይቤሎ፡ ለቅዱስ፡ ሚካኤል፡ ኦ፡ ሊቅየ፡ ተሣሀለኒ፡ ወወሀበኒ፡ ሲሳየ፡ ዕለት፡ ወዐራዘ፡ ዘዓመት።</l>
+                     <l n="2">ወሀካይ፡ ብእሲሁ፡ ወኢይወፅእ፡ እምነ፡ ቤቱ፡ ውስተ፡ ተግባር፡ ወስራሕ፡ ወአልቦ፡ ዘየአምር፡ ተግባር፡ ወኢይሰርሕ፡ ምንተኒ፡ ወኢአሐተኒ፡ ሰዓተ፡ ወኢየአምር፡
+                        ነጊደ።</l>
+                     <l n="3">ወእምዝ፡ መጽአ፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ በሕልም፡ ኀበ፡ ውእቱ፡ ብእሲ፡ ነዳይ፡ ወአስተርአዮ፡ ለዝኩ፡ ነዳይ፡ ወይቤሎ፡ እፎ፡ አንተ፡ ሀካይ፡ ብእሲ፡ 
+                        ዘኢተአምር፡ ግብረ፡ ወስራሐ፡ ወሐሪሰ፡ ወትስእለኒ፡ መዓልተ፡ ወሌሊተ፡ ወትብል፡ ተሣሀለኒ፡ ላዕለ፡ አይኑ፡ ወይንከ፡ ወአይኑ፡ ሥርናይከ፡ ወአይኑ፡ ተግባርከ፡ ወስራሕከ፡ ከመ፡ 
+                        እባርክ፡ ለከ።</l>
+                  </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="39">ወተዓረኩ፡ ክልኤሆሙ፡ እምኣሜሃ፡ እስከ፡ ዕለተ፡ ዕረፍቶሙ፡ ወነበሩ፡ በሰላመ፡ እግዚአብሔር ።</l>
+                        <l n="40">ወዝንቱ፡ ኵሉ፡ ኮነ፡ በስእለቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት።</l>
+                        <l n="41">ወለነኒ፡ ይምሐረነ፡ ወይሣሀለነ፡ በኀይለ፡ ጸሎቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ እግዚአብሔር፡ ይዕቀበነ፡ ለኵልነ፡ ውሉደ፡ ጥምቀት፡ ለዓለመ፡ 
+                           ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleYakkatit">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Yakkātit</foreign> on the poor who sent the money to the church custodian inside a fish <!-- check this content; it is given after GrebTiss's Latin title -->
-                     <!-- This miracle is transmitted in the section for Yakkātit in BAVet82, but in the section for Naḥase in BAVet121  -->
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleMoneyFish">
+                  <label xml:lang="en">Miracle on the poor who sent the money to the church custodian inside a fish</label>
+                  <note>This miracle is transmitted in <ref type="mss" corresp="BAVet82"/> in the section for Yakkātit , but in 
+                     <ref type="mss" corresp="BAVet121"/> in the section for Naḥase and wanting in <ref type="mss" corresp="BMLacq776"/>.
+                     It was referred to as <foreign xml:lang="la">Miraculum de paupere, qui dives factus pecuniam misit per piscem ad custodem
+                     ecclesiae</foreign> "Miracle on the poor who sent the money to the church custodian inside a fish" in 
+                     <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">300</citedRange></bibl>.
+                     However, the Incipit given in Grébaut/Tisserant, looks considerably different: <foreign xml:lang="gez"> ተአምሪሁ፡ 
+                        <gap reason="omitted" extent="unknown" resp="PRS4805Grebaut PRS9530Tisseran"/> ተብህለ፡ ካዕበ፡ ከመ፡ ሀሎ፡ ፩ነዳይ፡ ወይነብር፡ 
+                        በጥቃሃ፡ ለዓፀደ፡ ቤተ፡ ክርስቲያን፡ ዘሕንፅት፨ በስመ፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወለለጽባሑ፡ ይገይስ፡ ሃቤሃ፨ ወይቀውም፡ ቅድመ፡ ስእሉ፨ ለቅዱስ፡ ሚካኤል፡
+                     </foreign>
+                  </note>
+                  <div type="textpart" subtype="incipit">
+                  <ab>
+                     <l n="1">ተአምሪሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘሥዑል፡ በነበልባል። ትንብልናሁ፡ ወአስተብቍዖቱ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     <l n="2">ተብህለ፡ ከመ፡ ሀሎ፡ አሐዱ፡ ብእሲ፡ ኄር፡ ወፈራሄ፡ እግዚአብሔር፡ ወይገብር፡ ምሕረተ፡ ለነዳያን፡ ወለምስኪናን፡ ወያሤኒ፡ ለኵሉ፡ ሰብእ፡ በእንተ፡ ስሙ፡
+                        ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ በኵሉ፡ ጊዜ።</l>
+                     <l n="3">ወሶበ፡ ርእየ፡ ሰይጣን፡ ጸላኤ፡ ሠናያት፡ ፀረ፡ ኵሉ፡ ውሉደ፡ አዳም፡ ቀንአ፡ ቦቱ፡ ወአምጽአ፡ ላዕሌሁ፡ ኵሎ፡ ደዌ፡ እኩየ፡ ወኮነ፡ መፃጉዐ፡ ወሐመ፡ ብዙኀ፡
+                        ሕማመ።</l>
+                  </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="13">ወውእቱሰ፡ ብእሲ፡ ዘሐይወ፡ አፈድፈደ፡ ገቢረ፡ ሠናይ፡ እምቀዳሚ፡ ወኢያብጠለ፡ ገቢረ፡ ተዝካሩ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለለ፡ ኵሉ፡ አውራኅ፡ እስከ፡
+                           አመ፡ አዕረፈ፡ ወቦአ፡ ውስተ፡ መንግሥተ፡ ሰማያት፡ በስእለቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ መልአከ፡ ሣህል፡ ወምሕረት።</l>  
+                        <l n="14">ወለነኒ፡ ያድኅነነ፡ ለኵልነ፡ ውሉደ፡ ጥምቀት፡ ለንጉሠ፡ ስብሐት፡ በትንብልናሁ፡ ይፈውሰነ፡ እምደዌ፡ ኀጢአት፡ ወያድኅነነ፡ እሞተ፡ ግብት፡ ዘያስተፋጥን፡
+                           ለለ፡ ዕለት፡ ወይሰውረነ፡ በአክናፊሁ፡ ዘእሳት፡ እምእኩይ፡ ማዕገት፡ ወፈድፋደሰ፡ ለዕገሌ፡ ያድኅኖ፡ እምኵሉ፡ መንሱት፡ ለዓለመ፡ ዓለም፡ አሜን።</l>    
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeYakkatit">
-                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Yakkātit</foreign> on St Michael's appearance to Samson
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeSamson">
+                  <label xml:lang="en">Commemorative notice on St Michael's appearance to Samson</label>
+                  <ab>
+                     <l n="1">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ የካቲት፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡
+                        መላእክት፡ እስመ፡ በዛቲ፡ ዕለት፡ ፈነዎ፡ እግዚአብሔር፡ ሎቱ፡ ስብሐት፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ኀበ፡ ሶምሶን፡ ረዐይታዊ፡ ወረድኦ፡ እስከ፡ ሞኦሙ፡ ለሰብእ፡
+                        ፍልስጥኤማውያን፡ ሶበ፡ ፈቀዱ፡ ቀቲሎቶ፡ ወወሀቦ፡ እግዚአብሔር፡ ኀይለ፡ ላዕሌሆሙ፡ ወአጥፍኦሙ፡ ወቀተለ፡ እምኔሆሙ፡ በአሐቲ፡ ዕለት፡ ዐሠርተ፡ ምእተ፡ በመንሰከ፡ አድግ።</l>
+                     <l n="2">ወሶበ፡ ጸምአ፡ ወቀርበ፡ ለመዊት፡ አስተርአዮ፡ ሎቱ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወአጽንዖ፡ ወአውኃዘ፡ ሎቱ፡ ማየ፡ እምዐፅመ፡ መንሰከ፡ አድግ፡ ሰትየ፡
+                        ወድኅነ።</l>
+                     <l n="3">ወሶበ፡ ተመውኡ፡ ሕዝበ፡ ፍልስጥኤም፡ ተመክነዩ፡ ላዕሌሁ፡ ምስለ፡ ብእሲቱ፡ ወአዖሩ፡ አዕይንቲሁ፡ ወወሰድዎ፡ ውስተ፡ ውስተ፡ ቤተ፡ ጣዖቶሙ።</l>
+                     <l n="4">ወአስተርአዮ፡ መልአከ፡ እግዚአብሔር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወወሀቦ፡ ኀይለ፡ ወቀተሎሙ፡ ለኵሎሙ።</l>
+                     <l n="5">ወበእንተ፡ ዝ፡ አዘዙነ፡ መምህራነ፡ ቤተ፡ ክርስቲያን፡ ከመ፡ ንግበር፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለለ፡
+                        ኵሉ፡ አውራኅ፡ ትንብልናሁ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                  </ab>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamYakkatit">
-                  <label xml:lang="en">
-                     <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Yakkātit</foreign>
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamBeauties">
+                  <label xml:lang="en">I say salām to your ordered beauties</label>
+                  <note>This Salām is wanting in <ref type="mss" corresp="BMLacq776"/>.</note>
+                  <ab>ሰላም፡ እብል፡ ሠናይተከ፡ ተአዛዜ፡ ለትፍሥሕተ፡ ሰብእ፡ ወለኑዛዜ። ሚካኤል፡ ኢይበል፡ አድኅኖተከ፡ ማእዜ። ረሲ፡ ደኃሪትየ፡ እምግባረ፡ ኀጢአት፡ አግዓዜ።
+                        እንተ፡ ተቀነይኩ፡ ሎቱ፡ የአክል፡ እምይእዜ። </ab>
                </div>
             </div>
             
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Maggabit">
-               <label xml:lang="en">
-                  <foreign xml:lang="gez">Maggābit</foreign>
-               </label>
-               
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyMaggabit">
-                  <label xml:lang="en">Homily for <foreign xml:lang="gez">Maggābit</foreign> by a patriarch of Antioch</label>
-                  <listBibl type="editions">
-                     <bibl corresp="#BLorient691">
-                        <ptr target="bm:budge1894stmichael"/>
-                        <citedRange unit="page">195-216</citedRange>
-                     </bibl>
-                  </listBibl>
+               <label xml:lang="en">Maggābit</label>
+               <div type="textpart" subtype="part" xml:id="AdmonitionMaggabit">
+                  <label>Admonition for Maggābit</label>
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ድርሳን፡ ወነገር፡ ዘቅዱስ፡ ወክቡር፡ ወኀያል፡ መልአክ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡
+                     ለወርኀ፡ መጋቢት፡ ዘደረሰ፡ አባ፡ ዮሐንስ፡ ሊቀ፡ ጳጳሳት፡ ዘአንጾኪያ፡ በእንተ፡ ዕበዩ፡ ወክብሩ፡ ለሊቀ፡ መላእክት፡ ሚካኤል፡ ወበእንተ፡ አፍቅሮቱ፡ ሰብአ፡ ወበእንተ፡ ሰንበት፡ ቅድስት፡
+                     ተናገረ፡ እስመ፡ በዓለ፡ ሚካኤል፡ ኀብረ፡ በይእቲ፡ ዓመት፡ ምስለ፡ ዕለተ፡ ሰንበት፡ ወካዕበ፡ ተናገረ፡ በእንተ፡ ማቴዎስ፡ ነግድ፡ ወብእሲቱ፡ ወውሉዱ፡ ዘከመ፡ አምኑ፡ በእግዚአብሔር፡
+                     በስእለቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ እስመ፡ ይቤ፡ ዝንቱ፡ ድርሳን፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ መጋቢት፡ እንዘ፡ ጉቡኣን፡ ሕዝብ፡ በቤተ፡ ክርስቲያኑ፡ ለቅዱስ፡ ሚካኤል፡
+                     ሊቀ፡ መላእክት፡ ከመ፡ ክርስቲያን፡ ይግበሩ፡ በዓሎ፡ በሰላመ፡ እግዚአብሔር፡ አብ፡ ትንብልናሁ፡ ወአስተብቍዖቱ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyPsalm">
+                  <label xml:lang="en">Homily by a patriarch of Antioch on the Psalm of David</label>
+                  <note>The homily was edited by <bibl corresp="BLorient691"><ptr target="bm:budge1894stmichael"/>
+                     <citedRange unit="page">195-216</citedRange></bibl>. It is attributed to "John, patriarch of Antioch" in this edition. 
+                     However, in many manuscripts, the author is just mentioned as "patriarch of Antioch", who was identified by 
+                     <bibl><ptr target="bm:Zotenberg1877Catalogue"/><citedRange unit="page">207a</citedRange></bibl> and 
+                     <bibl><ptr target="bm:budge1894stmichael"/></bibl> as <persName ref="PRS8790Severus"/>.
+                     This homiliy is not witnessed in <ref type="mss" corresp="BMLacq776"/>.</note>
                   <listRelation>
-                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyMaggabit" passive="PRS8790Severus">
-                        <desc>The homily for <foreign xml:lang="gez">Maggābit</foreign> is attributed in many manuscripts to a 
-                           patriarch of Antioch, identified in <bibl>
-                              <ptr target="bm:Zotenberg1877Catalogue"/>
-                              <citedRange unit="page">207a</citedRange>
-                           </bibl>
-                           and <bibl>
-                              <ptr target="bm:budge1894stmichael"/>
-                           </bibl> as <persName ref="PRS8790Severus"/>. His name is often omitted,
-                           leaving only his title "patriarch of Antioch". Occasionally it is also attributed to other authors.
-                        </desc>
+                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyPatriarchAntioch" passive="PRS8790Severus">
+                        <desc>The homily is attributed to "John, patriarch of Antioch" in this edition. However, in many manuscripts, the author is just
+                           mentioned as "patriarch of Antioch", who was identified by 
+                           <bibl><ptr target="bm:Zotenberg1877Catalogue"/><citedRange unit="page">207a</citedRange></bibl> and 
+                           <bibl><ptr target="bm:budge1894stmichael"/></bibl> as <persName ref="PRS8790Severus"/>.</desc>
                      </relation>
                   </listRelation>
+                  <div type="textpart" subtype="incipit">
+                  <ab>
+                     <l n="1">ስምዑ፡ አኀውየ፡ ምዕመናን፡ ቃሎ፡ ለመዝሙረ፡ ዳዊት፡ ብፁዕ፡ ወቅዱስ፡ ዘነገረ፡ ኅብረተ፡ ዝንቱ፡ በዓል፡ ዮም፡ ይትፌሣሕ፡ እንዘ፡ ይኬልሕ፡ ወይብል፡ ይትዐየን፡
+                        መልአከ፡ እግዚአብሔር፡ ዐውዶሙ፡ ለእለ፡ ይፈርህዎ፡ ድኅኖሙ።</l>
+                     <l n="2">ኦ፡ ፍቁራንየ፡ ዮም፡ ክልኤቱ፡ በዓላት፡ በዓለ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወበዓለ፡ እሑድ፡ ሰንበት፡ ትንሣኤሁ፡ ቅድስት፡ ለእግዚእነ፡ ወመድኃኒነ፡ ኢየሱስ፡
+                        ክርስቶስ።</l>
+                  </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="185">ወይእዜኒ፡ ንሰብሖ፡ በስብሐት፡ ዘይደሉ፡ ለዝንቱ፡ በዓል፡ እስመ፡ ንሬኢ፡ ከመ፡ ቀርበ፡ ጊዜሁ፡ ለፈጽሞ፡ ዝንቱ፡ ስብሐት።</l>
+                        <l n="186">ወንሰብሖ፡ ለዘይደልዎ፡ ኵሉ፡ ስብሐት፡ እግዚእነ፡ ወአምላክነ፡ ወመድኀኒነ፡ ኢየሱስ፡ ክርስቶስ፡ ዘሎቱ፡ ይደሉ፡ ክብር፡ ወስብሐት፡ ወዕበይ፡ ወዕዘዝ፡
+                           ወልዕልና፡ ወሰጊድ፡ ኵሎ፡ ጊዜ፡ ለአብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ማኅየዊ፡ ዘዕሩይ፡ ምስሌሁ፡ ይእዜኒ፡ ወዘልፈኒ፡ ወለዓለመ፡ ዓለም፡ አሜን።</l>
+                        <l n="187">ወለዝንቱ፡ መጽሐፍ፡ ለዘጸሐፎ፡ ወለዘአጽሐፎ፡ ለዘአንበቦ፡ ወለዘተርጐሞ፡ ለዘሰምዐ፡ ቃላቲሁ፡ ኅቡረ፡ ይምሐረነ፡ እግዚአብሔር፡ በመንግሥተ፡
+                           ሰማያት፡ ወይክድነነ፡ እግዚአብሔር፡ በጽላሎተ፡ ክነፊሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ አመ፡ ዕለተ፡ ፍዳ፡ ወደይን።</l>
+                        <l n="188">ትንብልና፡ ስእለቱ፡ ወበረከተ፡ ዚአሁ፡ ወአስትብቍዖቱ፡ ወረድኤተ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleMaggabit">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Maggābit</foreign> on the woman suffering from elephantiasis
-                     <!-- This miracle is transmitted in the section for Maggābit in BAVet82, but in the section for Yakkātit in BAVet121  -->
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Elephantiasis">
+                  <label xml:lang="en">Miracle on the woman suffering from elephantiasis</label>
+                  <note>Transmitted in <ref type="mss" corresp="BAVet121"/> in the section for Yakkātit.</note> 
+                  <ab>ተአምሪሁ፡ <gap reason="omitted" extent="unknown" resp="PRS4805Grebaut PRS9530Tisseran"/> ወሀለወት፡ አሐቲ፡ ብእሲት፡ 
+                     ባዕልት፡ ዘተእኅዘት፡ በሕማመ፡ ዝልጋሴ፤ <gap reason="omitted" extent="unknown" resp="PRS4805Grebaut PRS9530Tisseran"/> ወአተወት፡ 
+                     <sic>ወአእኰቶ፡</sic> ለእግዚአብሔር፤ ወዜነወት፡ ዘንተ፡ መንክረ፡ ዘገብረ፡ ላቲ፡ ሊቀ፡ መላእክት፡ ቅዱስ፡ ሚካኤል፡ ትንብልናሁ፡ 
+                     <gap reason="omitted" extent="unknown" resp="PRS4805Grebaut PRS9530Tisseran"/></ab>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeMaggabit">
-                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Maggābit</foreign> on St Michael's appearance to Balaam
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Child" corresp="LIT4155MiraclesMichael">
+                  <label xml:lang="en">Miracle about a child that was thrown into the sea</label>
+                  <note>Story about a child that was thrown into the sea by an evil rich man, saved by <persName ref="PRS7049Michael"/> and 
+                     found by a shepherd, who named him <persName ref="PRS11321Talafinos">ተላሶን፡ </persName>. The story is a variation 
+                     of <ref type="work" corresp="LIT3959Homily"/>, <ref type="work" corresp="LIT1295Dersan#CommemorativeSane"/> and 
+                     <ref type="work" corresp="LIT1295Dersan#HomilyHamle"/>. Often defined as nagar, but also frequently as dǝrsān in some 
+                     other manuscripts. Usually attributed either to the month Ḥamle or to Miyāzyā but in <ref type="mss" corresp="BMLacq776"/>
+                     in connection with the month of Maggābit. Usually attributed to <persName ref="PRS10425Yohanne"/>.</note>
+                  <ab>በስመአብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ፡ ነገር፡ በእንተ፡ <persName ref="PRS10425Yohanne">ዮሐንስ፡</persName> ወሀሎ፡ በአኃቲ፡ 
+                     ሀገር፡ ፩ብእሲ፡ ወልቡ፡ ጸዋግ፡ ከመ፡ ፈርዖን፡ ወኢየአምር፡ ጾመ፡ ወጸሎተ፡ ወ፩ብእሲ፡ ነዳይ፡ ነብር፡ በሳረቤቱ፡ ወርቱእ፡ ሃይማኖቱ፡ ምስለ፡ ብእሲቱ፡ ወይጸመድምዎ፡ 
+                     ለእግዚአብሔር፡ ወይገብሩ፡ ተዝካሮ፡ ለቅዱስ፡ ሚካኤል፡ ወይርተቡ፡ ኩሎ፡ ዘረከቡ፡ ለዳያን፡ ወለመስኪናን፡ ወሶበ፡ ርእየ፡ መኰን፡ ዘሀሎ፡ በጐሮሙ፡ ያንጐረጕር፡ ላዕሌሆሙ፡ 
+                     ወይብል፡ እንዘ፡ ነዳያን፡ አልቦሙ፡ ዘይበልዑ፡ <gap reason="omitted" unit="lines" quantity="403"/>ወይሰረድ፡ ለነ፡ ኃጢአተነ፡ ነገርኩ፡ ከሙ፡ አነ፡ ዮሐንስ፡
+                     አቡክሙ፡ ዘርኢኩ፡ አንትሙኒ፡ አሐውይ፡ ጸልዩ፡ ከመ፡ ንርከብ፡ ሣህለ፡ በቅድሜሁ፡ ለእግዚአብሔር፡ ወበስእለታ፡ ለእግዝእትነ፡ ማርያም፡ ወበስእለቱ፡ 
+                     ለ<persName ref="PRS5720JohnChr">ዮሐንስ፡ አፈወርቅ፡</persName> ወስእለቶሙ፡ ለጻዳቃን፡ ወስማዕት፡ ያድኅኖ፡ ለገብሩ፡ 
+                     <persName ref="PRS14011GabraMikael">ገብረ፡ ሚካኤ፡</persName> ሰብሐት፡ ለአብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ይእዜኒ፡ ወዘልፈነ፡ ወለዓለመ፡ 
+                     ዓለም፡ ዓ፡</ab>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamMaggabit">
-                  <label xml:lang="en">
-                     <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Maggābit</foreign>
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleApocalypse">
+                  <label xml:lang="en">Miracle on the apocalypse (?)</label>
+                  <note>This incipit is similar to what was recorded as <ref target="#MiracleFreed"/> in the section for Ḥamle in 
+                     <ref type="mss" corresp="BAVet82"/>, but in the section for Tāḫśāś in <ref type="mss" corresp="BAVet121"/>, but wanting
+                     in <ref type="mss" corresp="BMLacq776"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        <l n="1">ተአምሪሁ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ መልአከ፡ ምክሩ፡ ለአብቀለምጺጸ፡ እሳት፡ ዘይወፅእ፡ እምአፉሁ፡ ወዘይነጥር፡ መዐርዒረ፡
+                           ዜማ፡ ሙሓዘ፡ ቅዳሴ፡ መንክር። ትንብልናሁ፡ ወአስተብቍዖቱ፡ ያድኅነነ፡ እምግብር፡ ዘየሐውር፡ በጽልመት፡ ወእምጋኔነ፡ ቀትር፡ ወእመናግንተ፡ ጸላኢ፡ ዘይረውጽ፡ በስዉር፡
+                           ለኵልነ፡ ሰማዕያን፡ ወፈድፋደሰ፡ ለዕገሌ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                        <l n="2">ተብህለ፡ ከመ፡ ሀወለት፡ አሐቲ፡ ብእሲት፡ በአሐቲ፡ ሀገር፡ ክብርት፡ ወልዕልት፡ ወባዕልት፡ ጥቀ፡ ወብዙኅ፡ ንዋያ፡ ወታፈቅሮ፡ ለቅዱስ፡ ሚካኤል፡ ወትገብር፡
+                           ተዝካሮ፡ ለለ፡ ወርኁ፡ በዐቢይ፡ ፍሥሓ፡ ወበአስተሐምሞ፡ ወትገብር፡ ሠናየ፡ ለነዳያን፡ ወለምስኪናን፡ ወታበልዖሙ፡ ለርኁባን፡ ወታሰትዮሙ፡ ለጽሙኣን፡ ወታለብሶሙ፡ 
+                           ለዕሩቃን፡ ወትናዝዞሙ፡ ለኅዙናን፡ ወታስተፌሥሖሙ፡ ለትኩዛን፡ በእንተ፡ ስመ፡ ቅዱስ፡ ሚካኤል፡ መልአክ፡ ክቡር።</l>
+                        <l n="3">ወእንዘ፡ ዘንተ፡ ትገብር፡ በአሚን፡ አኀዛ፡ ሕማመ፡ ዝልጋሴ፡ ወደዌ፡ ዕጹብ፡ ወእኩይ፡ ወሐብጠ፡ ኵሉ፡ ሥጋሃ፡ ወቀበወ፡ ወስእነት፡ አንሳሕስሖ፡ ወኮነ፡
+                           ኵሉ፡ አባላቲሃ፡ ከመ፡ ዘውዕየ፡ በእሳት።</l>
+                        <l n="4">ወለአከት፡ ኀበ፡ ዐቀብተ፡ ሥራይ፡ ወሶቤሃ፡ በጽሑ፡ ኀቤሃ፡ ወነገረቶሙ፡ ኵሎ፡ ደዌሃ፡ ወወሀበቶሙ፡ ኵሎ፡ ንዋያ፡ ብዙኀ፡ ወትቤሎሙ፡ ከመ፡ ይፈውፈስዋ፡
+                           ወየሀብዋ፡ ፈውሰ።</l>
+                     </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="13">ወለነኒ፡ ይዕቀበነ፡ ወይትማሕፀነነ፡ ያድኅነነ፡ ወይባልሐነ፡ ለኵልነ፡ ውሉደ፡ ጥምቀት፡ በትንብልና፡ ስእለቱ፡ ለእለ፡ አመነ፡ ወቦቱ፡ ለእለ፡ ተወከልነ፡ 
+                           በአክናፊሁ፡ ይክድነነ፡ ሐሩረ፡ ጌጋይ፡ ኢያመጽልወነ፡ ወገሃነመ፡ እሳት፡ ኢያውዕየነ፡ በወልታ፡ ስእለቱ፡ ይሰውረነ፡ ሐጸ፡ ጸላዒ፡ ኢይንድፈነ።</l>
+                        <l n="14">ወይፈውሰነ፡ እምደዌ፡ ነፍስነ፡ ወሥጋነ፡ ሞተ፡ ኀጢአት፡ ኢይልክፈነ፡ ለለ፡ ጽባሁ፡ ወለለ፡ ሳዑ፡ የሐውጸነ፡ ሐዘነ፡ አዝማን፡ ኢያተክዘነ፡ ወእምትንታኔ፡
+                           ይሱቀነ፡ ለገቢረ፡ በዓሉ፡ ሠናይ፡ ለእለ፡ ተጋባእነ፡ ወፈድፋደሰ፡ ለዕገሌ፡ ለዓለመ፡ ዓለም፡ አሜን፡ ወአሜን፡ ለይኩን፡ ለይኩን።</l>
+                     </ab>
+                  </div>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeBalaam">
+                  <label xml:lang="en">Commemorative notice on St Michael's appearance to Balaam</label>
+                  <note>Attested in <ref type="mss" corresp="BAVet82"/>.</note>
+                  <ab>
+                     <l n="1">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለመጋት፡ በዛቲ፡ ዕለት፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሊቀ፡
+                        መላእክት፡ ሚካኤል፡ እስመ፡ በዛቲ፡ ዕለት፡ ፈነዎ፡ እግዚአብሔር፡ ለሚካኤል፡ ኀበ፡ በለዓም፡ መሰግል፡ አመ፡ ጸውዖ፡ ባላቅ፡ ከመ፡ ይይግሞሙ፡ ለእስራኤል፡ ወቆመ፡ ቅድሜሁ፡
+                        በፍኖት፡ ወአደንገፆ፡ እስከ፡ ነበበት፡ እድገቱ፡ በልሳነ፡ ሰብእ፡ ወሜጦ፡ ለመርገም፡ መንገለ፡ በረከት።</l>
+                     <l n="2">እግዚአብሔር፡ ይዕቀበነ፡ በትንብልናሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ለኵልነ፡ ውሉደ፡ ጥምቀት፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                  </ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamPriority">
+                  <label xml:lang="en">Salām to whom it has priority</label>
+                  <ab>ሰላም፡ እብል፡ ለዘይቀድም፡ ጾታሁ፡ እምእለ፡ ቅዉማን፡ ገጻት፡ ለብሉየ፡ መዋዕል፡ ታሕተ፡ ክነፊሁ። ሚካኤል፡ ካህን፡ ለመልእክተ፡ ዲያቆን፡ በአምሳሊሁ፡
+                        ያትክል፡ ዕድወ፡ ነፍስየ፡ እኂዞ፡ በእዴሁ፡ ከመ፡ ርእዮሙ፡ ካልኣን፡ ይፍርሁ።</ab>
                </div>
             </div>
             
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Miyazya">
-               <label xml:lang="en">
-                  <foreign xml:lang="gez">Miyāzyā</foreign>
-               </label>
-               
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyMiyazya">
-                  <!-- This homily is within the section for Miyāzyā in BAVet82, but in the section for Tāḫśāś in BAVet121 (here attributed to PRS10425Yohanne) -->
+               <label xml:lang="en">Miyāzyā</label>
+               <div type="textpart" subtype="part" xml:id="AdmonitionMiyazya">
+                  <label>Admonition for Miyāzyā</label>
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ድርሳን፡ ዘደረሰ፡ <persName ref="PRS8121RetuaH">ርቱዐ፡ ሃይማኖት፡</persName> 
+                     አመ፡ ዐሠሩ፡ ወሰኑዩ፡ ለወርኀ፡ ሚያዝያ፡ በእንተ፡ ብፁዕ፡ ወክቡር፡ ወቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት። ትንብልናሁ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyRetuaHaym" corresp="LIT3962Homily">
                   <listRelation>
                      <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyMiyazya" passive="PRS10425Yohanne">
-                        <desc>The Homily for <foreign xml:lang="gez">Miyāzyā</foreign> is attributed in
-                           <bibl>
-                              <ptr target="bm:Lusini2005EAEDersanaM"/>
-                           </bibl> 
-                           to <persName ref="PRS10425Yohanne"/>, but
-                           according to Denis Nosnitsin, it is attributed in most manuscripts to <persName ref="PRS8121RetuaH"/>
-                           without mention of <persName ref="PRS10425Yohanne"/>.</desc>
+                        <desc>The homily is attributed to <persName ref="PRS10425Yohanne"/> in 
+                           <bibl><ptr target="bm:Lusini2005EAEDersanaM"/></bibl>, but according to Denis Nosnitsin, it is attributed in most 
+                           manuscripts to <persName ref="PRS8121RetuaH"/> without mention of <persName ref="PRS10425Yohanne"/>.</desc>
                      </relation>
                      <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyMiyazya" passive="PRS8121RetuaH" resp="DN"/>
-                  </listRelation>
-                  
-                  <label xml:lang="en">Homily for <foreign xml:lang="gez">Miyāzyā</foreign> by <persName ref="PRS8121RetuaH"/>
-                  </label>
+                  </listRelation> 
+                  <label xml:lang="en">Homily by Rǝtuʿa Hāymānot</label>
+                  <note>This homily is attributed to <persName ref="PRS8121RetuaH"/> in 
+                     <bibl><ptr target="bm:2006DersanaMikael"/></bibl>, but to <persName ref="PRS10425Yohanne"/> in 
+                     <bibl><ptr target="bm:Lusini2005EAEDersanaM"/></bibl>. It is attested in the section of the month of Tāḫśāś in 
+                     <ref type="mss" corresp="BAVet121"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                  <ab>
+                     <l n="1">መፍትው፡ ለነ፡ ኦ፡ አኀውየ፡ ንዘከር፡ ዕበየ፡ ዘአብ፡ ወኂሩተ፡ ዘወልድ፡ ወዐቅመ፡ ዘመንፈስ፡ ቅዱስ፡ እስመ፡ በኅብረተ፡ ሥላሴ፡ ተግባረ፡ ኵሉ፡ ፍጥረት፡
+                        ዘበሰማይ፡ ወዘበምድር። እስመ፡ ይቤ፡ መድኀኒነ፡ በወንጌል፡ ቅዱስ፡ በከመ፡ በሰማይ፡ ከማሁ፡ በምድርኒ።</l>
+                     <l n="2">ንቀድም፡ እንከ፡ ጠይቆቶ፡ ለዘበሰማይ፡ ከመ፡ ንለቡ፡ ዘበምድር፡ እስመ፡ በሳድስ፡ ዕለት፡ ገብሮ፡ እግዚአብሔር፡ ለአዳም፡ እመሬተ፡ ምድር፡ በአርኣያሁ፡
+                        ወበአምሳሊሁ፡ በኅብረተ፡ ሥላሴ፡ በአሐቲ፡ ምክር፡ እንዘ፡ ይብል፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ንግበር፡ ሰብአ፡ በአርኣያነ፡ ወበአምሳሊነ፡ ወገብሮ፡ ለሰብእ፡ 
+                        ወሰመዮ፡ አዳም፡ ወአዘዞሙ፡ ለመላእክቲሁ፡ ከመ፡ ይስገድዱ፡ ሎቱ፡ ለአዳም፡ እስመ፡ አርአያሁ፡ ለወልድ፡ በከመ፡ ይቤ፡ ነቢይ፡ ወይሰግዱ፡ ሎቱ፡ ኵሎሙ፡ መላእክተ፡
+                        እግዚአብሔር።</l>
+                  </ab>
+                  </div>   
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="51">ወይቤ፡ ጴጥሮስ፡ ይእዜ፡ አእመርኩ፡ ከመ፡ በአማን፡ ፈነወ፡ እግዚአብሔር፡ መልአኮ፡ ወአድኃነኒ።</l>
+                        <l n="52">ኦ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ሰአል፡ ወጸሊ፡ በእንቲአነ፡ ከመ፡ ናሥምሮ፡ ለእግዚአብሔር፡ ወንርከብ፡ ሞገሰ፡ በኀቤሁ፡ በይእቲ፡ ዕለት፡ ምስለ፡
+                           ኵሎሙ፡ ቅዱሳን፡ ወሰማዕት።</l>
+                        <l n="53">ትንብልናሁ፡ ወአስተብቍዖቱ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleMiyazya">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Miyāzyā</foreign> on the Christian whose hand had become dry and on the conversion of a pagan
-                     <!-- This homily is transmitted in the section for Miyāzyā in BAVet82, but in the section for Ṭǝrr in BAVet121  -->
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleHand">
+                  <label xml:lang="en">Miracle on a Christian whose hand had become dry</label>
+                  <note>This miracle is thematically similar to <ref target="#MiracleFreed"/>. It is transmitted in the section for Miyāzyā 
+                     in <ref type="mss" corresp="BAVet82 BMLacq776"/> and in the section for Ṭǝrr in <ref type="mss" corresp="BAVet121"/>. 
+                  </note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        <l n="1">ተአምሪሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘሥዑል፡ በነደ፡ እሳት፡ ዘይስእል፡ ምሕረተ፡ ለኵሉ፡ ፍጥረት፡ ቅድመ፡ መንበሩ፡ ለጸባኦት።</l>
+                        <l n="2">ትንብልና፡ ስእለቱ፡ ወአስተብቍዖቱ፡ ያድኅኖ፡ ለዕገሌ፡ እምዕለት፡ እኪት፡ ወለኵልነ፡ ውሉደ፡ ጥምቀት፡ በኵሉ፡ ጊዜ፡ ወበኵሉ፡ ሰዓት፡ በኵሉ፡
+                           ሌሊት፡ ወበኵሉ፡ መዓልት፡ በኵሉ፡ አዝማን፡ ወበኵሉ፡ ዓመታት፡ ዘእንበለ፡ ፅርዐት፡ ወሐኬት፡ እምይእዜ፡ ወእስከ፡ ድኃሪት፡ ዕለት፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                        <l n="3">ተብህለ፡ ከመ፡ ሀሎ፡ አሐዱ፡ ብእሲ፡ አይሁዳዊ፡ በሀገረ፡ ሮሜ፡ ወብእሲሁ፡ ባዕል፡ ጥቀ፡ በንዋየ፡ ዝንቱ፡ ዓለም፡ ኀላፊ፡ ወርቅ፡ ወብሩር፡ ወብዙኅ፡
+                           እንስሳ፡ ቦቱ።</l>
+                        <l n="4">ወበአሐቲ፡ ዕለት፡ እንዘ፡ የሐውር፡ ውስተ፡ ምስጋዱ፡ በከመ፡ ሕገ፡ አበዊሁ፡ ወእንዘ፡ ሀሎ፡ በፍኖት፡ ተራከበ፡ ምስለ፡ አሐዱ፡ ብእሲ፡ ክርስቲያናዊ፡
+                           ወውእቱኒ፡ ክርስቲያናዊ፡ ባዕል፡ ጥቀ፡ በንዋይ፡ ቀዲሙ፡ ወኮነ፡ ነዳየ፡ ውኀጥአ፡ ሲሳየ፡ ዕለት፡ ወዘይለብስ፡ ወተጸነሰ፡ ፈድፋደ፡ ውእቱ፡ ብእሲ።</l>
+                     </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="30">ወእምዝ፡ ነበሩ፡ ኅቡረ፡ አይሁዳዊ፡ ወክርስቲያናዊ፡ እንዘ፡ ይትለአኩ፡ ለቤተ፡ ክርስቲያን፡ ዘቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወይዜነዉ፡ 
+                           ተአምራቲሁ፡ ወመንክራቲሁ፡ ዐበይተ፡ ወይነግሩ፡ ኵሎ፡ ኂሩቶ፡ ለኵሉ፡ ሰብእ።</l>
+                        <l n="31">ትንብልናሁ፡ ወአስተብቍዖቱ፡ የሀሉ፡ ምስለ፡ ፍቁሩ፡ ዕገሌ፡ ወለኵልነ፡ ሰማዕያን፡ በጽላሎተ፡ ክነፊሁ፡ ይክድነነ፡ ሐሩረ፡ ጌጋይ፡ ኢያውዕየነ፡
+                           ወቍረ፡ ኀጢአት፡ ኢያማስነነ፡ ወኢያመጽልወነ፡ ኀይለ፡ ጸሎቱ፡ ይሰውረነ፡ ሐጸ፡ ጸላኢ፡ ኢይንድፈነ፡ ለኵልነ፡ ውሉደ፡ ጥምቀት፡ ለተዝካረ፡ ዚአሁ፡ እለ፡ ተጋባእነ፡
+                           ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeMiyazya">
-                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Miyāzyā</foreign> on Jeremiah freed by St Michael's
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeJeremiah">
+                  <label xml:lang="en">Commemorative notice on Jeremiah freed by St Michael</label>
+                  <ab>
+                     <l n="1">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩ዱ፡ አምላክ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለሚያዝያ፡ በዛቲ፡ ዕለት፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡
+                        ሊቀ፡ መላእክት፡ እስመ፡ በዛቲ፡ ዕለት፡ ፈነዎ፡ እግዚአብሔር፡ ሎቱ፡ ስብሐት፡ ለሚካኤል፡ ሊቀ፡ መላእክት፡ ኀበ፡ 
+                        <persName ref="PRS5680Jeremiah">ኤርምያስ፡</persName> ነቢይ፡ ወአውፅኦ፡ ወአድኀኖ፡ እምቤተ፡ ሞቅሕ፡
+                        ጸባብ፡ ዘዓም፡ ዓም፡ ዘአሞቅሖ፡ ሴዴቅያስ፡ ንጉሥ፡ ወአውፅኦ፡ አቤሜሌክ፡ ኢትዮጵያዊ፡ ገብሩ፡ ወሊቀ፡ ሐራሁ፡ ለንጉሥ።</l>
+                     <l n="2">ወሶቤሃ፡ ባረኮ፡ <persName ref="PRS5680Jeremiah">ኤርምያስ፡</persName> ወይቤሎ፡ ከመ፡ ኢይርአይ፡ ብድወታ፡ ወኅልቀታ፡ 
+                        ለ<placeName ref="LOC3957Jerusa">ኢየሩሳሌም፡</placeName> ወኢይጥዐም፡ ምረረ፡ ፂዋዌ፡ ወመንሱተ፡ ወኮነ፡ ሎቱ፡
+                        ከማሁ፡ ወኖመ፡ ስሳ፡ ወስድስተ፡ ዓመተ፡ ወምስሌሁ፡ ወይን፡ ወበለስ። ወኢማሰኑ፡ እስከ፡ አመ፡ ተመይጡ፡ ደቂቀ፡ እስራኤል፡ እምፂዋዌ፡ ወአምጽአ፡ እምወይን፡ ወበለስ፡
+                        ወኰኵህ፡ ወወሀቦ፡ ለኤርምያስ፡ ነቢይ።</l>
+                     <l n="3">ወበእንተ፡ ዝ፡ አዘዙነ፡ መምህራነ፡ ቤተ፡ ክርስነቲያን፡ ከመ፡ ንግበር፡ በዓሎ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለለ፡ ወርኁ፡
+                        ትንብልናሁ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                  </ab>   
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamMiyazya">
-                  <label xml:lang="en">
-                     <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Miyāzyā</foreign>
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamEstablished">
+                  <label xml:lang="en">Salām to you, whom he established</label>
+                  <ab>ሰላም፡ ለከ፡ ዘረሰየከ፡ በክብር፡ መልአከ፡ ኪዳኑ፡ ወምክሩ፡ ለእግዚአብሔር፡ ሚካኤል፡ ረዳኢ፡ ለእለ፡ ውስተ፡ የብስ፡ ወባሕር፡ ለረድኤትከሰ፡ ዘየዐጽቦ፡ ነገር፡
+                     አልቦ፡ በሰማይ፡ ወአልቦ በምድር።</ab>
                </div>
             </div>
             
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Genbot">
-               <label xml:lang="en">
-                  <foreign xml:lang="gez">Gǝnbot</foreign>
-               </label>
-               
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyGenbot">
-                  
-                  <listRelation>
-                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyGenbot" passive="PRS10390Yohanne">
-                        <desc>This homily is attributed in  <bibl>
-                              <ptr target="bm:Lusini2005EAEDersanaM"/>
-                           </bibl> 
-                           to <persName ref="PRS10390Yohanne"/>, but according to <persName ref="DN"/>, the manuscripts' usual formulation
-                           is <q xml:lang="gez">baʾǝnta Yoḥannǝs</q>, making thus authorship not entirely clear. The homily is about <persName ref="PRS5720JohnChr"/>.</desc>
+               <label xml:lang="en">Gǝnbot</label>
+               <div type="textpart" subtype="part" xml:id="AdmonitionGenbot">
+                  <label>Admonition for Gǝnbot</label>
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ድርሳን፡ ዘቅዱስ፡ ወክቡር፡ ወኀያል፡ ሊቀ፡ መላእክት፡ ሚካኤል፡ ወነገር፡ በእንተ፡ 
+                     <persName ref="PRS10382Yohanne">ዮሐንስ፡</persName> ጳጳስ፡ ዘብሔረ፡ ኢትዮጵያ፡ ዘመጽአ፡ እምድኅረ፡ አቡነ፡ ይስሐቅ፡ ጳጳስ፡ ዘይትነበብ፡ አመ፡ 
+                     ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ ግንቦት፡ በሰላመ፡ እግዚአብሔር፡ አብ፡ አሜን። ትንብልናሁ፡ ወአስተብቍዖቱ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyEudoxia" corresp="LIT3963Homily">
+                  <label>Homily on Eudoxia and Yoḥannǝs</label>
+                  <listRelation>   
+                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyEudoxia" passive="PRS10390Yohanne">
+                        <desc>According to <bibl><ptr target="bm:Lusini2005EAEDersanaM"/></bibl>.</desc>
+                     </relation>
+                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyEudoxia" passive="PRS5720JohnChr">
+                        <desc>According to <persName ref="DN"/>.</desc>
                      </relation>
                   </listRelation>
-                  
-                  <label xml:lang="en">Homily for <foreign xml:lang="gez">Gǝnbot</foreign> by <persName ref="PRS10390Yohanne"/>
-                  </label>
-                  <label>Homily Concerning John (Yoḥannǝs), Metropolitan of Aksum, for the 12th day of Gǝnbot</label>
+                  <note>Homily on <persName ref="PRS3899Eudoxia"/>, wife of Emperor <persName ref="PRS2016Arcadius"/> and on 
+                      a certain Yoḥannǝs, who could be identified with <persName ref="PRS10390Yohanne"/> 
+                     following <bibl><ptr target="bm:Lusini2005EAEDersanaM"/></bibl>, but according to <persName ref="DN"/>, is more 
+                     likely to be identified with <persName ref="PRS5720JohnChr"/> due to the manuscripts' usual formulation 
+                     <q xml:lang="gez">baʾǝnta Yoḥannǝs</q>..</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        <l n="1">ወኮነ፡ በመዋዕለ፡ <persName ref="PRS2016Arcadius">አርቃድዮስ፡</persName> ንጉሥ፡ ርቱዐ፡ ሃይማኖት፡ 
+                           ዘ<placeName ref="LOC2196Consta">ቍስጥንጥንያ</placeName> ከመ፡ ቈስጠንጢኖስ፡ ንጉሥ፡ ወጳውሎስ፡ ሐዋርያ፡ ወበመዋዕለ፡ ሊቀ፡ ጳጳሳት፡ 
+                           ቅዱስ፡ <persName ref="PRS5720JohnChr">ዮሐንስ፡ ዘውእቱ፡ አፈ፡ ወርቅ።</persName></l>
+                        <l n="2">በውእቱ፡ መዋዕል፡ ሀለወት፡ ብእሲቱ፡ ለ<persName ref="PRS2016Arcadius">አርቃድዮስ፡</persName> ንጉሥ፡ ወኮነት፡ ታፈቅር፡ 
+                           ንዋየ፡ ወርቅ፡ ወብሩር፡ በኀይል፡ ወበትዕግልት፡ ወንዋየ፡ ባዕድ፡ ብዙኅ፡ ሀሎ፡ በኀቤሃ።</l>
+                        <l n="3">ወዘንተ፡ ርእዮ፡ <persName ref="PRS5720JohnChr">ዮሐንስ፡ አፈ፡ ወርቅ፡</persName> ብዙኅ፡ ዕለተ፡ ይነግራ፡ ወይገንሓ፡ 
+                           ወኢትሰምዕ፡ ቃሎ፡ ወተአብዮ፡ ሰሚዐ፡ ቃሉ፡ ወነገሩ።</l>
+                        <l n="4">ወበአሐቲ፡ ዕለት፡ ነሥአት፡ አዕዋዳ፡ ለአሐቲ፡ መበለት፡ ነዳይት፡ በግፍዕ፡ ወይእቲ፡ መበለት፡ መጽአት፡ ኀበ፡ ዮሐንስ፡ ሊቀ፡ ጳጳሳት፡ ወነገረቶ፡ ዘከመ፡ ነሥአት፡ 
+                           አዕዋዳ፡ <persName ref="PRS3899Eudoxia">አውዶክስያ፡ </persName> ንግሥት፡ ወፈነወ፡ ቅዱስ፡ ዮሐንስ፡ ኀበ፡ 
+                           <persName ref="PRS3899Eudoxia">አውዶክስያ፡ </persName> ንግሥት፡ ወገሠፃ፡ ወሰአላ፡ ብዙኀ፡ ስእለታተ፡ ከመ፡ ትሚጥ፡ ላቲ፡ ለይእቲ፡ ብእሲት፡
+                           መበለት፡ አዕዋዳ።</l>
+                     </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="17">ወበህየ፡ ነገሮሙ፡ ዮሐንስ፡ ወመሀሮሙ፡ ቃለ፡ እግዚአብሔር፡ ወአምኑ፡ ኵሎሙ፡ በስመ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ሎቱ፡ ስብሐት፡ እስከ፡ ለዓለመ፡
+                           ዓለም፡ ወበስእለቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ መልአከ፡ ሣህል፡ ወምሕረት፡ ሐነጹ፡ አብያተ፡ ክርስቲያናት፡ ብዙኃተ፡ ወቀደሰ፡ ሎሙ፡ 
+                           <persName ref="PRS5720JohnChr">ዮሐንስ፡ አፈ፡ ወርቅ፡</persName> ወሤመ፡ ሎሙ፡ ጳጳሳተ፡ ቀሳውስተ፡ ወዲያቆናተ።</l>
+                        <l n="18">ወአዕረፈ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ ግንቦት፡ ወተቀብረ፡ በደሴተ፡ <placeName ref="LOC2202Crete">አክራጥያ፡</placeName>
+                           እንዘ፡ ሀሎ፡ በስደቱ፡ ወነሥአ፡ አክሊለ፡ ስምዕ፡ ወክብር፡ በመንግሥተ፡ ሰማያት፡ ወተፍሥሐ፡ ምስለ፡ ነፍሰ፡ ኵሎሙ፡ ጻድቃን፡ ወሰማዕት፡ በሰማያት፡ ለዓለመ፡ ዓለም።</l>
+                        <l n="19">ወዝንቱ፡ ኵሉ፡ ዘኮነ፡ በስእለቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ጸሎቱ፡ ወበረከቱ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                        <l n="20">ወለአንባቢሁ፡ ይጽሐፍ፡ ስሞ፡ ኀበ፡ ዐምደ፡ ወርቅ፡ በቀለመ፡ ጽድቅ፡ ምስለ፡ ደቂቅ፡ ዛቲምርፋቅ፡ ለአእሩግ፡ ወለደቂቅ፡ ይሱቆሙ፡ እምወዲቅ፡ በእንተ፡
+                           ስእለቱ፡ ለሚካኤል፡ ሊቅ፡ ወበእንተ፡ ጸሎቱ፡ ለ<persName ref="PRS5720JohnChr">ዮሐንስ፡ አፈ፡ ወርቅ፡</persName> ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleGenbot">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Gǝnbot</foreign> on the sterile woman
-                     <!-- This miracle is within the section for Gǝnbot in BAVet82, but in the section for Ḫǝdār in BAVet121  -->
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleSterile">
+                  <label xml:lang="en">Miracle on the sterile woman</label>
+                  <note>This miracle is attested within the section for Gǝnbot in <ref type="mss" corresp="BAVet82 BMLacq776"/>,  but in the 
+                     section for Ḫǝdār in <ref type="mss" corresp="BAVet121"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                  <ab>
+                     <l n="1">ተአምሪሁ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘይትዐጸፍ፡ ብርሃነ፡ ከመ፡ ልብስ፡ ወነደ፡ እሳት፡ ውስተ፡ አክናፊሁ። ትንብልናሁ፡ ይንድፎሙ፡
+                        ለሠራዊተ፡ ሰይጣናት፡ እኩያን፡ እለ፡ ይፃረርዎ፡ ለዕገሌ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     <l n="2">ተብህለ፡ ከመ፡ ሀሎ፡ አሐዱ፡ ብእሲ፡ ክርስቲያናዊ፡ እምሰብአ፡ ዐበይተ፡ ሮሜ፡ ወባዕል፡ ጥቀ፡ ወክቡር፡ በንዋየ፡ ዝንቱ፡ ዓለም፡ ወብእሲቱሰ፡ መካን፡ ይእቲ፡
+                        ወኢትወልድ።</l>
+                     <l n="3">ወነበሩ፡ ክልኤሆሙ፡ በዐቢይ፡ ኀዘን፡ በእንተ፡ ዘአልቦሙ፡ ውሉደ፡ ውብዙኅ፡ ጾመ፡ ይጸውሙ፡ ይስእሉ፡ ወይጼልዩ፡ ወይትማኀለሉ፡ ወያስተበቍዑ፡ በጥቡዕ፡
+                        ልብ፡ ኀበ፡ እግዚአብሔር፡ ወኅበ፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ከመ፡ የሀቦሙ፡ ውሉደ።</l>
+                  </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="22">ወይእቲኒ፡ ብእሲት፡ አተወት፡ ቤታ፡ በፍሥሓ፡ እንዘ፡ ተአኵቶ፡ ወትሴብሖ፡ ለእግዚአብሔር፡ ልዑል፡ ወለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወእንዘ፡
+                           ትዜኑ፡ መንክራቲሁ፡ ዘገብረ፡ ላቲ፡ ወዘከመ፡ አሕየወ፡ ወልዳ።</l>
+                        <l n="23">ከማሁ፡ ያድኅነነ፡ ለኵልነ፡ ውሉደ፡ ጥምቀት፡ ወይፈው፡ ሰነ፡ እምደዌ፡ ኀጢአት፡ ዘነፍስ፡ ወሥጋ፡ ወይርድአነ፡ በዘዚአሁ፡ ጸጋ፡ ብትንብልና፡ ስእለቱ፡
+                           ያድኅነነ፡ ለዓለም፡ እምፁጋ፡ ወያሰስል፡ እምኔነ፡ ለምግባረ፡ ኀጢአት፡ ዘውጋ፡ ወይብትክ፡ እምላዕሌነ፡ ለጌጋይ፡ መንሠጋ፡ እምእለ፡ አሥመርዎ፡ ለእግዚአብሔር፡ ኢንኩን፡
+                           ንትጋ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeGenbot">
-                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Gǝnbot</foreign> on St Michael's appearance to Habakkuk
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeHabakkuk">
+                  <label xml:lang="en">Commemorative notice on St Michael's appearance to Habakkuk</label>
+                  <ab>
+                     <l n="24">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለግንቦት፡ ተዝክረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡
+                        እስመ፡ በዛቲ፡ ዕለት፡ ፈነዎ፡ እግዚአብሔር፡ ለሚካኤል፡ ሊቀ፡ መላእክት፡ ኀበ፡ <persName ref="PRS4914Habakkuk">ዕንባቆም፡</persName> ነቢይ፡ 
+                        ኀበ፡ ሀገረ፡ <placeName ref="LOC3957Jerusa">ኢየሩሳሌም፡</placeName> እንዘ፡ ይጸውር፡ ሲሳየ፡ ብርስን፡ ወይፈቅድ፡ ይሰድ፡ ለእለ፡ የዐጽዱ፡ እክለ፡ 
+                        በገራህት።</l>
+                     <l n="25">ወአኀዞ፡ ሚካኤል፡ ለ<persName ref="PRS4914Habakkuk">ዕንባቆም፡</persName> በሥእርተ፡ ርእሱ፡ እንዘ፡ ይጸውር፡ መብልዐ፡ 
+                        ወአብጽሖ፡ ኀበ፡ ሀገረ፡ ባቢሎን፡ ሶቤሃ፡ ወበልዐ፡ ዳንኤል፡ እምውእቱ፡ መብልዕ።</l>
+                     <l n="26">ወአድኀኖ፡ ሚካኤል፡ ለዳንኤል፡ እምግበበ፡ አናብስት፡ ወለ<persName ref="PRS4914Habakkuk">ዕንባቆም፡</persName> ነቢይ፡ 
+                        አግብኦ፡ ኀበ፡ ምድረ፡ ይሁዳ፡ ወሲሳይ፡ ምስሌሁ፡ ወቆመ፡ ኀበ፡ እለ፡ የአርሩ፡ እክለ፡ ሶቤሃ።</l>
+                     <l n="27">ወበእንተ፡ ዝ፡ አዘዙነ፡ መምህራነ፡ ቤተ፡ ክርስቲያን፡ ከመ፡ ንግበር፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለለ፡
+                        ወርኁ። ትንብል፡ ናሁ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                  </ab>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamGenbot">
-                  <label xml:lang="en">
-                     <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Gǝnbot</foreign>
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamExistence">
+                  <label xml:lang="en">Salām for your existence</label>
+                  <ab>ሰላም፡ ለህላዌከ፡ ዘምሥዋዐ፡ አብ፡ መቅደሰ፡ ከመ፡ ታዕርግ፡ ህየ፡ ጸሎተ፡ ቅዱሳን፡ ጢሰ። ኀፍረተ፡ መስቀል፡ ወልድ፡ ጊዜ፡ ተዐገሠ፡ ኢትርአይ፡ በድንጋፄ፡ እንዘ፡ ታንቃዐዱ፡ 
+                     ነፍሰ፡ ሚካኤል፡ አትሐትከ፡ ወአድነንከ፡ ርእሰ።</ab>
                </div>
             </div>
             
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Sane">
-               <label xml:lang="en">
-                  <foreign xml:lang="gez">Sane</foreign>
-               </label>
-               
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilySane">
+               <label xml:lang="en">Sane</label>
+               <div type="textpart" subtype="part" xml:id="AdmonitionSane">
+                  <label>Admonition for Sane</label>
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ድርሳን፡ ዘቅዱስ፡ ወክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ፡ አመ፡ ዐሠሩ፡ ወሰኑዩ፡ ለሠኔ፡ ወውእቱ፡ ዐቢይ፡
+                     በዓል፡ ትንብልናሁ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyAstaraniqos">
                   <listRelation>
-                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilySane" passive="PRS10382Yohanne"/>
+                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyAstaraniqos" passive="PRS10382Yohanne"/>
                   </listRelation>
-                  <label xml:lang="en">Homily for <foreign xml:lang="gez">Sane</foreign> by <persName ref="PRS10382Yohanne"/>
-                  </label>
-                  <label>Homily of John (Yoḥannǝs), Metropolitan of Aksum, for the 12th day of Sane</label>
+                  <label>Homily on Astaraniqos and Euphemia</label>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        <l n="1">ዝንቱ፡ ድርሳን፡ ዘደረሰ፡ <persName ref="PRS10382Yohanne">ዮሐንስ፡ ጳጳስ፡ ዘአኵስም፡</persName> ቀዳሚተ፡ አብያተ፡ 
+                           ክርስቲያናት፡ ወያፈቅሮ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ብዙኃ።</l>
+                        <l n="2">ወበአሐቲ፡ ሀገር፡ ሀሎ፡ አሐዱ፡ መኰንን፡ ዐቢይ፡ ርቱዐ፡ ሃይማኖት፡ ወስሙ፡ 
+                           <persName ref="PRS14018Astaraniqos">አስተራኒቆስ፡</persName> 
+                           ዘ<placeName ref="LOC2177Cilici">ኪልቅያ፡</placeName> 
+                           ወስመ፡ ብእሲቱ፡ <persName ref="PRS14019Euphemia">አፎምያ።</persName></l>
+                     </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="57">ወእምዝ፡ አውፅአ፡ ቈጽለ፡ ዝኩ፡ ሥዕል፡ ወፈረየ፡ ፍሬ፡ ሠናየ፡ ወኮነ፡ ዐቢይ፡ ፍሥሓ፡ ውስተ፡ ውእቱ፡ ብሔር።</l>
+                        <l n="58">ወኵሎሙ፡ ድዉያን፡ ወሕሙማን፡ ወእለ፡ አጋንንት፡ ርኵሳን፡ ይመትሩ፡ ውእተ፡ ቈጽለ፡ ወይነሥኡ፡ ወይተኀፀቡ፡ ወይከውኖሙ፡ ፈውሰ፡ ለኵሉ፡ ብሔር፡
+                           እስከ፡ ዮም።</l>
+                        <l n="59">ወኮነ፡ ዐቢይ፡ ኀይል፡ ወመንክር፡ በእንተ፡ ስመ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ በውስተ፡ ውእቱ፡ ብሔር።</l>
+                        <l n="60">ከማሁ፡ ይኩን፡ በረከቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወስእለታ፡ ለአፎምያ፡ ቅድስት፡ ላዕሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleSane">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Sane</foreign> on the healing of the leprous Jew
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleLeprousJew">
+                  <label xml:lang="en">Miracle on the healing of the leprous Jew</label>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        <l n="1">ተአምሪሁ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ መዐርዒረ፡ ዜማ፡ ጥዑም፡ ዖፈ፡ አርያም፡ ዘይሰርር፡ እምጽንፍ፡ እስከ፡ አጽናፈ፡ ዓለም።</l>
+                        <l n="2">ኀይለ፡ ጸሎቱ፡ ያድኅኖ፡ እምዘሲኦል፡ አሥራም፡ በዝየኒ፡ ወበዘይመጽእ፡ ዓለም፡ ወያንግፎ፡ እምአፈ፡ ተኵላ፡ ርጉም፡ ወእመሥገርተ፡ ሰይጣን፡ ሕሡም፡
+                           ለፍቁሩ፡ ዕገሌ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                        <l n="3">ተብህለ፡ ከመ፡ ሀሎ፡ አሐዱ፡ ብእሲ፡ ክርስቲያናዊ፡ ዘይፈርሆ፡ ለእግዚአብሔር፡ ወይትአመን፡ በጸሎቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ውስተ፡ ደሴተ፡
+                           <placeName ref="LOC2206Cyprus">ቆጵሮስ።</placeName></l>
+                     </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="17">ወከማሁ፡ ለዝንቱኒ፡ አይሁዳዊ፡ ዘነበረ፡ ውስተ፡ ጽልመት፡ እንዘ፡ ይሣቅዮ፡ ጋኔነ፡ ጽልመት፡ ወያደውዮ፡ ደዌ፡ ኃጢአት፡ በርሀ፡ ሎቱ፡ ብርሃነ፡ ክርስቶስ፡
+                           ማሕየዊ፡ ወፈወሶ፡ እምሕማሙ፡ ዘትካት፡ ወሜጦ፡ እምዕልወት፡ ኀበ፡ ርትዕት፡ ሃይማኖት፡ በትንብልናሁ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ መልአከ፡ ሣህል፡ 
+                           ወምሕረት፡ ዘከሠተ፡ ሎቱ፡ አዕይንተ፡ ልቡ፡ እምዑረት፡ ውስተ፡ አሚነ፡ ሥላሴ፡ ርትዕት።</l>
+                        <l n="18">ወለነኒ፡ ውሉደ፡ ጥምቀት፡ ይትኖልወነ፡ በስእለቱ፡ ወበአስተብቍዖቱ፡ ወያድኅነነ፡ ለሰይጣን፡ እመሥገርቱ፡ ከመ፡ ኢንጥፋእ፡ በከንቱ፡ ወይመግበነ፡
+                           ለለ፡ ዕለቱ፡ ምስለ፡ ኵሎሙ፡ ሠራዊቱ፡ ኢይርሐቅ፡ እምኔነ፡ ሰይፈ፡ ረድኤቱ፡ ከመ፡ ይጕየዩ፡ ኵሎሙ፡ ሠራዊተ፡ ሳጥናኤል፡ ሰብአ፡ እለ፡ ያስሕቱ፡ ምሉዓነ፡ እከይ፡ ወትዕግልት፡
+                           ወላድያነ፡ ሐሰት፡ ዘኢይቀብል፡ ቅልየቱ፡ ባሕረ፡ ፁግ፡ ወዕመቀ፡ ቀላይ፡ እሙንቱ፡ በጽላሎተ፡ ክነፊሁ፡ ይኅብአነ፡ ከመ፡ ኢያሥግሩነ፡ እሎንቱ፡ ለሐውጾትነ፡ ይምጻእ፡ ከመ፡
+                           ይክድነነ፡ በመንጦላዕተ፡ ምሕረቱ፡ እስመ፡ ሰአሌ፡ ምሕረት፡ ውእቱ፡ እምትካት፡ ቂም፡ ዘአልቦቱ።</l>
+                        <l n="19">በትንብልናሁ፡ ይዕቀቦ፡ ለፍቁሩ፡ ዕገሌ፡ ወያድኅኖ፡ ኀይለ፡ ጸሎቱ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeSane">
-                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Sane</foreign> on the conversion of the temple in Alexandria into a church dedicated to St Michael
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeTemple">
+                  <label xml:lang="en">Commemoration on the conversion of the temple of Alexandria</label>
+                  <note>Story of the conversion of the temple in Alexandria which was built by <persName ref="PRS3137Cleopatr"/> into a 
+                     church dedicated to St Michael as a commemorative notice for the month of Sane as it is the case in the Sǝnkǝssār. Taken from 
+                     the history of Bāḥrān and very similar to the stories of Talafinos and Talason in <ref type="work" corresp="LIT3959Homily"/>, 
+                     <ref type="work" corresp="LIT4155MiraclesMichael"/> and <ref type="work" corresp="LIT1295Dersan#HomilyHamle"/>.
+                        </note>
+                  <div type="textpart" subtype="incipit">
+                  <ab>
+                     <l n="1">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ አመ፡ ዐሡሩ፡ መሰኑዩ፡ ለሰኔ፡ በዛቲ፡ ዕለት፡ ያብዕሉ፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡
+                        ሊቀ፡ መላእክት፡ ትንብልናሁ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     <l n="2">ወምክንያቱሰ፡ ዘያብዕሉ፡ ቦቱ፡ ውእቱኬ፡ እስመ፡ ሀሎ፡ በሀገረ፡ <placeName ref="LOC1338Alexan">እስክንድርያ፡</placeName> 
+                        ምኵራብ፡ ዐቢይ፡ ወኮነት፡ <persName ref="PRS3137Cleopatr">አክልኡበጥራ፡</persName> ንግሥት፡ ወለተ፡ 
+                        <persName ref="PRS14020Ptolemy">በጥሊሞስ፡</persName> ንጉሠ፡ <placeName ref="LOC2804Egypt">ግብጽ፡ </placeName> 
+                        ሐነጸቶ፡ በስመ፡ ኮከብ፡ ዙሐል፡ ወገብሩ፡ ሎቱ፡ በዓለ፡ በ<placeName ref="LOC1338Alexan">እስክንድርያ፡</placeName> አመ፡ ዐሠሩ፡ ወሰኑዩ፡ ለወርኀ፡ 
+                        ሰኔ።</l>
+                     <l n="3">ወኮነ፡ በውእቱ፡ ምኵራብ፡ ጣዖት፡ ዘብርት፡ ዐቢይ፡ ወግሩም፡ ፈድፋደ፡ ወስሙ፡ ዙሐል፡ ወኮነ፡ ይጠብሑ፡ ሎቱ፡ ዝብሓተ፡ ብዙኅ፡ በዕለተ፡ በዓሉ፡ ወነበሩ፡
+                        ከመ፡ ዝ፡ ብዙኅ፡ ዘመነ፡ እንዘ፡ ይገብሩ፡ በዓለ፡ ለውእቱ፡ ጣዖት፡ እስከ፡ መዋዕለ፡ ሢመቱ፡ ለአባ፡ እለእስክንድሮስ፡ ወውእቱ፡ ተፍጻሜተ፡ ሠለስቱ፡ ምእት፡ ዓመት፡ ወዘይፈደፍድ፡
+                        እምኔሁ።</l>
+                     <l n="4">ወሶበ፡ ተሠይመ፡ አባ፡ እለእስክንድሮስ፡ ሊቀ፡ ጳጳሳት፡ በሀገረ፡ እስክንድርያ፡ ፈቀደ፡ ከመ፡ ይስብሮ፡ ለውእቱ፡ ጣዖት፡ ወከልእዎ፡ ኅሱራን፡ ሰብእ፡ ዘሀገረ፡
+                        እስክንድርያ።</l>
+                     <l n="5">ወነግሠ፡ ቆስጠንጢኖስ፡ ንጉሥ፡ ጻድቅ፡ ወሰፍሐት፡ ሃይማኖተ፡ ክርስቲያን፡ ርትዕት፡ ወዳግመ፡ ፈቀደ፡ አባ፡ እለእስክንድሮስ፡ ከመ፡ ይስብሮ፡ ለውእቱ፡
+                        ጣዖት፡ ወከልእዎ፡ ኅሱራን፡ ሰብእ፡ ዘሀገረ፡ እስክንድርያ፡ ወይቤልዎ፡ ንሕነሰ፡ ለመድነ፡ ከመ፡ ንግበር፡ በዓሎ፡ ለውእቱ፡ ጣዖት፡ ወናሁ፡ እንዘ፡ ሀሎ፡ ዝንቱ፡ ጣዖት፡ ኀለፉ፡ 
+                        እምቅድሜከ፡ ዐሠርቱ፡ ወሰመንቱ፡ ሊቃነ፡ ጳጳሳት፡ ወኢወለጡ፡ እምላዕሌነ፡ ዘንተ፡ ልማደነ።</l>                     
+                  </ab>
+                  </div> 
+                    <div type="textpart" subtype="explicit">
+                       <l n="51">ወበእንተ፡ ዝ፡ ኦ፡ ፍቁራንየ፡ ንትጋደል፡ ወንግበር፡ በዓሎ፡ ለቅዱስ፡ ወክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ በከመ፡ ክሂሎትነ፡ ወለእመ፡ ኮነ፡ ዘይውህብ፡ ጽዋዐ፡
+                          ማይ፡ ቈሪር፡ በስሙ፡ ኢየሀጕል፡ ዕሴቶ፡ በከመ፡ ይቤ፡ እግዚእነ፡ ሎቱ፡ ስብሐት፡ በወንጌል፡ ቅዱስ።</l>
+                       <l n="52">ወንሕነሂ፡ ንስአል፡ ምሕረቶ፡ ለእግዚአብሔር፡ ብትንብልናሁ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ከመ፡ ያድኅነነ፡ እመሣግሪሁ፡ ለሰይጣን፡
+                          ወያርኅቅ፡ እምኔነ፡ ኵሎ፡ ሕማመ፡ ብድብድ፡ ወያብዝኅ፡ ፍሬያተ፡ ምድር፡ ወይርድአነ፡ ለገቢረ፡ ሠናይ፡ ወይሥረይ፡ ለነ፡ ኃጣውኢነ፡ ወያዕርፍ፡ ነፍሶሙ፡ ለእለ፡ ሞቱ፡ እምኔነ፡
+                          ወይሚጦሙ፡ ለእለ፡ ነገዱ፡ አበዊነ፡ ወአኀዊነ፡ ውስተ፡ አብያቲሆሙ፡ በዳኅና፡ ወበሰላም። ወይረሲ፡ ፍቅረ፡ ማእከሌነ፡ ወያጽንዐነ፡ ውስተ፡ ሃይማኖት፡ ርትዕት፡ እስከ፡ ደኃሪት፡
+                          ዕለት።</l>
+                       <l n="53">ወብዙኃት፡ ተአምራቲሁ፡ ለዝንቱ፡ መልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘኢይተኌለቍ፡ ትንብልናሁ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ 
+                          አሜን።</l>
+                       <l n="54">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ በዛቲ፡ ዕለት፡ ሤሞ፡ እግዚአብሔር፡ ሎቱ፡ ስብሐት፡ ለሚካኤል፡ ሊቀ፡ መላእክት፡ ውስተ፡
+                          ጾታሁ፡ መልዕልተ፡ ኵሎሙ፡ መላእክት፡ ምስለ፡ ኵሉ፡ ዕበዩ።</l>
+                       <l n="55">ወብዙኃት፡ ተአምራቲሁ፡ ለዝንቱ፡ መልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወበእንተ፡ ዝ፡ አዘዙነ፡ መምህራነ፡ ቤተ፡ ክርስቲያን፡ ከመ፡ ንግበር፡
+                          በዓሎ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለለ፡ ወርኁ፡ ትንብልናሁ፡ ወአስተብቍዖቱ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                    </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamSane" corresp="LIT6631SalMikMahari">
-                  <label xml:lang="en">
-                     <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Sane</foreign>
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamMahari" corresp="LIT6631SalMikMahari">
+                  <label xml:lang="en">Salām to Michael the Merciful</label>
+                  <ab>ሰላም፡ ለሚካኤል፡ መሓሪ፡ ውእቱ፡ ወተአዛዚ፡ ለሰብእ፡ በዲበ፡ ሠናይቱ፡ ለቀርነ፡ ዝንቱ፡ መልአክ፡ በድምፀ፡ ንፍኅቱ፡ በከመ፡ ኮነ፡ ቀዳሚ፡ ውስተ፡ ሰማያት፡
+                        ዕርገቱ፡ ለእግዚአብሔር፡ ይከውን፡ ዳግመ፡ ምጽአቱ።
+                  </ab>
                </div>
-            </div>
-            
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeEuphemia">
+                  <label xml:lang="en">Commemorative for Euphemia</label>
+                  <note>This commemorative is not attested in any manuscripts.</note>
+                  <note>Commemorative to <persName ref="PRS14019Euphemia"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        <l n="1">ወበዛቲ፡ ዕለት፡ ካዕበ፡ ኮነ፡ ዕረፍታ፡ ወዜናሃ፡ ለቅድስት፡ <persName ref="PRS14019Euphemia">አፎምያ።</persName></l>
+                        <l n="2">ወዛቲ፡ ቅድስት፡ ኮነት፡ ብእሲቱ፡ ለአሐዱ፡ ብእሲ፡ ዘይፈርሆ፡ ለእግዚአብሔር፡ ወኮነ፡ ይገብር፡ ምጽዋታተ፡ ብዙኃተ፡ ወይገብር፡ ሠለስተ፡ በዓላተ፡ ለለ፡
+                           ወርኁ፡ ዘውእቶሙ፡ በዓለ፡ መልአክ፡ ክቡር፡ ሚካኤል፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለለ፡ ወርኁ፡ ወበዓለ፡ ቅድስት፡ ድንግል፡ ማርያም፡ አመ፡ ዕሥራ፡ ወአሚሩ፡ ለለ፡ ወርኁ፡ ወበዓለ፡
+                           ተዝካረ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ አመ፡ ዕሥራ፡ ወተሱዑ፡ ለለ፡ ወርኁ።</l>
+                        <l n="3">ወሶበ፡ ቀርበ፡ ዕለተ፡ ዕረፍቱ፡ አዘዛ፡ ለብእሲቱ፡ ከመ፡ ኢታፅርዕ፡ ምጽዋተ፡ ዘኮነ፡ ውእቱ፡ ይገብር፡ ወፈድፋደሰ፡ እሎንተ፡ ሠለስተ፡ በዓላተ።</l>
+                     </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="15">ወእምድኅረ፡ ዝ፡ ፈጸመት፡ ግብረ፡ በዓል፡ በከመ፡ ይደሉ፡ ወፈነወት፡ ኀበ፡ ኤጲስ፡ ቆጶስ፡ ወኀበ፡ ካህናት፡ ወመጽኡ፡ ኀቤሃ፡ ወመጠወት፡ ሎሙ፡ ኵሎ፡
+                           ንዋያ፡ ከመ፡ የሀብዎሙ፡ ለነዳያን፡ ወለምስኪናን፡ ወለጽኑሳን።</l>
+                        <l n="16">ወእምዝ፡ ተንሥአት፡ ወጸለየት፡ ወነሥአት፡ ሥዕሎ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ወተንበለት፡ ቦቱ፡ ወአንበረቶ፡ ዲበ፡ እንግድዓሃ፡ ወገጻ። ወእምዝ፡
+                           አዕረፈት፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለሰኔ፡ በዕለተ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል።</l>
+                        <l n="17">እግዚአብሔር፡ ይምሐሮ፡ በጸሎታ፡ ለፍቁሩ፡ ዕገሌ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamEuphemia">
+                  <label xml:lang="en">Salām to Euphemia</label>
+                  <note>Salām to <persName ref="PRS14019Euphemia"/>.</note>
+                  <note>Not attested in most manuscript, but in <ref type="mss" corresp="ESbqm009"/>.</note>
+                  <ab>ሰላም፡ ለ<persName ref="PRS14019Euphemia">አፎምያ፡</persName> ዘሞአቶ፡ ለመስቴማ፡ በቃለ፡ ትምይንት፡ ሶበ፡ ተቃወማ፡ በዛቲ፡ ዕለት፡ በከመ፡
+                     ዐደማ፡ ሥዕሎ፡ ለሚካኤል፡ እንዘ፡ ታነብር፡ በፍጽማ፡ ውስተ፡ ዘለዓለም፡ ዕረፍት፡ ፈለሰት፡ እምፃማ።</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeLalibela">
+                  <label xml:lang="en">Commemorative for Lālibalā</label>
+                  <note>Commemorative for <persName ref="PRS6152Lalibala"/>.</note>
+                  <note>Not attested in manuscripts.</note>
+                  <ab>ወበዛቲ፡ ዕለት፡ ካዕበ፡ አዕረፈ፡ ብፁዕ፡ ወንጹሕ፡ ወረኣዬ፡ ምሥጢረ፡ ሰማያት፡ <persName ref="PRS6152Lalibala">ላሊበላ፡</persName> ንጉሠ፡ 
+                     ኢትዮጵያ፡ እግዚአብሔር፡ ይምሐረነ፡ በጸሎቱ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamLalibela">
+                  <label xml:lang="en">Salām to Lālibalā</label>
+                  <note>Salām to <persName ref="PRS6152Lalibala"/>.</note>
+                  <note>Not attested in manuscripts.</note>
+                  <ab>
+                    ሰላም፡ ለላሊበላ፡ ሐናጼ፡ መቅደስ፡ በጥበብ፡ በዕብን፡ ይቡስ፡ እንበለ፡ መሬት፡ ርጡብ። በዘይትአመር፡ ሎቱ፡ ምስፍና፡ ወምግብ፡ ዝንቱ፡ መዓር፡ ተድላ፡ ነገሥት፡ ወሕዝብ፡ በዕለተ፡ 
+                    ተወልዶ፡ ተዐግተ፡ በንህብ።
+                  </ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamQerellos">
+                  <label xml:lang="en">Salām to Qerǝllos</label>
+                  <note>Salām to <persName ref="PRS3255CyrilI"/>.</note>
+                  <note>Not attested in manuscripts.</note>
+                  <ab>
+                     ሰላም፡ ዕብል፡ ለ<persName ref="PRS3255CyrilI">ቄርሎስ፡</persName> ሊቅ፡ ጵጵስናሁ፡ ዘኮነ፡ በትንቢተ፡ በእሲ፡ ጻድቅ። ለዝ፡ መምህር፡ እምስሕተተ፡ 
+                     ዓለም፡ ርኁቅ፡ በውኂዘ፡ ቃሉ፡ ለምለሙ፡ አዕፁቅ፡ ወበትምህርቱ፡ ነበሩ፡ ደቂቅ።
+                  </ab>
+               </div>
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Hamle">
-               <label xml:lang="en">
-                  <foreign xml:lang="gez">Ḥamle</foreign>
-               </label>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyHamle">
+               <label xml:lang="en">Ḥamle</label>
+               <div type="textpart" subtype="part" xml:id="AdmonitionHamle">
+                  <label>Admonition for Ḥamle</label>
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ድርሳን፡ ዘቅዱስ፡ ወክቡር፡ ሚካኤል፡ ሊቀ፡ መላአክት፡ ዘይትበብ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለሐምሌ፡ በረከቱ፡ ትኩን፡
+                     ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን። </ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyTalason">
                   <listRelation>
-                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyHamle" passive="PRS10382Yohanne"/>
+                     <relation name="saws:isAttributedToAuthor" active="LIT1295Dersan#HomilyMalignant" passive="PRS10382Yohanne"/>
                   </listRelation>
-                  <label xml:lang="en">Homily for <foreign xml:lang="gez">Ḥamle</foreign> by <persName ref="PRS10382Yohanne"/>
-                  </label>
-                  <label>Homily of John (Yoḥannǝs), Bishop of Aksum, for the 12th day of Ḥamle</label>
+                  <label xml:lang="en">Homily by Yoḥannǝs on Talason</label>
+                  <note>Homily by <persName ref="PRS10382Yohanne"/> on <persName ref="PRS11321Talafinos">Talāson</persName> 
+                     similar to <ref type="work" corresp="LIT3959Homily"/>, <ref type="work" corresp="LIT4155MiraclesMichael"/>
+                     and <ref type="work" corresp="LIT1295Dersan#CommemorativeSanakrem"/>. 
+                     Attested in <ref type="mss" corresp="BAVet82"/> for the 12th day of Ḥamle, 
+                     but for Tāḫśāś in <ref type="mss" corresp="BAVet121"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        <l n="1">ዘተናገረ፡ <persName ref="PRS10382Yohanne">ዮሐንስ፡</persName> ጳጳስ፡ በእንተ፡ አሐዱ፡ ብእሲ፡ ዕቡይ፡ ዘይነበር፡ በአሐቲ፡ ሀገር፡
+                           ወልቡ፡ ፀዋግ፡ ከመ፡ ፈርዖን፡ ወአልቦቱ፡ ጾም፡ ወጸሎት።</l>
+                        <l n="2">ወሀሎ፡ አሐዱ፡ ብእሲ፡ ነዳይ፡ ዘይነብር፡ በጎረቤቱ፡ ምስለ፡ ብእሲቱ፡ ወርቱዕ፡ ሃይማኖቶሙ፡ ወይፀመድዎ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወትረ፡
+                           ወይሰርሑ፡ ለበዓሉ፡ ወይውህቡ፡ ኵሎ፡ ዘረከቡ፡ ለነዳያን፡ ወለምስኪናን።</l>
+                        <l n="3">ወርእዮ፡ ዝኩ፡ ባዕል፡ ዘጎሮሙ፡ ያንጕረጕር፡ በልቡ፡ እንዘ፡ ይብል፡ በእንተ፡ እሉ፡ ነዳያን፡ እለ፡ አልቦሙ፡ ዘይበልዑ፡ ወይሰትዩ፡ ወኢይረክቡ፡ ለርእሶሙ፡
+                           ምንተኒ፡ ምንተ፡ ይውህቡ፡ ለነዳያን።</l>
+                        <l n="4">ወአሐተ፡ ዕለተ፡ ጸውዖ፡ ለነዳይ፡ ወይቤሎ፡ አንተ፡ ብእሲ፡ ዘአልብከ፡ ገራህት፡ ዘትረዝዕ፡ ወአልብከ፡ ዘትሠይጥ፡ ወዘትሣየጥ፡ በአይቴ፡ ትረክብ፡ ዘትውሀብ፡
+                           ለነዳይ።</l>
+                        <l n="5">ወይቤሎ፡ ነዳይ፡ አነኒ፡ ወብእሲትየ፡ ሶበ፡ ንጼውዕ፡ ስመ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ይውህበነ፡ ኃይለ፡ ወበረከተ፡ ወንሰርሕ፡ በእደዊነ፡ ብዙኅ፡ ስራሐ፡
+                           ወይትባረክ፡ ቦቱ፡ ግብረ፡ እደዊነ፡ ወበጊዜሃ፡ ተኀፍረ፡ ውእቱ፡ ዕቡይ፡ ባዕል፡ ወአርመመ።</l>
+                     </ab>
+                  </div>
+                     <div type="textpart" subtype="explicit">
+                        <ab>
+                           <l n="36">ወአነ፡ አቡክሙ፡ ዮሐንስ፡ ጳጳስ፡ ዘኢትዮጵያ፡ ወአንትሙ፡ ደቂቅየ፡ ወሕዝብየ፡ ዘወሀበኒ፡ እግዚአብሔር፡ ሰአሉ፡ ወጸልዩ፡ ከመ፡ ንርከብ፡ ሞገሰ፡ ወሣህለ፡
+                              ወምሕረተ፡ በቅድሜሁ፡ ለመፍቀሬ፡ ሰብእ፡ እግዚአብሔር፡ በጸሎቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወበትንብልናሁ፡ ለቅዱስ፡ ገብርኤል፡ አብሣሬ፡ ትስብእት፡
+                              ወበስእለታ፡ ለእግዝእትነ፡ ማርያም፡ ወላዲተ፡ አምላክ፡ ወበጸሎቱ፡ ለዮሐንስ፡ መጥምቅ፡ ወበጸሎቶሙ፡ ለጻድቃን፡ ወሰማዕት፡ ወበስእለቶሙ፡ ለአርባዕቱ፡ እንስሳ፡ ወዕሥራ፡
+                              ወአርባዕቱ፡ ካህናተ፡ ሰማይ።</l>
+                           <l n="37">ስብሐት፡ ለአብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ በረከቶሙ፡ ወሀብተ፡ ረድኤቶሙ፡ ለኵሎሙ፡ ቅዱሳን፡ የሀሉ፡ ምስሌነ።</l>
+                           <l n="38">ለዘጸሐፎ፡ ወለዘአጽሐፎ፡ ለዘአንበቦ፡ ወለዘተርጐሞ፡ ወለዘሰምዐ፡ ቃላቲሁ፡ ኅቡረ፡ ይምሐሮሙ፡ እግዚአብሔር፡ በመንግሥተ፡ ሰማያት፡ ለዓለመ፡
+                              ዓለም፡ አሜን።</l>
+                        </ab>
+                     </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleHamle">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ḥamle</foreign> on a man freed from an evil spirit
-                     <!-- This miracle is within the section for Ḥamle in BAVet82, but in the section for Tāḫśāś in BAVet121  -->
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleFreed">
+                  <label xml:lang="en">Miracle on a man freed from an evil spirit</label>
+                  <note>This miracle is attested in the section for Ḥamle in <ref type="mss" corresp="BAVet82"/>, but in the section for Tāḫśāś
+                     in <ref type="mss" corresp="BAVet121"/>, but not attested in <ref type="mss" corresp="BMLacq776"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                  <ab>
+                     <l n="1">ተአምሪሁ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘሥዑል፡ በነደ፡ እሳት፡ ለዋሕድ፡ ሐራሁ፡ ዘልዑል፡ ማዕርጊሁ፡ ሙሓዘ፡ ቅዳሴ፡ ከናፍሪሁ፡
+                        ቀለምጺጸ፡ እሳት፡ ዘይነጥር፡ እምአፉሁ፡ አፍሓመ፡ መብረቅ፡ ሙጣሔሁ፡ ወነበልባል፡ ርሱን፡ አልባሲሁ፡ ሰይፈ፡ ሥላሴ፡ እኁዝ፡ በእዴሁ፡ በዘቦቱ፡ ይትዐጸዱ፡ ግሙናነ፡ መንፈስ፡
+                        ሠራዊተ፡ ቤልሖር፡ አጋንንቲሁ።</l>
+                     <l n="2">ወለነኒ፡ ለኵልነ፡ ውሉደ፡ ጥምቀት፡ እለ፡ አመነ፡ በትንብልናሁ፡ ይትማሕፀነነ፡ ኀቤሁ፡ ወይትኖልወነ፡ ምስለ፡ እሊአሁ፡ የሐውጽነ፡ ለለ፡ ጽባሑ፡ ወይባርከነ፡
+                        ሰፊሖ፡ እዴሁ፡ ወይሰውረነ፡ በወልታ፡ ትንብልናሁ፡ ከመ፡ ኢይንድፉነ፡ ለጸላኢ፡ አሕፃሁ፡ ወይክድነነ፡ በጸላሎተ፡ ክነፊሁ፡ ከመ፡ ንድኀን፡ ለዓለም፡ እምእከያቲሁ፡ እምይእዜ፡
+                        ወእስከ፡ ነፍስ፡ ደኃሪሁ፡ ወበኵሉ፡ አዝማን፡ ወዓመታቲሁ፡ ወፈድፋደሰ፡ ለጸሐፌ፡ ተአምሪሁ፡ ይክድኖ፡ በጽላሎተ፡ ክነፊሁ፡ ለዓለመ፡ ዓለም፡ እሜን።</l>
+                     <l n="3">ተብህለ፡ ከመ፡ ሀሎ፡ አሐዱ፡ ብእሲ፡ ክርስቲያናዊ፡ ወኮነ፡ በአሐቲ፡ ሀገር፡ እመዋዕል፡ አመ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ እንዘ፡ ሀሎ፡
+                        አብ፡ ኤጲስቆጶስ፡ ምስለ፡ ካህናት፡ ወዲያቆናት፡ ውስተ፡ ቤተ፡ ክርስቲያን፡ በጊዜ፡ ቍርባን፡ ወሕዝብኒ፡ ውኁዳን፡ እምክርስቲያን፡ ቅዉማን፡ በአፍአ፡ በጊዜ፡ ቅዳሴ፡ ለተመጥዎ፡
+                        ቍርባን፡ እንዘ፡ ከመ፡ ዝ፡ ሀለዉ፡ በከመ፡ ሥርዐተ፡ ሕግ፡ ዘልማድ፡ ወሶበ፡ በጽሐ፡ ኀበ፡ ዘይትነበብ፡ ቃለ፡ ወንጌል፡ መንግሥቱ፡ ለወልድ፡ ዋሕድ፡ መጽአ፡ ሶቤሃ፡ ብእሲ፡ ዘቦቱ፡ 
+                        መንፈስ፡ ርኵስ፡ ዘነበረ፡ እምትካት፡ እንዘ፡ ይትኴነን፡ በሥቃይ፡ ወደዌ፡ ዕፁብ፡ ብዙኀ፡ እምአጋንንት፡ እኩያን፡ ወቦአ፡ ውስተ፡ ቤተ፡ ክርስቲያን፡ እንዘ፡ ሀለዉ፡ ከመ፡ ዝ፡ ወኵሉ፡
+                        ሕዝብ፡ ይኔጽርዎ፡ ዐውየወ፡ ወከልሐ፡ በዐቢይ፡ ቃል፡ እንዘ፡ ይብል፡ ናሁ፡ ሰደድከኒ፡ ወአውፃእከኒ፡ እማኅደርየ፡ ወሀሎኩ፡ እንዘ፡ አንጌጊ፡ እስከ፡ ይእዜ፡ ምስለ፡ ኵሎሙ፡ 
+                        አብያጽየ፡ ኀጢእየ፡ ምዕራፈ፡ ኅበ፡ አአቱ፡ ወአኀድር፡ ኦ፡ ሊቀ፡ መላእክት፡ አይቴኑ፡ አሐውር፡ እመንፈስከ፡ ወአይቴ፡ እጐይይ፡ እምቅድመ፡ ገጽከ፡ ወአልቦ፡ ኀበ፡ ናመሥጥ፡
+                        እምእዴከ፡ ናሁ፡ ሰደድከነ፡ እምኵለሄ፡ እምታሕተ፡ ሰማይ፡ ወምድር፡ ኀበ፡ ተሰምየ፡ ስምከ፡ ውኀበ፡ ተገብረ፡ ተዝካርከ፡ ወኀበ፡ ተሐንጸ፡ መርጡልከ፡ ወቤተ፡ ክርስቲያንከ፡
+                        በውስተ፡ ኵሉ፡ ኀጣእነ፡ እንከ፡ ምብያተ፡ ወዘንተ፡ እንዘ፡ ይብል፡ በልዑል፡ ቃል፡ ውእቱ፡ መንፈስ፡ ርኩስ፡ በቅድመ፡ ጉባኤ፡ ቤተ፡ ክርስቲያን።</l>
+                  </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="8">ወለነኒ፡ ለኵልነ፡ እለ፡ አመነ፡ በጸሎተ፡ ዚኣሁ፡ ወስእለተ፡ አፉሁ፡ በትንብልናሁ፡ ያድኅነነ፡ እምስቴማ፡ ወእምኣጋንንቲሁ፡ ወይፈውሰነ፡ እምደዌ፡ ነፍስነ፡
+                           ወሥጋነ፡ ወድዮ፡ ዲበ፡ ቍስልነ፡ ጥዒና፡ ቅዳሴሁ፡ ከመ፡ ንሕየው፡ በጸጋሁ፡ ወያብዝኅ፡ ስኢለ፡ በእንቲአነ፡ ምስለ፡ 
+                           ኵ<choice resp="CH"><sic>ል</sic><corr>ሎ</corr></choice>ሙ፡ አብያጺሁ፡ አርእስተ፡ እሳት፡ ኪሩባውያን፡ መብረቀ፡ ስብሐት፡ እለ፡
+                           ይትሞጥሑ፡ ይነፍንፍ፡ ዲቤነ፡ ጠለ፡ ሣህል፡ ዘምሉዕ፡ ረባሑ፡ እምኀበ፡ መሓሪ፡ ዘአርያም፡ ጽሩሑ፡ ዘኢይትዐወቅ፡ ጥንተ፡ ክዋኔሁ፡ ዘኅቡእ፡ ህላዌሁ፡ ወኢያርኅቀነ፡ እምኔሁ፡
+                           ምሕረተ፡ ዚአሁ፡ ወፈድፋደሰ፡ ለዘያነብብ፡ ተአምራቲሁ፡ ይኩኖ፡ ረድኤተ፡ ተ<sic>ል</sic>ንብልናሁ፡ ወይጸልሎ፡ በአክናፊሁ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeHamle">
-                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Ḥamle</foreign> on St Michael's intervention against King Sennacherib 
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeSanakrem">
+                  <label xml:lang="en">Commemorative notice on St Michael's intervention against King Sennacherib</label>
+                  <listRelation>
+                     <relation name="ecrm:P129_is_about" active="LIT1295Dersan#CommemorativeSanakrem" passive="PRS8762Sennache"/>
+                     <relation name="ecrm:P129_is_about" active="LIT1295Dersan#CommemorativeSanakrem" passive="PRS5330Hezekiah"/>
+                  </listRelation>
+                  <ab>
+                     <l n="1">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለሐምሌ፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡
+                        እስመ፡ በዛቲ፡ ዕለት፡ ፈነዎ፡ እግዚአብሔር፡ ኀበ፡ ትዕይንቱ፡ ለ<persName ref="PRS8762Sennache">ሰናክሬም፡</persName> ንጉሠ፡ ፋርስ፡ ወቀተለ፡ 
+                        እምትዕይንቱ፡ ዐሠርተ፡ ወሰመንተ፡ እልፈ፡ ወሃምሳ፡ ምዕተ፡ ሶበ፡ ዐገታ፡ ለ<placeName ref="LOC3957Jerusa">ኢየሩሳሌም።</placeName></l>
+                     <l n="2">ወፈነወ፡ <persName ref="PRS8762Sennache">ሰናክሬም፡</persName> ላእካነ፡ ኀበ፡ 
+                        <persName ref="PRS5330Hezekiah">ሕዝቅያስ፡</persName> ንጉሥ፡ እንዘ፡ ይፀርፍ፡ ላዕሌሁ፡ ወላዕለ፡ እግዚአብሔር፡ አምላኩ፡ ወይቤሎሙ፡ መኑ፡ 
+                        ያድኅነክሙ፡ እምእዴየ።</l>
+                     <l n="3">ውኀዘነ፡ <persName ref="PRS5330Hezekiah">ሕዝቅያስ፡</persName> ንጉሠ፡ ይሁዳ፡ እንዘ፡ ይሰምዕ፡ ፅርፈተ፡ ላዕሌሁ፡ ወላዕለ፡
+                        እግዚአብሔር፡ አምላኩ፡ ወለብሰ፡ ሠቀ፡ ጸጕር፡ ወቦአ፡ ቤተ፡ እግዚአብሔር፡ ጸለየ፡ ወሰአለ፡ ወሰገደ፡ ውስተ፡ ቤተ፡ መቅደሱ፡ ለእግዚአብሔር፡ ከመ፡ ያድኅን፡ ሕዝቦ፡ ወሀገሮ፡
+                        <placeName ref="LOC3957Jerusa">ኢየሩሳሌም።</placeName>ሃ፡ ወተወከፈ፡ እግዚአብሔር፡ ስእለቶ፡ ወፈነዎ፡ እግዚአብሔር፡ ለሚካኤል፡ ሊቀ፡
+                        መላእክት፡ ኀበ፡ ትዕይንቱ፡ ለሰናክሬም፡ ንጉሠ፡ ፋርስ፡ ወገብረ፡ ተአምረ፡ ዐቢየ፡ ወአድኃና፡ 
+                        ለ<placeName ref="LOC3957Jerusa">ኢየሩሳሌም፡</placeName> ወለኵሎሙ፡ ሕዝበ፡ ይሁዳ።</l>
+                     <l n="4">ወበእንተ፡ ዝ፡ አዘዙነ፡ መምህራነ፡ ቤተ፡ ክርስቲያን፡ ከመ፡ ንግበር፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ለለ፡ ኵሉ፡ አውራኅ፡ በከመ፡
+                        ዛቲ፡ ዕለት፡ ትንብልናሁ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                  </ab>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamHamle">
-                  <label xml:lang="en">
-                     <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Ḥamle</foreign>
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamHelper">
+                  <label xml:lang="en">Salām to you helper of the holy and martyrs</label>
+                  <ab>ሰላም፡ ለከ፡ ረዳኤ፡ ቅዱሳን፡ ሰማዕት፡ ወሐዋጼ፡ ጻድቃን፡ ዕደው፡ ዘውስተ፡ ጻማዕት፡ ሚካኤል፡ ፀሓይ፡ ጥዒና፡ ቈሪራን፡ አዝርዕት፡ ያንቅሀኒ፡ ወያንሥ፡ አኒ፡ እምዳግም፡ ሞት፡ 
+                     ውስተ፡ ክነፊከ፡ ዘሀሎ፡ ሕይወት።</ab>
                </div>
             </div>
            
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Nahase">
-               <label xml:lang="en">
-                  <foreign xml:lang="gez">Naḥase</foreign>
-               </label>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyNahase">
-                  <label xml:lang="en">Anonymous homily for <foreign xml:lang="gez">Naḥase</foreign>
-                  </label>
+               <label xml:lang="en">Naḥase</label>
+               <div type="textpart" subtype="part" xml:id="AdmonitionNahase">
+                  <label>Admonition for Naḥase</label>
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ድርሳን፡ ዘቅዱስ፡ ወክቡር፡ ወኃያል፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ ነሐሴ። 
+                     ትንብልናሁ፡ የሀሉ፡ ምስሌነ፡ ዓለመ፡ ዓለም፡ አሜን።</ab>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleNahase">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Naḥase</foreign> on the healing of a blind man
-                     <!-- This miracle is transmitted in the section for Naḥase in BAVet82, but in the section for Ṭǝqǝmt in BAVet121  -->
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyDavid">
+                  <label xml:lang="en">Homily on Michaels deeds to David, Lamech, Sem and Christ</label>
+                  <note>Anonymous homily referring to David's sayings on St Michael and St Michael's deeds to Lamech, Sem and Christ.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        <l n="1">በዘይትነገር፡ ዕበዩ፡ ወክብሩ፡ ወትሕትናሁ፡ ወፍቅሩ፡ እስመ፡ በትሕትና፡ ረከበ፡ ልዕልና።</l>
+                        <l n="2">ዝ፡ ውእቱ፡ ሚካኤል፡ ዘነፅኆ፡ ለዕቡየ፡ ኅሊና፡ ለሢመቱ፡ ዘመነና፡ ወዘአፍቀረ፡ ሙስና።</l>
+                        <l n="3">ዝ፡ ውእቱ፡ ሚካኤል፡ ዘበእንቲኣሁ፡ ነገረ፡ እግዚአብሔር፡ እንዘ፡ ይብል፡ አዕብይዎ፡ ኵልክሙ፡ መላእክት፡ ለሚካኤል፡ ክቡር፡ ዐቃቤ፡ ቃልየ፡ ወገባሬ፡ 
+                           ፈቃድየ፡ ወትእዛዝየ፡ ወመልአከ፡ ምክርየ፡ ወኪዳንየ፡ ዘወሀብክዎ፡ እምታሕተ፡ ሥልጣንየ።</l>
+                        <l n="4">ወዳዊትኒ፡ ይቤ፡ በእንተ፡ ዝንቱ፡ መልአክ፡ ይትዐየን፡ መልአከ፡ እግዚአብሔር፡ ዐውዶሙ፡ ለእለ፡ ይፈርህዎ፡ ወያድኅኖሙ።</l>
+                     </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="59">ወይቤሎሙ፡ ለእመ፡ ኢርኢክምዋ፡ ለሶስና፡ እንዘ፡ ትኤብስ፡ በሥጋሃ፡ ወለእመ፡ ኮነ፡ ነገርክሙ፡ ሐሰተ፡ ይሥጥቅሙ፡ እግዚአብሔር፡ አምላክነ፡ ከመ፡
+                           እርጋሄ፡ ወሶቤሃ፡ ኮኑ፡ ሠለስቱ፡ በበ፡ ክልኤቱ፡ ክፍል፡ ዘእንበለ፡ ማሕጼ፡ ወይእተ፡ ጊዜ፡ አእምርዎ፡ ለሚካኤል፡ ወበእንተ፡ ዝነገር፡ ሐርተሙ፡ ወሀጕሉ፡ ነፍሶሙ።</l>
+                        <l n="60">ወሶበ፡ ርእየ፡ አቡሃ፡ ዘንተ፡ ነገረ፡ ተንሥአ፡ ምስለ፡ ዐበይት፡ ወሰገዱ፡ ለሶስና፡ ወአንገሥዋ፡ ለሶስና፡ ዲቤሆሙ፡ ለሠለስቱ፡ ረበናት፡ እስመ፡ ክልኤ፡ ረባሐ፡
+                           ረከበት፡ ዘበምድር፡ ትፍሥሕተ፡ ወዘበሰማያት፡ መንግሥተ፡ እስመ፡ በጸሎተ፡ ሚካኤል፡ ይድኅን፡ ኵሉ፡ ዓለም።</l>
+                        <l n="61">ጸሎቱ፡ ወበረከቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወአስተብቍዖታ፡ ለእግዝእትነ፡ ማርያም፡ ቅድስት፡ ወትንብልናሃ፡ ለብፅዕት፡ ሶስና፡ የሀሉ፡ ምስሌነ፡
+                           ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeNahase">
-                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Naḥase</foreign> on St Michael's appearance to King Constantine
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyJerusalem">
+                  <label xml:lang="en">Homily</label>
+                  <note>This homily attested in <ref type="mss" corresp="BMLacq776"/> in the section of Naḥase, which is not included in the 
+                     EOTC edition.</note>
+                  <div type="textpart" subtype="incipit">
+                  <ab>ዘነሐሴ፡ በስመ፡  አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ፡ ድርሳን፡ ዘቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ፡ አመ፡ ፲ወ፪፡ ለነሐሴ፡ ኃይለ፡ ጸሎቱ፡ 
+                     ይባልሖነ፡ እምሕማመ፡ ዘልጋሴ፡ ወይሰውረነ፡ እም፡ ዓለም፡ ድምስሱ፡ በረከቱ፡ ወሀብተ፡ ረድኤቱ፡ ይኩነነ፡ ቅዳሴ፡ ስዓ፡ ዓለ፡ ዓ፡ ዛቲ፡ መጽሐፍ፡ ዘወፅአት፡ እት፡ እም፡ 
+                     <placeName ref="LOC3957Jerusa">እየሩሳሌም፡</placeName> ከመ፡ ትንግር፡ እብዮሙ፡ ለቅዱሳን፡ ሚካኤ፡ ወገብርኤል፡ ሱራፌ፡ ወኪሩቤል፡ 
+                     ፬እንስስ፡ ፩ወ፬፡ ካህናት፡ ሰማይ፡ ዘማርያን፡ በሰብሐት፡ በመንፈሰ፡ ቅዱስ፡ ፍጹማን፡ በርእቶሙ፡ ወበበ፡ ሚመት፡ ወአቀብያን፡ በሃይማኖት፡ ብሩሃን፡</ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>ወሰገዱ፡ ላቲ፡ ወ፪ተ፡ ረበኃ፡ ረብሐት፡ ዘበምድረ፡ መንገሥ፡ ት፡ ወዘበሰማይ፡ ገነት፡ በስእለቱ፡ ለቅዱስ፡ ሚካኤል፡ ይድኅን፡ ኵሉ፡ ፍጥረት፡ ወአንትሙኒ፡ ሀቡ፡ ምጽዋተ፡ 
+                        ለነዳያን፡ ወለምስኪናን፡ መእንተ፡ ስሙ፡ እንዘ፡ ትትአመኑ፡ ኪያሁ፡ አስትዩ፡ ጹሙአ፡ ወአልብሱ፡ እሩቀ፡ ወእብልዑ፡ ርኁበ፡ ከመ፡ ያኀብክሙ፡ ክርስቶስ፡ ኅብስት፡ ሕይወት፡ 
+                        በሰማያት፡ ሎቱ፡ ስብሐት፡ ለዓለመ፡ ዓለም።</ab>
+                  </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleBlind">
+                  <label xml:lang="en">Miracle on the healing of a blind man</label>
+                  <note>This miracle is transmitted in the section for Naḥase in <ref type="mss" corresp="BAVet82 BMLacq776"/>, but in the 
+                     section for Ṭǝqǝmt in <ref type="mss" corresp="BAVet121"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        <l n="1">ተአምሪሁ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ሥዑል፡ በነድ፡ ዘስብሐቲሁ፡ ፍድፉድ፡ ባሕረ፡ ቅዳሴሁ፡ ዘይደምፅ፡ ከመ፡ ነጐድጓድ፡ 
+                           ዘይቀውም፡ ወትረ፡ ቅድመ፡ ሠረገላ፡ ልዑል፡ ወመርዕድ፡ ወይስእል፡ ምሕረተ፡ ለኵሉ፡ ትውልድ፡ በብረኪሁ፡ እንዘ፡ ይሰግድ፡ ይኩነነ፡ ኀይለ፡ ጸሎቱ፡ ባላሔ፡ እምብድብድ፡
+                           ወእምገጽነ፡ ዘይረውድ፡ ወስብሐቲሁ፡ ብዑድ፡ ወዑጻፌሁ፡ መብረቅ፡ ወፀዓድ፡ ዒድ፡ ጕድበ፡ ስእለቱ፡ ይግዝሞሙ፡ ለሠራዊተ፡ ቤልሖር፡ ጽልሙታን፡ ወእኩያን፡ አጕናድ፡
+                           ወየሐውጸነ፡ ለኵልነ፡ ደቂቀ፡ ዛቲ፡ ዐጸድ፡ ከመ፡ ኢንትኀፈር፡ በግርምት፡ ዐውድ፡ ይባርከነ፡ በሰፊሐ፡ እድ፡ እምይእዜ፡ ወእስከ፡ ለዓለም፡ በኵሉ፡ መዋዕል፡ ወበኵሉ፡ ትውልድ፡
+                           ይባልሐነ፡ እምዘሲኦል፡ ሞገድ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                        <l n="2">ተብህለ፡ ከመ፡ ሀሎ፡ አሐዱ፡ ብእሲ፡ ክርስቲያናዊ፡ በውስተ፡ አሐቲ፡ ሀገር፡ ዘይደዊደዌ፡ ዕጹበ፡ ወዘዖራ፡ ክልኤ፡ አዕይንቲሁ፡ ወእንዘ፡ ሀሎ፡ ከመ፡ ዝ፡ በጽሐ፡
+                           ዕድሜ፡ ዕለተ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘውእቱ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ ኅዳር።</l>
+                     </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="13">ወውእቱሰ፡ ብእሲ፡ ዘሐይወ፡ ነበረ፡ እንዘ፡ ይትለአክ፡ ለቤተ፡ ክርስቲያኑ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ እስከ፡ አመ፡ አዕረፈ፡ ወቦአ፡ ውስተ፡ 
+                           መንግሥተ፡ ሰማያት፡ ብትንብልናሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት።</l>
+                        <l n="14">ወለነኒ፡ ለኵልነ፡ ሕዝበ፡ ክርስቲያን፡ ይዕቀበነ፡ እምተቃርኖቱ፡ ለሰይጣን፡ ወፈድፋደሰ፡ ለፍቁሩ፡ ዕገሌ፡ ይዕቀቦ፡ ወያድኅኖ፡ ወትረ፡ ለዓለመ፡ ዓለም፡
+                           አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamNahase">
-                  <label xml:lang="en">
-                     <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Naḥase</foreign>
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeConstantine">
+                  <label xml:lang="en">Commemorative notice on Michael's appearance to king Constantine</label>
+                  <ab>
+                     <l n="1">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለነሐሴ፡ በዛቲ፡ ዕለት፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡
+                        መላእክት። እስመ፡ በዛቲ፡ ዕለት፡ አስተርአዮ፡ ለ<persName ref="PRS3175Constant">ቈስጠንጢኖስ፡</persName> ንጉሥ፡ ወጻድቅ፡ በሀገረ፡ ሮሜ፡ 
+                        ወወሀቦ፡ ኀይለ፡ ላዕለ፡ ኵሉ፡ ጸላእቱ፡ ወሞኦሙ፡ ወጸንዐት፡ መንግሥቱ፡ ወአንኀለ፡ አብያተ፡ ክርስቲያናት፡ ወአሠርገዎሙ፡ በኵሉ፡ ሠርጕ።</l>
+                     <l n="2">ወበእንተ፡ ዝ፡ አዘዙነ፡ መምህራነ፡ ቤተ፡ ክርስቲያን፡ ከመ፡ ንግበር፡ በዓሉ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለለ፡ ወርኁ፡ 
+                        ትንብልናሁ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                  </ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamTestament">
+                  <label xml:lang="en">Salām to you, messenger of the Testament and Command of the Most High God</label>
+                  <note>Attested in <ref type="mss" corresp="BAVet82"/> but not in <ref type="mss" corresp="BMLacq776"/>.</note>
+                  <ab>ሰላም፡ ለከ፡ መልአከ፡ ኪዳኑ፡ ወምክሩ፡ ለእግዚአብሔር፡ ልዑል፡ ዘግሩም፡ ግብሩ፡ በረድኤትከ፡ ረዋጺ፡ ዘአሠረ፡ ነፋስ፡ አሠሩ፡ ሶበ፡ ላዕሌየ፡ እኩየ፡ መከሩ፡ ጉባኤ፡ ፀርየ፡ 
+                     ሚካኤል፡ ዝሩ።</ab>
                </div>
             </div>
-            
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Maskaram">
-               <label xml:lang="en">
-                  <foreign xml:lang="gez">Maskaram</foreign>
-               </label>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyMaskaram">
-                  <label xml:lang="en">Anonymous homily for <foreign xml:lang="gez">Maskaram</foreign>
-                  </label>
+               <label xml:lang="en">Maskaram</label>
+               <div type="textpart" subtype="part" xml:id="AdmonitionMaskaram">
+                  <label>Admonition for Maskaram</label>
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ድርሳን፡ ዘቅዱስ፡ ወክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለመስከረም። ጸሎቱ፡
+                     ወበረከቱ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን። </ab>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleMaskaram">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Maskaram</foreign> on Dorotheus and Theopista, who found a treasure in the belly of a fish
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyLordship">
+                  <label xml:lang="en">Homily on the Lordship of God</label>
+                  <note>Erroneously attributed to Naḥāse in <ref type="mss" corresp="BMLacq776"/>, but in other manuscripts either 
+                     attributed to Maskaram as it is the case in <ref type="mss" corresp="BAVet82"/> or to Ṭǝqǝmt.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        <l n="1">ይቤ፡ እግዚአብሔር፡ ኢታመልኩ፡ ባዕደ፡ አምላከ፡ ዘእንበሌየ፡ ወካዕበ፡ ይቤ፡ ሰማይ፡ ወምድር፡ በትእዛዝየ፡ ቆሙ፡ ወኵሉ፡ ፍጥረት፡ በእዴየ፡ ተፈጥሩ።</l>
+                        <l n="2">ወለእመ፡ አምለክሙ፡ ዘእንበሌየ፡ አድባረ፡ ወአውግረ፡ ዕፀወ፡ ወአእባነ፡ ባሕረ፡ ወአፍላገ፡ ውእቶሙሰ፡ ኢይክሉ፡ አድኅኖተክሙ፡ እስመ፡ ኢይሰምዑ፡
+                           በእዝነ፡ ልቡና፡ ወበአእምሮ፡ ኅሊና፡ እመ፡ አኀዝኩክሙ፡ በመዓትየ፡ አልብክሙ፡ ሙፃእ፡ ወምጕያይ፡ እምእዴየ።</l>
+                        <l n="3">ኢሰማዕክሙኑ፡ ዘከመ፡ ኮነ፡ ባዕል፡ ንጉሥ፡ ዘያመልክ፡ ባዕዳነ፡ አማልክተ፡ ወይቤልዎ፡ አማልክቲሁ፡ ናሁ፡ በጽሐ፡ ዕለተ፡ ሞትከ፡ እምዮም፡ እስከ፡ ሰሙን፡
+                           ዕለት፡ ወጸውዕ፡ ነሀብተ፡ ይግበሩ፡ ለከ፡ ሣጹነ፡ ከመ፡ ትትኀባእ፡ ውስቴቱ።</l>
+                     </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="26">ወአንትሙሂ፡ ከማሆሙ፡ ትከውኑ፡ ምዉታነ፡ ወተኀድጉ፡ ንብረተ፡ ዝንቱ፡ ዓለም፡ እስከ፡ ይእዜ፡ ኢያእመርክሙ፡ ዘእንበለ፡ ዘተደለውክሙ፡ 
+                           ወተፈጋዕክሙ፡ ተአመንክሙ፡ ንብረተ፡ ዝ፡ ዓለም፡ ኀላፊ።</l>
+                        <l n="27">አንትሙሰ፡ አኃውየ፡ ኢትፍርሁ፡ ሞተ፡ ዘበምድር፡ አላ፡ ፍርሁ፡ ዘበሰማያት፡ ኀበ፡ ሀሎ፡ ኵነኔ፡ ዘነደ፡ እሳት፡ እንተ፡ አልባቲ፡ ተፍጻሜት፡ እስከ፡ 
+                           ለዓለም።</l>
+                        <l n="28">ይእዜኒ፡ ሀቡ፡ ምጽዋተ፡ ለእመ፡ ብክሙ፡ ብዙኀ፡ ወለእመ፡ አልብክሙ፡ ኅዳጠ፡ በእንተ፡ ስመ፡ ቅዱስ፡ ሚካኤል፡ ወገብርኤል፡ ወይከውኑክሙ፡
+                           ረዳእያነ፡ አመ፡ ዕለተ፡ ሞትክሙ፡ በቅድመ፡ እግዚአብሔር፡ ዘሎቱ፡ ስብሐት፡ እስከ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeMaskaram">
-                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Maskaram</foreign> on St Michael's appearance to Isaiah
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleBasil">
+                  <label xml:lang="en">Miracle on Basil</label>
+                  <div type="textpart" subtype="incipit">
+                     <ab>
+                        <l n="1">ተአምሪሁ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘከመ፡ ረድኦ፡ 
+                           ለ<persName ref="PRS2548Basilide">ፋሲለደስ፡</persName> ወዘከመ፡ ዐቀቦ፡ ወጾሮ፡ ዲበ፡ ክነፊሁ፡ ብርሃናውያን፡ በረከቱ፡ የሀሉ፡ ምስሌነ፡ 
+                           ለዓለመ፡ ዓለም፡ አሜን።</l>
+                        <l n="2">ወኮነ፡ ፋሲለደስ፡ ይተግህ፡ ወይለጼሊ፡ በሌሊት፡ በድንጋፄ፡ ዐቢይ፡ ወገዓር፡ በውስተ፡ ልቡ፡ ወይፈቱ፡ ከመ፡ ይኩን፡ ሰማዕተ።</l>
+                        <l n="3">ወናሁ፡ ሊቀ፡ መላእክት፡ ሚካኤል፡ አስተርአዮ፡ ሎቱ፡ በንዋም፡ በገጽ፡ ዘምሉዕ፡ ፍሥሓ፡ እንዘ፡ ይበል፡ ሰላም፡ ለከ፡ ኦ፡ 
+                           <persName ref="PRS2548Basilide">ፋሲለደስ፡</persName> ሐራሁ፡ ለክርስቶስ፡ ተፈሣሕ፡ እስመ፡ ተጽሐፈ፡ ስምከ፡ ውስተ፡ 
+                           <placeName ref="LOC3957Jerusa">ኢየሩሳሌም።</placeName>
+                           ተጽፋልና አለው። </l>
+                        <l n="4">ተፈሣሕ፡ ኦ፡ <persName ref="PRS2548Basilide">ፋሲለደስ፡</persName> እስመ፡ በጽሐ፡ ምጽዋትከ፡ ኀበ፡ መንበሩ፡ 
+                           ለእግዚአብሔር።</l>
+                     </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="21">ወሶቤሃ፡ ጾር፡ ወአግብኦ፡ ውስተ፡ ቤቱ፡ ወኮነ፡ ሥጋሁ፡ ብሩሀ፡ ወጼናሁ፡ ምዑዘ፡ ከመ፡ ዕፍረት፡ ወተአምኆ፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡
+                           ለቅዱስ፡ <persName ref="PRS2548Basilide">ፋሲለደስ፡</persName> ወመልኦ፡ ኀይለ፡ ወፍሥሓ፡ ወወሀቦ፡ ሰላመ፡ ወዐርገ፡ ወስተ፡ ሰማያት፡
+                           በዐቢይ፡ ስብሐት፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት።</l>
+                        <l n="22">ትንብልናሁ፡ ወአስተብቍዖቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamMaskaram">
-                  <label xml:lang="en">
-                     <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Maskaram</foreign>
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleDorotheus">
+                  <label xml:lang="en">Miracle on Dorotheus and Theopista, who found a treasure in the belly of a fish</label>
+                  <note>Another miracle attested in <ref type="mss" corresp="BAVet82"/> in the section for Maskaram.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>ተአምሪሁ፡ <gap reason="omitted" extent="unknown" resp="PRS4805Grebaut PRS9530Tisseran"/> ተብህለ፡ ከመ፡ ሀሎ፡ ፩ብእሲ፡ 
+                        ክርስቲያናዊ፡ በአሐቲ፡ ሀገር፡ <sic>እምአህጕራተ፡</sic> ግብፅ፡ ዘትሰመይ፡ እስክንድርያ፨ 
+                        <choice><sic>ዘከመ፡</sic><corr resp="PRS4805Grebaut PRS9530Tisseran">ዘስሙ፡</corr></choice> ዱራታኦስ፡ ወስመ፡ ብእሲቱ፡ 
+                        ቴዎብስታ፡ ወ፪ኤሆሙ፡ ፈራህያነ፡ እግዚአብሔር፡ <gap reason="ellipsis"/>ወነበሩ፨ እንዘ፡ ይትፌሥሑ፡ እስከ፡ ዕለተ፡ ሞቶሙ፡ ወሶበ፡ አዕረፉ፡ መጽአ፡ ቅዱስ፡ 
+                        ሚካኤል፡ ሊቀ፡ መላእክት፨ ኀቤሆሙ፡ ወተቀበለ፡ ነፍሶሙ፡ ወአዕረጎሙ፡ ውስተ፡ ሰማያት፡ በፈሥሐ፡ ዘኢየኃልቅ፨ ትንብልናሁ፡ </ab>
+                  </div>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeIsaiah">
+                  <label xml:lang="en">Commemorative notice on Michael's appearance to Isaiah</label>
+                  <ab>
+                     <l n="1">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለመስከረም፡ በዛቲ፡ ዕለት፡ ተዝካረ፡ በዓሉ፡ ለመልክ፡ ክቡር፡
+                        ሚካኤል፡ ሊቀ፡ መላእክት፡ እስመ፡ በዛቲ፡ ዕለት፡ ፈነዎ፡ እግዚአብሔር፡ ሎቱ፡ ስብሐት፡ ኀበ፡ <persName ref="PRS5584Isaiah">ኢሰይይስ፡</persName>
+                        ነቢይ፡ ወልደ፡ አሞፅ፡ ወተሣሀለ፡ ላዕሌሁ፡ ወመሐሮ፡ እምድኅረ፡ ተምዖ።</l>
+                     <l n="2">ወእምድኅረ፡ መሐሮ፡ ነበረ፡ ዕሥራ፡ ወሰመንተ፡ ዓመተ፡ ወአዘዞ፡ ከመ፡ ይሑር፡ ኀበ፡ 
+                        <persName ref="PRS5330Hezekiah">ሕዝቅያስ፡</persName> ንጉሥ፡ ወይዜንዎ፡ ከመ፡ እግዚአብሔር፡ ፈወሶ፡ 
+                        እምደዌሁ፡ ወወሰኮ፡ ዐሠርተ፡ ወኀመስተ፡ ዓመተ፡ ዲበ፡ መዋዕሊሁ፡ እስከ፡ አውሰበ፡ ብእሲተ፡ ወወለደ፡ ምናሴሃ፡ ነቢየ።</l>
+                     <l n="3">ወበእንተ፡ ዝ፡ አዘዙነ፡ አበዊነ፡ መምህራነ፡ ቤተ፡ ክርስቲያን፡ ከመ፡ ንግበር፡ ተዝካሮ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ አመ፡ ዐሡሩ፡
+                        ወሰኑዩ፡ ለለ፡ ኵሉ፡ አውራኅ።</l>
+                     <l n="4">ጸሎቱ፡ ወበረከቱ፡ ወትንብልናሁ፡ አስተበቍዖቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                  </ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamPedestal">
+                  <label xml:lang="en">Salām to your pedestal</label>
+                  <ab>ሰላም፡ ለምቅዋምከ፡ ዘልዑል፡ ማዕረጋ፡ እምቅዋመ፡ አእላፍ፡ እንግልጋ፡ ሚካኤል፡ መንፈስ፡ ዘእንበለ፡ ሥጋ። ታድኅን፡ ዘተመንደቡ፡ ለማዕበለ፡ ባሕር፡ እምፁጋ፡ ወለእለ፡ 
+                     በበድው፡ ካዕበ፡ ትባልሕ፡ በጸጋ።</ab>
                </div>
             </div>
             
@@ -503,48 +1353,215 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <label xml:lang="en">
                   <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
                </label>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyTeqemt">
-                  <label xml:lang="en">Anonymous homily for <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
-                  </label>
+               <div type="textpart" subtype="part">
+                  <label>Admonition for Ṭǝqǝmt</label>
+                  <ab>በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ ድርሳን፡ ዘቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለወርኀ፡ ጥቅምት፡ በበዓሉ፡ ቅድስት፡
+                     ከመ፡ ንዘክር፡ ዕበዮ፡ ወክብሮ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ በሰላመ፡ እግዚአብሔር፡ ጸሎቱ፡ ወበረከቱ፡ ትንብልናሁ፡ ወአስተበቍዖቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡
+                     የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="InvocationTeqemt">
-                  <label xml:lang="en">Rhymed invocation for <foreign xml:lang="gez">Ṭǝqǝmt</foreign> 
-                     <!-- see BAVet82#p1_i1.13.2 -->
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilySoul">
+                  <label xml:lang="en">Homily 'Who did not seek the soul'</label>
+                  <div type="textpart" subtype="incipit">
+                  <ab>  
+                     <l n="1">ዘኢኀሠሠት፡ ነፍስ፡ ዘይትወሐሳ፡ በሕይወታ፡ ኢትረክብ፡ ዋሕሰ፡ በሰማያት፡ አመ፡ ዕለተ፡ ሞታ።</l>
+                     <l n="2">ወከመ፡ ዝ፡ ኮነ፡ አሐዱ፡ ብእሲ፡ ዘቦቱ፡ ብዙኅ፡ ዕዳ፡ ዘይፈዲ፡ ወኀሠሥዎ፡ ማእከለ፡ ዐውድ፡ ወረከብዎ፡ ወአኅዝዎ፡ ወኀጥአ፡ ዘይፈዲ፡ ወዘይትወሐሶ፡ 
+                        ወእኂዞሙ፡ ሞቅሕዎ፡ ወዘበጥዎ፡ ወከልሐ፡ ወስእነ፡ ወኀጥአ፡ ዘይትወሐሶ።</l>
+                     </ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="38">ሃሌ፡ ሉያ፡ ስብሐተ፡ ንፌኑ፡ ለእግዚአብሔር፡ ወአኰቴተ፡ ለመንግሥትከ፡ ንፌኑ፡ አሜን።</l>
+                        <l n="39">ሃሌ፡ ሉያ፡ ለክርስቶስ፡ መድኀኒነ፡ እስከ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleTeqemt">
-                  <label xml:lang="en">Miracle for <foreign xml:lang="gez">Ṭǝqǝmt</foreign> on the healing of the paralytic
-                     <!-- This miracle is transmitted in the section for Ṭǝqǝmt in BAVet82, but in the section for Maggābit in BAVet121  -->
-                  </label>
+               <div type="textpart" subtype="chapter" xml:id="HomilyPaul">
+                  <label>Homily revealed through Paul</label>
+                  <ab>
+                     <l n="1">ወካዕበ፡ ይቤ፡ እግዚአብሔር፡ ለኵሎሙ፡ ሕዝብ፡ በቃለ፡ ጳውሎስ፡ ሐዋርያ፡ ግብረ፡ ዘነገርኩክሙ፡ ኢሰማዕክሙኒ፡ በቃለ፡ ወንጌል፡ ወበኵሉ፡ ድርሳን፡ ወበኵሉ፡
+                        መጻሕፍት፡ አይዳዕኩክሙ፡ ወኢአመንክሙኒ፡ ወይቤ፡ እንከሰ፡ ሑሩ፡ እምኔየ፡ ርጉማን፡ ውስተ፡ እሳት፡ ዘለዓለም፡ ኀበ፡ አልባቲ፡ ሙፃእ፡ ወምጕያይ፡ ወኢተፍጻሜት፡ እስከ፡
+                        ለዓለመ፡ ዓለም።</l>
+                     <l n="2">አባግዕየሰ፡ ቡራካን፡ ወትሑታን፡ ወየዋሃን፡ ንዑ፡ ኀቤየ፡ ቡሩካኑ፡ ለአቡየ፡ ወአነ፡ እውህበክሙ፡ ክብረ፡ ወመንግሥተ፡ ወሞገሰ፡ ዘኢየኀልቅ፡ ወትሄልዉ፡
+                        ምስሌየ፡ በብዙኅ፡ ትፍሥሕት፡ እስመ፡ አይሔሱ፡ ዘወፅአ፡ እምአፉየ፡ ወኢይትዌለጥ፡ ዘነበበ፡ ቃለ፡ ዚ<sic>ኣ</sic>የ፡ እምቅድም፡ እስከ፡ ተፍጻሜተ፡ ዓለም።</l>
+                     <l n="3">ወይእዜኒ፡ አክብርዎሙ፡ ለሚካኤል፡ ወለገብርኤል፡ ለዕሥራ፡ ወአርባዕቱ፡ ካህናተ፡ ሰማይ፡ ወለአርብእቱ፡ እንስሳ፡ ለጻድቃን፡ ወሰማዕታት፡ ወለቅዱሳን፡                        
+                        መላእክት፡ ወለኵሎን፡ ቅዱሳት፡ አንስት፡ ደናግል፡ ወመነኮሳት፡ እምአዳም፡ እስከ፡ ይእዜ፡ እለ፡ አሥመርዎ፡ ለእግዚአብሔር፡ ጸባኦት፡ ወለእግዝእትነ፡ ቅድስት፡ ድንግል፡ 
+                        ማርያም፡ ወላዲተ፡ አምላክ፡ ወላዲተ፡ ሕይወት፡ ወወላዲተ፡ መድኀኒት፡ ከመ፡ ትርከቡ፡ ክብረ፡ ወሕይወተ፡ በሰማያት።</l>
+                     <l n="4">ፈድፋደሰ፡ ጸሎቱ፡ ወበረከቱ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወሊቀ፡ ሐራ፡ ይኩነነ፡ ዘመዊዕ፡ ጌራ፡ ወያብአነ፡ ሀገረ፡ ሕይወት፡ ዐይነ፡ ንስር፡ እንተ፡
+                        ኢነጸራ፡ ነፍሳተ፡ ጻድቃን፡ ኀበ፡ የኀድራ፡ አመ፡ ይሠራዕ፡ ምሳሐ፡ ጽድቅ፡ ለጽዮን፡ በማኅበራ።</l>
+                     <l n="5">ወዓዲ፡ ለዘአጽሐፈ፡ ወለዘጸሐፈ፡ በእዴሁ፡ ለዘአንበበ፡ ወለዘተርጐመ፡ ወለዘሰምዐ፡ በእዝነ፡ መንፈስ፡ ዘንተ፡ መጽሐፈ፡ ተአሚኖ፡ በጥቡዕ፡ ልብ፡ ወበውዑይ፡
+                        ኅሊና፡ በእንተ፡ ፍቅረ፡ ሚካኤል፡ መልአከ፡ ንጽሕ፡ ወቅዳሴ፡ ይኅድር፡ በላዕሌሁ፡ ለዘጽሕቀ፡ እምልቡናሁ፡ ለጽሒፈ፡ ዝንቱ፡ ውዳሴ፡ በረከተ፡ አምላኩ፡ ወረድኤተ፡ መልአኩ፡
+                        በከመ፡ ኀደረ፡ በረከተ፡ ያዕቆብ፡ ላዕለ፡ ኤፍሬም፡ ወምናሴ፡ ለዓለም፡ ዓለም፡ አሜን።</l>
+                  </ab>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeTeqemt">
-                  <label xml:lang="en">Commemorative notice for <foreign xml:lang="gez">Ṭǝqǝmt</foreign> on St Michael's appearance to Samuel
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Invocation">
+                  <label xml:lang="en">Rhymed invocation</label>
+                  <note>Invocation ending in <foreign xml:lang="gez">ራ</foreign>, attested in <ref type="mss" corresp="BAVet82"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                  <ab><l n="1">ወበረከቱ፡ ለሚካኤል፡ ሊቀ፡ ሐራ፡</l> 
+                     <l n="2">ይኩኖሙ፡ ዘመዊዕ፡ ጌራ፡</l>
+                     <l n="3">ወያብኦሙ፡ ሀገረ፡ ንስር፨</l>
+                     <l n="4">እንተ፡ ኢነጸራ፡ ነፍሳተ፡ ጻድቃን፡ ኀበ፡ የኃድራ፡</l>
+                     <l n="5">አመ፡ ይሠራዕ፡ <sic>ምሳሐ፡</sic> ለጽዮን፡ በማኅበራ፤</l></ab> 
+                  </div>
                </div>
-               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamTeqemt">
-                  <label xml:lang="en">
-                     <foreign xml:lang="gez">Salām</foreign> for <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
-                  </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiraclePoor1">
+                  <label xml:lang="en">Miracle of the poor man, who became a rich man</label>
+               <div type="textpart" subtype="incipit">
+                  <ab>
+                     <l n="1">ተአምሪሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ልዑል፡ ወክቡር፡ ለእግዚአብሔር፡ መልአከ፡ ኪዳኑ፡ ዘይቀውም፡ ለኢየሱስ፡ በየማኑ፡ ዘነድ፡ ኪኑ፡
+                        ቀለምጺጸ፡ እሳት፡ ዘይነጥር፡ እምልሳኑ፡ ሰኣሌ፡ ምሕረት፡ ኪያሁ፡ ለእለ፡ ተአመኑ።</l>
+                     <l n="2">ወለነኒ፡ ያድኅነነ፡ እምሰይጣን፡ ወእምአጋንንቲሁ፡ እኩያን፡ ነፍሳተ፡ ኃጥኣን፡ እለ፡ ይትቃረኑ፡ በሕማም፡ ወደዌ፡ ወትረ፡ እለ፡ ይትኴነኑ፡ ወውስተ፡ ገሃነመ፡
+                        እሳት፡ ዘዚአሆሙ፡ እለ፡ ይዴየኑ፡ ወእምሕገ፡ ሃይማኖት፡ ርትዕት፡ እለ፡ አጽነኑ።</l>
+                     <l n="3">ትንብልና፡ ስእለቱ፡ ዲቤነ፡ ይፌኑ፡ ለውሉደ፡ ጥምቀት፡ ኀበ፡ ተጋባእነ፡ ውስተ፡ ኵርጓኔሆሙ፡ ለእሳታውያን፡ ዐርካኑ፡ ይጽብኦሙ፡ ለሠራዊተ፡ ቤልሖር፡
+                        ለኃጢአት፡ ላእካኑ።</l>
+                     <l n="4">ወፈድፋደሰ፡ ይዕቀ<sic>ቦ</sic>፡ በበትረ፡ ሥላሴ፡ ዘኢይጸንን፡ ለለጽባሑ፡ ወለለ፡ አዝማኑ፡ ለፍቁሩ፡ ዕገሌ፡ ለዓለመ፡ ዓለም፡ ኣሜን።</l>
+                     <l n="5">ተብህለ፡ ከመ፡ ሀሎ፡ አሐዱ፡ ብእሲ፡ ነዳይ፡ ወጽኑስ፡ ውስተ፡ አሐቲ፡ ሀገር፡ በጎረ፡ ቤተ፡ ክርስቲያኑ፡ ለቅዱስ፡ ሚካኤል።</l>
+                     <l n="6">ይገይሥ፡ ወትረ፡ ለለ፡ ጽባሑ፡ ወለለ፡ ሰዓቱ፡ ኀበ፡ ቤተ፡ ክርስቲያኑ፡ ለቅዱስ፡ ሚካኤል፡ ወይቀውም፡ ቅድመ፡ ሥዕሉ፡ ይስእል፡ ወያስተበቍዕ፡ በአንብዕ፡ ጽፉቅ፡
+                        ወበልብ፡ ጥቡዕ፡ በአሚን፡ ብዙኅ፡ እንዘ፡ ይብል፡ ኦ፡ ሊቀ፡ መላእክት፡ ሚካኤል፡ አስተምሕር፡ በእንቲኣየ፡ ወጸሊ፡ ሊተ፡ ኀበ፡ እግዚአብሔር፡ አምላክከ፡ ከመ፡ የሀበኒ፡ ሲሳየ፡ 
+                        ወዐራዘ፡ ወነበረ፡ ከመ፡ ዝ፡ ብዙኀ፡ መዋዕለ፡ እንዘ፡ ይስእል፡ ወይትማሕለል።</l>
+                  </ab>
+               </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="21">ወእምዝ፡ ቦአ፡ ኤጲስ፡ ቆጶስ፡ ምስለ፡ ውእቱ፡ ብእሲ፡ ኀበ፡ ቤተ፡ ክርስቲያኑ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ በፍቅር፡ ወበሰላም፡ እንዘ፡ ይነግሩ፡ ለኵሉ፡
+                           ሰብእ፡ ዕብየ፡ ተአምራቲሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ለዘይሰምዖ፡ ግሩም፡ እመዓር፡ ጥዑም፡ ወእምስቴ፡ ወይን፡ ዘያጠልል፡ አዕፅምተ።</l>
+                        <l n="22">ትንብልና፡ ስእለቱ፡ ወአስተበቍዖቱ፡ ይኩነነ፡ ሐጹረ፡ ወጥቅመ፡ ወይብትክ፡ እምኔነ፡ መሥገርተ፡ ጸላኤ፡ ሕሡመ፡ ወያእትት፡ እምላዕሌነ፡ ድካመ፡ 
+                           ወያሰስል፡ እምአልባቢነ፡ ጹገ፡ ወቂመ፡ ወይረስየነ፡ ከመ፡ ንፍረይ፡ ፍሬ፡ ሕይወት፡ ፍጹመ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="MiraclePoor2">
+                  <label xml:lang="en">Miracle of the poor man, who became a rich man</label>
+                  <note>A miracle, attested in <ref type="mss" corresp="BMLacq776"/> in the section of Maskaram, which seems to be 
+                     thematically similar to <ref target="#MiraclePoor1"/>, but with another incipit.</note>
+                  <ab>ተአምሪሁ፡ ለመልአክ፡ ክቡር፡ ሊቀ፡ መላእክት፡ ሚካኤል፡ ትንብልናሁ፡ የሀሉ፡ ምስለ፡ ገብሩ፡ <gap reason="omitted" unit="chars" quantity="4"/> 
+                     ተብህለ፡ ከመ፡ ነበረ፡ ፩ነዳይ፡ በጥቃሁ፡ ትነብር፡ ቤተክርስቲያን፡ ዘተሀንጸት፡ በስሙ፡<gap reason="omitted" unit="chars" quantity="3"/> ሊቀ፡ መላኢክት፡ 
+                     ወይሰአል፡ ኃቤሃ፡ መእልተ፡ ወሌሊተ፡ በእንበለ፡ ወይብል፡ ሊቆሙ፡ ለመላእክት፡ ወሊቀየ፡ ሰአል፡ ሊተ፡ ኀበ፡ እግዚአብሔር፡ ከመ፡ የሀበኒ፡ ሲሳየ፡ ወአራዘ፡ ወነበረ፡ ከመዝ፡ ብዙኃ፡ 
+                     መዋዕለ፡ ወበ፡ ፩እመዋዕል፡ መጽአ፡ ኃቤሁ፡ ሊቀ፡ መላእክት፡ ወይቤሉ፡ ኦ፡ ገብር፡ ህካይ፡ ወፅሩእ፡ ለምንት፡ ትስእለኑ፡ ከመዝ፡ ወኢትገብር፡ ተግባረ፡ አትፃሙ፡ ከመ፡ እባርከ፡ ለከ፡ 
+                     ወኢትነግጽ፡ ወኢተዘርእ፡ ከመ፡ እባርክ፡ ለከ፡ ወዮምኒ፡ ሑር፡ ኀበ፡ አቃቤ፡ ቤተክርስቲያን፡ ወሰአል፡ እምኔሁ፡ ወርቀ፡ ወንግድ፡ <gap reason="ellipsis"/> ወአስኰቶ፡ 
+                     ለእግዚአብሔር፡ ወገነየ፡ ለቅዱስ፡ <gap reason="omitted" unit="chars" quantity="4"/>ሊቀ፡ መላእክት፡ ወይቤሎ፡ ኦብእሲ፡ ፈራኄ፡ እግዚአብሔር፡ 
+                     ወመንፈሰ፡ ቅዱስ፡ ህዱር፡ ላእሌከ፡ ወሬድዲቱ፡ ለ<gap reason="omitted" unit="chars" quantity="4"/>  የሃሉ፡ ምስሌከ፡ ወሊተኒ፡ ተዘከረኒ፡ በጸሎትከ፡ ወነበሩ፡
+                     ፪ሆሙ፡ ህቡረ፡ በፍቅር፡ እንዘ፡ ይዜንዉ፡ ትአምሪሁ፡ ልቅዱስ፡ <gap reason="omitted" unit="chars" quantity="3"/>መተንብል፡ ቅድመ፡ እግዚአብሔር፡ 
+                     በእንተ፡ ዘመደ፡ እጓለ፡ እመሕያው፡ ረድኢቱ፡ የሀሉ፡ ምስለ፡ ገብሩ፡ ገብረ፡ <gap reason="omitted" unit="chars" quantity="11"/></ab>
+                  </div>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleRich">
+                  <label>Miracle of the rich man who recovers his possessions</label>
+                  <ab>ተአምሪሁ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ትንብልናሁ፡ የሃሉ፡ ምስለ፡ ገብሩ፡ ወሀሎ፡ ፩ብእሲ፡ ፈራኄ፡ እግዚአብሔር፡ ዘያፈቅር፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ 
+                     መላእክት፡ ወግብሩ፡ ሐረስ፡ ወበአሐቲ፡ ዓመት፡ ተገበረ፡ ወዘርዓ፡ ገራኅቶ፡ ወአኅለቆ፡ ፅጼ፡ ወኃልቀ፡ ማዕረሩ፡ ወሐጥዓ፡ ዘይበልዕ፡ ወዝ፡ ዘረከበ፡ በእንተ፡ ዘኢገብረ፡ በአሉ፡ ሉ፡ 
+                     ለመልአክ፡ ወተዝከረ፡ ከመ፡  ረስአ፡ ወታንሥዓ፡ ፍጡነ፡ በጕጕዓ፡ ወገብረ፡ ተዝካሮ፡ ለመልአከ፡ ክቡር፡ ሚካኤል፡ በምሑረ፡ ነዳያን፡ ወምስኪናን፡ ለኅቡራት፡ ወለ፡ ኦ፡ ነአ፡ ማውታ፡
+                     በእንተ፡ ስሙ፡ እስመ፡ እግዚአብሔር፡ መሐሪ፡ ወመሰት፡ ሣህል፡ ሰዐ፡ ነጸሒሩቶ፡ ሚጠ፡ ሎቱ፡ ዝቀዳሚ፡ ብእሱ፡ ወክብረ፡ ቤቱ፡ ዘትካት፡ ወአፈድፈዳ፡ ውሂበ፡ መጽዎት፡ እስከ፡ እለተ፡
+                     ሞቱ፡ ትንብልናሁ፡ ምስለ፡ ገብሩ፡ <persName ref="PRS14011GabraMikael" role="owner">ገብረሚካ፡ </persName>ለዓለመ፡ ዓሜን፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleParalytic">
+                  <label xml:lang="en">Miracle of the healing of a paralytic</label>
+                  <note>This miracle is transmitted in the section for Yakkātit in <ref type="mss" corresp="BMLacq776"/>, but in the section for
+                     Ṭǝqǝmt in <ref type="mss" corresp="BAVet82"/>.</note>
+                  <ab>ተአምሪሁ፡ ለቅዱስ፡ ሚካኤል፡ ዘሥዑል፡ በነበል፡ ትኅብልናሁ፡ ወአስተብቍዖቱ፡ የሀሉ፡ ምስለ፡ ዓመቱ፡ 
+                     <gap reason="omitted" unit="chars" quantity="5"/> ይድኅነነ፡ እሞተ፡ ኃጕል፡ ለደቂቅ፡ ዛቲ፡ መርጡል፡ ለዓለ፡ 
+                     <gap reason="omitted" unit="chars" quantity="5"/> ተብሕለ፡ ከመ፡ ሀሎ፡ ፩ዱ፡ ብእሲ፡ በአሐቲ፡ ሀገር፡ ሬኄ፡ እግዚአብሔር፡ ወይገብር፡ ምሕረተ፡ ለነዳየን፡ 
+                     ወለ፡ ምስኪናን፡ በአእንተ፡ ስሙ፡ ለቅዱስ፡ ሚካኤል፡ ኵሎ፡ ጊዜ፡ ወሶበ፡ ርእየ፡ ሰይጣን፡ ጸላዔ፡ ሣናያት፡ ጸረ፡ ኵሉ፡ ትውልደ፡ አዳም፡ ቀንዓ፡ ላዕሌሁ፡ ወአጽንዓ፡ ደዌ፡ በሥጋሁ፡ 
+                     ወኮነ፡ መባጕዓ፡ ወሐመ፡ ሕማመ፡ ብዙኃ፡ ወኮነ፡ የአወዩ፡ ብዝ፡ ዴዌ፡ እምጽንዓ፡ ሕማሙ፡ ዘላእሌሁ፡ <gap reason="omitted" unit="lines" quantity="168"/>
+                     ወሰፍሐ፡ እዴሁ፡ ለዊህብ፡ ወኢያብጠለ፡ ገቢረ፡ በአሉ፡ አመ፡ ፲ወ፪፡ ለለ፡ ወርኁ፡ እስከ፡ አመ፡ አእረፈ፡ ወቦአ፡ ውስተ፡ መንግሥተ፡ ስማያት፡ በሰእለቱ፡ ለቅዱሰ፡ 
+                     ሚካኤል፡ መልአከ፡ ሣህል፡ ወምሕረት፡ ወለነኒ፡ ውሉደ፡ ጥምቀት፡ ይፈወሰነ፡ እም፡ ደዌ፡ ሥጋ፡ ትንብልናሁ፡ የሀሉ፡ ምስለ፡ ገብሩ፡ ለ</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeFathers">
+                  <label>Commemorative to the fathers, brothers and beloved</label>
+                  <note>Not attested in manuscript records.</note>
+                  <ab>
+                     <l n="1">ስምዑ፡ ኣበውየ፡ ወአኃውየ፡ ወፍቁራንየ፡ ተዘኪረነ፡ በደኃሪ፡ መዋዕል፡ ጸሐፈነ፡ ተአምረ፡ ሚካኤል፡ ከመ፡ ንርከብ፡ ገጾ፡ ለልዑል፡ ወከመ፡ ንትዋነይ፡ ውስተ፡
+                        ከብካበ፡ መርኅ፡ ጥሉል። ወይመግበነ፡ እግዚአብሔር፡ ምሕረተ፡ ወሣህለ፡ ወይፈኑ፡ ለሐው፡ ጾትነ፡ ሚካኤልሃ፡ መተንብለ።</l>
+                     <l n="2">ወይቅጽበነ፡ ፍቁረ፡ አምላክ፡ ለደቂቀ፡ ዛቲ፡ መርጡል፡ ወይቀጥቅጦ፡ በቅድሜነ፡ ለመስቴማ፡ ሀጕል፡ ወያዕድወነ፡ በአክናፊሁ፡ እምባሕረ፡ እሳት፡ ዘሲኦል፡
+                        ወይሰደነ፡ ቤተ፡ ባዕል፡ ውስተ፡ ፒላሳሁ፡ ለዐማኑኤል፡ ወይሴስየነ፡ እምዘገነት፡ አስካል፡ ወያስምዐነ፡ እምዘምሕረት፡ ቃል፡ ለኵልነ፡ ሰማዕያን፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                  </ab>
                </div>
                
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleImpure">
+                  <label>Miracle about one of the impure children of Adam</label>
+                  <note>Not attested in any manuscripts.</note>
+                  <div type="textpart" subtype="incipit">
+                  <ab>
+                     <l n="1">ተአምሪሁ፡ ለቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ጸሎቱ፡ ወበረከቱ፡ የሀሉ፡ ምስሌነ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     <l n="2">ወበእንተ፡ ኪኑሰ፡ ለአምላክነ፡ መንክረ፡ ሰማዕነ።</l>
+                     <l n="3">ይቤ፡ ብእሴ፡ እግዚአብሔር፡ ነገረኒ፡ ወይቤለኒ፡ እመገብረ፡ ብእሲ፡ ምእመናዊ፡ ተዝካረ፡ መላእክት፡ ይምሕሮኑ፡ እግዚአብሔር፡ ወይቤ፡ እወ፡ አውእመ፡
+                        ገብረ፡ ተዝካረ፡ ነቢያት፡ ወሐዋርያት፡ አው፡ ተዝካረ፡ ጻድቃን፡ ወሰማዕታት፡ ወተሰጥወኒ፡ መልአክ፡ ወይቤለኒ፡ ስማዕ፡ እንግርከ፡ ኦ፡ ብእሲ፡ ዘከመ፡ ተውህቦሙ፡ ሥልጣን፡
+                        ለመላእክት።</l>
+                     <l n="4">ወሀሎ፡ አሐዱ፡ ብእሲ፡ እምደቂቀ፡ አዳም፡ ዘግሙን፡ ሰብእናሁ፡ ወአልቦ፡ ዘገብረ፡ ሠናይ፡ አሐዶሂ፡ ዕለተ፡ ዳዕሙ፡ ሐይወ፡ በእኪት፡ እምአመ፡ ተወልደ፡
+                        እስከ፡ ይእዜ፡ ውእቱ፡ ብእሲ።</l>
+                     <l n="5">ወባሕቱ፡ ሀሎ፡ በላዕሌሁ፡ አሐዱ፡ ኂሩት፡ ለለ፡ ወርኁ፡ ያብዕል፡ በዓለ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ወይምሕር፡ ነዳያነ፡ ወምስኪናነ። ወእምዝ፡ ሞተ፡ ውእቱ፡
+                        ብእሲ፡ ወወውዑ፡ አጋንንት፡ ላዕሌሁ፡ ወይቤሉ፡ ዘዚ<sic>ኣ</sic>ነ፡ ነፍሰ፡ ውእቱ፡ ብእሲ፡ ወሚካኤልኒ፡ ይቤ፡ ዘዚኣየ።</l>
+                  </ab>
+               </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>
+                        <l n="12">ወአንከረ፡ አባ፡ ዘሚካኤል፡ ወይቤ፡ ይክል፡ ዐማኑኤል፡ ገቢረ፡ ኵሉ።</l>
+                        <l n="13">ወካዕበ፡ አንከረ፡ ውእቱ፡ ብእሲ፡ በእንተ፡ ውሉደ፡ ሰብእ፡ ወይቤ፡ ከመ፡ ዝ፡ ይትዔሰዩኑ፡ ዘገብሩ፡ ሎሙ፡ ሠናየ፡ ዳዕሙ፡ አሐዱ፡ አሐዱ፡ እለ፡ ይረክቡ።</l>
+                        <l n="14">ኦ፡ አምላከ፡ ቅዱስ፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ ዘአድኀንኮ፡ ለዝንቱ፡ ብእሲ፡ እምገሃነመ፡ እሳት፡ ከማሁ፡ አድኅነኒ፡ በዝ፡ ዓለም፡ ወበዘይመጽእኒ፡ ዓለም፡
+                           ሊተ፡ ለገብርከ፡ ዕገሌ፡ ለዓለመ፡ ዓለም፡ አሜን።</l>
+                     </ab>
+                  </div>
+               </div>
+               
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeSamuel">
+                  <label xml:lang="en">Commemorative notice on Michael's appearance to Samuel</label>
+                  <ab>
+                     <l n="1">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለጥቅምት፡ በዛቲ፡ ዕለት፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡
+                        ሊቀ፡ መላእክት፡ እስመ፡ በዛቲ፡ ዕለት፡ ፈነዎ፡ እግዚአብሔር፡ ኀበ፡ ሳሙኤል፡ ነቢይ፡ እንዘ፡ ሀሎ፡ ውስተ፡ ቤተ፡ መቅደስ፡ ወአዘዞ፡ ከመ፡ ይሑር፡ ኀበ፡ ቤተ፡ እሴይ፡ አቡሁ፡ ለዳዊት፡
+                        ውስተ፡ ቤተ፡ ልሔም፡ ከመ፡ ይቅብዖ፡ ለዳዊት፡ ወልዱ፡ ይንግሥ፡ ላዕለ፡ ደቂቀ፡ እስራኤል፡ ህየንቴሁ፡ ለሳኦል፡ ወልደ፡ ቂስ።</l>
+                     <l n="2">ወሶቤሃ፡ ነሥአ፡ ቀርነ፡ ቅብዕ፡ ዘነገሥት፡ ወሖረ፡ ሳሙኤል፡ ነቢይ፡ ወበጽሐ፡ ኀበ፡ እሴይ፡ ወይቤሎ፡ ሳሙኤል፡ ለእሴይ፡ አቅርብ፡ ሊተ፡ ኵሎሙ፡ ውሉደከ፡
+                        እስመ፡ አዘዘኒ፡ መልአከ፡ እግዚአብሔር፡ ከመ፡ እቅባዕ፡ ወአንግሥ፡ ላዕለ፡ ደቂቀ፡ እስራኤል፡ እምዘርዕከ።</l>
+                     <l n="3">ወሰሚዖ፡ ዘንተ፡ ነገረ፡ እምቃለ፡ ሳሙኤል፡ ነቢይ፡ ኦሆ፡ ይቤ፡ ወአምጽአ፡ ሎቱ፡ ውሉዶ፡ ዘእንበለ፡ ዳዊት፡ እስመ፡ ውእቱ፡ ኮነ፡ የዐቅብ፡ አባግዐ፡ ውስተ፡
+                        ገራህቱ።</l>
+                     <l n="4">ወሶበ፡ አልዐለ፡ ቀርነ፡ ቅብዕ፡ ዘነገሥት፡ ላዕለ፡ አርእስቲሆሙ፡ ለለ፡ አሐዱ፡ አሐዱ፡ ለውሉደ፡ እሴይ፡ ኢሠምረ፡ ቦሙ፡ እግዚአብሔር፡ ወይቤሎ፡ ሳሙኤል፡
+                        ለእሴይ፡ ኢተርፈኑ፡ መኑሂ፡ እምውሉድከ፡ ወይቤሎ፡ እሴይ፡ ለሳሙኤል፡ ዘተርፈ፡ ሀሎ፡ አሐዱ፡ ወሬዛ፡ ዘይንእስ፡ እምአኀዊሁ፡ ውእቱ፡ የዐቅብ፡ አባግዐ፡ ውስተ፡ ገራህት።</l>
+                     <l n="5">ወይቤሎ፡ ሳሙኤል፡ ለእሴይ፡ አምጽኦ፡ ሊተ፡ ፍጡነ፡ ወአምጽአ፡ ሎቱ፡ ሶቤሃ። ወነሥአ፡ ቀርነ፡ ቅብዕ፡ ወሠምረ፡ ቦቱ፡ እግዚአብሔር፡ ወነግሠ፡ ላዕለ፡
+                        ደቂቀ፡ እስራኤል፡ ዳዊት፡ ነቢይ።</l>
+                     <l n="6">ወበዛቲ፡ ዕለት፡ ካዕበ፡ ፈነዎ፡ እግዚአብሔር፡ ለሚካኤል፡ ሊቀ፡ መላእክት፡ ኀበ፡ ዳዊት፡ ነቢይ፡ ወረድኦ፡ ወወሀቦ፡ ኀይለ፡ እስከ፡ ቀተሎ፡ ለጎልያድ፡ ረዐይታዊ፡
+                        ወኢሎፍላዊ፡ ወአድኃኖሙ፡ ለደቂቀ፡ እስራኤል፡ እምእደ፡ ፀሮሙ።</l>
+                     <l n="7">ወበእንተ፡ ዝ፡ አዘዙነ፡ መምህራነ፡ ቤተ፡ ክርስቲያን፡ ወሠርዑ፡ ከመ፡ ንግበር፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሚካኤል፡ ሊቀ፡ መላእክት፡ አመ፡ ዐሡሩ፡
+                        ወሰኑዩ፡ ለለ፡ ወርኁ።</l>
+                     <l n="8">ትንብልናሁ፡ ወአስተብቍዖቱ፡ የሀሉ፡ ምስለ፡ ፍቁሩ፡ ዕገሌ፡ ወምስለ፡ ኵልነ፡ ሰማዕያን፡ እለ፡ ተጋብእነ፡ ዝየ፡ ውስተ፡ እምነ፡ ቅድስት፡ ቤተ፡ ክርስቲያን፡
+                        ለዓለመ፡ ዓለም፡ አሜን።</l>
+                  </ab> 
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamBird">
+                  <label xml:lang="en">Salām to you, bird of the garden of the East</label>
+                  <ab>ሰላም፡ ለከ፡ ዘገነተ፡ ጽባሕ፡ ዖፍ፡ ምሕረተ፡ ኃጥኣን፡ ዘትነቁ፡ በዘኢያረምም፡ አፍ፡ ሚካኤል፡ ክድነኒ፡ ወሕቀፈኒ፡ በክንፍ፡ ኢይትከየድ፡ በእበድየ፡ ግዕዘ፡ ልስሐተ፡ ጼው፡ ግዱፍ፡ 
+                     ወኢይደቅ፡ እምክብርየ፡ ከመ፡ ጽጌንጉፍ።</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="PrayerSeasons">
+                  <label>Prayer for the passing of the seasons</label>
+                  <ab>
+                     <l n="1">መትልወ፡ ሐጋይ፡ ክረምተ፡ ዘሠራዕከ፡ እግዚእነ፡ ወዘረሰይከ፡ ጸደየ፡ ለመፀው፡ ወሰነ፡ በዝ፡ ክረምት፡ በመዋዕሊነ፡ ዘእንበለ፡ ፍሬ፡ እንዘ፡ በቈጽል፡ ሀሎነ፡
+                        ናስተበቍዓከ፡ ኢይኩን፡ ጕያነ።</l>
+                     <l n="2">ድኅረ፡ ኃለፈ፡ ክረምት፡ ወድኅረ፡ ገብአ፡ ዝናም፡ እንተ፡ አስተርአይከ፡ እግዚኦ፡ ጽጌያተ፡ ገዳም፡ አፈወ፡ ሃይማኖት፡ ነአ፡ ልድ፡ ምስለ፡ ፍሬ፡ ምግባር፡
+                        ጥዑም፡ አትግሀነ፡ ለስብሐቲከ፡ ከመ፡ ትጋሆሙ፡ ዮም፡ ለፅብስት፡ ንህብ፡ ወሀካይ፡ ቃሕም።</l>
+                  </ab>
+               </div>
+            </div>
                <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Prayer">
                   <label>Za-ʾaqrabku māḥleta… </label>
-                  <div type="textpart" subtype="inplicit">
+                  <note>Attested in <ref type="mss" corresp="ESnsm006"/>.</note>
+                  <div type="textpart" subtype="incipit">
                      <ab>ዘአቅረብኩ፡ ማሕሌተ፡<foreign xml:lang="en">The song I am offering</foreign>
                      </ab>
                   </div>
                </div>
-               <!-- from ESnsm006 -->
+               
                <div type="textpart" subtype="explicit">
-                  <ab>ተፈጸመ፡ ድርሳነ፡ ሚካኤል፡ በሰላመ፡ እግዚአብሔር፡ ወበጸሎተ፡ ሚካኤል፡ ወስብሐት፡ ለእግዚአብሔር፡ ዘአፈጸመነ፡ በዳህና፡ ወበሰላም፡ አሜን።</ab>
-                  <!-- from ESam004 -->
+                  <label>Explicit</label>
+                  <note>Attested in <ref type="mss" corresp="ESam004"/></note>
+                  <ab>
+                     ተፈጸመ፡ ድርሳነ፡ ሚካኤል፡ በሰላመ፡ እግዚአብሔር፡ ወበጸሎተ፡ ሚካኤል፡ ወስ<choice resp="CH"><sic>በ</sic><corr>ብ</corr></choice>ሐት፡ 
+                     ለእግዚአብሔር፡ ዘአፈጸመነ፡ በዳኅና፡ ወበሰላም፡ አሜን።
+                  </ab>
                </div>
             </div>
-            
          </div>
          <listRelation>
             <relation name="ecrm:P129_is_about" active="LIT1295Dersan" passive="PRS7049Michael"/>
          </listRelation>
+         </div>
       </body>
    </text>
 </TEI>
