@@ -5,7 +5,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle of Gabriel: On King Abraset, his son Awar and the construction of the church of St Gabriel</title>
+                <title xml:lang="en" xml:id="t1">Miracle of Gabriel: On ʾAbrāset,
+                    his son ʾAwǝr, and the construction of the church of St Gabriel</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -13,11 +14,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
                 <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
-                            Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                    Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
-                                licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/">This file is
+                        licensed under the Creative Commons Attribution-ShareAlike 4.0.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -25,25 +26,52 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-            <p>A digital born TEI file</p>
+            <p>A digital-born TEI file</p>
         </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>This miracle, attested as miracle of Gabriel in <ref type="mss" corresp="ANLcr3"/>, 
+                    is also atttested in <ref type="mss" corresp="BAVet149"/> as
+                    part of the Homily of <persName ref="PRS3828Epiphani">Epiphanius of Cyprus</persName> in 
+                    honour of <persName ref="PRS4585Georgeo">St George</persName> for <date ref="ethiocal:Miyazya19">19 Miyāzyā</date>.</p>
             </abstract>
+            <textClass>
+                <keywords>
+                    <term key="ChristianLiterature"/>
+                    <term key="Hagiography"/>
+                    <term key="Miracle"/>
+                </keywords>
+            </textClass>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DR" when="2024-12-13">Created entity</change>
+            <change who="DR" when="2024-12-13">Created entity based on incipit and bibliographic references.</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT14518MGAbraset" passive="BAVet149"/>
+                    <relation name="ecrm:P129_is_about" active="LIT14518MGAbraset" passive="PRS4585Georgeo"/>
+                    <relation name="ecrm:P129_is_about" active="LIT14518MGAbraset" passive="PRS4377Gabriel"/>
+                    <relation name="ecrm:P129_is_about" active="LIT14518MGAbraset" passive="PRS1282Abraset"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT14518MGAbraset" passive="LIT1284Dersan"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT14518MGAbraset" passive="LIT4652TaammeraGa"/>
+                </listRelation>
+            </div>
+            <div type="edition">
+                <note>The following incipit is taken from <ref type="mss" corresp="ANLcr3"/>.</note>
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <ab>፬ ተአምሪሁ፡ <gap reason="ellipsis"/> ወሀሎ፡ ፩ ንጉሥ፡ በአሐቲ፡ ሀገር፡ ወንግሥትኒ፡ ሀለወት፡ ወወለተ፡ ንጉሥሂ፡ ሀለወት። 
+                        ወሀሎ፡ ፩ መሠርይ፡ በቤተ፡ ንጉሥ፡ ዘስሙ፡ አብራሴት፡ ወውእቱሰ፡ ያስተሐይጽ፡ በአዕይንቲሁ፡ ከመ፡ ይርአያ፡ ለይዕቲ፡ ወለተ፡ ወርእያ፡ ወነጽሮ፡ ለስነ፡ ላሕያ፡ ወስነ፡ ራእያ፡ 
+                        ዘይኤድም፡ ወፈተዋ፡ በልቡ፡ ወሰከበ፡ ምስሌሃ፡ ወፀንሰት።</ab>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>
