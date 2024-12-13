@@ -1,14 +1,13 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6631SalMikMahari" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7190MiracleMichaelBula" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Salām-hymn to St Michael</title>
-                <title xml:id="t2">Salām to Michael the Merciful</title>
+                <title xml:lang="en" xml:id="t1">Miracle of Michael and Bula called Abib</title>
                 <editor role="generalEditor" key="AB"/>
-                <editor key="DR"/>
+                <editor key="ES"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -22,7 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit><witness corresp="BLorient4849"></witness></listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -31,13 +30,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p>Can be included in <ref type="work" corresp="LIT1295Dersan"></ref> for Sane</p>
+                <p/>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Hagiography"/>
-                    <term key="Poetry"/>
+                    <term key="Miracle"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -46,32 +45,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DR" when="2022-05-10">Created entity</change>
-            <change when="2024-12-13" who="ES">added link to Dersana Mikael</change>
+            <change who="ES" when="2024-12-13">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+                
                 <listRelation>
-                    <relation name="ecrm:P129_is_about" active="LIT6631SalMikMahari" passive="PRS7049Michael"/>
-                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT6631SalMikMahari" passive="LIT1295Dersan"></relation>
+                    
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7190MiracleMichaelBula" passive="LIT1295Dersan"/>
+                    <relation name="ecrm:P129_is_about" active="LIT7190MiracleMichaelBula" passive="PRS7049Michael"></relation>
+                    <relation name="ecrm:P129_is_about" active="LIT7190MiracleMichaelBula" passive="PRS1246AbibBu"></relation>
+                    
                 </listRelation>
             </div>
-            <div type="edition">
-                <div type="textpart" xml:lang="gez">
-                    <note>The following text is taken from <ref type="mss" corresp="BLorient590"/>.</note>
-                    <ab>
-                        <lg>
-                        <l n="1">ሰላም፡ ለሚካኤል፡ መሐሪ፡ ውእቱ።</l>
-                    <l n="2">ወተአዛዚ፡ ለሰብእ፡ በዲበ፡ ሠናይቱ።</l>
-                    <l n="3">በቀርነ፡ ዝንቱ፡ መልአክ፡ በድምፀ፡ ንፍሐቱ።</l>
-                    <l n="4">ለክሙ፡ ኮነ፡ ቀዳሚ፡ ውስተ፡ ሰማያት፡ ዕርገቱ።</l>
-                    <l n="5">ለእግዚአብሔር፡ ይከውን፡ ዳግመ፡ ምጽአቱ።</l>
-                    </lg>
-                    </ab>
-                </div>
-            </div>
+            <div type="edition" xml:lang="gez"> <note>after <ref type="mss" corresp="BLorient4849"></ref></note>
+                <ab xml:lang="gez">ተአምሪሁ፡ ለቅዱስ፡ ሚካኤል፡ ቢቀ፡ መላእክት፡ በረከቱ፡ <gap reason="ellipsis"/> ወሀሎ፡ ፩ጻድቅ፡ ምንትወ፡ ስም፡ ዘቀዳሚ፡ ስሙ፡
+                    <persName ref="PRS1246AbibBu"> ቡላ፡</persName> ወዘድኅረ፡ ስሙ፡ ዘሰመዮ፡ እግዚአብሔር፡ በቃሉ፡ አቢብ።</ab></div>
+            
+            
         </body>
     </text>
 </TEI>
