@@ -1,11 +1,12 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7198MGQueen" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">On the apparition of St Gabriel to a queen who endowed the church in Niqlon</title>
+                <title xml:lang="en" xml:id="t1">Miracle of Gabriel: On the apparition of St Gabriel to a queen who endowed the church in Niqlon</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -13,11 +14,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
                 <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
-                            Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                    Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
-                                licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/">This file is
+                        licensed under the Creative Commons Attribution-ShareAlike 4.0.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -25,13 +26,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-            <p>A digital born TEI file</p>
+            <p>A digital-born TEI file</p>
         </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>This miracle is attested as miracle of Gabriel in <ref type="mss" corresp="ANLcr3"/>. A relation to
+                    or possibly even identity with <ref type="work" corresp="LIT5901DersanaGabrielNaglon"/> can currently not be excluded.</p>
             </abstract>
+            <textClass>
+                <keywords>
+                    <term key="ChristianLiterature"/>
+                    <term key="Hagiography"/>
+                    <term key="Miracle"/>
+                </keywords>
+            </textClass>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
@@ -43,7 +52,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="ecrm:P129_is_about" active="LIT7198MGQueen" passive="PRS4377Gabriel"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7198MGQueen" passive="LIT1284Dersan"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7198MGQueen" passive="LIT4652TaammeraGa"/>
+                    <relation name="syriaca:possibly-identical" active="LIT7198MGQueen" passive="LIT5901DersanaGabrielNaglon"/>
+                </listRelation>
+            </div>
+            <div type="edition">
+                <note>The following incipit is taken from <ref type="mss" corresp="ANLcr3"/>.</note>
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <ab>ተአምሪሁ፡ <gap reason="ellipsis"/> ወካዕበ፡ ሖረ፡ ገብርኤል፡ ሊቀ፡ መላእክት፡ እምኀበ፡ ንጉሥ፡ ኀበ፡ ሀለወት፡ ንግሥት። 
+                        ወነበበ፡ ዘከመ፡ ነበቦ፡ ለንጉሥ፡ በነገረ፡ ዓውር፡ ኮነ፡ እምቅድመ፡ ሥርቀተ፡ ፀሐይ፡ ፈነወ፡ ንጉሥ፡ ላእካኒሁ፡ ይጸውዕዋ፡ 
+                        ለእሙ፡ ንግሥት። ወሶበ፡ በጽሐት፡ ኀቤሁ፡ ንግሥት፡ ዜነዋ፡ ኵሎ፡ ዘከመ፡ አስተርአዮ፡ ሊቀ፡ መላእክት።</ab>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>
