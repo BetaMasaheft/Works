@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">St Gabriel saves Joseph and Nicodemus from Herod</title>
+                <title xml:lang="en" xml:id="t1">Miracle of Gabriel: St Gabriel saves Joseph and Nicodemus from Herod</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -13,11 +13,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
                 <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
-                            Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                    Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
-                                licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/">This file is
+                        licensed under the Creative Commons Attribution-ShareAlike 4.0.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -28,14 +28,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>A digital born TEI file</p>
         </encodingDesc>
         <profileDesc>
-            <creation/>
-            <abstract>
-                <p/>
-            </abstract>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
             </langUsage>
+            <textClass>
+                <keywords>
+                    <term key="ChristianLiterature"/>
+                    <term key="Hagiography"/>
+                    <term key="Miracle"/>
+                </keywords>
+            </textClass>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2024-12-16">Created entity</change>
@@ -43,7 +46,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT7206MGHerod" passive="BAVet149"/>
+                   <!-- according to catalogue, attested in BAVet199, but this must be a mistake-->
+                    <relation name="ecrm:P129_is_about" active="LIT7206MGHerod" passive="PRS4377Gabriel"/>
+                    <relation name="ecrm:P129_is_about" active="LIT7206MGHerod" passive="PRS5764Joseph"/>
+                    <relation name="ecrm:P129_is_about" active="LIT7206MGHerod" passive="PRS13688Nicodemus"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7206MGHerod" passive="LIT4652TaammeraGa"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7206MGHerod" passive="LIT1284Dersan"/>
+                </listRelation>
+            </div>
+            <div type="edition">
+                <note>The following incipit is taken from <ref type="mss" corresp="ANLcr3"/>.</note>
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <ab>ተአምሪሁ፡ <gap reason="ellipsis"/> 
+                        ወበከመ፡ ረድኦሙ፡ ለዮሴፍ፡ ወኒቆዲሞስ፡ ወይቤ፡ ሄሮድስ፡ ለመኰንኖሙ፡ 
+                        ዓቢየ፡ ኵነኔ፡ ከመ፡ ይቅትሎሙ፡ በምክሩ። ወናሁ፡ መልአከ፡ እግዚአብሔር፡ ገብርኤል፡
+                        ወረደ፡ ኀቤሆሙ፡
+                    </ab>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>
