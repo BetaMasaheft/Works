@@ -39,11 +39,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
            <language ident="en">English</language>
            <language ident="gez">Gǝʿǝz</language>
          </langUsage>
-        <abstract>
-<p>Dǝrsāna Rufāʾel is a composition for the feast of Archangel Raphael on the 3rd of Ṗagʷǝmen.
-It consists of a homily by John Chrysostom on Raphael, a collection of miracles and two homilies on the Living Creatures
-(by Rǝtuʿa Haymānot and Chrystostom).</p>
-        </abstract>
+         <abstract>
+            <p>Dǝrsāna Rufāʾel is a composition for the feast of Archangel Raphael on the 3rd of Ṗagʷǝmen.
+               It consists of a homily by John Chrysostom on Raphael, a collection of miracles and two homilies on the Living Creatures
+               (by Rǝtuʿa Haymānot and Chrystostom).
+            <!-- Riscrivere questa parte! --></p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -64,6 +65,11 @@ It consists of a homily by John Chrysostom on Raphael, a collection of miracles 
           <listRelation>
              <relation name="saws:isAttributedToAuthor" active="LIT1297Dersan" passive="PRS5720JohnChr"/>
              <relation name="ecrm:P129_is_about" active="LIT1297Dersan" passive="PRS8083Raphael"/>
+             <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2387Taamme" passive="LIT1297Dersan"/>
+             <relation name="ecrm:CLP46i_may_form_part_of" active="LIT6633SalRufMastafessehe" passive="LIT1297Dersan">
+                <desc>The <foreign xml:lang="gez">salām</foreign> is part of the work in <ref type="mss" corresp="BAVet124"/> and <ref type="mss" corresp="BAVet130"/>.
+                </desc>
+             </relation>
           </listRelation>
         </div>
  <div type="edition"><!-- The incipits below are from https://eap.bl.uk/archive-file/EAP432-1-6 -->
@@ -72,18 +78,37 @@ It consists of a homily by John Chrysostom on Raphael, a collection of miracles 
         <div type="textpart" subtype="incipit">
            <ab>ድርሳን፡ ዘይቤ፡ አብ፡ ብፁዕ፡ አባ፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ ሊቀ፡ ጳጳሳት፡ ዘሀገረ፡ ዓባይ፡ ቍስጥንጥንያ፡
              ዘይትነበብ፡ በበዓለ፡ ቅዱስ፡ ሩፋኤል፡ ሊቀ፡ መላእክት፡</ab>
-            </div>
-
+        </div> 
       </div>
-      <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Miracles"><label>Miracles of Raphael</label><!-- from BAVet130 -->
-         <div type="textpart" subtype="chapter" xml:id="MiracleImage"><label>On creating a large image of Rufāʾel</label></div>
-         <div type="textpart" subtype="chapter" xml:id="MiracleSeaMonster"><label>On a keeper of a church, who was carried away by a sea monster</label></div> 
-         <div type="textpart" subtype="chapter" xml:id="MiracleConstantine"><label>On how Rufāʾel appeared to emperor Constantine</label></div>
-         <div type="textpart" subtype="chapter" xml:id="MiracleTobias"><label>On Tobias</label></div>
-         <div type="textpart" subtype="chapter" xml:id="MiracleChurch"><label>History of the consecration of the church of Rufāʾel on an island near Alexandria</label></div>
+    
+      <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Miracles">
+         <label>Miracles of Raphael</label>
+         <!-- Questo ciclo di miracoli si trova in BAVet130 -->
+         <div type="textpart" subtype="chapter" xml:id="MiracleImage">
+            <label>On creating a large image of Rufāʾel</label>
+         </div>
+         <div type="textpart" subtype="chapter" xml:id="MiracleSeaMonster">
+            <label>On a keeper of a church, who was carried away by a sea monster</label>
+         </div> 
+         <div type="textpart" subtype="chapter" xml:id="MiracleConstantine">
+            <label>On how Rufāʾel appeared to emperor Constantine</label>
+         </div>
+         <div type="textpart" subtype="chapter" xml:id="MiracleTobias">
+            <label>On Tobias</label>
+         </div>
+         <div type="textpart" subtype="chapter" xml:id="MiracleChurch">
+            <label>History of the consecration of the church of Rufāʾel on an island near Alexandria</label>
+         </div>
       </div>
+    
+    <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT2387Taamme">
+       <div type="textpart" subtype="incipit">
+          ...
+       </div>
+    </div>
+    
 
-      <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyRetua" corresp="LIT2124OntheF">
+   <!--  <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyRetua" corresp="LIT2124OntheF">
         <div type="textpart" subtype="incipit">
            <ab>ድርሳን፡ ዘ፬እንስሳ፡ ክቡራን፡ ዘደረሰ፡ ርቱዓ፡ ሃይማኖት፡</ab>
             </div>
@@ -94,7 +119,16 @@ It consists of a homily by John Chrysostom on Raphael, a collection of miracles 
            <ab>ድርሳን፡ ዘብፁዕ፡ ወቅዱስ፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ ሊቀ፡ ጳጳሳት፡ ዘቍስጥንጥንያ፡
              በእንተ፡ ፬እንስሳ፡ ዓበይት፡ መንፈሳውያን፡</ab>
             </div>
-      </div>
+      </div>-->   
+    
+    
+    <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT6633SalRufMastafessehe">
+       <div type="textpart" subtype="incipit">
+          <ab>ሰላም፡ ለሩፋኤል፡ መስተፍሥሔ፡ ዘተብህለ።</ab>
+       </div>
+    </div>
+    
+    
 
   </div>
       </body>
