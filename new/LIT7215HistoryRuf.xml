@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">History of the consecration of the church of Rufāʾel on an island near Alexandria</title>
+                <title xml:lang="en" xml:id="t1">History of the consecration of the church of Rufāʾel on an island near Alexandria</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,7 +30,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>
+                    This text is traditionally found as part of the <ref type="work" corresp="LIT1297Dersan">Dǝrsāna Rufāʾel</ref> and has to be read on 3rd Ṗāgʷǝmen
+                    (e.g., <ref type="mss" corresp="BAVet130"/>, 
+                    and so also in the printed edition  <bibl><ptr target="bm:DersanaMikael2006EOTC"/></bibl>), but elsewhere (e.g., <ref type="mss" corresp="BAVet124"/>) 
+                    the consecrated church is dedicated to the archangel Michael.
+                </p>
             </abstract>
             <textClass>
                 <keywords>
@@ -49,7 +54,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:DersanaMikael2006EOTC"/>
+                        <citedRange unit="page">176-177</citedRange>
+                    </bibl>
+                </listBibl>
+                <listRelation>
+                    <relation name="ecrm:P129_is_about" active="LIT7215HistoryRuf" passive="PRS8083Raphael"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7215HistoryRuf" passive="LIT1297Dersan"/>
+                </listRelation>
+            </div>
+            <div type="edition">
+                <note>The following incipit is taken from <bibl>
+                    <ptr target="bm:DersanaMikael2006EOTC"/>
+                    <citedRange unit="page">176</citedRange>
+                </bibl>.</note>
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <ab>
+                    በስመ፡ አብ፡ ወወልድ፡ ወምንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላካ፤ አመ፡ ሠሉሱ፡ ለጳጕሜን፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሩፋኤል፡ ሊቀ፡ መላእክት፡ ዘውእቱ፡ 
+                    ሣልሳይ፡ እምሊቃነ፡ መላእክት፡ ትጉሃን፡ ቅዱሳን፡ ሰማያውያን፡ በከመ፡ ጸሐፍነ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለኅዳር። ወቅዳሴ፡ ቤተ፡ ክርስቲያኑ፡ እንተ፡ ተሐንጸት፡ 
+                    ሎቱ፡ ዲበ፡ ደሴት፡ በአፍአ፡ ሀገረ፡ እስክንድርያ፡ በመዋዕሊሁ፡ ለቴዎፍሎስ፡ ሊቀ፡ ጳጳሳት፡ ወትእምርት፡ ዘአስተርአየ፡ ውስቴታ።
+                    </ab>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>

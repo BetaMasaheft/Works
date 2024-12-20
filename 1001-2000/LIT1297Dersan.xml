@@ -40,10 +40,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
            <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <abstract>
-            <p>Dǝrsāna Rufāʾel is a composition for the feast of Archangel Raphael on the 3rd of Ṗagʷǝmen.
-               It consists of a homily by John Chrysostom on Raphael, a collection of miracles and two homilies on the Living Creatures
-               (by Rǝtuʿa Haymānot and Chrystostom).
-            <!-- Riscrivere questa parte! --></p>
+            <p>
+               This record identifies a collection of texts for the feast of the archangel Raphael, to be read on the 3rd of <foreign xml:lang="gez">Ṗāgʷǝmen</foreign>.
+               It consists of a <ref type="work" corresp="LIT7214HomilyJCRuf">Homily by John Chrysostom</ref>, two collections of miracles 
+               (the unity of the two collections is still to be investigated), two additional texts
+               (respectively entitled <ref type="work" corresp="LIT7215HistoryRuf">History of the consecration of the church of Rufāʾel on an island near Alexandria</ref> 
+               and <ref type="work" corresp="LIT7216HistoryJCRuf">History of how John Chrysostom visited the church of Rufāʾel on an island</ref>) and a 
+               <foreign xml:lang="gez">salām</foreign>-hymn entitled <ref type="work" corresp="LIT6633SalRufMastafessehe">Salutation to Raphael, who is called 'the Rejoicer'</ref>.
+            </p>
          </abstract>
       </profileDesc>
       <revisionDesc>
@@ -52,82 +56,85 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="MKr" when="2020-12-04">Updated transliteration, added summary, relations and bibliography, textparts.</change>
          <change who="MKr" when="2022-11-30">Added reference to work records</change>
+         <change who="MV" when="2024-12-20">Abstract, revised textparts</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-        <div type="bibliography">
-          <listBibl type="secondary">
-          <bibl>
-             <ptr target="bm:Lusini2005EAEDersanaRufael"/>
-          </bibl>
-          </listBibl>
-          <listRelation>
-             <relation name="saws:isAttributedToAuthor" active="LIT1297Dersan" passive="PRS5720JohnChr"/>
-             <relation name="ecrm:P129_is_about" active="LIT1297Dersan" passive="PRS8083Raphael"/>
-          </listRelation>
-        </div>
- <div type="edition"><!-- The incipits below are from https://eap.bl.uk/archive-file/EAP432-1-6 -->
-   <note>The following division into textparts follows <ref type="mss" corresp="BLorient619"/>.</note>
-    <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7214HomilyJCRuf">
-         <label>Homily by John Chrysostom on the archangel Rufāʾel</label>
-      </div>
-    
-      <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Miracles">
-         <label>Miracles of Raphael</label>
-         <div type="textpart" subtype="chapter" xml:id="MiracleImage">
-            <label>On creating a large image of Rufāʾel</label>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Lusini2005EAEDersanaRufael"/>
+               </bibl>
+            </listBibl>
+            <listRelation>            
+               <relation name="ecrm:P129_is_about" active="LIT1297Dersan" passive="PRS8083Raphael"/>
+            </listRelation>
+            <div type="edition">       
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7214HomilyJCRuf">
+                  <label>Homily by John Chrysostom on the archangel Rufāʾel</label>
+               </div>
+               
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Miracles">
+                  <label>First collection of miracles of the archangel Rufāʾel</label>
+                  <div type="textpart" subtype="chapter" xml:id="MiracleImage">
+                     <label>On creating a large image of Rufāʾel</label>
+                  </div>
+                  <div type="textpart" subtype="chapter" xml:id="MiracleSeaMonster">
+                     <label>Miracle of the keeper of a church, who was carried away by a sea monster</label>
+                     <note>This miracle is different from <ref type="work" corresp="LIT7164MRWhale"/>, where a king is swallowed by a sea monster.</note>
+                  </div> 
+                  <div type="textpart" subtype="chapter" xml:id="MiracleConstantine">
+                     <label>On how Rufāʾel appeared to emperor Constantine</label>
+                  </div>
+                  <div type="textpart" subtype="chapter" xml:id="MiracleTobias">
+                     <label>Miracle of Tobias</label>
+                  </div>
+               </div>
+               
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT2387Taamme">
+                  <label>Second collection of miracles of the archangel Rufāʾel</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7161MRWomb">
+                  <label>Miracle of the power of St Raphael to loosen the womb</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7162MRTheophilus">
+                  <label>Miracle of the Patriarch Theophilus who remained buried for three days</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7163MRKidnapping">
+                  <label>Miracle of the boy kidnapped by an elephant</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7164MRWhale">
+                  <label>Miracle of the king swallowed by a whale</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7165MRThief">
+                  <label>Miracle of the thief who had broken into a church that contained treasures</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7166MRDeacon">
+                  <label>Miracle of the deacon thrown into the sea</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7167MRHealing">
+                  <label>Miracle of the healing powers of St Raphael</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7168MRWidow">
+                  <label>Miracle of the poor widow</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7169MRChurch">
+                  <label>Miracle of the construction of the church of Rufāʾel in Amḥarā</label>
+                  <note>This miracle is different from <ref type="work" corresp="LIT7215HistoryRuf"/>.</note>
+               </div> 
+               
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7215HistoryRuf">
+                  <label>History of the consecration of the church of Rufāʾel on an island near Alexandria</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7216HistoryJCRuf">
+                  <label>History of how John Chrysostom visited the church of Rufāʾel on an island</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT6633SalRufMastafessehe">
+                  <label>Salām-hymn to the archangel Raphael</label>
+               </div>
+            </div>
          </div>
-         <div type="textpart" subtype="chapter" xml:id="MiracleSeaMonster">
-            <label>On a keeper of a church, who was carried away by a sea monster</label>
-         </div> 
-         <div type="textpart" subtype="chapter" xml:id="MiracleConstantine">
-            <label>On how Rufāʾel appeared to emperor Constantine</label>
-         </div>
-         <div type="textpart" subtype="chapter" xml:id="MiracleTobias">
-            <label>On Tobias</label>
-         </div>
-         <div type="textpart" subtype="chapter" xml:id="MiracleChurch">
-            <label>History of the consecration of the church of Rufāʾel on an island near Alexandria</label>
-         </div>
-      </div>
-    
-    <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT2387Taamme">
-       <div type="textpart" subtype="incipit">
-          ...
-       </div>
-    </div>
-    
-    <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7215HistoryRuf">
-       <label>History of the consecration of the church of Rufāʾel on an island near Alexandria</label>
-       <note>
-          The following incipit is taken from 
-          <bibl><ptr target=""/><citedRange unit="page">176-177</citedRange></bibl>.</note>
-       <!-- Gabraśǝllāse Bǝrhanu, ed., 1954 A.M. ድርሳነ፡ ሚካኤል፡ ድርሳነ፡ ሩፋኤል፡ መልክአ፡ ሚካኤል፡ መልክአ፡ ሩፋኤል። በግዕዝና፡ በአማርኛ። (Dǝrsāna Mikāʾel Dǝrsāna Rufāʾel Malkǝʾa Mikāʾel Malkǝʾa Rufāʾel, bagǝʿǝzǝnnā baʾamārǝññā, ’Homiliary of Michael, Image of Michael, Homiliary of Raphael, Image of Raphael, in Gǝʿǝz and in Amharic’), (ʾAddis ʾAbabā: ’Aksum Māttamiyā Bet Tāttama, 1954 A.M.),  -->
-       <ab></ab> 
-    </div>
-    
-    <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT7216HistoryJCRuf">
-       <label>History of how John Chrysostom visited the church of Rufāʾel on an island</label>
-       <note>
-          The following incipit is taken from 
-          <bibl><ptr target=""/><citedRange unit="page">178-191</citedRange></bibl>.</note>
-       <!-- Gabraśǝllāse Bǝrhanu, ed., 1954 A.M. ድርሳነ፡ ሚካኤል፡ ድርሳነ፡ ሩፋኤል፡ መልክአ፡ ሚካኤል፡ መልክአ፡ ሩፋኤል። በግዕዝና፡ በአማርኛ። (Dǝrsāna Mikāʾel Dǝrsāna Rufāʾel Malkǝʾa Mikāʾel Malkǝʾa Rufāʾel, bagǝʿǝzǝnnā baʾamārǝññā, ’Homiliary of Michael, Image of Michael, Homiliary of Raphael, Image of Raphael, in Gǝʿǝz and in Amharic’), (ʾAddis ʾAbabā: ’Aksum Māttamiyā Bet Tāttama, 1954 A.M.),  -->
-       <ab></ab> 
-    </div>
-       
-    <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="LIT6633SalRufMastafessehe">
-       <note>
-          The following incipit is taken from 
-          <bibl><ptr target=""/><citedRange unit="page">178-191</citedRange></bibl>.</note>
-       <!-- Gabraśǝllāse Bǝrhanu, ed., 1954 A.M. ድርሳነ፡ ሚካኤል፡ ድርሳነ፡ ሩፋኤል፡ መልክአ፡ ሚካኤል፡ መልክአ፡ ሩፋኤል። በግዕዝና፡ በአማርኛ። (Dǝrsāna Mikāʾel Dǝrsāna Rufāʾel Malkǝʾa Mikāʾel Malkǝʾa Rufāʾel, bagǝʿǝzǝnnā baʾamārǝññā, ’Homiliary of Michael, Image of Michael, Homiliary of Raphael, Image of Raphael, in Gǝʿǝz and in Amharic’), (ʾAddis ʾAbabā: ’Aksum Māttamiyā Bet Tāttama, 1954 A.M.),  -->
-          <ab>ሰላም፡ ለሩፋኤል፡ መስተፍሥሔ፡ ዘተብህለ።</ab>
-       </div>
-    </div>
-    
-    
-
-  </div>
       </body>
    </text>
 </TEI>
