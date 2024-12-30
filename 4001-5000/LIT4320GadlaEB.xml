@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4320GadlaEB">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT4320GadlaEB">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -12,14 +13,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+               Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
-               </licence>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                  licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
@@ -34,28 +33,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+            href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <abstract><p></p>
-      </abstract>
-      <textClass>
-         <keywords>
-            <term key="ChristianLiterature"/>
-            <term key="Hagiography"/>
-            <term key="Biography"/>
-         </keywords>
-      </textClass>
-     
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract>
+            <p> The text of the Life of St ʾEwosṭātewos, classified as 'redaction β', characterised
+               by devotion of <persName ref="PRS1854Amdase"/> to <persName ref="PRS3934Ewostate"/>,
+               is believed to represent the an elaborated shorter version of the 'redaction α', as
+               noted in <bibl>
+                  <ptr target="bm:Lusini1993Monachesimo"/>
+                  <citedRange unit="page">42-43</citedRange>
+               </bibl>. </p>
+         </abstract>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Hagiography"/>
+               <term key="Biography"/>
+            </keywords>
+         </textClass>
+
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="MV" when="2017-01-20">CREATED: text record</change>
-         <change who="NV" when="2024-12-02" >corrected the bibl, added keywords, an abstract, inicipt and explicit</change>
+         <change who="NV" when="2024-12-30">corrected the bibl, added keywords, an abstract, inicipit.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -74,9 +84,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Colin2017Saintsfondateurs"/>
                   <citedRange>75-215</citedRange>
                </bibl>
-            </listBibl> 
-            
+            </listBibl>
+
             <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Lusini1993Monachesimo"/>
+               </bibl>
                <bibl>
                   <ptr target="bm:Lusini1996Ewostatewos"/>
                   <citedRange unit="page">353-365</citedRange>
@@ -85,23 +98,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Adankpo2023Ewostatewos"/>
                </bibl>
             </listBibl>
-            
+
             <listRelation>
                <relation name="saws:isVersionOf" active="LIT4320GadlaEB" passive="LIT4319GadlaEA"/>
                <relation name="saws:isVersionOf" active="LIT4320GadlaEB" passive="LIT1438GadlaE"/>
             </listRelation>
+         </div>
+         <div type="edition" xml:lang="gez">
+
+            <div type="textpart" xml:id="Introduction">
+               <label>Introduction</label>
+               <ab> በስመ፡ እግዚአብሔር፡ አብ፡ ብሉየ፡ መዋዕል፡ እምቅድመ፡ ዓለም፡ ህልዎቱ፡ ግሩመ፡ ግሩማን፡ በመለኮቱ፡ ልዑለ፡ ልዑላን፡ </ab>
+               <note>The text is taken from <ref type="mss" corresp="EMML529"/>.</note>
             </div>
-         <div type="edition">
-               <div type="textpart" subtype="chapter" xml:id="Introduction"/>
-            
-               <div type="textpart" subtype="chapter" xml:id="Vita">  
-            <ab>
-                     ንዌጥን፡ በረድኤተ፡ እግዚአብሔር፡ <gap reason="omitted" extent="unknown"/> ገድሉ፡ ለብፁዕ፡ ወቅዱስ፡ ኤዎስጣቴዎስ፡ ድንግል፡ <gap reason="omitted" extent="unknown"/> 
-                     ወለዝንቱ፡ ቅዱስ፡ አቡሁ፡ እምዘመደ፡ መኳንንት፡ ዐበይት፡ እለ፡ እምሥራቀ፡ ጸሓይ፡
-              
-                     ለእለ፡ ሀለዉ፡ ህየ፡ ከመ፡ ይግብሩ፡ ተዝካሮ፡ ወይትአመኑ፡ በጸሎቱ። ስብሐት፡ ለእግዚአብሔር፡ አብ፡ ለዘኀረዮ፡ <gap reason="omitted" extent="unknown"/> 
-                  </ab>
-               </div>  
+            <div type="textpart" xml:id="Vita">
+               <label>Vita</label>
+               <ab>ወጥንኬ፡ ይእዜኒ፡ በረድኤተ፡ እግዚአብሔር፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ከመ፡ ንጽሐፍ፡ ዜና፡ ገድለ፡ ኂሩቶ፡ ለብፁዕ፡
+                  ወለቅዱስ፡ አባ፡ ኤዎስጣቴዎስ፡ </ab>
+               <note>The text is taken from <ref type="mss" corresp="EMML529"/>.</note>
+            </div>
          </div>
       </body>
    </text>
