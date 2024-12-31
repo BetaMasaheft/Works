@@ -1,16 +1,13 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6633SalRufMastafessehe" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7215HistoryRuf" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Salām-hymn to the archangel Raphael</title>
-                <title xml:lang="gez" xml:id="t2">ሰላም፡ ለሩፋኤል፡ መስተፍሥሔ፡ ዘተብህለ።</title>
-                <title xml:lang="gez" type="normalized" corresp="#t2">Salām la-Rufāʾel mastafśǝḥe za-tabǝhla</title>
-                <title xml:lang="en" corresp="#t2">Salutation to Raphael, who is called 'the Rejoicer'</title>
-               <editor role="generalEditor" key="AB"/>
-                <editor key="DR"/>
+                <title xml:lang="en" xml:id="t1">History of the consecration of the church of Rufāʾel on an island near Alexandria</title>
+                <editor role="generalEditor" key="AB"/>
+                <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -33,13 +30,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>
+                    This text is traditionally found as part of the <ref type="work" corresp="LIT1297Dersan">Dǝrsāna Rufāʾel</ref> and has to be read on 3rd Ṗāgʷǝmen
+                    (e.g., <ref type="mss" corresp="BAVet130"/>, 
+                    and so also in the printed edition  <bibl><ptr target="bm:Tasfa1954DersanaM"/></bibl>), but elsewhere (e.g., <ref type="mss" corresp="BAVet124"/>) 
+                    the consecrated church is dedicated to the archangel Michael.
+                </p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Hagiography"/>
-                    <term key="Poetry"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -48,8 +49,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DR" when="2022-05-10">Created entity</change>
-            <change who="MV" when="2024-12-19">Expanded title, added bibl</change>
+            <change who="MV" when="2024-12-20">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -58,26 +58,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <listBibl type="editions">
                     <bibl>
                         <ptr target="bm:Tasfa1954DersanaM"/>
-                        <citedRange unit="page">177</citedRange>
+                        <citedRange unit="page">176-177</citedRange>
                     </bibl>
                 </listBibl>
                 <listRelation>
-                    <relation name="ecrm:P129_is_about" active="LIT6633SalRufMastafessehe" passive="PRS8083Raphael"/>
-                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT6633SalRufMastafessehe" passive="LIT1297Dersan"/>
-                    <relation name="saws:isDifferentTo" active="LIT6633SalRufMastafessehe" passive="LIT2847RepCh129b"/>                   
+                    <relation name="ecrm:P129_is_about" active="LIT7215HistoryRuf" passive="PRS8083Raphael"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7215HistoryRuf" passive="LIT1297Dersan"/>
                 </listRelation>
             </div>
             <div type="edition">
-                <div type="textpart" xml:lang="gez">
-                    <note>The following text is taken from <ref type="mss" corresp="BLorient590"/>.</note>
+                <note>The following incipit is taken from <bibl>
+                    <ptr target="bm:Tasfa1954DersanaM"/>
+                    <citedRange unit="page">176</citedRange>
+                </bibl>.</note>
+                <div type="textpart" subtype="incipit" xml:lang="gez">
                     <ab>
-                        <lg>
-                            <l n="1">ሰላም፡ ለሩፋኤል፡ መስተፍሥሔ፡ ዘተብህለ።</l>
-                            <l n="2">እስመ፡ ይፌውስ፡ ሕማመ፡ ወእስመ፡ ያጥዒ፡ ቍስለ።</l>
-                            <l n="3">እንዘ፡ ይብል፡ አስምዖ፡ ለጦቢት፡ ቃለ።</l>
-                            <l n="4">ጽድቀ፡ እለ፡ ይዴምሩ፡ ይረክቡ፡ ሣህለ።</l>
-                            <l n="5">ወእለ፡ ይኤብሱ፡ በነፍሶሙ፡ ያመጽኡ፡ ቀትለ።</l>
-                        </lg>
+                    በስመ፡ አብ፡ ወወልድ፡ ወምንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላካ፤ አመ፡ ሠሉሱ፡ ለጳጕሜን፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ሩፋኤል፡ ሊቀ፡ መላእክት፡ ዘውእቱ፡ 
+                    ሣልሳይ፡ እምሊቃነ፡ መላእክት፡ ትጉሃን፡ ቅዱሳን፡ ሰማያውያን፡ በከመ፡ ጸሐፍነ፡ አመ፡ ዐሡሩ፡ ወሰኑዩ፡ ለኅዳር። ወቅዳሴ፡ ቤተ፡ ክርስቲያኑ፡ እንተ፡ ተሐንጸት፡ 
+                    ሎቱ፡ ዲበ፡ ደሴት፡ በአፍአ፡ ሀገረ፡ እስክንድርያ፡ በመዋዕሊሁ፡ ለቴዎፍሎስ፡ ሊቀ፡ ጳጳሳት፡ ወትእምርት፡ ዘአስተርአየ፡ ውስቴታ።
                     </ab>
                 </div>
             </div>
