@@ -5,6 +5,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">ጸሎት፡ በእንተ፡ ሕማመ፡ ቍርጸት፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalot baʾǝnta ḥǝmāma qʷǝrṣat</title>
+                <title xml:lang="en" corresp="#t1">Prayer against the pain of colic</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -46,12 +48,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     <term key="Prayers"/>
                     <term key="Magic"/>
                     <term key="AmharicLiterature"/>
+                    <term key="DiseasePain"/>
                 </keywords>
             </textClass>
             <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2017-03-31">Created entity</change>
+            <change when="2025-01-07" who="CH">Added relations</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -63,6 +67,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 </ab>
             </div>
            </div>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="dc:relation" active="LIT4595Salot" passive="LIT4604Salot"><desc>Thematically similar to 
+                        <ref type="work" corresp="LIT4604Salot"/>.</desc></relation>
+                    <relation name="dc:relation" active="LIT4595Salot" passive="LIT4622Prayer"><desc>Possibly similar to 
+                        <ref type="work" corresp="LIT4622Prayer"/>, which is attested with a longer incipit.</desc></relation>
+                    <relation name="dc:relation" active="LIT4595Salot" passive="LIT4623Prayer"><desc>Possibly similar to 
+                        <ref type="work" corresp="LIT4623Prayer"/>, which is attested with a longer incipit.</desc></relation>
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>
