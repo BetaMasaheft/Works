@@ -4,7 +4,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to St Anthony</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ እንጦንዮስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa ʾƎnṭonyos</title>
+            <title corresp="#t1" xml:lang="en">Image of Anthony</title>
+            <editor key="AD"></editor>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -23,11 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -49,25 +48,64 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-13">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-10">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation>
+            <relation name="ecrm:P129_is_about" active="LIT2868RepCh149" passive="PRS1962Anthony"/>
+            <relation name="skos:exactMatch" active="LIT2868RepCh149" passive="https://w3id.org/malke/2868/"></relation>
+         </listRelation>
          <div type="bibliography">
-            <listBibl type="editions">
+            <listBibl type="editions">               
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">149</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምከ፡ ዘቀለመ፡ አሌፍ፡ ፊደሉ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ዘቀለመ፡ አሌፍ፡ ፊደሉ፨</l>
+                  <l n="2">ለሥዕርትከ፡ ወለርእስከ፡ እንዘ፡ ገጸከ፡ አተሉ፨</l>
+                  <l n="3">ኮከበ፡ ገዳም፡ እንጦንዮስ፡ ዘስቡሕ፡ ሥነ፡ ጸዳሉ፨</l>
+                  <l n="4">እስከ፡ እፌጽም፡ ውዳሴከ፡ ተራድአኒ፡ በኵሉ፨</l>
+                  <l n="5">እስመ፡ ኀይለ፡ ረድኤት፡ ብከ፡ ዘታሕቱ፡ ወላዕሉ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለቀራንብቲከ፡ ምጽለላተ፡ ክልኤ፡ አዕይንት፨</l>
+                  <l n="2">ለአእዛኒከ፡ ወለመላትሒከ፡ እንተ፡ የዐውዶን፡ ሲበት፨</l>
+                  <l n="3">እንጦንዮስ፡ አብ፡ ወላዴ፡ ብዙኃን፡ ፍጥረት፨</l>
+                  <l n="4">ልደኒ፡ እማሕፀንከ፡ እንተ፡ ይእቲ፡ ቅናት፨</l>
+                  <l n="5">ወሐሊበ፡ ረድኤትከ፡ ይውግዐኒ፡ እምክልኤ፡ አጥባት፨</l>
+               </lg>
+               <lg type="stanza" n="12">
+                  <l n="1">ሰላም፡ ለመቃብሪከ፡ ዘኮነ፡ ስዉረ፨</l>
+                  <l n="2">እምዐይነ፡ ጻድቃን፡ ኵሉ፡ ከመ፡ ቃልከ፡ ነገረ፨</l>
+                  <l n="3">እንጦንዮስ፡ አብ፡ ናስተበፅዐከ፡ ኅቡረ፨</l>
+                  <l n="4">ቃልከ፡ ከመ፡ መምህር፡ ምሥጢረ፡ መላእክት፡ መሀረ፨</l>
+                  <l n="5">ወከመ፡ ጻድቃን፡ እግርከ፡ ገዳማተ፡ ሖረ፨</l>
+               </lg>
+               <lg type="stanza" n="13">
+                  <l n="1">እምነ፡ መቃሪ፡ ዘወለድኮ፡ እማሕፀነ፡ ቅድስት፡ አስኬማ፨</l>
+                  <l n="2">እምጳኵሚስ፡ ወጴሜን፡ ወአሞን፡ እስከ፡ ገሪማ፨</l>
+                  <l n="3">አስተበቍዐከ፡ እንጦንስ፡ በእንተ፡ ኵሉ፡ ጉባኤ፡ ራማ፨</l>
+                  <l n="4">ከመ፡ ታድኅነኒ፡ እምዓለመ፡ ሕማም፡ ወጻማ፨</l>
+                  <l n="5">ዐፀደ፡ ኃሣር፡ ወምንንት፡ ስማ፨</l>
+               </lg>
+               <lg type="stanza" n="14">
+                  <l n="1">እንጦንዮስ፡ ወመቃርዮስ፡ አርሳንዮስ፡ ወጰላድዮስ፨</l>
+                  <l n="2">ኅሩይ፡ ኪሮስ፡ በብኑዳ፡ ሚሳኤል፡ ወቅሪስ፨</l>
+                  <l n="3">ፍቁረ፡ ማርያም፡ ድንግል፡ ወፍቁረ፡ ወልዳ፡ ክርስቶስ፨</l>
+                  <l n="4">ገሪማ፡ ሊባኖስ፡ ጰንጠሌዎን፡ ወሊቃኖስ፨</l>
+                  <l n="5">ሰአሉ፡ ለነ፡ ጻድቃን፡ ፍሡሓን፡ በሰማያት፡ አግብርተ፡ መንፈስ፡ ቅዱስ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

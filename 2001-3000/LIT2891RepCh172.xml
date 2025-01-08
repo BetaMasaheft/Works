@@ -5,12 +5,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-
             <title xml:id="t1" xml:lang="gez">መልክአ፡ ማርያም፡</title>
-            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Māryām</title>
-            <title corresp="#t1" xml:lang="en"><hi rendition="simple:italic">Malkǝʾ</hi>-hymn to
-               Mary</title>
-            <title xml:lang="en" corresp="#t1">Image of Mary</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Māryām</title>
+            <title corresp="#t1" xml:lang="en">Image of Mary</title>
+            <title xml:id="t2" xml:lang="gez">መልክአ እግዝእትነ፡ ማርያም፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Malkəʾa ʾƎgzəʾtəna Māryām</title>
+            <title corresp="#t2" xml:lang="en">Image of Our Lady Mary</title>
+            <title xml:id="t3" xml:lang="gez">መልክአ፡ ማርያም፡ ዘደብረ፡ ሲና፡ ወዘማርያም፡ ዓይላ፡</title>
+            <title corresp="#t3" xml:lang="gez" type="normalized">Malkəʾa Māryām za-Dabra Sinā wa-za-Māryām ʿĀylā</title>
+            <title corresp="#t3" xml:lang="en">Image of Mary of Dabra Sinā and of Māryām ʿĀylā</title>
 
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -72,6 +75,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2018-07-04">Added abstract, incipit variants</change>
          <change who="MKr" when="2023-05-28">Added translation bibliography</change>
          <change when="2024-09-17" who="ES">added automatically extracted text</change>
+         <change who="ES" when="2024-10-02">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -82,8 +86,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   passive="LIT2939RepCh220"/>
                <relation name="betmas:formerlyAlsoListedAs" active="LIT2891RepCh172"
                   passive="LIT1858Malkea"/>
+               <relation name="skos:exactMatch" active="LIT2891RepCh172" passive="https://w3id.org/malke/2891/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT2891RepCh172" passive="PRS6819Mary"></relation>
             </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">172</citedRange>
@@ -109,13 +116,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </div>
 
          <div type="edition" xml:lang="gez">
-            <div type="textpart" xml:id="stanza1"><ab> ሰላም፡ ሰላም፡ ለዝክረ፡ ስምኪ፡ ሐዋዝ፣ እምነ፡ ከልበኔ፡ ወዮስጥ፡ ወእምነ፡
-               ሰንበልት፡ ምዑዝ፣ ማርያም፡ ድንግል፡ ለባሲተ፡ ዐቢይ፡ ትእዛዝ፣ ይሥቅየኒ፡ ለለጽባሑ፡ ወይነ፡ ፍቅርኪ፡ አዚዝ፣ ከመ፡ ይሠቅዮ፡ ዉቲዝ፡
-               ለሠናይ፡ አርዝ። </ab></div>
-            <div type="textpart" xml:id="stanza2"><ab> ሰላም፡ ለሥዕርተ፡ ርእስኪ፡ ዘተንእደ፡ ፅፍሮሁ፣ ለአቡኪ፡ በከናፍሪሁ፣
-               ማርያም፡ ድንግል ለእግዚአብሔር፡ ጽርሑ፣ ለገብርኪ፡ እግዚእትየ፡ ኢትኅድግኒ፡ እላሁ፣ ከመ፡ ኢይበሉኒ፡ ፀር አይቴኑመ፡ ምክሑ። </ab></div>
-            <div type="textpart" xml:id="stanza3"><ab> ሰላም፡ ለርእስኪ፡ በቅብዐ፡ ቅዳሴ፡ ርሑስ፣ አኮ፡ አኮ፡ በቅብዐ፡ ደነስ፣
-               ማርያም፡ ድንግል ንጽሕተ፡ ሥጋ፡ ወነፍስ፣ ያንጽሐኒ፡ እምነ፡ ርኩስ፡ በፍሕመ፡ ሞርባኑ፡ ቅዱስ፣ አዝዚዮ ለሱራፊ፡ ዘሰማይ፡ ቀሲስ። </ab></div>
+            <div type="textpart" xml:id="masgabiya">
+               <lg type="stanza" n="1">
+                  <l n="1">ማርያምሰ፡ ኀርየት፡ መክፈልተ፡ ሠናየ፡ ዘኢየኀይድዋ፨</l>
+                  <l n="2">ይእቲ፡ ፀምር፡ ጸዓዳ፡ ዘእምነገደ፡ ይሁዳ፨</l>
+                  <l n="3">ሰረገላ፡ አሚናዳብ፡ ንብረታ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="malke">
+               
+               <div type="textpart" xml:id="stanza1"><lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ሰላም፡ ለዝክረ፡ ስምኪ፡ ሐዋዝ፨</l>
+                  <l n="2">እምነ፡ ከልበኔ፡ ወቊስጥ፡ ወእምነ፡ ሰንበልት፡ ምዑዝ፨</l>
+                  <l n="3">ማርያም፡ ድንግል፡ ለባሲተ፡ ዓቢይ፡ ትዕዛዝ፨</l>
+                  <l n="4">ይስቅየኒ፡ ለለጽባሑ፡ ወይነ፡ ፍቅርኪ፡ ዐዚዝ፨</l>
+                  <l n="5">ከመ፡ ይሰቅዮ፡ ውኂዝ፡ ለሠናይ፡ አርዝ፨</l>
+               </lg>
+               </div>
+               <div type="textpart" xml:id="stanza2"><lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለሥዕርተ፡ ርእስኪ፡ ዘተንእደ፡ ጽፍሮሁ፨</l>
+                  <l n="2">ለአቡኪ፡ በከናፍሪሁ፨</l>
+                  <l n="3">ማርያም፡ ድንግል፡ ለእግዚአብሔር፡ ጽርሑ፨</l>
+                  <l n="4">ለገብርኪ፡ እግዝእትየ፡ ኢትኅድግኒ፡ እላሁ፨</l>
+                  <l n="5">ከመ፡ ኢይበሉኒ፡ ፀር፡ አይቴኑ፡ ምክሑ፨</l>
+               </lg>
+               </div>
+               <div type="textpart" xml:id="stanza3"><lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለርእስኪ፡ በቅብአ፡ ቅዳሴ፡ ርሑስ፨</l>
+                  <l n="2">አኮ፡ አኮ፡ በቅብአ፡ ደነስ፨</l>
+                  <l n="3">ማርያም፡ ድንግል፡ ንጽሕተ፡ ሥጋ፡ ወነፍስ፨</l>
+                  <l n="4">ያንጽሐኒ፡ እምነ፡ ርኵስ፤ በፍሕመ፡ ቍርባኑ፡ ቅዱስ፨</l>
+                  <l n="5">አዝዚዮ፡ ለሱራፊ፡ ዘሰማይ፡ ቀሲስ፨</l>
+               </lg>
+               </div>
             <div type="textpart" xml:id="stanza4"><ab> ሰላም፡ ለገጽኪ፡ ዘጥቀ፡ ይልሂ፣ እምሥነ፡ ከዋክብት፡ ወወርኀ፡ ወእምሥነ፡
                ፀሐይ፡ መብርሂ፣ ማርያም፡ ድንግል፡ ፍናዋትየ፡ ሠርጊ፣ በመዓልት፡ ወበሌሊት፡ ኢይርከበኒ፡ ጸናሒ፣ መሥገርተ፡ አበሳ፡ ዘይጠፍር፡ ወግበ፡
                ዘይድሂ። </ab></div>
@@ -269,6 +302,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                ጌጋዩ፡ ወኃጢአቱ፡ ኢይትኃደግ፡ ሎቱ። </ab></div>
             <div type="textpart" xml:id="stanza64"><ab> ኦ፡ እግዝእትየ፡ ማርያም፡ ዕቀብኒ፡ ወአድኅንኒ፡ እመከራ፡ ሥጋ፡ ወነፍስ፡
                ሊተ፡ ለገበርኪ፣ ሊተ ለአመትኪ።</ab></div>
+            </div>
          </div>
       </body>
    </text>

@@ -4,8 +4,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">On the Flight of the Holy Family</title>
-            
+            <title xml:lang="en"  xml:id="t1">On the Flight of the Holy Family</title>
+            <title xml:lang="gez" xml:id="t2">ድርሳን፡ ዘቅዱስ፡ አባ፡ ዮሐንስ፡ ጳጳስ፡ ክቡር፡ ዘሀገረ፡ ቍስጥንጥንያ፡ ጶሊስ፡ ዘነገረ፡ በእንተ፡ ዞቦአ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ውስተ፡ ብሔረ፡ ግብፅ፡ ምስለ፡ ማርያም፡ እሙ፡</title>
+            <title xml:lang="gez" type="corresp" corresp="#t2">Dǝrsān za-qǝddus ʾabbā Yoḥannǝs ṗāṗās kǝbur za-Qʷǝsṭǝnṭǝnyā Ṗolis za-nagara baʾǝnta za-boʾa ʾǝgziʾǝna Iyasus Krǝstos
+               wǝsta bǝḥera Gǝbḍ mǝsla Māryām ʾǝmu</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -34,12 +36,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Theology"/>
                <term key="Homily"/>
+               <term key="Translation"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -48,6 +54,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-15" who="ES">keywords relation</change>
+         <change when="2024-11-06" who="MKr">added bibliography, Ehiopic title, incipit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -55,7 +62,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <listRelation>
             <relation name="saws:isAttributedToAuthor" active="LIT2123OntheF" passive="PRS5720JohnChr"/>
          </listRelation>
-         <ab/>
+       
+         <listBibl type="secondary">
+            <bibl><ptr target="bm:Proverbio1998Recensione"/><citedRange unit="page">77</citedRange></bibl>
+         </listBibl>
+         
+         <div xml:lang="gez" type="edition">
+            <note>The incipit is taken from <ref type="mss" corresp="EMML2461"/>.</note>
+            <div type="textpart" subtype="incipit">
+               <ab xml:lang="gez">ኢሳይያስ፡ ልዑለ፡ ቃል፡ እምነቢያት፡ ከልሐ፡ ወይቤ፡ እስመ፡ እግዚአብሔር፡ ፀባኦት፡ ይወርድ፡ ብሔረ፡ ግብፅ፡  ወይፄዓን፡ በላዕለ፡ ደመና፡ ቀሊል፡ ወያማሰኖሙ፡ ለኵሎሙ፡ ጣዖታተ፡ ግብፅ፡ </ab>
+            </div>
+         </div>
+        
       </body>
+     
+      
    </text>
 </TEI>

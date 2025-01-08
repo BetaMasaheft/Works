@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to ʾEwosṭātewos</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ኤዎስጣቴዎስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa ʾEwosṭātewos</title>
+            <title corresp="#t1" xml:lang="en">Image of ʾEwosṭātewos</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +16,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                 
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -49,25 +47,111 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-03">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-10">Added the text, title, relations and bibl (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT2956RepCh237" passive="PRS3934Ewostate"></relation>
+               
+               <relation name="skos:exactMatch" active="LIT2956RepCh237" passive="https://w3id.org/malke/2956/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>            
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
-                  <citedRange unit="item">237</citedRange>
+                  <citedRange unit="item">237</citedRange> <citedRange unit="item">63</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ቀዳሚሁሰ፡ ለዘ፡ የአምን፡ በረድኤትከ፡ በኃይል።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ቀዳሚሁሰ፡ ለዘየአምን፡ በረድኤትከ፡ ዘኀይል፨</l>
+                  <l n="2">ወበጸሎትከ፡ አባ፡ እንተ፡ ታሠልጥ፡ ወትክል፨</l>
+                  <l n="3">ይቀውም፡ ገሃደ፡ በመካነ፡ ትምህርት፡ ልዑል፨</l>
+                  <l n="4">እንተ፡ የዐትብ፡ ገጸ፡ በትእምርተ፡ ቅዱስ፡ መስቀል፨</l>
+                  <l n="5">ወእምዝ፡ ያወሥእ፡ ወይብል፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለፅንሰትከ፡ በብስራተ፡ ዐቢይ፡ መልአክ፨</l>
+                  <l n="2">ዘይቀውም፡ ዘልፈ፡ በቅድመ፡ አምላክ፨</l>
+                  <l n="3">ኤዎስጣቴዎስ፡ ኅጠት፡ ወዘርእ፡ ቡሩክ፨</l>
+                  <l n="4">ብፅዓን፡ ለገራህትከ፡ እንተ፡ ኢነፍሖ፡ ደደክ፨</l>
+                  <l n="5">ወኢጠበቅዋ፡ ሙግሕያ፡ ወሦክ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለልደትከ፡ እንተ፡ ኮኖሙ፡ ፍሥሓ፨</l>
+                  <l n="2">ለሥነ፡ ሕይወት፡ ወለአዝማዲሃ፨</l>
+                  <l n="3">ኤዎስጣቴዎስ፡ ሕፃን፡ ዘአርሳዕከ፡ ላሐ፨</l>
+                  <l n="4">አበውኡ፡ ለከ፡ ፍቁርየ፡ እምፍሬ፡ ከናፍር፡ አምኃ፨</l>
+                  <l n="5">ወዘማሕሌት፡ እሁበከ፡ ገርሃ፨</l>
+               </lg>
+               <lg type="stanza" n="4">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ከመ፡ ዝክረ፡ ማሕሌት፡ ሠናይ፨</l>
+                  <l n="2">እንተ፡ ጊዜ፡ ሀሎ፡ ስታይ፨</l>
+                  <l n="3">ኰናኔ፡ መኳንንት፡ አርባዕ፡ ኤዎስጣትዎስ፡ ፀሓይ፨</l>
+                  <l n="4">በሥነ፡ ዕበይከ፡ ይትፌሣሕ፡ ሰማይ፨</l>
+                  <l n="5">ወበስብሐቲከ፡ ትትኀሠይ፡ ቀላይ፨</l>
+               </lg>
+               <lg type="stanza" n="5">
+                  <l n="1">ሰላም፡ ለሥዕርተ፡ ርእስከ፡ ዘሕበሪሁ፡ ጸሊም፨</l>
+                  <l n="2">ወድላሌሁ፡ አዳም፨</l>
+                  <l n="3">ኤዎስጣቴዎስ፡ ወሬዛ፡ ንኡሰ፡ መዋዕል፡ ወዓም፨</l>
+                  <l n="4">ከመ፡ ትባርከኒ፡ በበረከተ፡ አብ፡ ወእም፨</l>
+                  <l n="5">አስተኀይስ፡ ነገራተ፡ በልብከ፡ ዮም፨</l>
+               </lg>
+               <lg type="stanza" n="50">
+                  <l n="1">ሰላም፡ ለግንዘተ፡ ሥጋከ፡ ለሊቀ፡ ጳጳሳት፡ በእዱ፨</l>
+                  <l n="2">ለእግዚአብሔር፡ በፈቃዱ፨</l>
+                  <l n="3">ለሰብአ፡ አርማንያ፡ ይቤሉ፡ ኵሎሙ፡ ለለ፡ አሐዱ፨</l>
+                  <l n="4">ምንትኑአ፡ ለማዕቀበ፡ እግዚእ፡ ዘብዱ፨</l>
+                  <l n="5">ዘክህለት፡ ባሕረ፡ ከመ፡ ታዕዱ፨</l>
+               </lg>
+               <lg type="stanza" n="51">
+                  <l n="1">ሰላም፡ ለመቃብሪከ፡ ዘግሩም፡ ዕበያ፨</l>
+                  <l n="2">በቤተ፡ መርምህናም፡ ዘአርማንያ፨</l>
+                  <l n="3">ኤዎስጣቴዎስ፡ ነቢይ፡ ወሐዋርያ፨</l>
+                  <l n="4">ትበከየከ፡ ኢትዮጵያ፡ ለዘመጠነ፡ ዝ፡ ባሕርያ፨</l>
+                  <l n="5">ከመ፡ በከያ፡ ያዕቆብ፡ ለልያ፨</l>
+               </lg>
+               <lg type="stanza" n="52">
+                  <l n="1">እግዚአብሔር፡ እግዚእ፡ እንዘ፡ ይሁበኒ፡ ቃለ፨</l>
+                  <l n="2">ስብሐታቲከ፡ ነበብኩ፡ አምጣነ፡ ብየ፡ ክሂለ፨</l>
+                  <l n="3">ኤዎስጣቴዎስ፡ ባርኮ፡ ወወስኮ፡ ኀይለ፨</l>
+                  <l n="4">ዘይስዕር፡ መንፈሰ፡ ደዌ፡ ወዘያጥኢ፡ አባለ፨</l>
+                  <l n="5">ወአጋንንተ፡ ዘይሬሲ፡ ጸበለ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke" corresp="LIT2779RepCh63">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለከ፡ ኤዎስጣቴዎስ፡ ሐመር፡ ወመንፈሳዊ፡ መልሕቅ፨</l>
+                  <l n="2">ለለ፡ ይነግዱ፡ ውስተ፡ ባሕር፡ ዕሙቅ፨</l>
+                  <l n="3">መዝኅን፡ ወመርሶ፡ ጽድቅ፨</l>
+               </lg>
+               <lg type="stanza" n="5">
+                  <l n="1">ሰላም፡ ለከ፡ መንክራቲከ፡ ሰሚዐ፡ ትደንግፅ፡ እዝን፨</l>
+                  <l n="2">ወትትገሀሠከ፡ እንተ፡ ርእየት፡ ዐይን፨</l>
+                  <l n="3">እስመ፡ ብከ፡ ኀይለ፡ ሥልጣን፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለከ፡ አቅማሃ፡ ከናፍሪነ፡ እረር፨</l>
+                  <l n="2">ከመ፡ ክሬ፡ ስርናይ፡ ሥሙር፨</l>
+                  <l n="3">ሐረሳዊ፡ ትጉህ፡ ወመስተገብር፨</l>
+                  <l n="4">እስመ፡ በጽሐ፡ ጊዜ፡ ማዕረር፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለከ፡ ለለ፡ ንብለከ፡ ሰላመ፡ በቃለ፡ ዛቲ፡ ቡራኬ፨</l>
+                  <l n="2">ዝ፡ ውእቱ፡ ጊዜ፡ ቡራኬ፨</l>
+                  <l n="3">ነዓ፡ ነዓ፡ ለቡራኬ፨</l>
+                  <l n="4">እምኀቤነ፡ ተምኔትነ፡ ዝኬ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">መልክአ፡ መድኃኔ፡ ዓለም፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Malkǝʾa madḫāne ʿālam</title>
-            <title xml:lang="en" corresp="#t1"><hi rendition="simple:italic">Malkǝʾ</hi>-hymn to the Saviour of the World</title>
+            <title xml:lang="en" corresp="#t1">Malkǝʾ-hymn to the Saviour of the World</title>
             <title xml:lang="en" xml:id="t2">Image of the Saviour of the World</title>
 
             <editor role="generalEditor" key="AB"/>
@@ -19,9 +19,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -53,12 +53,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-14">Added title, keywords, and incipit</change>
+         <change who="ES" when="2024-12-10">Added the text, title, relations and bibl (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               
+               <relation name="ecrm:P129_is_about" active="LIT2883RepCh164" passive="PRS5684JesusCh#MadhaneAlam"></relation>
+               <relation name="skos:exactMatch" active="LIT2883RepCh164" passive="https://w3id.org/malke/2883/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">164</citedRange>
@@ -69,15 +77,98 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <ptr target="bm:Habtemichael2007EAEmalke"/>
                   <citedRange unit="page">701b</citedRange>
                </bibl>
+               <bibl><ptr target="bm:Cohen1957Madhane"/></bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-               ሰላም፡ ለዝክረ፡ ስምከ፡ ዘኢረከቡ፡ ተፍጻሜተ፡ መላእክተ፡ ሰማይ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ዘኢረከቡ፡ ተፍጻሜተ፨</l>
+                  <l n="2">መላእክተ፡ ሰማይ፡ ወምድር፡ እለ፡ ለመዱ፡ ስብሐተ፨</l>
+                  <l n="3">መድኃኔ፡ ዓለም፡ ተወከፍ፡ እንተ፡ አቅረብኩንስቲተ፨</l>
+                  <l n="4">ዘሰተይከ፡ በእንቲአየ፡ በርኬ፡ ወሐሞተ፨</l>
+                  <l n="5">በሞተ፡ ዚአከ፡ ከመ፡ ትቅትል፡ ሞተ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለሥዕርተ፡ ርእስከ፡ በላዕለ፡ መስቀል፡ ዘአጽነ፨</l>
+                  <l n="2">ወለርእስከ፡ ሰላም፡ ከመ፡ ይቤዙ፡ ኪያነ፨</l>
+                  <l n="3">መድኃኔ፡ ዓለም፡ ክርስቶስ፡ በጊዝል፡ ኮንከ፡ ሕፃነ፨</l>
+                  <l n="4">ፈርሀ፡ ወደንገፀ፡ በከየ፡ ወኀዘነ፨</l>
+                  <l n="5">ከይሲ፡ ዘአስሐታ፡ ለሔዋን፡ እምነ፨</l>
+               </lg>
+               <lg type="stanza" n="30">
+                  <l n="1">ሰላም፡ ለትንሣኤከ፡ ትንሣኤ፡ ጻድቃን፡ ዘከሠተ፨</l>
+                  <l n="2">ዐቀብተ፡ መቃብር፡ አእላፍ፡ እንበለ፡ ይስምዑ፡ ግብተ፨</l>
+                  <l n="3">መድኃኔ፡ ዓለም፡ ክርስቶስ፡ ዘአስስልከ፡ ጽልመተ፨</l>
+                  <l n="4">ወትቤሎሙ፡ ለአርዳኢከ፡ አርኅዉ፡ ኆኀተ፨</l>
+                  <l n="5">ርግዘተ፡ ገቦየ፡ ከመ፡ ትርዐዩ፡ ሊተ፨</l>
+               </lg>
+               <lg type="stanza" n="31">
+                  <l n="1">ሰላም፡ ለትንሣኤከ፡ ከመ፡ ዘንቃሕ፡ እምንዋም፨</l>
+                  <l n="2">መንክራቲሁ፡ ዘኮነ፡ እንበለ፡ መስፈርት፡ ወዐቅም፨</l>
+                  <l n="3">መድኃኔ፡ ዓለም፡ ዘቆምከ፡ ለሰቂቀ፡ ብእሲ፡ አዳም፨</l>
+                  <l n="4">አንግፈኒ፡ በመስቀልከ፡ እምእደ፡ ጸላኢ፡ ርጉም፨</l>
+                  <l n="5">እስመ፡ እስእለከ፡ አነ፡ ገብርከ፡ ድኩም፨</l>
+               </lg>
+               <lg type="stanza" n="32">
+                  <l n="1">ሰላም፡ ለዕርገትከ፡ በዘባነ፡ መብረቅ፡ ወነጐድጓድ፨</l>
+                  <l n="2">ከመ፡ ትገኑ፡ መንፈስከ፡ በአምሳለ፡ እሳት፡ ወነድ፨</l>
+                  <l n="3">መድኃኔ፡ ዓለም፡ ክርስቶስ፡ ዘእግዚአብሔር፡ ዋሕድ፨</l>
+                  <l n="4">ይቤሉከ፡ ለለ፡ ዕለቱ፡ ሰማያውያን፡ ነገድ፨</l>
+                  <l n="5">መንግሥቱ፡ ዘለዓለም፡ ወምኵናኑኒ፡ ለትውልደ፡ ትውልድ፨</l>
+               </lg>
+               <lg type="stanza" n="33">
+                  <l n="1">ሰላም፡ ለዕርገትከ፡ ዘፈጸመ፡ ቃሎ፨</l>
+                  <l n="2">ወለምጽአትከ፡ ከዋላ፡ እንተ፡ ያስተጋብእ፡ ኵሎ፨</l>
+                  <l n="3">እምኀበ፡ አቡከ፡ ክርስቶስ፡ በመንበረ፡ ስብሐት፡ ዘሀሎ፨</l>
+                  <l n="4">አውረድከ፡ መንፈሰከ፡ በአምሳለ፡ እሳት፡ ወዐውሎ፨</l>
+                  <l n="5">ሦከ፡ ኀጢአትየ፡ ያውዒ፡ ወይቀድስ፡ ኵሎ፨</l>
+               </lg>
+               <lg type="stanza" n="34">
+                  <l n="1"/>
+                  <l n="2"/>
+                  <l n="3"/>
+                  <l n="4"/>
+                  <l n="5"/>
+               </lg>
+               <lg type="stanza" n="35">
+                  <l n="1"/>
+                  <l n="2"/>
+                  <l n="3"/>
+                  <l n="4"/>
+                  <l n="5"/>
+               </lg>
+               <lg type="stanza" n="36">
+                  <l n="1"/>
+                  <l n="2"/>
+                  <l n="3"/>
+                  <l n="4"/>
+                  <l n="5"/>
+               </lg>
+               <lg type="stanza" n="37">
+                  <l n="1"/>
+                  <l n="2"/>
+                  <l n="3"/>
+                  <l n="4"/>
+                  <l n="5"/>
+               </lg>
+               <lg type="stanza" n="38">
+                  <l n="1"/>
+                  <l n="2"/>
+                  <l n="3"/>
+                  <l n="4"/>
+                  <l n="5"/>
+               </lg>
+               <lg type="stanza" n="39">
+                  <l n="1">ምንተ፡ ይዜኑ፡ ዜና፡ ሞትከ፡ ዘነጸረ፡ በዐይኑ፨</l>
+                  <l n="2">ወዘሰምዐ፡ በእዝኑ፨</l>
+                  <l n="3">መድኃኔ፡ ዓለም፡ ክርስቶስ፡ እንዘ፡ ይነብብ፡ ልሳኑ፨</l>
+                  <l n="4">ባርኮ፡ ወቀድሶ፡ ለመልከጼዴቅ፡ ካህኑ፨</l>
+                  <l n="5">ወበላዕሌሁ፡ መንፈሰከ፡ ፈኑ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

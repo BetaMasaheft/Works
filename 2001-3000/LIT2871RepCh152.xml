@@ -4,7 +4,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to St Mercurius</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ መርቆሬዎስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Marqorewos</title>
+            <title corresp="#t1" xml:lang="en">Image of Mercurius</title>
+            <title xml:id="t2" xml:lang="gez">መልክአ፡ መርቆሬዎስ፡ ካልእ፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Malkəʾa Marqorewos Kāləʾ</title>
+            <title corresp="#t2" xml:lang="en">Second Image of Mercurius</title>
+            <editor key="AD"></editor>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +20,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -49,25 +51,60 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-13">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-10">Added the text, title, relations and bibl (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               
+               <relation name="ecrm:P129_is_about" active="LIT2871RepCh152" passive="PRS7025Mercury"></relation>
+               <relation name="skos:exactMatch" active="LIT2871RepCh152" passive="https://w3id.org/malke/2871/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">152</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምከ፡ ዘባሕርየ፡ ሞገስ፡ አክሊሉ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="masgabiya">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ሰላም፡ ወሰላም፡ እብሎሙ፨</l>
+                  <l n="2">ለሰማዕታተ፡ ሮም፡ ኵሎሙ፨</l>
+                  <l n="3">ተሰብረ፡ ዐጽሙ፡ ወተክዕወ፡ ደሙ፨</l>
+                  <l n="4">ለብፁዕ፡ መስተጋድል፡ መርቆሬዎስ፡ ስሙ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ዘባሕርየ፡ ሞገስ፡ አክሊሉ፨</l>
+                  <l n="2">ለሥዕርተ፡ ርእስከ፡ ሰላም፡ ወለርእስከ፡ መብቋሉ፨</l>
+                  <l n="3">መርቆሬዎስ፡ እንብብ፡አንብብ፡ ውዳሴ፡ መልክዕከ፡ በበ፡ አምሳሉ፨</l>
+                  <l n="4">ከመ፡ ያጥብዕ፡ ሕሊናትየ፡ በእዘዘ፡ ሥልጣኑ፡ ወኀይሉ፨</l>
+                  <l n="5">መንፈሰ፡ ረድኤትከ፡ ይምጻእ፡ እምሰማይ፡ ዘላዕሉ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለገጽከ፡ ወለቀራንብቲከ፡ በአኅብሮ፨</l>
+                  <l n="2">ለአዕይንቲከ፡ ሰላም፡ ስንእዋነ፡ ምክር፡ ጊዜ፡ ነጽሮ፨</l>
+                  <l n="3">መርቆሬዎስ፡ ሰማዕት፡ ዕጉሠ፡ ሕማም፡ ወተፅዕሮ፨</l>
+                  <l n="4">ሀበኒ፡ ቃለ፡ ጥበብ፡ ወጸግወኒ፡ አእምሮ፨</l>
+                  <l n="5">በርእሰ፡ ልብየ፡ ዘልፈ፡ ይረሲ፡ ማኅደሮ፨</l>
+               </lg>
+               <lg type="stanza" n="14">
+                  <l n="1">ሰላም፡ ለፀአተ፡ ነፍስከ፡ በመንፈሳዊ፡ ጽዋዔ፨</l>
+                  <l n="2">ለመቃብረከ፡ ሰላም፡ ዘትጸንሕ፡ ተስፋ፡ ትንሣኤ፨</l>
+                  <l n="3">መርቆሬዎስ፡ ዘኮንከ፡ ኵነኔ፡ ኃጥአን፡ መዋኤ፨</l>
+                  <l n="4">ተወከፍ፡ ዘንተ፡ ማኅሌትየ፡ መጠነ፡ ክልኤቱ፡ ሱባዔ፨</l>
+                  <l n="5">በቅድመ፡ ዛቲ፡ ቅድስት፡ ነባቢት፡ ጉባኤ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>
