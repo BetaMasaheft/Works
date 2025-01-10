@@ -4,7 +4,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to John the Baptist</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ፅንሰቱ፡ ወልደቱ፡ ለዮሐንስ፡ መጥምቅ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Ḍənsatu wa-Lədatu la-Yoḥannəs Maṭməq</title>
+            <title corresp="#t1" xml:lang="en">Image of the Conception and Birth of John the Baptist</title>
+            <title xml:id="t2">Malkǝʾ-hymn to John the Baptist</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +17,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -49,25 +48,71 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-02">Added keywords and incipit</change>
+         <change who="ES" when="2025-01-10">Added the text, relations and bibl (A. Dickinson's
+            database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               
+               <relation name="skos:exactMatch" active="LIT2931RepCh212"
+                  passive="https://w3id.org/malke/2931/"/>
+               <relation name="ecrm:P129_is_about" active="LIT2931RepCh212" passive="PRS5741Johnthe"/>
+               
+            </listRelation>
             <listBibl type="editions">
+               
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">212</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለፅንሰትከ፡ ወለልደትከ፡ ጽውዐተኒ፡ ፈቃድ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ነገረ፡ ፅንሰትከ፡ ወልደትከ፡ ሶበ፡ ጸውዐተኒ፡ ፈቃድ፨</l>
+                  <l n="2">በቃል፡ ኅፁፅ፡ ወበንባብ፡ ውሑድ፨</l>
+                  <l n="3">አኀዝኩ፡ እንግር፡ ውስተ፡ ወንጌላዊት፡ አውድ፨</l>
+                  <l n="4">ዮሐንስ፡ ፍሥሐ፡ አስሳሌ፡ ሐዘን፡ ክቡድ፨</l>
+                  <l n="5">ወሐዋርያሁ፡ ዮሐንስ፡ ለክርስቶስ፡ ወልድ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለተበስሮ፡ ፅንስከ፡ በየማነ፡ መስዕ፡ ዘኮነ፨</l>
+                  <l n="2">እስመ፡ አልጸቀ፡ ጊዜሁ፡ ለዘይኴንን፡ የማነ፨</l>
+                  <l n="3">ወለልደትከ፡ ሰላም፡ ዘአስተፍሥሐ፡ መካነ፨</l>
+                  <l n="4">ዮሐንስ፡ መምህር፡ እንተ፡ ትሜህር፡ መድኅነ፨</l>
+                  <l n="5">ወማኅቶተ፡ ገዳም፡ ዘታበርህ፡ ጽልመተ፡ ክዱነ፨</l>
+               </lg>
+               <lg type="stanza" n="11">
+                  <l n="1">ሰላም፡ ለፀንሰትከ፡ እምናዝሬት፡ ዓጸዳ፨</l>
+                  <l n="2">ዘአስተናስዓ፡ ለማርያም፡ ለሐዊር፡ መንገለ፡ ዘመዳ፨</l>
+                  <l n="3">ወለልደትከ፡ ሰላም፡ ዮሐንስ፡ ፈዳዬ፡ እዳ፨</l>
+                  <l n="4">እንዘ፡ ያነክሩ፡ ለኢየሩሳሌም፡ ውሉዳ፨</l>
+                  <l n="5">ዘተናገርዎ፡ በኵሉ፡ ይሁዳ፨</l>
+               </lg>
+               <lg type="stanza" n="12">
+                  <l n="1">በኍልቈ፡ ዓሥር፡ ወክልኤ፡ ደቂቀ፡ እስራኤል፡ ኵሎሙ፨</l>
+                  <l n="2">በልብሰ፡ አዕናቍ፡ ከቡራን፡ እለ፡ ተጽሕፈ፡ ስሞሙ፨</l>
+                  <l n="3">ዘአቅረብኩ፡ ለከ፡ ዮሐንስ፡ እንዘ፡ ንስቲተ፡ እጻሙ፨</l>
+                  <l n="4">ተወከፍ፡ ሊተ፡ ሰላምየ፡ ከመ፡ ተወክፈ፡ ቀዲሙ፨</l>
+                  <l n="5">ጸሪቀ፡ መበለት፡ እግዚእከ፡ ኢየሱስ፡ ስሙ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለከ፡ ዮሐንስ፡ ስቡሐ፡ ልደት፡ ወዜና፨</l>
+                  <l n="2">ሰላም፡ ለከ፡ ዮሐንስ፡ ለመካን፡ ፈታሔ፡ ማሕፀና፨</l>
+                  <l n="3">ዕሤተ፡ ሰላምየ፡ ዝንቱ፡ እማዕምቀ፡ ልብ፡ ወኅሊና፨</l>
+                  <l n="4">ሐሊ፡ ሊተ፡ ሠናያተ፡ እስመ፡ አዘዘት፡ ቀኖና፨</l>
+                  <l n="5">ሐልዮ፡ ሠናይት፡ ለፍቁር፡ ውስተ፡ ቤት፡ ወፍና፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>
