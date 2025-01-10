@@ -5,6 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Hymn to Our Lady Mary</title>
+            <title xml:id="t2" xml:lang="gez">አንቀጸ፡ ብርሃን፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">ʾAnqaṣa Bərhān</title>
+            <title corresp="#t2" xml:lang="en">Gate of Light</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +17,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -37,6 +36,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+         <abstract><p>The hymn is different from the better known <ref type="work" corresp="LIT2960RepCh241"></ref></p></abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
@@ -48,25 +48,59 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-03">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-10">Added the text, title, relations  (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               
+               
+               <relation name="skos:exactMatch" active="LIT2959RepCh240" passive="https://w3id.org/malke/2959/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">240</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ቅድስት፡ ወብፅዕት፡ ስብሐት፡ ወቡርክት።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ቅድስት፡ ወብፅዕት፡ ስብሕት፡ ወቡርክት፨</l>
+                  <l n="2">ክብርት፡ ወልዕልት፨</l>
+                  <l n="3">አንቀጸ፡ ብርሃን፡ መዐርገ፡ ሕይወት፡ ወማኅደረ፡ መለኮት፨</l>
+                  <l n="4">ኦማርያም፡ መለኮታዊት፡ ወለት፨</l>
+                  <l n="5">ዘኢለከፈኪ፡ ለአርስሖ፡ ዘአርሳሂ፡ ርስሐት፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ዓሠርቱ፡ ቃላት፡ እለ፡ ጽሑፋት፡ በፍቅድ፨</l>
+                  <l n="2">በአፃብዒሁ፡ ለእግዚአብሔር፡ ዋሕድ፨</l>
+                  <l n="3">ማርያም፡ ዘግብረትኪ፡ ብዑድ፨</l>
+                  <l n="4">አክናፈ፡ ኪሩቤል፡ መልዕልቴኪ፡ ምስለ፡ ካልኡ፡ ውዱድ፨</l>
+                  <l n="5">ወበገቦኪ፡ ይሰራዕ፡ ማእድ፨</l>
+               </lg>
+               <lg type="stanza" n="12">
+                  <l n="1">ለኪ፡ ይደሉ፡ ለኪ፡ ይደሉ፨</l>
+                  <l n="2">ለኪ፡ ይደሉ፨</l>
+                  <l n="3">ትስአሊ፡ ለነ፡ ኀበ፡ ወልድኪ፡ እግዚአ፡ ኵሉ፨</l>
+                  <l n="4">ከማኪሰ፡ ማርያም፡ ተኀብሎቶ፡ ኢይክሉ፨</l>
+                  <l n="5">እለ፡ ሱራፌል፡ ወኪሩቤል፡ ህልዋን፡ በላዕሉ፨</l>
+               </lg>
+               <lg type="stanza" n="13">
+                  <l n="1">ዘንተ፡ ማሕሌተ፡ ወዘንተ፡ ስብሐተ፨</l>
+                  <l n="2">እንበይነ፡ ዘአቅረብኩ፡ ለኪ፡ መጠነ፡ ተክህለኒ፡ ሊተ፨</l>
+                  <l n="3">ማርያም፡ ድንግል፡ በዘእትፌሣሕ፡ ትፍሥሕተ፨</l>
+                  <l n="4">ዕሤተ፡ ሥጋየ፡ በዲበ፡ ምድር፡ ረስዪ፡ እረፍተ፨</l>
+                  <l n="5">ወዕሤተ፡ ነፍስየ፡ በሰማያት፡ ግበሪ፡ ሕይወተ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>
