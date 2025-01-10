@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to St Isidore</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ኤስድሮስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa ʾEsdros</title>
+            <title corresp="#t1" xml:lang="en">Image of Isidore</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +16,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -49,25 +47,58 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-21">Added keywords and incipit</change>
+         <change who="ES" when="2024-10-02">Added text title relations from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            
+            <listRelation>             
+               <relation name="ecrm:P129_is_about" active="LIT2979RepCh260" passive="PRS5596Isidore"></relation>
+               <relation name="skos:exactMatch" active="LIT2979RepCh260" passive="https://w3id.org/malke/2979/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">260</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ትሥልሥተ፡ መለኮት፡ ዋሕድ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ትሥልስተ፡ መለኮት፡ ዋሕድ፨</l>
+                  <l n="2">እንተ፡ ኢይፈልስ፡ ክብሩ፡ ወኢይትወሀብ፡ ለባዕድ፨</l>
+                  <l n="3">ባሕርየ፡ ምግባር፡ ኤስድሮስ፡ ወዕንቈ፡ ሃይማኖት፡ መረግድ፨</l>
+                  <l n="4">ከመ፡ እንግር፡ ዜና፡ ጽድቅከ፡ ለዘይመጽእ፡ ትውልድ፨</l>
+                  <l n="5">ያንበልብል፡ በአጉየ፡ ጰራቅሊጦስ፡ ነስ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ እብል፡ ለዝክረ፡ ስምከ፡ በእማኄ፨</l>
+                  <l n="2">እስመ፡ ተበፅዓ፡ ሞገሱ፡ እምስመ፡ መሳፍንት፡ እለ፡ ዮፍታሔ፨</l>
+                  <l n="3">ጽዱለ፡ ምግባር፡ ኤስድሮስ፡ ዘትበርህ፡ ውስተ፡ ኵለሄ፨</l>
+                  <l n="4">ናሁ፡ ወጠንኩ፡ ውዳሴከ፡ በሥምረተ፡ አምላክ፡ ኤሎሄ፨</l>
+                  <l n="5">እንዘ፡ አእኵቶ፡ አቀድም፡ እምዝንቱ፡ ስባሔ፨</l>
+               </lg>
+               <lg type="stanza" n="32">
+                  <l n="1">ሰላም፡ ለመቃብሪከ፡ ውስተ፡ አምላካዊት፡ ምዕራፍ፨</l>
+                  <l n="2">ቤተ፡ ክርስቲያን፡ ይእቲ፡ ዘክበደ፡ ብዕላ፡ ትሩፍ፨</l>
+                  <l n="3">መስፍነ፡ ሠራዊት፡ ኤስድሮስ፡ ወርእሰ፡ ሰማዕታት፡ አእላፍ፨</l>
+                  <l n="4">ስጥወ፡ ይኩን፡ ጸሎትየ፡ ቅድመ፡ ገጽከ፡ ለዘልፍ፨</l>
+                  <l n="5">ከመ፡ ጼና፡ ዕጣን፡ ምዑዝ፡ ወመሥዋዕት፡ ውኩፍ፨</l>
+               </lg>
+               <lg type="stanza" n="33">
+                  <l n="1">ኦሰማዕት፡ ተጋዳሊ፡ ውስተ፡ ዐውደ፡ ንጉሥ፡ ዐላዊ፨</l>
+                  <l n="2">ዘተሰቀልከ፡ ኤስድሮስ፡ አምሳለ፡ ኢየሱስ፡ ናዝራዊ፨</l>
+                  <l n="3">እምቅድመ፡ እፍልስ፡ ፍጡነ፡ እምዓፀደ፡ ሥጋ፡ ምድራዊ፨</l>
+                  <l n="4">አሕይወኒ፡ በጸሎትከ፡ ወሥልጣንከ፡ ማሕየዊ፨</l>
+                  <l n="5">አመ፡ ለመዊት፡ ዐርክከ፡ ደዊ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>
