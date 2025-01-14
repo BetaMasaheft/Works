@@ -8,15 +8,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 <title xml:lang="gez" corresp="#t1" type="normalized">Malkǝʿa ʾabuna ʾAkāla Krǝstos</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="ES" role="metadata"/>
-                <editor key="WD" role="editor annotator"/>
+                
                 <respStmt>
-                    <resp>Text encoded for the TraCES project by</resp>
-                    <persName from="2017" to="2018" ref="WD"/>
+                    <resp>Text encoded  by</resp>
+                    <persName  ref="AD"/>
+                </respStmt>
+                <respStmt>
+                    <resp>Text encoded  by</resp>
+                    <persName  ref="WD"/>
                 </respStmt>
                 <funder>Akademie der Wissenschaften in Hamburg; European Research Council</funder>
             </titleStmt>
             <editionStmt>
-                <p>The text was prepared by the TraCES project on the basis of <bibl>
+                <p>The text was also annotated by the TraCES project on the basis of <bibl>
                     <ptr target="bm:Getatchew2017AK"/>
                 </bibl>. The corrections and modifications are described in <bibl>
                   <ptr target="bm:Dickhut2018Akala"/>
@@ -35,11 +39,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <listWit>
-                    
-                    <listWit rend="edition">
-                        <witness corresp="EMML7589"/>
-                    </listWit>
+                <listWit>                    
+                        <witness corresp="EMML7589"/>                    
                 </listWit>
             </sourceDesc>
         </fileDesc>
@@ -54,7 +55,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         <profileDesc>
             <creation notBefore="1600" notAfter="1700"/>
             <abstract>
-                <p>The "Image" of <persName ref="PRS12143AkalaKr">ʾabbā ʾAkāla Krǝstos</persName>, a 17th century Gondarine prince who entered monastic life and in time became a great ascetic.</p>
+                <p>The "Image" of <persName ref="PRS12143AkalaKr">ʾabbā ʾAkāla Krǝstos</persName>, a 17th century Gondarine prince who entered monastic life and in time became a great ascetic. The text is attributed to a monk of Mədra Sayko named ʾIsāyəyyās, being dictated to a certain Zakkāryas. Its composition is described in the second miracle attributed to ʾAkāla Krəstos.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -66,18 +67,116 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         </profileDesc>
         <revisionDesc>
             <change who="ES" when="2018-06-28">Created entity</change>
+            <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
-        <body>
-            <bibl type="edition">
-                <ptr target="bm:Getatchew2017AK"/>
-            </bibl>
+        <body>            
             <div type="bibliography">
-                <listRelation>
+                <listRelation>            
                     <relation name="saws:isAttributedToAuthor" active="LIT4988MalkeaAkalaKrestos" passive="PRS12142Isayeyyas"/>
+                    <relation name="skos:exactMatch" active="LIT4988MalkeaAkalaKrestos" passive="https://w3id.org/malke/4988/"></relation>
+                    <relation name="ecrm:P129_is_about" active="LIT4988MalkeaAkalaKrestos" passive="PRS12143AkalaKr"/>
                 </listRelation>
+                <listBibl type="editions">
+                    <bibl><ptr target="bm:MgWebsite"/></bibl>
+                    <bibl>
+                        <ptr target="bm:Getatchew2017AK"/>
+                    </bibl>
+                </listBibl></div>
+            <div type="edition" xml:lang="gez">
+                <div type="textpart" xml:id="malke">
+                    <lg type="stanza" n="1">
+                        <l n="1">ነገሥተ፡ አርያም፡ አብ፡ ወወልዱ፡ ዘአኀዝክሙ፡ ዓለመ፨</l>
+                        <l n="2">እንዘ፡ ትኵንኑ፡ ጽድቀ፡ ወታበዝተ፡ ሰላመ፨</l>
+                        <l n="3">ለአካለ፡ ክርስቶስ፡ እጽሕፍ፡ መጽሐፈ፡ ዜናሁ፡ ፍጹመ፨</l>
+                        <l n="4">አብሁኒ፡ እንሳእ፡ በጸዊረ፡ ሕይወትክሙ፡ ማሕተመ፨</l>
+                        <l n="5">ዘያበርህ፡ ግልአ፡ ልብየ፡ ዘብዙኀ፡ ጸልመ፨</l>
+                    </lg>
+                    <lg type="stanza" n="2">
+                        <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ዘተጸውዐ፡ እምኵሉ፨</l>
+                        <l n="2">እስመ፡ በጽድቁ፡ ተዐውቀ፡ ወተጠየቀ፡ በግሉ፨</l>
+                        <l n="3">አቡነ፡ ክቡር፡ አካለ፡ ክርስቶስ፡ ዘላዕሉ፨</l>
+                        <l n="4">ባርከነ፡ አንተ፡ በቃልከ፡ እንዘ፡ እዴከ፡ ታተሉ፨</l>
+                        <l n="5">ዘምስሌከ፡ መንፈስ፡ ቅዱስ፡ ምስሌነ፡ የሀሉ፨</l>
+                    </lg>
+                    <lg type="stanza" n="3">
+                        <l n="1">ሰላም፡ ለሥዕርተ፡ ርእስከ፡ ዘተኈለቁ፡ ወተሐለዩ፨</l>
+                        <l n="2">ውስተ፡ ኅሊናሁ፡ ለክርስቶስ፡ ዘኢይትኄለይ፡ ዕበዩ፨</l>
+                        <l n="3">አካለ፡ ክርስቶስ፡ ተሣሀል፡ ሶበ፡ ኀቤከ፡ ጸለዩ፨</l>
+                        <l n="4">እምሀገር፡ ሰብአ፡ ፍቅርከ፡ ዘእክለ፡ ሕማም፡ ሲሳዩ፨</l>
+                        <l n="5">ወእምደቂቅከ፡ ዘበዝኀ፡ ብካዩ፨</l>
+                    </lg>
+                    <lg type="stanza" n="39">
+                        <l n="1">ሰላም፡ ለግንዘተ፡ ሥጋከ፡ ወለመቃብሪከ፡ ዛቲ፨</l>
+                        <l n="2">ዘበውስቴታ፡ ተደፍነ፡ ወርቀ፡ ሥጋከ፡ መዋቲ፨</l>
+                        <l n="3">አካለ፡ ኢየኡስ፡ ክርስቶስ፡ ንጉሠ፡ ኅሊና፡ ሐታቲ፨</l>
+                        <l n="4">ተጸይሐ፡ በምኔትከ፡ መካልየ፡ ድርሳን፡ ክልኤቲ፨</l>
+                        <l n="5">ዘበምድር፡ ክብርት፡ ወቅድስት፡ ይእቲ፨</l>
+                    </lg>
+                    <lg type="stanza" n="40">
+                        <l n="1">በአክናፈ፡ ጸጋ፡ ሐውጾትከ፡ ጉባኤ፡ ዛቲ፡ ዐጸድ፨</l>
+                        <l n="2">ሰርከ፡ ሰርከ፡ ይኩንከ፡ ልማድ፨</l>
+                        <l n="3">አካለ፡ ክርስቶስ፡ ነገረ፡ ወኀዘነ፡ ልብ፡ ክቡድ፨</l>
+                        <l n="4">እስመ፡ ቦ፡ እምውሉድከ፡ ዘይነግረከ፡ ወልድ፨</l>
+                        <l n="5">ዘባዕድ፡ ኢይሰምዖ፡ ወቅሩብ፡ ዘመድ፨</l>
+                    </lg>
+                    <lg type="stanza" n="41">
+                        <l n="1">መሐልየ፡ ድርሳን፡ ስድሰ፡ ሱባዔያተ፡ ዘምስለ፡ ዋሕድ፡ ተዐለዱ፨</l>
+                        <l n="2">ህየንተ፡ አርባሕኩ፡ ለከ፡ ለለ፡ አሐዱ፡ አሐዱ፨</l>
+                        <l n="3">አካለ፡ ክርስቶስ፡ ዕብራዊ፡ ዘእምዕብራውያን፡ ሙላዱ፨</l>
+                        <l n="4">ባርከኒ፡ እንሣእ፡ በረከተከ፡ እስመ፡ ለወላዲ፡ ፈቃዱ፨</l>
+                        <l n="5">በረከተ፡ በቡራኬ፡ ይንሣእ፡ ወልዱ፨</l>
+                    </lg>
+                    <lg type="stanza" n="42">
+                        <l n="1">አመ፡ ውስተ፡ ፈለግ፡ ጸለየ፡ ቅድመ፡ ሥዕላ፡ ጸሎተ፨</l>
+                        <l n="2">አካለ፡ ክርስቶስ፡ ትምርሖ፡ ፍኖተ፡ ነፍሱ፡ ርትዕተ፨</l>
+                        <l n="3">ማርያም፡ ድንግል፡ አሜሃ፡ አስተርአየቶ፡ ክሡተ፨</l>
+                        <l n="4">ወወሀበቶ፡ በፈቃዳ፡ ዛተ፡ ምኔተ፨</l>
+                        <l n="5">ዘይገብር፡ ባቲ፡ ዐበይተ፡ ኀይላተ፨</l>
+                    </lg>
+                    <lg type="stanza" n="43">
+                        <l n="1">ተክለ፡ ሃይማኖት፡ እምብዝኀ፡ ቀዊም፡ ዘተቈልቈለ፡ ፀሓይ፡ አጽሙ፨</l>
+                        <l n="2">ሰማየ፡ ተሰብሮ፡ ምዕራቦ፡ ለክርስቶስ፡ በእንተ፡ ስሙ፨</l>
+                        <l n="3">ወአካለ፡ ክርስቶስ፡ በኀጺን፡ አባላቲሁ፡ ዘሐሙ፨</l>
+                        <l n="4">እንዘ፡ አብ፡ ወወልድ፡ በመንግሥተ፡ ሰማይ፡ ነዮሙ፨</l>
+                        <l n="5">ምስብዒተ፡ እምፀሓይ፡ ይበርህ፡ ገጾሙ፨</l>
+                    </lg>
+                    <lg type="stanza" n="44">
+                        <l n="1">ሰላም፡ ለውሉድከ፡ እለ፡ ውስተ፡ ዛቲ፡ ዐጸድ፨</l>
+                        <l n="2">ጊዜ፡ መከራሆሙ፡ ብዙኅ፡ ወኀዘኖሙ፡ ክቡድ፨</l>
+                        <l n="3">ኢተኀዝን፡ አንተ፡ አካለ፡ ክርስቶስ፡ ዋሕድ፨</l>
+                        <l n="4">እስመ፡ ጥቀ፡ አብ፡ ወላዲ፡ በእንተ፡ ብዙኃን፡ ውሉድ፨</l>
+                        <l n="5">የኀዝን፡ ለአሐዱ፡ አሐዱ፡ ለዘመድ፨</l>
+                    </lg>
+                    <lg type="stanza" n="45">
+                        <l n="1">አካለ፡ ክርስቶስ፡ ነዓ፡ ኀቤየ፡ እምገነትከ፨</l>
+                        <l n="2">ወእመ፡ አኮ፡ እምውሉድከ፡ እለ፡ ሀለዉ፡ ምስሌከ፨</l>
+                        <l n="3">በደመና፡ ብርሃን፡ ወሬዛ፡ አእምሮ፡ ወልድከ፨</l>
+                        <l n="4">ይምጻእ፡ ይርአይ፡ ሕማምየ፡ በከመ፡ ርእየ፡ ይንግርከ፨</l>
+                        <l n="5">ወኵሎ፡ ነገረ፡ ከመ፡ ያምጽእ፡ ለከ፨</l>
+                    </lg>
+                </div>
+                <div type="textpart" xml:id="tarafa-malke">
+                    <lg type="stanza" n="1">
+                        <l n="1">ሰላም፡ ለከ፡ ሀገረ፡ ሕይወት፡ ዘትትዋረስ፡ በቀለመ፡ ሕይወት፡ ቀለሙ፨</l>
+                        <l n="2">ጸሐፈከ፡ ወልድ፡ ቅድመ፡ ዓለሙ፨</l>
+                        <l n="3">አካለ፡ ክርስቶስ፡ ጸዋሬ፡ ስሙ፨</l>
+                    </lg>
+                    <lg type="stanza" n="6">
+                        <l n="1">ሰላም፡ ለከ፡ ኖትያ፡ ማዕምር፡ አካለ፡ ኢየሱስ፡ ክርስቶስ፨</l>
+                        <l n="2">ተራወጸ፡ ለከ፡ በትዕግሥት፡ ተርሴስ፨</l>
+                        <l n="3">ንጽሕናከ፡ ሐመረ፡ ነፍስ፨</l>
+                    </lg>
+                    <lg type="stanza" n="7">
+                        <l n="1">ሰላም፡ ለከ፡ አካለ፡ ክርስቶስ፡ ለከ፡ እስመ፡ በዘምሮ፡ ተቀንየ፨</l>
+                        <l n="2">ርቱዕ፡ ገብር፡ ልሳንየ፨</l>
+                        <l n="3">እንዘ፡ እምውስጠ፡ ልብ፡ ትብለኒ፡ ወልድየ፡ ወልድየ፨</l>
+                        <l n="4">እምዐስብከ፡ ሀበኒ፡ ዐስብየ፨</l>
+                    </lg>
+                </div>
             </div>
+            
          <!---->
         </body>
     </text>

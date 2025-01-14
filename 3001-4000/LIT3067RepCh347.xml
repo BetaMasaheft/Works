@@ -5,6 +5,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Hymn to the Holy Trinity</title>
+            <title xml:id="t2" xml:lang="gez">መልክአ፡ ሥሉስ፡ ቅዱስ፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Malkəʾa Śəllus Qəddus</title>
+            <title corresp="#t2" xml:lang="en">Image of the Holy Trinity</title>
+            <title xml:id="t3" xml:lang="gez">መልክአ፡ ሥላሴ፡ ካልእ፡</title>
+            <title corresp="#t3" xml:lang="gez" type="normalized">Malkəʾa Śəllāse Kāləʾ</title>
+            <title corresp="#t3" xml:lang="en">Second Image of the Trinity</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,9 +20,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -48,25 +54,127 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
+         <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="skos:exactMatch" active="LIT3067RepCh347" passive="https://w3id.org/malke/3067/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT3067RepCh347" passive="PRS10775Trinity"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">347</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  እስመ፡ ብዙኃን፡ እሙንቱ፡ እለ፡ አኃዙ፡ ይጽሐፉ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">እስመ፡ ብዙኃን፡ እሙንቱ፡ እለ፡ አኀዙ፡ ይጽሐፉ፨</l>
+                  <l n="2">ሃይማኖተ፡ ቅድስት፡ ሥላሴ፡ እንተ፡ ተሳተፉ፨</l>
+                  <l n="3">መጽሐፈ፡ ማሕሌት፡ ሠናየ፡ ዘእለ፡ አትረፉ፨</l>
+                  <l n="4">ከመ፡ እስብክ፡ አንሰ፡ ወእንግር፡ ለዝሉፉ፨</l>
+                  <l n="5">አናቅጸ፡ ስብሐት፡ አርባዕ፡ ቅድሜየ፡ ይኅልፉ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለህላዌክሙ፡ ዘኢይትዐወቅ፡ ጥንቱ፨</l>
+                  <l n="2">ወዘኢይትአመር፡ ተፍጻሜቱ፨</l>
+                  <l n="3">ሥሉስ፡ ቅዱስ፡ ዘኢትመውቱ፨</l>
+                  <l n="4">እንዘ፡ ሠለስቱ፡ አሐዱ፡ ወእንዘ፡ አሐዱ፡ ሠለስቱ፨</l>
+                  <l n="5">ለዕበይክሙ፡ ፍጻሜ፡ አልቦቱ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ እግዚአብሔር፡ አብ፨</l>
+                  <l n="2">ወላዴ፡ ወልድ፡ ዋሕድ፡ እንበለ፡ ካዕብ፨</l>
+                  <l n="3">እምቅድመ፡ ሰማያት፡ ርቡብ፡ ወእምቅድመ፡ ዓለም፡ ርኂብ</l>
+                  <l n="4">ይገኒ፡ ለዝክረ፡ ስምከ፡ ኀልዮተ፡ ኵሉ፡ አልባብ፨</l>
+                  <l n="5">ወበአፈ፡ ኵሉ፡ ፍጥረት፡ ዘሀሎ፡ ንባብ፨</l>
+               </lg>
+               <lg type="stanza" n="4">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ እግዚአብሔር፡ ወልድ፨</l>
+                  <l n="2">ለእግዚአብሔር፡ አቡከ፡ ወአኮ፡ ለባዕድ፨</l>
+                  <l n="3">ልደትከሰ፡ ዘምነደ፡ እሳት፡ ነድ፨</l>
+                  <l n="4">በምሥጢር፡ ሐዲስ፡ እንበለ፡ ሕገ፡ እም፡ ዘልማድ፨</l>
+                  <l n="5">ለዝክረ፡ ስምከ፡ ይደሉ፡ ሰጊድ፨</l>
+               </lg>
+               <lg type="stanza" n="5">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ እግዚአብሔር፡ ጰራቅሊጦስ፨</l>
+                  <l n="2">ኅሊና፡ ልቡ፡ ለክርስቶስ፨</l>
+                  <l n="3">ወዘነበርከ፡ በርእሱ፡ ርግበ፡ ዮርዳኖስ፨</l>
+                  <l n="4">ይገንዩ፡ ለስብሐቲከ፡ ወለስምከ፡ ቅዱስ፨</l>
+                  <l n="5">ከናፍረ፡ ኵሉ፡ መንፈስ፡ ወኵሉ፡ ዘነፍስ፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምክሙ፡ በበ፡ ህላዌሁ፡ ወገጹ፨</l>
+                  <l n="2">አስማተ፡ ቅድስት፡ ሥላሴ፡ ዘኢተሐፅፁ፨</l>
+                  <l n="3">ለሰይጣን፡ ዕድውየ፡ ወለመልአከ፡ ሞት፡ ቢጹ፨</l>
+                  <l n="4">ዘይበረብሮሙ፡ ስረተ፡ ግርማሁ፡ ወድምፁ፨</l>
+                  <l n="5">እምቀስተ፡ አፉየ፡ ኢይሰስል፡ ሐፁ፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለሥዕርትክሙ፡ ዘይመስል፡ ጸዐድዒዶ፨</l>
+                  <l n="2">ብዙተ፡ ፀምረ፡ እንበለ፡ ተብዕዶ፨</l>
+                  <l n="3">ሥሉስ፡ ቅዱስ፡ ህልዋን፡ በተዋሕዶ፨</l>
+                  <l n="4">ለሥዕርተ፡ ርእስየ፡ ዘተከልክሙ፡ ወፈጠርክሙ፡ ሙላዶ፨</l>
+                  <l n="5">እንዘ፡ ትዌስኑ፡ ኍልቆሁ፡ ወፍቅዶ፨</l>
+               </lg>
+               <lg type="stanza" n="54">
+                  <l n="1">ሰላም፡ ለመልክእክሙ፡ አምሳሉ፡ ወራእዩ፨</l>
+                  <l n="2">ለቤተ፡ ምጥማቅ፡ አሐዱ፡ ዘሠላስ፡ ሙሐዘ፡ ማዩ፨</l>
+                  <l n="3">ሥሉስ፡ ቅዱስ፡ ለእጓለ፡ እመሕያው፡ ዕበዩ፨</l>
+                  <l n="4">ውስተ፡ ዮርዳኖስ፡ ለነቅዐ፡ ጥምቀት፡ ሙዳዩ፨</l>
+                  <l n="5">ለሥላሴክሙ፡ ተዐውቀ፡ አያዩ፨</l>
+               </lg>
+               <lg type="stanza" n="55">
+                  <l n="1">ሰላም፡ ለመልክእክሙ፡ መልክአ፡ ኵሉ፡ መዋኢ፨</l>
+                  <l n="2">ወዘባሕርዪሁ፡ እንዳዒ፨</l>
+                  <l n="3">ሥላሴክሙ፡ አብርሃም፡ እንዘ፡ በትንቢቱ፡ ያርኢ፨</l>
+                  <l n="4">ይቤላ፡ ለሳራ፡ ተንሥኢ፡ ተንሥኢ፨</l>
+                  <l n="5">መሣልሰ፡ መስፈርት፡ ዘስንዳሌ፡ ሠለስተ፡ አብሕኢ፨</l>
+               </lg>
+               <lg type="stanza" n="56">
+                  <l n="1">ሰላም፡ ለመልክእክሙ፡ እምአፈ፡ ቀሳውስት፡ ዘተሰብከ፨</l>
+                  <l n="2">ጊዜ፡ ይሴብሑ፡ ወይብሉ፡ ንሤልስ፡ ለከ፨</l>
+                  <l n="3">ዘንተ፡ ስብሐተ፡ እምአፉነ፡ ዘምስለ፡ መንግሥትከ፨</l>
+                  <l n="4">ሥሉስ፡ ቅዱስ፡ በሉኒ፡ እንከ፨</l>
+                  <l n="5">ኪያነ፡ ጸልአ፡ ዘጸልአ፡ ኪያከ፨</l>
+               </lg>
+               <lg type="stanza" n="57">
+                  <l n="1">ሰላም፡ ለባሕርይክሙ፡ እንዘ፡ ይነብር፡ አርያመ፨</l>
+                  <l n="2">በተዋሕዶ፡ ወትሥልስት፡ እንተ፡ ይኴንን፡ ዓለመ፨</l>
+                  <l n="3">ሥሉስ፡ ቅዱስ፡ በሥምረትክሙ፡ ክመ፨</l>
+                  <l n="4">ሥላሴክሙ፡ ለኵሉ፡ ተዐውቀ፡ ፍጽሙ፨</l>
+                  <l n="5">በምድረ፡ ዮርዳኖስ፡ ቅድመ፡ ወበታቦር፡ ዳግመ፨</l>
+               </lg>
+               <lg type="stanza" n="58">
+                  <l n="1">ሰላም፡ ለመለኮክሙ፡ ዘውእቱ፡ ንግሥ፨</l>
+                  <l n="2">አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፨</l>
+                  <l n="3">እንዘ፡ ሀሎ፡ አብርሃም፡ ታሕተ፡ ዕፀ፡ ድርስ፨</l>
+                  <l n="4">አስተርአይክምዎ፡ በሰዓተ፡ ዕለት፡ ሳድስ፨</l>
+                  <l n="5">በሠርቀ፡ ራብዕ፡ ወርኅ፡ ወአኮ፡ ኃምስ፨</l>
+               </lg>
+               <lg type="stanza" n="59">
+                  <l n="1">ሰላም፡ ለምሕረትክሙ፡ በከመ፡ መጻሕፍት፡ ይነቡ፨</l>
+                  <l n="2">እስከ፡ ይትፌሣሕ፡ ቦቱ፡ ለብእሴ፡ ኃጢአት፡ ልቡ፨</l>
+                  <l n="3">በላዕለ፡ ኵሉ፡ ሥላሴ፡ አክናፈ፡ ምሕረት፡ ትረቡ፨</l>
+                  <l n="4">አኮኑ፡ ኦሪት፡ ሥላሴክሙ፡ ታሌቡ፨</l>
+                  <l n="5">ማኅበረ፡ አይሁድ፡ አብዳን፡ ማእዜኑ፡ ይበጡ፨</l>
+               </lg>
+               <lg type="stanza" n="60">
+                  <l n="1">ሰላም፡ ሰላም፡ ለተዋሕዶ፡ ቅድስት፡ ሥላሴ፨</l>
+                  <l n="2">ቀዊምየ፡ ቅድመ፡ ሥላሴ፨</l>
+                  <l n="3">እንበለ፡ ናፍቆ፡ ኣአምን፡ ህላዌ፡ ሥላሴ፨</l>
+                  <l n="4">ግጻዌሆሙ፡ ሥላሴ፡ ወአካሎሙ፡ ሥላሴ፨</l>
+                  <l n="5">ወቅዳሴሆሙ፡ ከማሁ፡ ሥላሴ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

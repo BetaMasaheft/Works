@@ -53,6 +53,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2018-03-16">Created entity</change>
+            <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -60,8 +61,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
           <div type="bibliography">
              <listRelation>
                 <relation name="lawd:hasAttestation" active="LIT4920MalkeaFileppos" passive="DSEthiop10"/>
-
+                 <relation name="skos:exactMatch" active="LIT4920MalkeaFileppos" passive="https://w3id.org/malke/4920/"></relation>
+                 <relation name="ecrm:P129_is_about" active="LIT4920MalkeaFileppos" passive="PRS4107Fileppos"></relation>
              </listRelation>
+              <listBibl type="editions">
+                  <bibl><ptr target="bm:MgWebsite"/></bibl>
+              </listBibl>
           </div>
           <div type="edition">
             <note>The following text is taken from <ref type="mss" corresp="DSEthiop10"/></note>
@@ -75,7 +80,53 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 </ab>
              </div>
           </div>
-
+            <div type="edition" xml:lang="gez"><note>from <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+                <div type="textpart" xml:id="malke">
+                    <lg type="stanza" n="1">
+                        <l n="1">በስመ፡ እግዚአብሔር፡ አብ፡ ዘህላዌሁ፡ ዋሕድ፨</l>
+                        <l n="2">እንዘ፡ ውእቱ፡ ህልው፡ በመንፈስ፡ ቅዱስ፡ ወወልድ፨</l>
+                        <l n="3">ውዳሴ፡ መልክእከ፡ እጽሐፍ፡ በሥምረትከ፡ ፍድፉድ፨</l>
+                        <l n="4">ርድአኒ፡ ለፈጽሞቱ፡ ምስለ፡ ኅሩያን፡ አንጋድ፨</l>
+                        <l n="5">አንዳዴ፡ ባሕር፡ ፊልጶስ፡ በውዑይ፡ ነድ፨</l>
+                    </lg>
+                    <lg type="stanza" n="2">
+                        <l n="1">ሰላም፡ ለፅንሰትከ፡ በብስራተ፡ መልአክ፡ ዘብርሃን፨</l>
+                        <l n="2">ወለልደትከ፡ ሰላም፡ በወርኀ፡ ታስሪን፨</l>
+                        <l n="3">ፊልጶስ፡ ሰማዕት፡ ዘደብረ፡ ቢዘን፨</l>
+                        <l n="4">ሶበ፡ ተሰምዐ፡ ልደትከ፡ ውስተ፡ ገጸ፡ ኵሉ፡ መካን፨</l>
+                        <l n="5">በከዩ፡ አጋንንት፡ ዘገዳም፡ ወእብን፨</l>
+                    </lg>
+                    <lg type="stanza" n="3">
+                        <l n="1">ሰላም፡ ለልደትከ፡ እንተ፡ ኮኖሙ፡ ሕይወት፨</l>
+                        <l n="2">ለይርድአነ፡ እግዚእ፡ አቡከ፡ ወለእምከ፡ መግደላዊት፨</l>
+                        <l n="3">ሐዋርያ፡ አምላክ፡ ፊልጶስ፡ ወልደ፡ እስጢፋኖስ፡ ሰማዕት፨</l>
+                        <l n="4">ከመ፡ እወድስከ፡ በልሳንየ፡ ትሑት፨</l>
+                        <l n="5">ለሐውጾትየ፡ ነዓ፡ በኵሉ፡ ሰዓት፨</l>
+                    </lg>
+                    <lg type="stanza" n="4">
+                        <l n="1">ሰላም፡ ሰላም፡ ለዝክረ፡ ስምከ፡ በጽዋዔ፨</l>
+                        <l n="2">ወለሥዕርትከ፡ ሰላም፡ እንተ፡ ኢተቀብአ፡ ቅብአ፡ ምማዔ፨</l>
+                        <l n="3">አስበጽዐከ፡ ፊልጶስ፡ በቃለ፡ ብጽዓን፡ ወኢዝንጋዔ፨</l>
+                        <l n="4">እስመ፡ ገረሩ፡ ለከ፡ አናብስት፡ ኀበ፡ ረሰዩ፡ ጉባኤ፨</l>
+                        <l n="5">ወጾሩከ፡ በንጎቶሙ፡ ነጌያት፡ ክልኤ፨</l>
+                    </lg>
+                    <lg type="stanza" n="29">
+                        <l n="1">ሰላም፡ ለግንዘትከ፡ በእደ፡ መላእክት፡ ትጉሃን፨</l>
+                        <l n="2">ወለመቃብሪከ፡ ሰላም፡ ዐጸደ፡ ቅድስት፡ ቢዘን፨</l>
+                        <l n="3">ፊልጶስ፡ ኮል፡ ፊልጶስ፡ ወይን፨</l>
+                        <l n="4">ተበሀሉ፡ ደርገ፡ አሜሃ፡ በቃለ፡ ጽዱቅ፡ ልሳን፨</l>
+                        <l n="5">ሞቱ፡ ክቡር፡ ለጻድቅ፡ አማን፨</l>
+                    </lg>
+                    <lg type="stanza" n="30">
+                        <l n="1">ህየንተ፡ ዘአቅረብኩ፡ ናሁ፡ ለመልክእከ፡ ማሕሌት፨</l>
+                        <l n="2">እምርእስ፡ እስከ፡ እግር፡ እንዘ፡ አስተዳሉ፡ በበ፡ ክልኤቱ፨</l>
+                        <l n="3">ፊልጶስ፡ ሰማዕት፡ ለእግዚአብሔር፡ ሰማዕቱ፨</l>
+                        <l n="4">ባርክ፡ ወትረ፡ ጸሎትየ፡ ወቃለ፡ ማሕሌት፡ ዝንቱ፨</l>
+                        <l n="5">እስመ፡ በአማን፡ ለጻድቅ፡ ቡራኬ፡ ሥርዓቱ፨</l>
+                    </lg>
+                </div>
+            </div>
+            
         </body>
 
     </text>

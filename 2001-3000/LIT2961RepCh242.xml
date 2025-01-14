@@ -4,7 +4,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to St George</title>
+            <title xml:id="t1" xml:lang="gez">በሓከ፡ ጊዮርጊስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Baḥāka Giyorgis</title>
+            <title corresp="#t1" xml:lang="en">Hail, George</title>
+            <title xml:id="t2">Hymn to St George</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +17,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+               
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -49,25 +48,77 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-04">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-10">Added the text, title, relations  (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT2961RepCh242" passive="PRS4585Georgeo"></relation>
+               
+               <relation name="skos:exactMatch" active="LIT2961RepCh242" passive="https://w3id.org/malke/2961/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">242</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  በሃከ፡ ጊዮርጊስ፡ በሃከ፡ ወሬዛ፡ ኃይል፡ ከመ፡ እንበሳ፡ ውኩል።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">በሓከ፡ ጊዮርጊስ፡ በሓከ፡ ወሬዛ፡ ኃያል፨</l>
+                  <l n="2">ከመ፡ አንበሳ፡ ውኩል፨</l>
+                  <l n="3">እምከመ፡ ተነፍሐ፡ ቀርነ፡ ኢዮቤል፨</l>
+                  <l n="4">እንቋዕ፡ ለመዓዛ፡ ቀተል፡ ፈረስከ፡ ይበል፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">በሓከ፡ ጊዮርጊስ፡ በሓከ፡ አስባብ፡ ወልደ፡ ማዕቀብ፨</l>
+                  <l n="2">በከመ፡ ይቤ፡ መክብብ፨</l>
+                  <l n="3">እምርእሰ፡ ጸላም፡ ነሣኤ፡ ግልባብ፨</l>
+                  <l n="4">ዘአንበሩ፡ በላዕሌሃ፡ መሪራን፡ ሕዝብ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">በሓከ፡ ጊዮርጊስ፡ በሓከ፡ በእስትንፋሱ፡ ዘይንዑ፡ እምነ፡ አርያም፡ አዕዋፈ፨</l>
+                  <l n="2">ከመ፡ ንስር፡ ዘቦ፡ በክልኤ፡ አክናፈ፨</l>
+                  <l n="3">ደራጎን፡ ንጉሠ፡ ቢሩት፡ ዘይትበሀል፡ ዘልፈ፨</l>
+               </lg>
+               <lg type="stanza" n="4">
+                  <l n="1">በሓከ፡ ጊዮርጊስ፡ በሓከ፡ ለመስፍነ፡ ሀገር፡ ወለቱ፡ እንተ፡ ሀብዎ፡ አምኃ፨</l>
+                  <l n="2">በትግርምት፡ መጺኦ፡ ኢይብላዕ፡ ኪያሃ፨</l>
+                  <l n="3">ጊዮርጊስ፡ ለቀቲሎቱ፡ ዘቈልቈልከ፡ ረምሐ፨</l>
+               </lg>
+               <lg type="stanza" n="5">
+                  <l n="1">በሓከ፡ ጊዮርጊስ፡ በሓከ፡ እምይእቲ፡ ሰዓት፡ ደናግለ፡ ቢሩት፨</l>
+                  <l n="2">በዘዚአከ፡ ኂሩት፡ ድኂኖን፡ እሞት፨</l>
+                  <l n="3">ተወስባ፡ ለምእት፡ ወኮና፡ በዓልታተ፡ ቤት፨</l>
+                  <l n="4">እስከ፡ ዛቲ፡ ዕለት፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">በሓከ፡ ጊዮርጊስ፡ በሓከ፡ ስእለተ፡ መበለት፡ ዘኮንከ፡ ሰማዔ፨</l>
+                  <l n="2">በእንተ፡ አዕማድ፡ ክልኤ፨</l>
+                  <l n="3">በእምርት፡ ዕለት፡ ወትንሣኤ፨</l>
+                  <l n="4">ከመ፡ እጹር፡ አሣዕኒከ፡ ረስየኒ፡ ቍልዔ፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">በሓከ፡ ጊዮርጊስ፡ በሓከ፡ ዘአቅረብኩ፡ ጻህቀ፨</l>
+                  <l n="2">እምተጽናሰ፡ ቤትየ፡ ህቀ፨</l>
+                  <l n="3">ለነዳይ፡ ተወከፍ፡ ጸራይቀ፨</l>
+                  <l n="4">ከመ፡ መጽሐፍከ፡ ዝክረኒ፡ ጥዩቀ፨</l>
+               </lg>
+               <lg type="stanza" n="8">
+                  <l n="1">በሓከ፡ ጊዮርጊስ፡ በሓከ፡ ለማኅደረ፡ ስምከ፡ ዛቲ፡ በረድኤትከ፡ ሐውጻ፨</l>
+                  <l n="2">እምዝኅርከ፡ ልዳ፡ ኢታሕፅፃ፨</l>
+                  <l n="3">ወማዕጾ፡ ቄድሮስ፡ ግብር፡ በአናቅጻ፨</l>
+                  <l n="4">ረሲ፡ ኍልቈ፡ ሕዝባ፡ ዘይበዝኅ፡ እምኆፃ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>
