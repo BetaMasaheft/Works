@@ -68,6 +68,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2020-09-16" who="ES">added colophon, abstract</change>
          <change when="2020-10-14" who="SH">added bibliography (editions and catalogues)</change>
          <change who="DR" when="2022-07-06">Updated Mikael ID</change>
+         <change who="DR" when="2025-01-13">Added main text div</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -121,12 +122,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   passive="PRS13151Saqrates"/>
             </listRelation>
          </div>
+         
          <div type="edition" xml:lang="gez">
-            <div type="textpart" subtype="incipit">
-
-               <ab> ገድል፡ ወስምዕ፡ ዘቅዱስ፡ ወብፁዕ፡ ሰማዕት፡ ዐቢይ፡ ማር፡ ጊዮርጊስ፡ <gap reason="ellipsis"/> ዘፈጸመ፡ ገድሎ፡
-                  አመ፡ ፪ወ፫፡ ለወርኃ፡ መርሙደ፡ ዘውእቱ፡ ሚያዝያ።</ab>
+            
+            <div type="textpart" xml:id="gadl">
+               <label>Main text of the gadl</label>
+               <listBibl type="editions">
+                  <bibl>
+                     <ptr target="bm:1967GadlaGiyorgis"/>
+                     <citedRange unit="page">21–83</citedRange>
+                     <citedRange unit="chapter">3–9</citedRange>
+                  </bibl>
+               </listBibl>
+               
+               <div type="textpart" subtype="incipit">
+                  <ab> ገድል፡ ወስምዕ፡ ዘቅዱስ፡ ወብፁዕ፡ ሰማዕት፡ ዐቢይ፡ ማር፡ ጊዮርጊስ፡ <gap reason="ellipsis"/> ዘፈጸመ፡ ገድሎ፡
+                     አመ፡ ፪ወ፫፡ ለወርኃ፡ መርሙደ፡ ዘውእቱ፡ ሚያዝያ።</ab>
+                  <note>
+                     <listBibl type="editions">
+                        <bibl>
+                           <ptr target="bm:1967GadlaGiyorgis"/>
+                           <citedRange unit="page">21</citedRange>
+                           <citedRange unit="chapter">3.1</citedRange>
+                        </bibl>
+                     </listBibl>
+                  </note>
+               </div>
             </div>
+            
             <div type="textpart" subtype="colophon" xml:id="coloph1">
                <ab>ወሶበ፡ ፈጸመ፡ ቅዱስ፡ ጊዮርጊስ፡ ገድሎ፡ አነ፡ ሰቅራጥስ፡ ገብሩ፡ ለጊዮርጊስ፡ ኮንኩ፡ እትልዎ፡ ለእግዚእየ፡ ጊዮርጊስ፡ በኵሉ፡
                      <add place="above">ገድሉ፡</add> ወፃማሁ፡ ወለካልሁ፡ ዘንተ፡ ጸሐፍኩ፡<gap reason="ellipsis"/>
@@ -147,10 +170,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <citedRange unit="page">119–120</citedRange>
                      <citedRange unit="chapter">9</citedRange>
                   </bibl>
-
-
                </note>
             </div>
+            
             <div type="textpart" subtype="colophon" xml:id="coloph2">
                <ab>ሃሌ፡ ሉያ፡ ተተርጐመት፡ ዛቲ፡ መጽሐፍ፡ እምልሳነ፡ ዐረቢ፡ ለግዕዝ፡ በአፈ፡ <persName ref="PRS7077Mikael"
                      >ሚካኤል፡</persName> ዘይንስ፡ ወልደ፡ ወልዱ፡ ለ<persName ref="PRS12753Giyorgis"><roleName
