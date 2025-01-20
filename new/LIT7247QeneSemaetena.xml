@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">ሰማዕትነ፡ ገላውዴዎስ፡ ነዳየ፡ ዘመን፡ ወመዋዕል፡</title>
                 <title xml:lang="gez" corresp="#t1" type="normalized">Samāʿtǝna Galāwdewos nadāya zaman wa-mawāʿǝl (Qǝne of the wāzemā-type)</title>
-                <title xml:lang="en" corresp="#t1">Our martyr Claudius, poor in time and days…</title>
+                <title xml:lang="en" corresp="#t1">Our martyr Claudius, the poor of the time and days…</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="CH"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -55,14 +55,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
+            <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl><ptr target="bm:Afawarq1984Yageezqeneyat"/><citedRange>45</citedRange></bibl>
+                </listBibl>
+            </div>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="ecrm:P129_is_about" active="LIT7247QeneSemaetena" passive="PRS3126Claudius"/>
+                </listRelation>
+            </div>
             <div type="edition" xml:lang="gez">
-                <note>This edition is based on <ref type="mss" corresp="BNFabb145"/>, fol. 56rb. Division into verses is indicated with ። . 
-                    The end of the poem is indicated with ። ። .</note>
+                <note>Division into verses is indicated with ። . The end of the poem is indicated with ። ። .
+                    This edition is based on <ref type="mss" corresp="BNFabb145"/>, fol. 56rb, which ends up in five verses. However,
+                    <bibl><ptr target="bm:Afawarq1984Yageezqeneyat"/><citedRange>45</citedRange></bibl> has decided for three more
+                    verse breaks after <foreign xml:lang="gez">ወመዋዕል፡</foreign> and <foreign xml:lang="gez">አማኑኤል፡</foreign> resulting in 
+                    the extraordinary number of seven verses.</note>
                 <ab>
                     <l n="1">ሰማዕትነ፡ ገላውዴዎስ፡ ነዳየ፡ ዘመን፡ ወመዋዕል፡ እንዘ፡ ይረውፅ፡ አልፀቀ፡ እስከ፡ አንቀጸ፡ ቄሳር፡ ገድል።</l> 
                     <l n="2">ወተርኅወ፡ ሎቱ፡ ሙባኡ፡ መስቀል።</l>
                     <l n="3">ኀበ፡ ፍርፋረ፡ ሞት፡ ተርኅወ፡ ወስቴ፡ መከራ፡ ጥሉል።</l>
-                    <l n="4">አፃዌ፡ ኆኅት፡ አማኑኤል፡ አኮኑ፡ ቀዊሞ፡ በዴዴ፡ አስካል።</l>
+                    <l n="4">አፃዌ፡ ኆኅት፡ አማኑኤል፡ አኮኑ፡ ቀዊሞ፡ በዴዴ፡ <choice resp="PRS00000000000"><sic>አስካል</sic><corr>አካል</corr></choice>።</l>
                     <l n="5">ዘርኅብከ፡ ዘርኅብከ፡ ይብል። ።</l>
                 </ab>
             </div>
