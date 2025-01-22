@@ -5,9 +5,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">እሰግድ፡ ለኪ፡ ጽጌ፡ ሐና፡ በብረከ፡ ሕሊና፡ ጥቡዕ።<gap reason="omitted"/></title>
-                <title xml:lang="gez" type="normalized" corresp="#t1">ʿƎsaggǝd laki ṣǝge Ḥanā babǝraka ṭǝbuʿ<gap reason="omitted"/></title>
-                <title xml:lang="en" corresp="#t1">I bow to you the flower, Hanna, with the knees of a ready mind<gap reason="omitted"/></title>
+                <title xml:id="t1" xml:lang="gez">መልክአ፡ ሐና፡</title>
+                <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Ḥannā</title>
+                <title corresp="#t1" xml:lang="en">Image of Hanna</title>
+                <title xml:lang="gez" xml:id="t2">እሰግድ፡ ለኪ፡ ጽጌ፡ ሐና፡ በብረከ፡ ሕሊና፡ ጥቡዕ።<gap reason="omitted"/></title>
+                <title xml:lang="gez" type="normalized" corresp="#t2">ʿƎsaggǝd laki ṣǝge Ḥanā babǝraka ṭǝbuʿ<gap reason="omitted"/></title>
+                <title xml:lang="en" corresp="#t2">I bow to you the flower, Hanna, with the knees of a ready mind<gap reason="omitted"/></title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="RL"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -47,11 +50,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="RL" when="2021-02-11">Created entity</change>
+            <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!--EMIP 764-->
+            <div type="bibliography"><listBibl type="editions">
+                <bibl><ptr target="bm:MgWebsite"/></bibl>
+            </listBibl></div><!--EMIP 764-->
+            <listRelation>
+                <relation name="ecrm:P129_is_about" active="LIT6377HymnMary" passive="PRS6819Mary"></relation>
+                <relation name="skos:exactMatch" active="LIT6377HymnMary" passive="https://w3id.org/malke/6377/"></relation>
+            </listRelation>
+            <div type="edition" xml:lang="gez"><note>text from <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+                <div type="textpart" xml:id="malke">
+                    <lg type="stanza" n="1">
+                        <l n="1">እሰግድ፡ ለኪ፡ ጽጌ፡ ሐና፡ በብረከ፡ ኅሊና፡ ጥቡዕ፨</l>
+                        <l n="2">ትፍትሒ፡ ሊተ፡ ማሕተመ፡ ጥበባት፡ ሳብዕ፨</l>
+                        <l n="3">በደሴተ፡ ፍጥሞ፡ ልብየ፡ እንተ፡ የዓውዶ፡ አንብዕ፨</l>
+                        <l n="4">ማሕሌተ፡ እምኪ፡ ከመ፡ እዜኑ፡ ለሰብእ፨</l>
+                        <l n="5">በሥምረተ፡ መሲሕ፡ ወልድኪ፡ ዘስሙ፡ ቅቡዕ፨</l>
+                    </lg>
+                    <lg type="stanza" n="2">
+                        <l n="1">ሰላም፡ ለዝክረ፡ ስምኪ፡ ወለሥዕርትኪ፡ ንጹሕ፨</l>
+                        <l n="2">ለርእስኪ፡ ድሉል፡ ወለገጽኪ፡ ስቡሕ፨</l>
+                        <l n="3">ሐና፡ ሰማይ፡ ወላዲተ፡ ፀሓይ፡ ብሩህ፨</l>
+                        <l n="4">አማሕፅን፡ ለወልትኪ፡ በሥልጣነ፡ ወልዳ፡ መሲሕ፨</l>
+                        <l n="5">ታስተስሪ፡ ጌጋይየ፡ ለብእሲ፡ ርሱሕ፨</l>
+                    </lg>
+                    <lg type="stanza" n="13">
+                        <l n="1">አምኃ፡ በረከት፡ ንስቲተ፡ ሶበ፡ አቅረብት፡ ዕቤር፨</l>
+                        <l n="2">ከመ፡ ወልደ፡ አምላክ፡ ተወከፈ፡ በእደ፡ ርኅራኄ፡ ወፍቅር፨</l>
+                        <l n="3">ተወክፍኒ፡ ሐና፡ አኰቴተ፡ ዝንቱ፡ መዝሙር፨</l>
+                        <l n="4">ወዕቀብኒ፡ ለገብርኪ፡ እምእደ፡ ብእሲ፡ ነኪር፨</l>
+                        <l n="5">ዘፍና፡ ግዕዙ፡ ጠዋይ፡ ወግብሩ፡ መሪር፨</l>
+                    </lg>
+                    <lg type="stanza" n="14">
+                        <l n="1">በኍልቈ፡ ክልኤ፡ ሱባዕያት፡ ዘአቅረብኩ፡ ለኪ፡ አምኃ፨</l>
+                        <l n="2">ከመ፡ እወድስኪ፡ ቦቱ፡ ሰርከ፡ ወነግሀ፨</l>
+                        <l n="3">ባርኪዮ፡ ሐና፡ ወረስዪዮ፡ ስፉሐ፨</l>
+                        <l n="4">እስከ፡ ይከውን፡ መሥፈርቱ፡ ንኅኑኃ፡ ወዝሕዙሐ፨</l>
+                        <l n="5">ዘበኀበ፡ ኵሉ፡ ሥልጣንኪ፡ በጽሐ፨</l>
+                    </lg>
+                </div>
+            </div>
+            
             <div type="edition">
               <note>the text follows <ref type="mss" corresp="EMIP00764"/> ff. 49r-50r</note>
             <div type="textpart" subtype="incipit" xml:lang="gez">

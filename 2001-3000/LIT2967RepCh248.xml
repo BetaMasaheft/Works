@@ -18,9 +18,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -47,26 +47,60 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-04">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-10">Added the text, title, relations  (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT2967RepCh248" passive="PRS6819Mary"></relation>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT2967RepCh248" passive="LIT3984basamay"/>
+               <relation name="skos:exactMatch" active="LIT2967RepCh248" passive="https://w3id.org/malke/2967/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">248</citedRange>
                </bibl>
             </listBibl>
-            <listRelation><relation name="betmas:formerlyAlsoListedAs" active="LIT2967RepCh248" passive="LIT3984basamay"/></listRelation>
+            
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                 በሰማይ፡ ወምድር፡ አልብየ፡ ባዕደ፡ አበ፡ ወእመ፡ እኅተ፡ ወውሉደ፡ ማርያም፡ ድንግል፡ እትአመነኪ፡ ገሃደ፡
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">በሰማይ፡ ወበምድር፡ አልብየ፡ ባዕደ፨</l>
+                  <l n="2">አበ፡ ወእመ፡ እኅተ፡ ወውሉደ፨</l>
+                  <l n="3">ማርያም፡ ድንግል፡ እትአመነኪ፡ ገሀደ፨</l>
+                  <l n="4">ኪያኪ፡ ተስፋ፡ ኪያኪ፡ መፍቅደ፨</l>
+                  <l n="5">ኪያኪ፡ ዐውቀ፡ ኪያኪ፡ ዘመደ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">በሰማይ፡ ወበምድር፡ እንዘ፡ ሀሎክኒ፡ ረድኤተ፨</l>
+                  <l n="2">ምንትኑ፡ ያፈርሀኒ፡ ሊተ፨</l>
+                  <l n="3">ማርያም፡ ድንግል፡ እትአመነኪ፡ ክሡተ፨</l>
+                  <l n="4">ኪያኪ፡ ልዕልና፡ ኪያኪ፡ ሢመተ፨</l>
+                  <l n="5">ኪያኪ፡ ርስተ፡ ኪያኪ፡ አብያተ፨</l>
+               </lg>
+               <lg type="stanza" n="12">
+                  <l n="1">አልብየ፡ እመ፡ በኵሉ፡ መዋዕል፨</l>
+                  <l n="2">ስምዕየ፡ ሊተ፡ እግዚአብሔር፡ ልዑል፨</l>
+                  <l n="3">እትአመነኪ፡ ፈድፋደ፡ ማርያም፡ ድንግል፨</l>
+                  <l n="4">ፍቅርኪ፡ ጽሙና፡ ፍቅርኪ፡ ገድል፨</l>
+                  <l n="5">ፍቅርኪ፡ ትርሲት፡ ፍቅርኪ፡ አክሊል፨</l>
+               </lg>
+               <lg type="stanza" n="13">
+                  <l n="1">ኢትኅድግኒ፡ ዐቂበ፡ ኵሎ፡ መዐልተ፡ ወሌሊተ፨</l>
+                  <l n="2">ኀበ፡ ሖርኩ፡ በፍና፡ ወኀበ፡ ኀደርኩ፡ ቤተ፨</l>
+                  <l n="3">ማርያም፡ ድንግል፡ ዘትመግቢ፡ ነፍሳተ፨</l>
+                  <l n="4">በልብስ፡ ወበሲሳይ፡ ኢታርእይኒ፡ ንዴተ፨</l>
+                  <l n="5">እስመ፡ ቍር፡ ወርኀብ፡ ያረስዕ፡ ጸሎተ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

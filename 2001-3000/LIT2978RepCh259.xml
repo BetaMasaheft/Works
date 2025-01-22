@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to the prophets</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ነቢያት፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Nabiyāt</title>
+            <title corresp="#t1" xml:lang="en">Image of the Prophets</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -13,21 +15,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -48,25 +45,76 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-05">Added keywords and incipit</change>
+         <change who="ES" when="2024-10-02">Added text title relations from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <div type="bibliography">
+         <div type="bibliography">            
+            <listRelation>                            
+               <relation name="skos:exactMatch" active="LIT2978RepCh259" passive="https://w3id.org/malke/2978/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">259</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ሥላሴ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ሥላሴ፨</l>
+                  <l n="2">እዌጥን፡ ዘዚአክሙ፡ ውዳሴ፨</l>
+                  <l n="3">ተፈሥሑ፡ ብየ፡ ማኅበረ፡ ነቢያት፡ እለ፡ ሙሴ፨</l>
+                  <l n="4">ከመ፡ ትትፌሣሕ፡ ብእሲት፡ ዘይከውና፡ ወራሴ፨</l>
+                  <l n="5">ሶበ፡ በዓለም፡ አጥረየት፡ ወወደት፡ ብእሴ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">እመሰ፡ ይትከሀለኒ፡ ፍጻሜ፨</l>
+                  <l n="2">ውዳሴክሙ፡ ወጠንኩ፡ ለዓለመ፡ ዓለም፡ ቀዋሜ፨</l>
+                  <l n="3">ማኅበረ፡ ነቢያት፡ ንግሩኒ፡ ወመሐሩኒ፡ ትርጓሜ፨</l>
+                  <l n="4">ኢየኀሥሥ፡ እንበሌክሙ፡ ወኢይሰአል፡ ሐላሜ፨</l>
+                  <l n="5">ለእመ፡ መዋዕል፡ ኀለፈ፡ ወጐንደየ፡ ዕድሜ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምክሙ፡ በመጽሐፈ፡ ሕይወት፡ ዘይሄሉ፨</l>
+                  <l n="2">ድኅረ፡ ዓለማት፡ ወዘውስቴቶሙ፡ ኵሉ፨</l>
+                  <l n="3">ማኅበረ፡ ነቢያት፡ ጽሑፋን፡ ለእግዚአብሔር፡ በቃሉ፨</l>
+                  <l n="4">ከመ፡ ትጽብኡ፡ ጸላእትየ፡ ወዕድዋንየ፡ ትትትሉ፨</l>
+                  <l n="5">ጽንዑ፡ እምአንበሳ፡ ወእምድብ፡ ኀይሉ፨</l>
+               </lg>
+               <lg type="stanza" n="53">
+                  <l n="1">ሰላም፡ ለመቃብሪክሙ፡ እለ፡ ኮኖሆን፡ አብያተ፨</l>
+                  <l n="2">ለበድነ፡ ሥጋክሙ፡ ሕሩም፡ ዘእምዕፄያት፨</l>
+                  <l n="3">ውዳሴክሙ፡ ፈጸምኩ፡ ማኅበረ፡ ክርስቶስ፡ ነቢያት፨</l>
+                  <l n="4">ጸግዉኒ፡ ንዋየ፡ ጽድቅ፡ በዘዚአክሙ፡ ሠናይት፨</l>
+                  <l n="5">ዘመስጠቶ፡ ኢይክል፡ ዲያብሎስ፡ ፈያት፨</l>
+               </lg>
+               <lg type="stanza" n="54">
+                  <l n="1">ምንትኑ፡ እምዐሠይክዎ፡ ዕሤተ፨</l>
+                  <l n="2">ለብእሲተ፡ ኤንዶር፡ ጠባብ፡ እንተ፡ ታነሥእ፡ ዘሞተ፨</l>
+                  <l n="3">በኅቡእ፡ ዘይከውን፡ ወዘይትገበር፡ ክሡተ፨</l>
+                  <l n="4">ይዜንወኒ፡ ምሥጢረ፡ ወይንግረኒ፡ ትንቢተ፨</l>
+                  <l n="5">አሐደ፡ እምነቢያት፡ ከመ፡ ታንቅሕ፡ ሊተ፨</l>
+               </lg>
+               <lg type="stanza" n="55">
+                  <l n="1">በእግዚአብሔር፡ አምላክ፡ እንዘ፡ እፀንስ፡ ኅሊና፨</l>
+                  <l n="2">ለልሳንየ፡ እምሐቌሁ፡ ወለከናፍርየ፡ እማሕፀና፨</l>
+                  <l n="3">ናሁ፡ ወለድኩ፡ ዘማኅበረ፡ ነቢያት፡ ዜና፨</l>
+                  <l n="4">ለወላድ፡ ብእሲት፡ እምድኅረ፡ ወሊድ፡ ስእና፨</l>
+                  <l n="5">ከመ፡ ወለደቶ፡ ለሳሙኤል፡ ሐና፨</l>
+               </lg>
+               <lg type="stanza" n="56">
+                  <l n="1">እምዝንቱ፡ ቃለ፡ መጽሐፍክሙ፡ ዘአሰሰለ፡ ሐአሐተ፨</l>
+                  <l n="2">እንዘ፡ ትትቤ፡ ተልዎ፡ ነቢያት፡ ወትትመዐዑ፡ መዐተ፨</l>
+                  <l n="3">አሰስልዎ፡ እምዕፀ፡ ሕይወት፡ ወረስይዎ፡ እቱተ፨</l>
+                  <l n="4">ወለእመ፡ ቦቱ፡ ወሰከ፡ ንስትአ፨</l>
+                  <l n="5">እግዚአብሔር፡ ላዕሌሁ፡ ይወስክ፡ መቅሠፍተ፨</l>
+               </lg>
             </div>
-         </div>
+         </div>         
       </body>
    </text>
 </TEI>

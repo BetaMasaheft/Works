@@ -4,7 +4,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to Jesus Christ</title>
+            <title xml:id="t1" xml:lang="gez">እሰግድ፡ ለዝክረ፡</title>
+           
+            <title xml:id="t2" xml:lang="en">Hymn to Jesus</title>
+
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +17,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -37,6 +36,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+         <abstract><p>A stanza of <ref type="work" corresp="LIT6956MalkeaMadAlam"></ref></p></abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
@@ -48,12 +48,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
+         <change who="ES" when="2025-01-10">Added relation to LIT6956MalkeaMadAlam</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="dcterms:isPartOf" active="LIT3059RepCh339" passive="LIT6956MalkeaMadAlam"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT3059RepCh339" passive="PRS5684JesusCh"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">339</citedRange>
@@ -62,9 +68,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </div>
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  እሰግድ፡ ለዝክረ፡ ስምከ፡ መልአከ፡ ምሥጢር፡ ዘተርጎሞ።
-               </ab>
+               <lg type="stanza">
+                  <l n="1">እሰግድ፡ ለዝክረ፡ ስምከ፡ መልአከ፡ ምሥጢር፡ ዘተርጐሞ፨</l>
+                  <l n="2">ቅድመ፡ ማርያም፡ ወዮሴፍ፡ አመ፡ ወርኀ፡ ብስራት፡ ወተሳልሞ፨</l>
+                  <l n="3">መድኃኔ፡ ዓለም፡ ክርስቶስ፡ ስመ፡ ስብሐቲከ፡ ሶበ፡ አደሞ፨</l>
+                  <l n="4">ጳውሎስ፡ ከልሀ፡ ወይቤ፡ በዐውደ፡ ኔሮን፡ ቀዊሞ፨</l>
+                  <l n="5">መኑ፡ ያኀድገነ፡ ለክርስቶስ፡ ስሞ፨</l>
+               </lg>
+               
             </div>
          </div>
       </body>

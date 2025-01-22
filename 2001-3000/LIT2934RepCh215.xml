@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to Raphael</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ሩፋኤል፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Rufāʾel</title>
+            <title corresp="#t1" xml:lang="en">Image of Raphael</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -13,21 +15,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -48,28 +45,66 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-03">Added keywords and incipit</change>
+         <change who="ES" when="2025-01-10">Added the text, relations and bibl (A. Dickinson's
+            database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
             <relation name="ecrm:P129_is_about" active="LIT2934RepCh215" passive="PRS8083Raphael"/>
+            <relation name="skos:exactMatch" active="LIT2934RepCh215"
+               passive="https://w3id.org/malke/2934/"/>
          </listRelation>
          <div type="bibliography">
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">215</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለፍጥረትከ፡ በሰርከ፡ ቀዳሜ፡ እሑድ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለተፈጥሮትከ፡ በሌሊት፡ ዘእኁድ፨</l>
+                  <l n="2">ዘተሥዕለ፡ ቅድመ፡ እምነፋስ፡ ወነድ፨</l>
+                  <l n="3">ሩፋኤል፡ ሊቆሙ፡ ለጾታ፡ ፫ነገድ፨</l>
+                  <l n="4">ዓዲ፡ ተሰየምከ፡ በማሕፀነ፡ ኵሉ፡ ትውልድ፨</l>
+                  <l n="5">በከመ፡ ይቤ፡ ዮሐንስ፡ ወልደ፡ ነጐድጓድ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ምስለ፡ ስመ፡ ልዑል፡ ቡሩክ፨</l>
+                  <l n="2">በከመ፡ ጸሐፈ፡ ቅድመ፡ ወልደ፡ ያሬድ፡ ሄኖክ፨</l>
+                  <l n="3">ሩፋኤል፡ ዘንተ፡ ዘነፍሰ፡ ኵሉ፡ ምስማክ፨</l>
+                  <l n="4">ለሐውጾትነ፡ ነዓ፡ ለለ፡ ጊዜ፡ ጽባሕ፡ ወሰርክ፨</l>
+                  <l n="5">ምስለ፡ ሚካኤል፡ ወገብርኤል፡ ወራጉኤል፡ መልአክ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለሥዕርተ፡ ርእስከ፡ ወለርእስከ፡ ድሉል፨</l>
+                  <l n="2">ለፍጽምከ፡ ሰላም፡ ወለገጽከ፡ ጽዱል፨</l>
+                  <l n="3">እንዘ፡ ሣህላዊ፡ መልአክ፡ ቅዱስ፡ ሩፋኤል፨</l>
+                  <l n="4">ለሐውጾትነ፡ ነዓ፡ በአክናፈ፡ ነፋስ፡ ቀሊል፨</l>
+                  <l n="5">ምስለ፡ አፍኒን፡ ወሱርያል፤ ለምሕረት፡ ወሣህል፨</l>
+               </lg>
+               <lg type="stanza" n="14">
+                  <l n="1">ሰላም፡ ለአጻብዒከ፡ ወለአጽፋረ፡ እግርከ፡ በለዝ፨</l>
+                  <l n="2">ለቆምከ፡ ሰላም፡ ወለመልክእከ፡ ምዑዝ፨</l>
+                  <l n="3">ሩፋኤል፡ ሀበኒ፡ እስመ፡ ለድኩም፡ ምርጉዝ፨</l>
+                  <l n="4">ለቴዎድሮስ፡ ምሥራቃዊ፡ ከመ፡ ይማኦ፡ ለቍዝ፨</l>
+                  <l n="5">ሰይፈ፡ መዊእ፡ መጠዎ፡ ሚካኤል፡ ዐዚዝ፨</l>
+               </lg>
+               <lg type="stanza" n="15">
+                  <l n="1">አምኃ፡ ሰላም፡ ንስቲተ፡ ለመልክእከ፡ አቅረብኩ፨</l>
+                  <l n="2">ወስመ፡ ዚአከ፡ ጸዋዕኩ፨</l>
+                  <l n="3">ቅዱስ፡ ሩፋኤል፡ ለእግዚአብሔር፡ ላእኩ፨</l>
+                  <l n="4">ዘመነ፡ ምንሳዌ፡ ኢያንጥየኒ፡ ፈራህኩ፨</l>
+                  <l n="5">በረድኤትከ፡ ተማሕፀንኩ፡ ኀቤከ፡ አስመኩ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>
