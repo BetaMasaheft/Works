@@ -35,7 +35,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Homily"/>
+               <term key="Translation"/>
+            </keywords>
+         </textClass>
+         
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="en">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -45,10 +56,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
-         <listRelation>
-            <relation name="saws:isAttributedToAuthor" active="LIT1652Homily" passive="PRS5720JohnChr"/>
-         </listRelation>
+         <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT1652Homily" passive="PRS6819Mary"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1652Homily" passive="PRS5720JohnChr"/>
+            </listRelation>
+            
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Proverbio1998Recensione"/><citedRange unit="page">78</citedRange></bibl>
+            </listBibl>
+            
+         </div>
+         
+         
+         <div xml:lang="gez" type="edition">
+            <note>The incipit is taken from <ref type="mss" corresp="EMML1195"/>.</note>
+            <div type="textpart" subtype="incipit">
+               <ab xml:lang="gez">ይቤ፡ እፈቅድ፡ እትናገር፡ በእንተ፡ ክብራ፡ ለወላዲተ፡ መድኃኒነ፡ በድፍረት፡ በከመ፡ ይደሉ፡ በከመ፡ ክሂሎትየ፡ ወአንሰ፡ እፈርህ፡ እስመ፡ አልብየ፡ ልሳነ፡ ዘይደልዎ፡ ይትናገር፡ ለውእቱ፡ ዘዓቢይ፡ ወክቡር፡</ab>
+            </div>
+            
+         </div>
       </body>
    </text>
 </TEI>
