@@ -22,9 +22,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                 
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -42,7 +42,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <profileDesc>
          <abstract>
             <p>A prayer to St George in several stanzas beginning with <foreign xml:lang="gez">ኦፍጡነ፡ ረድኤት፡</foreign>. The number of stanzas
-               varies in the manuscripts. In several manuscripts, this prayer is followed immediately by a prayer to St Mary beginning with
+               varies in the manuscripts. The first three seem to be the oldest. In several manuscripts, this prayer is followed immediately by a prayer to St Mary beginning with
                <foreign xml:lang="gez">ኦፈጣኒተ፡ ረድኤት፡</foreign>. </p>
          </abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
@@ -58,22 +58,65 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
          <change who="DR" when="2020-04-24">Added information from LIT3999Ofetun</change>
+         <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <div type="bibliography">
+         <div type="bibliography">            
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">380</citedRange>
                </bibl>
             </listBibl>
             <listRelation>
+               <relation name="skos:exactMatch" active="LIT3100RepCh380" passive="https://w3id.org/malke/3100/"></relation>
                <relation name="ecrm:P129_is_about" active="LIT3100RepCh380" passive="PRS4585Georgeo"/>
                <relation name="betmas:formerlyAlsoListedAs" active="LIT3100RepCh380" passive="LIT3999Ofetun"/>
             </listRelation>
          </div>
+         <div type="edition" xml:lang="gez"><note>From <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ኦፍጡነ፡ ረድኤት፡ ለጽኑዕ፡ ወለድኩም፨</l>
+                  <l n="2">ለነፍሰ፡ ኵሉ፡ ቃውም፨</l>
+                  <l n="3">ጊዮርጊስ፡ የዋህ፡ እንበለ፡ መስፈርት፡ ወዐቅም፨</l>
+                  <l n="4">ከመ፡ እግዝእትከ፡ ቡርክት፡ ማርያም፨</l>
+                  <l n="5">ርኅሩኀ፡ ልብ፡ እምበቀል፡ ወቂም፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ኦፍጡነ፡ ረድኤት፡ በብዙኅ፡ ጾታ፨</l>
+                  <l n="2">ከመ፡ እግዝእትከ፡ ርግበ፡ ኤፍራታ፨</l>
+                  <l n="3">በሰማይ፡ በላዕሉ፡ ወበምድር፡ በታሕታ፨</l>
+                  <l n="4">አምሕለከ፡ ጊዮርጊስ፡ በስመ፡ እምከ፡ ቴዎብስታ፨</l>
+                  <l n="5">ሞገሰ፡ ስም፡ ሀበኒ፡ በስምከ፡ መንታ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ኦፍጡነ፡ ረድኤት፡ እምሩጸተ፡ ነፋስ፡ ወዓውሎ፨</l>
+                  <l n="2">ለዘጼውዓከ፡ በተወክሎ፨</l>
+                  <l n="3">ጊዮርጊስ፡ ቅረብ፡ ለምሕረት፡ ወተሣህሎ፨</l>
+                  <l n="4">ተወከፈከ፡ ጸሎትየ፡ ወቃለ፡ ጽራኅየ፡ ኵሎ፨</l>
+                  <l n="5">እስመ፡ ልበ፡ አምላክ፡ ርኅሩኅ፡ በኀቤከ፡ ሀሎ፨</l>
+               </lg>
+               <lg type="stanza" n="4">
+                  <l n="1">ኦፍጡነ፡ ረድኤት፡ ጊዮርጊስ፡ ለእግዚአብሔር፡ ሰማዕቱ፨</l>
+                  <l n="2">ተራድአኒ፡ ለለ፡ ዕለቱ፨</l>
+                  <l n="3">እምፍቅርከ፡ አባ፡ ትመጽውተኒ፡ እፈቱ፨</l>
+                  <l n="4">እንበለ፡ ረባሕ፡ ለነጋዲ፡ ሑረቱ፨</l>
+                  <l n="5">ኀፍረትኬ፡ ወኃሳር፡ ውእቱ፨</l>
+               </lg>
+               <lg type="stanza" n="5">
+                  <l n="1">ኦፍጡነ፡ ረድኤት፡ ኢትረሰየኒ፡ ሠሐቀ፡ ለፀርየ፨</l>
+                  <l n="2">ወኢስላቀ፡ ለጸላእትየ፨</l>
+                  <l n="3">ጊዮርጊስ፡ ስምዐኒ፡ ቃልየ፨</l>
+                  <l n="4">እንዘ፡ እነግረከ፡ ኀዘነ፡ ልብየ፨</l>
+                  <l n="5">በኢመንኖ፡ በለኒ፡ ገብርየ፡ ገብርየ፨</l>
+               </lg>
+            </div>
+         </div>
+         
          <div type="edition">
             <note>The beginning of the following stanzas is taken from <ref type="mss" corresp="EMIP02065"/>.</note>
             <div type="textpart" subtype="stanza" xml:id="stanza1" xml:lang="gez">

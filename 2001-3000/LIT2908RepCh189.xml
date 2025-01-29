@@ -7,6 +7,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <title xml:lang="gez" xml:id="t1">መልክአ፡ ሥላሴ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Malkǝʾa Śǝllāse</title>
             <title xml:lang="en" corresp="#t1">Image of the Trinity</title>
+            <title xml:id="t2" xml:lang="gez">መልክአ፡ ሥላሴ፡ ራብዓይ፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Malkəʾa Śəllāse Rābəʿāy</title>
+            <title corresp="#t2" xml:lang="en">Fourth Image of the Trinity</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -16,20 +19,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -51,12 +50,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-14">Added title, keywords and incipit</change>
+         <change who="ES" when="2025-01-10">Added the text, relations and bibl (A. Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               
+               <relation name="skos:exactMatch" active="LIT2908RepCh189" passive="https://w3id.org/malke/2908/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT2908RepCh189" passive="PRS10775Trinity"></relation>
+               
+            </listRelation>
             <listBibl type="editions">
+               
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">189</citedRange>
@@ -69,13 +77,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምክሙ፡ ዘእምቅድመ፡ ዓለም፡ ህልው።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምክሙ፡ እምቅድመ፡ ዓለም፡ ህልው፨</l>
+                  <l n="2">ለርእስክሙ፡ ሰላም፡ ወለሥዕርተ፡ ርእስክሙ፡ ጽዕድው፨</l>
+                  <l n="3">አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ሥላሴክሙ፡ ግጽው፨</l>
+                  <l n="4">ከመ፡ ኢያንጌጊ፡ ውስተ፡ መካነ፡ ሐፅ፡ ወበድው፨</l>
+                  <l n="5">ብሔረ፡ ፍሥሓ፡ ስዱኒ፡ ለብእሲ፡ ልህው፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለፍጽምክሙ፡ ወለገጻቲክሙ፡ ሠላስ፨</l>
+                  <l n="2">ለቀራንብቲክሙ፡ ሰላም፡ ወለአዕይንቲክሙ፡ ሥነ፡ ኦርያሬስ፨</l>
+                  <l n="3">አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፨</l>
+                  <l n="4">ሐመረ፡ ሥጋየ፡ ከመ፡ ኢይሑክ፡ ነፋስ፨</l>
+                  <l n="5">መዋግዲሁ፡ አዝኅኑ፡ በመርስ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለአእዛኒክሙ፡ ወለመላትሒክሙ፡ ሐዋዝ፨</l>
+                  <l n="2">ለአእናፊክሙ፡ ሰላም፡ ወለከናፍሪክሙ፡ ምዑዝ፨</l>
+                  <l n="3">አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ዕሩያነ፡ ምክር፡ ወትእዛዝ፨</l>
+                  <l n="4">ገራህተ፡ ሰላምየ፡ ሠቅየክሙ፡ እምነቅዐ፡ ሥላሴ፡ ውሒዝ፨</l>
+                  <l n="5">ከመ፡ ትፍረይ፡ ረስይዋ፡ ወትኑኅ፡ እምአርዝ፨</l>
+               </lg>
+               <lg type="stanza" n="13">
+                  <l n="1">ሰላም፡ እብል፡ ለኵሎን፡ መልክእክሙ፡ በሰጊድ፨</l>
+                  <l n="2">እግዚአብሔር፡ አብ፡ ወእግዚአብሔር፡ ወልድ፨</l>
+                  <l n="3">ወእግዚአብሔር፡ መንፈስ፡ ቅዱስ፡ ሥላሴ፡ ዋሕድ፨</l>
+                  <l n="4">በዕለተ፡ ሐተታ፡ ወቅስት፡ አመ፡ ይከውን፡ ረዓድ፨</l>
+                  <l n="5">ቀዊመ፡ ኅሩያን፡ ክፍሉኒ፡ ኢይኩን፡ ለባዕድ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

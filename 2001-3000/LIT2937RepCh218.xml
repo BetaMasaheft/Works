@@ -7,6 +7,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
            <title xml:lang="gez" xml:id="t1">ለኵሎን፡ መልክእኪ፡</title>
            <title xml:lang="gez" corresp="#t1" type="normalized">La-kʷǝllon malkǝʾǝki</title>
            <title xml:lang="en" corresp="#t1">(Salutation to) All of Your Images</title>
+            <title corresp="#t1" xml:lang="en">To All the Parts of Your Image</title>
+            
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -16,20 +18,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -51,12 +49,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-03">Added keywords and incipit</change>
          <change who="AD" when="2021-04-11">Updated title</change>
+         <change who="ES" when="2025-01-10">Added the text and link to A. Dickinson's
+            database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT2937RepCh218" passive="PRS6819Mary"/>
+               <relation name="skos:exactMatch" active="LIT2937RepCh218"
+                  passive="https://w3id.org/malke/2937/"/>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">218</citedRange>
@@ -67,13 +73,101 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ሰላም፡ ለኵሎን፡ መልክእኪ፡
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ሰላም፡ ለኵሎን፡ መልክእኪ፨</l>
+                  <l n="2">እመ፡ እግዚአብሔር፡ እምየ፡ እግዝእትየ፡ ማርያም፨</l>
+                  <l n="3">ዓዲ፡ ሰላም፡ በክልኤ፡ ማሕተመ፡ ድንግልናኪ፨</l>
+                  <l n="4">በቀርነ፡ መንፈስ፡ ማሕሌተኪ፡ ረስየኒ፡ ከመ፡ እሕሊ፡ ለኪ፨</l>
+                  <l n="5">ይትዐቀብ፡ መልክእየ፡ በመልክእኪ፨</l>
+                  <l n="6">ይዜውራኒ፡ ምንትዋት፡ አክናፍኪ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለርእስኪ፡ እግዝእትየ፡ ማርያም፡ ዘደለለ፨</l>
+                  <l n="2">ሥዕርተ፡ ንጽሕ፡ ዘአብቈለ፨</l>
+                  <l n="3">አብያዘ፡ ብርሃን፡ ቦቶን፡ አክሊለ፨</l>
+                  <l n="4">ሰሎሞን፡ አቡኪ፡ በእንቲአኪ፡ ማሕሌተ፡ አልዐለ፨</l>
+                  <l n="5">ወጽፍሮ፡ ርእስኪ፡ ከመ፡ ሜላት፡ ትብህለ፨</l>
+                  <l n="6">በመንፈስ፡ ቅዱስ፡ ኅሊናኪ፡ ወሥጋኪ፡ ተደንገለ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለገጽኪ፡ እግዝእትየ፡ ማርያም፡ ከመ፡ ገጸ፡ ኤር፡ ዘያዋኪ፨</l>
+                  <l n="2">በከመ፡ ይቤ፡ በመዝሙር፡ ዳዊት፡ አቡኪ፨</l>
+                  <l n="3">ኵሎሙ፡ ብዑላነ፡ ምድር፡ ይትመሐለሉ፡ ለገጽኪ፨</l>
+                  <l n="4">ማርያም፡ በየማንኪ፡ ፍጽምየ፡ ባርኪ፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለአእዛንኪ፡ እግዝእትየ፡ ማርያም፡ በናዝሬት፡ ዘገሊላ፨</l>
+                  <l n="2">ብስራተ፡ ገብርኤል፡ እለ፡ ሰምዓ፨</l>
+                  <l n="3">ዘኢልማድ፡ በድንግልና፡ ከመ፡ ትፅንሲ፡ እግዚአ፨</l>
+                  <l n="4">ወዓዲ፡ ለሕፃንኪ፡ ቃሎ፡ አጽምአ፨</l>
+               </lg>
+               <lg type="stanza" n="25">
+                  <l n="1">ሰላም፡ ለቆምኪ፡ ከመ፡ በቀልት፡ ዘይመስል፨</l>
+                  <l n="2">እግዝእትየ፡ ማርያም፡ ዘሰቀዩኪ፡ ወትረ፡ አፍላገ፡ ለት፡ ወሜል፨</l>
+                  <l n="3">ኦድንግል፡ ድንግል፡ ወለቱ፡ ለስእራኤል፨</l>
+                  <l n="4">ጽጌ፡ ከርሥኪ፡ ልዑል፡ አማኑኤል፨</l>
+               </lg>
+               <lg type="stanza" n="26">
+                  <l n="1">ሰላም፡ ለድንግልና፡ ኅሊናኪ፡ ወለድንግልናኪ፡ እግዝእትየ፡ ማርያም፡ ወለተ፡ ነቢያት፡ ወነቢይ፨</l>
+                  <l n="2">ጽጌ፡ ከርሥኪ፡ ልዑል፡ እግዚአብሔር፡ አዶናይ፨</l>
+                  <l n="3">ሲሳየ፡ መርዔትኪ፡ ዘኢየዐርብ፡ ፀሓይ፨</l>
+                  <l n="4">ኅብስተ፡ ሥጋሁ፡ ቅዱስ፡ መለኮታዊ፡ ስርናይ፨</l>
+                  <l n="5">መለኮታዊ፡ ደመ፡ ገቦሁ፡ ዘወይን፡ ቀላይ፨</l>
+               </lg>
+               <lg type="stanza" n="27">
+                  <l n="1">ሰላም፡ ለመልክእኪ፡ ማርያም፡ እምነ፨</l>
+                  <l n="2">ወእሙ፡ ለእግዚእነ፨</l>
+                  <l n="3">በአክናፈ፡ ድንግልናኪ፡ ክልኤቱ፡ ክድኒ፡ ኪያነ፨</l>
+                  <l n="4">በእዴኪ፡ ዕቀቢ፡ ነፍሳቲነ፨</l>
+                  <l n="5">ሐመረ፡ ሥጋነ፡ እንበይነ፡ ወልድኪ፡ ሕፅነኪ፡ አርፍቅነ፨</l>
+               </lg>
+               <lg type="stanza" n="28">
+                  <l n="1">ሰላም፡ ሰላም፡ ለኵሎን፡ መልክእኪ፡ እግዝእትየ፡ ማርያም፨</l>
+                  <l n="2">ይትዐቀአብ፡ መልክእየ፡ በእዴኪ፡ እም፨</l>
+                  <l n="3">አክናፈ፡ ንጽሕኪ፡ በመንፈስ፡ ቅዱስ፡ ሕቱም፨</l>
+                  <l n="4">ለእግዚእየ፡ እሙ፡ ቀርነ፡ ሰላም፨</l>
+               </lg>
+               <lg type="stanza" n="29">
+                  <l n="1">ሰላም፡ ሰላም፡ ለኵሎን፡ መልክእኪ፡ ማርያም፡ እግዝእትየ፨</l>
+                  <l n="2">አንቲ፡ እምየ፡ ወልድኪ፡ አቡየ፨</l>
+                  <l n="3">አክሊለ፡ ባሕርይ፡ ኩኒ፡ ለርእስየ፨</l>
+                  <l n="4">ሠርጐ፡ ብርሃን፡ ለመልክእየ፨</l>
+                  <l n="5">በየማንኪ፡ ዕቀቢ፡ ነፍስየ፡ ወሥጋየ፨</l>
+               </lg>
+               <lg type="stanza" n="30">
+                  <l n="1">ሰላም፡ ሰላም፡ ለኵሎን፡ መልክእኪ፡ እግዝእትየ፡ ማርያም፡ ለሥጋኪ፡ ወነፍስኪ፨</l>
+                  <l n="2">ለዐጽምኪ፡ ወደምኪ፨</l>
+                  <l n="3">ለአሥራውኪ፡ ወአምትንትኪ፡ እመ፡ እግዚአብሔር፡ በሐኪ፨</l>
+                  <l n="4">መልክእየ፡ ይትዐቀብ፡ በመልክእኪ፨</l>
+                  <l n="5">ለዓለመ፡ ዓለም፡ ዘልፈ፡ ይዜወር፡ በእዴኪ፨</l>
+               </lg>
+               <lg type="stanza" n="31">
+                  <l n="1">ሰላም፡ እብሎን፡ ለኵሎን፡ መልክእኪ፨</l>
+                  <l n="2">እምቅድመ፡ ዓለም፡ ወልደ፡ አምላክ፡ ለከዊነ፡ እሙ፡ ኀረየኪ፨</l>
+                  <l n="3">እምውሉደ፡ ሰብእ፡ አልቦ፡ ከማኪ፨</l>
+                  <l n="4">ማርያም፡ ድግንል፡ በኅሊናኪ፡ ወሥጋኪ፨</l>
+                  <l n="5">አባግዐ፡ ወንጌል፡ ሕዝበኪ፡ ባርኪ፡ በእዴኪ፨</l>
+               </lg>
+               <lg type="stanza" n="32">
+                  <l n="1">ሰላም፡ ሰላም፡ ለኵሎን፡ መልክእኪ፨</l>
+                  <l n="2">እምሥዕርትኪ፡ እስከ፡ አእጋርኪ፨</l>
+                  <l n="3">ቅድስተ፡ ቅዱሳን፡ እንተ፡ ተሰመይኪ፨</l>
+                  <l n="4">ተንሥኢ፡ ድንግል፡ ልበሲ፡ ኀይለኪ፨</l>
+                  <l n="5">ወሞእዮሙ፡ ለአይሁድ፡ ፀርኪ፨</l>
+               </lg>
+               <lg type="stanza" n="33">
+                  <l n="1">ክድንኒ፡ ርግበ፡ ሰሎሞን፡ በአክናፍኪ፡ ዘብርሃን፨</l>
+                  <l n="2">ወዕቀብኒ፡ ከመ፡ ብንተ፡ ዐይን፨</l>
+                  <l n="3">በዘይመጽእ፡ ዓለም፡ እምእደ፡ ሰይጣን፨</l>
+                  <l n="4">ወበዝየኒ፡ እምሰብእ፡ እኩያን፨</l>
+                  <l n="5">ተማሕፀንኩ፡ ተማሕፅኖ፡ በመልክእኪ፡ ኵሎን፨</l>
+                  <l n="6">ማርያም፡ ሐረገ፡ ወይን፡ ዘወንጌል፡ ቍርባን፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

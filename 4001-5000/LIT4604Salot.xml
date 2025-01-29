@@ -6,6 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">ጸሎት፡ በእንተ፡ ሕማመ፡ ቍርጸት፡</title>
                 <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalot baʾǝnta ḥǝmāma qʷǝrṣat</title>
+                <title xml:lang="en" corresp="#t1">Prayer against the pain of colic (generic ID)</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -39,19 +40,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         <profileDesc>
             <creation/>
             <abstract>
-                <p>Prayer against colic.</p>
+                <p>Generic ID for a prayer against colic, to be used, when nothing more is known from the incipit.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Prayers"/>
                     <term key="Magic"/>
+                    <term key="DiseasePain"/>
                 </keywords>
             </textClass>
             <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2017-03-31">Created entity</change>
+            <change when="2025-01-07" who="CH">Added relations, updated abstract</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -60,8 +63,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="Incipit">
                     <ab>
                         ጸሎት፡ በእንተ፡ ሕማመ፡ ቍርጸት፡
-                        <!-- Cp. LIT4622Prayer and LIT4623Prayer with longer incipits (MV - 2017-04-27) -->
                     </ab>
+                </div>
+                <div type="bibliography">
+                    <listRelation>
+                        <relation name="dc:relation" active="LIT4604Salot" passive="LIT4595Salot"><desc>Thematically similar to 
+                            <ref type="work" corresp="LIT4595Salot"/>.</desc></relation>
+                        <relation name="dc:relation" active="LIT4604Salot" passive="LIT4622Prayer"><desc>Possibly similar to 
+                            <ref type="work" corresp="LIT4622Prayer"/>, which is attested with a longer incipit.</desc></relation>
+                        <relation name="dc:relation" active="LIT4604Salot" passive="LIT4623Prayer"><desc>Possibly similar to 
+                            <ref type="work" corresp="LIT4623Prayer"/>, which is attested with a longer incipit.</desc></relation>
+                    </listRelation>
                 </div>
             </div>
         </body>

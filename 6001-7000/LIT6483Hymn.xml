@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Malkǝʾ-hymn to Antony</title>
+                <title xml:id="t1" xml:lang="gez">መልክአ፡ እንጦንዮስ፡</title>
+                <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa ʾƎnṭonyos</title>
+                <title corresp="#t1" xml:lang="en">Image of Anthony</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -45,20 +47,92 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="MKr" when="2021-07-12">Created entity</change>
+            <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl><ptr target="bm:MgWebsite"/></bibl>
+                </listBibl>
                 <listRelation>
                     <relation name="ecrm:P129_is_about" active="LIT6483Hymn" passive="PRS1962Anthony"/>
+                    <relation name="skos:exactMatch" active="LIT6483Hymn" passive="https://w3id.org/malke/6483/"></relation>
                 </listRelation>
-            </div><!---->
-        </body>
-    </text>
-    <text>
-       <body>
-         <div type="bibliography"/>
+            </div>
+            <div type="edition" xml:lang="gez">
+                <div type="textpart" xml:id="malke">
+                    <lg type="stanza" n="1">
+                        <l n="1">በረድኤትከ፡ መንፈስ፡ ኅቡዓ፡ ህላዌ፡ እምተረክቦ፨</l>
+                        <l n="2">ከመ፡ ኢይክሥት፡ አፉየ፡ ሕሊና፡ ሕፀፅ፡ እም፡ ተጠብቦ፨</l>
+                        <l n="3">ውስተ፡ ፀምረ፡ ልብየ፡ ይረድ፡ ነገረ፡ ድርሳን፡ አምሳለ፡ ህቦ፨</l>
+                        <l n="4">አንፈ፡ ሐራውያ፡ ለእመ፡ ተሠርገወ፡ ውፅቦ፨</l>
+                        <l n="5">አኮኑ፡ ያኤምር፡ ሕሠመ፡ እንተ፡ ቦ፨</l>
+                    </lg>
+                    <lg type="stanza" n="2">
+                        <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ጣዕመ፡ ስቴሁ፡ አሚን፨</l>
+                        <l n="2">ዘትካዘ፡ ሥጋ፡ ያረሥዕ፡ ከመ፡ ስቴ፡ ወይን፨</l>
+                        <l n="3">እንጦንስ፡ ጳውሎስ፡ ሰባኬ፡ ሐዲስ፡ ኪዳን፨</l>
+                        <l n="4">ይድምፅ፡ ውስተ፡ ልብየ፡ ቃለ፡ ትምህርትከ፡ ቀርን፨</l>
+                        <l n="5">እስከ፡ እምንዋማ፡ ትነቅህ፡ ነፍስየ፡ ፌቤን፨</l>
+                    </lg>
+                    <lg type="stanza" n="3">
+                        <l n="1">ሰላም፡ ለሥዕርተ፡ ርእስከ፡ ሥእርተ፡ መላእክት፡ ዘኮነ፨</l>
+                        <l n="2">ድኅረ፡ እማርያም፡ ነሥአ፡ ዘበሰማያት፡ አቡነ፨</l>
+                        <l n="3">እንጦንስ፡ ጠቢብ፡ አመ፡ ሕይወተ፡ ዴገነ፨</l>
+                        <l n="4">በእሳተ፡ ገድል፡ ወርቀ፡ ሥጋሁ፡ ፈተነ፨</l>
+                        <l n="5">ወእምነ፡ ሥኑ፡ አጥረየ፡ ለመድኅን፡ ሥነ፨</l>
+                    </lg>
+                    <lg type="stanza" n="35">
+                        <l n="1">ሰላም፡ ሰላም፡ ለመቃብሪከ፡ ኅቡእ፨</l>
+                        <l n="2">እምአዕይንተ፡ ኵሎሙ፡ ሰብእ፨</l>
+                        <l n="3">በከመ፡ አዘዘኮሙ፡ እንጦንስ፡ ለደቂቅከ፡ አርዳእ፨</l>
+                        <l n="4">ሰውረኒ፡ እምገጸ፡ ሞት፡ በትንባሌከ፡ ባቍዕ፨</l>
+                        <l n="5">ከመ፡ ተሰወረ፡ ሄኖክ፡ እምአዳም፡ ሳብዕ፨</l>
+                    </lg>
+                    <lg type="stanza" n="36">
+                        <l n="1">ሰላም፡ ለንቅሀትከ፡ ምስለ፡ አእላፋት፡ ጉባኤ፨</l>
+                        <l n="2">አመ፡ ይከውን፡ ድኅረ፡ ሰዓተ፡ ትንሣኤ፨</l>
+                        <l n="3">እንጦንዮስ፡ ተባእ፡ ዘኢያእመርከ፡ ጾታ፡ ምማዔ፨</l>
+                        <l n="4">ጸውዖሙ፡ ለአብያጺከ፡ እለ፡ ኀደጉ፡ ዝንጋዔ፨</l>
+                        <l n="5">በዐጸደ፡ ነፍስየ፡ ጥቀ፡ ይግበሩ፡ ውዋዔ?፡</l>
+                    </lg>
+                    <lg type="stanza" n="37">
+                        <l n="1">ናሁ፡ ዘአቅረብኩ፡ ለመልክእከ፡ ስብሐት፨</l>
+                        <l n="2">በልሳንየ፡ ድክምት፨</l>
+                        <l n="3">እንጦንዮስ፡ ተወከፍ፡ አምሳለ፡ ንጹሕ፡ ወሥዋዕት፨</l>
+                        <l n="4">ከመ፡ ተወክፈ፡ መድኃኒነ፡ ጸሪቀ፡ አሐቲ፡ ብእሲት፨</l>
+                        <l n="5">ወአስተብፅዐ፡ በክብር፡ ወሐዲስ፡ ብስራት፨</l>
+                    </lg>
+                    <lg type="stanza" n="38">
+                        <l n="1">ስብሐት፡ ይደሉ፡ ለእግዚአብሔር፡ ዋሕድ፨</l>
+                        <l n="2">በልሳነ፡ ኵሉ፡ ዘመድ፨</l>
+                        <l n="3">ዘጸገወኒ፡ እትናገር፡ ውዳሴ፡ እንጦንስ፡ ፅሙድ፨</l>
+                        <l n="4">ኢትፍራህ፡ በለኒ፡ ፍቁርየ፡ ኢይሁበከ፡ ለባዕድ፨</l>
+                        <l n="5">ኣቀውመከ፡ አነ፡ በመፍርህ፨</l>
+                        <l n="6">ዐጸድ፡ ወሀለውኩከ፡ አነ፡ በግሩም፡ ዐውድ፨</l>
+                    </lg>
+                </div>
+                <div type="textpart" xml:id="tarafa-malke">
+                    <lg type="stanza" n="1">
+                        <l n="1">ሰላም፡ ለከ፡ እንጦንዮስ፡ አብ፡ ወብርሃነ፡ ሐዲስ፡ ዓለም፨</l>
+                        <l n="2">እንተ፡ ኢያረሥዕ፡ ሕገ፡ ዘአብርሃም፨</l>
+                        <l n="3">ወያጸርዕ፡ ግብረ፡ ድካም፨</l>
+                    </lg>
+                    <lg type="stanza" n="6">
+                        <l n="1">ሰላም፡ ለከ፡ ሶበ፡ ኀለይኩ፡ ወልድከ፡ እንጦንዮስ፡ አቡየ፨</l>
+                        <l n="2">አርዑተ፡ ቀኖናከ፡ እጹር፡ ዘኢድልወትየ፨</l>
+                        <l n="3">ኢትዝክር፡ አባ፡ ኃጢአትየ፨</l>
+                    </lg>
+                    <lg type="stanza" n="7">
+                        <l n="1">ሰላም፡ ለከ፡ እምንዴት፡ ጽኑዕ፡ በይነ፡ አፍቀርኩ፡ ኪያከ፨</l>
+                        <l n="2">እንተ፡ ነበብኩ፡ ሰላመ፡ እንጦንዮስ፡ ንሣእ፡ በእዴከ፨</l>
+                        <l n="3">ወጸሐፋ፡ በጽሌ፡ ልብከ፨</l>
+                    </lg>
+                </div>
+            </div>
+            
          <div xml:lang="gez" type="edition">
            <note>The incipit is taken from <ref type="mss" corresp="BLorient577"/></note>
            <div type="textpart" subtype="incipit">

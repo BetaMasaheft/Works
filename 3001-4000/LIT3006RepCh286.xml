@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to St Menas</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ሚናስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Minās</title>
+            <title corresp="#t1" xml:lang="en">Image of Menas</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -13,21 +15,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">                 
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
-         </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         </sourceDesc>         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -49,23 +45,68 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
+         <change who="ES" when="2025-01-10">Added text  from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT3006RepCh286" passive="PRS7000MenasM"/>
+               <relation name="skos:exactMatch" active="LIT3006RepCh286" passive="https://w3id.org/malke/3006/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">286</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  በቅድመ፡ ዛቲ፡ ቤተ፡ ክርስቲያን፡ የማነ፡ ፈጣሪ፡ ዘሣረራ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">በቅድመ፡ ዛቲ፡ ቤተ፡ ክርስቲያን፡ የማነ፡ ፈጣሪ፡ ዘሣረራ፨</l>
+                  <l n="2">ስብሐተ፡ መሲሑ፡ አየድዕ፡ በአውታር፡ ወበእንዚራ፨</l>
+                  <l n="3">ወብሂለነገር፡ እሰብከ፡ በእናቅጺሃ፡ ወዘውራ፨</l>
+                  <l n="4">ዓበየ፡ ሚናስ፡ ፍቁርኪ፡ ከዊነ፡ ዘንጉሥ፡ ሐራ፨</l>
+                  <l n="5">ብስራትኪ፡ አቅሌስያ፡ ዳግሚት፡ ደብተራ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ዘየኃብር፡ በጥንቱ፨</l>
+                  <l n="2">ምስለ፡ ስመ፡ መልአክ፡ አሐዱ፡ እምሊቃናት፡ ፯ቱ፨</l>
+                  <l n="3">ከመ፡ ትንሥአኒ፡ ሚናስ፡ ወትሰደኒ፡ እፈቱ፨</l>
+                  <l n="4">ኀበ፡ ሤመከ፡ እግዚእከ፡ በዲበ፡ አህጉር፡ ፲ቱ፨</l>
+                  <l n="5">እስመ፡ ፍቅረ፡ ሢመት፡ መነንከ፡ ዘዓለም፡ ዝንቱ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለሥዕርተ፡ ርእስከ፡ በቅብዓ፡ አእምሮ፡ ጥሉል፨</l>
+                  <l n="2">ወከመ፡ ሜላት፡ ፍቱል፨</l>
+                  <l n="3">ብዙኃ፡ ትሩፋት፡ ሚናስ፡ እምኍልቈ፡ ዘዚአከ፡ ገድል፨</l>
+                  <l n="4">ኍልቈ፡ ፍናዋት፡ ዘመርኅበ፡ ሰማይ፡ ልዑል፨</l>
+                  <l n="5">መፍቅደ፡ አብያት፡ ዘልበ፡ ምድር፡ በሕቁ፡ ቀሊል፨</l>
+               </lg>
+               <lg type="stanza" n="44">
+                  <l n="1">ሰላም፡ ለግንዘተ፡ ሥጋከ፡ ወእትሜነይ፡ ፍጹመ፨</l>
+                  <l n="2">ለእለ፡ ገነዙከ፡ እደው፡ እደዊሆሙ፡ ስዒመ፨</l>
+                  <l n="3">ስምየኒ፡ ሚናስ፡ በስመ፡ ዕበይ፡ ዳግመ፨</l>
+                  <l n="4">ለድንግል፡ ሶበ፡ ሰብሐ፡ ወምሥጢረ፡ ንጽሐ፡ ተርጐመ፨</l>
+                  <l n="5">ከመ፡ አፈ፡ ወርቅ፡ ሰመየቶ፡ ለዮሐንስ፡ ቅድመ፨</l>
+               </lg>
+               <lg type="stanza" n="45">
+                  <l n="1">ሰላም፡ ለመቃብሪከ፡ ዘዐቢይ፡ ክብሩ፨</l>
+                  <l n="2">ብዙኃት፡ ኀይላት፡ እስመ፡ እምኔሁ፡ ተገብሩ፨</l>
+                  <l n="3">ሥዋየ፡ አብያጺከ፡ ሚናስ፡ ያበኪ፡ ለለ፡ አሚሩ፨</l>
+                  <l n="4">እስመ፡ ቦ፡ መለያልሁ፡ ዘበበክፍሉ፡ መተሩ፨</l>
+                  <l n="5">ወቦ፡ ዘበሞስርት፡ ሥጋሁ፡ ሰተሩ፨</l>
+               </lg>
+               <lg type="stanza" n="46">
+                  <l n="1">አኮኑ፡ ኤልያስ፡ እመፈ፡ ቋዕ፡ ተመጠዋ፡ ኅብስት፡ ኢጸልአ፨</l>
+                  <l n="2">ወኢያስተራኰሰ፡ ማየ፡ እምአፅመ፡ አድግ፡ ዘነቅዐ፨</l>
+                  <l n="3">እስራኤላዊ፡ ሰምሶን፡ ጊዜ፡ ሐፈወ፡ ወጸምዐ፨</l>
+                  <l n="4">ሊተኒ፡ አበሳየ፡ አናኅስዩከ፡ በምልአ፨</l>
+                  <l n="5">መሥዋዕተ፡ ሰላምየ፡ ሚናስ፡ ተወከፍ፡ ጕጕዐ፨</l>
+               </lg>
             </div>
          </div>
       </body>

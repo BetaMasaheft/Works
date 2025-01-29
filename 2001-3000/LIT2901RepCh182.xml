@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to Abraham, Isaac and Jacob</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ አብርሃም፡ ይስሐቅ፡ ወያዕቆብ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa ʾAbrəhām Yəsḥaq wa-Yāʿqob</title>
+            <title corresp="#t1" xml:lang="en">Image of Abraham, Isaac, and Jacob</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +16,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -48,25 +46,61 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-01">Added keywords and incipit</change>
+         <change who="ES" when="2025-01-10">Added the text, relations and bibl (A. Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               
+               <relation name="skos:exactMatch" active="LIT2901RepCh182" passive="https://w3id.org/malke/2901/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT2901RepCh182" passive="PRS1269Abraham"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT2901RepCh182" passive="PRS5578Isaac"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT2901RepCh182" passive="PRS5650Jacob"></relation>
+            </listRelation>
             <listBibl type="editions">
+               
+               <bibl><ptr target="bm:MgWebsite"/></bibl>               
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">182</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምክሙ፡ ለስእርትክሙ፡ በፍቀድ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ወለሥዕርትክሙ፡ በፍቅድ፨</l>
+                  <l n="2">ለርእስክሙ፡ ሰላም፡ ወለገጽክሙ፡ ጽሑድ፨</l>
+                  <l n="3">አብርሃም፡ ይስሐቅ፡ ወያዕቆብ፡ ዘቤተ፡ አእምሮ፡ ፍድፉድ፨</l>
+                  <l n="4">ይትቀሰም፡ አእምሮትየ፡ በልሳንክሙ፡ እድ፨</l>
+                  <l n="5">ጊዜ፡ አልጸቀ፡ ወበጽሐ፡ ገሚድ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለቀራንብቲክሙ፡ ወለአዕይንቲክሙ፡ ፍሡሓን፨</l>
+                  <l n="2">ለአእዛኒክሙ፡ ሰላም፡ ወለመላትሒክሙ፡ ሮማን፨</l>
+                  <l n="3">አብርሃም፡ ይስሐቅ፡ ወያዕቆብ፡ አፈዋተ፡ ከርቤ፡ ወልብን፨</l>
+                  <l n="4">ከመ፡ ትባርኩኒ፡ በቡራኬ፡ ኵሉ፡ ጻድቃን፨</l>
+                  <l n="5">ንዑኬ፡ አጋእዝትየ፡ ውተዛ፡ መካን፨</l>
+               </lg>
+               <lg type="stanza" n="14">
+                  <l n="1">ሰላም፡ ለፀአተ፡ ነፍስክሙ፡ ዘኢያደንገፃ፡ መስቴማ፨</l>
+                  <l n="2">ለበድነ፡ ሥጋክሙ፡ ወለግንዘትክሙ፡ ወለመቃብሪክሙ፡ እንተ፡ ይእቲ፡ ሰቂማ፨</l>
+                  <l n="3">አብርሃም፡ ይስሐቅ፡ ወያዕቆብ፡ ልቡሳነ፡ ዕበይ፡ ወግርማ፨</l>
+                  <l n="4">ለነፍስየ፡ ራኄል፡ በጌጋይ፡ ምልእተ፡ ሰቆቃው፡ ወፃማ፨</l>
+                  <l n="5">አንግፍዋ፡ በኃሤት፡ ኢትብኪ፡ በራማ፨</l>
+               </lg>
+               <lg type="stanza" n="15">
+                  <l n="1">እንበለ፡ ምግባር፡ ወገድል፡ ለወልድክሙ፡ ሐካይ፨</l>
+                  <l n="2">በረድኤትክሙ፡ እርፍቅ፡ ምስለ፡ አልዓዛር፡ ነዳይ፨</l>
+                  <l n="3">አብርሃም፡ ይስሐቅ፡ ወያዕቆብ፡ መኰንነ፡ መዓልት፡ ፀሓይ፨</l>
+                  <l n="4">ሰአሉ፡ ሊተ፡ ገጣሪ፡ መስተስርየ፡ ኵሉ፡ ጌጋይ፨</l>
+                  <l n="5">ከመ፡ ያንጽሀኒ፡ በመንፈስ፡ ወማይ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

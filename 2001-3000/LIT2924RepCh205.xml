@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to St Bartholomew the apostle</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ በርተሎሜዎስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Bartalomewos</title>
+            <title corresp="#t1" xml:lang="en">Image of Bartholomew</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +16,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -49,25 +47,85 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-02">Added keywords and incipit</change>
+         <change who="ES" when="2025-01-10">Added the text, relations and bibl (A. Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               
+               <relation name="skos:exactMatch" active="LIT2924RepCh205" passive="https://w3id.org/malke/2924/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT2924RepCh205" passive="PRS2481Bartholo"></relation>
+               
+            </listRelation>
             <listBibl type="editions">
+               
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">205</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለፅንሰትከ፡ እንበለ፡ ያእምሩ፡ አዝማዲከ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለፅንሰትከ፡ እንበለ፡ ያእምሩ፡ አዝማዲከ፨</l>
+                  <l n="2">ወለልደትከ፡ ትሑር፡ መንገለ፡ ሖረ፡ ዕፃከ፨</l>
+                  <l n="3">በርተሎሜዎስ፡ አምላክ፡ ከመ፡ ወልደ፡ አምላክ፨</l>
+                  <l n="4">መኑ፡ እምለበወ፡ ወእንዘ፡ ያነውኅ፡ ሰቢከ፨</l>
+                  <l n="5">እመ፡ ውስተ፡ ኵሉ፡ ኢጸርሐ፡ ዐዋዲ፡ ቃልከ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ዘበአፈ፡ ኵሉ፡ ዝኩር፨</l>
+                  <l n="2">ወለሥዕርትከ፡ ሰላም፡ ምስለ፡ ርእስከ፡ ክቡር፨</l>
+                  <l n="3">በደብረ፡ ሃይማኖት፡ ጥሉል፡ በርተሎሜዎስ፡ ሀገር፨</l>
+                  <l n="4">እንተ፡ ተሐነጽከ፡ በእደ፡ ፈጣሪ፡ ፍጡር፨</l>
+                  <l n="5">ተከብቶ፡ ኢትክል፡ በሰማይ፡ ወምድር፨</l>
+               </lg>
+               <lg type="stanza" n="19">
+                  <l n="1">ሰላም፡ ለመቃብሪከ፡ ውስተ፡ መካን፡ ሠናይ፨</l>
+                  <l n="2">ወለትንሣኤከ፡ በክብር፡ አመ፡ ዕለተ፡ ምሥቲር፡ ዐባይ፨</l>
+                  <l n="3">በርተሎሜዎስ፡ ዕረፍት፡ ወቤተ፡ መርዓዊ፡ ርሱይ፨</l>
+                  <l n="4">ንትሜነይ፡ ናጽልል፡ በኀቤከ፡ እምጻማ፡ ሐሩር፡ ሥቃይ፨</l>
+                  <l n="5">አመ፡ እምተዐጽዎ፡ ጽኑዕ፡ ይትረኀው፡ ሰማይ፨</l>
+               </lg>
+               <lg type="stanza" n="20">
+                  <l n="1">ሰላም፡ ለዕለተ፡ ሞትከ፡ ድኅረ፡ አንሣእከ፡ ሙታነ፨</l>
+                  <l n="2">እሞተ፡ ሥጋ፡ ወነፍስ፡ በዘአጥረይከ፡ ሥልጣነ፨</l>
+                  <l n="3">በርተሎሜዎስ፡ ፀጋመ፡ እንተ፡ ትሬሲ፡ የማነ፨</l>
+                  <l n="4">ዕቀበነ፡ በኀይልከ፡ ከመ፡ ኢንትሉ፡ ሰይጣነ፨</l>
+                  <l n="5">አርአያ፡ በድካም፡ ተለወ፡ በይነ፡ ዕፅ፡ አቡነ፨</l>
+               </lg>
+               <lg type="stanza" n="21">
+                  <l n="1">ስብሐተ፡ ክቡር፡ ስምከ፡ በጾታ፡ ብዙኅ፡ ሐልዮ፨</l>
+                  <l n="2">እስመ፡ ነገርኩ፡ ለኵሉ፡ ብእሲ፡ ድካም፡ ወተጋንዮ፨</l>
+                  <l n="3">በርተሎሜዎስ፡ ንግረኒ፡ ተስፋ፡ ቅቡፃን፡ ተባርዮ፨</l>
+                  <l n="4">ከመ፡ ሀለወኒ፡ እንዘ፡ ተኀድግ፡ ጌግዮ፨</l>
+                  <l n="5">ለሥጋየ፡ ዘአውተረ፡ ኀቤከ፡ ጸልዮ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለከ፡ በርተሎሜዎስ፡ ጠል፡ ልምላሜ፡ ገነት፡ ዘየብሰ፨</l>
+                  <l n="2">ለዐውደ፡ ዓመት፡ እፍረይ፡ አርውየኒ፡ ፈውሰ፨</l>
+                  <l n="3">ውዳሴከ፡ ዘተወደሰ፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለከ፡ በርተሎሜዎስ፡ ሥርግው፡ ሜላተ፡ ሐዲስ፡ ምልክና፨</l>
+                  <l n="2">ብልየተ፡ ሰብእናየ፡ ሐድስ፡ በጥዒና፨</l>
+                  <l n="3">እስመ፡ ቀርበ፡ ለሙስና፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለከ፡ ወንጌለ፡ መንግሥት፡ ኅወተ፡ በርተሎሜዎስ፡ ዘራኢ፨</l>
+                  <l n="2">ውስተ፡ ገራህትከ፡ እዝነ፡ ሰማዒ፨</l>
+                  <l n="3">አመ፡ ማዕረርከ፡ በላ፡ ለነፍስየ፡ ንዒ፨</l>
+                  <l n="4">እክለ፡ ጸጋ፡ በጸጋ፡ ትንሥኢ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to St George</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ሥቃዩ፡ ለጊዮርጊስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Śəqāyu la-Giyorgis</title>
+            <title corresp="#t1" xml:lang="en">Image of the Torture of George</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,9 +16,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                 
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -44,25 +46,60 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-02">Added keywords and incipit</change>
+         <change who="ES" when="2025-01-10">Added the text, relations and bibl (A. Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               
+               <relation name="skos:exactMatch" active="LIT2914RepCh195" passive="https://w3id.org/malke/2914/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT2914RepCh195" passive="PRS4585Georgeo"></relation>
+               
+            </listRelation>
             <listBibl type="editions">
+               
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">195</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለጥንተ፡ ገድልከ፡ ሠናየ፡ መዊዕ፡ ወፍጻሜ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለጥንተ፡ ገድልከ፡ ሠናየ፡ መዊእ፡ ወፍጻሜ፨</l>
+                  <l n="2">ጊዮርጊስ፡ ስመ፡ አበሜ፨</l>
+                  <l n="3">እንበለ፡ ይኅልፍ፡ ይትቈለቈል፡ ፀሓየ፡ ዕድሜ፨</l>
+                  <l n="4">ከመ፡ እኩን፡ እምሐይቅ፡ ሠርፀ፡ ጽጌ፡ ረዳ፡ ቀሳሜ፨</l>
+                  <l n="5">በመርስየ፡ ሐዘን፡ ዘጽድቅ፡ ኩነኒ፡ ሠያሜ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለተዐርቆትከ፡ እምልብሰ፡ ሞገስ፡ ወሥርጋዌ፨</l>
+                  <l n="2">ሶበ፡ ሰማዕከ፡ ትዕይርተ፡ እምአፈ፡ ዱድያኖስ፡ አርዌ፨</l>
+                  <l n="3">ጊዮርጊስ፡ ዕጉሥ፡ ሥቃየ፡ ትፅዕሮ፡ ወደዌ፨</l>
+                  <l n="4">ረድኤት፡ ወዘአድኅኖ፡ እንዘ፡ ትጸይሕ፡ ፍናዌ፡</l>
+                  <l n="5">መካነ፡ ፍሥሓ፡ ስደኒ፡ እሳተፍ፡ ህላዌ፨</l>
+               </lg>
+               <lg type="stanza" n="14">
+                  <l n="1">ሰላም፡ ለኅርወተ፡ ዓጽምከ፡ ለመልዕልተ፡ ይድራስ፡ ደብር፨</l>
+                  <l n="2">ከመ፡ ሐሠረ፡ ዐምድ፡ ዘአመ፡ ማእረር፨</l>
+                  <l n="3">ጊዮርጊስ፡ ረዳኢ፡ መዓድመ፡ ዝክር፨</l>
+                  <l n="4">ኣስተሐምም፡ ጻህቀ፡ ልብየ፡ ከመ፡ ትፈጽም፡ በምዕር፨</l>
+                  <l n="5">እስመ፡ በአስልጦ፡ ትካዝ፡ ይትአመር፡ ፍቁር፨</l>
+               </lg>
+               <lg type="stanza" n="15">
+                  <l n="1">ሰላም፡ ለፍጻሜ፡ ስምዕከ፡ በሰይፈ፡ ሐራዊ፡ ቈላፍ፨</l>
+                  <l n="2">ከመ፡ ተሀሉ፡ አንተ፡ ኀበ፡ ዘለዓለም፡ ምዕራፍ፨</l>
+                  <l n="3">ጊዮርጊስ፡ ኅሩይ፡ ዘገነተ፡ ጽባሕ፡ ዖፍ፨</l>
+                  <l n="4">ኅብአኒ፡ እግዚኦ፡ ወሰውረኒ፡ በክንፍ፨</l>
+                  <l n="5">እስመ፡ አፈቅረከ፡ እማዕምቅ፡ ወአኮ፡ በአፍ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>
