@@ -21,7 +21,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="PetermannIINachtrag57" xml:id="C"/>
+                    <witness corresp="PetermannIINachtrag58"/>
+                    <witness corresp="Tanasee53"/>
+                    <witness corresp="Tanasee137"/>
+                    <witness corresp="BerOrOct1299" xml:id="B"/>
+                    <witness corresp="NLA330" xml:id="L">Indicated with N in Derat/Seignobos 2015.</witness>
+                    <witness corresp="BNFabb68" xml:id="F">Indicated with F in Hoffmann 2021, but with A in Derat/Seignobos 2015.</witness>
+                    <witness corresp="BNUet5" xml:id="O"/>
+                    <witness corresp="EMML511" xml:id="R"/>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -32,10 +42,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <abstract>
                 <p>The α-recension of the Tārika Walda ʾAmid is the first translation of this work from Arabic into Gǝʿǝz. According to a
                     colophon in the text, the translation took place at the time of <persName ref="PRS10626ZaraY"/>. It contains only the 
-                    pre-Islamic part, but not the parts on the history after the rise of Islam and no list of patriarchs as the 
-                    <ref type="work" corresp="LIT6936TarWaAmidBeta">β-recension</ref>. According to <bibl><ptr target="bm:Diez2024Amid"/>
-                    <citedRange unit="page">140-141</citedRange></bibl> both recension have been translated from the 'old recension' of the 
-                    Arabic version of the Tārīḫ Ibn al-ʿAmīd, that is represented by the manuscript ANT of the Antonius monastery in Egypt.</p>
+                    pre-Islamic part, but not the parts on the history after the rise of Islam and no list of patriarchs or account of the ecumenical 
+                    councils, which are included in the <ref type="work" corresp="LIT6936TarWaAmidBeta">β-recension</ref>. According to 
+                    <bibl><ptr target="bm:Diez2024Amid"/><citedRange unit="page">140-141</citedRange></bibl>, both recensions have 
+                    been translated from the 'old recension' of the Arabic version of the Tārīḫ Ibn al-ʿAmīd, that is represented by the manuscript 
+                    ANT of the Antonius monastery in Egypt.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -51,6 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="CH" when="2024-02-15">Created entity</change>
+            <change when="2025-02-11" who="CH">Added listWit and updated abstract</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -61,9 +73,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="betmas:formerlyAlsoListedAs" active="LIT6935TarWaAmidAlpha" passive="LIT1076alMagm"/>
                     <relation name="saws:isDirectTranslationOf" active="LIT6935TarWaAmidAlpha" passive="LIT4723TarikaWaldaAmid#t2"/>
                     <relation name="saws:isDifferentTo" active="LIT6935TarWaAmidAlpha" passive="LIT6936TarWaAmidBeta"/>
-                    <relation name="lawd:hasAttestation" active="LIT6935TarWaAmidAlpha" passive="BerOrOct1299"/>
-                    <relation name="lawd:hasAttestation" active="LIT6935TarWaAmidAlpha" passive="PetermannIINachtrag57"/>
-                    <relation name="lawd:hasAttestation" active="LIT6935TarWaAmidAlpha" passive="EMML511"/>
+                    <relation name="ecrm:P129_is_about" active="LIT6936TarWaAmidBeta#Eskender" passive="PRS1666Alexande"/>
                 </listRelation>
             </div>
             <div type="edition">
@@ -76,14 +86,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </div>
             </div>
             <div type="bibliography">
+                
                 <listBibl type="editions">
                     <bibl>
-                        <ptr target="bm:Hoffmann2021Amid"/>
+                        <ptr target="bm:Hoffmann2021Amid" corresp="#B #C #O #R #F"/>
+                        <note>Containing the geographical treatise in the story on Eber (15th generation).</note>
+                    </bibl>
+                    <bibl>
+                        <ptr target="bm:SergewGalaw2018GiyorgisWaldaAmid" corresp="#L"/>
+                        <note>Containing the parts beginning with Alexander the Great (92nd generation) until the account of the ecumenical council 
+                            of Constantinople based on one manuscript from National Archives and Libraries Association of Ethiopia (NALE) in Addis 
+                            Ababa, which is probably NALE ms. 330.</note>
+                     </bibl>
+                    <bibl>
+                        <ptr target="bm:DeratSeignobos2015Moise" corresp="#L #F"/><citedRange unit="page">276-278</citedRange>
+                        <note>Edition of the story about the Ethiopian wife of Moses (27th generation) based on five manuscripts, three of which 
+                            being of the β-recension, one of the α-recension and one most likely of the α-recension.</note>
                     </bibl>
                 </listBibl>
-                <listBibl type="editions">
+                <listBibl type="translation">
                     <bibl>
-                        <ptr target="bm:Hoffmann2021Amid"/>
+                        <ptr target="bm:Hoffmann2021Amid" corresp="#B #C #O #R #F"/>
+                        <note>Containing the geographical treatise in the story on Eber (15th generation), translated to German.</note>
+                    </bibl>
+                    <bibl>
+                        <ptr target="bm:SergewGalaw2018GiyorgisWaldaAmid" corresp="#L #F"/>
+                        <note>Containing the parts beginning with Alexander the Great (92nd generation) until the account of the ecumenical council 
+                            of Constantinople, translated to Amharic.</note>
+                    </bibl>
+                    <bibl>
+                        <ptr target="bm:DeratSeignobos2015Moise" corresp="#F #L"/><citedRange unit="page">276-278</citedRange>
+                        <note>Edition of the story about the Ethiopian wife of Moses (27th generation), translated to French.</note>
                     </bibl>
                 </listBibl>
             </div>
@@ -93,7 +126,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <ptr target="bm:Hoffmann2021Amid"/><citedRange unit="page">57-61</citedRange>
                     </bibl>
                 </listBibl>
-            </div><!---->
+            </div>
         </body>
     </text>
 </TEI>
