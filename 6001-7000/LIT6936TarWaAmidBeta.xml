@@ -27,15 +27,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <witness corresp="BNFet221" xml:id="E"/>
                     <witness corresp="FSUor40" xml:id="H"/>
                     <witness corresp="FSUor134"  xml:id="J"/>
-                    <witness corresp="BLorient814" xml:id="M">London, British Library, BL Oriental 814, which is indicated with M in 
-                        Hoffmann 2021, but with O in Derat/Seignobos 2015.</witness>
+                    <witness corresp="BLorient814" xml:id="M">BL Oriental 814, which is indicated with M in Hoffmann 2021, but with O in 
+                        Derat and Seignobos 2015.</witness>
                     <witness corresp="EMDA75" xml:id="N"/>
-                    <witness corresp="EMML21" xml:id="P">ʾAddis ʾAbabā, Manbara Lǝʿul Qəddus Mārqos, EMML 21, which is indicated with P
-                        in Hoffmann 2021, but with E1 in Derat/Seignobos 2015.</witness>
-                    <witness corresp="EMML192" xml:id="Q">Collegeville, Hill Museum and Manuscript Library, MS EMML no. 192, which is 
-                        indicated with Q in Hoffmann 2021, but with E2 in Derat/Seignobos.</witness>
+                    <witness corresp="EMML21" xml:id="P">EMML 21, which is indicated with P in Hoffmann 2021, but with E1 in 
+                        Derat and Seignobos 2015.</witness>
+                    <witness corresp="EMML192" xml:id="Q">EMML 192, which is indicated with Q in Hoffmann 2021, but with E2 in 
+                        Derat and Seignobos 2015.</witness>
                     <witness corresp="EMML9226" xml:id="S"/>
                     <witness corresp="EMDA232" xml:id="T"/>
+                    <witness corresp="EMIP00692"/>
+                    <witness corresp="Tanasee136"/>
                 </listWit>
             </sourceDesc>
         </fileDesc>
@@ -48,8 +50,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>The β-recension of the Tārika Walda ʾAmid is the second translation of this work from Arabic into Gǝʿǝz. According to a list of 
                     Alexandrinian patriarchs at the end of the work, which was most probably extended by the translator(s) or early copyists up to 
                     Gabriel VII, the 95th patriarch of Alexandria, who held office during the reign of <persName ref="PRS6229LebnaDe"/>, i.e. in the 
-                    period of <date notBefore="1525" notAfter="1540">1525-1540</date>. It contains both the pre-Islamic and the Islamic parts, as
-                    well as the aforementioned list of patriarchs, which was added to Ibn al-ʿAmīd's original work after his death. 
+                    period of their parallel offices in <date notBefore="1525" notAfter="1540">1525-1540</date>. It contains both the pre-Islamic and the Islamic parts, as
+                    well as the aforementioned list of patriarchs and an account on the ecumenical councils, which were added to Ibn al-ʿAmīd's original work after his death. 
                     According to <bibl><ptr target="bm:Diez2024Amid"/><citedRange unit="page">140-141</citedRange></bibl>, both Ethiopian 
                     recensions have been translated from the 'old recension' of the Arabic version of the Tārīḫ Ibn al-ʿAmīd, that is represented by the manuscript 
                     ANT from the Antonius Monastery in Egypt.</p>
@@ -72,6 +74,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change when="2024-12-23" who="CH">Added textpart on Alexander from edition Budge</change>
             <change when="2024-01-20" who="CH">Added textpart on Moses' wife from edition Derat/Seignobos</change>
             <change when="2024-01-23" who="CH">Updated labels according to edition Diez</change>
+            <change when="2025-02-11" who="CH">Updated source desc, abstract and bibliography</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -86,59 +89,64 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </listRelation>
                 <div type="bibliography">
                     <listBibl type="editions">
-                        <bibl>
-                            <ptr target="bm:Hoffmann2021Amid" corresp="#A #B #C #D #E #F #H #J #M #N #O #P #Q #R #S #T"/>
+                        <bibl corresp="#A #B #C #D #E #F #H #J #M #N #O #P #Q #R #S #T">
+                            <ptr target="bm:Hoffmann2021Amid"/>
                             <citedRange unit="page">104-207</citedRange>
-                            <note>Edition of the geographical treatise (15th generation).</note>
+                            <note>Edition of the geographical treatise in the story of Eber (15th generation).</note>
                         </bibl>
-                        <bibl>
-                            <ptr target="bm:Krackovskij1912Geography" corresp="#A"/><citedRange unit="page">127-145</citedRange>
-                            <note>Diplomatic edition of the geographical treatise (15th generation).</note>
+                        <bibl corresp="#A">
+                            <ptr target="bm:Krackovskij1912Geography"/><citedRange unit="page">127-145</citedRange>
+                            <note>Diplomatic edition of the geographical treatise in the story of Eber (15th generation).</note>
                         </bibl>
-                        <bibl>
-                            <ptr target="bm:KrackovskijFrantsouzoff2015Geography" corresp="#A"/>
+                        <bibl corresp="#A">
+                            <ptr target="bm:KrackovskijFrantsouzoff2015Geography"/>
                             <citedRange unit="page">268-279, 290-301, 631</citedRange>
-                            <note>Re-edition of the geographical treatise done by Kračkovskij.</note>
+                            <note>Re-edition of the geographical treatise, based on the edition by Kračkovskij.</note>
+                        </bibl>
+                        <bibl corresp="#M #P #Q">
+                            <ptr target="bm:DeratSeignobos2015Moise"/><citedRange unit="page">276-278</citedRange>
+                            <note>Edition of the story about the Ethiopian wife of Moses (27th generation) based on five manuscripts, three of which being of the β-recension,
+                                one of the α-recension and one most likely of the α-recension.</note>
+                        </bibl>
+                        <bibl corresp="#M">
+                            <ptr target="bm:Budge1896Alexander1"/><citedRange unit="page">207-225</citedRange>
+                            <note>Edition of the story about Alexander (92nd generation).</note>
+                        </bibl>
+                        <bibl corresp="#A">
+                            <ptr target="bm:Proverbio2000"/><citedRange unit="page">546-551</citedRange>
+                            <note>Re-edition of the geographical treatise, based on the edition by Kračkovskij.</note>
                         </bibl>
                         <bibl>
-                            <ptr target="bm:DeratSeignobos2015Moise" corresp="#M #P #Q"/><citedRange unit="page">276-278</citedRange>
-                            <note>Edition of the story on Moses (27th generation) based on five manuscripts, three of which being of the β-recension,
-                                one of the α-recension and one undefined.</note>
+                            <ptr target="bm:GabraYohannes2006GiyorgisWAmid"/>
+                            <note>Edition of the parts from the beginning up to the prophet Samuel (51st generation), based on an unknown source.</note>
                         </bibl>
-                        <bibl>
-                            <ptr target="bm:Budge1896Alexander1" corresp="#M"/><citedRange unit="page">207-225</citedRange>
-                        </bibl>
-                        <!-- Proverbio, Delio Vania: Inventario sommario dei manoscritti arabi, ebraici, etiopici –
-                            con notizia dei turchi – conservati presso la biblioteca della badia greca di
-                            Grottaferrata, in: Atti della Accademia Nazionale dei Lincei, Rom: 2000, [= Classe
-                            di scienze morali, st. e. fil., Memorie, ser. 9 – vol. 12 – fasc. 4], S. 546-51. -->
-                        <!-- Gäbrä-Yoḥannəs Gäbrä-Maryam 2005 -->
-                        <!-- Sərgəw Galāw (Hrsg.): Giyorgis Walda ʾAmid – Gəʿəzənnā ʾAmarəññā, 2010 AM [= 2018 n.u.Z.] 
-                            Benutzte Handschrift unklar: S. 552) ጊዮርጊስ ወልደ ዓሚድ (ግእዝ) የብራና የእጅ ጽሑፍ። የኢትዮጵያ ብሔራዊ ቤተ መጻሕፍትና ቤተ መዛግብት መምሪያ። = Giyorgis Walda Amid (Gəʿəz) Manuskript. Abteilung für Nationalbibliothek und Archiv von Äthiopien [=NALA].
-	               HLZ: ML Ser 28721 -->
                     </listBibl>
                 </div>
                 <div type="bibliography">
                     <listBibl type="translation">
-                        <bibl>
-                            <ptr target="bm:Hoffmann2021Amid" corresp="#A #B #C #D #E #F #H #J #M #N #O #P #Q #R #S #T"/>
+                        <bibl corresp="#A #B #C #D #E #F #H #J #M #N #O #P #Q #R #S #T">
+                            <ptr target="bm:Hoffmann2021Amid"/>
                             <note>Translation of the geographical treatise (15th generation), translated to German.</note>
                         </bibl>
-                        <bibl>
-                            <ptr target="bm:Krackovskij1912Geography" corresp="#A"/>
+                        <bibl corresp="#A">
+                            <ptr target="bm:Krackovskij1912Geography"/>
                             <note>Translation of the geographical treatise (15th generation), translated to Russian.</note>
                         </bibl>
-                        <bibl>
-                            <ptr target="bm:KrackovskijFrantsouzoff2015Geography" corresp="#A"/>
+                        <bibl corresp="#A">
+                            <ptr target="bm:KrackovskijFrantsouzoff2015Geography"/>
                             <note>Translation of the geographical treatise (15th generation), translated to Russian.</note>
                         </bibl>
-                        <bibl>
-                            <ptr target="bm:Budge1896AlexanderTranslation" corresp="#M"/>
+                        <bibl corresp="#M">
+                            <ptr target="bm:Budge1896AlexanderTranslation"/>
                             <note>Translation of the story on Alexander (92nd generation), translated to English.</note>
                         </bibl> 
-                        <bibl>
+                        <bibl corresp="#M #P #Q">
                             <ptr target="bm:DeratSeignobos2015Moise"/><citedRange unit="page">267-268</citedRange>
                             <note>Translation of the story on Moses (27th generation), translated to French.</note>
+                        </bibl>
+                        <bibl>
+                            <ptr target="bm:GabraYohannes2006GiyorgisWAmid"/>
+                            <note>Translation for the parts from the beginning up to the prophet Samuel (51st generation), translated to Amharic.</note>
                         </bibl>
                     </listBibl>
                 </div>
