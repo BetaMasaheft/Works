@@ -6,10 +6,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en" xml:id="t1">Treatise on moonrise and moonset</title>
+                <title xml:lang="en" xml:id="t2">Treatise on the gates of moonrise and moonset</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
+                <editor key="DE"></editor>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
+            <editionStmt>
+                <p>Work description by the project 'Bāḥra ḥassāb: Knowledge Transmission in Ethiopia and Eritrea From Antiquity to Modern Times' 
+                    funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – Project number 536604808 <ref target="https://gepris.dfg.de/gepris/projekt/536604808"/>.</p>
+            </editionStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
                 <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
@@ -21,7 +27,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="BAVet119">
+                    </witness>
+                    <witness corresp="BerOrQuart370"></witness>
+                    <witness corresp="BNFet64"></witness>
+                    <!-- we need to check Vat 106 fols. 91v-92v; the topic is the same but the text seems to be different. -->
+                </listWit>
+                <listWit rend="edition">
+                    <witness corresp="BNFet64"></witness>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -36,6 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Chronography"/>
+                    <term key="NaturalSciences"></term>
                 </keywords>
             </textClass>
             <langUsage>
@@ -50,14 +66,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <text>
         <body>
             <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:Grebaut1918Tabledeslevers"/>
+                    </bibl>
+                </listBibl>
+                <listBibl type="translation">
+                    <bibl>
+                        <ptr target="bm:Grebaut1918Tabledeslevers"/>
+                    </bibl>
+                </listBibl>
                 <listRelation>
-                    <relation name="lawd:hasAttestation" active="LIT7109Moonrise" passive="BAVet119"/>
+                    <relation name="saws:isRelatedTo" active="LIT7109Moonrise" passive="LIT1340EnochE#Luminaries"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7109Moonrise" passive="LIT3850MashafaM">
+                        <desc>The treatise forms part of <foreign xml:lang="gez">Maṣḥafa miṭata bǝrhānāta samāy</foreign>, but sporadically attests independant circulation.</desc>
+                    </relation>
+                    <!-- we need to add a relation to the gate-type diagrams -->
                 </listRelation>
             </div>
             <div type="edition">
+                <note>The following edition is taken from <bibl><ptr target="bm:Grebaut1918Tabledeslevers"/><citedRange unit="page">423-425</citedRange></bibl>.</note>
                 <div type="textpart" subtype="incipit" xml:lang="gez">
-                    <note>The following incipit is taken from <ref type="mss" corresp="BAVet119"/> according to
-                        <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">483</citedRange></bibl>.</note>
                     <ab>
                         ለእመ፡ ፈቀድከ፡ ታእምር፡ ዘከመ፡ ትበይት፡ ወርህ፡ ለለ፡ ሠርቁ፡ ወለለ<supplied reason="omitted">፡</supplied> ዕለቱ፡ ታስተበሪ፡
                         ሠርቀ፡ በ፯ ከዋክው፡ ከመዝ፡ ይሠርቁ፡ በሠርቀ፡ ዕብራውያን፡ ወበወርኃ፡ ዕብራውያን። በሠርቀ፡ ሚያዝያ፡ በራብዕ፡ ኆኅት፡ ምስለ፡
@@ -65,8 +94,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </ab>
                 </div>       
                 <div type="textpart" subtype="explicit" xml:lang="gez">
-                    <note>The following explicit is taken from <ref type="mss" corresp="BAVet119"/> according to
-                        <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">483</citedRange></bibl>.</note>
                     <ab>
                         ይገብር፡ ወርኅ፡ ኍልቈ፡ ዕለታት፡ በ፮ አውራኅ፡ ፻፸ወ፯<supplied reason="omitted">፡</supplied> ወሱባኤያቲሆሙ፡ ፳ወ፭<supplied reason="omitted">፡</supplied> 
                         ወ፪መዋዕል፡ ወኵሉ፡ ዘያስተርኢ፡ ወርኅ፡ በ፲ወ፪ አውራኅ፡ ፫፻፶ወ፬ ሌሊት፡ ወሱባ<supplied reason="omitted">ዔ</supplied>ያቲሆሙ፡ ፶ወ፬ ዕለታት፡ 
