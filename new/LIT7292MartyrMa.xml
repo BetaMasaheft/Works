@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1899Martyr">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT7292MartyrMa">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ገድለ፡ መርቆርዮስ፡a </title>
-                <title xml:lang="gez" corresp="#t1" type="normalized">Gadla Marqoryos</title>
-                <title xml:lang="en" corresp="#t1">Vita of St Marqoryos</title>
-                <title xml:lang="en" xml:id="t2">Martyrium of Mercurios Philopater</title>
-                <title xml:lang="ar" xml:id="t3arabic">Arabic Vita of Mercurios</title>
-                <editor role="generalEditor" key="AB"/>
+                <title xml:lang="gez" xml:id="t1">ስምዕ፡ ዘቅዱስ፡ መርቆርዮስ፡</title>
+                <title xml:lang="en" corresp="#t1">Martyrium of St Mercurios (recension α)</title>
+                <editor key="NV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -18,21 +15,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                        <p>
                             This file is licensed under the Creative Commons
-                            Attribution-ShareAlike 4.0. </p>
+                            Attribution-ShareAlike 4.0. 
                     </licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <p>Work of the literatures of Ethiopia and Eritrea</p>
-            </sourceDesc>
-            <sourceDesc>
-                <listWit>
-                    <witness corresp="BNFet133#p2_i3"/>
-                    <witness type="external" corresp="BnF Arabe 263"> BnF Arabe 263, <ref target="http://archivesetmanuscrits.bnf.fr/ark:/12148/cc89565h"/>, <locus from="33v" to="52v"/>
-                        contains and Arabic version of this work.</witness>
-                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -43,7 +32,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </xi:include>
         </encodingDesc>
         <profileDesc>
-            <langUsage><language ident="en">English</language><language ident="ar">Arabic</language><language ident="gez">Gǝʿǝz</language></langUsage>
+            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+            <abstract>
+                <p>The text of the Martyrium of St Mercurios edited in   <bibl>
+                    <ptr target="bm:Budge1915Mercurius"/>
+                    <citedRange unit="page">1161-1187</citedRange>
+                </bibl>, classified in  <bibl>
+                    <ptr target="bm:Proverbio1993PassioMercuri"/><citedRange unit="page">459</citedRange>
+                </bibl>as 'recension α'. </p>
+            </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
@@ -52,29 +49,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 </keywords>
             </textClass>
         </profileDesc>
+     
         <revisionDesc>
-            <change who="PL" when="2016-03-21"> Created file from google
-                spreadsheet </change>
-            <change who="ES" when="2016-02-09">CREATED: text record</change>
-            <change who="DR" when="2016-10-26">Added relation</change>
-            <change who="DR" when="2017-03-17">Added keywords</change>
+            <change who="NV" when="2025-02-26">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:Budge1915Mercurius"/>
+                        <citedRange unit="page">1161-1187</citedRange>
+                    </bibl>
+                </listBibl>
+                <listBibl type="translation">
+                    <bibl>
+                        <ptr target="bm:Budge1915Mercurius"/>
+                        <citedRange unit="page">1161-1187</citedRange>
+                    </bibl>
+                </listBibl>
                 <listBibl type="secondary">
                     <bibl>
                         <ptr target="bm:Proverbio1993PassioMercuri"/>
                     </bibl>
                 </listBibl>
                 <listRelation>
-                    <relation name="saws:isAttributedToAuthor" active="LIT1899Martyr#t3arabic" passive="PRS11260Archelides"/>
-                    <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1899Martyr#t1" passive="LIT1899Martyr#t3arabic">
-                        <desc>The last part of the martyrdom in <ref type="mss" corresp="BNFet133#p2_i3"/> agrees with the Arabic version contained in BnF Arabe 263 <locus from="33v" to="52v"/>.</desc>
-                    </relation>
-                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1899Martyr#t1" passive="LIT1493Gadlas"/>
+                    <relation name="ecrm:P129_is_about" active="LIT7292MartyrMa" passive="PRS7025Mercury"/>
+                    <relation name="saws:isVersionOf" active="LIT7292MartyrMa" passive="LIT1899Martyr"/>
+                    <relation name="saws:isVersionOf" active="LIT7292MartyrMa" passive="LIT7293MartyrMb"/>
+                    <relation name="saws:isVersionOf" active="LIT7292MartyrMa" passive="LIT7294MartyrMc"/>
+                    <relation name="dcterms:isPartOf" active="LIT7292MartyrMa" passive="LIT7297DossierM"/>
                 </listRelation>
+            </div>
+            <div type="edition" xml:lang="gez">
+                <note>The text is taken from <ref type="mss" corresp="BNFabb92"/>.</note>
+                <ab></ab>
             </div>
         </body>
     </text>
