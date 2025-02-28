@@ -5,19 +5,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle of Mercurius</title>
+                <title xml:lang="gez" xml:id="t1">Miracle of Mercureos: Death of the Emperor Julian
+                    the Apostate (version b)</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="NV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
-                            Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine
+                    multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
-                                licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                        licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -30,7 +31,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>According to <bibl>
+                        <ptr target="bm:Nollet1931Mercure"/>
+                        <citedRange unit="page">20-21</citedRange>
+                    </bibl>, at least three texts narrate the death of the Emperor Julian the
+                    Apostate through the involvement of <persName ref="PRS7025Mercury"/>. Two of
+                    these three texts are articulated in the form of mircales, known as cerculating
+                    along <ref type="work" corresp="LIT7292MartyrMa"/>, <ref type="work"
+                        corresp="LIT7293MartyrMb"/>, <ref type="work" corresp="LIT7294MartyrMc"/>, all  known to be assigned for <date ref="ethiocal:Hedar25">25th of Ḫǝdār</date>..
+                    These miracles were translated in <bibl>
+                        <ptr target="bm:Nollet1931Mercure"/>
+                        <citedRange unit="page">22-24</citedRange>
+                    </bibl> as the 'fist miracle' and 'second miracle'. This record is for the
+                    'second miracle', here defined as Miracle of Mercureos: Death of the Emperor
+                    Julian the Apostate (version b). This miracle is attested with (as in <ref
+                        type="mss" corresp="BNFabb110"/>) or without (as in <ref type="mss"
+                        corresp="BNFabb92"/>) <ref type="work" corresp="LIT7304TammeraJulian"/>.
+                </p>
             </abstract>
             <textClass>
                 <keywords>
@@ -49,7 +66,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listBibl type="translation">
+                    <bibl>
+                        <ptr target="bm:Nollet1931Mercure"/>
+                        <citedRange unit="page">20-24</citedRange>
+                    </bibl>
+                </listBibl>
+                <listRelation>
+                    <relation name="ecrm:P129_is_about" active="LIT7303TammeraBishops"
+                        passive="PRS7025Mercury"/>
+                    <relation name="dcterms:isPartOf" active="LIT7303TammeraBishops"
+                        passive="LIT7297DossierM"/>
+                </listRelation>
+            </div>
+            <div type="edition" subtype="incipit" xml:lang="gez">
+                <note>The text is taken from <ref type="mss" corresp="BNFabb110"/></note>
+                <ab>ወኮነ፡ በመዋዕሊሁ፡ ለኡልያኖስ፡ ንጉሥ፡ መምዕላይ፡ ሀለዉ፡ ፪ኤጲስ፡ ቆጶሳት፡ ስሙ፡ ለ፩ባስልዮስ። ወስመ፡  እኍሁ፡ ጎርጎርዮስ። ወጸውዖሙ፡ ወአዘዞሙ፡ ይስግዱ፡ ለጣዖት፡ ወአበዩ፡ ሰጊደ፡ ለጣዖት። ወፈቀደ፡ ንጉሥ፡ ይሑር፡ ፀብአ። 
+                    
+                </ab>
+            </div>
+            <div type="edition" subtype="explicit" xml:lang="gez">
+                <note>The text is taken from <ref type="mss" corresp="BNFabb110"/></note>
+                <ab>ወሶበ፡ በጽሐ፡ ቅዱስ፡ መርቆሬዎስ፡ ነጽሖ፡ ፈረሱ፡ ዲበ፡ ምድር። ወረገዞ፡ ቅዱስ፡ መርቆሬዎስ፡ በኲናት፡ ወቀተሎ። ወአድኃኖሙ፡ ለቅዱሳን፡ ባስልዮስ፡ ወጎርጎርዮስ።</ab>
+            </div>
         </body>
     </text>
 </TEI>
