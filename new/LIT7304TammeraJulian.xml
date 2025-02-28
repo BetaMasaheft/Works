@@ -6,7 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle of Mercureos: Death of the Emperor Julian the Apostate</title>
+                <title xml:lang="gez" xml:id="t1">Miracle of Mercureos: Death of the Emperor Julian the Apostate (version a)</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="NV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -28,8 +28,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </encodingDesc>
         <profileDesc>
             <creation/>
-            <abstract>
-                <p/>
+            <abstract>        <p>According to <bibl>
+                <ptr target="bm:Nollet1931Mercure"/>
+                <citedRange unit="page">20-21</citedRange>
+            </bibl>, at least three texts narrate the death of Emperor Julian the Apostate
+                through the involvement of <persName ref="PRS7025Mercury"/>. Two of these three
+                texts are presented in the form of miracles, known to have circulated along with
+                <ref type="work" corresp="LIT7292MartyrMa"/>, <ref type="work"
+                    corresp="LIT7293MartyrMb"/>, and <ref type="work" corresp="LIT7294MartyrMc"
+                    />, all of which are assigned to <date ref="ethiocal:Hedar25">the 25th of
+                        Ḫǝdār</date>. These miracles were translated from the text contained in <ref
+                            type="mss" corresp="BNFabb110"/> by <bibl>
+                                <ptr target="bm:Nollet1931Mercure"/>
+                                <citedRange unit="page">22-24</citedRange>
+                            </bibl> as the "First Miracle" and the "Second Miracle." This record pertains to
+                the "First Miracle," here defined as the Miracle of Mercureos: Death of Emperor
+                Julian the Apostate (version a). This miracle is attested (e.g. in <ref
+                    type="mss" corresp="BNFabb110"/>) along with <ref type="work" corresp="LIT7303TammeraBishops"/>.
+            </p>
             </abstract>
             <textClass>
                 <keywords>
@@ -48,8 +64,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/>
-            <!--  -->
+            <div type="bibliography">
+                <listBibl type="translation">
+                    <bibl>
+                        <ptr target="bm:Nollet1931Mercure"/>
+                        <citedRange unit="page">20-24</citedRange>
+                    </bibl>
+                </listBibl>
+                <listRelation>
+                    <relation name="ecrm:P129_is_about" active="LIT7303TammeraBishops"
+                        passive="PRS7025Mercury"/>
+                    <relation name="dcterms:isPartOf" active="LIT7304TammeraJulian"
+                        passive="LIT7297DossierM"/>
+                </listRelation>
+            </div>
+            <div type="edition" subtype="incipit" xml:lang="gez">
+                <note>The text is taken from <ref type="mss" corresp="BNFabb110"/></note>
+                <ab>ወነበረ፡ ዳኬዎስ፡ ንጉሥ፡ ኅዳጠ፡ መዋዕለ፡ ወሐመ፡ እስከ፡ ዕፄያት፡ ይወፅኡ፡ እምሥጋሁ፡ ወወፅአ፡ ልሳኑ፡ እምአፉሁ፡ ወሞተ፡ እኩየ፡ ሞተ። ወነግሠ፡ ህየንቴሁ፡ ኡልያኖስ፡ ዘይሰግድ፡ ለጣዖት። ወአዘዞሙ፡ ለካህናት፡ ወለዲያቆናት፡ ወለሕዝበ፡ ክርስቲያን፡ ከመ፡ ይስግዱ፡ ለጣዖት። ወለእመ፡ አበዩ፡ ሰጊደ፡ ለጣዖት፡ ይትመተር፡ ርእሶሙ።</ab>
+            </div>
+            <div type="edition" subtype="explicit" xml:lang="gez">
+                <note>The text is taken from <ref type="mss" corresp="BNFabb110"/></note>
+                <ab>ወኡልያኖስሰ፡ ነሥአ፡ ሐመደ፡ እምድር፡ ወዘረወ፡ ላዕሌሁ፡ ወሞተ፡ እኩየ፡ ሞተ። ወገብኡ፡ ሠራዊት፡ ወአንገሡ፡ ህየንቴሁ፡ አኖሬዎስሃ፡ መፍቀሬ፡ ሃይማኖተ፡ ክርስቶስ። ወሐነፀ፡ አብያተ፡ ክርስቲያናት፡ ወአጽንዖሙ፡ ለክርስቲያን፤ ወሐነፀ፡ ካዕበ፡ ዐቢየ፡ ቤተ፡ ክርስቲያን፡ በሀገረ፡ ሮሜ፡ በስመ፡ ቅዱስ፡ መርቆሬዎስ። ወአስተርአዩ፡ ብዙኃን፡ ተአምራት፡ እምውእቱ፡ ቤተ፡ ክርስቲያን።</ab>
+            </div>
         </body>
     </text>
 </TEI>
