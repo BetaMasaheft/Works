@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc> 
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracles of Mercurios </title>
+                <title xml:lang="gez" xml:id="t1">Miracles of Mercurios</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="NV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,7 +30,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>Unspecified miracles of Mercurios</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -50,7 +50,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listBibl type="secondary">
+                    <bibl>
+                        <ptr target="bm:Nollet1931Mercure"/>
+                        <citedRange unit="page">20-24</citedRange>
+                    </bibl>
+                </listBibl>
+                <listRelation>
+                    <relation name="ecrm:P129_is_about" active="LIT7297TammeraMerc" passive="PRS7025Mercury"/>
+                    <relation name="dcterms:isPartOf" active="LIT7297TammeraMerc" passive="LIT7297DossierM"/>
+                    <relation name="saws:contains" active="LIT7297TammeraMerc" passive="LIT7303TammeraBishops"></relation>
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>
