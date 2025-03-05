@@ -32,7 +32,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>The Life of <persName ref="PRS14587Macarius">Macarius of Alexandria</persName>, not be confused with the
+                    <ref type="work" corresp="LIT7135Life">Life</ref> 
+                    of <persName ref="PRS6427Macarius">Macarius of Egypt</persName>.
+                    According to <ref type="mss" corresp="EMML7469">EMML no. 7469, fol. 46v</ref>, the translation was commissioned by 
+                    <persName ref="PRS8387SalamaI">ʾabbā Salāma</persName>.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -49,15 +53,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="MKr" when="2024-11-08">Created entity</change>
+            <change when="2025-03-05" who="CH">Updated bibliography and relations, added incipit.</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+                <listBibl type="secondary">
+                    <bibl><ptr target="bm:Ambu2022communaute"/></bibl>
+                </listBibl>
                 <listRelation>
                     <relation name="ecrm:P129_is_about" active="LIT7137Combat" passive="PRS14587Macarius"/>
                 </listRelation>
-            </div><!---->
+            </div>
+            <div xml:lang="gez" type="edition">
+                <note>The incipit is taken from <ref type="mss" corresp="EMML7469"/>.</note>
+                <div type="textpart" subtype="incipit">
+                    <ab xml:lang="gez">ንቀድም፡ በረድኤተ፡ እግዚአብሔር፡ ንጽሕፍ፡ ገድለ፡ አባ፡ መቃርስ፡ እስክንድራዊ፡ ወዜናሁ፡ እግዚአብሔር፡ ይጸግወነ፡ በረከተ፡ ጸሎቱ፡ አማን። 
+                        ንዌጥን፡ እንከ፡ ንሕነ፡ ይእዜ፡ ተዝካረ፡ አባ፡ መቃርስ፡ እስክንድራዊ፡ እስመ፡ ንጹሕ፡ ውእቱ፡ ፋድፍደ፡ ወተራካብዎ፡ ብዙኃ፡ ጊዜ፡ በእን፡ ተማክሮ፡ ውስተ፡ ልቡ፡ እስመ፡ ኮነ፡ ውእቱ፡
+                        ቀሲሰ፡ ለቤተ<supplied reason="omitted" resp="CH">፡</supplied> ክርስቲያን፡</ab>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>
