@@ -4,7 +4,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Calendar of saints, arranged according to their feast day</title>
+            <title xml:id="t1">Calendar of saints</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,19 +14,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                     This file is licensed under the Creative Commons Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
-         </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -37,20 +30,45 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <abstract>
+            <p>Calendar listing the commemoration dates for various saints
+               (more comprehensive than <ref type="work" corresp="LIT6011FeastsList"/>).
+               For an example, see the edition. For unidentified calendars, see <ref type="work" corresp="NAR0005calend"/>.</p>
+         </abstract>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="JK" when="2025-03-05">Changed title, added abstract, added edition</change>
       </revisionDesc>
    </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
+   <text>
       <body>
-         <ab/>
+         <div type="edition">
+            <note>The following text is taken from <ref type="mss" corresp="EMIP00054"/>, fol. 81r–v.</note>
+            <div type="edition" xml:lang="gez">
+               <ab>
+                  በመስከረም፡ ፩በርተሎሜዎስ፡
+                  በጥቅምት፡ በ፲፪ማቴዎስ፡ 
+                  በኅዳር፡ በ፳፰ፊልጶ<supplied reason="lost">ስ፡</supplied>
+                  በታሕሣሥ፡ ፬<unclear>እን</unclear>ድርያስ፡ 
+                  በጥር፡ ፬ዮሐ<pb n="81b"/>ንስ፡ 
+                  በየካቲት፡ ፲ያዕቆብ። ወልደ፡ እልፍዮስ፡ 
+                  በመጋቢት፡ በ፰ማትያስ፡ 
+                  በሚያዝያ፡ <add place="above">በ</add>፲፯ያዕቆብ፡ ወልደ፡ ዘብዴዎስ፡ በ፴ማርቆስ፡ 
+                  በግንቦት፡ በ፳፯ቶማስ፡ 
+                  በሐ<supplied reason="lost">ም</supplied>ሌ፡ ፪ታዴዎስ፡ በ፭ጴ<supplied reason="omitted">ጥሮስ፡ </supplied>ወጳውሎስ፡ ፲ናትናኤል፡ በ፲፰ያዕቆ<supplied reason="lost">ብ፡</supplied>
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
