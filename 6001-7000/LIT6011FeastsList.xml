@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Register of the Church feasts for the entire year</title>
+                <title xml:lang="en" xml:id="t1">List of commemorations for Apostles and Evangelists</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,7 +30,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>A short list of the commemoration dates of the Apostles, the Evangelists,
+                    and, occasionally, a few other saints (see the two examples provided in the edition).
+                    For more extensive calendars, see <ref type="work" corresp="LIT3123Calend"/>.
+                    For unidentified calendars, see <ref type="work" corresp="NAR0005calend"/>.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -46,23 +49,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DN" when="2020-06-03">Created entity</change>
+            <change who="JK" when="2025-03-05" >Changed definition, added edition</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography">
-                <listRelation>
-                    <relation name="lawd:hasAttestation" active="LIT6011FeastsList" passive="BNFet68"/>
-                      <relation name="lawd:hasAttestation" active="LIT6011FeastsList" passive="DSEthiop3"/>
-                </listRelation>
-                <listBibl type="editions">
-                    <bibl>
-                        <ptr target="bm:Grebaut1935Memento"/>                        
-                    </bibl>
-                    <bibl>
-                        <ptr target="bm:Grebaut1936Memento"/>
-                    </bibl>
-                </listBibl>
+            <div type="edition">
+                <note>The following text is taken from <ref type="mss" corresp="EMIP00054"/>, fol. 81r–v.</note>
+                <div type="edition" xml:lang="gez">
+                    <ab>
+                        በመስከረም፡ ፩በርተሎሜዎስ፡
+                        በጥቅምት፡ በ፲፪ማቴዎስ፡ 
+                        በኅዳር፡ በ፳፰ፊልጶ<supplied reason="lost">ስ፡</supplied>
+                        በታሕሣሥ፡ ፬<unclear>እን</unclear>ድርያስ፡ 
+                        በጥር፡ ፬ዮሐ<pb n="81b"/>ንስ፡ 
+                        በየካቲት፡ ፲ያዕቆብ። ወልደ፡ እልፍዮስ፡ 
+                        በመጋቢት፡ በ፰ማትያስ፡ 
+                        በሚያዝያ፡ <add place="above">በ</add>፲፯ያዕቆብ፡ ወልደ፡ ዘብዴዎስ፡ በ፴ማርቆስ፡ 
+                        በግንቦት፡ በ፳፯ቶማስ፡ 
+                        በሐ<supplied reason="lost">ም</supplied>ሌ፡ ፪ታዴዎስ፡ በ፭ጴ<supplied reason="omitted">ጥሮስ፡ </supplied>ወጳውሎስ፡ ፲ናትናኤል፡ በ፲፰ያዕቆ<supplied reason="lost">ብ፡</supplied>
+                    </ab>
+                </div>
             </div>
         </body>
     </text>
