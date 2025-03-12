@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2296Sayfas">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2296Sayfas">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -41,6 +42,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Magic"/>
+               <term key="Apocrypha"/>
             </keywords>
          </textClass>
          <abstract>
@@ -72,25 +74,43 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </listRelation>
          <ab/>
          <div type="edition" xml:lang="gez">
-            
+            <note>The following division into weekdays and the texts of the prayers are taken from
+               <ref type="mss" corresp="BAVet89"/> unless indicated otherwise.</note>
+             
             <div type="textpart" xml:id="Introduction">
                <label>Introduction</label>
-               <ab>በስመ፡’’…
-                  ንጽሕፍ፡ መቅድመ፡ ሰይፈ፡ ሥላሴ፡ ዘ፯ዕለታት፡ ተማኅፀንኩ፡ ብክሙ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ በከመ፡ አተውክሙ፡
-                  ውስተ፡ ቤተ፡ አብርሃም፡…</ab>
+               <ab>በስመ፡ <gap reason="ellipsis"/>
+                  ንጽሕፍ፡ መቅድመ፡ ሰይፈ፡ ሥላሴ፡ ዘ፯ ዕለታት፡ ተማኅፀንኩ፡ ብክሙ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ በከመ፡ አተውክሙ፡
+                  ውስተ፡ ቤተ፡ አብርሃም፡</ab>
                <note>quoted after <ref type="mss" target="ESktm012"></ref></note>
             </div>
             
-            <!-- The following textparts based on weekdays are in accordance with BAVet89#ms_1 (MV - 2017-08-01) -->
+            
             <div type="textpart" xml:id="Monday">
                <label>Praise for Monday</label>
                
-               <div type="textpart" xml:id="SalamMonday"> <!--present in BLorient525 and ESktm012, probably also in other mss DR 2018-01-18-->
+               <div type="textpart" xml:id="Enaqqeh">
+                  <note>Transmitted as prayer for Monday in <ref type="mss" corresp="BAVet89"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>በስመ፡ አብ፡ <gap reason="omitted"/> 
+                        እነቅህ፨ በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፤ እትነሣእ፡ በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፤ አአምን፨ በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፤</ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>አአምን፤ በባሕርየ፤ ስሙ፤ ለመንፈስ፤ ቅዱስ፤ 
+                        <sic>ሕበረ፡</sic>
+                        <sic>ተአኵቶ</sic>
+                        ምስለ፡ አብ፡ ወወልድ፡ ዘንተ፤ ሥላሴ፡ እንዘ፡ 
+                        አአምን፡ እክህደከ፤ ሰይጣን፤ ለዓለመ፤ ዓለም፤ አሜን፨</ab>
+                  </div>
+               </div>
+               
+               <div type="textpart" xml:id="SalamMonday">
                   <note>Part of the prayer for Monday, the first verse is identical in <ref type="mss" corresp="BLorient525"/>
                      and <ref type="mss" corresp="ESktm012"/>, then possibly diverging.</note>
                   <ab>ሰላም፡ ለአብ፡ ነቅዓ፡ ዘይት፡ ምሕርት፡ ጥሉል።</ab>
                </div>
-               <div type="textpart" xml:id="PrayerMonday"> <!--present in BLorient525 and ESktm012, probably also in other mss DR 2018-01-18-->
+               
+               <div type="textpart" xml:id="PrayerMonday"> 
                   <note>Part of the prayer for Monday, following <ref target="#SalamMonday"/>. The beginning in <ref type="mss" corresp="BLorient525"/>
                      and <ref type="mss" corresp="ESktm012"/> is not identical, but very similar.</note>
                   <ab>በስመ፡ አብ፡ <gap reason="ellipsis" resp="PRS10171Wright"/>
@@ -101,25 +121,110 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </div>
             <div type="textpart" xml:id="Tuesday">
                <label>Praise for Tuesday</label>
+               
+               <div type="textpart" xml:id="Fesmeya">
+                  <note>Transmitted as prayer for Tuesday in <ref type="mss" corresp="BAVet89"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>ኦአብ፡ ፍጽምየ፨ በመለኮተ፡ ስሉስ፡ ቅዱስ፨ አኃትም፡ ከዋላየ፡ በመለኮተ፤ ሥሉስ፡ ቅዱስ፡ አኃትም፡ የማንየ፡ በመለኮተ፤ ሥሉስ፡ ቅዱስ፡ አኃትም፡ ጸጋምየ፡ በመለኮተ፤ ሥሉስ፡ ቅዱስ፡</ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>በዝንቱ፡ ህላዌ፨ ሥላሴ፡ ቅድስት፡ ተማኅፀንኩ፡ ወአማኅፀንኩ፤ ነፍስየ፡ ወሥጋየ፡ ከመ፡ ያስጥመኒ፤ ሥሉስ፡ ቅዱስ፤ በቀላየ፤ ምሕረቱ፤ ዘኢይየብስ፡ ሊተ፡ ለገበርከ፤</ab>
+                  </div>
+               </div>
             </div>
+            
             <div type="textpart" xml:id="Wednesday">
                <label>Praise for Wednesday</label>
+               
+               <div type="textpart" xml:id="Hebura">
+                  <note>Transmitted as prayer for Wednesday in <ref type="mss" corresp="BAVet89"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>አብ፡ ወወልድ፡ ኅቡረ፡ ሀልዎቶሙ፡ ሥሉስ፡ በተገጽዎቶሙ፤ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ በጽማሬ፡ ሥሉስ፡</ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>በዝንቱ፡ ሥላሴ፡ ኅቡር፤ ተማህፀንኩ፡ ወአማህፀንኩ፡ ነፍስየ፡ ወሥጋየ፡ ከመ፤ ይምሐሩኒ፡ ወይሣሃሉኒ፡ ሥሉስ፡ ቅዱስ፡ በእንተ፡ ሥላሴሁ፡ ሊተ፡ ለገበርከ፡</ab>
+                  </div>
+               </div>
             </div>
+            
             <div type="textpart" xml:id="Thursday">
                <label>Praise for Thursday</label>
+               
+               <div type="textpart" xml:id="Bagessawe">
+                  <note>Transmitted as prayer for Thursday in <ref type="mss" corresp="BAVet89"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ በግጻዌ፡ ሥሉስ፡ በሥላሴ፡ ዋህድ፡ አምላክ፡ ፫አዕማደ፡ ብርሃን፡ ፩አምጣኖሙ፡ ወ፩ስኖሙ፡ ፫መባርቅት፡ 
+                        ፩ንጥረ፡ መለኮት፡</ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>በዝንቱ፡ ስመ፡ ሥላሴ። ተማኅፀንኩ፡ ከመ፡ ይክፍለነ፤ ለሥሉሥ፡ ቅዱስ፡ እምተሳትፎ፡ ቅዱሳን፤ እንተ፤ ይእቲ፡ ደብተራ፡ ጽድቅ፡ ጽዮን፡ ለገብርከ፡</ab>
+                  </div>
+               </div>
             </div>
+            
             <div type="textpart" xml:id="Friday">
                <label>Praise for Friday</label>
+               
+               <div type="textpart" xml:id="AyLessan">
+                  <note>Transmitted as prayer for Friday in <ref type="mss" corresp="BAVet89"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>አይ፡ ልሳን፡ ወአይ፡ ከናፍር፡ ዘይክል፤ ነቢበ፡ ዕበየ፡ ክብሩ፡ ለሥላሴ፤ አይ፤ ልቡና፤ ወአይ፡ ሰሚዕ፡ ዘይክል፡ አእምሮ፤ ህላዌሁ፡ ለስላሴ፡</ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>ስብሐት፡ ለእግዚአብሔር፡ ጠቢብ፡ በምክሩ፡ ስብሐት፡ ለእግዚአብሔር፡ 
+                        ሰብእ፡ ወመላእክት፡ 
+                        ዘኢየአምርዎ፤
+                        ለምክሩ፡ ወለምሥጢሩ፤ ለዓለመ፤ ዓለም፤ አሜን፨</ab>
+                  </div>
+               </div>
             </div>
+            
             <div type="textpart" xml:id="Saturday">
                <label>Praise for Saturday</label>
+               
+               <div type="textpart" xml:id="FeqraMalakot" corresp="LIT2933RepCh214">
+                  <note>Transmitted as prayer for Saturday in <ref type="mss" corresp="BAVet89"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>ሰላም፡ ለፍቅረ፡ መለኮት፤ በትስብእቱ፤ ዘጾመ፡ እንበይነ፡ ዚአሁ፡ አርአያሁ፤ ከመ፡ የሀበነ፤ ሰላም፡ ለፍቅረ፡ መለኮት፡ ዘይጼአን፡ ላዕለ፡ 
+                        ኪሩቤል፡ በትስብእቱ፡ ተፅዕነ፡ ዲበ፡ ዕዋል፤</ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>ግናይ፡ ወቡራኬ፤ ስባሔ፡ ወዝማሬ፡ ይደሉ፡ ለሥላሴ፡ በሰማይ፤ ወበምድር፡ በየብስ፡ ወበባሕር፤ ዲበ፡ ኵሉ፡ ፍጡር፡ ወግቡር፡ ላዕለ፡ ክሡት፤ ወስውር፨ መባሕተ፡ 
+                        ኩነኔ፡ ይደሉ፡ መለኮት፤
+                        አብ፤ ወወልድ፤ ወመንፈስ፤ ቅዱስ፤ ለገብርከ፡</ab>
+                  </div>
+               </div>
             </div>
+            
             <div type="textpart" xml:id="Daily">
                <label>Praise for every day (<foreign xml:lang="gez">ዘዘወትር፡</foreign>
                </label>
+               
+               <div type="textpart" xml:id="Yetbarak">
+                  <note>Transmitted as prayer for every day in <ref type="mss" corresp="BAVet89"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>ይትባረክ፡ እግዚአብሔር፡ አብ፡ ወላዴ፡ ወልድ፡ ቅዱስ፤ ይትባረክ፡ እግዚአብሔር፡ ወልድ፡ አብ፡ ዋህድ፡ ይትባረክ፡ እግዚአብሔር፡ ጰራቅሊጦስ፡ መንፈሰ፡ አብ፡ ወወልድ፡</ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>ስብሐት፡ ለሥላሴ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ለሥላሴ፡ ምልዕት፡ በኵለሄ፤ ለሥላሴ፡ ይደሉ፡ ስባሄ፡ ሥላሴ፤ ዕውቅ፤ በሱራኄ፡ አድኅኖ፡ 
+                        ወዕቀቦ፡ ለገብርከ፤</ab>
+                  </div>
+               </div>
             </div>
+            
             <div type="textpart" xml:id="Sunday">
                <label>Praise for Sunday</label>
+               
+               <div type="textpart" xml:id="Ahasses">
+                  <note>Transmitted as prayer for Sunday in <ref type="mss" corresp="BAVet89"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>አኃሥሥ፡ ጽቅቀ።
+                        እምኀቤከ፡ ኦቀመረ፡ ጽድቅ፡ አኃሥሥ፡ ጥበበ፡ እምኔከ፡ ኦሙዳየ፤ ጥበብ፡</ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>ወበደኃሪት፤ ዕለት፡ ትባልሕ፡ እሞት፤ ወታወርስ፡ መንግሥተ፡ ሰማያት፤ ለገብርከ፡</ab>
+                  </div>
+               </div>
             </div>
          </div>
       </body>
