@@ -37,6 +37,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </xi:include>
       </encodingDesc>
       <profileDesc>
+         <abstract>
+            <p>This record refers to the work often transmitted under the title
+               <foreign xml:lang="gez">Sayfa Śǝllāse</foreign> that consists of prayers for each day of the week, often
+               as part of the collection <ref type="work" corresp="LIT2286ZenaSellase"/> in which the prayers for each
+               day are followed
+            each by a miracle of the Trinity but also transmitted without miracles. This work is transmitted for example in <ref type="mss" corresp="SACEth002"/>,
+               <ref type="mss" corresp="ANLcr53"/> or <ref type="mss" corresp="GAet10"/>
+            The identification of several recensions of this work or of works with a 
+            similar structure but different textual content might be possible in the future.</p>
+            <p>This work is different from <ref type="work" corresp="LIT2281Trinity"/> (a collection of miracles of the Trinity attributed
+               to <persName ref="PRS2748BeduaA"/>) and from <ref type="work" corresp="LIT2282Trinity"/> (a collection of miracles of the 
+               Trinity transmitted with <ref type="work" corresp="LIT1300Dersan"/>).</p>
+         </abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords>
@@ -69,8 +82,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </listBibl>
          <listRelation>
             <relation name="saws:hasUsed" active="LIT2296Sayfas" passive="LIT1300Dersan"/>
-            <relation name="ecrm:P129_is_about" active="LIT1300Dersan" passive="PRS10775Trinity"/>
+            <relation name="ecrm:P129_is_about" active="LIT2296Sayfas" passive="PRS10775Trinity"/>
+            <relation name="dcterms:isPartOf" active="LIT2296Sayfas" passive="LIT2286ZenaSellase"/>
             <relation name="syriaca:share-a-title" active="LIT2296Sayfas" passive="LIT2286ZenaSellase"/>
+            <relation name="syriaca:different-from" active="LIT2296Sayfas" passive="LIT2281Trinity"/>
+            <relation name="syriaca:different-from" active="LIT2296Sayfas" passive="LIT2282Trinity"/>
          </listRelation>
          <ab/>
          <div type="edition" xml:lang="gez">
@@ -165,22 +181,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <ab>ኦአብ፡ ፍጽምየ፨ በመለኮተ፡ ስሉስ፡ ቅዱስ፨ አኃትም፡ ከዋላየ፡ በመለኮተ፤ ሥሉስ፡ ቅዱስ፡ አኃትም፡ የማንየ፡ በመለኮተ፤ ሥሉስ፡ ቅዱስ፡ አኃትም፡ ጸጋምየ፡ በመለኮተ፤ ሥሉስ፡ ቅዱስ፡</ab>
                   </div>
                   <div type="textpart" subtype="explicit">
-                     <!--probably end of the entire day of Tuesday, not of the prayer starting with ኦአብ፡ ፍጽምየ፨-->
-                     <ab>በዝንቱ፡ ህላዌ፨ ሥላሴ፡ ቅድስት፡ ተማኅፀንኩ፡ ወአማኅፀንኩ፤ ነፍስየ፡ ወሥጋየ፡ ከመ፡ ያስጥመኒ፤ ሥሉስ፡ ቅዱስ፤ በቀላየ፤ ምሕረቱ፤ ዘኢይየብስ፡ ሊተ፡ ለገበርከ፤</ab>
+                     <note>The following explicit is taken from <ref type="mss" corresp="ESktm012"/>.</note>
+                    <ab> አኃትም፡ ፍናውየ፡ ወህላዌየ፡ ከመ፡ ኢይቅረቡኒ፡ መናፍስት፡ ርኩሳን፡ ወበዝ፡ ዓለም፡ በሕይወትየ፡ ወበዘይመጽእ፡
+                    ዓለም፡ እምድኅረ፡ ሞትየ፡ ለዓለመ፡ ዓለም፡ አሜን፨</ab>
+                     </div>
+               </div>
+               
+               <div type="textpart" xml:id="EsaggedLaAb">
+                  <note>The following incipit and explicit are taken from <ref type="mss" corresp="ESktm012"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>እሰግድ፡ ለአብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ለ፫ ፩ ወለዝ ፩ ፫ ቱ፡ እንበለ፡ ብዕድና፡ በሥላሴ፡ ግፅዋን፡ ወእኁዛን፡
+                     በሥልጣን፡ አብ፡ በገጹ፡ ፩ ውእቱ፡ ምስለ፡ ወልድ፡</ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>እንዘ፡ ንብል፡ ቡሩክ፡ አብ፡ ቅዱስ፡ ወቡሩክ፡ ወልድ፡ ቅዱስ፡ ቡሩክ፡ መንፈስ፡ ቅዱስ፡ ሥላሴ፡ ፍጹመ፡ ናመልክ፡ ቦቱ፡
+                     ወናመልክ፡ ሎቱ፡ ለዓለመ፡ ዓለም፡ አሜን፡</ab>
                   </div>
                </div>
                
                <div type="textpart" xml:id="Sellusan">
-                  <note>Transmitted as prayer for Tuesday in <ref type="mss" corresp="ESktm012"/> and as prayer of Wednesday in <ref type="mss" corresp="ANLcr53"/>.
-                     The following incipit and explicit is taken from <ref type="mss" corresp="ESktm012"/>.</note>
+                  <note>Transmitted as part of the prayers for Tuesday in <ref type="mss" corresp="ESktm012"/> most manuscripts
+                     and as prayer of Wednesday in <ref type="mss" corresp="ANLcr53"/>.
+                     The following incipit and explicit are taken from <ref type="mss" corresp="ESktm012"/>.</note>
                   <div type="textpart" subtype="incipit">
                      <ab>አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ሥሉሳን፡ በገጽ፡ ኅቡራን፡ በራዕይ፡ ወበገጽ፡ ግጽዋን፡
                         በስም፡ ዕሩያን፡ በመንግሥት፡</ab>
                   </div>
-       <!--           <div type="textpart" subtype="explicit">
-                     <ab></ab>
-                  </div>-->
+                  <div type="textpart" subtype="explicit">
+                     <ab>ወጽልመትሰ፡ ኡይረክቦ፡ ወኢይቀርቦ፡ ተማኅፀንኩ፡ በዝንቱ፡ ቃል፡ ቡሩክ፡ ዘአስተርአያ፡ ለማርያም፡ በአምሳለ፡ ገብርኤል፡
+                     መልዓክ፡ ከማሁ፡ አስተርአየኒ፡ ሊተ፡ ለገብርከ፡ ለዓለመ፡ ዓለም፡ አሜን፨</ab>
+                  </div>
                </div>
+               
+               <div type="textpart" xml:id="Akal">
+                  <note>
+                     The following incipit and explicit are taken from <ref type="mss" corresp="ESktm012"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <ab>አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፫ አካል፡ ፩ መለኮት፡ እሙንቱ፡ ኢየሐፅፁ፡ ወኢይፈደፍዱ፡ ኢይውኅዱ፡
+                     ወኢይበዝኁ፡ ኢይትፈለጡ፡ ወኢይበዓዱ፡</ab>
+                  </div>
+                  <div type="textpart" subtype="explicit">
+                     <ab>በዝንቱ፡ ህላዌ፡ ሥላሴ፡ ተማኅፀንኩ፡ ወአማኅፀንኩ፡ ነፍስየ፡ ወሥጋየ፡ ከመ፡ ያሥጥሙኒ፡ ሥሉስ፡ ቅዱስ፡ በቀላየ፡
+                        ምሕረቶሙ፡ ለዓለመ፡ ዓለም፡</ab>
+                  </div>
+               </div>
+               
             </div>
             
             <div type="textpart" xml:id="Wednesday">
