@@ -5,9 +5,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Register of the Church feasts for the entire year</title>
+                <title xml:lang="en" xml:id="t1">List of commemorations for the Apostles and the Evangelists</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
+                <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -30,7 +31,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>A short list of the commemoration dates of the Apostles, the Evangelists,
+                    and, occasionally, a few other saints (see the two examples provided in the edition).
+                    For more extensive calendars, see <ref type="work" corresp="LIT3123Calend"/>.
+                    For unidentified calendars, see <ref type="work" corresp="NAR0005calend"/>.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -46,23 +50,57 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DN" when="2020-06-03">Created entity</change>
+            <change who="JK" when="2025-03-05">Changed title, added abstract, added edition</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography">
-                <listRelation>
-                    <relation name="lawd:hasAttestation" active="LIT6011FeastsList" passive="BNFet68"/>
-                      <relation name="lawd:hasAttestation" active="LIT6011FeastsList" passive="DSEthiop3"/>
-                </listRelation>
-                <listBibl type="editions">
-                    <bibl>
-                        <ptr target="bm:Grebaut1935Memento"/>                        
-                    </bibl>
-                    <bibl>
-                        <ptr target="bm:Grebaut1936Memento"/>
-                    </bibl>
-                </listBibl>
+            <div type="edition">
+                <note>The following text is taken from <ref type="mss" corresp="EMIP00054"/>, fol. 81r–v.</note>
+                <div type="edition" xml:lang="gez">
+                    <ab>
+                        በመስከረም፡ ፩በርተሎሜዎስ፡
+                        በጥቅምት፡ በ፲፪ማቴዎስ፡ 
+                        በኅዳር፡ በ፳፰ፊልጶ<supplied reason="lost">ስ፡</supplied>
+                        በታሕሣሥ፡ ፬<unclear>እን</unclear>ድርያስ፡ 
+                        በጥር፡ ፬ዮሐ<pb n="81b"/>ንስ፡ 
+                        በየካቲት፡ ፲ያዕቆብ። ወልደ፡ እልፍዮስ፡ 
+                        በመጋቢት፡ በ፰ማትያስ፡ 
+                        በሚያዝያ፡ <add place="above">በ</add>፲፯ያዕቆብ፡ ወልደ፡ ዘብዴዎስ፡ በ፴ማርቆስ፡ 
+                        በግንቦት፡ በ፳፯ቶማስ፡ 
+                        በሐ<supplied reason="lost">ም</supplied>ሌ፡ ፪ታዴዎስ፡ በ፭ጴ<supplied reason="omitted">ጥሮስ፡ </supplied>ወጳውሎስ፡ ፲ናትናኤል፡ በ፲፰ያዕቆ<supplied reason="lost">ብ፡</supplied>
+                    </ab>
+                </div>
+            </div>
+            <div type="edition">
+                <note>The following text is taken from <ref type="mss" corresp="BAVet61"/>, fols 1r–2r.</note>
+                <div type="edition" xml:lang="gez">
+                    <ab>
+                        በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ። ጸሐፍነ፡ በዘ፡ ንዜከር፡ ተዝካሮሙ፡ ለብፁዓን፡ 
+                        ሐዋርያት፡ አመ፩ ለመስከረም፡ በትረ፡ ሎሜዎስ።
+                        አመ፲፭ ፍልሰተ፡ ስጋሁ፡ ለእስጢፋኖስ።
+                        አመ<unclear resp="JK">፲፪</unclear> ለጥቅምት፡ ማቴዎስ።
+                        አመ<unclear resp="JK">፳፪</unclear> ሉቃስ።
+                        አመ<gap reason="illegible"/> ለኅዳር፡  ፍሊጶስ።
+                        አመ<gap reason="illegible"/> ለተኅሣሥ፡ እንድ<gap reason="lost"/><pb/>
+                        አመ<gap reason="illegible"/> ልደት።
+                        አመ<gap reason="illegible"/> ለጥር፡ እስጢፋኖስ።
+                        <add place="above">አመ፬ ዮሐንስ።</add>
+                        አመ፲ወ፬ ጥምቀት።
+                        አመ፳፰ ቃለሚጦስ።
+                        አመ፰ <add place="above">ለየካቲት፡</add> ስምዖን፡ ተወክፎ፡ ለእግዚእነ።
+                        አመ፡ ፲፡ ያዕቆብ፡ ወልደ፡ <sic>እልልዮስ።</sic>
+                        አመ<gap reason="illegible"/> ለመጋቢት፡ ማትያስ።
+                        አ<add place="above">መ፳<gap reason="illegible"/> በዘ፡ ዜነዋ።</add>
+                        <add place="margin">አ</add>መ<gap reason="illegible"/> ለሚያዝያ፡ ያዕቆብ፡ ወልደ፡ ዘብዴዎስ።
+                        አ<gap reason="lost"/> ማርቆስ።
+                        አመ፳<gap reason="lost"/><pb/> ለግንቦት፡ ቶማስ።
+                        አመ፪ ለሐምሌ፡ ታዴዎስ።
+                        አመ፡ ፭፡ ጴጥሮስ፡ ወጳውሎስ።
+                        አመ፡ ፲፡ ስምዖን፡ ወልደ፡ ቃለዮጳ።
+                        አመ፲፰ ያዕቆብ፡ እኁሁ፡ ለእግዚእነ።
+                     </ab>
+                </div>
             </div>
         </body>
     </text>
