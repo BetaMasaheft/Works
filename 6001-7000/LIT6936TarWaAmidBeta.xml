@@ -75,6 +75,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change when="2024-01-20" who="CH">Added textpart on Moses' wife from edition Derat/Seignobos</change>
             <change when="2024-01-23" who="CH">Updated labels according to edition Diez</change>
             <change when="2025-02-11" who="CH">Updated source desc, abstract and bibliography</change>
+            <change when="2025-03-18" who="CH">Added parts of text in Preface and Introduction as well as incipits and explicits</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -161,7 +162,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="edition">
                 <note>This division into textparts and labels follows the devision in <bibl><ptr target="bm:Diez2024Amid"/></bibl>.</note> 
                 <div type="textpart" subtype="part" xml:id="Preface">
-                    <label>Attribution to the author and outline of the content by the translator.</label>
+                    <label>Attribution to the author by the translator.</label>
+                    <note>The following text is taken from <ref target="#J #M"/>.</note>
+                    <q xml:lang="gez">በስመ፡ እግዚአብሔር፡ መሓሪ፡ ወመስተሣህል፡ ቦቱ፡ እትረዳእ፡ ወእዌጥን፡ ጽሕፈተ፡ ታሪክ፡ ዘውእቱ፡ ዜናሆሙ፡ ለአበው፡ ቀደምት፡ ወሐሳበ፡ ኍልቈ፡ 
+                        መዋዕሊሆሙ፡ ለነገሥት፡ እምአዳም፡ እስከ፡ ተፍጻሜቶሙ፡ ለእስራኤል፡ ወለአሕዛብ፡ ዘአስተጋብኦ፡ ክቡር፡ ወትሩፍ፡ ክርስቶሳዊ፡ 
+                        <persName ref="PRS4711Giyorgis">ጊዮርጊስ፡ ወልደ፡ አሚድ፡</persName> ዘብሔረ፡ 
+                        <placeName ref="LOC2804Egypt">ግብጽ።</placeName> 
+                        ወሰላመ፡ እግዚአብሔር፡ የሀሉ፡ ላዕለ፡ <app><lem corresp="#M">ገብረ፡ እግዚአብሔር፡</lem><rdg corresp="#J">ንጉሥነ፡</rdg></app>
+                        <app><lem corresp="J"></lem><rdg corresp="M"><persName ref="PRS12476KesadaGiyorgis">ክሳደ፡ ጊዮርጊስ፡</persName></rdg></app>
+                        ለዓለመ፡ ዓለም፡ አሜን።</q>
                 </div>
                 <div type="textpart" subtype="part" xml:id="Introduction">
                     <label>Introduction</label>
@@ -170,36 +179,79 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <bibl><ptr target="bm:Diez2024Amid"/><citedRange unit="page">176-191</citedRange></bibl>.</note>
                     <div type="textpart" subtype="part" xml:id="AuthorsPreface">
                         <label>Authors Preface</label>
-                        <note>Note by the author, in which he claims that his work was already circulating in Egypt when he decided to add a story
-                            from another source about the Persian Empire, which he calls <foreign xml:lang="gez">ነገረ፡ መንክር፡ እምዜናሆሙ፡ ለነገሥት፡ 
-                            ዝንጉዓን፡ ዘውእቶሙ፡ ዐዠም።</foreign> (e.g. 'Ruzbihans history')</note>
-                        <q xml:lang="gez">ወሶበ፡ ተከሥተ፡ ዝክረ፡ ዝንቱ፡ ታሪክ፡ ዘውእቱ፡ ሐሳብ፡ ውእተ፡ ብሔረ፡ ግብጽ። <gap reason="ellipsis"/>
-                            ወቀዲሙስ፡ ንወጥን፡ ነገረ፡ በእንተ፡ ከዊነ፡ ዓለም፡ ወጥያቄ፡ አዝማን፡ እስመ፡ ሐሳብ፡ ይፈቅድ፡ ክያሆሙ፡ እስመ፡ ውእቱ፡ ንዱቅ፡ ላዕሌሆሙ።</q>
+                        <note>Note by the author, in which he presents an outline of the work and claims that his work was already being circulated in 
+                            Egypt when he decided to add a story from another source about the Persian Empire, which he calls 
+                            <foreign xml:lang="gez">ነገረ፡ መንክር፡ እምዜናሆሙ፡ ለነገሥት፡ ዝንጉዓን፡ ዘውእቶሙ፡ አዘም።</foreign> (e.g. 'Ruzbihans history'). 
+                            The following edition is taken from <ref target="#H #J"/>.</note>
+                        <q xml:lang="gez">ስብሐት፡ ለእግዚአብሔር፡ ቀዳማዊ፡ ዘእንበለ፡ ጥንት፡ ወደኃራዊ፡ ዘእንበለ፡ ተፍጻሜት። አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፡ 
+                            በመለኮቱ፡ ዘኢያገምሮ፡ መካን፡ ወኢይትአመር። ዘከመ፡ እፎ፡ ውእቱ፡ ወኢይበጽሖ፡ ሕሊና፡ ሰብእ። ወኢይረክቦ፡ አልባበ፡ እጓለ፡ እመሕያው። 
+                            አምላከ፡ አማላክት፡ ወእግዚአ፡ አጋእዝት፡ ወጣኔ፡ ዘመደ፡ ተሐዋስያን፡ ወዘዘዚአሁ፡ ፍትረታት።
+                            ገባሬ፡ ኵሉ፡ ዘይትረከብ፡ ወረካቤ፡ ኵሉ፡ ፈጣሪሆሙ፡ ለእለ፡ ሀለዉ። ወይሄልዉ፡ ወይትሌዓል፡ እምኵሉ፡ ፍጥረት፡ ዘይሴባሕ፡ በኵሉ፡ ልሳናት፡ ወይትቄደስ፡ በኵሉ፡ 
+                            በሐውርት። 
+                            ዘኢይትከሀል፡ ይትነገር፡ ክዋኔሁ፡ ወኢይረክቦ። 
+                            አልቦ፡ ተፍጻሜት፡ ለመንግሥቱ። 
+                            ነአኵቶ፡ ለዘጸገወነ፡ ሠናይቶ፡ ወንስአሎ፡ ከመ፡ ይሠሃል፡ ላዕሌነ፡ በዝ፡ ዓለም፡ ወበዘይመጽእ፡ ዓለም፡ አሜን። 
+                            ወእምድኅረዝ፡ አስተጋባእኩ፡ ውስተ፡ ዝንቱ፡ መጽሐፍ፡ ኵሎ፡ ሐሳባተ፡ እምቀዳሜ፡ ፍጥረተ፡ ዓለም። 
+                            ወነገርኩ፡ ውስቴቱ፡ ዘኮነ፡ በመዋዕለ፡ ትካት፡ ወአዝማን፡ እምነገራት። 
+                            ወእምግባራት፡ እንተ፡ ኮነት፡ በውስተ፡ ትውልደ፡ ቀደምት፡ ወዘበጽሐ፡ በውስተ፡ አሕዛብ፡ ውስተ፡ ኵሉ፡ መንግሥታተ፡ ኵሉ፡ ሕዝብ፡ እምድኅረ፡ ሕዝብ፡ ወመንግሥት፡ 
+                            እምድኅረ፡ መንግሥት። 
+                            ወሰመይኩ፡ አስማቲሆሙ፡ ለነቢያት፡ ነቢየ፡ እምድኅረ፡ ነቢይ፡ በበዘመኖሙ፡ ወመዋዕሊሆሙ፡ ወዘከርኩ፡ ንስቲተ፡ እስትግቡአ፡ እምነ፡ መጽሐፈ፡ ትንቢቶሙ፡ ወዜናሆሙ፡ 
+                            ለረዓይት፡ ወለጠቢባን፡ ወለማእምራን፡ ወለመዓልማት፡ ወዘከመ፡ ዓቀሙ፡ ጣልስማተ፡ ዘውእቱ፡ ግልፎ፡ ጣዖት፡ ወተአምራተ፡ ዘኮነ፡ ውስተ፡ ዓለም፡ በበመካኑ። 
+                            ወነገርኩ፡ ክፍለ፡ ምድር፡ ወሰብዓቱ፡ በሐውርተ፡ ኑሖሙ፡ ወግድሞሙ፡ አብሕርቲሆሙ፡ ወአፍላጋቲሆሙ፡ ወአህጕራቲሆሙ፡ ወግብሮሙ፡ ለሰብእ፡ እለ፡ የኃድሩ፡ በበ፡ 
+                            በሕውርት፡ ወዘውስተ፡ ኵሉ፡ ብሔር፡ እምበቍዔታት፡ ወኅሱማት። 
+                            ወዘከርኩ፡ ዜናሁ፡ ለሙሴ፡ ነቢይ፡ ሰላመ፡ እግዚአብሔር፡ ምስሌሁ፡ ወዘገብረ፡ እግዚአብሔር፡ በእዴሁ፡ እምተአምራት፡ ወመድምማት፡ 
+                            ወመንኵራት፡ በቅደመ፡ ፈርዖን፡ ንጉሠ፡ <placeName ref="LOC2804Egypt">ግብጽ፡</placeName> እስከ፡ አውፅኦሙ፡ ለደቂቀ፡ እስራኤል፡ እምድረ፡ 
+                            <placeName ref="LOC2804Egypt">ግብጽ፡ </placeName> ወአብኦሙ፡ ውስተ፡ ምድረ፡ ርስት። 
+                            ወእምዝ፡ ዘከርኩ፡ ድኅሬሁ፡ ዘከመ፡ ተንሥኡ፡ ነቢያት፡ ወመሳፍንት፡ ወእመኳንንት፡ ወነገሥተ፡ ደቂቀ፡ እስራኤል፡ ዜናሆሙ፡ ወፀብኦሙ፡ እስከ፡ አመ፡ ሙስናሁ፡ ለቤተ፡ 
+                            መቅደስ፡ ወመንግሥቶሙ፡ ለሮም፡ ወለፋርስ፡ ወለካልአኒሆመ። 
+                            ወዓዲ፡ ዘከርኩ፡ አስተርእዮቶ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ሎቱ፡ ስብሐት። 
+                            ወእስትግቡአ፡ አንሶስዎቶ፡ ውስተ፡ ዓለም፡ ወዘገብረ፡ ተአምራተ፡ ወመንክራተ፡ እስከ፡ ጊዜ፡ ዕርገቱ፡ ውስተ፡ ሰማያት። 
+                            ወእምዝ፡ ይነግር፡ ድኅሬሁ፡ ዜናሆሙ፡ ለቅዱሳን፡ ሐዋርያት፡ ወለሊቃነ፡ ጳጳሳት፡ ወነገሥተ፡ ክርስቲያን፡ ወእስትጉቡአ፡ ዜናሆሙ፡ ወፀብኦሙ፡ እስከ፡ አስተርአየ፡ ሕጎሙ፡ 
+                            ለተንበላት፡ ርኩሳን። 
+                            ወዘኮነ፡ እምዜናሆሙ፡ ወዘከመ፡ እፎ፡ ነግሡ፡ ዓረብ፡ ወጸንዓ፡ ግብሮሙ፡ ወተሰልጡ፡ ላዕለ፡ ብዙኅ፡ መንግሥታት። 
+                            ወዓዲ፡ እምድኅሬሆሙ፡ እመማክርት፡ ወነገሥተ፡ ተንበላት፡ ወኢኀደጉ፡ ምንተኒ። እምእስትግቡእ፡ በአምጣነ፡ እክል፡ እስከ፡ አመ፡ ነግሠ፡ ንጉሠ፡ ዳኅረ፡ ዘስሙ፡ ርኩንዲን፡
+                            በየበርስ፡ ዝብሂል፡ መአዝንተ፡ ሃይማኖት፡ እግዚአብሔር፡ ያጥፍእ፡ መንግሥቶሙ፡ ለተንበላት፡ ቅሩበ፡ አሜን።
+                            ወሶበ፡ ተከሥተ፡ ዝክረ፡ ዝንቱ፡ ታሪክ፡ ዘውእቱ፡ ሐሳብ፡ ውእተ፡ ብሔረ፡ ግብጽ። ወተሰምዓ፡ ዜናሁ፡ ውስተ፡ ኵሉ፡ አጽናፈ፡ ምድር።
+                            ወጸሐፍዎ፡ መምህራን፡ ክቡራን።
+                            ወረከብኩ፡ እምድኅረዝ፡ ሐሳብ፡ ካልእ፡ ዘውስቴቱ፡ ነገረ፡ መንክር።
+                            እምዜናሆሙ፡ ለነገሥት፡ ዝንጉዓን፡ ዘውእቶሙ፡ አዘም።
+                            <gap reason="ellipsis" unit="lines" quantity="43"/>
+                            እስመ፡ ሐሳብ፡ ይፈቅድ፡ ኪያሆሙ፡ እስመ፡ ውእቱ፡ ንዱቅ፡ ላዕሌሆሙ።</q>
                     </div>
                     <div type="textpart" subtype="part" xml:id="KawinaAlam">
                         <label>Discourse on the temporality of the world</label>
+                        <note>The following incipit and explicit are taken from <ref target="#J"/>.</note>
                         <q xml:lang="gez">ነገር፡ በእንተ፡ ከዊነ፡ ዓለም፡ ተጋአዙ፡ በእንተ፡ ፍጥረተ፡ ጥንተ፡ ዓለም፡ ወጠቢባንሰ፡ ቦእምኔሆሙ፡ ዘይቤ፡ እስመ፡ ብሉይ፡ ውእቱ፡ ከመ፡ ፈጣሪሁ፡ 
-                            አልቦቱ፡ ጥንት፡ ወኢተፍጻሜት፡</q>
+                            አልቦቱ፡ ጥንት፡ ወኢተፍጻሜት፡ <gap reason="ellipsis"/>
+                            ወረድኤትነሰ፡ እምኀበ፡ እግዚአብሔር።</q>
                     </div>
                     <div type="textpart" subtype="part" xml:id="TeyyaqeAzman">
                         <label>Discourse on the nature of time</label>
-                        <q xml:lang="gez">ነገር፡ በእንተ፡ ጥያቄ፡ አዝማን፡</q>
+                        <note>The following incipit and explicit are taken from <ref target="#J"/>.</note>
+                        <q xml:lang="gez">ነገር፡ በእንተ፡ ጥያቄ፡ አዝማን፡ <gap reason="ellipsis"/>
+                            ወመዓልት፡ ለ፲ወ፪ክፍል፡ እንተ፡ ይእቲ፡ ሰዓታት።</q>
                     </div>
                     <div type="textpart" subtype="part" xml:id="MatanaAzman">
                         <label>Discourse about the quantity of time and how much of it has elapsed</label>
-                        <q xml:lang="gez">ነገር፡ በእንተ፡ መጠነ፡ አዝማን፡</q>
+                        <note>The following incipit and explicit are taken from <ref target="#J"/>.</note>
+                        <q xml:lang="gez">ነገር፡ በእንተ፡ መጠነ፡ አዝማን፡ <gap reason="ellipsis"/>
+                            ለእመ፡ ሠምረ፡ እግዚአብሔር።</q>
                     </div>
                     <div type="textpart" subtype="part" xml:id="TentaFetrat">
                         <label>Discourse on the commencement of the Creation</label>
-                        <q xml:lang="gez">ነገር፡ በእንተ፡ ጥንተ፡ ፍጥረት፡</q>
+                        <note>The following incipit and explicit are taken from <ref target="#J"/>.</note>
+                        <q xml:lang="gez">ነገር፡ በእንተ፡ ጥንተ፡ ፍጥረት፡ <gap reason="ellipsis"/>
+                            ይቤ፡ መጽሐፍ፡ ወአዕረፈ፡ እግዚአብሔር፡ እምኵሉ፡ ግብሩ፡ በዕለት፡ ሰብዕ፡ ወዐረካ፡ ወቀደሳ።</q>
                     </div>
                 </div>
                     
                 <div type="textpart" subtype="part" xml:id="preislamichistory">
                     <label>The pre-Islamic history from <persName ref="PRS1386Adam"/> to <persName ref="PRS5294Heracliu"/>.</label>
-                
+                    <note>If not indicated otherwise, the following incipits or explicits of the textparts are taken from <ref target="#J"/>.</note>
                     <div type="textpart" subtype="part" xml:id="Adam">
                         <label>1st Generation - Adam</label>
+                        <q xml:lang="gez">ወይቤ፡ ለእግዚአብሔር፡ አምላክ፡ ገነት፡ ውስተ፡ <app><lem>ኤዴን፡</lem><rdg corresp="J">ኤዶም፡</rdg></app>
+                            ዘመንገለ፡ ጽባሕ፡</q>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Set">
@@ -1432,6 +1484,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <div type="textpart" subtype="part" xml:id="Uralyanos">
                         <label>Aurelian</label>
+                        <q xml:lang="gez"><gap reason="ellipsis"/>
+                            ወአራልያኖስሰ፡ ቄሳር፡ ንጉሥ፡ ሞተ፡ በፍጻሜ፡ ፶፻ወ፯፻፹ወ፩ ዓመት፡ ወመንፈቅ፡ እምፍጥረተ፡ ዓለም።</q>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Tafsos">
@@ -1553,12 +1607,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <div type="textpart" subtype="part" xml:id="Harqal">
                         <label>Heraclius</label>
+                        <note>Mentioned with the name <foreign xml:lang="gez">ሐረቅል፡</foreign> in <ref target="#M"/>.</note>
                     </div>
                     
                 <div type="textpart" subtype="part" xml:id="Epilogue">
                     <label>Epilogue</label>
+                    <note>Epilogue to the preislamic part. The following text is taken from <ref target="#J"/>.</note>
+                    <q xml:lang="gez">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ፡ ዝንቱ፡ ውእቱ፡ አምላክነ፡ ዘበአማን፡ ንሕነ፡ ክርስቲያን፡ ንስግድ፡ ሎቱ፡ ወንሰብሖ፡ ለዓለመ፡ 
+                        ዓለም፡ አሜን። 
+                        ተፈጸመ፡ ዝንቱ፡ መጽሐፍ፡ ቡሩክ፡ ዘውእቱ፡ ሐሰበ፡ መዋዕለ፡ ዓለም፡ ወዜና፡ ኵሉ፡ ነገሥት፡ 
+                        <app><lem>ዘደረሰ፡</lem><rdg corresp="#J">ዘደስረ፡</rdg></app> አብ፡ ክቡር፡ ክርስቲያናዌ፡ ዘበአማን፡ ጊዮርጊስ፡ ወልደ፡ አብ፡ ኤልያስ፡ 
+                        ወልደ፡ አብ። 
+                        ወከርም፡ ወልደ፡ አብ፡ ጠይብ፡ ዕውቅ፡ በወልደ፡ አሚድ፡ ከታቢ። እግዚአብሔር፡ ይምሐሮ፡ አሜን።</q>
+                    </div>
                 </div>
-            </div>
                 <div type="textpart" subtype="part" xml:id="Patriarchs">
                     <label>List of Patriarchs</label>
                     <note>Description of the patriarchs of Alexandria from <persName ref="PRS6751Mark"/> to 
@@ -1566,6 +1628,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <div type="textpart" subtype="chapter" xml:id="Marqos">
                         <label>Mārqos </label>
+                        <note>The following incipit is based on <ref type="mss" corresp="#J #M"/>.</note>
+                        <q xml:lang="gez">በስመ፡ አብ፡ ወወልድ፡ ወመንፈሰ፡ ቅዱስ፡ ፩ አምላክ፡ ፶ አንቀጽ፡ በእንተ፡ አእምሮ፡ ስመ፡ ሊቃነ፡ ጳጳሳት፡ ዘግብጽ፡ ወምስር፡ እለ፡ ተሰይሙ፡ 
+                            <app><lem corresp="M">በእለ፡ እስክንድርያ፡</lem><rdg corresp="J">በእለእስክንድርያ።</rdg></app> እምአብ፡ ሐዋርያ፡ ማርቆስ፡ 
+                            ወንጌላዊ፤ ወእስከ፡ አብ፡ አትናስዮስ<app><lem>፡</lem><rdg corresp="#J">።</rdg></app> ዘአዕረፈ፡ ኀበ፡ ምሕረተ፡ እግዚአብሔር፡ ልዑል።
+                            <gap reason="ellipsis"/></q>
                     </div>
                     
                     <div type="textpart" subtype="chapter" xml:id="Anyanos">
@@ -1890,6 +1957,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <div type="textpart" subtype="chapter" xml:id="NamesList">
                         <label>List of Patriarchs after Bǝnyami III</label>
+                        <note>This list of Alexandrian patriarchs was not part of the original work, but was added later and successively expanded by 
+                            Ethiopian scribes. The following text is taken from <ref target="#J"/>.</note>
+                        <q xml:lang="gez">
+                            <l n="1">፹ወ፫አባ፡ ጴጥሮስ፡</l> 
+                            <l n="2">፹ወ፬አባ፡ ማርቆስ፡</l>
+                            <l n="3">፹ወ፭አባ፡ ገብርኤል፡</l> 
+                            <l n="4">፹ወ፮አባ፡ ዮሐንስ፡</l>
+                            <l n="5">፹ወ፯አባ፡ ገብርኤል፡</l>
+                            <l n="6">፹ወ፰አባ፡ መቴዎስ፡</l>
+                            <l n="7">፹ወ፱አባ፡ ገብርኤል፡</l>
+                            <l n="8">፺አባ፡ ዮሐንስ፡</l>
+                            <l n="9">፺ወ፩አባ፡ ገብርኤል፡</l>
+                            <l n="10">፺ወ፪አባ፡ ሚካኤል፡</l>
+                            <l n="11">፺ወ፫አባ፡ ዮሐንስ፡</l>
+                            <l n="12">፺ወ፬አባ፡ ዮሐንስ፡</l>
+                            <l n="13">፺ወ፭አባ፡ ገብርኤል፡ ዘነበረ፡ በዘመነ፡ ንጉሥነ፡ <persName ref="PRS6229LebnaDe">ልብነ፡ ድንግል፡</persName></l>
+                            <l n="14">፺ወ፮አባ፡ ዮሐንስ፡</l>
+                            <l n="15">፺ወ፯አባ፡ ገብርኤል፡ ዘሀሌ፡ ይእዜ፡ በዘመነ፡ ንጉሥነ፡ <persName ref="PRS8550sardaDe">ሠርፀ፡ ደንግል።</persName></l>
+                        </q> 
                     </div>
                 </div>
                 
@@ -1898,6 +1984,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <div type="textpart" subtype="part" xml:id="CouncilsIntro">
                         <label>Introduction to the history of the Ecumenical Councils</label>
+                        <note>The following incipit is taken from <ref target="#M"/>.</note>
+                        <q xml:lang="gez">አንቀጽ፡ ፶ወ፫ በእንተ፡ ተዝካረ፡ ጉባኤ።</q>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="CouncilNicaea">
@@ -1940,6 +2028,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <div type="textpart" subtype="part" xml:id="MuslimRulers">
                     <label>History of the Muslim rulers.</label>
                     
+                    <div type="textpart" subtype="part" xml:id="MuslimRulersIntro">
+                        <label>Introductory phrase to the History of Muslim rulers.</label>
+                        <note>The following text is taken from <ref target="#M"/>.</note>
+                        <q xml:lang="gez">ዝውእቱ፡ አስማቲሆሙ፡ ለነገሥት፡ ዘተንባላት፡ እለ፡
+                            ነግሡ፡ በምስር፡ ወበግዳድ፡ እማሐመድ፡ እስከ፡ ዘመንነ፡ ዛቲ፡ ወእሙንቱኬ፡ ነገድ፡ እለ፡
+                            ይሰመዩ፡ እልእምውያ፡ ወእልባስያ፡ ወእልፍጥምያ፡ ወነገሥትሂ፡ እልአልዩብያ፡ ወካልኣኒሆሙ።</q> 
+                    </div>
+                    
                     <div type="textpart" subtype="part" xml:id="Caliphs">
                         <label>History of the Caliphs</label>
                     </div>
@@ -1950,10 +2046,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <div type="textpart" subtype="part" xml:id="Abbasids">
                         <label>History of the Abbasids</label>
+                        <note>The title given below is quoted after <ref target="#M"/>.</note>
+                        <q xml:lang="gez">ምእትስም፡ በአላህ፡</q>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Fatimids">
                         <label>History of the Fatimids</label>
+                        <note>The title given below is quoted after <ref target="#M"/>.</note>
+                        <q xml:lang="gez">ነገሥት፡ እለ፡ ነግሡ፡ ላዕለ፡ ምስር፡ እምነ፡ አሕመድ፡ ወልደ፡ ጡሉን፡ ወእስከ፡ ካፉር፡ ላእከ፡ እልእክሺድ፡</q>
                         
                         <div type="textpart" subtype="part" xml:id="AbuMuhammadalMahdi">
                             <label>History of Abu Muhammad al-Mahdi</label>
