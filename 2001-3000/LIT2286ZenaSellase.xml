@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2286ZenaSellase">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2286ZenaSellase">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -65,23 +66,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </keywords>
          </textClass>
          <abstract>
-            <p>A collection of miracles worked
+            <p>This record refers to the collection of prayers to the Trinity for each day of the week
+               (<ref type="work" corresp="LIT2296Sayfas"/>) together with miracles either following the prayer
+            for each day one by one or following the prayers as a whole.</p>
+            <p>This work is different from <ref type="work" corresp="LIT2281Trinity"/> (a collection of miracles of the Trinity attributed
+               to <persName ref="PRS2748BeduaA"/>) and from
+               <ref type="work" corresp="LIT2282Trinity"/> (a collection of miracles of the 
+               Trinity transmitted with <ref type="work" corresp="LIT1300Dersan"/>).</p>
+            <p>   From     <bibl>
+               <ptr target="bm:Nosnitsin2010EAETammeraS"/>
+            </bibl> (minimally rephrased): A collection of miracles worked
             by the Trinity, in which
             a wondrous story follows a homily, for each
             day of the week. One of the types of the collections known as the <ref type="work" corresp="LIT2388Taamme">Miracles of the Trinity</ref>
             </p>
-            <p>Three miracles published by
-               Turaev (1912: 322ff.) originate from this kind of
-               Trinity miracles. One short miracle (mss. Conti
-               Rossini 53, ff. 32v–33v, and 62, ff. 132ra–va)
-               seems to be the same text as in the 15th-cent. ms.
-               VatLib Aeth. 89, f. 28rv (GréTisVat 357). It
-               is found also in orient. 409, fol. 61ra–va (Six-
-               Deu 310) and EMML no. 1882, fol. 61v (text in
-               Turaev 1912: 322f.). The same collection is preserved
-               in mss. VatLib Aeth. 177 (fols. 5–57v) and
-               180. Turaev (1917: 83ff.) summarizes its second,
-               fifth and seventh miracles.</p>
+         
          </abstract>
       </profileDesc>
       <revisionDesc>
@@ -94,9 +93,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          
          <listRelation>
             <relation name="ecrm:P129_is_about" active="LIT2286ZenaSellase" passive="PRS10775Trinity"/>
-            <relation name="syriaca:share-a-title" active="LIT2286ZenaSellase" passive="LIT2296Sayfas"/>
+            <relation name="saws:contains" active="LIT2286ZenaSellase" passive="LIT2296Sayfas"/>
               <relation name="syriaca:share-a-title" active="LIT2286ZenaSellase" passive="LIT2388Taamme"/>
             <relation name="saws:isVersionOf" active="LIT2286ZenaSellase" passive="LIT2388Taamme"/>
+            <relation name="syriaca:different-from" active="LIT2286ZenaSellase" passive="LIT2281Trinity"/>
+            <relation name="syriaca:different-from" active="LIT2286ZenaSellase" passive="LIT2282Trinity"/>
             <relation name="betmas:formerlyAlsoListedAs" active="LIT2286ZenaSellase" passive="LIT2623Zenana"></relation>
          </listRelation>
          <listBibl type="secondary">
