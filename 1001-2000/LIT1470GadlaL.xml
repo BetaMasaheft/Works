@@ -86,6 +86,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </listBibl>
          </div>
          <div type="edition" resp="NV">
+            <div type="level2">
+               <head>Edition statement and encoding description</head>
+               <p>These elements should be provided in the header for texts that we
+                  provide an edition for. The <gi>editionStmt</gi> should specify the origin
+                  of the text. The <gi>encodingDesc</gi> specifies the principles used
+                  when encoding, when known (e.g. transcription, specific tag sets,
+                  etc.)</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <editionStmt>
+                     <p>Digital text based on  <bibl><ptr target="bm:Valieva2021GL"/></bibl>.</p>
+                  </editionStmt>
+               </egXML>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <encodingDesc>
+                     <projectDesc>
+                        <p>Text prepared within the framework of the TraCES project.</p>
+                     </projectDesc>
+                     <editorialDecl>
+                        <normalization>
+                           <p>The spelling and orthography has been normalised in accordance with <bibl><ptr target="bm:DillmannOnline"/></bibl>.</p>
+                        </normalization>
+                     </editorialDecl>
+                     
+                  </encodingDesc>
+               </egXML>
+               
+            </div>
             <div type="textpart" subtype="part" n="1">
                <label>Preamble</label>
             </div>
