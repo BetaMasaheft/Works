@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle of Gabra Masqal: A monk becomes a robber</title>
+                <title xml:lang="en" xml:id="t1">Miracle of Gabra Masqal: A monk becomes a robber</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,7 +30,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>Third miracle in <ref type="mss" corresp="ANLcr11"/>, paraphrased according to
+                    the descriptions of Strelcyn and Raineri: A monk turned robber is caught, and he is blinded and his right arm and left leg
+                    are amputated, but since he did not stop to believe, the saint heals him.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -50,7 +52,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="ecrm:P129_is_about" active="LIT7349MGMRobber" passive="PRS4333GabraMa"/>
+                    <relation name="saws:formsPartOf" active="LIT7349MGMRobber" passive="LIT7352HagDosGM"/>
+                </listRelation>
+                <listBibl type="secondary">
+                    <bibl><ptr target="bm:Raineri2005GabraMasqal"/></bibl>
+                    <bibl>
+                        <ptr target="bm:Strelcyn1976Catalogue"/>
+                        <citedRange unit="page">35</citedRange>
+                    </bibl>
+                </listBibl>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <label>Incipit</label>
+                    <note>The following incipit is taken from <ref type="mss" corresp="ANLcr11"/>.</note>
+                    <ab>፫፡ ተአምሪሁ፡ ለአቡነ፡ ገብረ፡ መስቀል። ሀሎ፡ ፩፡ መነኮስ፡ ዘስሙ፡ ገብረ፡ መስቀል፡ ዘመንኰሰ፡
+                        በደብረ፡ አቡነ፡ ገብረ፡ መስቀል፡ ወነበረ፡ በተጋድሎ፡ <sic>ብዘኅ</sic>። ወእምድኅረዝ፡
+                        አስሐቶ፡ ሰይጣን፡ ጸላ<choice><sic>ሌ</sic><corr>ኤ</corr></choice>፡
+                        ኵሉ፡ ሠናያት፡ ወኮነ፡ ዓማፄ፡ ወቀታሌ፡ ነፍስ፡ ወየሐይድ፡ ኵሎ፡ ዘረከበ፡ በውስተ፡ ፍኖት።</ab>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>
