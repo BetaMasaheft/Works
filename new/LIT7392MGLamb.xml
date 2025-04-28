@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle of St George: How a lamb belonging to the church of St George was taken by a hyena, whom it forced to entre into the sanctuary, where it died</title>
+                <title xml:lang="en" xml:id="t1">Miracle of St George: How a lamb belonging to the church of St George was taken by a hyena, whom it forced to entre into the sanctuary, where it died</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -50,7 +50,53 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:Arras1953GeorgiusText"/>
+                        <citedRange unit="page">88–89</citedRange>
+                        <citedRange unit="item">59</citedRange>
+                    </bibl>
+                </listBibl>
+                <listBibl type="translation">
+                    <bibl>
+                        <ptr target="bm:Arras1953GeorgiusTrans"/>
+                        <citedRange unit="page">51</citedRange>
+                        <citedRange unit="item">59</citedRange>
+                    </bibl>
+                </listBibl>
+                <listBibl type="secondary">
+                    <bibl>
+                        <ptr target="bm:Strelcyn1976Catalogue"/>
+                        <citedRange unit="page">51</citedRange>
+                    </bibl>
+                </listBibl>
+                <listRelation>
+                    <listRelation>
+                        <relation name="saws:formsPartOf" active="LIT7392MGLamb"
+                            passive="LIT4006Taamme"/>
+                        <relation name="saws:formsPartOf" active="LIT7392MGLamb"
+                            passive="LIT6172DossierGeorge"/>
+                        <relation name="ecrm:P129_is_about" active="LIT7392MGLamb" passive="PRS4585Georgeo"/>
+                    </listRelation>
+                </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>This incipit is taken from <ref type="mss" corresp="ANLcr15"/>.</note>
+                    <ab>ተአምሪሁ፡ <gap reason="ellipsis"/> ወሀለወት፡ አሐቲ፡
+                        ቤተ፡ ክርስቲያን፡ ሕንፅት፡ በስሙ፡ ለቅዱስ፡ ማር፡
+                        ጊዮርጊስ፡ ወውስተ፡ ይእቲ፡ ቤተ፡ 
+                        ክርስቲያን፡ ሀሎ፡ በግዕ፡</ab>
+                </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <note>This explicit is taken from the edition.</note>
+                    <ab>
+                     ወከልሀ፡ ፫፡ ጊዜ፡ ውእቱ፡ ዝዕብ፡ ወአልዓለ፡ እገሪሁ፡ ወተነጽሐ፡ በዘባኑ፡ ወሞተ፡ በህየ፡ ወአንከሩ፡ እለ፡ ርእዩ፡
+                     ተአምራቲሁ፡ ለኃያል፡ ቅዱስ፡ ማር፡ ጊዮርጊስ፡ ትንብልናሁ፡ የሃሉ፡ ምስለ፡ ፍቁሩ፡   
+                    </ab>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>
