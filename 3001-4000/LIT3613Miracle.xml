@@ -1,13 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3613Miracle">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="work"
+     xml:lang="en"
+     xml:id="LIT3613Miracle">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1" xml:lang="en">Miracle of Mary: Miracle of Anastasius, a deacon of Rome</title>
+            <title xml:id="t1">Miracle of Mary: Miracle of Anastasius, a deacon of Rome</title>
             <title xml:id="t2" xml:lang="en">The deacon's prayer that contained five times "Rejoice"!</title>
-            <title xml:id="t3" xml:lang="en">Miracle of the deacon who recited the prayer tafaśśǝḥi and was healed by Our Lady Mary</title>
-            <title xml:id="t4" xml:lang="en">The Virgin Mary and the Deacon Anastasius of Constantinople (hagara Rome) </title>
+            <title xml:id="t3">Miracle of the deacon who recited the prayer tafaśśǝḥi and was healed by Our Lady Mary</title>
+            <title xml:id="t4">The Virgin Mary and the Deacon Anastasius of Constantinople (hagara Rome) </title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -22,11 +28,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
+            <p>A Work part of Ethiopian Literature</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -36,7 +43,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <abstract>
             <p/>
          </abstract>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="ar">Arabic</language>
+            <language ident="it">Italian</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -52,14 +64,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="DR" when="2018-11-14">Added keyword, Macomber reference and title</change>
          <change who="DR" when="2018-12-07">Added title from deleted LIT4616Miracle</change>
          <change who="AM" when="2019-04-30">added text</change>
+         <change who="AM" when="2019-09-16">added relation</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
-
             <listBibl type="secondary">
-
                <bibl>
                   <ptr target="bm:Cerulli1965Leningrado"/>
                   <citedRange unit="page">7</citedRange>
@@ -70,14 +81,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <citedRange unit="item">142</citedRange>
                </bibl>
             </listBibl>
-
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Budge1923Miracles"/>
                   <citedRange unit="item">27</citedRange>
                </bibl>
             </listBibl>
-
             <listBibl type="translation">
                <bibl>
                   <ptr target="bm:Budge1933Miracles"/>
@@ -98,30 +107,200 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         fols. 1<ref type="mss" corresp="ES50r153">50r-153</ref>r, StrBritLib 48,
                            n<locus target="#32">32</locus>, 16.-27).  -->
             <listRelation>
-               <relation name="saws:formsPartOf" active="LIT3613Miracle" passive="LIT2384Taamme"/>
-               <relation name="betmas:formerlyAlsoListedAs" active="LIT3613Miracle" passive="LIT4616Miracle"/>
+               <relation name="saws:formsPartOf"
+                         active="LIT3613Miracle"
+                         passive="LIT2384Taamme"/>
+               <relation name="lawd:hasAttestation"
+                                 active="LIT3613Miracle"
+                                 passive="EMML1573">
+                  <desc>
+                              see <ref type="mss" corresp="EMML1573"/>, <locus target="#18v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                               active="LIT3613Miracle"
+                               passive="EMML3536">
+                  <desc>
+                            see <ref type="mss" corresp="EMML3536"/>, <locus target="#20v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                             active="LIT3613Miracle"
+                             passive="EMML5105">
+                  <desc>
+                          see <ref type="mss" corresp="EMML5105"/>, <locus target="#11r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                         active="LIT3613Miracle"
+                         passive="EMML2275">
+                  <desc>
+                      see <ref type="mss" corresp="EMML2275"/>, <locus target="#26v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                       active="LIT3613Miracle"
+                       passive="EMML3872">
+                  <desc>
+                    see <ref type="mss" corresp="EMML3872"/>, <locus target="#37r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                     active="LIT3613Miracle"
+                     passive="EMML6917">
+                  <desc>
+                  see <ref type="mss" corresp="EMML6917"/>, <locus target="#26r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                     active="LIT3613Miracle"
+                     passive="EMML2282">
+                  <desc>
+                  see <ref type="mss" corresp="EMML2282"/>, <locus target="#42r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                   active="LIT3613Miracle"
+                   passive="EMML4618">
+                  <desc>
+                see <ref type="mss" corresp="EMML4618"/>, <locus target="#11r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                 active="LIT3613Miracle"
+                 passive="EMML5182">
+                  <desc>
+              see <ref type="mss" corresp="EMML5182"/>, <locus target="#4v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+               active="LIT3613Miracle"
+               passive="EMML5520">
+                  <desc>
+            see <ref type="mss" corresp="EMML5520"/>, <locus target="#8r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+           active="LIT3613Miracle"
+           passive="EMML6949">
+                  <desc>
+        see <ref type="mss" corresp="EMML6949"/>, <locus target="#74r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+         active="LIT3613Miracle"
+         passive="EMML4688">
+                  <desc>
+      see <ref type="mss" corresp="EMML4688"/>, <locus target="#32v #108r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+       active="LIT3613Miracle"
+       passive="EMML1692">
+                  <desc>
+    see <ref type="mss" corresp="EMML1692"/>, <locus target="#24r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+       active="LIT3613Miracle"
+       passive="EMML2378">
+                  <desc>
+    see <ref type="mss" corresp="EMML2378"/>, <locus target="#3v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+        active="LIT3613Miracle"
+        passive="EMML3923">
+                  <desc>
+     see <ref type="mss" corresp="EMML3923"/>, <locus target="#44r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+    active="LIT3613Miracle"
+    passive="EMML6640">
+                  <desc>
+ see <ref type="mss" corresp="EMML6640"/>, <locus target="#48v #102v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+  active="LIT3613Miracle"
+  passive="EMML2059">
+                  <desc>
+ see <ref type="mss" corresp="EMML2059"/>, <locus target="#20v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+active="LIT3613Miracle"
+passive="EMML2060">
+                  <desc>
+ see <ref type="mss" corresp="EMML2060"/>, <locus target="#33r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+active="LIT3613Miracle"
+passive="EMML2066">
+                  <desc>
+ see <ref type="mss" corresp="EMML2066"/>, <locus target="#45v #134v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+        active="LIT3613Miracle"
+        passive="EMML2802">
+                  <desc>
+     see <ref type="mss" corresp="EMML2802"/>, <locus target="#40v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+    active="LIT3613Miracle"
+    passive="EMML5420">
+                  <desc>
+ see <ref type="mss" corresp="EMML5420"/>, <locus target="#30v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+  active="LIT3613Miracle"
+  passive="EMML6196">
+                  <desc>
+ see <ref type="mss" corresp="EMML6196"/>, <locus target="#79r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+active="LIT3613Miracle"
+passive="EMML7543">
+                  <desc>
+ see <ref type="mss" corresp="EMML7543"/>, <locus target="#89v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+active="LIT3613Miracle"
+passive="EMML2831">
+                  <desc>
+ see <ref type="mss" corresp="EMML2831"/>, <locus target="#32v #43r"/>
+                  </desc>
+               </relation>
             </listRelation>
          </div>
          <div type="edition">
-             <div type="textpart" subtype="incipit" xml:lang="gez">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
                <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
-                 <ab>
+               <ab>
                      ወሀሎ፡ አሐዱ፡ ብእሲ፡ ዘስሙ፡ አንስጦስዮስ፡ በሀገረ፡ ሮሜ፡ <choice resp="PRS6437Macomber">
-                     <corr>ዘበራንስትስያ</corr>
-                     <sic>ዘበራንጥያ</sic>
-                  </choice>፣
+                     <corr>ዘበራንስትስያ፡</corr>
+                     <sic resp="EMML2058">ዘበራንጥያ፡</sic>
+                  </choice>
                      ፈራሄ፡ እግዚአብሔር፡ ወያፈቅራ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
-                     ወይገይስ፡ ኀበ፡ ቤተ፡ ክርስቲያን፡ ያቄርብ፡ ላቲ፡ አጰርጌ፡ ንጹሐ፡ ዘምስለ፡ ጸሎት፣ እንዘ፡ ይሴብሕ፡ ወድሶታ፡ ለማርያም።
+                     ወይገይስ፡ ኀበ፡ ቤተ፡ ክርስቲያን፡ ያቄርብ፡ ላቲ፡ አጰርጌ፡ ንጹሐ፡ ዘምስለ፡ ጸሎት፡ እንዘ፡ ይሴብሕ፡ ወድሶታ፡ ለማርያም።
                  </ab>
-                 <div type="textpart" subtype="incipit" xml:lang="gez">
-                    <note>This incipit is taken from <ref type="mss" corresp="EMML4618"/>.</note>
-                    <ab>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <note>This incipit is taken from <ref type="mss" corresp="EMML4618"/>.</note>
+                  <ab>
                       ወሀሎ፡ አሐዱ፡ ብእሲ፡ ወይነብር፡ ውስተ፡ አሐዱ፡ መካን፡ ዘያፍቅሮ፡ ለእግዚአብሔር፡ ወለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
                       ወይጼሊ፡ ዘንተ፡ ጸሎተ፡ እንተ፡ ውስቴታ፡ አእኵቶታ፡ ወወድሶታ፡ ለማርያም።
                     </ab>
-                 </div>
-             </div>
+               </div>
+            </div>
          </div>
       </body>
    </text>
 </TEI>
+
