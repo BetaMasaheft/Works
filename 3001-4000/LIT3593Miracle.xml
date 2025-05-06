@@ -15,9 +15,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -52,6 +52,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2018-11-12">Added keyword, Macomber reference</change>
          <change who="AM" when="2019-04-10">added text</change>
          <change who="AM" when="2019-07-29">added relation</change>
+         <change when="2025-05-06" who="ES">aligned to PEMM</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -80,6 +81,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="page">191-194</citedRange>
                </bibl>
             </listBibl>
+            <listBibl type="clavis">
+               <bibl type="PEMM">
+                  <ptr type="story" target="bm:PEMM"/>
+                  <citedRange unit="item">27</citedRange>
+               </bibl>
+            </listBibl>
             <!-- The Virgin Mary and
                         the child Mary of Däfra (BMirMA 18-19; BHMirM 23-25; CerMaria<ref type="mss"
                            corresp="ES191192">191-192</ref>// mss. O Etiop. 15, LöfUpp 101, n<locus
@@ -89,6 +96,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            >32</locus>, 16.-7).  -->
                <listRelation>
                <relation name="saws:formsPartOf" active="LIT3593Miracle" passive="LIT2384Taamme"/>
+                  <relation name="skos:exactMatch" active="LIT3593Miracle" passive="https://pemm.princeton.edu/stories/27"></relation>
                          <relation name="lawd:hasAttestation" active="LIT3593Miracle" passive="EMML6938">
                             <desc>
                                <ref type="mss" corresp="EMML6938" >EMML 6938, 51v</ref>
