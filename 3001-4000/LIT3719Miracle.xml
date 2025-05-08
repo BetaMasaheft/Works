@@ -12,11 +12,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
-               </licence>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">This file is licensed
+         under the Creative Commons Attribution-ShareAlike 4.0.</licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
@@ -34,7 +31,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <abstract>
             <p/>
          </abstract>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -49,6 +49,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="MV" when="2017-04-03">Added keywords</change>
          <change who="DR" when="2018-11-26">Added keyword, title and Macomber reference</change>
          <change who="AM" when="2019-06-04">added text</change>
+         <change when="2025-05-06" who="ES">aligned to PEMM</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -60,21 +61,81 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <citedRange unit="item">444</citedRange>
                </bibl>
             </listBibl>
+            <listBibl type="clavis">
+               <bibl type="PEMM">
+                  <ptr type="story" target="bm:PEMM"/>
+                  <citedRange unit="item">444</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="skos:exactMatch"
+                         active="LIT3719Miracle"
+                         passive="https://pemm.princeton.edu/stories/444"/>
+            </listRelation>
             <listRelation>
                <relation name="saws:formsPartOf" active="LIT3719Miracle" passive="LIT2384Taamme"/>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3719Miracle"
+                  passive="EMML3051">
+                  <desc>
+                     see <ref type="mss" corresp="EMML3051"/>, <locus target="#206v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3719Miracle"
+                  passive="EMML3031">
+                  <desc>
+                     see <ref type="mss" corresp="EMML3031"/>, <locus target="#177v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3719Miracle"
+                  passive="EMML2424">
+                  <desc>
+                     see <ref type="mss" corresp="EMML2424"/>, <locus target="#143v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3719Miracle"
+                  passive="EMML2392">
+                  <desc>
+                     see <ref type="mss" corresp="EMML2392"/>, <locus target="#172r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3719Miracle"
+                  passive="EMML1978">
+                  <desc>
+                     see <ref type="mss" corresp="EMML1978"/>, <locus target="#156v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3719Miracle"
+                  passive="EMML1874">
+                  <desc>
+                     see <ref type="mss" corresp="EMML1874"/>, <locus target="#134r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3719Miracle"
+                  passive="EMML2337">
+                  <desc>
+                     see <ref type="mss" corresp="EMML2337"/>, <locus target="#264v"/>
+                  </desc>
+               </relation>
             </listRelation>
          </div>
          <div type="edition">
-             <div type="textpart" subtype="incipit" xml:lang="gez">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
                <note>This incipit is taken from <ref type="mss" corresp="EMML3051"/>.</note>
-                 <ab>
+               <ab>
                    ስምዑ፣ አበዊነ፡ ወአኃዊነ፣ ዘገብረት፡ እግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
                    ለአሐዱ፡ ብእሲ፣ እንዘ፡ አቡሁ፡ ወእሙ፡ ጽኑሳን፡ ወአልቦሙ፡ ንዋይ፣ እስመ፡ ጽኑሳን፡ እሙንቱ፣
                    ወውሉዶሙ፡ ሠናይ፡ ውእቱ፣ ወያፈቅራ፡ ለእግዝእትነ፡ ማርያም፡ ወይዜከር፡ ስማ፡ ኵሎ፡ ጊዜ።
                    ወኮነ፡ ውእቱ፡ ይስእል፡ ወትረ፡ ወይሁብ፡ ላቲ፡ አምኃ፣ ዕጣነ፡ ሴጠ፡ ላቲ፣ ዶርሆ፡ ንስቲተ፡ በአምጣነ፡ ይክል።
                  </ab>
-              </div>
-          </div>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
