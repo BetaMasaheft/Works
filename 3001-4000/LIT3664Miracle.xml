@@ -12,10 +12,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>This file is
-                     licensed under the Creative Commons Attribution-ShareAlike 4.0. </p>
-               </licence>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">This file is licensed
+         under the Creative Commons Attribution-ShareAlike 4.0.</licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
@@ -40,7 +38,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <p>The story told in the Miracle is similar to that of <ref type="work" corresp="LIT7337MiracleMarySycomore"/>, 
                   but the wording is different.</p>
          </abstract>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -56,8 +57,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="DR" when="2018-11-14">Added keyword, relation, Macomber reference and title</change>
          <change who="AM" when="2019-05-22">added text</change>
          <change who="DN" when="2025-03-31">changed incipit from that of the Miracle in EMML 2275 to the more common one;
-            the reference to Cerulli1965Leningrado, no. 25 is taken out (the miracle is unlikely the same as here).</change>
+            the reference to Cerulli1965Leningrado, no. 25 is taken out (the miracle is unlikely the same as here).</change><change when="2025-05-06" who="ES">aligned to PEMM</change>
       </revisionDesc>
+      
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
@@ -76,22 +78,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:MacomberMiracles"/>
                   <citedRange unit="item">325</citedRange>
                </bibl>
-               </listBibl>
-
+            </listBibl>
+            <listBibl type="clavis">
+               <bibl type="PEMM">
+                  <ptr type="story" target="bm:PEMM"/>
+                  <citedRange unit="item">325</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="skos:exactMatch"
+                         active="LIT3664Miracle"
+                         passive="https://pemm.princeton.edu/stories/325"/>
+            </listRelation>
             <listRelation>
                <relation name="saws:formsPartOf" active="LIT3664Miracle" passive="LIT2384Taamme"/>
             </listRelation>
          </div>
          <div type="edition">
-             <div type="textpart" subtype="incipit" xml:lang="gez">
-                <note>This incipit is taken from <ref type="mss" corresp="BNFet60"/>.</note>
-                 <ab>
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="BNFet60"/>.</note>
+               <ab>
                     ተአምር፡ ዘኮነ፡ እምድኅረ፡ ወለደቶ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ አመ፡ አዘዘ፡ ሄሮድስ፡ ንጉሥ፡ ይቅትሉ፡ ሕፃናተ፡ ዘክልኤ፡ ዓመት፡ ወዘይቴሕት። 
                     ወሰሚዓ፡ እግዚእትነ፡ ቅድስት፡ ድንግል፡ በክልኤ፡ ማርያም፡ በከየት፡ እንዘ፡ ትብል፡ እምእርአይ፡ ቅትለተ፡ ዚአከ፡ ኦወልድየ፡ እምፈቶኩ፡ ይቅድሙ፡ ቀቲለ፡ ኪያየ። ወበከመዝ፡ ሐዘነ፡ 
                     ልብ፡ እንዘ፡ ሀለወት፡ እግዚእትነ፡ ቅድስት፡ ድንግል፡ ማርያም፡ ወላዲተ፡ አምላክ፡ አስተርአዮ፡ መልአከ፡ እግዚአብሔር፡ ለዮሴፍ። ወይቤሎ፡            
                   </ab>
-              </div>
-          </div>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
