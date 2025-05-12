@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">An 'Old Amharic' Commentary on the Nicene Creed, with an the preamble to the Commentary, which describes Arius' heresy and the events which led to the Council of Nicaea and the drafting of the Nicene Creed</title>
+                <title xml:lang="en" xml:id="t1">Amharic Nicene Creed Commentary with Preamble</title>
+                <title xml:lang="gez" xml:id="t2">ጸሎተ፡ ሃይማኖት፡ ዘተናገረ፡ በሀገረ፡ ኒቅያ፡ </title>
+                <title xml:lang="en" corresp="#t2">Creed formulated at Nicaea</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="NV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -21,7 +23,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <p>According to <bibl><ptr target="bm:Appleyard2003Creed"/>
+                    <citedRange unit="page">111</citedRange></bibl>, one of the versions of Nicene Creed Commentary with Preamble, which describes Arius' heresy and the events which led to the Council of Nicaea and the drafting of the Nicene Creed</p>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -46,12 +49,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="NV" when="2025-05-12">Created stub</change>
+            <change who="NV" when="2025-05-12">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="saws:isDifferentTo" active="LIT7421CreedCommentary" passive="LIT5628CommCreed"/>
+                    <relation name="saws:isDifferentTo" active="LIT7421CreedCommentary" passive="LIT5629AndemtaCreed"/>
+                    <relation name="saws:isCommentOn" active="LIT7421CreedCommentary" passive="LIT3308Nicene"><desc>A commentary
+                        on the Nicene Creed.</desc></relation>
+                </listRelation>
+                <listBibl type="secondary">
+                    <bibl>       <ptr target="bm:Appleyard2003Creed"/>
+                        <citedRange unit="page">111</citedRange>
+                    </bibl>
+                </listBibl>
+            </div>    
+            <div type="edition">
+        <div type="textpart" subtype="incipit">
+            <note>This incipit is taken from <ref type="mss" corresp="BNFabb101"/>.</note>
+            <ab xml:lang="gez">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ፡ <gap reason="illegible"/><lb/>
+                ሁ፡ ወጠንኩ፡ ጸሎተ፡ ሃይማኖት፡ ዘተናገረ፡ በሀገረ፡ ኒቅያ፡ <lb/>
+                ፫፻ወ፲፰ ርቱዓነ፡ ሃይማኖት። ጸሎተ፡ ሃይመ<gap reason="illegible"/><lb/></ab>
+                <ab xml:lang="am">
+                    <supplied reason="lost">እንድም</supplied>፡ ጊዜ፡ ተዠመረ። እንደሆን። በቆስጠንጢኖስ። መንግሥት፡ ተዠመረ። እንደምን፡ ያሉ፡ እንደሆን። ኑማርያኖስ፡ የሚሉ፡ ንጉሠ፡ አንጾኪያ፡ ነበረ፡ ከንጉሠ፡ ቁዝ፡ ጋራ፡ ይዋጋ፡ ነበረ። አንድቀን፡ ከቤቱ፡ ሳለ፡ ንጉሠ፡ ቁዝ፡ መጻበት፡ እዋጋው፡ ብሎ፡ እርሱም፡ አይቶ፡ ወንድ፡ ልጅ፡ አልነበረዉምና፡ አንድ፡ ሴት፡ ልጅ፡ ነበረቸው። 
+                </ab>
+        </div>
+            <div type="textpart" subtype="explicit">
+                <note>This incipit is taken from <ref type="mss" corresp="BNFabb101"/>.</note>
+                <ab xml:lang="am">የጸሎተ፡ ሃይማኖት፡ ሐተታው፡ ታሪክ፡ ይህ፡ ነው።</ab>
+            </div>
+            </div>
         </body>
     </text>
 </TEI>
