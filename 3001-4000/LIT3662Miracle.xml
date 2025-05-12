@@ -12,11 +12,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
-               </licence>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">This file is licensed
+         under the Creative Commons Attribution-ShareAlike 4.0.</licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
@@ -34,11 +31,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <abstract>
             <p/>
          </abstract>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
-               <term key="Apocrypha"/> 
+               <term key="Apocrypha"/>
                <term key="Miracle"/>
                <term key="Hagiography"/>
             </keywords>
@@ -48,7 +47,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords</change>
          <change who="DR" when="2018-11-26">Added keyword, title and Macomber reference</change>
+         <change who="AM" when="2019-12-02">added relation</change>
+         <change who="AM" when="2019-12-02">added incipit by Jeremy Brown</change>
+         <change when="2025-05-06" who="ES">aligned to PEMM</change>
       </revisionDesc>
+      
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
@@ -59,9 +62,50 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <citedRange unit="item">475</citedRange>
                </bibl>
             </listBibl>
+            <listBibl type="clavis">
+               <bibl type="PEMM">
+                  <ptr type="story" target="bm:PEMM"/>
+                  <citedRange unit="item">475</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="skos:exactMatch"
+                         active="LIT3662Miracle"
+                         passive="https://pemm.princeton.edu/stories/475"/>
+            </listRelation>
             <listRelation>
                <relation name="saws:formsPartOf" active="LIT3662Miracle" passive="LIT2384Taamme"/>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3662Miracle"
+                  passive="EMML2968">
+                  <desc>
+                     see <ref type="mss" corresp="EMML2968"/>, <locus target="#114r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3662Miracle"
+                  passive="EMML22">
+                  <desc>
+                     see <ref type="mss" corresp="EMML22"/>, <locus target="#97r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3662Miracle"
+                  passive="EMML453">
+                  <desc>
+                     see <ref type="mss" corresp="EMML453"/>, <locus target="#75r"/>
+                  </desc>
+               </relation>
             </listRelation>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML2968"/>.</note>
+               <ab>
+                  ወሀለወት፡ አሐቲ፡ ብእሲት፡ ዘታፈቅራ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/> ወትፈርሆ፡ ለእግዚአብሔር፡ ወምታሰ፡
+                  እኩይ፡ ጥቀ፡ ወነዳይት፡ ይእቲ፡ በእሲት። ወሶበ፡ አጽንዓታ፡ ንዴት፡ ቦአት፡ ውስተ፡ አሐዱ፡ መኰንን፡ ወኮነት፡ ሐፃኒተ።
+               </ab>
+            </div>
          </div>
       </body>
    </text>
