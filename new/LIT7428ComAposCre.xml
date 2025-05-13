@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:id="t1">Commentary to the Apostolic Creed (Amharic)</title>
+                <title xml:id="t1">Commentary on the Apostolic Creed (Amharic)</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="CH"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -21,9 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <listWit>
-                    <witness corresp="PetermannIINachtrag24"/>
-                </listWit>
+                <p/>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -32,8 +30,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p>Commentary of the Apostolic Creed, which is partly a direct translation of each of the Gǝʿǝz words into old Amharic and partly a 
-                    brief commentary in old Amharic introduced in either case with <foreign xml:lang="gez">ዘ፡</foreign>.</p>
+                <p>Commentary of the Apostolic Creed, which is partly a direct translation of each of the Gǝʿǝz words into Old Amharic and partly a 
+                    brief commentary in Old Amharic introduced in either case with <foreign xml:lang="gez">ዘ፡</foreign>. According to 
+                    <bibl><ptr target="bm:Erho2025Palimpsests"/></bibl> probably from the 17th century.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -47,11 +46,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
+                <language ident="am">Amharic</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="CH" when="2025-05-13">Created record</change>
-            <!-- Second change note after review -->
+            <change when="2025-05-13" who="CH">Corrections according to reviews by Jonas Karlsson and Nafisa Valieva</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -59,9 +59,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="bibliography">
                 <listRelation>
                     <relation name="saws:isDifferentTo" active="LIT7428ComAposCre" passive="LIT5629AndemtaCreed"/>
-                    <relation name="saws:isLooseTranslationOf" active="LIT7428ComAposCre" passive="LIT5629AndemtaCreed"/>
+                    <relation name="saws:isLooseTranslationOf" active="LIT7428ComAposCre" passive="LIT5441ApostolicCreed"/>
                     <relation name="saws:isDifferentTo" active="LIT7428ComAposCre" passive="LIT7066NiceneCreedAmh"/>
-                    <relation name="saws:isCommentOn" active="LIT7428ComAposCre" passive="LIT5441ApostolicCreed"/>   
+                    <relation name="saws:isCommentOn" active="LIT7428ComAposCre" passive="LIT5441ApostolicCreed"/>  
+                    <relation name="saws:isDifferentTo" active="LIT7428ComAposCre" passive="LIT7421CreedCommentary"/>
                 </listRelation>
                 <listBibl type="secondary">
                     <bibl>
@@ -70,9 +71,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </listBibl>
             </div>
             <div type="edition">
-                <div type="textpart" subtype="incipit">
-                    <note></note>
-                    <ab>ጸሎተ፡ ሃይማኖት፡ ዘ፡ የእምነት፡</ab>
+                <div type="textpart" subtype="incipit" xml:lang="am">
+                    <note>The incipit is taken from <ref type="mss" corresp="PetermannIINachtrag24"/>, fol. 74va.</note>
+                    <q xml:lang="am">ጸሎተ፡ ሃይማኖት፡ ዘ፡ የእምነት፡ ውጥን፡ ነአምን፡ በአሐዱ፡ አም፡ ዘ፤ በርእሱ፡ እግዚአብ፤ አብ፡ ሐ<add place="above">ዘ፡</add>፤</q>
                 </div>
             </div>
         </body>
