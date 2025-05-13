@@ -1,19 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5812OntheC" xml:lang="en" type="work">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7427VitaSua" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:id="t1" xml:lang="en">On the Crucifixion</title>
-                <title xml:id="t2" xml:lang="en">Homily by Dionysius the Aeropagite on the crucifixion</title>
+                <title xml:lang="la" xml:id="t1">Narratio de vita sua</title>
+                <title xml:lang="grc" xml:id="t2greek">CPG 6633</title>
                 <author ref="PRS7973PseudoD"/>
                 <editor role="generalEditor" key="AB"/>
-                <editor key="DR"/>
+                <editor key="CH"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine multimediale
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
                             Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
@@ -22,7 +23,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <p>
+                    <listBibl type="clavis">
+                        <bibl type="CPG">
+                            <ptr target="bm:CPG2"/>
+                            <citedRange unit="item">6633</citedRange>
+                        </bibl>
+                    </listBibl>
+                </p>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -35,29 +43,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </abstract>
             <textClass>
                 <keywords>
+                    <term key="ChristianContent"/>
                     <term key="ChristianLiterature"/>
                     <term key="Homily"/>
-                    <term key="Theology"/>
+                    <term key="Translation"/>
                 </keywords>
             </textClass>
-            <langUsage><language ident="en">English</language></langUsage>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="la">Latin</language>
+                <language ident="grc">Greek</language>
+            </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DR" when="2019-12-09">Created entity to substitute LIT5811OntheC</change>
-            <change when="2025-05-13" who="CH">Added relations and author reference to PRS7973PseudoD</change>
+            <change who="CH" when="2025-05-13">Created entity</change>
+            <change when="2025-05-18" who="CH">Corrections after reviews by Dorothea Reule and Nafisa Valieva</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="saws:isAttributedToAuthor" active="LIT5812OntheC" passive="PRS7973PseudoD"/>
-                    <relation name="saws:isDifferentTo" active="LIT5812OntheC" passive="LIT7427VitaSua"/>
-                    <relation name="saws:isAttributedToAuthor" active="LIT5812OntheC" passive="PRS7973PseudoD"/>
+                    <relation name="saws:isAttributedToAuthor" active="LIT7427VitaSua" passive="PRS7973PseudoD"/>
+                    <relation name="saws:formsPartOf" active="LIT7427VitaSua" passive="LIT7426HomilyBenj"/>
                 </listRelation>
+            </div>
+            <div type="bibliography">
                 <listBibl type="secondary">
                     <bibl>
                         <ptr target="bm:Muthreich2019Narratio"/>
+                    </bibl>
+                    <bibl>
+                        <ptr target="bm:Erho2025Palimpsests"/>
+                        <citedRange unit="page">418</citedRange>
                     </bibl>
                 </listBibl>
             </div>
