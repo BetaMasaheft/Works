@@ -1,11 +1,13 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7419HagDosME" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7435MMESamuel" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Hagiographic dossier of Madḫānina ʾƎgziʾ</title>
+                <title xml:lang="en" xml:id="t1">Miracle of Madḫānina ʾƎgziʾ:
+                    Miraculous vision of the death of ʾAbuna Madḫānina ʾƎgziʾ by his student Sāmuʾel through the Holy Spirit, 
+                    and other miracles that took place when Sāmuʾel arrived on the tomb of his spiritual father on the fortieth day after his death</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,14 +32,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p>The hagiographic dossier of <persName ref="PRS6445Madhanin">Madḫānina
-                    ʾƎgziʾ</persName> as transmitted in <ref type="mss" corresp="ANLcr13"/> consists of <ref type="work" corresp="LIT1476GadlaM"/>
-                    and <ref type="work" corresp="LIT7420MirME"/>.</p>
+                <p/>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Hagiography"/>
+                    <term key="Miracle"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -46,7 +47,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DR" when="2025-05-05">Created entity</change>
+            <change who="DR" when="2025-05-13">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -55,14 +56,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <listBibl type="secondary">
                     <bibl>
                         <ptr target="bm:Strelcyn1976Catalogue"/>
-                        <citedRange unit="page">38–40</citedRange>
+                        <citedRange unit="page">38</citedRange>
                     </bibl>
                 </listBibl>
                 <listRelation>
-                    <relation name="ecrm:P129_is_about" active="LIT7419HagDosME" passive="PRS6445Madhanin"/>
-                    <relation name="saws:contains" active="LIT7419HagDosME" passive="LIT1476GadlaM"/>
-                    <relation name="saws:contains" active="LIT7419HagDosME" passive="LIT7420MirME"/>
+                    <listRelation>
+                        <relation name="saws:formsPartOf" active="LIT7435MMESamuel"
+                            passive="LIT7420MirME"/>
+                        <relation name="saws:formsPartOf" active="LIT7435MMESamuel"
+                            passive="LIT7419HagDosME"/>
+                        <relation name="ecrm:P129_is_about" active="LIT7435MMESamuel" passive="PRS6445Madhanin"/>
+                    </listRelation>
                 </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>This incipit is taken from <ref type="mss" corresp="ANLcr13"/>.</note>
+                    <ab>ተአምሪሁ፡ ለአቡነ፡ መድኃኒነ፡ እግዚእ፡ ዘኮነ፡ በዝህሩ፡ እምድኅረ፡ ሞቱ፡ <gap reason="ellipsis"/> ወአቡነ፡ ሳሙኤል፡ 
+                        ፀሐይ፡ ወልዱ፡ ማዕምረ፡ ኅቡዓት፡ ርእየ፡ በመንፈስ፡ ቅዱስ፡ እንዘ፡ ሀሎ፡ ብሔረ፡ ሳፍ፡ ሞቶ፡ ለአቡነ፡ በከየ፡ በባሕቲቱ፡ ወዓንብአ፡ ወይቤ፡ ወይሌ፡ ዘይቀሥፍ፡ ልበ። 
+                        ወባሕቱ፡ ተፈሥሐ፡ ሶበ፡ ርእየ፡ እንዘ፡ ያዓርፎ፡ እግዚእነ፡ በክብር፡ ወበስብሐት፡ ለአቡነ፡ ውስተ፡ ታዕካሁ፡ ዘብርሃን። ደቁቁ፡ ለአቡነ፡ መድኃኒነ፡ እግዚእ።</ab>
+                </div>
             </div>
         </body>
     </text>
