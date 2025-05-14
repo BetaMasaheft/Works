@@ -23,7 +23,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <sourceDesc>
                 <listWit>
                     <witness corresp="BNFabb20" xml:id="A"/>
-                    <witness corresp="PetermannIINachtrag24" xml:id="D"/>
                     <witness corresp="BNFet211" xml:id="E"/>
                     <witness corresp="FSUor40" xml:id="H"/>
                     <witness corresp="FSUor134"  xml:id="J"/>
@@ -77,6 +76,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change when="2025-02-11" who="CH">Updated source desc, abstract and bibliography</change>
             <change when="2025-03-18" who="CH">Added parts of text in Preface and Introduction as well as incipits and explicits</change>
             <change when="2025-03-25" who="CH">Updated references in edition</change>
+            <change when="2025-05-14" who="CH">Deleted ms D from witlist, deleted mss of Alpha recension from bibl refs,
+                updated edition of textparts</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -91,7 +92,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </listRelation>
                 <div type="bibliography">
                     <listBibl type="editions">
-                        <bibl corresp="#A #B #C #D #E #F #H #J #M #N #O #P #Q #R #S #T">
+                        <bibl corresp="#A #E #H #J #M #N #P #Q #S #T">
                             <ptr target="bm:Hoffmann2021Amid"/>
                             <citedRange unit="page">104-207</citedRange>
                             <note>Edition of the geographical treatise in the story of Eber (15th generation).</note>
@@ -126,7 +127,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </div>
                 <div type="bibliography">
                     <listBibl type="translation">
-                        <bibl corresp="#A #B #C #D #E #F #H #J #M #N #O #P #Q #R #S #T">
+                        <bibl corresp="#A #E #H #J #M #N #P #Q #S #T">
                             <ptr target="bm:Hoffmann2021Amid"/>
                             <note>Translation of the geographical treatise (15th generation), translated to German.</note>
                         </bibl>
@@ -161,7 +162,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </div>
             </div>
             <div type="edition">
-                <note>This division into textparts and labels follows the devision in <bibl><ptr target="bm:Diez2024Amid"/></bibl>.</note> 
+                <note>This division into textparts and labels follows the division in <bibl><ptr target="bm:Diez2024Amid"/></bibl>.</note> 
                 <div type="textpart" subtype="part" xml:id="Preface">
                     <label>Attribution to the author by the translator.</label>
                     <note>The following text is taken from <ref type="mss" corresp="FSUor134"/> and <ref type="mss" corresp="BLorient814"/>.</note>
@@ -1377,42 +1378,62 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <note>Referred to as <foreign xml:lang="gez">Gābyos</foreign> in <ref type="mss" corresp="FSUor134"/>.</note>
                     </div>
                     
+                    <div type="textpart" subtype="part" xml:id="Qalawdewos">
+                        <label>Claudius</label>
+                        <!--According to the catalogue of Goldschmidt not in <ref type="mss" corresp="FSUor134"/>, but in 
+                            <ref type="mss" corresp="PetermannIINachtrag24"/>.-->
+                    </div> 
+                    
+                    <div type="textpart" subtype="part" xml:id="Agrippa">
+                        <label>Agrippa (?)</label>
+                        <!-- According to the catalogue of Goldschmidt, probably not in FSUor134, but attested in Abridged version of 
+                            PetermannIINachtrag24 (= LIT7447AbrTarWA) -->
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Nero">
+                        <label>Nero</label>
+                        <!-- According to the catalogue of Goldschmidt, probably not in FSUor134, but attested in Abridged version of 
+                            PetermannIINachtrag24 (= LIT7447AbrTarWA) -->
+                    </div>
+                    
                     <div type="textpart" subtype="part" xml:id="Galyos">
-                        <label>111th Generation - Galba</label>
+                        <label>Galba</label>
                         <note>Referred to as <foreign xml:lang="gez">Gālyos</foreign> in <ref type="mss" corresp="FSUor134"/>.</note>
+                        <note>Emperor Otho is missing in this list.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Fitalos">
-                        <label>112th Generation - Vitellius</label>
+                        <label>Vitellius</label>
                         <note>Referred to as <foreign xml:lang="gez">Fitālos</foreign> in <ref type="mss" corresp="FSUor134"/>.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Asbasyanos">
-                        <label>113th Generation - Vespasianus</label>
+                        <label>Vespasianus</label>
                         <note>Referred to as <foreign xml:lang="gez">ʾAsbāsyānos</foreign> in <ref type="mss" corresp="FSUor134"/>.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Titos">
-                        <label>114th Generation - Titus</label>
+                        <label>Titus</label>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Dostyanos">
-                        <label>115th Generation - Domitian</label>
+                        <label>Domitian</label>
                         <note>Referred to as <foreign xml:lang="gez">Dostǝyānos</foreign> in <ref type="mss" corresp="FSUor134"/>.</note>
+                        <note>Emperor Nerva is missing in this list.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Taodas">
-                        <label>116th Generation - Trajan</label>
-                        <note>Referred to as <foreign xml:lang="gez">Tāʾodās Qesār</foreign> in <ref type="mss" corresp="FSUor134"/>.</note>
+                        <label>Trajan</label>
+                        <note>Referred to as <foreign xml:lang="gez">Tāʾodās</foreign> in <ref type="mss" corresp="FSUor134"/>.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Anadyanos">
-                        <label>117th Generation - Hadrian</label>
+                        <label>Hadrian</label>
                         <note>Referred to as <foreign xml:lang="gez">ʾAnādyānos</foreign> in <ref type="mss" corresp="FSUor134"/>.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Antonyos">
-                        <label>118th Generation - Antoninus Pius</label>
+                        <label>Antoninus Pius</label>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Urelyanos">
@@ -1421,11 +1442,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <div type="textpart" subtype="part" xml:id="Qamudos">
                         <label>Commodus</label>
+                        <note>Emperor Lucius Verus is missing in this list</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Faqitabkos">
                         <label>Pertinax</label>
                         <note>Referred to as <foreign xml:lang="gez">Faqitabǝkos</foreign> in <ref type="mss" corresp="FSUor134"/>.</note> 
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Yolyanos1">
+                        <label>Didius Julianus</label>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Soryanos">
@@ -1434,16 +1460,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Antonyos2">
-                        <label>Antonius Caracalla</label>
+                        <label>Antoninus Caracalla</label>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Maqedonyos">
                         <label>Macrinus</label>
                         <note>Referred to as <foreign xml:lang="gez">Maqǝdonyos</foreign> in <ref type="mss" corresp="FSUor134"/>.</note>
+                        <note>Emperor Geta is missing in this list.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Entonyos">
                         <label>Antoninus Elagabalus</label>
+                        <note>Emperor Diadumenian is missing in this list.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Eskenderos">
@@ -1460,15 +1488,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <div type="textpart" subtype="part" xml:id="Gardeyanos">
                         <label>Gordian</label>
+                        <note>Not clear, whether this chapter is about Gordian I, Gordian II oder Gordian III.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Filpos">
                         <label>Philip the Arab</label>
+                        <note>The emperors Gordian II, Pupienus, Balbinus and Gordian III are probably missing in this list</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Daqseyos">
                         <label>Decius</label>
                         <note>Referred to as <foreign xml:lang="gez">Dāqsǝyos</foreign> in <ref type="mss" corresp="FSUor134"/>.</note>
+                        <note>The emperor Philipp II is probably wanting in this list.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Galyos2">
@@ -1477,14 +1508,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <div type="textpart" subtype="part" xml:id="Walaryanos">
                         <label>Valerian</label>
+                        <note>Emperor Aemilianus is wanting in this list.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Galawdewos">
                         <label>Claudius Gothicus</label>
+                        <note>Emperor Gallienus is wanting in this list.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Uralyanos">
                         <label>Aurelian</label>
+                        <note>Emperor Quintillus is wanting in this list.</note>
                         <q xml:lang="gez"><gap reason="ellipsis"/>
                             ወአራልያኖስሰ፡ ቄሳር፡ ንጉሥ፡ ሞተ፡ በፍጻሜ፡ ፶፻ወ፯፻፹ወ፩ ዓመት፡ ወመንፈቅ፡ እምፍጥረተ፡ ዓለም።</q>
                     </div>
@@ -1496,6 +1530,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <div type="textpart" subtype="part" xml:id="Abrofos">
                         <label>Probus</label>
+                        <note>Emperor Florianus is wanting in this list.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Aryos">
@@ -1505,6 +1540,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <div type="textpart" subtype="part" xml:id="Deyoqletyanos">
                         <label>Diocletian</label>
+                        <note>The emperors Carinus and Numerian are wanting in this list.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Maksemyanos">
@@ -1513,14 +1549,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <div type="textpart" subtype="part" xml:id="Qwastantinos">
                         <label>Constanine I the Great</label>
+                        <note>The emperors Galerius, Constantius I Chlorus, Severus II, Maxentius, Licinius, Maximinus II, Valerius Valens and
+                            Martinian are wanting in this list.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Qwastantinos2">
                         <label>Constantine II (?)</label>
+                        <note>Not clear, whether this chapter is about Constantine II, Constans I or Constantius II.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Yolyanos">
                         <label>Julian</label>
+                        <note>Emperor Vetranio is wanting in this list.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Yokyanos">
@@ -1531,16 +1571,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <div type="textpart" subtype="part" xml:id="Walitos">
                         <label>Valentinian</label>
                         <note>Referred to as <foreign xml:lang="gez">Wāliṭos</foreign> in <ref type="mss" corresp="FSUor134"/>.</note>
+                        <note>Not clear, whether this chapter is about Valentinian I, Valens or Valentinian II.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Walyos">
                         <label>Valens (?)</label>
                         <note>Referred to as <foreign xml:lang="gez">Wālyos</foreign> in <ref type="mss" corresp="FSUor134"/>.</note>
+                        <note>Not clear, whether this chapter is about Valentinian I, Valens or Valentinian II.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Garadyanos">
                         <label>Gratian</label>
                         <note>Referred to as <foreign xml:lang="gez">Gāradyānos</foreign> in <ref type="mss" corresp="FSUor134"/>.</note>
+                        <note>The emperor Magnus Maximus is wanting in this list.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Tewodosyos">
@@ -1559,6 +1602,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <div type="textpart" subtype="part" xml:id="Tewodosyos2">
                         <label>Theodosius II</label>
+                        <note>The emperors Honorius, Constantine III and Valentinian III are wanting in this list.</note>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Marqyan">
@@ -2995,36 +3039,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <label>109th Generation - Caius</label>
                     </div>
                     
+                    <div type="textpart" subtype="part" xml:id="QalawdewosTr">
+                        <label>Claudius</label>
+                        <!-- According to the catalogue of Goldschmidt, probably not in FSUor134, but attested in Abridged version of 
+                            PetermannIINachtrag24 (= LIT7447AbrTarWA) -->
+                    </div> 
+                    
+                    <div type="textpart" subtype="part" xml:id="AgrippaTr">
+                        <label>Agrippa (?)</label>
+                        <!-- According to the catalogue of Goldschmidt, probably not in FSUor134, but attested in Abridged version of 
+                            PetermannIINachtrag24 (= LIT7447AbrTarWA) -->
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="NeroTr">
+                        <label>Nero</label>
+                        <!-- According to the catalogue of Goldschmidt, probably not in FSUor134, but attested in Abridged version of 
+                            PetermannIINachtrag24 (= LIT7447AbrTarWA) -->
+                    </div>
+                    
+                    
                     <div type="textpart" subtype="part" xml:id="GalyosTr">
-                        <label>111th Generation - Galba</label>
+                        <label>Galba</label>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="FitalosTr">
-                        <label>112th Generation - Vitellius</label>
+                        <label>Vitellius</label>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="AsbasyanosTr">
-                        <label>113th Generation - Vespasianus</label>
+                        <label>Vespasianus</label>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="TitosTr">
-                        <label>114th Generation - Titus</label>
+                        <label>Titus</label>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="DostyanosTr">
-                        <label>115th Generation - Domitian</label>
+                        <label>Domitian</label>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="TaodasTr">
-                        <label>116th Generation - Trajan</label>
+                        <label>Trajan</label>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="AnadyanosTr">
-                        <label>117th Generation - Hadrian</label>
+                        <label>Hadrian</label>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="AntonyosTr">
-                        <label>118th Generation - Antoninus Pius</label>
+                        <label>Antoninus Pius</label>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="UrelyanosTr">
@@ -3039,12 +3102,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <label>Pertinax</label> 
                     </div>
                     
+                    <div type="textpart" subtype="part" xml:id="Yolyanos1Tr">
+                        <label>Didius Julianus</label>
+                    </div>
+                    
                     <div type="textpart" subtype="part" xml:id="SoryanosTr">
                         <label>Septimius Severus?</label>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="Antonyos2Tr">
-                        <label>Antonius Caracalla</label>
+                        <label>Antoninus Caracalla</label>
                     </div>
                     
                     <div type="textpart" subtype="part" xml:id="MaqedonyosTr">

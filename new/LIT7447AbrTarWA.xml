@@ -1,0 +1,820 @@
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7447AbrTarWA" xml:lang="en" type="work">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="gez" xml:id="t1">Abridged Version of the Tārika Walda ʾAmid (β-recension)</title>
+                <editor role="generalEditor" key="AB"/>
+                <editor key="CH"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+                            Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                <pubPlace>Hamburg</pubPlace>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                                licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <listWit>
+                    <witness corresp="PetermannIINachtrag24" xml:id="D"/>
+                    <witness corresp="EMML7109"/>
+                </listWit>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>A digital born TEI file</p>
+        </encodingDesc>
+        <profileDesc>
+            <creation/>
+            <abstract>
+                <p>Abridged version of the <ref type="work" corresp="LIT6936TarWaAmidBeta"/>, containing only the preislamic history and
+                    some parts of the history of the patriarchs, which was inserted to the chapter on Emperor Nero.</p>
+            </abstract>
+            <textClass>
+                <keywords>
+                    <term key="Chronicles"/>
+                    <term key="Translation"/>
+                </keywords>
+            </textClass>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="gez">Gǝʿǝz</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change who="CH" when="2025-05-14">Created record</change>
+            <!-- Add change note after review -->
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="saws:isShorterVersionOf" active="LIT7447AbrTarWA" passive="LIT6936TarWaAmidBeta"/>
+                    <relation name="saws:isDifferentTo" active="#LIT7447AbrTarWA" passive="LIT6935TarWaAmidAlpha"/>
+                </listRelation>
+                <listBibl type="secondary">
+                    <bibl>
+                        <ptr target="bm:Erho2025Palimpsests"/><citedRange unit="page">410</citedRange>
+                        <citedRange unit="note">63</citedRange>
+                    </bibl>
+                    <bibl>
+                        <ptr target="bm:Hoffmann2021Amid"/><citedRange unit="page">66, 77-78</citedRange>
+                    </bibl>
+                </listBibl>
+                <listBibl type="editions">
+                    <bibl corresp="#D">
+                        <ptr target="bm:Hoffmann2021Amid"/>
+                        <citedRange unit="page">104-207</citedRange>
+                        <note>Edition of the geographical treatise in the story of Eber (15th generation).</note>
+                    </bibl>
+                </listBibl>
+                <listBibl type="translation">
+                    <bibl corresp="#D">
+                        <ptr target="bm:Hoffmann2021Amid"/>
+                        <note>Translation of the geographical treatise (15th generation), translated to German.</note>
+                    </bibl>
+                </listBibl>
+            </div>
+            <div type="edition">
+                <note>The following textparts and division is taken from <ref type="mss" corresp="PetermannIINachtrag24"/>.</note> 
+                <div type="textpart" subtype="part" xml:id="Preface">
+                    <label>Attribution to the author by the translator.</label>
+                    <q xml:lang="gez">በስመ፡ እግዚአብሔ<add place="above">ር</add>፡ መስተ<sic>፡</sic> ሣህል፡ ንጽሕፍ፡ መጽሐፈ፡ ታሪክ፡ 
+                        ዘአስተጋብ<supplied reason="undefined">አ፡</supplied> <persName ref="PRS4711Giyorgis">ጊዮርጊስ፡ ወልደ፡ አሚድ፡</persName></q>
+                </div>
+                <div type="textpart" subtype="part" xml:id="TentaFetrat">
+                    <label>Summary on the creation</label>
+                    <q>ይቤ፡ ከ<supplied reason="undefined">መ፡</supplied> ቃለ፡ ኦሪት፡ በዕለተ፡ እኁ<supplied reason="undefined">ድ</supplied>፡
+                        ፈጠረ፡ እግዚአብሔር፡ ፰ ስር<gap reason="illegible" unit="chars" quantity="1"/>ተ፡ ፬ ጠቢብ፡ ወ፯ በአርምሞ። <gap reason="ellipsis"/>
+                        ወበዕለተ፡ ሳብዕት፡ አዕረፈ<sic>።</sic> እግዚአብሔር፡ እምኵሉ፡ ግብሩ።</q>
+                </div>
+                    
+                <div type="textpart" subtype="part" xml:id="preislamichistory">
+                    <label>The pre-Islamic history from <persName ref="PRS1386Adam"/> to <persName ref="PRS5294Heracliu"/>.</label>
+                    <div type="textpart" subtype="part" xml:id="Adam">
+                        <label>1st Generation - Adam</label>
+                        <q xml:lang="gez">ወወለዶ፡ አዳም፡ ቃያልሃ፡ ወአቤልሃ፡<gap reason="ellipsis"/> ወሞተ፡ አዳም፡ በ፱፻ ወ፴፡ 
+                            <add place="overstrike">ሊተሃ፡ ዓመ</add><add place="above">ት፡</add> በመዋዕሊሁ።</q>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Set">
+                        <label>2nd Generation - Seth</label>
+                        <q><choice resp="CH"><sic>ሒ</sic><corr>ሴ</corr></choice>ት፡ 
+                            <choice resp="CH"><sic>ሐ</sic><corr>ሕ</corr></choice>ይወ፡ ፪፻ወ፭ ዓ፡ ወወለዶ፡ ለሄኖስ። <gap reason="ellipsis"/></q>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Enos">
+                        <label>3rd Generation - Enosh</label>
+                        <q>ሂ<add place="above">አ</add>ኖ፡ መገቦሙ፡ ለሕዝቡ፡ ወኮበ፡ ኮኖ፡ <sic>፻፱፻፡</sic> ወወለዶ፡ ለቃይናን፡ <gap reason="ellipsis"/></q>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Qaynan">
+                        <label>4th Generation - Kenan</label>
+                        <q>፬። ቃይናን፡ <choice resp="CH"><sic>ሐ</sic><corr>ሕ</corr></choice>ይወ፡ ፻ወ፸፡ ዓ፡ ወወለዶ፡ ለመላልኢል፡ <gap reason="ellipsis"/></q>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Malalel">
+                        <label>5th Generation - Mahalalel</label>
+                        <q>መላልኤል፡፷፭፻ <choice resp="CH"><sic>ሐ</sic><corr>ሕ</corr></choice>ይወ፡ ፻ወ፷ወ፭፡ ዓ፡ ወወለዶ፡ ለያሬድ። <gap reason="ellipsis"/></q>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Yared">
+                        <label>6th Generation - Jared</label>
+                        <q>ያሬድ፡ ፯ <choice resp="CH"><sic>ሐ</sic><corr>ሕ</corr></choice>ይወ። ፻፷ወ፭። ዓመ፡ <add place="above">ወ</add>ወለዶ፡ 
+                            ለሂኖስ። <gap reason="ellipsis"/></q>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Henok2">
+                        <label>7th Generation - Enoch</label>
+                        <q>ሂኖክ ፯ መገቦሙ፡ ለሕዝቡ፡ ወባም፻፷፭ ዓ። <gap reason="ellipsis"/></q>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Matusela">
+                        <label>8th Generation - Methuselah</label>
+                        <q>ማቱሳላ<add place="above">፰</add> <choice resp="CH"><sic>ሐ</sic><corr>ሕ</corr></choice>ይወ፡ ፻፹ወ፪ ዓ፡ ወወልዶ፡ ለላሚኅ።
+                            <gap reason="ellipsis"/></q>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Lameh">
+                        <label>9th Generation - Lamech</label>
+                        <q>ባሚህ፱ <choice resp="CH"><sic>ሐ</sic><corr>ሕ</corr></choice>ይወ፡ ፻፹ወ፪ ዓ፡ ወወልዶ። ወወልዶ፡ ለኖኅ፡ <gap reason="ellipsis"/></q>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Noh">
+                        <label>10th Generation - Noah</label>
+                        <q>ኖኅ <choice resp="CH"><sic>ሐ</sic><corr>ሕ</corr></choice>ይወ፡ ፬፻፴፬ ዓ፡ ወወለዶ፡ ለሲም፡ <gap reason="ellipsis"/></q>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Sem">
+                        <label>11th Generation - Shem</label>
+                        <q>ሴም፲፬ <choice resp="CH"><sic>ሐ</sic><corr>ሕ</corr></choice> እምድኅረ፡ አይኅ፡ ፪፻፡ ዓ <add place="above">
+                            ወ</add>ወልዶ፡ ለአርፋክስድ፡ <gap reason="ellipsis"/></q>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Arpaksed">
+                        <label>12th Generation - Arpachshad</label>
+                        <q>አርፉክስድ፲ወ፻ <choice resp="CH"><sic>ሐ</sic><corr>ሕ</corr></choice> ፻ወ፴ወ፭ዓ። ወወለዶ፡ ለቃይናን። <gap reason="ellipsis"/></q>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Qaynan2">
+                        <label>13th Generation - Kenan the second</label>
+                        <q>ቃይናን፡ ሕይወ፡ ፻ወ፴ዓ፡ ወወለዶ፡ ለሳላ፡ <gap reason="ellipsis"/></q>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Sala">
+                        <label>14th Generation - Shelah</label>
+                        <q><choice resp="CH"><sic>ሐ</sic><corr>ሕ</corr></choice>ይወ፡ ፻፴ዓ፡ ወወለዶ፡ ለኢዮቦር፡ <gap reason="ellipsis"/></q>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Eber">
+                        <label>15th Generation - Eber</label>
+                        <div type="textpart" subtype="part" xml:id="EberLife">
+                            <label>Life and language of Eber</label>
+                            <q><choice resp="CH"><sic>ሐ</sic><corr>ሕ</corr></choice>፻ወ፴፬ዓ። ወወለዶ፡ ለፋሊቅ። <gap reason="ellipsis"/></q>
+                        </div>
+                        <div type="textpart" subtype="part" xml:id="Geography">
+                            <label>Geographical Treatise</label>
+                            <div type="textpart" subtype="part" xml:id="Margins">
+                                <label>Margins of inhabited earth</label>
+                            </div>
+                            <div type="textpart" subtype="part" xml:id="Inhabitants">
+                                <label>The seven climes and their inhabitants</label>
+                                <div type="textpart" subtype="part" xml:id="InhabitantsFirst">
+                                    <label>Inhabitants of the first clime</label>
+                                </div>
+                                <div type="textpart" subtype="part" xml:id="InhabitantsSecond">
+                                    <label>Inhabitants of the second clime</label>
+                                </div>
+                                <div type="textpart" subtype="part" xml:id="InhabitantsThird">
+                                    <label>Inhabitants of the third clime</label>
+                                </div>
+                                <div type="textpart" subtype="part" xml:id="InhabitantsFourth">
+                                    <label>Inhabitants of the fourth clime</label>  
+                                </div>
+                                <div type="textpart" subtype="part" xml:id="InhabitantsFifth">
+                                    <label>Inhabitants of the fifth clime</label>
+                                </div>
+                                <div type="textpart" subtype="part" xml:id="InhabitantsSixth">
+                                    <label>Inhabitants of the sixth clime</label>
+                                    <note>Including a description of the Amazons.</note>
+                                </div>
+                                <div type="textpart" subtype="part" xml:id="InhabitantsSeventh">
+                                    <label>Inhabitants of the seventh clime</label>
+                                </div>
+                                <div type="textpart" subtype="part" xml:id="InhabitantsAbove">
+                                    <label>Inhabitants of the regions above the seventh clime</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div type="textpart" subtype="part" xml:id="EberEnd">
+                            <label>Conclusion on Eber's Life</label>
+                        </div>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Faleq">
+                        <label>16th Generation - Peleg</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Ragew">
+                        <label>17th Generation - Reu</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Sargw">
+                        <label>18th Generation - Serug</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Nakor">
+                        <label>19th Generation - Nahor</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Tara">
+                        <label>20th Generation - Terah</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Abreham">
+                        <label>21st Generation - Abraham</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Yeshaq">
+                        <label>22nd Generation - Isaac</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Yaqob">
+                        <label>23rd Generation - Jacob</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Lewi">
+                        <label>24th Generation - Levi</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Qaat">
+                        <label>25th Generation - Kohath</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Anbaran">
+                        <label>26th Generation - Amram</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Muse">
+                        <label>27th Generation - Moses</label>
+                        <div type="textpart" subtype="part" xml:id="WifeMuse">
+                            <label>Story of the Ethiopian wife of Moses</label>
+                        </div>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Iyasu">
+                        <label>28th Generation - Joshua</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Finhos">
+                        <label>29th Generation - Phinehas</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="KusaSenaim">
+                        <label>30th Generation - Cushan-Rishathaim</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Gotonyal">
+                        <label>31st Generation - Othniel</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Eglon">
+                        <label>32nd Generation - Eglon</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Ehud">
+                        <label>33rd Generation - Ehud</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Semeger">
+                        <label>34th Generation - Shamgar</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Jabin">
+                        <label>35th Generation - Jabin</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Dibora">
+                        <label>36th Generation - Deborah</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="ZebahZalmunna">
+                        <label>37th Generation - Zebah and Zalmunna</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Gideon">
+                        <label>38th Generation - Gideon</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Abimelech">
+                        <label>39th Generation - Abimelech</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Tola">
+                        <label>40th Generation - Tola</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Jair">
+                        <label>41st Generation - Jair</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Felestem1">
+                        <label>42nd Generation - Philistines</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Yeftah">
+                        <label>43rd Generation - Jephthah</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Abisan">
+                        <label>44th Generation - Ibzan</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Elon">
+                        <label>45th Generation - Elon</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Abdon">
+                        <label>46th Generation - Abdon son of Hillel</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Felestem2">
+                        <label>47th Generation - Philistines</label>
+                    </div>    
+                    
+                    <div type="textpart" subtype="part" xml:id="Samson">
+                        <label>48th Generation - Samson</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Mika">
+                        <label>49th Generation - Micah</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Eli">
+                        <label>50th Generation - Eli</label>
+                    </div>     
+                    
+                    <div type="textpart" subtype="part" xml:id="Samuel">
+                        <label>51st Generation - Samuel</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Saol">
+                        <label>52nd Generation - Saul</label>
+                    </div>
+                   
+                    <div type="textpart" subtype="part" xml:id="Dawit">
+                        <label>53rd Generation - David</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Salomon">
+                        <label>54th Generation - Solomon</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Robam">
+                        <label>55th Generation - Rehoboam</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Abya">
+                        <label>56th Generation - Abijah</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Asaf">
+                        <label>57th Generation - Asa</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Yosafet">
+                        <label>58th Generation - Jehoshaphat</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Iyoram">
+                        <label>59th Generation - Joram</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Akazyas">
+                        <label>60th Generation - Ahaziah</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Athaliah">
+                        <label>61st Generation - Athaliah</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Iyoas">
+                        <label>62nd Generation - Joash</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Amesyas">
+                        <label>63rd Generation - Amaziah</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Azaryas">
+                        <label>64th Generation - Uzziah</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Iyoatam">
+                        <label>65th Generation - Jotham</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Akaz">
+                        <label>66th Generation - Ahaz</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Hezqeyas">
+                        <label>67th Generation - Hezekiah</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Menase">
+                        <label>68th Generation - Manasseh</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Amon">
+                        <label>69th Generation - Amon</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Iyosyos">
+                        <label>70th Generation - Josiah</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Yoakas">
+                        <label>71st Generation - Jehoahaz</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Elyaqem">
+                        <label>72nd Generation - Joakim</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Yoaqem">
+                        <label>73rd Generation - Joachin</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Menase2">
+                        <label>74th Generation - Manasseh (= Mattaniah) Zedekiah</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Nabudanasor">
+                        <label>75th Generation - Nebuchadnezzar</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Eweyalmarodeq">
+                        <label>76th Generation - Evil-Merodach</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Beltasor">
+                        <label>77th Generation - Belshazzar</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="DariusCyrus">
+                        <label>78th and 79th Generation - Darius the Mede and Cyrus the Persian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Cambyses">
+                        <label>80th Generation - Cambyses</label> 
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Daryos2">
+                        <label>81st Generation - Darius I</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Samardyos">
+                        <label>82nd Generation - Smerdis the Magian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Ahsurs">
+                        <label>83rd Generation - Ahasuerus (= Xerxes)</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Azdasir">
+                        <label>84th Generation - Artaxerxes I Longimanus</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="AzdaserDagemay">
+                        <label>85th Generation - Artaxerxes II (= Xerxes II)</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Saerinos">
+                        <label>86th Generation - Sogdianus</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Daryos3">
+                        <label>87th Generation - Darius II Nothos</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Azdaser2">
+                        <label>88th Generation - Artaxerxes II Mnemon</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Azdasir3">
+                        <label>89th Generation - Artaxerxes III Ochus</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Arses">
+                        <label>90th Generation - Arses</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Dara">
+                        <label>91st Generation - Darius III Codomannus</label>
+                        <note>On <persName ref="PRS14628Daryos"/>, the last emperor of the Achaemenid Persian Empire.</note>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Eskender">
+                        <label>92nd Generation - Alexander the Great</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Batlimos">
+                        <label>93rd Generation - Ptolemy I</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Batlimos2">
+                        <label>94th Generation - Ptolemy II</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Batlimos3">
+                        <label>95th Generation - Ptolemy III</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Batlimos4">
+                        <label>96th Generation - Ptolemy IV</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Batlimos5">
+                        <label>97th Generation - Ptolemy V</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Batlimos6">
+                        <label>98th Generation - Ptolemy VI</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Batlimos7">
+                        <label>99th Generation - Ptolemy VII</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Batlimos8">
+                        <label>100th Generation - Ptolemy VIII</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Batlimos9">
+                        <label>101st Generation - Ptolemy IX</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Batlimos10">
+                        <label>102nd Generation - Ptolemy X</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Batlimos11">
+                        <label>103rd Generation  - Ptolemy XI</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Batlimos12">
+                        <label>104th Generation - Ptolemy XII</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Batlimos13">
+                        <label>105th Generation - Ptolemy XIII</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Kalaabetara">
+                        <label>106th Generation - Cleopatra</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Awgustus">
+                        <label>107th Generation - Augustus Caesar</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Tibaryos">
+                        <label>108th Generation - Tiberius</label> 
+                            <div type="textpart" subtype="part" xml:id="Christ">
+                                <label>Birth of Christ</label>
+                            </div>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Gabyos">
+                        <label>109th Generation - Caius</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Galyos">
+                        <label>111th Generation - Galba</label> 
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Fitalos">
+                        <label>112th Generation - Vitellius</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Asbasyanos">
+                        <label>113th Generation - Vespasianus</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Titos">
+                        <label>114th Generation - Titus</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Dostyanos">
+                        <label>115th Generation - Domitian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Taodas">
+                        <label>116th Generation - Trajan</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Anadyanos">
+                        <label>117th Generation - Hadrian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Antonyos">
+                        <label>118th Generation - Antoninus Pius</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Urelyanos">
+                        <label>Marcus Aurelius</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Qamudos">
+                        <label>Commodus</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Faqitabkos">
+                        <label>Pertinax</label>
+                        <note>Referred to as <foreign xml:lang="gez">Faqitabǝkos</foreign> in <ref type="mss" corresp="FSUor134"/>.</note> 
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Soryanos">
+                        <label>Septimius Severus?</label>
+                        <note>Referred to as <foreign xml:lang="gez">Faqitabǝkos</foreign> in <ref type="mss" corresp="FSUor134"/>.</note>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Antonyos2">
+                        <label>Antonius Caracalla</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Maqedonyos">
+                        <label>Macrinus</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Entonyos">
+                        <label>Antoninus Elagabalus</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Eskenderos">
+                        <label>Severus Alexander</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Maqsimos">
+                        <label>Maximinus Thrax</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Norinos">
+                        <label>Norinos (?)</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Gardeyanos">
+                        <label>Gordian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Filpos">
+                        <label>Philip the Arab</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Daqseyos">
+                        <label>Decius</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Galyos2">
+                        <label>Trebonianus Gallus</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Walaryanos">
+                        <label>Valerian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Galawdewos">
+                        <label>Claudius Gothicus</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Uralyanos">
+                        <label>Aurelian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Tafsos">
+                        <label>Tacitus</label>   
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Abrofos">
+                        <label>Probus</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Aryos">
+                        <label>Carus</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Deyoqletyanos">
+                        <label>Diocletian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Maksemyanos">
+                        <label>Maximian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Qwastantinos">
+                        <label>Constanine I the Great</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Qwastantinos2">
+                        <label>Constantine II (?)</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Yolyanos">
+                        <label>Julian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Yokyanos">
+                        <label>Jovian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Walitos">
+                        <label>Valentinian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Walyos">
+                        <label>Valens (?)</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Garadyanos">
+                        <label>Gratian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Tewodosyos">
+                        <label>Theodosius I the Great</label>
+                        <div type="textpart" subtype="part" xml:id="SevenSleepers">
+                            <label>Legend of the Seven Sleepers</label>
+                        </div>    
+                        <div type="textpart" subtype="part" xml:id="Constance">
+                            <label>Account of the council of Constantinopel</label>
+                        </div>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Arqadyos">
+                        <label>Arcadius</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Tewodosyos2">
+                        <label>Theodosius II</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Marqyan">
+                        <label>Marcian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Leyon">
+                        <label>Leo I the Thracian</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Leyon2">
+                        <label>Leo II the Younger</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Zaynun">
+                        <label>Zeno</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Anestas">
+                        <label>Anastasius I Dicorus</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Bestyanos">
+                        <label>Justin I</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Yostinos">
+                        <label>Justinian I</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Yostos">
+                        <label>Justin II</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Tibaryos2">
+                        <label>Tiberius II Constantine</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Muriq">
+                        <label>Maurice</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Foqa">
+                        <label>Phocas</label>
+                    </div>
+                    
+                    <div type="textpart" subtype="part" xml:id="Harqal">
+                        <label>Heraclius</label>
+                    </div>
+
+                </div> 
+            </div>
+        </body>
+    </text>
+</TEI>
