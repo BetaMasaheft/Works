@@ -1,79 +1,155 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT5420MiracleGold" xml:lang="en" type="work">
-    <teiHeader xml:base="https://betamasaheft.eu/">
-        <fileDesc>
-            <titleStmt>
-                <title xml:lang="en" xml:id="t1">Miracle of Mary: The prodigal son of a man who used, when he was alive, to feed two persons; St Mary promises him riches, but he finds only two grains of gold</title>
-                <editor role="generalEditor" key="AB"/>
-                <editor key="DR"/>
-                <funder>Akademie der Wissenschaften in Hamburg</funder>
-            </titleStmt>
-            <publicationStmt>
-                <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine multimediale
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="LIT5420MiracleGold"
+     xml:lang="en"
+     type="work">
+   <teiHeader xml:base="https://betamasaheft.eu/">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="en" xml:id="t1">Miracle of Mary: The prodigal son of a man who used, when he was alive, to feed two persons; St Mary promises him riches, but he finds only two grains of gold</title>
+            <editor role="generalEditor" key="AB"/>
+            <editor key="DR"/>
+            <funder>Akademie der Wissenschaften in Hamburg</funder>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
                             Forschungsumgebung / beta maṣāḥǝft</publisher>
-                <pubPlace>Hamburg</pubPlace>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
-                                licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
-                </availability>
-            </publicationStmt>
-            <sourceDesc>
-                <p/>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <pubPlace>Hamburg</pubPlace>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">This file is licensed
+         under the Creative Commons Attribution-ShareAlike 4.0.</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p/>
+         </sourceDesc>
+         <sourceDesc>
+            <listWit>
+               <witness corresp="EMML2378">EMML2378, f. 89r</witness>
+               <witness corresp="EMML642">EMML642, f. 197r</witness>
+               <witness corresp="EMML2800">EMML2800, f. 94v</witness>
+               <witness corresp="EMML22">EMML22, f. 90v</witness>
+               <witness corresp="EMML682">EMML682, f. 96r</witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>A digital born TEI file</p>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
-        <profileDesc>
-            <creation/>
-            <abstract>
-                <p/>
-            </abstract>
-            <textClass>
-                <keywords>
-                    <term key="Apocrypha"/>
-                    <term key="ChristianLiterature"/>
-                    <term key="Hagiography"/>
-                    <term key="Miracle"/>
-                </keywords>
-            </textClass>
-            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
-        </profileDesc>
-        <revisionDesc>
-            <change who="DR" when="2019-03-20">Created entity</change>
-            <change who="AM" when="2019-06-05">added text</change>
-        </revisionDesc>
-    </teiHeader>
-    <text xml:base="https://betamasaheft.eu/">
-        <body>
-            <div type="bibliography">
-                <listBibl type="secondary">
-                    <bibl>
+      <profileDesc>
+         <creation/>
+         <abstract>
+            <p/>
+         </abstract>
+         <textClass>
+            <keywords>
+               <term key="Apocrypha"/>
+               <term key="ChristianLiterature"/>
+               <term key="Hagiography"/>
+               <term key="Miracle"/>
+            </keywords>
+         </textClass>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="ar">Arabic</language>
+            <language ident="it">Italian</language>
+            <language ident="am">Amharic</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change who="DR" when="2019-03-20">Created entity</change>
+         <change who="AM" when="2019-06-05">added text</change>
+         <change who="AM" when="2019-11-26">added relation</change>
+         <change when="2025-05-13" who="ES">aligned to PEMM</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:base="https://betamasaheft.eu/">
+      <body>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
                   <ptr target="bm:MacomberMiracles"/>
                   <citedRange unit="item">469</citedRange>
                </bibl>
-                </listBibl>
-                <listRelation>
-                    <relation name="saws:formsPartOf" active="LIT5420MiracleGold" passive="LIT2384Taamme"/>
-                </listRelation>
-            </div>
-            <div type="edition">
-                <div type="textpart" subtype="incipit" xml:lang="gez">
-                  <note>This incipit is taken from <ref type="mss" corresp="EMML2378"/>.</note>
-                    <ab>
-                      ወኮነ፡ እምድኅረ፡ ዓርገ፡ እግዚእነ፣ ኢየሱስ፡ ክርስቶስ፣ ውስተ፡ ሰማይ፣ ነሢኦ፡ ሥጋሃ፡ ንጹሐ፣
-                      ወነበረ፡ በየማነ፡ አቡሁ፣ ፈጺሞ፡ ኵሎ፡ ሕገ፡ ትስብእት፡ ዘእንበለ፡ ኀጢአት፡ ባሕቲታ፣
-                      ወሠሊጦ፡ ሕማማተ፡ መስቀል፡ በሥጋ፡ በሥምረቱ፡ ወበፈቃዱ።
+            </listBibl>
+            <listBibl type="clavis">
+               <bibl type="PEMM">
+                  <ptr type="story" target="bm:PEMM"/>
+                  <citedRange unit="item">469</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="skos:exactMatch"
+                         active="LIT5420MiracleGold"
+                         passive="https://pemm.princeton.edu/stories/469"/>
+            </listRelation>
+            <listRelation>
+               <relation name="saws:formsPartOf"
+                         active="LIT5420MiracleGold"
+                         passive="LIT2384Taamme"/>
+               <relation name="lawd:hasAttestation"
+                                 active="LIT5420MiracleGold"
+                                 passive="EMML2378">
+                  <desc>
+                              see <ref type="mss" corresp="EMML2378"/>, <locus target="#89r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                               active="LIT5420MiracleGold"
+                               passive="EMML642">
+                  <desc>
+                            see <ref type="mss" corresp="EMML642"/>, <locus target="#197r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                             active="LIT5420MiracleGold"
+                             passive="EMML2800">
+                  <desc>
+                          see <ref type="mss" corresp="EMML2800"/>, <locus target="#94v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                     active="LIT5420MiracleGold"
+                     passive="EMML22">
+                  <desc>
+                  see <ref type="mss" corresp="EMML22"/>, <locus target="#90v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                   active="LIT5420MiracleGold"
+                   passive="EMML682">
+                  <desc>
+                see <ref type="mss" corresp="EMML682"/>, <locus target="#96r"/>
+                  </desc>
+               </relation>
+            </listRelation>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML2378"/>. Macomber accidentally has the incipit for "LIT3677Miracle" for "LIT5420MiracleGold".
+                  Correct incipit taken from Jeremy Brown.</note>
+               <ab>
+                      ወሀሎ፡ ፩ብእሲ፡ በአሐቲ፡ ሀገር፡ እምአህጉረ፡ ክርስቲያን፡ ባዕል፡ ጥቀ፡ በወርቅ፡ ወበብሩር፡
+                      ወበንዋያተ፡ ዝ፡ ዓለም፡ ዘሠናይ፡ ግዕዙ፡ ወኄር፡ በኵሉ፡ ግብሩ፡ ኮነ፡ ይሴስዮሙ፡ ዘልፈ፡
+                      ለ፪ዕደው።
                     </ab>
-                </div>
             </div>
-        </body>
-    </text>
+         </div>
+      </body>
+   </text>
 </TEI>
+
+
+
