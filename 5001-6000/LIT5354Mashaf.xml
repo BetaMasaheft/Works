@@ -10,8 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ አሀጕሎተ፡ ሐሰት፡</title>
-            <title xml:lang="en" xml:id="t2">Book of the Destruction of Lies</title>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ አኅጕሎተ፡ ሐሰት፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa ʾaḫgʷǝlota ḥassat</title>
+            <title xml:lang="en" corresp="#t1">Book of the Destruction of Lies</title>
             <editor role="generalEditor" key="AB"/>
             <editor key="DE"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -27,8 +28,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p/>
-         </sourceDesc>         
+            <p>
+               <listWit>
+                  <witness corresp="IVEf27"/>
+                  <witness corresp="ANLcr79"/>
+               </listWit>
+            </p>
+         </sourceDesc>       
       </fileDesc>
       <encodingDesc>
          <p>A digital born TEI file</p>
@@ -40,9 +46,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <creation/>
+         <creation notBefore="1839" notAfter="1840" when-custom="1831">year 1831 of the Era of Grace (= 1839/40 CE)</creation>
          <abstract>
-            <p>This literary work of the Ethiopian Catholic priest Takla Haymanot describes the activity of Catholic missions in Ethiopia in <date>the middle of the 19th century</date>,
+            <p>This literary work of the Ethiopian <persName ref="PRS12520TaklaH">Catholic priest Takla Hāymānot</persName> describes the activity of Catholic missions in Ethiopia in <date>the middle of the 19th century</date>,
               and in  particular that of <persName ref="PRS3451DeJacob"/>.</p>
          </abstract>
          <textClass>
@@ -62,19 +68,67 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="DE" when="2019-03-15">Created entity</change>         
+         <change who="DE" when="2019-03-15">created entity</change>
+         <change who="DN" when="2025-05-19">added incipit, bibliography, witnesses, work structure</change> 
+        
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <div type="bibliography"/>
-         <!---->
-         <listRelation>
-            <relation name="dcterms:creator"
-                      active="LIT5354Mashaf"
-                      passive="PRS12520TaklaH"/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Platonov2002Lies"/>                  
+               </bibl>
+            </listBibl>            
+            <listRelation>
+    
+            <relation name="dcterms:creator" active="LIT5354Mashaf" passive="PRS12520TaklaH"/>
+               <relation name="lawd:hasAttestation" active="LIT5354Mashaf" passive="IVEf27"/>
+               <relation name="lawd:hasAttestation" active="LIT5354Mashaf" passive="ANLcr79"/>
          </listRelation>
+         </div>
+         <div type="edition" xml:lang="gez">
+            <note>The following division into stanzas and text transacriptions are taken from
+               the edition <bibl><ptr target="bm:Platonov2002Lies"/></bibl>.</note>      
+            
+          <div type="edition">
+                  <div type="textpart" subtype="chapter" n="1" xml:id="ChapterOne">
+                     <label>Chapter 1</label>
+                     <ab>እኔ፡ እግዚአብሔር፡ በጽድቅ፡ ጸራኁህ፡ እጅኽንም፡ ያዝሁኽ፡ 
+                        ጠበቅሁኽም፡ ለሕዝብም፡ ኪዳን፡ አደረግሁኽ፡ ለአሕዛብም፡ ብርሃን።</ab>                     
+                  </div>
+             
+                  <div type="textpart" subtype="chapter" n="2" xml:id="ChapterTwo">
+                     <label>Chapter 2</label>
+                     <ab>ሙሴ፡ ሌዤአን፡ ሞንሰኘር፡ ደዢቆብ፡ የሚነቅፉበት፡</ab>                     
+                  </div>
+                  </div>
+             
+                  <div type="textpart" subtype="chapter" n="3" xml:id="ChapterThree">
+                     <label>Chapter 3</label>
+                     <ab>በ፭ኛው፡ አኃዝ፡ እንዳየነ፡ ሙሴ፡ ሌዢአን፡ ሞንሰኘር፡ ደዢቆብ፡ ወደ፡ ምስር፡ መመለሳቸው፡ ነቅፈዋል።</ab>    
+                  </div>
+            
+             <div type="textpart" subtype="chapter" n="4" xml:id="ChapterFour">
+                     <label>Chapter 4</label>
+                <ab>ሞንሰኘር፡ ደዢቆብ፡ ት፡ ፲፭ዓመት፡ ያህል፡ በትግሬ፡ ከኖሩ፡ በኋላ፡</ab>    
+                  </div>
+             <div type="textpart" subtype="chapter" n="5" xml:id="ChapterFive">
+                     <label>Chapter 5</label>
+                <ab>ታሪከ፡ ነገሥት፡ እንዳለ፡</ab>    
+                  </div>
+                  <div type="textpart" subtype="chapter" n="6" xml:id="ChapterSix">
+                     <label>Chapter 6</label>
+                     <ab>ከዚህ፡ በፊት፡ እንዳልኍ፡ ራስ፡ ኃይሉና፡ ታላቁ፡ ራስ፡ ዓሊ፡</ab>
+                  </div>
+            <div type="textpart" subtype="colophon" n="6" xml:id="Colophon">
+               <label>Colophon</label>
+               <ab>አነ፡ ካህን፡ <persName ref="PRS12520TaklaH">ተክለ፡ ሃይማኖት፡</persName> ወልዱ፡ ለካህን፡ ተክለ፡ እግዚእ፡</ab>
+            </div>
+          </div>       
       </body>
+     
    </text>
 </TEI>
 
