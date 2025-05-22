@@ -13,11 +13,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
-               </licence>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">This file is licensed
+         under the Creative Commons Attribution-ShareAlike 4.0.</licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
@@ -35,7 +32,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <abstract>
             <p>This miracle can also occur divided into two distinct miracles, <ref type="work" corresp="LIT5647MMMichael1"/> and <ref type="work" corresp="LIT5648MMMichael2"/>.</p>
          </abstract>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -52,11 +52,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2018-11-19">Added keyword and title</change>
          <change who="AM" when="2019-04-03">added text</change>
          <change who="AM" when="2019-06-24">added relation</change>
+         <change when="2025-05-06" who="ES">aligned to PEMM</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <div type="bibliography">
+         <div type="bibliography">            
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">4</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="clavis">
+               <bibl type="PEMM">
+                  <ptr type="story" target="bm:PEMM"/>
+                  <citedRange unit="item">4</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="skos:exactMatch"
+                         active="LIT3721Miracle"
+                         passive="https://pemm.princeton.edu/stories/4"/>
+            </listRelation>
+            <listBibl type="translation">
+               <bibl>
+                  <ptr target="bm:Colin2004TaamraMaryam"/>
+                  <citedRange unit="item">173</citedRange>
+                  <citedRange unit="page">429-431</citedRange>
+                  <citedRange unit="item">174</citedRange>
+                  <citedRange unit="page">432-433</citedRange>
+               </bibl>
+            </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf" active="LIT3721Miracle" passive="LIT2384Taamme"/>
                <relation name="saws:isVersionOf" active="LIT3721Miracle" passive="LIT6029MMMichaelGen"/>
@@ -116,30 +143,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </desc>
                </relation>
             </listRelation>
-            <listBibl type="secondary">
-               <bibl>
-                  <ptr target="bm:MacomberMiracles"/>
-                  <citedRange unit="item">4</citedRange>
-               </bibl>
-            </listBibl>
-            <listBibl type="translation">
-               <bibl>
-                  <ptr target="bm:Colin2004TaamraMaryam"/>
-                  <citedRange unit="item">173</citedRange>
-                  <citedRange unit="page">429-431</citedRange>
-                  <citedRange unit="item">174</citedRange>
-                  <citedRange unit="page">432-433</citedRange>
-               </bibl>
-            </listBibl>
          </div>
          <div type="edition">
-             <div type="textpart" subtype="incipit" xml:lang="gez">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
                <note>This incipit is taken from <ref type="mss" corresp="EMML2058"/>.</note>
-                 <ab>
+               <ab>
                      ወሀሎ፡ አሐዱ፡ ብእሲ፡ በሀገር፡ ዘሳሙ፡ ዲያቆን፡ ውእቱ፡ ዘስሙ፡ ሚካኤል፡ ወያፈቅራ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
                      ብዙኀ፡ ወይትለአካ፡ በኵሉ፡ ኀይሉ፡ ዐጣር፡ ዘውእቱ፡ ሠያጤ፡ እምኵሉ፡ መባልዕት።
                  </ab>
-             </div>
+            </div>
          </div>
       </body>
    </text>
