@@ -12,17 +12,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
-               </licence>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">This file is licensed
+         under the Creative Commons Attribution-ShareAlike 4.0.</licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -35,7 +31,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <abstract>
             <p/>
          </abstract>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -50,24 +49,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="MV" when="2017-04-10">Added keywords and relations</change>
          <change who="DR" when="2018-11-14">Added keyword, Macomber reference and title</change>
          <change who="AM" when="2019-04-30">added text</change>
+         <change when="2025-05-06" who="ES">aligned to PEMM</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
-
-           <listBibl type="secondary">
-                  <bibl>
-                     <ptr target="bm:Cerulli1965Leningrado"/>
-                     <citedRange unit="page">8</citedRange>
-                     <citedRange unit="item">17</citedRange>
-                  </bibl>
-              <bibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:Cerulli1965Leningrado"/>
+                  <citedRange unit="page">8</citedRange>
+                  <citedRange unit="item">17</citedRange>
+               </bibl>
+               <bibl>
                   <ptr target="bm:MacomberMiracles"/>
                   <citedRange unit="item">126</citedRange>
                </bibl>
-               </listBibl>
-
+            </listBibl>
+            <listBibl type="clavis">
+               <bibl type="PEMM">
+                  <ptr type="story" target="bm:PEMM"/>
+                  <citedRange unit="item">126</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="skos:exactMatch"
+                         active="LIT3891Miracle"
+                         passive="https://pemm.princeton.edu/stories/126"/>
+            </listRelation>
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:Budge1923Miracles"/>
@@ -83,27 +92,97 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </listBibl>
             <listRelation>
                <relation name="saws:formsPartOf" active="LIT3891Miracle" passive="LIT2384Taamme"/>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3891Miracle"
+                  passive="EMML3536">
+                  <desc>
+                     see <ref type="mss" corresp="EMML3536"/>, <locus target="#129r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3891Miracle"
+                  passive="EMML2275">
+                  <desc>
+                     see <ref type="mss" corresp="EMML2275"/>, <locus target="#117v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3891Miracle"
+                  passive="EMML3872">
+                  <desc>
+                     see <ref type="mss" corresp="EMML3872"/>, <locus target="#23r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3891Miracle"
+                  passive="EMML6917">
+                  <desc>
+                     see <ref type="mss" corresp="EMML6917"/>, <locus target="#116v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3891Miracle"
+                  passive="EMML4618">
+                  <desc>
+                     see <ref type="mss" corresp="EMML4618"/>, <locus target="#51v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3891Miracle"
+                  passive="EMML6949">
+                  <desc>
+                     see <ref type="mss" corresp="EMML6949"/>, <locus target="#132r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3891Miracle"
+                  passive="EMML1692">
+                  <desc>
+                     see <ref type="mss" corresp="EMML1692"/>, <locus target="#51v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3891Miracle"
+                  passive="EMML2060">
+                  <desc>
+                     see <ref type="mss" corresp="EMML2060"/>, <locus target="#177v"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3891Miracle"
+                  passive="EMML5420">
+                  <desc>
+                     see <ref type="mss" corresp="EMML5420"/>, <locus target="#18r"/>
+                  </desc>
+               </relation>
+               <relation name="lawd:hasAttestation"
+                  active="LIT3891Miracle"
+                  passive="EMML7543">
+                  <desc>
+                     see <ref type="mss" corresp="EMML7543"/>, <locus target="#81v"/>
+                  </desc>
+               </relation>
             </listRelation>
          </div>
          <div type="edition">
-             <div type="textpart" subtype="incipit" xml:lang="gez">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
                <note>This incipit is taken from <ref type="mss" corresp="EMML3872"/>.</note>
-                 <ab>
-                  ወነበርኪ፡ ፲ወ፪፡ ዓመተ፡ እንዘ፡ ትትናዘዚ፡ እምመላእክት፣ ወያመጽኡ፡ ወትረ፡ ሲሳየኪ፣
-                  <choice resp="PRS6437Macomber">
-                     <corr>ወስቴኪኒ፡</corr>
+               <ab>
+                  ወነበርኪ፡ ፲ወ፪፡ ዓመተ፡ እንዘ፡ ትትናዘዚ፡ እምመላእክት፡ ወያመጽኡ፡ ወትረ፡ ሲሳየኪ፡
+                  <choice>
+                     <corr resp="PRS6437Macomber">ወስቴኪኒ፡</corr>
                      <sic>ሰቴኪኒ፡</sic>
                   </choice> ስቴ፡ ሰማይ፡ ዘእምሰማይ፡ ዘተቀድሐ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
-                  ወመጽአ፡ አሐዱ፡ ብእሲ፡ ዘአኃዞ፡ ነገርጋር፡ እምብዙኅ፡ ዓመታት፣ ወኊልቈ፡ ዓመታቲሁ፡ ፵ወ፯፡ ዓመት።
-                 </ab>
-             </div>
-             <div type="textpart" subtype="incipit" xml:lang="gez">
-                <note>This incipit is taken from <ref type="mss" corresp="EMML2275"/>.</note>
-                <ab>
-                   ወመጽአ፡ አሐዱ፡ ብእሲ፡ ዘአኃዞ፡ ጋኔን፡ ወነገርጋር፡ ፵ወ፯፡ ዓመተ።
-                </ab>
-             </div>
-             </div>
+                  ወመጽአ፡ አሐዱ፡ ብእሲ፡ ዘአኃዞ፡ ነገርጋር፡ እምብዙኅ፡ ዓመታት፡ ወኊልቈ፡ ዓመታቲሁ፡ ፵ወ፯፡ ዓመት።
+               </ab>
+            </div>
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="EMML2275"/>.</note>
+               <ab>
+                  ወመጽአ፡ አሐዱ፡ ብእሲ፡ ዘአኃዞ፡ ጋኔን፡ ወነገርጋር፡ ፵ወ፯፡ ዓመተ።
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

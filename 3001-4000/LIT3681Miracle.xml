@@ -47,6 +47,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-03-31">Added keywords and relations</change>
          <change who="DR" when="2018-11-26">Added keyword and relation</change>
+         <change who="DR" when="2025-05-12">Added relation to PEMM</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -56,6 +57,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <relation name="saws:formsPartOf" active="LIT3681Miracle" passive="LIT2384Taamme"/>
                <relation name="ecrm:P129_is_about" active="LIT3681Miracle" passive="PRS5695John"/>
             </listRelation>
+            <listRelation>
+               <relation name="skos:exactMatch"
+                  active="LIT3681Miracle"
+                  passive="https://pemm.princeton.edu/stories/247"/>
+            </listRelation>
+            <listBibl type="clavis">
+               <bibl type="PEMM">
+                  <ptr type="story" target="bm:PEMM"/>
+                  <citedRange unit="item">247</citedRange>
+               </bibl>
+            </listBibl>
+            
          </div>
       </body>
    </text>
