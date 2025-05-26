@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2281Trinity">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2281Trinity">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -51,7 +52,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <profileDesc>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <abstract>
+            <p>This record refers to a collection of Miracles of the Trinity attributed to
+               <persName ref="PRS2748BeduaA"/>, described in the following paragraphs. It is different from
+               <ref type="work" corresp="LIT2286ZenaSellase"/> (the collection of prayers to the Trinity
+               <ref type="work" corresp="LIT2296Sayfas"/> arranged according
+               to the days of the week together with miracles of the Trinity)
+               and from  <ref type="work" corresp="LIT2282Trinity"/> (a collection of miracles of the 
+               Trinity transmitted with <ref type="work" corresp="LIT1300Dersan"/>).</p>
             <p>
+               From     <bibl>
+                  <ptr target="bm:Nosnitsin2010EAETammeraS"/>
+               </bibl> (minimally rephrased):
             While described as “Miracles”, the work does
             not exactly conform to the form of <foreign xml:lang="gez">taʾammǝr</foreign>
             known otherwise. It is a re-narration of the Biblical history from the
@@ -68,7 +79,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <p>The text contains the story of
                the "pearl" (<foreign xml:lang="gez">baḥrǝy</foreign>), i.e. St <persName ref="PRS6819Mary">Mary</persName>, contained in
                Adam's body</p>
-         </abstract>
+            <p>This work is attested in <ref type="mss" corresp="BerOrQuart993"/> and
+               <ref type="mss" corresp="EMML4769"/>.</p>
+           </abstract>
          
          <textClass>
             <keywords>
@@ -84,6 +97,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="ES" when="2017-03-07"> created + titles abstract keywords relations</change>
          <change who="DR" when="2020-02-11">Added EAe reference</change>
+         <change who="DR" when="2025-03-14">Added abstract, updated relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -95,6 +109,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <relation name="saws:hasUsed" active="LIT2281Trinity" passive="LIT1957Mashaf"/>
             <relation name="saws:hasUsed" active="LIT2281Trinity" passive="LIT1415GadlaA"/>
             <relation name="saws:isAttributedToAuthor" active="LIT2281Trinity" passive="PRS2748BeduaA"/>
+            <relation name="saws:isDifferentTo" active="LIT2281Trinity" passive="LIT2286ZenaSellase"/>
+            <relation name="saws:isDifferentTo" active="LIT2281Trinity" passive="LIT2296Sayfas"/>
+            <relation name="saws:isDifferentTo" active="LIT2281Trinity" passive="LIT2282Trinity"/>
          </listRelation>
          
          <listBibl type="secondary">

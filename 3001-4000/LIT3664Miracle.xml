@@ -4,7 +4,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Miracle of Mary: Miracle of the flight of Egypt; Miracle of the sycomore of Dabra Mǝṭmāq</title>
+            <title xml:id="t1">Miracle of Mary: Miracle of the flight of Egypt; Miracle of the sycamore of Dabra Mǝṭmāq</title>
             <title xml:id="t2" xml:lang="en">The holy family hides from brigands in a sycamore tree at Dabra Mǝṭmāq</title>
          </titleStmt>
          <publicationStmt>
@@ -12,15 +12,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
-               </licence>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">This file is licensed
+         under the Creative Commons Attribution-ShareAlike 4.0.</licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
+            <listWit>
+               <witness corresp="BNFet60">Paris, Bibliothèque nationale de France, BnF Éthiopien 60, fols 135vb-137vb</witness>
+               <witness corresp="BAVborget20">Vatican City, Biblioteca Apostolica Vaticana, Vat. Borg. et. 20, fol. 164r-v</witness>
+               <witness corresp="EMML3051">Ankobar Giyorgis Church, EMML no. 3051, fols 200vb-201vb</witness>
+               <witness corresp="EMML2066">Ḥayq Esṭifānos Monastery, EMML no. 2066, fols 33rb-34va</witness>
+               <witness corresp="EMML2802">Qelēnsā Māryām Church, EMML no. 2802, fols 24vb-26rb</witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -32,9 +35,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p/>
+            <p>The story told in the Miracle is similar to that of <ref type="work" corresp="LIT7337MiracleMarySycomore"/>, 
+                  but the wording is different.</p>
          </abstract>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -49,7 +56,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="MV" when="2017-03-31">Added keywords</change>
          <change who="DR" when="2018-11-14">Added keyword, relation, Macomber reference and title</change>
          <change who="AM" when="2019-05-22">added text</change>
+         <change who="DN" when="2025-03-31">changed incipit from that of the Miracle in EMML 2275 to the more common one;
+            the reference to Cerulli1965Leningrado, no. 25 is taken out (the miracle is unlikely the same as here).</change><change when="2025-05-06" who="ES">aligned to PEMM</change>
       </revisionDesc>
+      
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
@@ -68,23 +78,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:MacomberMiracles"/>
                   <citedRange unit="item">325</citedRange>
                </bibl>
-               </listBibl>
-
+            </listBibl>
+            <listBibl type="clavis">
+               <bibl type="PEMM">
+                  <ptr type="story" target="bm:PEMM"/>
+                  <citedRange unit="item">325</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="skos:exactMatch"
+                         active="LIT3664Miracle"
+                         passive="https://pemm.princeton.edu/stories/325"/>
+            </listRelation>
             <listRelation>
                <relation name="saws:formsPartOf" active="LIT3664Miracle" passive="LIT2384Taamme"/>
             </listRelation>
          </div>
          <div type="edition">
-             <div type="textpart" subtype="incipit" xml:lang="gez">
-               <note>This incipit is taken from <ref type="mss" corresp="EMML2275"/>.</note>
-                 <ab>
-                   ትብህለ፡ በእንተ፡ እለ፡ መጽኡ፡ እኩያን፡ ፈያት፡ ከመ፡ ይንሥኡ፡ ንዋያ፡ ለእግዝእትነ፡ <gap reason="ellipsis" resp="PRS6437Macomber"/>
-                   ወበእንተ፡ ኦመ፡ ሰግላ፡ ክልኤ፡ ክፍለ። ወእንዘ፡ ትጓይይ፡ እግዝእትነ፡ ማርያም፡ ዘምስለ፡ ሕፃና፣ ኢየሱስ፡ ክርስቶስ፣
-                   ዮሴፍ፡ ወሰሎሜ፡ ምስሌሃ፣ እምነ፡ መዐቱ፡ ለሄሮድስ፡ ዕልው፣ ወእንዘ፡ ትፈልስ፡ እምሀገር፡ ውስተ፡ ሀገር፣
-                   ሶበ፡ በጽሐት፡ ውስተ፡ አድያማተ፡ ደብረ፡ ምጥማቅ፣ ወአድግኒ፡ አሐዱ፡ ጽዑን፡ ስንቀ፡ ዚአሃ፣ ወነጸርዋ፡ እኩያን፡ ፈያት።
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is taken from <ref type="mss" corresp="BNFet60"/>.</note>
+               <ab>
+                    ተአምር፡ ዘኮነ፡ እምድኅረ፡ ወለደቶ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ አመ፡ አዘዘ፡ ሄሮድስ፡ ንጉሥ፡ ይቅትሉ፡ ሕፃናተ፡ ዘክልኤ፡ ዓመት፡ ወዘይቴሕት። 
+                    ወሰሚዓ፡ እግዚእትነ፡ ቅድስት፡ ድንግል፡ በክልኤ፡ ማርያም፡ በከየት፡ እንዘ፡ ትብል፡ እምእርአይ፡ ቅትለተ፡ ዚአከ፡ ኦወልድየ፡ እምፈቶኩ፡ ይቅድሙ፡ ቀቲለ፡ ኪያየ። ወበከመዝ፡ ሐዘነ፡ 
+                    ልብ፡ እንዘ፡ ሀለወት፡ እግዚእትነ፡ ቅድስት፡ ድንግል፡ ማርያም፡ ወላዲተ፡ አምላክ፡ አስተርአዮ፡ መልአከ፡ እግዚአብሔር፡ ለዮሴፍ። ወይቤሎ፡            
                   </ab>
-              </div>
-          </div>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

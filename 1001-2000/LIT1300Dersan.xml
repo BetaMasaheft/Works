@@ -6,9 +6,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">ድርሳነ፡ ሥላሴ፡</title>
             <title corresp="#t1" xml:lang="gez" type="normalized">Dǝrsāna Śǝllāse</title>
-            <title corresp="#t1" xml:lang="en">Homily on the Trinity
-            </title>
+            <title corresp="#t1" xml:lang="en">Homily on the Trinity</title>
             
+            <title xml:id="t2" xml:lang="gez">ዜና፡ ነገሮሙ፡ ለሥላሴ፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Zenā nagaromu la-Śǝllāse</title>
+            <title corresp="#t2" xml:lang="en">Story of the Acts of the Trinity</title>
+            
+            <title xml:id="t3" xml:lang="gez">ዜና፡ ሥላሴ፡</title>
+            <title corresp="#t3" xml:lang="gez" type="normalized">Zenā Śǝllāse</title>
+            <title corresp="#t3" xml:lang="en">Story of the Trinity</title>
             
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -44,15 +50,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <term key="ChristianLiterature"/>
                <term key="Theology"/>
                <term key="Homily"/>
+               <term key="Apocrypha"/>
             </keywords>
          </textClass>
          <abstract>
-            <p>The homily is divided into 13 reading
+            <p>  From     <bibl>
+               <ptr target="bm:Lusini2005EAEDersanaS"/>
+            </bibl> (minimally rephrased): The homily is divided into 13 reading
             units, one for each month of the year. It is followed
-            by a <ref type="work" corresp="LIT2282Trinity">collection of miracles, attributed to
-            the awe-inspiring intervention of the Trinity</ref>,
+            by a <ref type="work" corresp="LIT2282Trinity">collection of miracles of the Trinity</ref>,
             and by a final doxology divided into seven reading-
             units, one for each day of the week.</p>
+            <p>This work is attested in <ref type="mss" corresp="EMML150"/>, <ref type="mss" corresp="EMML1882"/>
+               and <ref type="mss" corresp="SHOr409"/>.</p>
          </abstract>
       </profileDesc>
       <revisionDesc>
@@ -60,6 +70,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-02-20">Title, keywords and bibliography added</change>
+         <change who="DR" when="2025-03-25">Updated abstract, updated relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -71,7 +82,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>
             </listBibl>
             <listRelation>
-               <relation name="saws:isVersionOf" active="LIT1300Dersan" passive="LIT2286ZenaSellase"/>
+               <relation name="saws:isDifferentTo" active="LIT1300Dersan" passive="LIT2286ZenaSellase"/>
+               <relation name="saws:isDifferentTo" active="LIT1300Dersan" passive="LIT2296Sayfas"/>
+               <relation name="saws:isDifferentTo" active="LIT1300Dersan" passive="LIT2281Trinity"/>
                <relation name="saws:isVersionOf" active="LIT1300Dersan" passive="LIT1966Mashaf"/>
                <relation name="saws:formsPartOf" active="LIT1300Dersan" passive="LIT2296Sayfas">
                   <desc>Parts of the <ref type="work" corresp="LIT1300Dersan"/>
