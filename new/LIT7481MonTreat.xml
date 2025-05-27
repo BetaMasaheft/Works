@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Anonymous monastic treatise</title>
+                <title xml:lang="en"  xml:id="t1">Anonymous monastic treatise</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -21,7 +21,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="EMML 7469">Collegeville, Hill Museum and Manuscript Library, MS EMML no. 7469, f. 560v-561v</witness>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -49,7 +51,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listBibl type="secondary">
+                    <bibl> <ptr target="bm:Erho2025Palimpsests"/><citedRange unit="page"></citedRange>406</bibl>
+                </listBibl>
+            </div>
+                 
+            
+            <div xml:lang="gez" type="edition">
+                <note>The incipit is taken from <ref type="mss" corresp="EMML7469"/>.</note>
+                <div type="textpart" subtype="incipit">
+                    <ab xml:lang="gez"><supplied reason="omitted">ክ</supplied>ርስቶስ፡ ይርድአኒ። ወሶበ፡ ትወጽእ፡ እምኆኅት፡ ተኃተም፡ ገጾከ፡ ወትብ<gap reason="omitted"></gap> ቱ፡ ማኅቶተ፡ ወትብል፡ እግዚአብሔር፡ ያበርህ፡ ማኅቶትየ። አምላኪየ፡ ያበርህ፡ ጽልመትየ፡ እስመ፡ ብከ፡ እድኅን፡ እመንሱት፡</ab>
+                </div>
+                <div type="textpart" subtype="explicit">
+                    <ab>ወትሑት፡ በልቡ፡ ሊያመስጦ፡ ፈውስ፡ አበው፡ እስመ፡ ብፁዕ፡ ዘይረክብ፡ ፈውሰ፡ ወሥራየ፡ በመዋዕለ፡ ውርዙት፡ ወብፁዕ፡ ብእሲ፡ ዘይስሕት፡ እምእለንቱ፡ አሐተ። </ab>
+                </div>
+            </div>
         </body>
+        
     </text>
 </TEI>
