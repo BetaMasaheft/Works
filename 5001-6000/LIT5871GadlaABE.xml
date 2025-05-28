@@ -31,7 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <creation/>
             <abstract>
                 <p>The Gadla ʾAbrǝhām is one of the three so-called "Testaments of the three patriarchs". Its Beta ʾƎsrāʾel recensions is based on a 
-                    Christian recension.</p>
+                    Christian recension. The text seems to be very rare, both available editions, <bibl><ptr target="bm:ContiRossini1922TestAbrBE"/></bibl>and <bibl><ptr target="bm:Aescoly1951Recueil"/></bibl> are based on <ref type="mss" corresp="BNFabb107"/></p>
             </abstract>
             <textClass>
                 <keywords>
@@ -47,11 +47,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-03-27">Created entity</change>
+            <change who="NV" when="2025-05-28"> Added information on the editions in the abstract, added references to the editions, incipit and explicit</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:ContiRossini1922TestAbrBE"/>
+                        <citedRange>61-63</citedRange>
+                    </bibl>
+                    <bibl>
+                        <ptr target="bm:Aescoly1951Recueil"/>
+                        <citedRange unit="page">51-77</citedRange>
+                    </bibl>
+                </listBibl>
                 <listBibl type="secondary">
                     <bibl><ptr target="bm:Heide2003EAEGadlaA"/></bibl>
                 </listBibl>
@@ -59,6 +70,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="saws:isVersionOf" active="LIT5871GadlaABE" passive="LIT1412GadlaA"/>
                     <relation name="ecrm:P129_is_about" active="LIT5871GadlaABE" passive="PRS1269Abraham"/>
                 </listRelation>
+            </div>
+            <div type="edition">
+                <note>Incipit and explicit are taken from <ref type="mss" corresp="BNFabb107"/></note>
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <ab>ገድል፡ ወስምዕ፡ ዘቅዱሳን፡ አበው፡ አብርሃም፡ ይስሐቅ፡ ወያዕቆብ፡ ኮነ፡ እንከ፡ ፀዓቱ፡ ለአብርሃም፡ እምዝ፡ ዓለም፡ አመ፡ ፳ወ፰ ለነሐሴ፡ ወበይስሐቅኒ፡ ዓዲ፡ አመ፡ ፳፰ ለነሐሴ፡ ወያዕቆብኒ፡ አመ፡ ፳ወ፰ እምዝንቱ፡ ወርኅ፡ ለነሐሴ። </ab>
+                </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                      <ab>ወይስሐቅ፡ ገብረ፡ ጽድቅ፡ ምእመን፡ በአምሳለ፡ አብርሃም፡ አቡሁ፡ መሃይምናን፡ በአብ፡ ሎቱ፡ ስብሐት፡ ወክብር፡ እስከ፡ ለዓለመ፡ ዓለም፡ አሜን። ተፈጸመ፡ መጽሐፈ፡ ገድሉ፡ ለአብርሃም፡ በሰላመ፡ እግዚአብሔር፡ አሜን።
+                    </ab>
+                </div>
             </div>
         </body>
     </text>
