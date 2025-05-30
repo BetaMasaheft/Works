@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4907Miracle" xml:lang="en" type="work">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT4907Miracle" xml:lang="en" type="work">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle of Takla Hāymānot on the incense taken from the vultur</title>
+                <title xml:lang="en" xml:id="t1">Miracle of Takla Hāymānot: The miracle of the
+                    incense which was brought by a vulture</title>
+                <title xml:lang="en" xml:id="t2">Miracle of Takla Hāymānot on the incense taken
+                    from the vulture</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -49,6 +53,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         </profileDesc>
         <revisionDesc>
             <change who="MV" when="2018-01-12">Created entity</change>
+            <change who="DR" when="2025-05-30">Added relation, title and references from Budge</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
@@ -56,9 +61,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <div type="bibliography">
                 <listRelation>
                <relation name="saws:formsPartOf" active="LIT4907Miracle" passive="LIT3971Taamme"/>
+                    <relation name="ecrm:P129_is_about" active="LIT4907Miracle" passive="PRS9162TaklaHa"/>
             </listRelation>
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:Budge1906Taklahaymanot"/>
+                        <citedRange unit="page">129–130</citedRange>
+                        <citedRange unit="item">27</citedRange>
+                    </bibl>
+                </listBibl>
+                <listBibl type="translation">
+                    <bibl>
+                        <ptr target="bm:Budge1906Taklahaymanot"/>
+                        <citedRange unit="page">321–323</citedRange>
+                        <citedRange unit="item">27</citedRange>
+                    </bibl>
+                </listBibl>
             </div>
-         <!---->
         </body>
     </text>
 </TEI>
