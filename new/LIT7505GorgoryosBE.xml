@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Livre de Gorgoryos</title>
+                <title xml:lang="gez" xml:id="t1">ጎርጎርዮስ፡ ነቢይ፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Gorgoryos nabiy</title>
+                
                 <editor role="generalEditor" key="AB"/>
                 <editor key="NV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,11 +32,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>A work of <persName ref="ETH1274Betaes"/> literature concerned with the fate of the soul after death.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="BetaEsraelLiterature"/>
+                    <term key="ApocalypticLiterature"/>
+                    <term key="Apocrypha"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -48,7 +52,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
-        </body>
+            <div type="edition" xml:lang="gez">
+               <note>The  incipit and explicit are taken from <ref type="mss" corresp="BNFabb107"/></note>  
+                    <div type="textpart" subtype="incipit" xml:lang="gez">
+                        <ab>ይትባረክ፡ እግዚአብሔር፡ አምላከ፡ እስራኤል፡ ዘጎርጎርዮስ፡ ነቢይ፡ ወእምዝ፡ እቤሎ፡ ለመልአክ፡ ሚካኤል፡ ንግረኒ፡ እፎ፡ ይከውን፡ ሞት፡ ወፍልጠት፡ እምሥጋ።</ab>
+                    </div>
+                    <div type="textpart" subtype="explicit" xml:lang="gez">
+                        <ab>ወኮነ፡ ሶበ፡ ሰማዕኩ፡ ውእቱ፡ ቃለ፡ እምነ፡ ማዕከለ፡ እሳት፡ ወደብሩ፡ ይነድድ፡ እሳት፡ ወደብሩ፡ ይነድድ፡ በእሳት፡ ወመጻእክሙ፡ ኀቤየ፡ ኵልክሙ፡ መላእክተ፡ ነግድክሙ፡ ወአእሩጊክሙ።</ab>
+                    </div>
+                </div>
+            <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:Halevy1902Sanbat"/>
+                        <citedRange unit="page">97-107</citedRange>
+                    </bibl>
+                </listBibl>
+                <listBibl type="secondary">
+                    <bibl>
+                        <ptr target="bm:Kaplan2005GorgoryosBE"/>
+                        <citedRange unit="page">857</citedRange>
+                    </bibl>
+                </listBibl>
+            </div>
+                </body>
     </text>
 </TEI>
