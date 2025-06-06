@@ -6,6 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">ይትባረክ፡ እግዚአብሔር፡ አምላከ፡ እስራኤል፡ በኵሉ፡ ጊዜ፡ ወበኵሉ፡ መዋዕል፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Yǝtbārak ʾƎgziʾabǝḥer ʾamlāka ʾƎsrāʾel ba-kʷǝllu gize wa-bakʷǝllu mawāʿǝl...</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="NV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,11 +31,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>A canticle used by the <persName ref="ETH1274Betaes"/>. The edition in <bibl><ptr target="bm:Aescoly1951Recueil"/></bibl> is based on <ref type="mss" corresp="BNFabb107"/>.
+                   </p>
+                
             </abstract>
             <textClass>
                 <keywords>
                     <term key="BetaEsraelLiterature"/>
+                    <term key="Prayers"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -43,12 +47,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="NV" when="2025-06-06">Created entitty</change>
+            <change who="NV" when="2025-06-06">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="edition" xml:lang="gez">
+                <note>The  incipit and explicit are taken from <ref type="mss" corresp="BNFabb107"/></note>
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <ab>ይትባረክ፡ እግዚአብሔር፡ አምላከ፡ እስራኤል፡ በኵሉ፡ ጊዜ፡ ወበኵሉ፡ መዋዕል፡ ወበኵሉ፡ አውራኅ፡ ኦእግዚእየ፡ እስመ፡ ውእቱ፡ ዘኢይማስን፡ ወረደ፡ ህየ፡ ወአድኅነኒ፡ በከመ፡ ትምሕርቱ፡ መንክር፡ በኃይለ፡ ሰማያት፡</ab>  </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <ab>ወርእየ፡ እግዚአብሔር፡ ሕማሞሙ፡ ሐውፃሙ፡ እግዚኦ፡ ለደቂቀ፡ እስራኤል፡ አድኅኖሙ፡ በይእቲ፡ ዕለት፡ ከማሁ፡ አድኅነኒ፡ አምላኪየ፡ አምላከ፡ አበውየ፡ ሰምዓኒ፡ እግዚኦ፡ ጸሎትየ፡ እምኵሉ፡ ምንዳቤየ፡ ወእምኵሉ፡ ትካዝየ፡ ለገብርከ፡ ባውላ።</ab>
+                </div> 
+            </div>
+            <div type="bibliography">
+                <listBibl type="text">
+                    <bibl>
+                        <ptr target="bm:Aescoly1951Recueil"/>
+                        <citedRange unit="page">170-175</citedRange>
+                    </bibl>
+                </listBibl>
+            </div>
         </body>
     </text>
 </TEI>
