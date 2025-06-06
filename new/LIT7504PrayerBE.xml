@@ -6,6 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">ጸሎተ፡ አስተርኢ፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalota ʾAstarʾi</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="NV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,11 +31,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>A prayer used by the <persName ref="ETH1274Betaes"/>. 
+                    The edition in <bibl><ptr target="bm:Aescoly1951Recueil"/></bibl> is based on <ref type="mss" corresp="BNFet291"/>, <ref type="mss" corresp="BNFet306"/>,<ref type="mss" corresp="BNFet268"/>
+                    <ref type="mss" corresp="BNFabb107"/>, and <ref type="mss" corresp="BNFabb150"/>. The text edited in <bibl><ptr target="bm:Halevy1902Sanbat"/><citedRange unit="page"></citedRange></bibl> is a bit shorter, it corresponds to the text edited in <bibl><ptr target="bm:Aescoly1951Recueil"/><citedRange unit="page">198-250</citedRange></bibl>.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="BetaEsraelLiterature"/>
+                    <term key="Prayers"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -48,7 +52,41 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="edition" xml:lang="gez">
+               
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <note>The incipit is taken from <bibl><ptr target="bm:Aescoly1951Recueil"/><citedRange unit="page">198</citedRange></bibl>.</note>
+                    <ab>ይትባረክ፡ እግዚአብሔር፡ አምላከ፡ እስራኤል፡ በእንተ፡ ስብሐት፡ ወበእንተ፡ ሕፃናት፡ አእምሩ፡ ስብሐትየ። በዝንቱ፡ መጽሐፍ፡ እግዚእየ፡ እግዚእየ፡ በእንተ፡ ስምከ፡ ቅዱስ፡ መሐረኒ፡</ab>
+                </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <note>The first explicit is taken from <bibl><ptr target="bm:Halevy1902Sanbat"/><citedRange unit="page">128</citedRange></bibl>.</note>
+                    <ab>ወይቤ፡ ኪዳንከ፡ ዘምስለ፡ አብርሃም፡ አኪደንከ፡ ዘምስለ፡ ይስሐቅ፡ አኪዳንከ፡ ዘምስለ፡ ያዕቆብ፡ አኅዘንከ፡ ተርእዮ፡ ግነይ፡</ab>
+                </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <note>The second explicit is taken from <bibl><ptr target="bm:Aescoly1951Recueil"/><citedRange unit="page">270</citedRange></bibl>.</note>
+                    <ab>ወኵሉ፡ ዘይጼውዕ፡ ስመ፡ እግዚአብሔር፡ ይድኅን፡ በጽድቅ፡ ለገብርከ፡ ስምዖን። ተፈጸመ፡ መጽሐፈ፡ ፈላሻ፡ በዘመነ፡ ሉቃስ፡ በወርኅ፡ ጥቅምት፡ በትዕይንተ፡ ጎንደር፡ ዓፄ፡ ሣህሉ፡ ታእካ፡ እንዘ፡ የዓቅቡ፡ በጥቅምት፡ በ፫ዕለት።
+                    </ab>
+                  </div>
+            </div>
+            <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:Halevy1902Sanbat"/>
+                        <citedRange>108-128</citedRange>
+                    </bibl>
+                    <bibl>
+                        <ptr target="bm:Aescoly1951Recueil"/>
+                        <citedRange unit="page">198-270</citedRange>
+                    </bibl>
+                </listBibl>
+                <listBibl type="translation">
+                    <bibl>
+                        ibl>
+                        <ptr target="bm:Aescoly1951Recueil"/>
+                        <citedRange unit="page">199-271</citedRange>
+                    </bibl>
+                </listBibl>
+            </div>
         </body>
     </text>
 </TEI>
