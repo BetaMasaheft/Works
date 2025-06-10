@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Taʾammǝra ʾAbrǝha wa-ʾAṣbǝḥa</title>
+                <title xml:lang="gez" xml:id="t1">ተአምረ፡ አብርሃ፡ ወአጽብሐ፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Taʾammǝra ʾAbrǝhā wa-ʾAṣbǝḥa</title>
+                <title xml:lang="en" corresp="#t1">Miracles of ʾAbrǝhā wa-ʾAṣbǝḥa</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,20 +32,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>In <ref type="mss" corresp="ANLcr19"/>, twelve miracles form part of the 
+                    <ref type="work" corresp="LIT7510HagDosAA"/>.</p>
             </abstract>
+            <textClass>
+                <keywords>
+                    <term key="ChristianLiterature"/>
+                    <term key="Hagiography"/>
+                    <term key="Miracle"/>
+                </keywords>
+            </textClass>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DR" when="2025-06-06">Created stub</change>
+            <change who="DR" when="2025-06-06">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="ecrm:P129_is_about" active="LIT7511TaammeraAA" passive="PRS1284Abrehaa"/>
+                    <relation name="ecrm:P129_is_about" active="LIT7511TaammeraAA" passive="PRS2100Asbeha"/>
+                    <relation name="ecrm:P129_is_about" active="LIT7511TaammeraAA" passive="PRS1263Abraha"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7511TaammeraAA" passive="LIT7510HagDosAA"/>
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>
