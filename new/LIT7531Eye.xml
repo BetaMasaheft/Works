@@ -30,7 +30,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p>Prescriptions taken from a collection of medical prescriptions (maṣḥafa madḫanit).</p>
+                <p>Prescriptions probably taken from a collection of medical prescriptions, which are usually referred to as
+                    <foreign xml:lang="gez">መጽሐፈ፡ መድኀኒት፡</foreign> (maṣḥafa madḫanit) 'Book of Medicine'.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -42,11 +43,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="am">Amharic</language>
+                <language ident="gez">Gǝʿǝz</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="CH" when="2025-06-12">Created record</change>
-            <!-- Add change elements after review -->
+            <change when="2025-06-13" who="CH">Corrections after reviews by Magdalena Krzyżanowska and Dorothea Reule</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -60,7 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <ab>የደም፡ <gap reason="ellipsis"/> ለዘይውኅዝ፡ ትክቶሃ፡</ab>
                 </div>
                 <div type="textpart" subtype="chapter" xml:id="Foetus">
-                    <label>Preescription for protecting the foetus</label>
+                    <label>Prescription for protecting the foetus</label>
                     <ab>የፅንስ፡</ab>
                 </div>
                 <div type="textpart" subtype="chapter" xml:id="Eye">
@@ -75,6 +77,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         የብልዝ፡ <gap reason="ellipsis"/> የጣለበት፡ ዓይን፡</ab>
                 </div>
                 </div>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="dc:relation" active="LIT7531Eye#Eye" passive="LIT7529Madhanit#Cataract"><desc>Thematically similar
+                        to other prescriptions to the eye in <ref type="work" corresp="LIT7529Madhanit#Cataract"/>.</desc></relation>
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>
