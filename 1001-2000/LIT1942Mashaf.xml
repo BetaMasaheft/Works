@@ -36,8 +36,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p>Collection of medical prescriptions in a mixture of Gǝʾǝz and Amharic, which is reported to originate from Jerusalem. It differs
-               from <ref type="work" corresp="LIT7529Madhanit"/> and <ref type="work" corresp="LIT7530MashafaMad"/>.</p>
+            <p>Collection of medical prescriptions in a mixture of Gǝʾǝz and Amharic, which is reported to originate from Jerusalem, attested in
+               <ref type="mss" corresp="BLorient828"/>. It differs from <ref type="work" corresp="LIT7529Madhanit"/> and 
+               <ref type="work" corresp="LIT7530MashafaMad"/>.</p>
          </abstract>
          <langUsage>
             <language ident="en">English</language>
@@ -58,6 +59,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-03-21">Added keywords and title</change>
          <change when="2025-06-12" who="CH">Changed title; Added abstract and disambiguated from LIT7529Madhanit and LIT7530MashafaMad</change>
+         <change when="2025-06-13" who="CH">Updates after reviews by Magdalena Krzyżanowska and Dorothea Reule</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -66,6 +68,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <listRelation>
                <relation name="saws:isDifferentTo" active="LIT1942Mashaf" passive="LIT7529Madhanit"/>
                <relation name="saws:isDifferentTo" active="LIT1942Mashaf" passive="LIT7530MashafaMad"/>
+               <relation name="dc:relation" active="LIT1942Mashaf#Eye" passive="LIT7531Eye#Eye"><desc>Thematically similar
+                  to other prescriptions to the eye in <ref type="work" corresp="LIT7531Eye#Eye"/>.</desc></relation>
+               <relation name="dc:relation" active="LIT1942Mashaf#Eye" passive="LIT7529Madhanit#Cataract"><desc>Thematically similar
+                  to other prescriptions to the eye in <ref type="work" corresp="LIT7529Madhanit#Cataract"/>.</desc></relation>
             </listRelation>
          </div>
          <div type="edition" xml:lang="am">
@@ -90,11 +96,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </div>
             <div type="textpart" subtype="chapter" xml:id="Law">
                <label>Chapter 4 - About the law (?)</label>
-               <ab>፬ አንቀጽ፡ ዘባኃ።</ab>
+               <ab>፬ አንቀጽ፡ ዘ<choice resp="MK"><sic>ባ</sic><corr>ቦ</corr></choice>ኃ።</ab>
             </div>
             <div type="textpart" subtype="chapter" xml:id="Eye">
                <label>Chapter 5 - About a hair growing in the eye</label>
-               <note>Thematically similar to <ref type="work" corresp="LIT000000000000#000000"/> and
+               <note>Thematically similar to <ref type="work" corresp="LIT7531Eye#Eye"/> and
                   <ref type="work" corresp="LIT7529Madhanit#Cataract"/>.</note>
                <ab>፭ አንቀጽ፡ ዘዓይን፡ ጠጉር፡ እንደያበቅል።</ab>
             </div>
