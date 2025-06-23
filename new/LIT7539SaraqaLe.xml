@@ -1,13 +1,13 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7534PPThieves" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7539SaraqaLe" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ጸሎት፡ በእንተ፡ ሠራቂ፡ ወቀመኛ፡</title>
-                <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalot baʾǝnta śarāqi wa-qamaññā</title>
-                <title xml:lang="en" corresp="#t1">Prayer against thieves and sorcerers</title>
+                <title xml:lang="gez" xml:id="t1">ነገረ፡ ሠርቀ፡ ሌሊት፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t1">Nagara śarqa lelit</title>
+                <title xml:lang="en" corresp="#t1">Note of the moonrise</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="CH"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -32,15 +32,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p>Magic prayer against thieves and sorcerers, the latter being referred to as 'qamaññā', which Stefan Strelcyn identified as a 
-                    "sorcerer who makes people ill using philtres and poisons" (cf. <bibl><ptr target="bm:Strelcyn1972Wellcome"/>
-                     <citedRange unit="page">51</citedRange></bibl>).
-                    Thematically similar to <ref type="work" corresp="LIT6781PPAynat"/>.</p>
+                <p>Treatise of divination according to the phase of the moon over a period of thirty nights.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="Magic"/>
-                    <term key="Prayers"/>
+                    <term key="Divination"/>
+                    <!-- Eventually a keyword for astronomy/astrology -->
                 </keywords>
             </textClass>
             <langUsage>
@@ -49,24 +47,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="CH" when="2025-06-16">Created record</change>
-            <change when="2025-06-16" who="CH">Corrections after review by Magdalena Krzyżanowska and Nafisa Valieva</change>
+            <change who="CH" when="2025-06-19">Created record</change>
+            <!-- Add change element after review -->
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="edition" xml:lang="gez">
                 <note>The following incipit is taken from <ref type="mss" corresp="BLorient12034"/>, quoted according to
-                    the catalogue description in <bibl><ptr target="bm:Strelcyn1978BritishLibrary"/><citedRange unit="page">146</citedRange></bibl>.</note>
+                    the catalogue description in <bibl><ptr target="bm:Strelcyn1978BritishLibrary"/><citedRange unit="page">148</citedRange></bibl>.</note>
                 <div type="textpart" subtype="incipit">
-                    <ab>በስመ፡ አብ፡ በል፡ ጸሎት፡ በእንተ፡ ሠራቂ፡ ወቀመኛ፡ አመሐልኩክሙ፡ ወአስተኀጸርኩክሙ፡ አንትሙ፡ ሌባ፡ ወቀመኛ፡</ab>
+                    <ab>በስመ፡ <gap reason="ellipsis"/> እጽሕፍ፡ ነገረ፡ ሠርቀ፡ ሌሊት፡ ወልደት፡ ወርኅ<supplied reason="omitted">፡</supplied> በ፩ ሌሊት፡ 
+                        ወበ፩ ወርኅ፡ ኵሉ፡ ነገር፡ ሠናይ፡</ab>
                 </div>
             </div>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="dc:relation" active="LIT7534PPThieves" passive="LIT6781PPAynat"><desc>Thematically similar
-                        to prayers against 'qamaññā' in <ref type="work" corresp="LIT6781PPAynat"/>.</desc></relation>
-                </listRelation>
+                    <relation name="dc:relation" active="LIT7539SaraqaLe" passive="LIT7122Diagram "><desc>Thematically similar
+                        to <ref type="work" corresp="LIT7122Diagram "/>.</desc></relation>
+                    <relation name="dc:relation" active="LIT7539SaraqaLe" passive="LIT7109Moonrise"><desc>Thematically similar
+                        to <ref type="work" corresp="LIT7109Moonrise"/>.</desc></relation>
+                    <relation name="dc:relation" active="LIT7539SaraqaLe" passive="LIT6563HassabHeg"><desc>Thematically similar
+                        to <ref type="work" corresp="LIT6563HassabHeg"/>.</desc></relation>
+                </listRelation><!-- Thematically similar to CamOr1885#ms_i38 (f. 73r-76v).-->
             </div>
         </body>
     </text>
