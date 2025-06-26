@@ -5,10 +5,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ገብረ፡ መስቀል፡ ቅላዕ፡ ባሕቱ፡ መንጦላዕተ፡ ግዙፍ፡ ልብየ።</title>
-                <title xml:lang="gez" type="normalized" corresp="#t1">Gabra Masqal qǝlāʿe bāḥǝttu manṭolāʿta gǝzuf lǝbbǝya</title>
-                <title xml:lang="en" corresp="#t1">Gabra Masqal, just unveil the veil of my subborn heart</title>
-                <title xml:lang="en" xml:id="t2">Hymn to Gabra Masqal</title>
+                <title xml:id="t1" xml:lang="gez">መልክአ፡ ገብረ፡ መስቀል፡</title>
+                <title corresp="#t1" xml:lang="gez" type="normalized">Malkəʾa Gabra Masqal</title>
+                <title corresp="#t1" xml:lang="en">Image of Gabra Masqal</title>
+                <title xml:lang="gez" xml:id="t2">ገብረ፡ መስቀል፡ ቅላዕ፡ ባሕቱ፡ መንጦላዕተ፡ ግዙፍ፡ ልብየ።</title>
+                <title xml:lang="gez" type="normalized" corresp="#t2">Gabra Masqal qǝlāʿe bāḥǝttu manṭolāʿta gǝzuf lǝbbǝya</title>
+                <title xml:lang="en" corresp="#t2">Gabra Masqal, just unveil the veil of my subborn heart</title>
+                <title xml:lang="en" xml:id="t3">Hymn to Gabra Masqal</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="RL"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -24,7 +27,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>                    
+                    <witness corresp="EMIP00764"/>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -48,12 +53,62 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="RL" when="2021-03-04">Created entity</change>
+            <change who="AD" when="2024-12-01">Created XML record for Malkea gubae</change>
+            <change who="ES" when="2025-06-26">aligned to Augustine Dickinson's database</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-      
-            <div type="edition">
+            <listRelation>
+                <relation name="betmas:formerlyAlsoListedAs" active="LIT6391HymnGabraMasqal" passive="LIT0347Malke"></relation>
+                <relation name="ecrm:P129_is_about"
+                    active="LIT6391HymnGabraMasqal"
+                    passive="PRS4326GabraMa"/>
+                <relation name="skos:exactMatch"
+                    active="LIT6391HymnGabraMasqal"
+                    passive="https://w3id.org/malke/6391/"/>
+            </listRelation>
+            <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:MgWebsite"/>
+                    </bibl>
+                </listBibl>
+            </div>
+            <div type="edition" xml:lang="gez" xml:id="malkeagubae">
+                <note>This edition is taken from <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+                <div type="textpart" xml:id="malke">
+                    <lg type="stanza" n="1">
+                        <l n="1">ኣዐትብ፡ ገጽየ፡ በስመ፡ ሥሉሳን፡ አጋእዝትየ፨</l>
+                        <l n="2">ወበስመ፡ ማርያም፡ ድንግል፡ ዘተመሰለት፡ ሰማየ፨</l>
+                        <l n="3">ስብሐተ፡ መልክእከ፡ እንብብ፡ እንዘ፡ እከሥት፡ አፉየ፨</l>
+                        <l n="4">ገብረ፡ መስቀል፡ ቅላዕ፡ ባሕቱ፡ መንጦላዕተ፡ ግዙፍ፡ ልብየ፨</l>
+                        <l n="5">ወተናበበኒ፡ ቀዊመከ፡ ዝየ፨</l>
+                    </lg>
+                    <lg type="stanza" n="2">
+                        <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ መአድመ፡ ዜና፡ እምወይን፨</l>
+                        <l n="2">ዓዲ፡ እምናብሊስ፡ እንተ፡ ይሔውዞ፡ ለእዝን፨</l>
+                        <l n="3">ገብረ፡ መስቀል፡ ላዕሌከ፡ አመ፡ ተዐውቀ፡ ብርሃን፨</l>
+                        <l n="4">ተበሀሉ፡ መምህራኒከ፡ እለ፡ ነጸሩ፡ በዐይን፨</l>
+                        <l n="5">ዕበያተ፡ አምላክ፡ ንዋ፡ ላዕለዝ፡ ሕፃን፨</l>
+                    </lg>
+                    <lg type="stanza" n="9">
+                        <l n="1">ሰላም፡ ለሕፅንከ፡ ወለአእዳዊከ፡ እለ፡ ይረብባ፨</l>
+                        <l n="2">ምስለ፡ መዛርዕ፡ ለጸሎት፡ እለ፡ ያስተርክባ፨</l>
+                        <l n="3">ገብረ፡ መስቀል፡ አቡነ፡ ለገዳመ፡ ዋሊ፡ ኮከባ፨</l>
+                        <l n="4">እፎኑመ፡ እንዘ፡ ሕፃን፡ ዘኢያፍቀርከ፡ ሐሊባ፨</l>
+                        <l n="5">ለመንፈሳዊት፡ እምከ፡ ዘርኅሩኅ፡ ልባ፨</l>
+                    </lg>
+                    <lg type="stanza" n="23">
+                        <l n="1">አምኃ፡ ሰላም፡ አቅረብኩ፡ ለአቡክሙ፡ በአስተሐምሞ፡ ወጻህቅ፨</l>
+                        <l n="2">ከመ፡ ንጉሠ፡ ምድር፡ አኮ፡ አምኃ፡ ብሩር፡ ወወርቅ፨</l>
+                        <l n="3">ጻድቃነ፡ ለጋሶ፡ ወጕትማን፡ ወንጌላውያን፡ አዕጹቅ፨</l>
+                        <l n="4">አመ፡ ይረፍቁ፡ በቤተ፡ መርዓ፡ ምስለ፡ ኢየሱስ፡ ሊቅ፨</l>
+                        <l n="5">አርፍቁኒ፡ ምስሌክሙ፡ በሐዳስ፡ ምርፋቅ፨</l>
+                    </lg>
+                </div>
+            </div>
+            <div type="edition" xml:id="emip764">
               <note>the text follows <ref type="mss" corresp="EMIP00764"/> ff. 128r-129v</note>
               <div type="textpart" subtype="incipit" xml:lang="gez">
                 <ab>
