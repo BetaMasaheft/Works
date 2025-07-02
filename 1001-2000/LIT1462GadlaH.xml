@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Gadla Herodā</title>
+            <title xml:lang="gez" xml:id="t1">Gadla Herodā</title>
+            <title xml:lang="gez" xml:id="t2">ዜና፡ ዘለባሴ፡ ገድል፡ ጽኑዕ፡ ወቅዱስ፡ አባ፡ ሄሮዳ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t2">Zenā za-labāse gadl ṣǝnuʿ wa-qǝddus ʾabbā Herodā</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,20 +35,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Homily"/>
+               <term key="Translation"/>
+            </keywords>
+         </textClass>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2025-03-30">Added relations, Ethiopic title, keywords, biblliography, deleted reference to Salāmā</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
      
       <body>
         <div type="bibliography">
+           
+           <listBibl type="editions">
+              <bibl><ptr target="bm:Simon1935Passion"/></bibl>
+           </listBibl> 
+           
             <listRelation>
-               <relation name="saws:isAttributedToAuthor" active="LIT1462GadlaH" passive="PRS8387SalamaI"/>
+               <relation name="ecrm:P129_is_about" active="LIT1462GadlaH" passive="PRS14775Heroda"/>
+               <relation name="saws:formsPartOf" active="LIT1462GadlaH" passive="LIT1493Gadlas"/>
             </listRelation>
          </div>
       </body>

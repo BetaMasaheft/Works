@@ -4,7 +4,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to St Julius</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ዮልዮስ፡ ዘአቅፋህስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Yolyos za-ʾAqfāhs</title>
+            <title corresp="#t1" xml:lang="en">Image of Julius of Aqfahs</title>
+            <editor key="AD"></editor>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,9 +17,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                 
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -45,25 +48,76 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-13">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-10">Added the text, title, relations and bibl (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>               
+               <relation name="ecrm:P129_is_about" active="LIT2863RepCh144" passive="PRS5793Juliuso"></relation>
+               <relation name="skos:exactMatch" active="LIT2863RepCh144" passive="https://w3id.org/malke/2863/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">144</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምከ፡ ዘለዓላውያን፡ ኢከሠትኮ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ዘለዐላውያን፡ ኢከሠትኮ፨</l>
+                  <l n="2">ወለሥዕርትከ፡ ፅሑድ፡ በቅብዓ፡ ሐዲስ፡ አምልኮ፨</l>
+                  <l n="3">ጸወነ፡ ነዳያን፡ ዮልዮስ፡ አጽንዓኒ፡ ጊዜ፡ ተሀውኮ፨</l>
+                  <l n="4">እስመ፡ እንበሌሃ፡ ለመዝገበ፡ አበው፡ ባርኮ፨</l>
+                  <l n="5">እምኔከ፡ ብዕለ፡ ምድር፡ ዘአኃሥሥ፡ አኮ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለርእስከ፡ ምጽዋተ፡ ነዳያን፡ ዘጾረ፨</l>
+                  <l n="2">ወለዘአሜሃ፡ ገጽከ፡ በውኂዘ፡ ኃፍ፡ ተፅዕረ፨</l>
+                  <l n="3">እግዚአብሔር፡ ለከ፡ ከመ፡ አቅደመ፡ ነጊረ፨</l>
+                  <l n="4">ዮልዮስ፡ በተዓግሦ፡ ዘተባጽሐከ፡ ግብረ፨</l>
+                  <l n="5">ዓቀብከ፡ ሃይማኖተ፡ ወሠለጥከ፡ በድረ፨</l>
+               </lg>
+               <lg type="stanza" n="25">
+                  <l n="1">ሰላም፡ ለግንዘተ፡ ሥጋከ፡ በልብሰ፡ ሐሪር፡ ሠናይ፨</l>
+                  <l n="2">ወለዝኅርከ፡ ዘኮነ፡ በእስክንድርያ፡ ዐባይ፨</l>
+                  <l n="3">ብሩሀ፡ ኵለንታ፡ ዮልዮስ፡ ኮከበ፡ ገድል፡ ሰማይ፨</l>
+                  <l n="4">ቅድሜከ፡ ትኩን፡ ከማሁ፡ ለጽዋዓ፡ ቈሪር፡ ማይ፨</l>
+                  <l n="5">ዛቲ፡ ማኅሌትየ፡ ለባሲ፡ ነዳይ፨</l>
+               </lg>
+               <lg type="stanza" n="26">
+                  <l n="1">ይትባረክ፡ እግዚአብሔር፡ በእንተ፡ ጸጋሁ፡ ዘላዕሌየ፨</l>
+                  <l n="2">ለማኅሌተ፡ ስምከ፡ ዝንቱ፡ እስመ፡ አጽንዓ፡ ኃይልየ፨</l>
+                  <l n="3">ባሕቱ፡ ዮልዮስ፡ ስዑነ፡ ንባብ፡ ቃልየ፡</l>
+                  <l n="4">እመኒ፡ ውኁደ፡ በውዳሴ፡ ክብረ፡ ዚአከ፡ ረሰየ፨</l>
+                  <l n="5">ብከ፡ ይትርፍ፡ ወኢይትርፍ፡ ብየ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለከ፡ ዓርከ፡ አምላክ፡ ጽድቅ፡ ኮንከ፡ እስመ፡ ግብርከ፡ ፍትው፨</l>
+                  <l n="2">አምሳለ፡ ምእመን፡ አብርሃም፡ ርእሰ፡ አበው፨</l>
+                  <l n="3">ዮልዮስ፡ ገብረ፡ ሕያው፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለከ፡ ሰማዕተ፡ ስሙ፡ ዮልዮስ፡ ለዘትማልም፡ ወዮም፨</l>
+                  <l n="2">ምክንያተ፡ ጽድቅ፡ ኩነኒ፡ ለክዒወ፡ ደም፨</l>
+                  <l n="3">እስመ፡ አነ፡ ወልደ፡ መርገም፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለከ፡ ተከፍሎትከ፡ ለክልኤ፡ በሞሠርተ፡ ዕፅ፡ በሊሕ፨</l>
+                  <l n="2">ቤዛ፡ ይኩነኒ፡ ውስተ፡ ዓውደ፡ ፍትሕ፨</l>
+                  <l n="3">ሥርግው፡ ዮልዮስ፡ በአልባሰ፡ ንጽሕ፨</l>
+                  <l n="4">እስመ፡ አነ፡ ብእሲ፡ ርሱሕ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

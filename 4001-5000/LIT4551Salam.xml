@@ -2,7 +2,9 @@
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Salām-hymn to Lālibalā</title>
+                <title xml:id="t1" xml:lang="gez">መልክአ፡ ላሊበላ፡</title>
+                <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Lālibalā</title>
+                <title corresp="#t1" xml:lang="en">Image of Lālibalā</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -31,7 +33,7 @@
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>In some manuscripts, separate stanzas of the hymn are transmitted.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -45,15 +47,21 @@
         <revisionDesc>
             <change who="DR" when="2017-03-08">Created entity</change>
             <change who="DR" when="2021-01-25">Updated title, added relation</change>
+            <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
                 <listRelation>
+                    <relation name="skos:exactMatch" active="LIT4551Salam" passive="https://w3id.org/malke/4551/"></relation>
                     <relation name="ecrm:P129_is_about" active="LIT4551Salam" passive="PRS6152Lalibala"/>
                 </listRelation>
+                <listBibl type="editions">
+                    <bibl><ptr target="bm:MgWebsite"/></bibl>
+                </listBibl>            
             </div>
+                
         <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
                 <note>The following incipit follows <ref type="mss" corresp="BDLaethe4"/>.</note>
@@ -63,6 +71,38 @@
                 </ab>
             </div>
         </div>
+            <div type="edition" xml:lang="gez"><note>After <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+                <div type="textpart" xml:id="malke">
+                    <lg type="stanza" n="1">
+                        <l n="1">እስመ፡ ብዙኃን፡ አኃው፡ እለ፡ እሙንቲ፡ ቀደሙኒ፨</l>
+                        <l n="2">አኀዙ፡ ይንግሩ፡ ዝክረ፡ ስምከ፡ ዝስይሤኒ፨</l>
+                        <l n="3">አነኒ፡ ማሕሌተ፡ መልክእከ፡ ይእዜኒ፨</l>
+                        <l n="4">ከመ፡ እጽሐፍ፡ በበ፡ ምትልው፡ ሊተኒ፡ ረትአኒ፨</l>
+                        <l n="5">ዐዚዝ፡ ላሊበላ፡ ዓለመ፡ ዘትቀኒ፨</l>
+                    </lg>
+                    <lg type="stanza" n="2">
+                        <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ከመ፡ ቃለ፡ ማዕነቅ፡ ድሙጽ፨</l>
+                        <l n="2">በአህጉር፡ ወዓፅ፨</l>
+                        <l n="3">ላሊበላ፡ ፍቅርከ፡ ውስተ፡ ልብየ፡ ሕኑጽ፨</l>
+                        <l n="4">ይሱቀኒ፡ አድኅኖትከ፡ እምነ፡ ትንታኔ፡ ወዳኀፅ፨</l>
+                        <l n="5">ወይሂጶ፡ ለፀርየ፡ ጸሎትከ፡ ሐጽ፨</l>
+                    </lg>
+                    <lg type="stanza" n="45">
+                        <l n="1">ሰላም፡ ለመቃብሪከ፡ በዐጸደ፡ ቅድስት፡ ጎልጎታ፨</l>
+                        <l n="2">ለመቃብረ፡ ክርስቶስ፡ ካልእታ፨</l>
+                        <l n="3">ላሊበላ፡ በለዝ፡ ለጥበብ፡ ዐምደ፡ ቤታ፨</l>
+                        <l n="4">እሞተ፡ ጌጋይ፡ ከመ፡ ትትነሣእ፡ ሕያውታ፨</l>
+                        <l n="5">ለነፍስየ፡ በላ፡ ተንሥኢ፡ ጣቢታ፨</l>
+                    </lg>
+                    <lg type="stanza" n="46">
+                        <l n="1">እምትራፈ፡ ገድልከ፡ ንስቲተ፡ ፍተ፡ ጻማከ፡ እዜኑ፨</l>
+                        <l n="2">ውዱሰ፡ ምግባር፡ ላሊበላ፡ ለእግዚአብሔር፡ ዐርከ፡ ምእመኑ፨</l>
+                        <l n="3">በምጽዋት፡ ፈጸምከ፡ ንዋየ፡ ለእግርከ፡ እስከ፡ አሣዕኑ፨</l>
+                        <l n="4">እንዘ፡ ንጉሥ፡ በሥልጣኑ፡ ወመስፍን፡ በምኵናኑ፨</l>
+                        <l n="5">ዘኢያትረፈ፡ ልብሰ፡ ለበድኑ፡ ከማከ፡ መኑ፨</l>
+                    </lg>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>

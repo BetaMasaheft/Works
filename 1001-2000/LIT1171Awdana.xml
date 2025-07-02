@@ -35,7 +35,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Chronography"/>
+               <term key="Translation"/>
+               <term key="Magic"/>
+               <term key="Divination"/>
+            </keywords>
+         </textClass>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
@@ -43,25 +55,136 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2016-10-04" who="MV">Fixed title</change>
          <change when="2017-04-04" who="DR">Added div</change>
+         <change when="2024-10-18" who="MV">Added bibl, incipit, explicit</change>
+         <change when="2025-05-28" who="CH">Added bibl and textparts, updated keywords</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="lawd:hasAttestation" active="LIT1171Awdana" passive="BAVet119"/>
+               <relation name="lawd:hasAttestation" active="LIT1171Awdana" passive="BLorient12034"/>
+            </listRelation>
+         </div>
+         <div type="bibliography">
             <listBibl type="editions">
                <bibl>
                   <ptr target="bm:ContiRossini1941AwdaNagast"/>
                </bibl>
+               <bibl>
+                  <ptr target="bm:Abreha1949Hatata"/>
+                  <citedRange unit="page">75-131</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl> 
+                  <ptr target="bm:Pietruschka2003Awda"/>
+               </bibl>
             </listBibl>
          </div>
-        <div type="edition">
-           <div type="textpart" xml:id="tables">
-               <label>Sixteen circular tables, each subdivided into sixteen parts with questions on various topics</label>
-           </div>
-            <div type="textpart" xml:id="seas">
-               <label>Sixteen "seas" (<foreign xml:lang="gez">ባሕር፡</foreign>), each containing 16 sentences as a response to the previous questions</label>
+         <div type="edition">
+            <div type="textpart" xml:id="list">
+               <label>List of names and letters used to label parts of the circles</label>
             </div>
-        </div>
+            <div type="textpart" xml:id="tables">
+               <label>Sixteen circular tables, each subdivided into sixteen parts with questions on various topics</label>
+            </div>
+            <div type="textpart" xml:id="seas" xml:lang="gez" >
+               <label>Sixteen "seas" (<foreign xml:lang="gez">ባሕር፡</foreign>), each containing 16 sentences as a response to the previous questions</label>
+               <note>The division in textparts is taken from 
+                  <bibl><ptr target="bm:ContiRossini1941AwdaNagast"/><citedRange unit="page">131</citedRange></bibl>.
+                  The Ethiopic titles of textparts are taken from <ref type="mss" corresp="BLorient12034"/> according to the description in
+                  <bibl><ptr target="bm:Strelcyn1978BritishLibrary"/><citedRange unit="item">98,20</citedRange>
+                     <citedRange unit="page">146</citedRange></bibl>.</note>
+               <div type="textpart" subtype="chapter" xml:id="Intro">
+                  <note>The following incipit is taken from <ref type="mss" corresp="BAVet119"/> according to
+                     <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">480</citedRange></bibl>.</note>
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ፩ አምላክ፡ መሐሪ፡ ወመስተሣህል፡ ዘተናገረ፡ ፩ ጠቢ<surplus>ቢ</surplus>ብ፡ እምነ፡ ብዙኃን፡ ጠቢባን፡ ወፈላስፋውያን፡
+                     ዘንተ፡ ዘስሙ፡ መጽሐፈ፡ ምክር፡ ለአበው፡  <sic>ቀደመት፡</sic> ከመ፡ ያእምሩ፡ በቱ፡ በዝ፡ እምሂ፡ ሠናየ፡ ወዕመሂ፡ እኩየ፡
+                     ሰብአ፡ ዓለም፡ ለለርእሶሙ፡ ውእቱ፡ ፩ በኃሢሠ፡ መፍቅድ፡ ሐቲት፡ ፪ ሐቲት፡ በነጊደ፡ ንዋይ፡ ፫ ሐቲት፡ 
+                     <supplied reason="omitted">በ</supplied>በዊዓ፡ ቤተ፡ ንጉሥ፡ <supplied reason="omitted"/> ፩ <del rend="expunctuated">ባሕረ፡ ፃና</del>
+                     ፩ በኃሢሠ፡ መፍቅድ፡ ናሁ<supplied reason="omitted">፡</supplied> መጽአ፡ ለከ፡ ሠናይ፡ ዘያስተፌሥሕ፡ ልበከ፡ ብስራት፡ ለከ፡ እስመ፡ ይትፌጸም፡ ጻሕቅከ፡ 
+                     <gap reason="ellipsis"/>
+                  </ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Tana">
+                  <label>1st story on lake Ṭānā</label>
+                  <ab>ዘባሕረ፡ ፃና፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Kwera">
+                  <label>2nd story on lake Kʷerā</label>
+                  <ab>ዘባሕረ፡ ኴራ፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Ela">
+                  <label>3rd story on lake ʾElā</label>
+                  <ab>ዘባሕረ፡ ኤላ፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Shakla">
+                  <label>4th story on lake Šaklā</label>
+                  <ab>ዘባሕረ፡ ሸክላ፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Zway">
+                  <label>5th story on lake Zwāy</label>
+                  <ab>ዘባሕረ፡ ዝዋይ፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Alzazo">
+                  <label>6th story on lake ʾAlzazo</label>
+                  <ab>ዘባሕረ፡ አልዘዞ፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Wanj">
+                  <label>7th story on lake Wanǧ</label>
+                  <ab>ዘባሕረ፡ <choice resp="CH"><sic>ው</sic><corr>ወ</corr></choice>ንጅ፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Gojjam">
+                  <label>8th story on lake Gʷaǧǧām</label>
+                  <ab>ዘባሕረ፡ <choice resp="CH"><sic>ጐጋ</sic><corr>ጎጃ</corr></choice>ም፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Dago">
+                  <label>9th story on lake Dāgo</label>
+                  <ab>ዘባሕረ፡ ዳ<choice resp="CH"><sic>ኅ</sic><corr>ጎ</corr></choice>፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Hayq">
+                  <label>10th story on lake Ḥayq</label>
+                  <ab>ዘባሕረ፡ ሐይቅ፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Heno">
+                  <label>11th story on lake Heno</label>
+                  <ab>ዘባሕረ፡ ሄኖ<choice resp="CH"><sic>ክ</sic><corr></corr></choice>፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Semazebe">
+                  <label>12th story on lake Sǝmāzǝbe</label>
+                  <ab>ዘባሕረ፡ <choice><sic>ሸማዚብ፡</sic><corr>ስማዝቤ፡</corr></choice></ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Hawash">
+                  <label>13th story on lake Ḥawāš</label>
+                  <ab>ዘባሕረ፡ ሐዋሽ፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Gemb">
+                  <label>14th story on lake Gǝmb</label>
+                  <ab>ዘባሕረ፡ ግምብ፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Takkaze">
+                  <label>15th story on lake Takkaze</label>
+                  <ab>ዘባሕረ፡ ተከዜ፡</ab>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="Abawi">
+                  <label>16th story on lake ʾAbāwi</label>
+                  <ab>ዘባሕረ፡ አባዊ፡</ab>
+                  <div type="textpart" subtype="explicit" xml:lang="gez">
+                     <note>The following explicit is taken from <ref type="mss" corresp="BAVet119"/> according to
+                        <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">480</citedRange></bibl>.</note>
+                     <ab>
+                        ፲፮ ሐቲ<supplied reason="omitted">ት፡</supplied> በተዋስቦ፡ እመሰ፡ ትፈቅድ፡ ተዋስቦ፡ ተዓገሥ፡ እስመ፡ <sic>በተዓገሦ፡</sic> ይትረከብ፡
+                        በ<del rend="expunctuated">ብ</del>ትፍሥሕት፡ <sic>ወኃሢት፤</sic> ወብዕል፡ ወኵሉ፡ <sic>ተምኒትከ፡</sic> ወአንተ፡ <sic>ኵን፡</sic> ኅዱዓ፡
+                        በኵሉ፡ <choice><sic>ነገር፡</sic><corr resp="PRS4805Grebaut PRS9530Tisseran">ነገረ፡</corr></choice> ተዋስቦ፡ ወዝኒ፡ ተዋስቦ፡ ዘትሄሊ፡ ይከውኖሙ፡
+                        ለእሉ፡ ትፍሥሕት፡ <sic>ወኃሢት፡</sic> ወብዕል፨
+                     </ab>
+                  </div>   
+               </div>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

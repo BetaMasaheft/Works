@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3200DossierEw">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT3200DossierEw">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
 
-            <title xml:lang="en" corresp="t1">Hagiographic Dossier of St ʾEwosṭātewos</title>
+            <title xml:lang="en" xml:id="t1">Hagiographic Dossier of St ʾEwosṭātewos</title>
 
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+               Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
+                  <p> This file is licensed under the Creative Commons Attribution-ShareAlike 4.0.
+                  </p>
                </licence>
             </availability>
          </publicationStmt>
@@ -29,7 +30,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
 
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+            href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -37,12 +39,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <ab>The collection consisiting Life (in one of several redactions), Miracles (varying number),
-               and Hymns in honour of St ʾEwosṭātewos</ab>
+            <ab>The collection consists of the Life (in one of several recensions), Miracles (in a varying
+               number), and Hymns in honour of St ʾEwosṭātewos</ab>
+
          </abstract>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
          <textClass>
-            <keywords scheme="#ethioauthlist">
+            <keywords>
                <term key="Hagiography"/>
                <term key="ChristianLiterature"/>
             </keywords>
@@ -50,27 +55,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </profileDesc>
       <revisionDesc>
          <change who="ES" when="2020-04-07">CREATED record</change>
-         <change who="AD" when="2020-10-15">Added relation to the collection of hymns for his miracles (LIT6201Hymn).</change>
+         <change who="AD" when="2020-10-15">Added relation to the collection of hymns for his
+            miracles (LIT6201Hymn).</change>
+         <change who="NV" when="2024-12-02">Deleted bibliography on editions and translations, added
+            reference to Adankpo-Labadie´s book.</change>
 
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
-            <listBibl type="editions">
-               <bibl>
-                  <ptr target="bm:Turaiev1905Eustathii"/>
-               </bibl>
-            </listBibl>
-            <listBibl type="translation">
-               <bibl>
-                  <ptr target="bm:Turaev1906Ewostatewos"/>
-               </bibl>
-               <bibl>
-                  <ptr target="bm:Colin2017Saintsfondateurs"/>
-                  <citedRange>75-215</citedRange>
-               </bibl>
-            </listBibl>
             <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:ContiRossini1912Studi"/>
@@ -85,6 +79,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <bibl>
                   <ptr target="bm:Fiaccadori2005Ewostatewos"/>
                   <citedRange unit="page">469a-472b</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Adankpo2023Ewostatewos"/>
                </bibl>
             </listBibl>
             <listRelation>
@@ -105,10 +102,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <desc>The dossier may contain the Malkǝʾa to ʾEwosṭātewos (Hymn)</desc>
                </relation>
                <relation name="saws:contains" active="LIT3200DossierEw" passive="LIT6201Hymn">
-                  <desc>The dossier may contain a collection of hymns for the Miracles of ʾEwosṭātewos</desc>
+                  <desc>The dossier may contain a collection of hymns for the Miracles of
+                     ʾEwosṭātewos</desc>
                </relation>
 
-               <relation name="ecrm:P129_is_about" active="LIT3200DossierEw" passive="PRS3934Ewostate"/>
+               <relation name="ecrm:P129_is_about" active="LIT3200DossierEw"
+                  passive="PRS3934Ewostate"/>
             </listRelation>
          </div>
 

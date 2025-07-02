@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to John Kāmā</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ዮሐንስ፡ ከማ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Yoḥannǝs Kamā</title>
+            <title corresp="#t1" xml:lang="en">Image of John Kamā</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -13,10 +15,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">                 
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -45,12 +46,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-23">Added keywords and incipit</change>
          <change when="2022-09-14" who="MKr">Added relation</change>
+         <change who="ES" when="2024-10-02">Added text  from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">271</citedRange>
@@ -58,15 +61,62 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </listBibl>
             <listRelation>
                     <relation name="ecrm:P129_is_about" active="LIT2990RepCh271" passive="PRS11248YohannesKama"/>
+               <relation name="skos:exactMatch" active="LIT2990RepCh271" passive="https://w3id.org/malke/2990/"></relation>
                 </listRelation>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  በስመ፡ እግዚአብሔር፡ ሥግው፡ ዘከዓወ፡ ደሞ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">በስመ፡ እግዚአብሔር፡ ሥግው፡ ዘከዐወ፡ ደሞ፨</l>
+                  <l n="2">ዲበ፡ ዕፀ፡ መስቀል፡ ቅዱስ፡ አፍቅሮተ፡ አዳም፡ ጊዜ፡ አሕመሞ፨</l>
+                  <l n="3">ዮሐንስ፡ ከማ፡ ካልኡ፡ ለወልደ፡ ነጐድጓድ፡ ነቢየ፡ ፍጥሞ፨</l>
+                  <l n="4">ክሥት፡ ሊተ፡ እግዚእየ፡ ለልሳንየ፡ ማሕተሞ፨</l>
+                  <l n="5">ውዳሴ፡ መልክእከ፡ እንብብ፡ ወእክሀል፡ ፈጽሞ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለፅንሰትከ፡ በሥምረተ፡ አምላክ፡ ኬንያ፨</l>
+                  <l n="2">ወለልደትከ፡ ውዱስ፡ እማሕፀነ፡ እምከ፡ አክሮስያ፨</l>
+                  <l n="3">ዮሐንስ፡ ከማ፡ ያዕቆብ፡ ዘነገድከ፡ ምድረ፡ ሶርያ፨</l>
+                  <l n="4">ከመ፡ እሕሊ፡ ለመልክእከ፡ ዘኢይማስን፡ አርአያ፨</l>
+                  <l n="5">ዜናዌ፡ ጥበብ፡ ይኩነኒ፡ ቃልከ፡ ሐዋርያ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ በሰሌዳ፡ ሞገስ፡ ወጸጋ፨</l>
+                  <l n="2">ዘጸሐፉ፡ ስሞ፡ ለቤተ፡ ክርስቲያን፡ መገብተ፡ ሕጋ፨</l>
+                  <l n="3">ዮሐንስ፡ ከማ፡ ስቡሕ፡ በምክረ፡ ቅዱሳን፡ እንግልጋ፨</l>
+                  <l n="4">አብርህ፡ ለነ፡ እግዚኦ፡ እንበለ፡ ሕፀት፡ ወንትጋ፨</l>
+                  <l n="5">እስመ፡ ዐይነ፡ ማኅበር፡ አንተ፡ ማኅቶቱ፡ ለሥጋ፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለአእዛኒከ፡ አዝማደ፡ መላትሕ፡ ክልኤቲ፨</l>
+                  <l n="2">ወለአእናፊከ፡ ግኁሣት፡ እምፄና፡ ግብረ፡ ፍቅር፡ መስሓቲ፨</l>
+                  <l n="3">ዮሐንስ፡ ከማ፡ ሊቅ፡ ቢጸ፡ ጴጥሮስ፡ እልሰደመንቲ፨</l>
+                  <l n="4">አብሐኒ፡ እትሉ፡ አሰረከ፡ ሠራዊተ፡ ዳዊት፡ ዘኬልቲ፨</l>
+                  <l n="5">ከመ፡ በድኅሬሁ፡ ተለዉ፡ በዘመን፡ እንታክቲ፨</l>
+               </lg>
+               <lg type="stanza" n="19">
+                  <l n="1">ሰላም፡ ለአማዑቲከ፡ ወለንዋየ፡ ውሥጥከ፡ ኅሩይ፨</l>
+                  <l n="2">እመዝገበ፡ ብሩር፡ ወወርቅ፡ ወእምሥነ፡ ጽዱል፡ ባሕርይ፨</l>
+                  <l n="3">ለባዕል፡ ነነዌ፡ አመ፡ ይረክቦ፡ ሥቃይ፨</l>
+                  <l n="4">አብአኒ፡ ዮሐንስ፡ ከማ፡ ውስተ፡ ቤተ፡ መርዓ፡ ርሱይ፨</l>
+                  <l n="5">ለፅኑሰ፡ ምግባር፡ ወልድከ፡ አልዓዛር፡ ነዳይ፨</l>
+               </lg>
+               <lg type="stanza" n="29">
+                  <l n="1">ሰላም፡ ለግንዘተ፡ ሥጋከ፡ ዘተከለለ፡ ስብሐተ፨</l>
+                  <l n="2">ወለደብረ፡ ዝኅርከ፡ ልዕልት፡ እንተ፡ ታስተጋኒ፡ ነገሥተ፨</l>
+                  <l n="3">ዮሐንስ፡ ከማ፡ ብርሃን፡ ዘአሰስልከ፡ ጽልመተ፨</l>
+                  <l n="4">ከመ፡ ኣንክር፡ ዕበያቲከ፡ ኵሎ፡ ዕለተ፨</l>
+                  <l n="5">ዝርወተ፡ ኅሊና፡ ወልብ፡ አስተጋብእ፡ ሊተ፨</l>
+               </lg>
+               <lg type="stanza" n="30">
+                  <l n="1">አምኃ፡ ማሕሌት፡ ንስቲተ፡ በፍቅደ፡ ሠላሳ፡ ብሩር፨</l>
+                  <l n="2">ዘአቅረብኩ፡ ለከ፡ ነዳየ፡ አእምሮ፡ ኅሡር፨</l>
+                  <l n="3">ዮሐንስ፡ ከማ፡ አቡየ፡ እንዘ፡ ትትዌከፍ፡ በፍቅር፨</l>
+                  <l n="4">አስተፍሥሐኒ፡ ለወልድከ፡ ጊዜ፡ አልጸቀ፡ ማእረር፨</l>
+                  <l n="5">ከመ፡ ዘራኢ፡ ይትፌሣሕ፡ ዘኵሉ፡ ብሔር፨</l>
+               </lg>
             </div>
-         </div>
+         </div>         
       </body>
    </text>
 </TEI>

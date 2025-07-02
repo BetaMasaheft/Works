@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to St Sebastian</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ስብስትያኖስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Sǝbǝstyānos</title>
+            <title corresp="#t1" xml:lang="en">Image of Sebastian</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -45,6 +47,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-15">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-02">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -57,15 +60,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምከ፡ ዘፍቅደ፡ ዕለታት፡ ፍቅዱ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ዘፍቅደ፡ ዕለታት፡ ፍቅዱ፨</l>
+                  <l n="2">ወለዘኀበ፡ ወልድ፡ ይትኌልቍ፡ ሥዕርትከ፡ ለለ፡ አሐዱ፨</l>
+                  <l n="3">ስብስትያኖስ፡ ነገሥት፡ እለ፡ ለምስለ፡ ወርቅ፡ ሰገዱ፨</l>
+                  <l n="4">እመኒ፡ ኪያከ፡ ዲበ፡ ሐራ፡ አንሥኦተ፡ ሊቅ፡ ፈቀዱ፨</l>
+                  <l n="5">ለግብረ፡ ሥጋዊ፡ ፍቅሮሙ፡ ኢቆምከ፡ በዐውዱ፨</l>
+               </lg>
+               <lg type="stanza" n="25">
+                  <l n="1">ሰላም፡ ለግንዘተ፡ ሥጋከ፡ ወለዝኅርከ፡ ዘኮነ፨</l>
+                  <l n="2">ሥጋ፡ እለ፡ ኬፋ፡ ወሳውል፡ ኀበ፡ ረሰየ፡ መካነ፨</l>
+                  <l n="3">ስብስትያኖስ፡ ሕዝብከ፡ ዓቅመ፡ ንዴትነ፨</l>
+                  <l n="4">ሰላመ፡ ዘመልክዕከ፡ ወማኅሌተ፡ አቅረብነ፨</l>
+                  <l n="5">ባሕቱ፡ ሰላመ፡ እግዚኦ፡ ሀበነ፨</l>
+               </lg>
             </div>
          </div>
+         
          <listRelation>
             <relation name="ecrm:P129_is_about" active="LIT2887RepCh168" passive="PRS8663Sebastia"></relation>
+            <relation name="skos:exactMatch" active="LIT2887RepCh168" passive="https://w3id.org/malke/2887/"></relation>
          </listRelation>
       </body>
    </text>

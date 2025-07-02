@@ -46,8 +46,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <abstract>
             <p>Text belonging to the magical and apocryphal literature, used by the <persName ref="ETH1274Betaes"/> for liturgical purposes. 
-               It is part of the readings prescribed for the Sabbath of Sabbaths and for initiation.
-            </p>
+               It is part of the readings prescribed for the Sabbath of Sabbaths and for initiation. The edition in <bibl><ptr target="bm:Aescoly1951Recueil"/></bibl> is based on <ref type="mss" corresp="BNFabb107"/>.</p>
+            
          </abstract>
          <textClass>
             <keywords>
@@ -62,6 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change when="2016-08-31" who="MV">Created record.</change>
          <change when="2017-03-23" who="DR">Keywords added</change>
          <change when="2020-05-19" who="ES">incipit from ESsdm021 added</change>
+         <change when="2025-05-30" who="NV">Expanded the abstract, replaced the incipit from ESsdm021 (too short to be helpful for identification of the text) with a longer one from Abb 107, added explicit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -75,15 +76,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Aescoly1951Recueil"/>
                   <citedRange unit="page">82-149</citedRange>
                   <citedRange unit="item">29-37</citedRange>
+                  <!-- I do not see any item numbers in the edition itself -->
                </bibl>
             </listBibl>
 
          </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit"><ab>ይትባረክ፡ እግዚአብሔር፡ አምላከ፡ እስራኤል</ab></div>
-            <note>quoted after <ref type="mss" target="ESsdm021"></ref></note>
+            <note>Incipit and explicit are taken from <ref type="mss" corresp="BNFabb107"/></note>
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>ይትባረክ፡ እግዚአብሔር፡ አምላከ፡ እስራኤል፡ አምላከ፡ ሙሴ፡ ወአሮን፡ ነገር፡ ዘ፲ወ፪አርድእት፡ ዘከመ፡ ነገሮሙ፡ ለአርዳኢሁ፡ ቦ፡ ትድኅኑ፡ እመ፡ ኵሉ፡ ኃጢአት፡ ወለእመሂ፡ ንነግረክሙ፡ ንሕነ፡ በዝንቱ፡ ትድኅኑ፡ እመቅሠፍት፡</ab>
+            </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>ሃሌ፡ ሊቃውንት፡ አንተ፡ እግዚ፡ አ፡ ሃሌ፡ አምላከ፡ አማልክት፡ አንተ፡ እግዚ፡ አ፡ ሃሌ፡ ለከ፡ ይደሉ፡ ስብሐት፡ ለዓለም፡ አሜን፡
+                 </ab>
+               </div>
          </div>
-         
          <listRelation>
             <relation name="saws:isVersionOf"
                active="LIT3945ArdeetBE"

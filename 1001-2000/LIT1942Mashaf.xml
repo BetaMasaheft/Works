@@ -4,9 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1" xml:lang="gez">መጽሐፈ፡ መድኃኒት፡</title>
-            <title corresp="#t1" xml:lang="gez" type="normalized">Maṣḥafa madḫānit</title>
-            <title xml:lang="en" corresp="#t1">Book of Pharmacy</title>
+            <title xml:id="t1" xml:lang="am">መጽሐፈ፡ መድኃኒት፡</title>
+            <title corresp="#t1" xml:lang="am" type="normalized">Maṣḥafa madḫānit</title>
+            <title xml:lang="en" corresp="#t1">Book of Medicine</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -35,7 +35,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract>
+            <p>Collection of medical prescriptions in a mixture of Gǝʾǝz and Amharic, which is reported to originate from Jerusalem, attested in
+               <ref type="mss" corresp="BLorient828"/>. It differs from <ref type="work" corresp="LIT7529Madhanit"/> and 
+               <ref type="work" corresp="LIT7530MashafaMad"/>.</p>
+         </abstract>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="am">Amharic</language>
+            <language ident="gez">Gǝʾǝz</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -49,11 +58,53 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-03-21">Added keywords and title</change>
+         <change when="2025-06-12" who="CH">Changed title; Added abstract and disambiguated from LIT7529Madhanit and LIT7530MashafaMad</change>
+         <change when="2025-06-13" who="CH">Updates after reviews by Magdalena Krzyżanowska and Dorothea Reule</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listRelation>
+               <relation name="saws:isDifferentTo" active="LIT1942Mashaf" passive="LIT7529Madhanit"/>
+               <relation name="saws:isDifferentTo" active="LIT1942Mashaf" passive="LIT7530MashafaMad"/>
+               <relation name="dc:relation" active="LIT1942Mashaf#Eye" passive="LIT7531Eye#Eye"><desc>Thematically similar
+                  to other prescriptions to the eye in <ref type="work" corresp="LIT7531Eye#Eye"/>.</desc></relation>
+               <relation name="dc:relation" active="LIT1942Mashaf#Eye" passive="LIT7529Madhanit#Cataract"><desc>Thematically similar
+                  to other prescriptions to the eye in <ref type="work" corresp="LIT7529Madhanit#Cataract"/>.</desc></relation>
+            </listRelation>
+         </div>
+         <div type="edition" xml:lang="am">
+            <note>The division in textparts and the incipits are taken from <ref type="mss" corresp="BLorient828"/> according to the 
+               description in <bibl><ptr target="bm:Wright1877BM"/><citedRange unit="item">CCCC</citedRange>
+                  <citedRange unit="page">324</citedRange></bibl>.</note>
+            <div type="textpart" subtype="chapter" xml:id="Intro">
+               <label>Introduction</label>
+               <ab>ዛቲ፡ መጽሐፈ፡ መድኃኒት፡ ዘውጽአት፡ እምኢየሩሳሌም፡ ለበሽታ፡ ሁሉ፡ ላካላትም፡ ሁሉ፡ በፊት፡ አዋዊወች፡ ሁሉ፡ ያከማቿት፡ ነች፡ ለበሽታ፡ ሁሉ፡ እንድትፈውስ፡</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Hair">
+               <label>Chapter 1 - About growing hair</label>
+               <ab>፩ አንቀጽ፡ ጠጉር፡ የሚያበቅል።</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Grey">
+               <label>Chapter 2 - About grey hair</label>
+               <ab>፪ አንቀጽ፡ ዘሽበት።</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Lasht">
+               <label>Chapter 3 - About the lizard</label>
+               <ab>፫ አንቀጽ፡ ዘላሽት።</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Law">
+               <label>Chapter 4 - About the baldness (?)</label>
+               <ab>፬ አንቀጽ፡ ዘባ<choice resp="MK"><sic>ኃ</sic><corr>ኋ</corr></choice>።</ab>
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Eye">
+               <label>Chapter 5 - About a hair growing in the eye</label>
+               <note>Thematically similar to <ref type="work" corresp="LIT7531Eye#Eye"/> and
+                  <ref type="work" corresp="LIT7529Madhanit#Cataract"/>.</note>
+               <ab>፭ አንቀጽ፡ ዘዓይን፡ ጠጉር፡ እንደያበቅል።</ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>

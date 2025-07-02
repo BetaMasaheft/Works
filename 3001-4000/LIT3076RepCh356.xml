@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to St Philip</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ፊልጶስ፡ ዘደብረ፡ ሊባኖስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Filǝṗṗos za-Dabra Libānos</title>
+            <title corresp="#t1" xml:lang="en">Image of Filǝṗṗos of Dabra Libānos</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +16,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+               
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -49,25 +47,83 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
+         <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="skos:exactMatch" active="LIT3076RepCh356" passive="https://w3id.org/malke/3076/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT3076RepCh356" passive="PRS4108Fileppos"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">356</citedRange>
                </bibl>
+               <bibl><ptr target="bm:Turaiev1908Aaron"/></bibl>
+            
+               <bibl><ptr target="bm:Petros2018Fileppos"/></bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-               እወጥን፡ ስብሐት፡ ለስብሐቲከ፡ ወአስተዋድድ፡ መዝሙረ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">እወጥን፡ ስብሐተ፡ ለስብሐቲከ፡ ወአስተዋድድ፡ መዝሙረ፨</l>
+                  <l n="2">ለቃለ፡ መሰንቆ፡ ጸጋከ፡ እንዘ፡ ይከውኖ፡ አውታረ፨</l>
+                  <l n="3">ተራድአኒ፡ ፊልጶስ፡ እስከ፡ ፍጻሜ፡ ቃል፡ ድኅረ፨</l>
+                  <l n="4">እመሰ፡ ኢፈጸምኩ፡ ወኢኀተምኩ፡ ነገረ፨</l>
+                  <l n="5">ቅድመ፡ ጠቢባን፡ ደቂቅከ፡ ኢይከውን፡ ዝክረ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ መፍቀሬ፡ አምላክ፡ ስሙ፨</l>
+                  <l n="2">በርእሰ፡ ቀዳማይ፡ ፊልጶስ፡ እንተ፡ ነበረ፡ ቀዲሙ፨</l>
+                  <l n="3">ፊልጶስ፡ ሕቱም፡ ለሙሴ፡ በማሕተሙ፨</l>
+                  <l n="4">እስራኤል፡ ሕዝብከ፡ አእላፈ፡ አእዛን፡ ኵሎሙ፨</l>
+                  <l n="5">መና፡ ውዳሴከ፡ በትፍሥሕት፡ ይጥዕሙ፨</l>
+               </lg>
+               <lg type="stanza" n="44">
+                  <l n="1">ሰላም፡ ለመልክእከ፡ እንተ፡ መጽለወ፡ ላሕዩ፨</l>
+                  <l n="2">እስመ፡ ኮነ፡ ሎቱ፡ እምሣዕረ፡ እንስሳ፡ ሲሳዩ፨</l>
+                  <l n="3">ፊልጶስ፡ አቡየ፡ ለወልድከ፡ ንንግር፡ ዕበዩ፨</l>
+                  <l n="4">ዘወለደኒ፡ በጸጋ፡ እስከ፡ በጸጋሁ፡ አሐዩ፨</l>
+                  <l n="5">ውዳሴ፡ ይደሉ፡ ለዕበዩ፨</l>
+               </lg>
+               <lg type="stanza" n="45">
+                  <l n="1">ሰላም፡ ለመልክእከ፡ በአምሳለ፡ ሥኑ፡ ወራእዩ፨</l>
+                  <l n="2">ለክርስቶስ፡ አምላክ፡ ዘአዳም፡ ሥነ፡ ላህዩ፨</l>
+                  <l n="3">ሐረሳዊ፡ ፊልጶስ፡ መላኤ፡ ሥርናይ፡ ውስተ፡ ሙዳዩ፨</l>
+                  <l n="4">አመ፡ ይወፅእ፡ ቃል፡ በግርማሁ፡ ወዕበየ፡ ዕበይ፡ ዕበዩ፨</l>
+                  <l n="5">ፀረ፡ ሕይወትየ፡ ቅትል፡ ወኪያየ፡ አሕዩ፨</l>
+               </lg>
+               <lg type="stanza" n="49">
+                  <l n="1">ሰላም፡ ለመቃብሪከ፡ በመካነ፡ ቅድስት፡ አዕንቆ፨</l>
+                  <l n="2">ለክርስቶስ፡ አምላክ፡ ድኅረ፡ ፈጸምከ፡ ጻህቆ፨</l>
+                  <l n="3">ኦፊልጶስ፡ ጳውሎስ፡ ዘደማስቆ፨</l>
+                  <l n="4">እዜምር፡ ለከ፡ እግዚኦ፡ በልሳነ፡ ሠናይ፡ መሰንቆ፨</l>
+                  <l n="5">እስመ፡ እምአምላክ፡ ኀሠሥከ፡ መንግሥቶ፡ ወጽድቆ፨</l>
+               </lg>
+               <lg type="stanza" n="50">
+                  <l n="1">አመ፡ ትቀውም፡ በሥልጣንከ፡ እግዚአብሔር፡ ፈጣሪ፨</l>
+                  <l n="2">እምዓለመ፡ አበው፡ ቀደምት፡ እስከነ፡ ምጽአትከ፡ ዘደኃሪ፨</l>
+                  <l n="3">ክበደ፡ ጌጋዩ፡ ወንጽሑ፡ እንዘለለ፡ ርእሱ፡ ያጠሪ፨</l>
+                  <l n="4">ኦመሓሪ፡ ወወልደ፡ አምላክ፡ መሓሪ፨</l>
+                  <l n="5">በእንተ፡ ፊልጶስ፡ ረድእ፡ አበሳየ፡ ስሪ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ስብሐት፡ ለከ፡ ኢየሱስ፡ እምአፈ፡ አርድእት፡ ልኡካን፨</l>
+                  <l n="2">ስብሐት፡ ለከ፡ ኢየሱስ፡ እምአፈ፡ ጻድቃን፨</l>
+                  <l n="3">ስብሐት፡ ለከ፡ ኢየሱስ፡ ንጉሠ፡ ግሼና፡ መካን፨</l>
+                  <l n="4">ስብሐት፡ ለከ፡ ኢየሱስ፡ እምአፈ፡ አበው፡ ገዳማውያን፨</l>
+                  <l n="5">ስብሐት፡ ለከ፡ እምአፈ፡ ኄራን፡ ይነግር፡ ስብሐቲከ፡ ፊልጶስ፡ ካህን፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

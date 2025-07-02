@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="en" xml:id="t1">Malkǝʾ-hymn to Our Lord Jesus Christ</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ኢየሱስ፡ ክርስቶስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa ʾIyyasus Krǝstos</title>
+            <title corresp="#t1" xml:lang="en">Image of Jesus Christ</title>
             <editor role="generalEditor" key="AB"/>
             <editor key="MV"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -42,17 +44,81 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </profileDesc>
       <revisionDesc>
          <change who="MV" when="2017-01-18">Created file</change>
+         <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-               አፉየ፡ ተርኅወ፡ ወልሳንየ፡ ተፈትሐ፡ በሰጊድ፡ ወተጋንዮ፡ ሶበ፡ ስመከ፡ ሰብሐ፨ ኢየሱስ፡ ክርስቶስ፡ ትጸግወኒ፡ ርስተ፡ ፍሥሓ፨
-            </ab>
+         <div type="bibliography">
+            <listRelation>
+               <relation name="skos:exactMatch" active="LIT4314Malke" passive="https://w3id.org/malke/4314/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT4314Malke" passive="PRS5684JesusCh"></relation>
+            </listRelation>
+            <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">አፉየ፡ ተርኅወ፡ ወልሳንየ፡ ተፈትሐ፨</l>
+                  <l n="2">በሰጊድ፡ ወተጋንዮ፡ ሶበ፡ ስመከ፡ ስብሐ፨</l>
+                  <l n="3">ኢየሱስ፡ ክርስቶስ፡ ትጸግወኒ፡ ርስተ፡ ፍሥሓ፨</l>
+                  <l n="4">መልዕልተ፡ መስቀል፡ ደመ፡ ገቦከ፡ አንበሐብሐ፨</l>
+                  <l n="5">በርግዘትከ፡ አበሳየ፡ ነጽሐ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ እምዝክረ፡ አማልክት፡ ልዑል፨</l>
+                  <l n="2">ዘኢይረክቦ፡ አምሳል፨</l>
+                  <l n="3">ኢየሱስ፡ ክርስቶስ፡ ዘአብ፡ ቃል፨</l>
+                  <l n="4">ኃጥኣነ፡ ከመ፡ ትቤዙ፡ ዐሪገከ፡ ዲበ፡ መስቀል፨</l>
+                  <l n="5">ለንጊኖስ፡ ረገዘከ፡ በኲናት፡ ስሁል፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለሥዕርተ፡ ርእስከ፡ እምነ፡ ሐሊብ፡ ጸዐዳ፨</l>
+                  <l n="2">ወንጹሕ፡ ጥቀ፡ ለሰልሞን፡ እምበረዳ፨</l>
+                  <l n="3">ኢየሱስ፡ ክርስቶስ፡ ሰራዬ፡ ኀጢአት፡ ፈዳዬ፡ እዳ፨</l>
+                  <l n="4">ረስየኒ፡ ሰርዌ፡ ቤትከ፡ እንተ፡ ትሰመይ፡ ሳይዳ፨</l>
+                  <l n="5">በአምሳለ፡ ያቁም፡ ወበለዝ፡ ለሳሌም፡ አዕማዳ፨</l>
+               </lg>
+               <lg type="stanza" n="51">
+                  <l n="1">ሰላም፡ ለትንሣኤከ፡ እምከርሠ፡ መቃብር፡ ሕቱም፨</l>
+                  <l n="2">ድኅረ፡ መተርዎ፡ በጕድብ፡ ከመ፡ ትንሣኤ፡ ዕፅ፡ ወአም፨</l>
+                  <l n="3">ኢየሱስ፡ ክርስቶስ፡ ትንሣኤ፡ መዋቲ፡ አዳም፨</l>
+                  <l n="4">አንሥአኒ፡ በትንሣኤከ፡ አመ፡ ጊዜ፡ ክቡድ፡ ንዋም፨</l>
+                  <l n="5">ወቁመተ፡ የማን፡ ክፍለኒ፡ ኢይቁም፡ በፅግም፨</l>
+               </lg>
+               <lg type="stanza" n="52">
+                  <l n="1">ሰላም፡ ለዕርገትከ፡ በፍቅደ፡ ዕለታት፡ አርብዓ፨</l>
+                  <l n="2">ድኅረ፡ ተንሣእከ፡ እሙታን፡ ከመ፡ ቃለ፡ መጽሐፍ፡ አይድዐ፨</l>
+                  <l n="3">ኢየሱስ፡ ክርስቶስ፡ እንተ፡ ታጸድቅ፡ ኃጥአ፨</l>
+                  <l n="4">ኣአምን፡ አንሰ፡ ሥላሴከ፡ ወከዊኖተከ፡ ሰብአ፨</l>
+                  <l n="5">በጊዜ፡ ፈቀድከ፡ ትቤዙ፡ በግዐ፨</l>
+               </lg>
+               <lg type="stanza" n="53">
+                  <l n="1">ሰላም፡ ለመጽአትከ፡ በተጽዕኖ፡ ልዕልት፡ ደመና፨</l>
+                  <l n="2">እምፀሓይ፡ ወወርኅ፡ ዘይበርህ፡ ጸዳለ፡ ሥና፨</l>
+                  <l n="3">ኢየሱስ፡ ክርስቶስ፡ ለዓለም፡ ጊዜ፡ ትኴንና፨</l>
+                  <l n="4">አንብረነ፡ ወአሕቅፈነ፡ ለኢየሩሳሌም፡ በሕፅና፨</l>
+                  <l n="5">ከመ፡ እንተ፡ ብእሲት፡ መትሕተ፡ ሕፅና፨</l>
+               </lg>
+               <lg type="stanza" n="54">
+                  <l n="1">ይትባረክ፡ እግዚአብሔር፡ ዘለለ፡ ዕለቱ፡ ወዓሙ፨</l>
+                  <l n="2">እስመ፡ ረስየ፡ ኪያየ፡ ከመ፡ እፈጽም፡ ስብሐተ፡ ስሙ፨</l>
+                  <l n="3">ኢየሱስ፡ ክርስቶስ፡ ለደቂቀ፡ አዳም፡ ኵሎሙ፨</l>
+                  <l n="4">በዝማሕሌተ፡ ስምከ፡ ሶበ፡ ጸለዩ፡ ወኖሙ፨</l>
+                  <l n="5">አበሳቲሆሙ፡ ኅድግ፡ ወአስተሥሪ፡ ሎሙ፨</l>
+               </lg>
+               <lg type="stanza" n="55">
+                  <l n="1">ስብሐት፡ ለከ፡ አምላኪየ፡ በኈልቈ፡ ዕለታት፡ ወዓመታት፨</l>
+                  <l n="2">ስብሐት፡ ለከ፡ አምላኪየ፡ በኈልቈ፡ ጊዜያት፡ ወሰዓት፨</l>
+                  <l n="3">ስብሐት፡ ለከ፡ አምላኪየ፡ በኈልቈ፡ ኵሉ፡ ፍጥረት፨</l>
+                  <l n="4">ስብሐት፡ ለከ፡ አምላኪየ፡ በኈልቈ፡ ፍቅደ፡ ረምል፡ ወከዋክብት፨</l>
+                  <l n="5">ስብሐተ፡ ሥላሴከ፡ መልአ፡ በዓለም፡ ርብዕት፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

@@ -14,9 +14,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                 
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -55,13 +55,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <body>
          <div type="bibliography">
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">323</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
+         <div type="edition"><note>from Chaîne</note>
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
                   አና<choice resp="AD">
@@ -70,17 +71,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   </choice>ኩ፡ ነቢበ፡ ወከሠትኩ፡ አፈ።
                </ab>
             </div>
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-              <ab>
-                አናኅኩ፡ ነፍስየ፡ ወከሠትኩ፡ አፈ። ኤዎስጣቴዎስ፡ እዜኑ፡ ተአምሪከ፡ ትሩፈ። አናብስተ፡ ገዳም፡ መፍርሐን፡ እንዘ፡ ይትለአኩከ፡ ዘልፈ። አሐዱ፡ ዘይጸውር፡ አጽፈ።
-              </ab>
+            <div type="textpart" subtype="stanza" xml:lang="gez"><note>from <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+               <lg type="stanza" n="11">
+                  <l n="1">አናኅኩ፡ ነፍስየ፡ ወከሠትኩ፡ አፈ፨</l>
+                  <l n="2">ኤዎስጣቴዎስ፡ እዜኑ፡ ተኣምሪከ፡ ትሩፈ፨</l>
+                  <l n="3">አናብስተ፡ ግርዳም፡ መፍርሃን፡ እንዘ፡ ይትለአኩከ፡ ዘልፈ፨</l>
+                  <l n="4">አሐዱ፡ ዘይጸውር፡ ዐጽፈ፨</l>
+                  <l n="5">ወካልኡ፡ ክልኤተ፡ መንጸፈ፨</l>
+               </lg>
             </div>
          </div>
          <listRelation>
-           <relation name="ecrm:P129_is_about" active="LIT6200Hymn" passive="PRS3934Ewostate"/>
+            <relation name="ecrm:P129_is_about" active="LIT3043RepCh323" passive="PRS3934Ewostate"/>
+            <relation name="skos:exactMatch" active="LIT3043RepCh323" passive="https://w3id.org/malke/3053/"></relation>
+            <relation name="dcterms:isPartOf" active="LIT3053RepCh333" passive="LIT6201Hymn">
+               <desc>The hymn may be found as part of a collection of hymns to the miracles of ʾEwosṭātewos.</desc>
+            </relation>
 
-           <relation name="dcterms:isPartOf" active="LIT3043RepCh323" passive="LIT6201Hymn">
-             <desc>The hymn may be found as part of a collection of hymns to the miracles of ʾEwosṭātewos.</desc>
+            <relation name="dcterms:isPartOf" active="LIT3043RepCh323" passive="LIT3053RepCh333">
+               <desc>Stanza 11 of LIT3053RepCh333.</desc>
            </relation>
          </listRelation>
       </body>

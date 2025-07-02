@@ -4,8 +4,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1" xml:lang="la">Caeremoniale sacerdotum</title>
+          
+               <title xml:id="t1" xml:lang="la">Caeremoniale sacerdotum</title>
+               <title corresp="#t1" xml:lang="en">Ceremonial of the priests</title>
+            <title xml:id="t2" xml:lang="gez">ንጽሕፍ፡ ዘይደሉ፡ እምሥርዓተ፡ ቅኔ፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">nǝṣḥǝf za-yǝdallu ʾem-śǝrʿāta qǝne</title>
+            <title corresp="#t2" xml:lang="en">Let us write what is fitting from the order of service...</title>
          </titleStmt>
+         
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
@@ -51,20 +57,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-03-28">Updated and added keywords</change>
          <change when="2022-02-16" who="ES">added text from BNFet121 and relation on merging with LIT6564Treatise</change>
+         <change when="2025-05-19" who="MK">added Ethiopic title, bibliography of the incipit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="edition">
+            <note>The incipit is taken from <ref type="mss" corresp="BLadd16205"/>.</note>
            <div type="textpart" subtype="incipit" xml:lang="gez" xml:id="incipit">
               <ab> ዘይደሉ፡ እምሥርዓተ፡ ቅኔ፡ መልእክተ፡ ክህነት፡ ዘይትፈቀድ፡ በውስተ፡ ጸሎታት፡ ወቅዳሴያት፡
               </ab>
            </div>
             <div type="textpart" subtype="incipit" xml:lang="gez">
-               <note>after <ref type="mss" corresp="BNFet121">BNF et 121 , 124r-126v</ref></note><ab>ንጽሕፍ፡ ዘይደሉ፡ እምሥርዓተ፡ ቅኔ፡ መላእክት፡ ዘይትፈቀድ፡ በውስተ፡ ጸሎት፡</ab></div>
+               <note>The incipit is taken from <ref type="mss" corresp="BNFet121">BNF et 121 , 124r-126v</ref></note>
+               <ab>ንጽሕፍ፡ ዘይደሉ፡ እምሥርዓተ፡ ቅኔ፡ መላእክት፡ ዘይትፈቀድ፡ በውስተ፡ ጸሎት፡</ab></div>
          </div>
          <listRelation>
-            
             <relation name="ecrm:CLP46i_may_form_part_of" active="LIT4019Caeremoniale" passive="LIT2317Senodo"/>
             <relation name="betmas:formerlyAlsoListedAs" active="LIT4019Caeremoniale" passive="LIT6564Treatise"></relation>
          </listRelation>

@@ -33,9 +33,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <citedRange unit="item">162</citedRange>
                </bibl>
             </listBibl>
-            <listWit>
-               <witness corresp="BNFabb88"/>
-            </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -47,6 +44,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract><p>
+             The Life of <persName ref="PRS9848Walatta"/>, usually followed by a set of <ref type="work" corresp="LIT7073TammeraW">Miracles</ref>. 
+            Although no manuscript containing only the vita (gadl) has been reported thus far, it is distinguished from the <ref type="work" corresp="LIT7073TammeraW">miracles</ref>, as the set of miracles following the vita can vary. Furthermore, the gadl and miracles are visually and logically distinct.
+         </p></abstract>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -60,6 +61,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="MV" when="2017-11-07">Edited</change>
          <change who="MV" when="2019-03-07">added content</change>
+         <change when="2025-02-06" who="NV">modified file as containing only gadl</change> 
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -88,11 +90,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Papi1943WalattaPetros"/>
                </bibl>
             </listBibl>
+            <listRelation>
+               <relation name="dcterms:isPartOf" active="LIT1509GadlaW" passive="LIT7229DossierWP"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT1509GadlaW" passive="PRS9848Walatta"/>
+            </listRelation>
          </div>
             <div type="edition">
                <div type="textpart" subtype="incipit" xml:id="Introduction">
                   <label>Introduction</label>
-                    
+                  
                </div>
                
                <div type="textpart" subtype="Gadl" xml:id="Gadl">
@@ -102,21 +108,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   </div>
                   
                </div>
-               <div type="textpart" subtype="Taammer" xml:id="Taammer">
-                 
-                  <label>Taʾammǝr</label>
-                  <div type="textpart" subtype="chapter">
-                     <ab/>
-                  </div>
-               </div>
-               <div type="textpart" subtype="hymn" xml:id="hymn">
-                  <label>hymn</label>
-                  <div type="textpart" subtype="chapter">
-                     <ab/>
-                  </div>
-                  
-               </div>
-               
             </div>
 
       </body>

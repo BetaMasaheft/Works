@@ -7,6 +7,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <title xml:id="t1" xml:lang="gez">እሰግድ፡ ለመለኮትከ፡</title>
             <title corresp="#t1" xml:lang="gez" type="normalized">ʾƎsaggǝd la-malakotǝka</title>
             <title corresp="#t1" xml:lang="en">I worship Thy Godhead</title>
+            <title xml:id="t3" xml:lang="gez">መልክአ፡ እግዚአብሔር፡ አብ፡</title>
+            <title corresp="#t3" xml:lang="gez" type="normalized">Malkǝʾa ʾƎgziʾabǝḥer ʾAb</title>
+            <title corresp="#t3" xml:lang="en">Image of God the Father</title>
             <title xml:id="t2" xml:lang="en">Hymn to God</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -17,9 +20,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+               
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -48,19 +51,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
          <change who="DR" when="2017-12-01">Added title and textparts</change>
+         <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="skos:exactMatch" active="LIT3055RepCh335" passive="https://w3id.org/malke/3055/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT3055RepCh335" passive="PRS3697egziabe"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">335</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
+         <div type="edition" xml:lang="gez"><note>from <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">እሰግድ፡ ለመለኮትከ፡ እንተ፡ ፈጠርከ፡ ጽልመተ፨</l>
+                  <l n="2">እምቀድመ፡ ብርሃነ፡ ትግበር፡ ወታሰተባሪ፡ መዓልተ፨</l>
+                  <l n="3">እግዚአብሔር፡ አሐዱ፡ እንተ፡ ኢኮንከ፡ ክልኤተ፨</l>
+                  <l n="4">በስምዕ፡ ይሰምዩከ፡ ሠለስተ፨</l>
+                  <l n="5">እንዘ፡ በመለኮት፡ ዋሕድ፡ ወብሁት፡ አንተ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">እሰግድ፡ ለመለኮትከ፡ ዘሣረርከ፡ ምድረ፨</l>
+                  <l n="2">ለእጓለ፡ እመሕያው፡ ይኩን፡ ወለእንስሳ፡ ማኅደረ፨</l>
+                  <l n="3">እግዚአብሔር፡ ገባሪ፡ ዘእንበለ፡ ትኅሥሥ፡ ምክረ፨</l>
+                  <l n="4">ትጸውር፡ ድደ፡ በኀይልከ፡ እንዘ፡ ትነብር፡ ጠፈረ፨</l>
+                  <l n="5">ወእንዘ፡ ተሐንጽ፡ መሠረተ፡ ትፄዐን፡ ቀመረ፨</l>
+               </lg>
+               <lg type="stanza" n="99">
+                  <l n="1">ስብሐት፡ ለከ፡ እግዚአብሔር፡ ለለ፡ ሠርቀ፡ ዕለት፡ ወለያልይ፨</l>
+                  <l n="2">ስብሐት፡ ለከ፡ እግዚአብሔር፡ በተባርዮ፡ ክረምት፡ ወሐጋይ፨</l>
+                  <l n="3">ስብሐት፡ ለከ፡ እግዚአብሔር፡ በወርኀ፡ መጸው፡ ወጸደይ፨</l>
+                  <l n="4">ስብሐት፡ ለከ፡ እግዚአብሔር፡ በኍልቈ፡ ኵሉ፡ ዘይትረአይ፡ ወኢይትረአይ፨</l>
+                  <l n="5">ስብሐተ፡ ቅድምናከ፡ ዘልፈ፡ ይነግር፡ ሰማይ፨</l>
+               </lg>
+            </div>
+         </div>
+         
+         <div type="edition" xml:id="add16215">
             <note>The text of the first stanza is taken from <ref type="mss" corresp="BLadd16215"/>,
                the first two verses of the remaining stanzae are taken from <ref type="mss" corresp="ESmr001"/>.</note>
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza1">

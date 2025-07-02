@@ -5,6 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Hymn to Jesus Christ</title>
+            <title xml:id="t2" xml:lang="gez">መልክአ፡ መስቀል፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Malkǝʾa Masqal</title>
+            <title corresp="#t2" xml:lang="en">Image of the Cross</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +17,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -48,25 +47,204 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-17">Added keywords and incipit</change>
+         <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="skos:exactMatch" active="LIT3102RepCh382" passive="https://w3id.org/malke/3102/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT3102RepCh382" passive="PRS5684JesusCh"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">382</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ክርስቶስ፡ አምላኪየ፡ ወተስፋየ፡ አንተ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ክርስቶስ፡ አምላኪየ፡ ወተስፋየ፡ አንተ፨</l>
+                  <l n="2">ወእግዝእትየ፡ ማርያም፡ ትስአል፡ ሊተ፨</l>
+                  <l n="3">እምዘ፡ ሐለይኩ፡ ብዙኅ፡ እስከ፡ እጽሕፍ፡ ንስቲተ፨</l>
+                  <l n="4">ከመ፡ ይትኀፈር፡ ርእዮ፡ ድርሳነ፡ መስቀልከ፡ ዘንተ፨</l>
+                  <l n="5">ዘመንፈሰ፡ ቃል፡ ያጠፍእ፡ ወያሜንን፡ ትንቢተ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">በእንተ፡ ሞገሱ፡ ለመስቀልከ፡ ዘተሳተፈ፨</l>
+                  <l n="2">በለኒ፡ ክርስቶስ፡ እንዘ፡ ትከሥት፡ አፈ፨</l>
+                  <l n="3">እምትትፈሣሕ፡ በብዕል፡ እንተ፡ ያፈጥን፡ ኀሊፈ፨</l>
+                  <l n="4">ተፈሣሕሰ፡ ወተኀሠይ፡ ዘልፈ፨</l>
+                  <l n="5">እስመ፡ በሰማይ፡ ስምከ፡ ተጽሕፈ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ ዘኢየኀብር፡ ግዕዘ፨</l>
+                  <l n="2">ምስለ፡ ግዕዘ፡ ባዕዳን፡ ዕፀው፡ እለ፡ ይወልዱ፡ ነቀዘ፨</l>
+                  <l n="3">ለጽሒፈ፡ መስቀል፡ ማሕሌተከ፡ ሐዋዘ፨</l>
+                  <l n="4">ብርዐ፡ ወቀለመ፡ እዴየ፡ አኀዘ፨</l>
+                  <l n="5">ሶበ፡ ከመ፡ ንጉሥ፡ ኪያየ፡ ጻሕቀ፡ ልብየ፡ አዘዘ፨</l>
+               </lg>
+               <lg type="stanza" n="15">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ ዘአስተርአየ፡ ዕበያ፨</l>
+                  <l n="2">በቅድመ፡ ሰብአ፡ ፅርዕ፡ ወግብጽ፡ ወቅድመ፡ ሰብአ፡ ሮም፡ ወአፍራግያ፨</l>
+                  <l n="3">ዕፀ፡ ለውዝ፡ መስቀል፡ ዘኢይትማሰለከ፡ ዕፀ፡ ኢጡያ፨</l>
+                  <l n="4">ሃሌ፡ ሉያ፡ ሃሌ፡ ሉያ፡ ሃሌ፡ ሉያ፨</l>
+                  <l n="5">እስከ፡ ትቤ፡ ንግሥት፡ ታውዶክስያ፨</l>
+               </lg>
+               <lg type="stanza" n="16">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ ዘነኪር፡ ግብሩ፨</l>
+                  <l n="2">እሞገሰ፡ ነቢይ፡ ሙሴ፡ ወለአሮን፡ እምነ፡ ክብሩ፨</l>
+                  <l n="3">ንጉሠ፡ ዕፀዋት፡ መስቀል፡ እለ፡ ኪያከ፡ ነጸሩ፨</l>
+                  <l n="4">ለሳብዕ፡ ወርኅ፡ አመ፡ ዓሡሩ፨</l>
+                  <l n="5">በጸናጽል፡ ፍጹመ፡ ዘመሩ፨</l>
+               </lg>
+               <lg type="stanza" n="17">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ ዘያስተፌሥሕ፡ እምወይን፨</l>
+                  <l n="2">ወዘያጸንዕ፡ እምእክል፡ ኀይለ፡ ድኩማን፨</l>
+                  <l n="3">እሴፈወከ፡ መስቀል፡ ማዕተበ፡ ኪዳን፨</l>
+                  <l n="4">ከመ፡ ንርከብ፡ መክፈልተ፡ ወርስተ፡ ውስተ፡ በአቶሙ፡ ለቅዱሳን፨</l>
+               </lg>
+               <lg type="stanza" n="18">
+                  <l n="1">ሰላም፡ ሰላም፡ ለሞገስከ፡ ዘይሤኒ፨</l>
+                  <l n="2">እሞገሰ፡ ቄድሮስ፡ ወዕፀ፡ አቃኒ፨</l>
+                  <l n="3">ረድኤተ፡ ቈስጠንጢኖስ፡ መስቀል፡ ወዘወላዲቱ፡ እሌኒ፨</l>
+                  <l n="4">ጽብኦሙ፡ ለጸላእትየ፡ እለ፡ ይጽብኡኒ፨</l>
+                  <l n="5">ከመ፡ ጸባእኮ፡ ለፈርዖን፡ በጣኒ፨</l>
+               </lg>
+               <lg type="stanza" n="24">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ እንተ፡ ነጸሮ፡ ወንዕዶ፨</l>
+                  <l n="2">ዐርከ፡ ገጣሪ፡ አብርሃም፡ በዕለተ፡ ሦዐ፡ ወልዶ፨</l>
+                  <l n="3">ተቅዋመ፡ ማኅቶቱ፡ መስቀል፡ ለዘካርያስ፡ ዘሐዶ፨</l>
+                  <l n="4">ዘክሕደ፡ ኪያከ፡ ሶበ፡ ምክረ፡ ሰይጣን፡ አዕበዶ፨</l>
+                  <l n="5">በሥላሴሁ፡ ለክርስቶስ፡ ክሕዶ፨</l>
+               </lg>
+               <lg type="stanza" n="25">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ ማኅበረ፡ እስራኤል፡ በኍልቍ፨</l>
+                  <l n="2">እንተ፡ ነጸርዎ፡ በወርኀ፡ ኃምስ፡ ኵርያቍ፨</l>
+                  <l n="3">ዕፀ፡ ሥን፡ መስቀል፡ ቢጸ፡ ሰንሰሪቍ፨</l>
+                  <l n="4">ይሤኒ፡ ሞገስከ፡ እምዕፀ፡ ጳውቄና፡ ወህቍ፨</l>
+                  <l n="5">እምነ፡ አእባን፡ ከመ፡ ይሤኒ፡ ዕንቍ፨</l>
+               </lg>
+               <lg type="stanza" n="30">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ ዘእግዚአብሔር፡ አዕበዮ፨</l>
+                  <l n="2">ኀበ፡ ኢይበጽሕ፡ እግረ፡ ኀልዮ፨</l>
+                  <l n="3">ዕፀ፡ መድኃኒት፡ ወቤዛ፡ መስቀል፡ ዘቀራንዮ፨</l>
+                  <l n="4">ረድኤትከ፡ ያስተርኢ፡ ከመ፡ ለዳዊት፡ ተርእዮ፨</l>
+                  <l n="5">በዓመተ፡ ሞተ፡ ውስተ፡ ጸብእ፡ ኦርዮ፨</l>
+               </lg>
+               <lg type="stanza" n="31">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ በአምሳለ፡ ሥሙር፡ ወልታ፨</l>
+                  <l n="2">ዘይኬልላ፡ በስብሐት፡ ለለ፡ ይጸብሕ፡ ሳኒታ፨</l>
+                  <l n="3">ያፈቅረከ፡ ልብየ፡ መስቀል፡ ዘጎልጎታ፨</l>
+                  <l n="4">ከመ፡ ያፈቅሮን፡ ክርስቶስ፡ ለአሐተ፡ አልዐዛር፡ መንታ፨</l>
+                  <l n="5">ዘአስማቲሆን፡ ማርያ፡ ወማርታ፨</l>
+               </lg>
+               <lg type="stanza" n="34">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ ዘእደ፡ ሳሙኤል፡ ገለፋ፨</l>
+                  <l n="2">መልዕልተ፡ አቤኔዜር፡ እብነ፡ መሴፋ፨</l>
+                  <l n="3">መስቀለ፡ ኢየሱስ፡ ክርስቶስ፡ ሞገሰ፡ መስቀሉ፡ ለኬፋ፨</l>
+                  <l n="4">ኢያጠፍእዋ፡ እምኅሊናየ፡ ማያተ፡ አቦና፡ ወፈርፋ፨</l>
+                  <l n="5">በላህበ፡ ፍቅርከ፡ ዘእሳት፡ ክንፋ፨</l>
+               </lg>
+               <lg type="stanza" n="35">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ ወለክብርከ፡ ሱታፉ፨</l>
+                  <l n="2">ዘአስተብፅዖ፡ ጳውሎስ፡ መምህረ፡ ቂልቅያ፡ ወጳፉ፨</l>
+                  <l n="3">ኪያከ፡ መስቀል፡ ለመልክአ፡ ብእሲ፡ በጽንፉ፨</l>
+                  <l n="4">ሶበ፡ ይኔጽር፡ ሰይጣን፡ ከመ፡ የሐምም፡ ለዝሉፉ፨</l>
+                  <l n="5">በሲኖዶሶሙ፡ ሐዋርያት፡ ጸሐፉ፨</l>
+               </lg>
+               <lg type="stanza" n="36">
+                  <l n="1">ሰላም፡ ሰላም፡ ለሞገስከ፡ ኮቶሊካ፨</l>
+                  <l n="2">እምኀያላነ፡ ሞት፡ ወሲኦል፡ እንተ፡ ትትካፈል፡ ምህርካ፨</l>
+                  <l n="3">ጸግወኒ፡ መስቀል፡ እንዘ፡ ትብል፡ ህንካ፨</l>
+                  <l n="4">ሞገስከ፡ ሞገሰ፡ ጽድቅ፡ ወረድኤትከ፡ ተውሳካ፨</l>
+                  <l n="5">ለቀትረ፡ ሕይወትየ፡ ዛቲ፡ ቅድመ፡ ይብጻሕ፡ ሰርካ፨</l>
+               </lg>
+               <lg type="stanza" n="37">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ ለእግዚአብሔር፡ ዐተባ፨</l>
+                  <l n="2">ለዘመነ፡ ትንቢት፡ ዐባይ፡ በዕለተ፡ ተፈጸመ፡ ምግባ፨</l>
+                  <l n="3">በዓርበ፡ ፋሲካ፡ መስቀል፡ አመ፡ ቆምከ፡ ውስተ፡ መርኅባ፨</l>
+                  <l n="4">በከየት፡ ፈድፋደ፡ ምስለ፡ እስራኤል፡ ሕዝባ፨</l>
+                  <l n="5">ርስተ፡ ኃጢአት፡ ዘስማ፡ ሐሊባ፨</l>
+               </lg>
+               <lg type="stanza" n="38">
+                  <l n="1">ሰላም፡ ሰላም፡ ለሞገስከ፡ እብላ፨</l>
+                  <l n="2">እሞገሰ፡ ጻድቃን፡ ኵሉ፡ ዘእግዚአብሔር፡ አልዐላ፨</l>
+                  <l n="3">ኦመስቀል፡ ዕፀ፡ ፍሥሓ፡ ወተድላ፨</l>
+                  <l n="4">መነኑከ፡ እፎ፡ ከመ፡ ይሜንኑ፡ ገደላ፨</l>
+                  <l n="5">ቀተልተ፡ ነቢያት፡ ሐሊባ፡ ወሐላ፨</l>
+               </lg>
+               <lg type="stanza" n="39">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ ለገራህተ፡ ዓለም፡ በምልኡ፨</l>
+                  <l n="2">በአምሳለ፡ ኅጠት፡ ዘልህቀ፡ ወዘተለዐለ፡ ዘርኡ፨</l>
+                  <l n="3">ዕፀ፡ ቅድሳት፡ መስቀል፡ ለቍርባነ፡ ወንጌል፡ ምሥዋዑ፨</l>
+                  <l n="4">ጥቀ፡ ገፍዕዎሙ፡ ለእለ፡ ኪያከ፡ ገፍዑ፨</l>
+                  <l n="5">አስባስያኖስ፡ ወጢጦስ፡ ካልኡ፨</l>
+               </lg>
+               <lg type="stanza" n="52">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ በሠርቀ፡ ወርኀ፡ ጽርዕ፡ ኤጳፍሊ፨</l>
+                  <l n="2">ዘእግዚአብሔር፡ ይቤላ፡ ብሔረ፡ ግብጽ፡ ፍክሊ፨</l>
+                  <l n="3">በትረ፡ ኀይል፡ መስቀል፡ ሞገሰ፡ ዐዚዝ፡ ቴዎፍሊ፨</l>
+                  <l n="4">ሠርዎሙ፡ ለአፅራርየ፡ እንበለ፡ ትፍልጥ፡ ወትፍሊ፨</l>
+                  <l n="5">በከመ፡ ሠረውዎ፡ ምስለ፡ ወልዱ፡ ለሳኦል፡ ኢሎፍሊ፨</l>
+               </lg>
+               <lg type="stanza" n="53">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ ዘኢይፌጽሞ፡ ፍካሬ፨</l>
+                  <l n="2">ከመ፡ ሱራሬሃ፡ ሐዋዝ፡ ለዐባይ፡ ድብታሬ፨</l>
+                  <l n="3">ሠናየ፡ መዐዛ፡ መስቀል፡ እመዐዛ፡ ቀንሞስ፡ ወዕፀ፡ ፐፒሬ፨</l>
+                  <l n="4">አህጕሎሙ፡ ለአፅራርየ፡ እንተ፡ ኢያድምዑ፡ ኅሬ፨</l>
+                  <l n="5">ከመ፡ እስራኤል፡ ተሀጕሉ፡ በካሕዱ፡ ለቆሬ፨</l>
+               </lg>
+               <lg type="stanza" n="68">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ በስብሐተ፡ አፍአ፡ ወውሣጤ፨</l>
+                  <l n="2">እምኀበ፡ መላእክት፡ አእላፍ፡ ዘይሴባሕ፡ በፊልሙንጤ፨</l>
+                  <l n="3">ዕፀ፡ ፋሲካ፡ መስቀል፡ ሞገሰ፡ በዓላት፡ ጰንጠቈስጤ፨</l>
+                  <l n="4">ይሤኒ፡ ሥነ፡ ሞገስከ፡ እምሥነ፡ ዕንቍ፡ አካጤ፨</l>
+                  <l n="5">ወእምሥነ፡ ሐዋዝ፡ ዕፀ፡ ትንቢት፡ ዘስሙ፡ ኤላጤ፨</l>
+               </lg>
+               <lg type="stanza" n="69">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ ለእሌኒ፡ ዘአጽሀቃ፨</l>
+                  <l n="2">እስከ፡ ረከበተከ፡ መስቀል፡ ተነ፡ ጢስ፡ ዕጣን፡ ኀበ፡ አጠየቃ፨</l>
+                  <l n="3">ወማዕተበ፡ አርባዕ፡ ከዋክብት፡ ጽላሎተ፡ ዚአከ፡ ማእከለ፡ ጣቃ፨</l>
+                  <l n="4">ቈስጠንጢኖስ፡ ርእየ፡ ነዊሞ፡ ለማየ፡ ባዶስ፡ በሐይቃ፨</l>
+                  <l n="5">ምስለ፡ ዘላዕሌሆን፡ መጽሐፍ፡ እንተ፡ ይብል፡ ጦንጢቃ፨</l>
+               </lg>
+               <lg type="stanza" n="70">
+                  <l n="1">ሰላም፡ ሰላም፡ ለሞገስከ፡ ትሩፍ፨</l>
+                  <l n="2">እሞገሰነገድ፡ ዘቦኡ፡ ባሕረ፡ ሳፍ፨</l>
+                  <l n="3">በአምሳለ፡ ዚአከ፡ መስቀል፡ ተንከተመ፡ ሰኑይ፡ አጽዳፍ፨</l>
+                  <l n="4">በርእስ፡ ወበዘነብ፡ ወክልኤ፡ አክናፍ፨</l>
+                  <l n="5">እንበለ፡ ይትመስቀል፡ ኢይሰርር፡ ዖፍ፨</l>
+               </lg>
+               <lg type="stanza" n="71">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ ዘኢይትዔረዮ፡ ሐኖስ፨</l>
+                  <l n="2">ወዘየሐፅፅ፡ ቅድሜሁ፡ ባሕረ፡ ውቅያኖስ፨</l>
+                  <l n="3">ኢይትማሰለከ፡ መስቀል፡ ጽጌ፡ ሴፎኖስ፨</l>
+                  <l n="4">ወዘይሄሉ፡ ካዕበ፡ ላዕለ፡ ደብረ፡ ራእይ፡ ማኖስ፨</l>
+                  <l n="5">ምሥⷃዐ፡ በግዕ፡ እሑር፡ ዕፀ፡ ሥን፡ አብኖስ፨</l>
+               </lg>
+               <lg type="stanza" n="72">
+                  <l n="1">ሰላም፡ ለሞገስከ፡ ዘእግዚአብሔር፡ ባረኮ፨</l>
+                  <l n="2">በከመ፡ ዜነዉነ፡ ዜና፡ እለ፡ ርእዩ፡ ሕዝበ፡ አምልኮ፨</l>
+                  <l n="3">እንዘ፡ በአየራት፡ ትቀውም፡ መስቀለ፡ አምላክ፡ እንበለ፡ አስምኮ፨</l>
+                  <l n="4">በደሴተ፡ ቆጵሮስ፡ ዘየዐውዳ፡ ባሕረ፡ ኢያሪኮ፨</l>
+                  <l n="5">ታስተርኢ፡ እስከ፡ ዮም፡ ወትሴወር፡ አኮ፨</l>
+               </lg>
+               <lg type="stanza" n="73">
+                  <l n="1">ሰላም፡ ሰላም፡ ለሞገስከ፡ መራን፨</l>
+                  <l n="2">ዘይነብር፡ ቦቱ፡ ሞገሰ፡ መስቀል፡ ብርሃን፨</l>
+                  <l n="3">ይደልወከ፡ መስቀል፡ ጠረጴዛ፡ ክርስቶስ፡ ቍርባን፨</l>
+                  <l n="4">እምአፈ፡ እሊአከ፡ ኵሉ፡ በውስተ፡ ኵሉ፡ መካን፨</l>
+                  <l n="5">ስብሐት፡ ወክብር፡ ወሰጊድ፡ ወአሚን፨</l>
+                  <l n="6">ለዓለም፡ ወለዓለመ፡ ዓለም፡ አሜን፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

@@ -22,6 +22,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </availability>
          </publicationStmt>
          <sourceDesc>
+            <listWit>
+               <witness corresp="EMML4166">Collegeville, Hill Museum and Manuscript Library, MS EMML no. 4166, fol. 7r-34v</witness>
+               <witness corresp="EMML4346">Collegeville, Hill Museum and Manuscript Library, MS EMML no. 4346, fol. 24v-45v</witness>
+            </listWit>
+         </sourceDesc>
+         <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
@@ -34,12 +40,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Theology"/>
                <term key="Homily"/>
+               <term key="Apocrypha"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -48,15 +58,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-15" who="ES">keywords relation</change>
+         <change when="2024-12-30" who="MKr">added incipit, witnesses, keyword</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
+      
       <body>
+         <div xml:lang="gez" type="edition">
+            <note>The incipit is taken from <ref type="mss" corresp="EMML4346"/>.</note>
+            <div type="textpart" subtype="incipit">
+               <ab xml:lang="gez">ብስራተ፡ አብ፡ እግዚአብሔር፡ መሐሪ፡ ዘአስምዓ፡ አብ፡ ቃሎ፡ አመ፡ ኮነ፡ ስምዓ፡ ለወልዱ፡ ላዕለ፡ ዮርዳኖስ። ወበኂሩተ፡ እግዚአብሔር፡ ወልዱ፡ በጸጋ፡ እግዚአብሔር፡
+                  መንፈስ፡ ቅዱስ፡ ዘርእዮ፡ ከመ፡ ርግብ፡ ውስተ፡ መቃብራት፡ ጊዜ፡ ሙራዱ። ንጽሕፍ፡ ዜና፡ ድንግልናሁ፡ ወእበየ፡ <choice><sic>ቅዱሳኒሁ፡ </sic><corr>ቅድስናሁ፡</corr></choice> ለዮሐንስ፡ አምዱ፡ እኂዘነ፡ እምጊዜ፡ ጽንሰቱ፡ እስከ፡ ጊዜ፡ ሙላዱ። <gap reason="omitted"></gap>
+               ድርሳን፡ ዘይትነበብ፡ በበዓለ፡ ልደቱ፡ ለዮሐንስ፡ መጥምቅ፡ <gap reason="omitted"></gap> እግዚአብሔር፡ ሀበኒ፡ ልሳነ፡ ጥበብ፡ ከመ፡ አአምር፡ ዘእነብብ፡ በእንተ፡ ጽንሰቱ፡ ለቅዱስ፡ ዮሐንስ፡ ካህን፡ ወነቢይ፡ ድንግል፡ ወሰማዕት፡</ab>
+            </div>
+         </div>
+                
+         
          <listRelation>
             <relation name="ecrm:P129_is_about" active="LIT2136OntheN" passive="PRS5741Johnthe"/>
-            <relation name="saws:isAttributedToAuthor" active="LIT2136OntheN" passive="PRS5720JohnChr"/>
-         </listRelation>
-         <ab/>
+            <relation name="betmas:formerlyAlsoListedAs" active="LIT2136OntheN" passive="LIT1658Homily"/>
+           </listRelation>
+         
       </body>
    </text>
 </TEI>

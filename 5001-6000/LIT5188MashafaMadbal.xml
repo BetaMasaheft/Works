@@ -42,7 +42,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         <profileDesc>
             <creation/>
             <abstract>
-                <p>The work appears to be the Biblical history turned into verses.</p>
+                <p>The work is a versified retelling of the <ref type="work" corresp="LIT3530OldTes">Old Testament</ref>, the Little Gospel (<ref type="work" corresp="LIT2051Nagara">Nagara Māryām</ref>), and the <ref type="work" corresp="LIT2072NewTes">New Testament</ref> preserved in two lavishly illustrated volumes donated by ʾIyāsu II to the church of Dabra Bǝrhān Śǝllāse. It begins with a prose incipit: “በስመ፡ … ንዌጥን፡ በረድኤተ፡ እግዚአብሔር፡ ወንጽሕፍ፡ መጽሐፈ፡ መድበል፡ ዘበትርጓሜሁ፡ ጉባኤ፡ ምሥጢራተ፡ ዘመናት፡ ዘገብረ፡ እግዚአብሔር፡ በበ፡ ጊዜሁ፡ ቅድመ፡ በዘመነ፡ ብሉይ፡ እስከ፡ ይመጽእ፡ ዘመነ፡ ሐዲስ፡.” The first volume covers the Old Testament and Little Gospel and the second covers the New Testament.</p>
+                
             </abstract>
             <textClass>
                 <keywords>
@@ -57,18 +58,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <change when="2020-10-20" who="DE">Added textparts and relations.</change>
             <change when="2020-11-12" who="DE">Corrected relations and added
               relations descriptions.</change>
+            <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
+            <listBibl type="editions">                
+                <bibl><ptr target="bm:MgWebsite"/></bibl>
+            </listBibl>
           <listRelation>
+              <relation name="skos:exactMatch" active="LIT5188MashafaMadbal" passive="https://w3id.org/malke/5188/"></relation>
             <relation name="saws:hasUsed" active="LIT5188MashafaMadbal#PartI"
               passive="LIT3530OldTes"><desc>Mǝśṭira zaman bǝluy contains a paraphrase
             of the Old Testament and its Apocrypha in verses.</desc></relation>
             <relation name="saws:hasUsed" active="LIT5188MashafaMadbal#PartII"
                 passive="LIT2072NewTes"><desc>Mǝśṭira zaman ḥaddis contains a paraphrase
               of the New Testament and its Apocrypha in verses.</desc></relation>
-              <relation name="saws:hasUsed" active="LIT5188MashafaMadbal#OldTestament"
+              <relation name="saws:hasUsed" active="LIT5188MashafaMadbal#OT"
                 passive="LIT3530OldTes"></relation>
             <relation name="saws:hasUsed" active="LIT5188MashafaMadbal#FourGospels"
                     passive="LIT1560Gospel"></relation>
@@ -88,7 +94,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     <div type="textpart" subtype="introduction" xml:lang="gez" xml:id="IntroductionI">
                         <label xml:lang="en">Introduction to the first part</label>
                     </div>
-                    <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="OldTestament">
+                    <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="OT">
                       <label xml:lang="en">The Old Testament and its Apocrypha in verses</label>
                     </div>
                     <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HistoryOfMary">
@@ -123,6 +129,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
 
 
             </div>
+            
+            <div type="edition" xml:lang="gez"><note>From <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+                <div type="textpart" xml:id="malke">
+                    <lg type="stanza" n="1">
+                        <l n="1">ሰላም፡ እብል፡ ለተዋሕዶ፡ ቅድስት፡ ሥላሴ፨</l>
+                        <l n="2">ቀዊምየ፡ ቅድመ፡ ሥላሴ፨</l>
+                        <l n="3">እንበለ፡ ናፍቆ፡ ኣአምን፡ ህላዌ፡ ሥላሴ፨</l>
+                        <l n="4">ግጻዌሆሙ፡ ሥላሴ፡ ወአካሎሙ፡ ሥላሴ፨</l>
+                        <l n="5">ወቅዳሴሆሙ፡ ከማሁ፡ ሥላሴ፨</l>
+                    </lg>
+                    <lg type="stanza" n="2">
+                        <l n="1">ለዘአኀዝኩ፡ ወወጠንኩ፡ እንዘ፡ አስተናሥእ፡ ቃለ፨</l>
+                        <l n="2">ጽሒፈ፡ አሐዱ፡ ጸሎት፡ እንተ፡ ይሰመይ፡ መድበለ፨</l>
+                        <l n="3">አዘቅተ፡ ኂሩት፡ ሥላሴ፡ ትፈለፍሉ፡ ሣህለ፨</l>
+                        <l n="4">አዕርጉኒ፡ ለገብርክሙ፡ ሰማየ፡ አእምሮ፡ ልዑለ፨</l>
+                        <l n="5">ወጸሐፉ፡ በልብየ፡ ዘጥበብ፡ ፊደለ፨</l>
+                    </lg>
+                    <lg type="stanza" n="99">
+                        <l n="1"/>
+                    </lg>
+                </div>
+            </div>
+            
         </body>
     </text>
 </TEI>

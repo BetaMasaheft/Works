@@ -4,7 +4,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to the innocent saints</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ሕፃናት፡ ቅዱሳን፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Ḥǝḍānāt Qǝddusān</title>
+            <title corresp="#t1" xml:lang="en">Image of the Holy Innocents</title>
+            <title xml:id="t2">Malkǝʾ-hymn to the innocent saints</title>
+            <editor key="AD"></editor>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,9 +18,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -45,6 +49,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-02">Added keywords and incipit</change>
+         <change who="ES" when="2024-11-01">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -55,15 +60,71 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">31</citedRange>
                </bibl>
+               <bibl>
+                  <ptr target="bm:Chaine1913Rep"/>
+                  <citedRange unit="item">101</citedRange>
+               </bibl>
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
             </listBibl>
+            <listRelation><relation name="skos:exactMatch" active="LIT2747RepCh31" passive="https://w3id.org/malke/2747/"></relation></listRelation>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለስምክሙ፡ ዘፍትው፡ ዝክሩ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለስምክሙ፡ ዘፍትው፡ ዝክሩ፨</l>
+                  <l n="2">ወለሥዕርትክሙ፡ ሰላም፡ ዘሕብረ፡ ሜላት፡ ሕብሩ፨</l>
+                  <l n="3">ሕፃናት፡ ቅዱሳን፡ ለዘጸውዓክሙ፡ መንገለ፡ ክብሩ፨</l>
+                  <l n="4">ግሩም፡ ግብርከ፡ ይበልዎ፡ ሕዝበ፡ ቤተ፡ ልሄም፡ ሀገሩ፨</l>
+                  <l n="5">ለእጓለ፡ እመ፡ ሕያውሂ፡ መንክሮ፡ ይንግሩ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለርእስክሙ፡ ዘተሳለቅዎ፡ ሐራ፨</l>
+                  <l n="2">ወለገጽክሙ፡ ኅትው፡ ማኅቶተ፡ ተቅዋም፡ ክብረ፡ ይብደራ፨</l>
+                  <l n="3">ሕፃናት፡ ቅዱሳን፡ ለእንተ፡ ተወልደት፡ እምቤተ፡ ቅስራ፨</l>
+                  <l n="4">በእንተ፡ መንግሥቱ፡ ለእግዚአብሔር፡ በኵራ፨</l>
+                  <l n="5">መንክር፡ ላዕሌክሙ፡ ዘበጽሐ፡ መክራ፨</l>
+               </lg>
+               <lg type="stanza" n="24">
+                  <l n="1">ሰላም፡ ለፀአትክሙ፡ እምቤተ፡ ሥጋ፡ በነፍስ፨</l>
+                  <l n="2">ወለበድንክሙ፡ ግዱፍ፡ ውስተ፡ መርኅበ፡ ሳሌም፡ ቍድስ፨</l>
+                  <l n="3">ሕፃናት፡ ዕሡራን፡ ለከብካበ፡ መንግሥት፡ ሐዳስ፨</l>
+                  <l n="4">በአክሊለ፡ ጸጋ፡ ለዘዚአክሙ፡ ርእስ፨</l>
+                  <l n="5">ክልልዎ፡ ኃይላቲሁ፡ ለጥሕድ፡ ክርስቶስ፨</l>
+               </lg>
+               <lg type="stanza" n="25">
+                  <l n="1">ሰላም፡ ለግንዘትክሙ፡ በእደ፡ መላእክት፡ ኄራን፨</l>
+                  <l n="2">ለመቃብሪክሙሂ፡ ኢየሩሳሌም፡ መካን፨</l>
+                  <l n="3">ሕፃናት፡ ማሕሌተ፡ ምስለ፡ ድምፀ፡ መጥቅዕ፡ ወቀርን፨</l>
+                  <l n="4">ያቄርቡ፡ ለክብርክሙ፡ ካህናተ፡ ዘይብል፡ ብፅዓን፨</l>
+                  <l n="5">ወባረከ፡ ዓመተ፡ ጻድቃኑ፡ ንዑ፡ ንትፈሣሕ፡ ዮም፡ በበዓሎሙ፡ ለቅዱሳን፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke" corresp="LIT2817RepCh101">
+               <label>Tarafa malkǝʾ</label>
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለክሙ፡ ለርስተ፡ ቅዱሳን፡ ክርስቶስ፡ ወሀገረ፡ አበው፡ ጻድቃን፨</l>
+                  <l n="2">ተዋርሶቶ፡ በክብር፡ ሕፃናት፡ ኄራን፨</l>
+                  <l n="3">አድማዕክሙ፡ ቅድመ፡ ዘመን፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለክሙ፡ ወልደ፡ ዐመፃ፡ ሄሮድስ፡ መዐርገ፡ ሐራ፡ ለክሙ፨</l>
+                  <l n="2">እንዘ፡ ሕፃናት፡ ይመስል፡ ዘይሁበክሙ፨</l>
+                  <l n="3">ለሞት፡ ጸውዐክሙ፨</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለክሙ፡ ዜና፡ ክብርክሙ፡ እጽሕፍ፡ ሕፃናት፡ በሰሌዳ፡ ንባብ፡ ወሪቅ፨</l>
+                  <l n="2">ፍና፡ መርሐኒ፡ ወነገረ፡ ጽድቅ፨</l>
+                  <l n="3">ዮሐንስ፡ ልሳነ፡ ወርቅ፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለክሙ፡ ሄሮድስ፡ እንዘ፡ ትሰክይዎ፡ ወትረ፨</l>
+                  <l n="2">ኵሎ፡ ዓለመ፡ ኀበ፡ ዘገብረ፨</l>
+                  <l n="3">ማሕፀንትክሙ፡ ዘኮነኒ፡ ፀረ፨</l>
+                  <l n="4">ሕፃናት፡ ስክዩ፡ ኅቡረ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

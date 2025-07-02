@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to St Justus</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ዮስጦስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Yosṭos</title>
+            <title corresp="#t1" xml:lang="en">Image of Justus (Giusto da Urbino)</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +16,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                 
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -37,8 +35,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+         <abstract><p>Composed for — or perhaps by — the Italian Catholic missionary <persName ref="PRS9683Urbino">Giusto da Urbino (1814–1856)</persName>, who called himself “ʾAbbā Yosṭos” in Gǝʿǝz. He sent the only known copy, part of an assembly of loose paper gatherings, to Antoine d’Abbadie prior to his death.</p></abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
-         <textClass>
+         <textClass>            
             <keywords scheme="#ethioauthlist">
                <term key="Poetry"/>        
                <term key="ChristianLiterature"/>
@@ -49,25 +48,80 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-15">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-10">Added the text, title, relations and bibl (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               
+               <relation name="ecrm:P129_is_about" active="LIT2880RepCh161" passive="PRS9683Urbino"></relation>
+               <relation name="skos:exactMatch" active="LIT2880RepCh161" passive="https://w3id.org/malke/2880/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">161</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምከ፡ ዘኍልቈ፡ ፊደሉ፡ ክልኤቱ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ዘኍልቈ፡ ፊደሉ፡ አርባዕቱ፨</l>
+                  <l n="2">ወጥዑመ፡ ልሳን፡ ዝንቱ፡ መዝገበ፡ ሃይማኖት፨</l>
+                  <l n="3">ዮስጦስ፡ ወመዝገበ፡ ምግባር፡ ክልኤቱ፨</l>
+                  <l n="4">አነሂ፡ ውዳሴከ፡ ከመ፡ እፈጽም፡ እፈቱ፨</l>
+                  <l n="5">ባሕቱ፡ ውዳሴከ፡ ብዙኅ፡ ውእቱ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለሥዕርተ፡ ርእስከ፡ ቅብዓ፡ መንፈስ፡ ቅዱስ፡ ቅቡዕ፨</l>
+                  <l n="2">ወዕፍረተ፡ ጽጋ፡ ምሉዕ፨</l>
+                  <l n="3">ዮስጦስ፡ ስቴ፡ ዮስጦስ፡ መብልዕ፨</l>
+                  <l n="4">ዮስጦስ፡ ልብከ፡ ሞገሰ፡ ብዙኃን፡ ሰብእ፨</l>
+                  <l n="5">ምዑዘ፡ ምግባር፡ ዮስጦስ፡ ምሥዋዕ፨</l>
+               </lg>
+               <lg type="stanza" n="17">
+                  <l n="1">ሰላም፡ ለክሳድከ፡ አምሳለ፡ ማኅፈዱ፡ ለዳዊት፨</l>
+                  <l n="2">በከመ፡ ይቤ፡ ሰሎሞን፡ በመሀልዩ፡ ክሡት፨</l>
+                  <l n="3">ኢናበውሐ፡ ለትምሀር፡ ለኢትዮጵያ፡ ብእሲት፨</l>
+                  <l n="4">በላዕለ፡ ሮምያ፡ ብእሲ፡ ከመ፡ ኢትመብል፡ ትካት፨</l>
+                  <l n="5">እስመ፡ በሮምያ፡ ሀለወ፡ ዮስጦስ፡ ማኅቶት፨</l>
+               </lg>
+               <lg type="stanza" n="25">
+                  <l n="1">ሰላም፡ ለአፃብዒከ፡ እኂዞተ፡ ብርዕ፡ ዘአሠነያ፨</l>
+                  <l n="2">አመ፡ ጸሐፍከ፡ አንተ፡ መጽሐፈ፡ አምሳል፡ ወአርአያ፨</l>
+                  <l n="3">ሰባኬ፡ ወንጌል፡ ዘኮንከ፡ ዮስጦስ፡ ሐዋርያ፨</l>
+                  <l n="4">ሲሳየ፡ አእምሮ፡ ወሀብከ፡ ለሕዝበ፡ ኢትዮጵያ፨</l>
+                  <l n="5">እስመ፡ አንተ፡ እምቀዳሚ፡ ለዓለም፡ ሲሳያ፨</l>
+               </lg>
+               <lg type="stanza" n="35">
+                  <l n="1">ሰላም፡ ለአእጋሪከ፡ ዘኢረከቦን፡ ድካም፨</l>
+                  <l n="2">እንዘ፡ ይመጽአ፡ ቅድመ፡ ለኢትዮጵያ፡ እምሮም፨</l>
+                  <l n="3">አፈቅረከ፡ ዮስጦስ፡ እንበለ፡ መሥፈርት፡ ወዓቅም፨</l>
+                  <l n="4">አኮኑ፡ ተጽሕፈ፡ ፍቅረ፡ ዚአከ፡ ቀለም፨</l>
+                  <l n="5">በሰሌዳ፡ ልብየ፡ ዘልፈ፡ ዘጥቀ፡ አዳም፨</l>
+               </lg>
+               <lg type="stanza" n="40">
+                  <l n="1">ሰላም፡ ለመልክእከ፡ በአርአያ፡ አዳም፡ ቀዳማዊ፨</l>
+                  <l n="2">ወበአርአያ፡ ክርስቶስ፡ ደኃራዊ፨</l>
+                  <l n="3">ኢይትሌለየከ፡ አነ፡ ዮስጦስ፡ ሮማዊ፨</l>
+                  <l n="4">ወኢይትሌለዩከ፡ ካዕበ፡ ካህናተ፡ ይሁዳ፡ ወሌዊ፨</l>
+                  <l n="5">ጽዋዓ፡ ጥበብ፡ ዘቤትከ፡ አኮኑ፡ ያረዊ፨</l>
+               </lg>
+               <lg type="stanza" n="41">
+                  <l n="1">ናሁ፡ አቅረብኩ፡ አምኃ፡ ወውዳሴ፡ ንስቲተ፨</l>
+                  <l n="2">ውዳሴ፡ ዚአከ፡ እንብብ፡ እንዘ፡ ኢይደልወኒ፡ ምንተ፨</l>
+                  <l n="3">ዮስጦስ፡ ኢታስትት፡ ፍሬ፡ ከናፍርየ፡ ዘንተ፨</l>
+                  <l n="4">ፍሬ፡ ከናፍሪሁ፡ ለሰብእ፡ ከመ፡ ይደልዎ፡ ቅጽበተ፨</l>
+                  <l n="5">አኮኑ፡ ተአምር፡ ወትጤይቅ፡ አንተ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

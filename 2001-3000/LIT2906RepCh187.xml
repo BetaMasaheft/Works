@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to St Peter and St Paul</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ጴጥሮስ፡ ወጳውሎስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Ṗeṭros wa-Ṗāwlos</title>
+            <title corresp="#t1" xml:lang="en">Image of Peter and Paul</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +16,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -49,25 +47,109 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-01">Added keywords and incipit</change>
+         <change who="ES" when="2025-01-10">Added the text, relations and bibl (A. Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               
+               <relation name="skos:exactMatch" active="LIT2906RepCh187" passive="https://w3id.org/malke/2906/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT2906RepCh187" passive="PRS7805Peter"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT2906RepCh187" passive="PRS7743Paul"></relation>               
+            </listRelation>
             <listBibl type="editions">
+               
+               <bibl><ptr target="bm:MgWebsite"/></bibl>            
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">187</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምክሙ፡ ዘአልባስጥሮስ፡ አፈው።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምክሙ፡ ዘአልባስጥሮስ፡ አፈው፨</l>
+                  <l n="2">ወለሥዕርትክሙ፡ ሰላም፡ ዘድላሌሁ፡ ፍትው፨</l>
+                  <l n="3">ምቱረ፡ ክሳድ፡ ጳውሎስ፡ ወጴጥሮስ፡ ቅንው፨</l>
+                  <l n="4">ተራወጸ፡ ውስተ፡ ልብየ፡ ምስለ፡ መዐዛሁ፡ ቅድው፨</l>
+                  <l n="5">ቃለ፡ ደምክሙ፡ ሐዋርያ፡ ዘእግሩ፡ ከዋው፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለርእስክሙ፡ ጌራ፡ መድኃኒት፡ ዘተረሰያ፨</l>
+                  <l n="2">ወለገጽክሙ፡ ስቡሕ፡ እምሥነ፡ ኦርያሬስ፡ ወአሶንያ፨</l>
+                  <l n="3">ኰኵሐ፡ ሃይማኖት፡ ጴጥሮስ፡ ወጳውሎስ፡ ሐዋርያ፨</l>
+                  <l n="4">ይትነዛኅ፡ ዲበ፡ ርእስየ፡ ወበልብስየ፡ ትብልያ፨</l>
+                  <l n="5">ነቅዐ፡ ደምክሙ፡ ከመ፡ ማይ፡ ዘውሕዘ፡ በሮምያ፨</l>
+               </lg>
+               <lg type="stanza" n="25">
+                  <l n="1">ሰላም፡ ለግንዘተ፡ ሥጋክሙ፡ በሰንዶናት፡ ወአፈዋት፨</l>
+                  <l n="2">ወለዝኅርክሙ፡ ሐዲስ፡ ምድረ፡ ሮምያ፡ ቅድስት፨</l>
+                  <l n="3">ጳውሎስ፡ ወጵጥሮስ፡ ባሕረ፡ ጥበባት፨</l>
+                  <l n="4">ዑድዎ፡ ለሕይወትየ፡ ዘምስለ፡ ኅሩያን፡ አርድእት፨</l>
+                  <l n="5">ከመ፡ የዐውድዎ፡ ሠራዊት፡ ለዐቢይ፡ በቀልት፨</l>
+               </lg>
+               <lg type="stanza" n="26">
+                  <l n="1">ሰላም፡ ለአልባሲክሙ፡ ወለቅናቲክሙ፡ በበ፡ ገጹ፨</l>
+                  <l n="2">ለአክሊልክሙ፡ ብሩህ፡ ወለሰበንክሙ፡ ቢጹ፨</l>
+                  <l n="3">ጳውሎስ፡ ወጴጥሮስ፡ ለክርስቶስ፡ አቀብተ፡ አንቀጹ፨</l>
+                  <l n="4">ኪያየ፡ ትሑተ፡ እምሰማያት፡ ሐውጹ፨</l>
+                  <l n="5">ወዲበ፡ ርእስየ፡ ዘመዊእ፡ አቅርንተ፡ አስርጹ፨</l>
+               </lg>
+               <lg type="stanza" n="27">
+                  <l n="1">ሰላም፡ እብል፡ ለአዕጽምቲክሙ፡ በበ፡ ጾታ፨</l>
+                  <l n="2">እለ፡ ይጸንሐ፡ ትንሣኤ፡ እስከ፡ ዕለተ፡ ፍትሕ፡ ወሐተታ፨</l>
+                  <l n="3">ጳውሎስ፡ ወጴጥሮስ፡ ጸወርተ፡ መስቀል፡ ዘጎልጎታ፨</l>
+                  <l n="4">ምድረ፡ ሮምያ፡ ዝኅርክሙ፡ ለኢየሩሳሌም፡ ካልእታ፨</l>
+                  <l n="5">እምነ፡ ብሩር፡ ወወርቅ፡ ይክብር፡ መሬታ፨</l>
+               </lg>
+               <lg type="stanza" n="28">
+                  <l n="1">ሰላም፡ ለበትረ፡ እዴክሙ፡ ዘውገ፡ በትረ፡ ኤርምያስ፡ ለውዝ፨</l>
+                  <l n="2">ወለአሣእኒክሙ፡ ዘእግር፡ እንተ፡ ይትበደር፡ እምቤዝ፨</l>
+                  <l n="3">አመ፡ ሃይማኖት፡ ጴጥሮስ፡ ወጳውሎስ፡ አርዝ፨</l>
+                  <l n="4">ሶበ፡ ሰተይክዎ፡ ለፍቅርክሙ፡ ወይነ፡ ፍሥሓ፡ ሐዋዝ፨</l>
+                  <l n="5">እምድረ፡ ልብየ፡ ወሥጋየ፡ ተሥዕረ፡ ትካዝ፨</l>
+               </lg>
+               <lg type="stanza" n="29">
+                  <l n="1">ሰላም፡ ለመስቀል፡ በደመ፡ ጴጥሮስ፡ ዘተቀደሰ፨</l>
+                  <l n="2">ወሰይፍ፡ በሊኅ፡ እምደመ፡ ጳውሎስ፡ ዘርኅሰ፨</l>
+                  <l n="3">ሐዋርያተ፡ ክርስቶስ፡ አንትሙ፡ ዘነሣእክሙ፡ ሞገሰ፨</l>
+                  <l n="4">ትቅሥሙ፡ ቅሥመ፡ እምአፉየ፡ ማሕሌተክሙ፡ ሐዲሰ፨</l>
+                  <l n="5">እስመ፡ ጊዜ፡ ገሚድ፡ በጽሐ፡ ነጽሩ፡ በለሰ፨</l>
+               </lg>
+               <lg type="stanza" n="30">
+                  <l n="1">ኦጴጥሮስ፡ ወጳውሎስ፡ ዘነሣእክሙ፡ ትእዛዘ፨</l>
+                  <l n="2">ማሕሌተ፡ ዝክርክሙ፡ ባርኩ፡ ወረሰይዎ፡ ሐዋዘ፨</l>
+                  <l n="3">ለዘሰአለክሙ፡ ብእሲ፡ ከመ፡ ኢይርከብ፡ ትካዘ፨</l>
+                  <l n="4">ሀብዎ፡ ኀይለ፡ ወመዊአ፡ ለእመ፡ አርዌ፡ ምድር፡ አኀዘ፨</l>
+                  <l n="5">ወለእመኒ፡ ሰረበ፡ ዘይቀትል፡ ሕምዘ፨</l>
+               </lg>
+               <lg type="stanza" n="31">
+                  <l n="1">መጽሐፈ፡ ዜና፡ ያንብሩ፡ ጸሐፍተ፡ እስራኤል፡ ወይሁዳ፨</l>
+                  <l n="2">እንተ፡ ተክዕወ፡ ደሞሙ፡ ለኢየሩሳሌም፡ መንገለ፡ ዐውዳ፨</l>
+                  <l n="3">እንዘ፡ ደመ፡ ጴጥሮስ፡ ቀለም፡ ወደመ፡ ጳውሎስ፡ ጽጌ፡ ረዳ፨</l>
+                  <l n="4">ይግበሩ፡ ረቀ፡ እምፈተውኩ፡ ዘዚአየ፡ አነደ፨</l>
+                  <l n="5">ወአዕጽምትየ፡ ይረስዩ፡ ስፉሐ፡ ሰሌዳ፨</l>
+               </lg>
+               <lg type="stanza" n="33">
+                  <l n="1">ሰላም፡ እብል፡ ብርሃናተ፡ ክልኤተ፨</l>
+                  <l n="2">በዐውደ፡ ንጉሥ፡ ኔሮን፡ እለ፡ አድምዑ፡ ሩጸተ፨</l>
+                  <l n="3">ጳውሎስ፡ ወጴጥሮስ፡ እንዘ፡ ያጸንዑ፡ ጸበርተ፨</l>
+                  <l n="4">አሐዱ፡ በመስቀል፡ ተሰቀለ፡ ቍልቍሊተ፨</l>
+                  <l n="5">ወአሐዱ፡ ተመትረ፡ ክሳዶ፡ ክብርተ፨</l>
+               </lg>
+               <lg type="stanza" n="37">
+                  <l n="1">ተዘኪረከ፡ ክርስቶስ፡ ለሐዋርያት፡ ኵሎሙ፨</l>
+                  <l n="2">ህየንተ፡ ክቡር፡ ደምከ፡ እንተ፡ ተክዕወ፡ ደሞሙ፨</l>
+                  <l n="3">አክሊለ፡ ስምዕ፡ ሀበኒ፡ ከመ፡ እሳተፍ፡ ስምዖሙ፨</l>
+                  <l n="4">ወደምስስ፡ ለአፅራርየ፡ እመጽሐፈ፡ ሕይወት፡ ዝክሮሙ፨</l>
+                  <l n="5">ከመ፡ ለይሁዳ፡ ረሲዕ፡ ተደምሰሰ፡ ስሙ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

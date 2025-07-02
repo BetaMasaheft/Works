@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to Raguel the Archangel</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ራጉኤል፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Rāguʾel</title>
+            <title corresp="#t1" xml:lang="en">Image of Raguel</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +16,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -49,12 +47,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
          <change who="MV" when="2017-05-19">Corrected title</change>
+         <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="skos:exactMatch" active="LIT3085RepCh365" passive="https://w3id.org/malke/3085/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT3085RepCh365" passive="PRS8065Raguel"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">365</citedRange>
@@ -62,13 +66,60 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  እጼውዕ፡ ስመከ፡ ወእኤምኅ፡ ራጕኤል፡ መንፈስ፡ ዓለም፡ መስተብቅለ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">እጼውዕ፡ ስመከ፡ ወኤምኅ፡ በተድላ፨</l>
+                  <l n="2">ራጉኤል፡ መንፈስ፡ ለዓለም፡ መስተበቅላ፨</l>
+                  <l n="3">እለ፡ ያንኰረኵሩ፡ ዘልፈ፡ ለጠፈረ፡ ሰማይ፡ በማእከላ፨</l>
+                  <l n="4">ድኅረ፡ ኀለፈ፡ መዓልት፡ ለጽልመተ፡ ሌሊት፡ በክፍላ፨</l>
+                  <l n="5">ለሥልጣነ፡ ቃልከ፡ ይትኤዘዙ፡ ከዋክብት፡ ወእብላ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለፊደለ፡ ስምከ፡ ዘአዳም፡ ዝክሩ፨</l>
+                  <l n="2">ዘተለክአ፡ ቅድመ፡ ለሄኖክ፡ ውስተ፡ ጦማሩ፨</l>
+                  <l n="3">ራጉኤል፡ ፍትው፡ ለመሰንቆ፡ ልብየ፡ ቃለ፡ መዝሙሩ፨</l>
+                  <l n="4">ዝክረ፡ ገብርከ፡ ጸላኢ፡ እመ፡ መከረ፡ ይሠሩ፨</l>
+                  <l n="5">እግዚኦ፡ እግዚኦ፡ ዕልዋ፡ ለምክሩ፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለኍልቈ፡ ሥዕርትከ፡ ለለ፡ አሐቲ፡ አሐቲ፡ በአምኆ፨</l>
+                  <l n="2">ግዑዛት፡ እምተላጽዮ፡ ወእምተመልሖ፨</l>
+                  <l n="3">አንተ፡ ውእቱ፡ ፈለገ፡ አኰቴት፡ ወሰብሖ፨</l>
+                  <l n="4">ራጉኤል፡ በማሕሌትከ፡ ለማሕሌትየ፡ ቶስሖ፨</l>
+                  <l n="5">ኢያጐንድየኒ፡ ለሰኣሊ፡ እምብሂል፡ ኦሆ፨</l>
+               </lg>
+               <lg type="stanza" n="4">
+                  <l n="1">ሰላም፡ ለርእስከ፡ እንተ፡ መልዕልቴሁ፡ የዐውድ፨</l>
+                  <l n="2">ቀጸላ፡ ነከራ፡ ግቡር፡ እምነፋስ፡ ወነድ፨</l>
+                  <l n="3">ራጉኤል፡ ርእሶሙ፡ ለኢመዋትያን፡ ነገድ፨</l>
+                  <l n="4">ድማሐ፡ ርእሰ፡ ልብየ፡ እንዘ፡ ትእኅዝ፡ በእድ፨</l>
+                  <l n="5">ኀበ፡ ነቅዐ፡ ጥበብ፡ ሀሎ፡ ንሥአኒ፡ ለአብድ፨</l>
+               </lg>
+               <lg type="stanza" n="43">
+                  <l n="1">ሰላም፡ ለአጽፋረ፡ እግርከ፡ ሥነ፡ ምግባሪሆን፡ ብዑድ፨</l>
+                  <l n="2">እምአጽፋረ፡ እግሩ፡ ለሰብእ፡ ሥጋዊ፡ ነገድ፨</l>
+                  <l n="3">ራጉኤል፡ ዘትቀውም፡ ውስተ፡ ሰማያት፡ ዐጸድ፨</l>
+                  <l n="4">በእንተ፡ አጽፋሪከ፡ እለ፡ ይኬልላ፡ አፃብዒከ፡ ዘነድ፨</l>
+                  <l n="5">ጽፍረ፡ ኃጣውእየ፡ ቅርጽ፡ እምአእጋር፡ ወእድ፨</l>
+               </lg>
+               <lg type="stanza" n="44">
+                  <l n="1">በቃለ፡ ሰላም፡ ኤምኆ፡ ወበስእመተ፡ መንፈስ፡ እስዕሞ፨</l>
+                  <l n="2">ለሥነ፡ ቆምከ፡ ራጉኤል፡ ዘርሱይ፡ በተገርሞ፨</l>
+                  <l n="3">ሶበ፡ ይነብብ፡ ቍልዔከ፡ ውዳሴከ፡ አስተሐሚሞ፨</l>
+                  <l n="4">ጸግዎ፡ ፍሬ፡ ጻማሁ፡ ለአስካለ፡ ሕይወት፡ ቀስሞ፨</l>
+                  <l n="5">እምነ፡ ዕለት፡ ዕለተ፡ ከመ፡ ይወስክ፡ ዓም፨</l>
+               </lg>
+               <lg type="stanza" n="45">
+                  <l n="1">ሰላም፡ ሰላም፡ ለመልክእከ፡ ለለ፡ አሐዱ፡ አሐዱ፨</l>
+                  <l n="2">ዘበበ፡ ስሙ፡ ወበበ፡ ፍቅዱ፨</l>
+                  <l n="3">ራጉኤል፡ ኀቤከ፡ ሶበ፡ ያንቀዐዱ፨</l>
+                  <l n="4">ተወከፍ፡ ስእለተ፡ ገብርከ፡ ለፈጽሞ፡ ኵሉ፡ መፍቅዱ፨</l>
+                  <l n="5">በከመ፡ ይትዌከፍ፡ አብ፡ ስእለቶ፡ ለወልዱ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

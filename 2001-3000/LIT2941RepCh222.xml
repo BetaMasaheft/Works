@@ -18,20 +18,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+             
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -53,25 +49,66 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-03">Added keywords and incipit</change>
          <change who="AD" when="2021-04-11">Updated title</change>
+         <change who="ES" when="2025-01-10">Added the text and link to A. Dickinson's
+            database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation>
+            <relation name="ecrm:P129_is_about" active="LIT2941RepCh222" passive="PRS6819Mary"/>
+            <relation name="skos:exactMatch" active="LIT2941RepCh222"
+               passive="https://w3id.org/malke/2941/"/>
+         </listRelation>
          <div type="bibliography">
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">222</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ሰላም፡ ለዝክረ፡ ስምኪ፡ ባቍዕ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ሰላም፡ ለዝክረ፡ ስምኪ፡ ባቍዕ፨</l>
+                  <l n="2">ወለሥዕርትኪ፡ ጸሊም፡ ከመ፡ ሕብረ፡ ቋዕ፨</l>
+                  <l n="3">ውስተ፡ ቤተ፡ መቅደስ፡ ዘቦእኪ፡ ማርያም፡ መባዕ፨</l>
+                  <l n="4">አግዕዝኒ፡ በትንባሌኪ፡ አመ፡ ዕለተ፡ መንሱት፡ ወጽብእ፨</l>
+                  <l n="5">እምቅንየተ፡ ሰይጣን፡ ዱሩክ፡ ለብእሲ፡ ኃጥእ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለርእስኪ፡ ዘተከለለ፡ ከዋክብተ፨</l>
+                  <l n="2">ወለገጽኪ፡ ዘአንኀ፡ እምገጸ፡ ሙሴ፡ ስብሐተ፨</l>
+                  <l n="3">ማርያም፡ ዞኮንኪ፡ ውስተ፡ ቤተ፡ መቅደስ፡ ህሉተ፨</l>
+                  <l n="4">ሐውፅኒ፡ በረድኤትኪ፡ ወጸግውኑ፡ ሕይወተ፨</l>
+                  <l n="5">ኵሎ፡ ዘመነ፡ ወኵሎ፡ ዕለተ፨</l>
+               </lg>
+               <lg type="stanza" n="27">
+                  <l n="1">ሰላም፡ ለፍልሰተ፡ ሥጋኪ፡ ውስተ፡ ብሔር፡ ሥዑር፨</l>
+                  <l n="2">ወለንብረትኪ፡ ሰላም፡ በየማነ፡ ክርስቶስ፡ በኵር፨</l>
+                  <l n="3">ማርያም፡ ዘቦእኪ፡ ውስተ፡ ቤተ፡ መቅደስ፡ በክብር፨</l>
+                  <l n="4">ሴስይኒ፡ ከመ፡ ሕፃን፡ ሀሊበ፡ ጥበብ፡ ወምክር፨</l>
+                  <l n="5">እስመ፡ ወልደ፡ ወልድኪ፡ አነ፡ በጸጋ፡ ወፍቅር፨</l>
+               </lg>
+               <lg type="stanza" n="28">
+                  <l n="1">አምጣነ፡ አቅረብኩ፡ አነ፡ ብሩረ፡ ስብሐት፡ ወውዳሴ፨</l>
+                  <l n="2">ወለበአትኪ፡ ዘኮነ፡ ውስተ፡ ቤተ፡ መቅደስ፡ በሕገ፡ ሙሴ፨</l>
+                  <l n="3">ማርያም፡ ወለቱ፡ እስመ፡ አንቲ፡ ለወልደ፡ እሴ፨</l>
+                  <l n="4">ጸሐፍኒ፡ ውስተ፡ መጽሐፍኪ፡ ዘኢይቀርቦ፡ ድምሳሴ፨</l>
+                  <l n="5">ወአማፅሕንኒ፡ ካዕበ፡ በቅድስት፡ ሥላሴ፨</l>
+               </lg>
+               <lg type="stanza" n="29">
+                  <l n="1">ስብሐት፡ ለኪ፡ ማርያም፡ በኍልቈ፡ ኵሉ፡ ሥዕርትየ፨</l>
+                  <l n="2">ስብሐት፡ ለኪ፡ ማርያም፡ በኍልቈ፡ ኵሉ፡ አዕጽምትየ፨</l>
+                  <l n="3">ስብሐት፡ ለኪ፡ ማርያም፡ በኍልቈ፡ ኵሉ፡ ዘተርእየ፨</l>
+                  <l n="4">ስብሐት፡ ለኪ፡ ማርያም፡ በኍልቈ፡ ኵሉ፡ ዘኢያስተርአየ፨</l>
+                  <l n="5">ስብሐተ፡ ድንግልናኪ፡ ዘልፈ፡ ይነግር፡ አፉየ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

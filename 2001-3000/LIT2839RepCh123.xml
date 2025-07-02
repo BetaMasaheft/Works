@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">መልክአ፡ ኢየሱስ፡</title>
             <title corresp="#t1" xml:lang="gez">Malkǝʾa ʾIyasus</title>
-            <title corresp="#t1" xml:lang="en"><hi rendition="simple:italic">Malkǝʾ</hi>-hymn to Jesus</title>
+            <title corresp="#t1" xml:lang="en">Malkǝʾ-hymn to Jesus</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -17,9 +17,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -46,25 +46,103 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-05">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-10">Added the text, title, relations and bibl (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT2839RepCh123" passive="PRS5684JesusCh"></relation>
+               
+               <relation name="skos:exactMatch" active="LIT2839RepCh123" passive="https://w3id.org/malke/2839/"></relation>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT2839RepCh123" passive="LIT2838RepCh122"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>       
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">123</citedRange>
                </bibl>
             </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Tedros2005Malk"/></bibl>
+               <bibl><ptr target="bm:Habte2007MalkeaIyasus"/></bibl>
+            </listBibl>
          </div>
-         <div type="edition">
+         <div type="edition" xml:lang="gez">
             <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>This incipit is recorded as <bibl>
+                  <ptr target="bm:Chaine1913Rep"/>
+                  <citedRange unit="item">122</citedRange>
+               </bibl></note>
                <ab>
-                  ሰላም፡ ለዝክረ፡ ስምከ፡ ስመ፡ መሐላ፡ ዘኢይሔሱ።
+                  ሰላም፡ ለዝክረ፡ ስምከ፡ ሰላመ፡ ዘኢይሔሱ።
                </ab>
             </div>
+            <div type="textpart" xml:id="masgabiya">
+               <lg type="stanza" n="1">
+                  <l n="1">ኢየሱስ፡ ኢየሱስ፡ ኢየሱስ፡ ክርስቶስ፨</l>
+                  <l n="2">ዘሠረፅከ፡ እምቤተ፡ ሌዊ፡ ኮሬባዊ፡ መለኮታዊ፨</l>
+                  <l n="3">ቃል፡ ሰማያዊ፡ እምድንግል፡ ተወልደ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ስመ፡ መሐላ፡ ዘኢይሔሱ፨</l>
+                  <l n="2">በአንበረ፡ ቅድመ፡ እግዚአብሔር፡ በአትሮንሱ፨</l>
+                  <l n="3">ኢየሱስ፡ ክርስቶስ፡ ለዳዊት፡ ባሕርየ፡ ከርሡ፨</l>
+                  <l n="4">አክሊለ፡ ስምከ፡ እንዘ፡ ይትቄጸል፡ በርእሱ፨</l>
+                  <l n="5">አህጉረ፡ ፀር፡ ወረሰ፡ ኢያሱ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለሥዕርተ፡ ርእስከ፡ ዘሥሙር፡ አብቋሉ፨</l>
+                  <l n="2">ወጽፉቅ፡ ጥቀ፡ ለአርዘ፡ ሊባኖስ፡ አምሳለ፡ ቈጽሉ፨</l>
+                  <l n="3">ኢየሱስ፡ ክርስቶስ፡ ሊቀ፡ ካህናት፡ ዘላዕለ፡ ኵሉ፨</l>
+                  <l n="4">ይሠዐል፡ በልሳንየ፡ ለውዳሴ፡ ፊደሉ፨</l>
+                  <l n="5">ኢይትገደፍ፡ ዲበ፡ ምድር፡ ንባቡ፡ ወቃሉ፨</l>
+               </lg>
+               <lg type="stanza" n="48">
+                  <l n="1">ሰላም፡ ለዕርገትከ፡ ዘኢይትረከብ፡ መጠኑ፨</l>
+                  <l n="2">ወለንብረትከ፡ ሰላም፡ ለአቡከ፡ ውስተ፡ የማኑ፨</l>
+                  <l n="3">ኢየሱስ፡ ክርስቶስ፡ እለ፡ ኪያከ፡ ተአምኑ፨</l>
+                  <l n="4">ቅዱሳነ፡ ዘእምኀቤከ፡ ወንጹሓነ፡ ይኩኑ፨</l>
+                  <l n="5">ጰራቅሊጦስሃ፡ መንፈሰከ፡ ፈኑ፨</l>
+               </lg>
+               <lg type="stanza" n="49">
+                  <l n="1">ሰላም፡ እብል፡ ለምጽአትከ፡ ከዋላ፨</l>
+                  <l n="2">በደመና፡ ሰማይ፡ ብርህት፡ ዘትጸድል፡ እምሥነ፡ እብላ፨</l>
+                  <l n="3">አመ፡ ትመጽእ፡ በስብሐት፡ ክርስቶስ፡ ርእሰ፡ መሐላ፨</l>
+                  <l n="4">ጸውዐነ፡ ለአግብርቲከ፡ ውስተ፡ ዐጸደ፡ ፍግዕ፡ ወተድላ፨</l>
+                  <l n="5">ናንሶሱ፡ ምስሌከ፡ በሐዳስ፡ ቀጸላ፨</l>
+               </lg>
+               <lg type="stanza" n="50">
+                  <l n="1">እምሥራቀ፡ ፀሓይ፡ እስከ፡ ነዐረብ፡ ይትአኰት፡ ስሙ፡ ለእግዚአብሔር፡ አምላክነ፨</l>
+                  <l n="2">ኪያከ፡ ወልዶ፡ ዘፈነወ፡ ለነ፨</l>
+                  <l n="3">ኢየሱስ፡ ክርስቶስ፡ ሊቀ፡ ካህናቲኒ፨</l>
+                  <l n="4">አስተጋብአነ፡ ኀበ፡ ትረፍቅ፡ መካነ፨</l>
+                  <l n="5">ትሑታነ፡ አግብርቲከ፡ ንሕነ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ስብሐት፡ ለከ፡ አምላኪየ፡ በኍልቈ፡ ኵሉ፡ ሥዕርትየ፨</l>
+                  <l n="2">ስብሐት፡ ለከ፡ አምላኪየ፡ በኍልቈ፡ ኵሉ፡ አዕጽምትየ፨</l>
+                  <l n="3">ስብሐት፡ ለከ፡ አምላኪየ፡ በኍልቈ፡ ኵሉ፡ ዘተርእየ፨</l>
+                  <l n="4">ስብሐት፡ ለከ፡ አምላኪየ፡ በኍልቈ፡ ኵሉ፡ ዘኢያስተርአየ፨</l>
+                  <l n="5">ስብሐተ፡ ሥላሴከ፡ ወትረ፡ ይነግር፡ አፉየ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">እምኵሉ፡ ይኄይስ፡ በሥላሴከ፡ ተአምኖ፨</l>
+                  <l n="2">ወበወላዲትከ፡ ተማሕፅኖ፨</l>
+                  <l n="3">ኢየሱስ፡ ክርስቶስ፡ እምቤተ፡ መንግሥት፡ ወተክህኖ፨</l>
+                  <l n="4">ተሰብኦተከ፡ እመቦ፡ ዘያስተሐቅር፡ መኒኖ፨</l>
+                  <l n="5">ያንኰርኵር፡ ታሕተ፡ ደይን፡ ግዱፈ፡ ከዊኖ፨</l>
+               </lg>
+            </div>
          </div>
+         
       </body>
    </text>
 </TEI>

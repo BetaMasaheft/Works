@@ -13,11 +13,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
-               </licence>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">This file is licensed
+         under the Creative Commons Attribution-ShareAlike 4.0.</licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
@@ -36,15 +33,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>The miracle of a criminal, whose mother had entrusted him to Mary and who was saved from execution by her 
             intercessions, exists in many versions, whose relations are not well studied. This record is a general record, to be used in cases where the 
             precise recension of the miracle is not known. Two versions are those already differentiated by 
-               <bibl><ptr target="bm:Budge1923Miracles"/></bibl>:  <ref type="work" corresp="LIT3616Miracle"/> and
+               <bibl>
+                  <ptr target="bm:Budge1923Miracles"/>
+               </bibl>:  <ref type="work" corresp="LIT3616Miracle"/> and
                <ref type="work" corresp="LIT3864Miracle"/>. It is likely that more versions could be differentiated.</p>
          </abstract>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
-               <term key="Apocrypha"/> 
-               <term key="Miracle"/> 
+               <term key="Apocrypha"/>
+               <term key="Miracle"/>
                <term key="Hagiography"/>
             </keywords>
          </textClass>
@@ -54,12 +55,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="MV" when="2017-03-31">Added keywords and relations</change>
          <change who="DR" when="2018-11-26">Added keyword and relation</change>
          <change who="DR" when="2020-05-03">Added abstract, changed to general record, added information from deleted LIT4046Miracle</change>
+         <change when="2025-05-07" who="ES">aligned to PEMM</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <div type="bibliography">
-            <!-- The Virgin Mary and
+         <div type="bibliography"><!-- The Virgin Mary and
                         the widow’s son who became a thief (BMirMA 47-48; BHMirM<ref type="mss"
                            corresp="ES98100">98-100</ref>; ColMirM<ref type="mss" corresp="ES176180"
                            >176-180</ref>// mss. O Etiop. 15, LöfUpp 102, n<locus target="#32"
@@ -105,14 +106,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <citedRange unit="page">47-48</citedRange>
                </bibl>
             </listBibl>
-               <listBibl type="secondary">
-                  <bibl>
-                     <ptr target="bm:MacomberMiracles"/>
-                     <citedRange unit="item">152</citedRange>
-                  </bibl>
-               </listBibl>
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:MacomberMiracles"/>
+                  <citedRange unit="item">152</citedRange>
+               </bibl>
+            </listBibl>
+            <listBibl type="clavis">
+               <bibl type="PEMM">
+                  <ptr type="story" target="bm:PEMM"/>
+                  <citedRange unit="item">152</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="skos:exactMatch"
+                         active="LIT3692Miracle"
+                         passive="https://pemm.princeton.edu/stories/152"/>
+            </listRelation>
             <listRelation>
                <relation name="saws:formsPartOf" active="LIT3692Miracle" passive="LIT2384Taamme"/>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT3692Miracle" passive="LIT4046Miracle"/>
             </listRelation>
          </div>
       </body>

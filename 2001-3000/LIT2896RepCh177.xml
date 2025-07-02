@@ -16,20 +16,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -51,25 +47,66 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-15">Added keywords and incipit</change>
          <change who="AD" when="2021-04-11">Updated title</change>
+         <change who="ES" when="2025-01-10">Added the text, relations and bibl (A. Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>               
+               <relation name="skos:exactMatch" active="LIT2896RepCh177" passive="https://w3id.org/malke/2896/"></relation>
+               <relation name="ecrm:P129_is_about" active="LIT2896RepCh177" passive="PRS6819Mary"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">177</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምኪ፡ አምሳለ፡ ስቴ፡ ወይን፡ መጥለሊ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምኪ፡ አምሳለ፡ ስቴ፡ ወይን፡ መጥለሊ፨</l>
+                  <l n="2">ወለሥዕርትኪ፡ ስኑያት፡ እምጽሕደተ፡ ሜላት፡ ግብረ፡ ፈታሊ፨</l>
+                  <l n="3">ማርያም፡ ድንግል፡ መራኁተ፡ ጴጥሮስ፡ ቢጸ፡ ጳውሊ፨</l>
+                  <l n="4">አርኅዊ፡ ማዕፆ፡ ልብየ፡ በረድኤትኪ፡ ከሃሊ፨</l>
+                  <l n="5">ከመ፡ አሳፍ፡ ወኤማን፡ ማሕሌተኪ፡ እሕሊ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለርእስኪ፡ ወለገጽኪ፡ ጽጌ፡ ረዳ፨</l>
+                  <l n="2">ለቀራንብትኪ፡ ሰላም፡ ወለአዕይንትኪ፡ ቤዘ፡ መርሙዳ፨</l>
+                  <l n="3">ጽንዐ፡ ስብከቱ፡ ማርያም፡ ለእንድርያስ፡ መምህረ፡ ልዳ፨</l>
+                  <l n="4">አጽንዒ፡ በረድኤትኪ፡ ለሥርወ፡ ሕይወትየ፡ ድዳ፨</l>
+                  <l n="5">ኢያንቀልቅልዋ፡ ነፋሳት፡ ጊዜ፡ ነፍሑ፡ ዐውዳ፨</l>
+               </lg>
+               <lg type="stanza" n="12">
+                  <l n="1">ሰላም፡ ለፀአተ፡ ነፍስኪ፡ ወለበድነ፡ ሥጋኪ፡ ማኅፈዳ፨</l>
+                  <l n="2">ለግንዘትኪ፡ ወዝኅርኪ፡ ወለፍልሰትኪ፡ ፈዳዬ፡ ዕዳ፨</l>
+                  <l n="3">ክብረ፡ ማትያስ፡ ማርያም፡ ዘተሠይመ፡ ድኅረ፡ ይሁዳ፨</l>
+                  <l n="4">በኍልቈ፡ አዕናቍ፡ እለ፡ ተሰክዓ፡ ውስተ፡ ልብሰ፡ ክህነት፡ እንግዳ፨</l>
+                  <l n="5">ተወከፊ፡ ማሕሌትየ፡ ዘአባእኩ፡ ጋዳ፨</l>
+               </lg>
+            </div>
+            <div type="textpart" xml:id="tarafa-malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ስብሐት፡ ለኪ፡ ማርያም፡ በአፈ፡ ኵሉ፡ ዘሥጋ፨</l>
+                  <l n="2">ስብሐት፡ ለኪ፡ ማርያም፡ በአፈ፡ መላእክት፡ እንበለ፡ ንትጋ፨</l>
+                  <l n="3">ስብሐት፡ ለኪ፡ ማርያም፡ ለደብተራ፡ ስምዕ፡ ታቦተ፡ ሕጋ፨</l>
+                  <l n="4">ስብሐት፡ ለኪ፡ ማርያም፡ በውስተ፡ ዛቲ፡ እንግልጋ፨</l>
+                  <l n="5">ከመ፡ ሠርጐ፡ ሜላት፡ ይኩነኒ፡ ዘዚአኪ፡ ጸጋ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">አምኃ፡ ሰላም፡ አቅረብኩ፡ ለመልክእኪ፡ በበ፡ ፍቅዱ፨</l>
+                  <l n="2">እንዘ፡ አቄርብ፡ ስብሐታተ፡ ወእሰግድ፡ ለለ፡ አሐዱ፨</l>
+                  <l n="3">ማርያም፡ ድንግል፡ ለዳዊት፡ ወለተ፡ ወልዱ፨</l>
+                  <l n="4">ገብርኪ፡ ቅሩፀ፡ ክንፍ፡ በሐመረ፡ ንጽሕኪ፡ እእዱ፨</l>
+                  <l n="5">ለባሕረ፡ እሳት፡ ግሩመ፡ ዘመፍርህ፡ ሞገዱ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

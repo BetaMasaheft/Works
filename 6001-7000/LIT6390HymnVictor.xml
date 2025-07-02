@@ -5,10 +5,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ወይነ፡ መንፈስ፡ ቅዱስ፡ ፊቅጦር፡ ዘጣዕምከ፡ ፍድፉድ።</title>
-                <title xml:lang="gez" type="normalized" corresp="#t1">Wayna manfas qǝddus Fiqṭor za-ṭāʿǝmka fǝdfud</title>
-                <title xml:lang="en" corresp="#t1">Victor, vine of the Holy Spirit whose flavour is excellent</title>
-                <title xml:lang="en" xml:id="t2">Hymn to St Victor</title>
+                <title xml:id="t1" xml:lang="gez">መልክአ፡ ፊቅጦር፡</title>
+                <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Fiqṭor</title>
+                <title corresp="#t1" xml:lang="en">Image of Victor</title>
+                <title xml:lang="gez" xml:id="t2">ወይነ፡ መንፈስ፡ ቅዱስ፡ ፊቅጦር፡ ዘጣዕምከ፡ ፍድፉድ።</title>
+                <title xml:lang="gez" type="normalized" corresp="#t2">Wayna manfas qǝddus Fiqṭor za-ṭāʿǝmka fǝdfud</title>
+                <title xml:lang="en" corresp="#t2">Victor, vine of the Holy Spirit whose flavour is excellent</title>
+                <title xml:lang="en" xml:id="t3">Hymn to St Victor</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="RL"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -24,7 +27,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>                    
+                    <witness corresp="EMIP00764"/>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -48,12 +53,69 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="RL" when="2021-03-04">Created entity</change>
+            <change who="AD" when="2024-12-01">Created XML record for Malkea gubae</change>
+            <change who="ES" when="2025-06-26">aligned to Augustine Dickinson's database</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-          
-            <div type="edition">
+            <listRelation>
+                <relation name="betmas:formerlyAlsoListedAs" active="LIT6390HymnVictor" passive="LIT0377Malke"></relation>
+                <relation name="ecrm:P129_is_about"
+                    active="LIT6390HymnVictor"
+                    passive="PRS9744Victor"/>
+                <relation name="skos:exactMatch"
+                    active="LIT6390HymnVictor"
+                    passive="https://w3id.org/malke/6390/"/>
+            </listRelation>
+            <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:MgWebsite"/>
+                    </bibl>
+                </listBibl>
+            </div>
+            <div type="edition" xml:lang="gez" xml:id="malkeagubae">
+                <note>This edition is taken from <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+                <div type="textpart" xml:id="malke">
+                    <lg type="stanza" n="1">
+                        <l n="1">በረድኤተ፡ ክርስቶስ፡ አምላክ፡ ለክብረ፡ ስሙ፡ ሰጊድ፨</l>
+                        <l n="2">እመንፈሳውያን፡ ነገድ፡ ወእምሥጋውያን፡ ትውልድ፨</l>
+                        <l n="3">ወይነ፡ መንፈስ፡ ቅዱስ፡ ፊቅጦር፡ ዘጣዕምከ፡ ፍድፉድ፨</l>
+                        <l n="4">ያስክረኒ፡ ስቴ፡ ፍቅርከ፡ ወያጥብበኒ፡ ለአብድ፨</l>
+                        <l n="5">ዜና፡ ዕበያቲከ፡ እጽሕፍ፡ በመዝራዕት፡ ወእድ፨</l>
+                    </lg>
+                    <lg type="stanza" n="2">
+                        <l n="1">ሰላን፡ ለፅንሰትከ፡ ወለልደትከ፡ ፍሥሓ፨</l>
+                        <l n="2">ውስተ፡ ቅጽረ፡ መንፍሥት፡ ዐባይ፡ ዘቀርነ፡ በዓሉ፡ ተነፍሐ፨</l>
+                        <l n="3">ሕፃነ፡ ማርታ፡ ፊቅጦር፡ ዘነገሥተ፡ ምሥራቅ፡ አበዊሃ፨</l>
+                        <l n="4">ይሕፅበኒ፡ እምርስሐትየ፡ ወይጸግወኒ፡ ንጽሐ፨</l>
+                        <l n="5">ፈለገ፡ ቅዳሴ፡ ደምከ፡ ዐውደ፡ ስምዕ፡ ዘነዝኀ፨</l>
+                    </lg>
+                    <lg type="stanza" n="3">
+                        <l n="1">ሰላም፡ ለሰሌዳ፡ ስምከ፡ ሆህያተ፡ በቅጥር፡ ዘቦቱ፨</l>
+                        <l n="2">ወፍካሬ፡ ባህሉሰ፡ በጽርዕ፡ ፊቅጦር፡ ዝንቱ፨</l>
+                        <l n="3">ወብሂለ፡ ፊቅጦርኒ፡ ፍቁረ፡ ፈጣሪ፡ ውእቱ፨</l>
+                        <l n="4">መምህራን፡ ወማእምራን፡ በጊዜ፡ አንበብዎ፡ ሎቱ፨</l>
+                        <l n="5">እንዘ፡ ይብል፡ ከመዝ፡ ተረክበ፡ ጽሕፈቱ፨</l>
+                    </lg>
+                    <lg type="stanza" n="31">
+                        <l n="1">ሰላም፡ ለፍልሰተ፡ ሥጋከ፡ በእደ፡ እምከ፡ ማርታ፨</l>
+                        <l n="2">እምውሳጤ፡ ይእቲ፡ ግብ፡ እንተ፡ ነበርከ፡ ውስቴታ፨</l>
+                        <l n="3">ለእስክንድርያ፡ ፊቅጦር፡ ወለአንጾኪያ፡ ማኅቶታ፨</l>
+                        <l n="4">ለዕበየ፡ ዛቲ፡ ፍልሰትከ፡ በዘትትሌዐል፡ ሥርዓታ፨</l>
+                        <l n="5">በኈልቈ፡ ብፅዓናት፡ ዓሥር፡ ተጼሐ፡ ፍኖታ፨</l>
+                    </lg>
+                    <lg type="stanza" n="35">
+                        <l n="1">በኈልቈ፡ ሱባዔ፡ ራብዕ፡ ወበፍቅደ፡ ክራማት፡ ኃምስ፨</l>
+                        <l n="2">ውስተ፡ ዓለምነ፡ ቦቱ፡ ዘአንሶሰወ፡ ክርስቶስ፨</l>
+                        <l n="3">አምኃ፡ ማሕሌት፡ አቅረብኩ፡ ለመልክእከ፡ ውዱስ፨</l>
+                        <l n="4">ተወከፍ፡ ሊተ፡ እግዚእየ፡ እምነ፡ ባሪክ፡ ጽኑስ፨</l>
+                        <l n="5">ፊቅጦር፡ መኰንን፡ ፊቅጦር፡ ንጉሥ፨</l>
+                    </lg>
+                </div>
+            </div>
+            <div type="edition" xml:id="emip764">
               <note>the text follows <ref type="mss" corresp="EMIP00764"/> ff. 116r-118v</note>
               <div type="textpart" subtype="incipit" xml:lang="gez">
                 <ab>

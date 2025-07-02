@@ -5,6 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Hymn to Aron the wonder-worker</title>
+            <title xml:id="t2" xml:lang="gez">መልክአ፡ አሮን፡ ዘደብረ፡ ዳሬት፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Malkǝʾa ʾAron za-Dabra Dāret</title>
+            <title corresp="#t2" xml:lang="en">Image of ʾAron of Dabra Dāret</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,20 +17,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+               
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -49,25 +48,94 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-04">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-10">Added the text, title, relations  (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT2963RepCh244" passive="PRS2049Aronof"></relation>
+               
+               <relation name="skos:exactMatch" active="LIT2963RepCh244" passive="https://w3id.org/malke/2963/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">244</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  በመሰረተ፡ ቃል፡ አንባርኩ፡ ለመኅፈደ፡ ዝክረ፡ ስሞ። 
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">በመሠረተ፡ ቃል፡ አንበርኩ፡ ለማኅፈደ፡ ዝክርከ፡ ስሞ፨</l>
+                  <l n="2">ላዕላዐ፡ ልሳን፡ ወልድከ፡ በጽሂቅ፡ አስተሐምሞ፨</l>
+                  <l n="3">ተራድአኒ፡ አሮን፡ ዘልማድከ፡ ተርጕሞ፨</l>
+                  <l n="4">ኢይበል፡ አፈ፡ በሀሊ፡ ለለ፡ ይኔጽር፡ ቀዊሞ፨</l>
+                  <l n="5">አኀዘ፡ ይሕንጽ፡ ወስእነ፡ ፈጽሞ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ምስለ፡ ስመ፡ ነቢይ፡ ዘተሳተፈ፨</l>
+                  <l n="2">ለአምላከ፡ ፈርዖን፡ ሙሴ፡ እንተ፡ ይሰምይዎ፡ አፈ፨</l>
+                  <l n="3">ሐረሳዊ፡ መስቀል፡ አሮን፡ ከመ፡ ዜናከ፡ ተጽሕፈ፨</l>
+                  <l n="4">በገራህተ፡ ገድል፡ እምአመ፡ አኀዝከ፡ ዕርፈ፨</l>
+                  <l n="5">ኢያጽነንከ፡ ትልመ፡ አሐተ፡ ምዕራፈ፨</l>
+               </lg>
+               <lg type="stanza" n="29">
+                  <l n="1">ሰላም፡ ለመቃብሪከ፡ አስከሬነ፡ ኅቡእ፡ መዝገብ፨</l>
+                  <l n="2">ንፍቀ፡ ደብረ፡ ፋራን፡ ዛቲ፡ ወግረ፡ ጎልጎታ፡ ዘዐርብ፨</l>
+                  <l n="3">ጊዜ፡ ነቂሆትከ፡ አሮን፡ እምዐራተ፡ ዛቲ፡ ምስካብ፨</l>
+                  <l n="4">ኢታቁመኒ፡ በአፍአ፡ እምአፀድከ፡ ከብካብ፨</l>
+                  <l n="5">ምስለ፡ አብያጽየ፡ ኀምስቱ፡ አክላብ፨</l>
+               </lg>
+               <lg type="stanza" n="30">
+                  <l n="1">አመ፡ ወርኀ፡ ማእረር፡ አልጸቀ፡ አብድንቲሆሙ፡ አውያን፨</l>
+                  <l n="2">ሶበ፡ ክምረ፡ ከምር፡ ኮነ፡ በማዕፀደ፡ ሞት፡ ፈጣን፨</l>
+                  <l n="3">ዘዘ፡ ገበቶሙ፡ ፈራን፡ በአምሳለ፡ ኅቡእ፡ መድፍን፨</l>
+                  <l n="4">ሰላም፡ ሰላም፡ ለመምህርከ፡ አሮን፨</l>
+                  <l n="5">ወሰላም፡ ካዕበ፡ ለእሉ፡ ኄራን፨</l>
+               </lg>
+               <lg type="stanza" n="31">
+                  <l n="1">ሰላም፡ ለትንሣኤከ፡ እንተ፡ ኮነቶ፡ አእጋረ፨</l>
+                  <l n="2">ለትንሣኤ፡ ክርስቶስ፡ ርእስ፡ ከመ፡ ቃለ፡ ምጽሐፍ፡ ነገረ፨</l>
+                  <l n="3">መከየደ፡ ፍቅርከ፡ አሮን፡ ጊዜ፡ ፈቀደ፡ ወሠምረ፨</l>
+                  <l n="4">አረፍተ፡ ልብየ፡ ከመ፡ ይኩኖ፡ ምሕዋረ፨</l>
+                  <l n="5">በቆብዐ፡ አባ፡ ሣሉሲ፡ ፍጹመ፡ ተሰቍረ፨</l>
+               </lg>
+               <lg type="stanza" n="32">
+                  <l n="1">ሰላም፡ ለዕርገትከ፡ መንግሥተ፡ ሰማያት፡ ትትዋረሱ፨</l>
+                  <l n="2">ዘዐይነ፡ መዊት፡ ኢርእያ፡ ወዘኢኀለያ፡ መንፈሱ፨</l>
+                  <l n="3">አበ፡ አእላፍ፡ አሮን፡ ምስለ፡ ወልድከ፡ ኢያሱ፨</l>
+                  <l n="4">ወምስለ፡ ኵሎሙ፡ እለ፡ ጻማከ፡ ኀሠሡ፨</l>
+                  <l n="5">ወእለ፡ ምስሌከ፡ ህላዌ፡ ቀደሱ፨</l>
+               </lg>
+               <lg type="stanza" n="33">
+                  <l n="1">ሰላም፡ ለማሕሌተ፡ ዝክርከ፡ አባ፡ ሶበ፡ ሐወጸት፡ ተቅራማ፨</l>
+                  <l n="2">ዘሲሳየ፡ ዕለት፡ ነሥአት፡ በስራሐ፡ ድካም፡ ወሐፈ፡ ጻማ፨</l>
+                  <l n="3">አሮን፡ ብእስ፡ ታስተበቍዐከ፡ አስተሐሚማ፨</l>
+                  <l n="4">ሩት፡ አፈ፡ ነፍስየ፡ ታሕተ፡ እግርከ፡ ነዊማ፨</l>
+                  <l n="5">አረፍተ፡ ቤታ፡ ታሤኒ፡ ወታሰርር፡ ጥቅማ፨</l>
+               </lg>
+               <lg type="stanza" n="34">
+                  <l n="1">እመ፡ ኢፈደዮሙ፡ ሰርከ፡ ለገባእተ፡ ወፍር፡ ወሐቅል፨</l>
+                  <l n="2">እስመ፡ ይከውኖ፡ ኀፍረተ፡ ለበዓለ፡ ገራህት፡ ባዕል፨</l>
+                  <l n="3">ጸግወኒ፡ አሮን፡ ዕሴተ፡ ቡራኬ፡ በቃል፨</l>
+                  <l n="4">ተዘኪረከ፡ እግዚኦ፡ በመጽሐፈ፡ ዳግም፡ ክፍል፨</l>
+                  <l n="5">ለዐሳብ፡ ዐስቦ፡ ኢታቢት፡ ዘይክል፨</l>
+               </lg>
+               <lg type="stanza" n="35">
+                  <l n="1">እኵት፡ እግዚአብሔር፡ ዘክብረ፡ አኰቴት፡ ይደልዎ፨</l>
+                  <l n="2">በአንቀጸ፡ አፉየ፡ ዝንቱ፡ እንበለ፡ አብእ፡ ሐስዎ፨</l>
+                  <l n="3">ጽድቀ፡ ትሩፋቲከ፡ አሮን፡ ዘከፈለኒ፡ ለተዜያንዎ፨</l>
+                  <l n="4">ለአድግኒ፡ ቀዲሙ፡ ዘኢየአምር፡ ለብዎ፨</l>
+                  <l n="5">ስሕተተ፡ ነቢይ፡ ይገሥጽ፡ ንባበ፡ ጸገዎ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

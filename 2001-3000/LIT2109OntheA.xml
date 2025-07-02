@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT2109OntheA">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">On the Ascension of Our Lord</title>
-            
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘከመ፡ ዓርገ፡ እግዚእነ፡ ውስተ፡ ሰማያት፡ መልዕልተ፡ ኵሉ፡ ስም፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsān za-kama ʿarga ʾǝgziʾǝna wǝsta samāyāt malǝʿǝlta kʷǝllu sǝm</title>
+            <title xml:id="t2">On the Ascension of Our Lord</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -48,14 +49,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-15" who="ES">keywords relation</change>
+         <change when="2021-07-06" who="MKr">Added Ethiopic title and relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <listRelation>
             <relation name="saws:isAttributedToAuthor" active="LIT2109OntheA" passive="PRS8121RetuaH"/>
+            <relation name="ecrm:CLP46i_may_form_part_of" active="LIT2109OntheA" passive="LIT2222RetuaH"/>
          </listRelation>
          <ab/>
       </body>
    </text>
+   <text>
+      <body>
+        <div type="bibliography"/>
+        <div xml:lang="gez" type="edition">
+          <note>The incipit is taken from <ref type="mss" corresp="BNFabb80"/></note>
+          <div type="textpart" subtype="incipit">
+           <ab xml:lang="gez">ዮም፡ ርቱዕ፡ ንበል፡ እግዚአብሔር፡ ነግሠ፡ ትትሐሰይ፡ ምድር፡ ወይትሐሰያ፡ ደሰያት፡ ብዙኃት።</ab>
+          </div>
+        </div>
+      </body>
+  </text>
 </TEI>

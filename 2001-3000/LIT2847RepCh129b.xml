@@ -4,7 +4,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to Raphael</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ሩፋኤል፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Rufāʾel</title>
+            <title corresp="#t1" xml:lang="en">Image of Raphael</title>
+            <editor key="AD"></editor>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,9 +17,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -44,6 +47,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-09">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-10">Added the text, title, relations and bibl (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -52,8 +57,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <relation name="ecrm:P129_is_about" active="LIT2847RepCh129b" passive="PRS8083Raphael"/>
             <relation name="betmas:formerlyAlsoListedAs" active="LIT2847RepCh129b" passive="LIT2882RepCh163"/>
             <relation name="betmas:formerlyAlsoListedAs" active="LIT2847RepCh129b" passive="LIT2859RepCh140b"/>
+            <relation name="skos:exactMatch" active="LIT2847RepCh129b" passive="https://w3id.org/malke/2847/"></relation>
          </listRelation>
          <div type="bibliography">
+            <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
+            </listBibl>
             <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
@@ -69,12 +78,48 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምከ፡ በአፈ፡ ኵሉ፡ ጥዑም።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ በአፈ፡ ኵሉ፡ ጥዑም፨</l>
+                  <l n="2">ወለዘይጼውዖ፡ ረዳአ፡ ዘእንበለ፡ መስፈርት፡ ወዐቅም፨</l>
+                  <l n="3">ሩፋኤል፡ መልአክ፡ ዖፈ፡ አርያም፨</l>
+                  <l n="4">ታሕተ፡ ወግር፡ ከመ፡ አሰርኮ፡ ለመልአከ፡ ሀከክ፡ ዘቅድም፨</l>
+                  <l n="5">ለደቂቀ፡ ስሕተት፡ ዘደም፡ ሠርዎሙ፡ ዮም፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለሥዕርተ፡ ርእስከ፡ ዘመድምም፡ ተገብሮቱ፨</l>
+                  <l n="2">እሳትአ፡ ወነፋስ፡ ውእቱ፨</l>
+                  <l n="3">ሩፋኤል፡ ክቡር፡ ለእግዚአብሔር፡ መልአከ፡ ቤቱ፨</l>
+                  <l n="4">ዘኢኮነ፡ በምግባርየ፡ ዳእሙ፡ በከንቱ፨</l>
+                  <l n="5">እምኀቤከ፡ ዘልፈ፡ ረድኤተ፡ እፈቱ፨</l>
+               </lg>
+               <lg type="stanza" n="46">
+                  <l n="1">ሰላም፡ እብል፡ ለዐቅመ፡ መልክእከ፡ ዘበበ፡ በይኑ፨</l>
+                  <l n="2">አመ፡ ጥንተ፡ ግብሩ፡ ዘገብሮ፡ እግዚአብሔር፡ በኪኑ፨</l>
+                  <l n="3">ለእሳት፡ እምርስኑ፡ ለነፋስ፡ እምሥኑ፨</l>
+                  <l n="4">ልማድከ፡ አዕርጎ፡ ጸሎት፡ ሩፋኤል፡ አኮኑ፨</l>
+                  <l n="5">ተዝካረ፡ ጸሎትየ፡ ታዕርግ፡ ፍያለከ፡ ፈኑ፨</l>
+               </lg>
+               <lg type="stanza" n="47">
+                  <l n="1">ሰላም፡ ለሕይወትከ፡ ጥንተ፡ ዓለም፡ ዘኢቀደሞ፨</l>
+                  <l n="2">ወኅልቀተ፡ ዘመን፡ ኢይፌጽሞ፨</l>
+                  <l n="3">ሩፋኤል፡ ሠዋዒ፡ መሥዋዕተ፡ ስብሐት፡ በኢያርምሞ፨</l>
+                  <l n="4">ጥቃ፡ ሕይወትከ፡ ለሕይወትየ፡ ዐቅም፨</l>
+                  <l n="5">ምስለ፡ ምክረ፡ ጥበብ፡ በርስዕ፡ እስከ፡ ይጸግብ፡ ዓም፨</l>
+               </lg>
+               <lg type="stanza" n="48">
+                  <l n="1">ኃፍረት፡ ጥቀ፡ ለዘተለቅሐ፡ ወተሣየጠ፨</l>
+                  <l n="2">እመኒ፡ ብዙኀ፡ ወእመኒ፡ ኅዳጠ፨</l>
+                  <l n="3">እዳሁ፡ ፍጡነ፡ ሶበ፡ ኢሠለጠ፨</l>
+                  <l n="4">ሩፋኤል፡ ዐስበ፡ አምኃየ፡ እንዘ፡ ትጽሕቅ፡ መይጠ፨</l>
+                  <l n="5">በረከተ፡ ሰማይ፡ ኅቡአ፡ ሀበኒ፡ ተውላጠ፨</l>
+               </lg>
             </div>
+         </div>
+         
+         <div type="edition">
+            
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
                   ሰላም፡ ለዝክረ፡ ስምከ፡ ውስተ፡ አፈ፡ ኵሉ፡ ጥዑም።

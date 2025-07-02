@@ -5,6 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Hymn to the Miracles of ʾEwosṭātewos</title>
+           <title xml:id="t2" xml:lang="gez">እምብዙኅ፡ ተኣምሪከ፡</title>
+           <title corresp="#t2" xml:lang="gez" type="normalized">ʾƎm-bǝzuḫ Taʾāmmǝrika</title>
+           <title corresp="#t2" xml:lang="en">“From Your Many Miracles…”</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,18 +17,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-          <p/>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -35,6 +36,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+        <abstract><p>The order and selection of stanzas, apart from the ten stanzas for specific miracles attributed to him, vary from copy to copy. Its proper title — if any — is not preserved in the extant witnesses and is here inferred.</p></abstract>
+        
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
@@ -48,19 +51,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
          <change who="AD" when="2020-10-15">Added relation to the collection of hymns (LIT6201Hymn) and additional incipits.</change>
+        <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <div type="bibliography">
-            <listBibl type="editions">
+  <text xml:base="https://betamasaheft.eu/">
+    <body>
+      <div type="bibliography">
+        
+        <listBibl type="editions">
+          <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">333</citedRange>
                </bibl>
             </listBibl>
          </div>
-          <div type="edition">
+          <div type="edition" xml:id="bav">
             <note>The incipits for the stanzas are taken from <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">799-800</citedRange></bibl>, which describes <ref type="mss" corresp="BAVborget9"/>.</note>
 
             <div type="textpart" subtype="stanza" xml:lang="gez" xml:id="Stanza1">
@@ -124,9 +130,66 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </div>
 
          </div>
-         <listRelation>
-           <relation name="ecrm:P129_is_about" active="LIT6200Hymn" passive="PRS3934Ewostate"/>
-
+      
+      <div type="edition" xml:lang="gez" xml:id="mg" corresp="LIT6200Hymn"><bibl><ptr target="bm:MgWebsite"/></bibl>
+        <div type="textpart" xml:id="masgabiya">
+          <lg type="stanza" n="1">
+            <l n="1">መንክራቲከ፡ ሰማዕነ፡ እንዘ፡ ትነብር፡ አርማንያ፡ መካነ፨</l>
+            <l n="2">ኤዎስጣቴዎስ፡ ተኣምር፡ በኢትዮጵያ፡ ዘኮነ፨</l>
+            <l n="3">መርበብቶ፡ ኢይስፋሕ፡ ውስተ፡ ማኅበርነ፨</l>
+            <l n="4">ትትበአስ፡ መስተቃርነ፡ ብጽሐነ፡ ፍጡነ፨</l>
+            <l n="5">ዘተሠርኀከ፡ ሥነ፡ ጳዝዮን፡ አቡነ፨</l>
+          </lg>
+        </div>
+        <div type="textpart" xml:id="malke">
+          <lg type="stanza" n="1">
+            <l n="1">እምብዙኅ፡ ተኣምሪከ፡ ኣቀድም፡ አሐተ፨</l>
+            <l n="2">ኤዎስጣቴዎስ፡ ዘትገብር፡ ዐበይተ፡ ኀይላተ፨</l>
+            <l n="3">መኰንን፡ ዝኁር፡ ሶበ፡ ፈቀደ፡ ነሢተ፨</l>
+            <l n="4">መቃብሪከ፡ ክብርተ፡ በአእባነ፡ ባሕርይ፡ ሕንፅተ፨</l>
+            <l n="5">ምስለ፡ ሠራዊቱ፡ ብዙኅ፡ ረሰይኮ፡ ሐውልተ፨</l>
+          </lg>
+          <lg type="stanza" n="2">
+            <l n="1">ካልእ፡ ተኣምሪከ፡ ኤዎስጣቴዎስ፡ ድንግል፨</l>
+            <l n="2">አመ፡ ውስተ፡ ባሕር፡ ተሠጥመ፡ እንዘ፡ ይጐይይ፡ እምቀትል፨</l>
+            <l n="3">በከመ፡ አድኀንኮ፡ ለብርሃነ፡ መስቀል፨</l>
+            <l n="4">በዐጽፈ፡ ዚአከ፡ እምትንሣኤ፡ ግሩም፡ ማዕበል፨</l>
+            <l n="5">መኑ፡ ከማከ፡ ገቢረ፡ ዘይክል፨</l>
+          </lg>
+          <lg type="stanza" n="10">
+            <l n="1">ዐሥር፡ ተኣምሪከ፡ በኍልቈ፡ ቃላት፡ ዐሥር፨</l>
+            <l n="2">ኤዎስጣቴዎስ፡ ኀያል፡ ገባሬ፡ ተኣምር፨</l>
+            <l n="3">ከመ፡ ታዘንም፡ ሎሙ፡ ለሰብአ፡ አሐቲ፡ ሀገር፨</l>
+            <l n="4">በሐሩር፡ ወቍር፡ ወበብዙኀ፡ ዐባር፨</l>
+            <l n="5">እንዘ፡ ኵላ፡ ትውዒ፡ ምድር፨</l>
+          </lg>
+          <lg type="stanza" n="11">
+            <l n="1">አናኅኩ፡ ነፍስየ፡ ወከሠትኩ፡ አፈ፨</l>
+            <l n="2">ኤዎስጣቴዎስ፡ እዜኑ፡ ተኣምሪከ፡ ትሩፈ፨</l>
+            <l n="3">አናብስተ፡ ግርዳም፡ መፍርሃን፡ እንዘ፡ ይትለአኩከ፡ ዘልፈ፨</l>
+            <l n="4">አሐዱ፡ ዘይጸውር፡ ዐጽፈ፨</l>
+            <l n="5">ወካልኡ፡ ክልኤተ፡ መንጸፈ፨</l>
+          </lg>
+          <lg type="stanza" n="12">
+            <l n="1">ለዝንቱ፡ አበ፡ መንፈስነ፡ ዕበየ፡ ገድሉ፡ አምጽኡ፨</l>
+            <l n="2">ዘሰበከ፡ ለነ፡ ተክለ፡ ሃይማኖት፡ ረድኡ፨</l>
+            <l n="3">ነጸርክዎ፡ ይቤ፡ ቅድመ፡ መንበረ፡ አብ፡ ወበግዑ፨</l>
+            <l n="4">እንዘ፡ ይቀውም፡ በግርማ፡ ምስለ፡ ሊቃናት፡ ሰብዑ፨</l>
+            <l n="5">እሙንኬ፡ ወጽድቅ፡ ስምዑ፨</l>
+          </lg>
+          <lg type="stanza" n="13">
+            <l n="1">ኵሉሰ፡ ተኣምሪሁ፡ ሶበ፡ ተጽሕፈ፡ በበ፡ አሐዱ፨</l>
+            <l n="2">እመ፡ ኢተገምረ፡ ኍልቈ፡ ወእመ፡ ኢተክህለ፡ ፍቅዱ፨</l>
+            <l n="3">ለኤዎስጣቴዎስ፡ አብ፡ ዘገቢረ፡ ምሕረት፡ ልማዱ፨</l>
+            <l n="4">ባሕረ፡ ውዳሴሁ፡ አመ፡ ፈቀድኩ፡ እእዱ፨</l>
+            <l n="5">ዕፅበት፡ ንስቲተ፡ ከልአኒ፡ ሞገዱ፨</l>
+          </lg>
+        </div>
+      </div>
+      
+         <listRelation>           
+           <relation name="ecrm:P129_is_about" active="LIT3053RepCh333" passive="PRS3934Ewostate"/>
+           <relation name="skos:exactMatch" active="LIT3053RepCh333" passive="https://w3id.org/malke/3053/"></relation>
            <relation name="dcterms:isPartOf" active="LIT3053RepCh333" passive="LIT6201Hymn">
              <desc>The hymn may be found as part of a collection of hymns to the miracles of ʾEwosṭātewos.</desc>
            </relation>

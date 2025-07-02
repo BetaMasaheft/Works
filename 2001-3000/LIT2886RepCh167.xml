@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to St Michael</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ሚካኤል፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Mikāʾel</title>
+            <title corresp="#t1" xml:lang="en">Image of Michael</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -23,11 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
-         </sourceDesc>
+         
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -49,25 +47,141 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-15">Added keywords and incipit</change>
+         <change who="ES" when="2024-12-01">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation>
+            <relation name="ecrm:P129_is_about" active="LIT2886RepCh167" passive="PRS7049Michael"/>
+            <relation name="skos:exactMatch" active="LIT2886RepCh167" passive="https://w3id.org/malke/2886/"></relation>
+         </listRelation>
          <div type="bibliography">
-            <listBibl type="editions">
+            <listBibl type="editions">               
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">167</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለዝክረ፡ ስምከ፡ ዘጥቀ፡ ተሞገሰ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">እኁዛነ፡ አርማሕ፡ ወማእፀድ፨</l>
+                  <l n="2">ማኅበረ፡ ሚካኤል፡ ተስዓ፡ ወትስዐቱ፡ ነገድ፨</l>
+                  <l n="3">_____</l>
+                  <l n="4">_____ ዐጽፍክሙ፡ ዘነጐድጓድ፨</l>
+                  <l n="5">_____ በነድ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">_____</l>
+                  <l n="2">_____ ፈ፡ መልክእከ፡ እጽሐፍ፡ መጽሐፈ፡ ብርሃን፨</l>
+                  <l n="3">ሚካኤል፡ ዜናዊ፡ ጸአተ፡ እስራኤል፡ እምዖን፨</l>
+                  <l n="4">ነዓኒ፡ ከመ፡ እንግርከ፡ እንተ፡ ዘብየ፡ ኀዘን፨</l>
+                  <l n="5">መፍትው፡ ይንግርዎ፡ ለአርክ፡ ምእመን፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ዘጥቀ፡ ተሞገሰ፨</l>
+                  <l n="2">እስከ፡ በኀይላት፡ ከብረ፡ ወበሊቃናት፡ ረአሰ፨</l>
+                  <l n="3">ጊዜ፡ ተከዝኩ፡ ትካዘ፡ ወጊዜ፡ ኀጣዕኩ፡ ፈውሰ፨</l>
+                  <l n="4">ቅድመ፡ ሥዕልከ፡ ሚካኤል፡ ሶበ፡ እትመሀላል፡ አንሰ፨</l>
+                  <l n="5">እንዘ፡ ይብል፡ ነየ፡ ንበበኒ፡ ሥልሰ፨</l>
+               </lg>
+               <lg type="stanza" n="4">
+                  <l n="1">ሰላም፡ ለድምድማከ፡ የማነ፡ ልዑል፡ ዘደለላ፨</l>
+                  <l n="2">ሚካኤል፡ ቀዋሚ፡ በመቅደሰ፡ ሰማይ፡ ጌርጌላ፨</l>
+                  <l n="3">ይእተ፡ ጊዜ፡ በጺሐከ፡ በሰረገላ፨</l>
+                  <l n="4">ለኀይድ፡ ወለመሢጥ፡ ሶበ፡ ይትኤገለኒ፡ ተኵላ፨</l>
+                  <l n="5">በመርብረቀ፡ አሕፃከ፡ ሚካኤል፡ ተድላ፨</l>
+               </lg>
+               <lg type="stanza" n="5">
+                  <l n="1">ሰላም፡ ለርእስከ፡ ዘይትቄጸል፡ ጽድቀ፡</l>
+                  <l n="2">አኮ፡ አኮ፡ ብሩር፡ ወወርቀ፨</l>
+                  <l n="3">ሚካኤል፡ አውቅየ፡ ወማእምርየ፡ ጥዩቀ፨</l>
+                  <l n="4">ከመ፡ ታደንግፆ፡ ለአበ፡ ደምየ፡ ሕቀ፨</l>
+                  <l n="5">ቅድመ፡ ገጽየ፡ አንጦልዕ፡ መብረቀ።</l>
+               </lg>
+               <lg type="stanza" n="6">
+                  <l n="1">ሰላም፡ ለስእርተ፡ ርእስከ፡ ዘኢይትከሀል፡ ለኈልቆ፨</l>
+                  <l n="2">ወዕፁብ፡ ካዕበ፡ ለርእዪ፡ ወለጠይቆ፨</l>
+                  <l n="3">ሚካኤል፡ ነዓ፡ ፀረ፡ ሕይወትየ፡ ለተዳድቆ፨</l>
+                  <l n="4">ሰማይ፡ እንከ፡ ለይጽብቦ፡ ወስፍሐ፡ ዓለም፡ ታጽእቆ፨</l>
+                  <l n="5">አፍሓመ፡ ገጽከ፡ ያኅቱ፡ እምሰማይ፡ በሪቆ፨</l>
+               </lg>
+               <lg type="stanza" n="7">
+                  <l n="1">ሰላም፡ ለፍጽምከ፡ እምስዕለ፡ እሳት፡ ዘተቀልመ፡</l>
+                  <l n="2">ቃለ፡ መፍርሃ፡ ወኅቡአ፡ ስመ፨</l>
+                  <l n="3">ሚካኤል፡ ግሩም፡ እንተ፡ ትትአጸፍ፡ አፍሓም፨</l>
+                  <l n="4">ሀቦ፡ ለፀርየ፡ ዘይነብበኒ፡ ሕሠመ፨</l>
+                  <l n="5">ልሳነ፡ ፍጹመ፡ ወአፈ፡ በሀመ፨</l>
+               </lg>
+               <lg type="stanza" n="8">
+                  <l n="1">ሰላም፡ እብል፡ ለገጽከ፡ ሥኖ፨</l>
+                  <l n="2">ዘየኀቱ፡ ጥቀ፡ እምዕንቈ፡ ኢያስጲድ፡ ወሰርዲኖ፨</l>
+                  <l n="3">ሚካኤል፡ ስመረኒ፡ በኢመንኖ፨</l>
+                  <l n="4">ዘተገደፍኩ፡ ላዕሌከ፡ ኀበ፡ ዘትክል፡ አድኅኖ፨</l>
+                  <l n="5">ሚላዕሌየ፡ ዘኮነ፡ ከዊኖ፨</l>
+               </lg>
+               <lg type="stanza" n="23">
+                  <l n="1">ሰላም፡ ለአክናፊከ፡ እለ፡ ሥርግዋት፡ በርስን፨</l>
+                  <l n="2">ዖፈ፡ ነደ፡ እሳት፡ ዘሑረትከ፡ በሥን፨</l>
+                  <l n="3">ሚካኤል፡ ዐቢይ፡ መልአከ፡ ብርሃን፨</l>
+                  <l n="4">ተናበበኒ፡ እምድኅሬየ፡ ከመ፡ ድምፀ፡ መጥቅዕ፡ ወቃርን፨</l>
+                  <l n="5">በቃለ፡ ነጐድጓድ፡ ገዚፍ፡ ወፋጻ፡ ቀጢን፨</l>
+               </lg>
+               <lg type="stanza" n="24">
+                  <l n="1">ሰላም፡ ለአክናፊከ፡ ከመ፡ መብረቅ፡ እለ፡ ነጠራ፨</l>
+                  <l n="2">ለድምሳሴ፡ ወለገሞራ፨</l>
+                  <l n="3">ሚካኤል፡ ዘሖርከ፡ ቅድመ፡ ትዕይንቶሙ፡ ለድዮስጶራ፨</l>
+                  <l n="4">ኀይለከ፡ ርእያ፡ ወትእምርተከ፡ ኀጺራ፨</l>
+                  <l n="5">ተከፍለት፡ ባሕር፡ ወፈርሀት፡ ኤርትራ፨</l>
+               </lg>
+               <lg type="stanza" n="28">
+                  <l n="1">ሰላም፡ ለሕንጋዛቲከ፡ አፈዋተ፡ ብርሃን፡ ምሉእ፨</l>
+                  <l n="2">ዘይሔውዝ፡ ፈድፉደ፡ እምገነተ፡ ከርካዕ፨</l>
+                  <l n="3">መኑ፡ ከማከ፡ ከመ፡ ከማከ፡ ካልእ፨</l>
+                  <l n="4">ሚካኤል፡ ብሂል፡ ዕፁብ፡ ነገር፡ ሳቡእ፨</l>
+                  <l n="5">ገብርኤል፡ ብሂል፡ አምላክ፡ ወሰብእ፨</l>
+               </lg>
+               <lg type="stanza" n="52">
+                  <l n="1">ሰላም፡ ለቆምከ፡ ለስብሐተ፡ ልዑል፡ ክዳና፨</l>
+                  <l n="2">ወአክሊለ፡ ብእሲ፡ አዳም፡ ኢኮነ፡ ከመ፡ መጠና፨</l>
+                  <l n="3">ሚካኤል፡ አዕርግ፡ ቍርባነ፡ አፉየ፡ መና፨</l>
+                  <l n="4">እንተ፡ አቅረብት፡ ለከብርከ፡ ንስቲተ፡ መሀና፨</l>
+                  <l n="5">ሰማየ፡ ሰማያተ፡ እሕልፍ፡ ወአእዱ፡ ደመና፨</l>
+               </lg>
+               <lg type="stanza" n="53">
+                  <l n="1">ሰላም፡ ለመልክእከ፡ ነበልባለ፡ እሳት፡ በሐቢ፨</l>
+                  <l n="2">ዘበኵሕ፡ ፈድፉደ፡ እምአፍሓመ፡ እሳት፡ ዘነሃቢ፨</l>
+                  <l n="3">ሚካኤል፡ አንተ፡ በዲበ፡ አእላፍ፡ ኀቢ፨</l>
+                  <l n="4">ዐቃቢ፡ ለነፍስ፡ ኵሉ፡ ፍጥረት፡ ዐቃቢ፨</l>
+                  <l n="5">አማን፡ ረቢ፡ እመላእክት፡ ሚካኤል፡ የዐቢ፨</l>
+               </lg>
+               <lg type="stanza" n="54">
+                  <l n="1">ሰላም፡ ለመልክእከ፡ ነደ፡ እሳት፡ ዘያውዒ፨</l>
+                  <l n="2">መልአከ፡ ኀያላን፡ አንተ፡ ወሥልጣነ፡ ሞት፡ ጸባኢ፨</l>
+                  <l n="3">ሚካኤል፡ ረሲ፡ ላዕለ፡ ፀርየ፡ ገፉዒ፨</l>
+                  <l n="4">አፈ፡ ከለባት፡ ወልሳነ፡ አርዌ፡ ጸላኢ፨</l>
+                  <l n="5">በአፈ፡ ኲናት፡ በሊሕ፡ ወእሳት፡ በላዒ፨</l>
+               </lg>
+               <lg type="stanza" n="55">
+                  <l n="1">ሰላም፡ እብል፡ ለኵሎን፡ መልክእከ፡ በውዳሴ፨</l>
+                  <l n="2">ዘመራሕኮሙ፡ ሚካኤል፡ ጊዜ፡ ፀአቶሙ፡ ለሕዝበ፡ ራምሴ፨</l>
+                  <l n="3">ለዝ፡ መልአክ፡ መልአከ፡ ቅዳሴ፨</l>
+                  <l n="4">ንግሩ፡ ኀይሎ፡ ቤተ፡ ያዕቆብ፡ ወአውሴ፨</l>
+                  <l n="5">ወመንከሮሂ፡ አሮን፡ ወሙሴ፨</l>
+               </lg>
+               <lg type="stanza" n="56">
+                  <l n="1">ውዳሴ፡ መልክእከ፡ ዘንተ፡ እንበይነ፡ ዘአቅረብኩ፡ ለከ፡ በግናይ፨</l>
+                  <l n="2">ተኀፊርየ፡ ኢይግባእ፡ ዘሰአልኩከ፡ ነዳይ፨</l>
+                  <l n="3">አስምዐኒ፡ እስኩ፡ ቃለ፡ ፍትሕከ፡ ዐባይ፨</l>
+                  <l n="4">እሰብከከ፡ ሚካኤል፡ በኀይለ፡ ሠለስቱ፡ ፀሓይ፨</l>
+                  <l n="5">ወበስመ፡ ማርያም፡ ድንግል፡ ዳግሚት፡ ሰማይ፨</l>
+               </lg>
             </div>
          </div>
+         
       </body>
    </text>
 </TEI>

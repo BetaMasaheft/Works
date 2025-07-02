@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to ʾabbā Sāmuʾel</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ሳሙኤል፡ ዘዋልድባ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Sāmuʾel za-Wāldǝbbā</title>
+            <title corresp="#t1" xml:lang="en">Image of Sāmuʾel of Wāldǝbbā</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -13,10 +15,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">                
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -49,25 +50,56 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
+         <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT3042RepCh322" passive="PRS8491Samuel"/>
+               <relation name="skos:exactMatch" active="LIT3042RepCh322" passive="https://w3id.org/malke/3042/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">322</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  አኃዝኩ፡ አንሰ፡ ለልየ፡ እምሐኬቱ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">አኀዝኩ፡ አንሰ፡ ለልብየ፡ እምሐኬቱ፨</l>
+                  <l n="2">ውዳሴ፡ መልክእከ፡ እንግር፡ እንዘ፡ አስተዋድድ፡ በበ፡ ክልኤቱ፨</l>
+                  <l n="3">ሱታፌ፡ መላእክት፡ ሳሙኤል፡ ወምግባረ፡ ጻድቅ፡ ዘታሕቱ፨</l>
+                  <l n="4">ይኅብኡ፡ ግብረ፡ ንጉሥ፡ ወምግባረ፡ ጻድቅ፡ ይክሥቱ፨</l>
+                  <l n="5">አኮኑ፡ ጽሑፍ፡ ወሥሩዕ፡ ውእቱ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ዘስሙዓቲሁ፡ ድሙፅ፨</l>
+                  <l n="2">ወለሥዕርትከ፡ ሰላም፡ ሐመልማለ፡ ገነት፡ ሠርጽ፨</l>
+                  <l n="3">ተወካፌ፡ ጻማ፡ ሳሙኤል፡ ወጸዋሬ፡ ብዙኅ፡ ተግሣጽ፨</l>
+                  <l n="4">ለለ፡ እነግር፡ ስብሐቲከ፡ አስተርእየኒ፡ በገጽ፨</l>
+                  <l n="5">ሕገ፡ አስተርአየከ፡ ሚካኤል፡ በገዳም፡ ወዓፅ፨</l>
+               </lg>
+               <lg type="stanza" n="24">
+                  <l n="1">ሰላም፡ ለመልክእከ፡ ስቡሐ፡ ዘተሰብሐ፨</l>
+                  <l n="2">ወለአስኬማከ፡ ሰላም፡ ዘበኃጢአት፡ ኢረስሐ፨</l>
+                  <l n="3">ሊቀ፡ ካህናት፡ ሳሙኤል፡ ሶበ፡ ትጼሊ፡ በቅዳሴሃ፨</l>
+                  <l n="4">እፎ፡ ማርያም፡ እንዘ፡ ትጸውር፡ በእዴሃ፨</l>
+                  <l n="5">አምጽአት፡ ለከ፡ ክልኤተ፡ አምኃ፨</l>
+               </lg>
+               <lg type="stanza" n="25">
+                  <l n="1">ሰላም፡ ለፀአተ፡ ነፍስከ፡ እማኅፈደ፡ ሥጋ፡ ወደም፨</l>
+                  <l n="2">ወለመቃብሪከ፡ ሰላም፡ ውስተ፡ ኀቅለ፡ ዋሊ፡ ገዳም፨</l>
+                  <l n="3">መናኔ፡ ፍትወታት፡ ሳሙኤል፡ ወንጉሠ፡ ሐዲስ፡ ዓለም፨</l>
+                  <l n="4">ለጴጥሮስ፡ ወለጳውሊ፡ ከመ፡ ለሐወቶሙ፡ ሮም፨</l>
+                  <l n="5">ለሐወት፡ ገዳምከ፡ በሞትከ፡ ዮም፨</l>
+               </lg>
             </div>
-         </div>
+         </div>         
       </body>
    </text>
 </TEI>

@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Hymn to St Cyricus and Julitta</title>
-            <title xml:id="t2">Malkǝʾa Qirqos</title>
+            <title xml:id="t2" xml:lang="gez">መልክአ፡ ቂርቆስ፡</title>
+            <title corresp="#t2" xml:lang="gez" type="normalized">Malkǝʾa Qirqos</title>
+            <title corresp="#t2" xml:lang="en">Image of Cyricus</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -15,9 +17,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -53,12 +55,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-02-16">Added keywords and incipit</change>
          <change when="2019-06-14" who="ES">expanded incipit from ESum008 , added relations</change>
+         <change who="ES" when="2025-01-10">Added text from A. Dickinson's database</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
-            <listBibl type="editions">
+              <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">375</citedRange>
@@ -69,9 +73,99 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1488GadlaQ" passive="LIT5739GadlaQDossier"/>
                <relation name="ecrm:P129_is_about" active="LIT3095RepCh375" passive="PRS3249Cyriacus"/>
                <relation name="ecrm:P129_is_about" active="LIT3095RepCh375" passive="PRS5790Julitta"/>
+               <relation name="skos:exactMatch" active="LIT3095RepCh375" passive="https://w3id.org/malke/3095/"></relation>
             </listRelation>
          </div>
-         <div type="edition">
+         <div type="edition" xml:lang="gez">
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ኦክርስቶስ፡ ናዝራዊ፡ ዘተወከፍከ፡ ሕማመ፨</l>
+                  <l n="2">ፀሓይ፡ ብሩህ፡ ወጽዱል፡ አመ፡ ሱራሬሁ፡ አጽለመ፨</l>
+                  <l n="3">መጽሐፈ፡ ዜናሁ፡ ለቂርቆስ፡ መንፈሳዊ፡ ወዘመልክኡ፡ ሰላመ፨</l>
+                  <l n="4">ጸሐፍ፡ ውስተ፡ ልብየ፡ እንዘ፡ ትገብር፡ ቀለመ፨</l>
+                  <l n="5">ደመከ፡ አምላካዊ፡ በመስቀል፡ ዘዘንመ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ቂርቆስ፡ ሕፃን፨</l>
+                  <l n="2">ዘፍካሬሁ፡ ተብህለ፡ ጽጌ፡ ምዑዝ፡ ዕፍራን፨</l>
+                  <l n="3">ለዝስምከ፡ ነጋሢ፡ ዘኢየዐርቆ፡ ሥልጣን፨</l>
+                  <l n="4">ሶበ፡ ይጼውዖ፡ ልሳንየ፡ ውስተ፡ ገጸ፡ ኵሉመካን፨</l>
+                  <l n="5">ይደንግፅ፡ ሞት፡ ወይጕየይ፡ ሰይጣን፨</l>
+               </lg>
+               <lg type="stanza" n="3">
+                  <l n="1">ሰላም፡ ለሥዕርተ፡ ርእስከ፡ ዘሠረፁ፡ ወበቈሉ፨</l>
+                  <l n="2">ለርእስከ፡ በላዕሉ፨</l>
+                  <l n="3">በለኒ፡ ቂርቆስ፡ ዘይቤ፡ ለክርስቶስ፡ እግዚአ፡ ኵሉ፨</l>
+                  <l n="4">ሀብተ፡ በረከቱ፡ ወሞገሰ፡ ቅዱስ፡ መስቀሉ፨</l>
+                  <l n="5">ለዓለመ፡ ዓለም፡ እምይእዜ፡ ምስሌከ፡ የሀሉ፨</l>
+               </lg>
+               <lg type="stanza" n="26">
+                  <l n="1">ሰላም፡ ሰላም፡ ወሰላም፡ እብሎን፨</l>
+                  <l n="2">ለአፃᎅከ፡ ዐሥር፡ ምስለ፡ አጽፋሪሆን፨</l>
+                  <l n="3">ኀድፈኒ፡ ቂርቆስ፡ ኖትያ፡ መንገለ፡ መርስ፡ ወዛኅን፨</l>
+                  <l n="4">እስመ፡ ናሁ፡ አስጠሙ፡ ኅሊናየ፡ በዝዘመን፨</l>
+                  <l n="5">ሰቆቃው፡ ጤግሮስ፡ ወግዮን፡ ኀዘን፨</l>
+               </lg>
+               <lg type="stanza" n="40">
+                  <l n="1">ሰላም፡ ለበድነ፡ ሥጋከ፡ በሰረገላሁ፡ ዘተኀብአ፨</l>
+                  <l n="2">ለነቢይ፡ ኤልያስ፡ በሕገ፡ አምላክ፡ ዘቀንአ፨</l>
+                  <l n="3">መምህረ፡ መምህራን፡ ቂርቆስ፡ እንተ፡ ታጸድቅ፡ ኃጥአ፨</l>
+                  <l n="4">ጌጋይየ፡ ሥረይ፡ ለአባሲ፡ በከመ፡ መምህርከ፡ ሠርዐ፨</l>
+                  <l n="5">ወኅድግ፡ አበሳየ፡ በበ፡ ስብዕ፡ ስብዓ፨</l>
+               </lg>
+               <lg type="stanza" n="41">
+                  <l n="1">ሰላም፡ ለሕማምከ፡ ወለግፍዕከ፡ ብዙኅ፨</l>
+                  <l n="2">እንተ፡ ያበኪ፡ አልባበ፡ ከመ፡ ግᎈ፡ ክርስቶስ፡ ርኅሩኅ፨</l>
+                  <l n="3">ክረምተ፡ ፍሥሓየ፡ ቂርቆስ፡ ለብእሴ፡ ሰቆቃው፡ ወላሕ፨</l>
+                  <l n="4">ያንጠብጥብ፡ በላዕሌየ፡ መጠነ፡ ሠለስቱ፡ አውራኅ፨</l>
+                  <l n="5">ነጠብጣበ፡ ትፍሥሕት፡ በረከትከ፡ ወዝናም፡ ንጹሕ፨</l>
+               </lg>
+               <lg type="stanza" n="42">
+                  <l n="1">ሰላም፡ ለነቅዐ፡ ደምከ፡ ዘተቶስሐ፡ በደሙ፨</l>
+                  <l n="2">ለበግዐ፡ መስቀል፡ ክርስቶስ፡ እንተ፡ ያደንግፅ፡ ዜና፡ ሕማሙ፨</l>
+                  <l n="3">እኅወ፡ ሰማዕታት፡ ቂርቆስ፡ ወለሐዋርያት፡ ወልዶሙ፨</l>
+                  <l n="4">ለእለ፡ ገብሩ፡ ተዝካረከ፡ ጸጋ፡ መንፈስ፡ ቅዱስ፡ ሀቦሙ፨</l>
+                  <l n="5">ወዕሤተ፡ ጽድቅ፡ በሰማይ፡ አስተዳሉ፡ ሎሙ፨</l>
+               </lg>
+               <lg type="stanza" n="43">
+                  <l n="1">ሰላም፡ ለህላዌከ፡ ማእከለ፡ ሰባዕቱ፡ ነገድ፨</l>
+                  <l n="2">እለ፡ ስኡላን፡ በነድ፨</l>
+                  <l n="3">አስተምሕር፡ ቂርቆስ፡ ቅድመ፡ መንበረ፡ አብ፡ ወወልድ፨</l>
+                  <l n="4">ኀበ፡ ተሐንጸ፡ መርጡልከ፡ ወዘዚአከ፡ ዐጸድ፨</l>
+                  <l n="5">ኢይምጻእ፡ በዓለም፡ ዘይቀትል፡ ብድብድ፨</l>
+               </lg>
+               <lg type="stanza" n="44">
+                  <l n="1">በሰላመ፡ መንፈስ፡ ቅዱስ፡ ሰላም፡ ሰላም፨</l>
+                  <l n="2">ለሥነ፡ ቆምኪ፡ አዳም፨</l>
+                  <l n="3">ኢየሉጣ፡ ገነት፡ ዘመዐዛኪ፡ ጥዑም፨</l>
+                  <l n="4">ይትከዐው፡ ውስተ፡ አፉየ፡ ሐሊበ፡ አጥባትኪ፡ ዮም፨</l>
+                  <l n="5">ከመ፡ እምደመና፡ ይትከዐው፡ ወይወርድ፡ ዝናም፨</l>
+               </lg>
+               <lg type="stanza" n="45">
+                  <l n="1">ሰላም፡ ለመልክኣትኪ፡ አርብዓ፡ ወሠለስቱ፨</l>
+                  <l n="2">ዓዲ፡ ሰላም፡ ለጠባይዕኪ፡ አርባዕቱ፨</l>
+                  <l n="3">ኢየሉጣ፡ ቅድስት፡ ለቂርቆስ፡ ወላዲቱ፨</l>
+                  <l n="4">ሰአሊዮ፡ በእንቲአየ፡ ከመ፡ ኢይጥፋእ፡ በከንቱ፨</l>
+                  <l n="5">ለእግዚአብሔር፡ አምላከ፡ ጽድቅ፡ ዘብዙኅ፡ ምሕረቱ፨</l>
+               </lg>
+               <lg type="stanza" n="46">
+                  <l n="1">ለዝንቱ፡ ቃለ፡ ማሕሌት፡ ወለዝንቱ፡ ድርሳን፨</l>
+                  <l n="2">ለዘጸሐፎ፡ በአእዳው፡ ወለዘአንበቦ፡ በልሳን፨</l>
+                  <l n="3">ወለዘሰምዐ፡ ቃላቲሁ፡ በክልኤ፡ አእዛን፨</l>
+                  <l n="4">ኅቡረ፡ ይባርኩነ፡ በእዘዘ፡ ክርስቶስ፡ ብርሃን፨</l>
+                  <l n="5">ቅዱሳት፡ አፃብዒሁ፡ ለቂርቆስ፡ ሕፃን፨</l>
+               </lg>
+               <lg type="stanza" n="47">
+                  <l n="1">ማሕሌተ፡ መልክኡ፡ ለቂርቆስ፡ ወዘኢየሉጣ፡ አባሉ፨</l>
+                  <l n="2">ናሁ፡ ጸሐፍኩ፡ እንዘ፡ አስተዋፅእ፡ እምነ፡ ገድሉ፨</l>
+                  <l n="3">ባርኪ፡ ሊተ፡ ማርያም፡ እግዝእተ፡ ኵሉ፨</l>
+                  <l n="4">ዘባረኪ፡ በዲበ፡ ምድር፡ ቡሩክ፡ በላዕሉ፨</l>
+                  <l n="5">ወዘቀድስኪ፡ ለዓለም፡ ዘይሄሉ፨</l>
+               </lg>
+            </div>
+         </div>
+         
+         <div type="edition"><note>from <ref type="mss" corresp="ESum008"></ref></note>
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <ab>
                   ኦክርስቶስ፡ ናዝራዊ፡ ዘተወከፍከ፡ ሕማመ። 

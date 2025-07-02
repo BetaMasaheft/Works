@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="en" xml:id="t1">Malkǝʾ-hymn to John</title>
+            <title xml:id="t1" xml:lang="gez">መልክአ፡ ዮሐንስ፡</title>
+            <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Yoḥannǝs</title>
+            <title corresp="#t1" xml:lang="en">Image of  John / Image of Yoḥannǝs I</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -14,9 +16,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                
                                     This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                                    Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -51,18 +53,88 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="MV" when="2017-05-13">Added keywords and incipit</change>
          <change who="MKr" when="2021-02-18">Added info on attribution, provided by Augustine Dickinson https://github.com/BetaMasaheft/Documentation/issues/1687</change>
          <change who="DR" when="2022-03-10">Added incipit and explicit</change>
+         <change who="ES" when="2024-12-10">Added the text, title, relations and bibl (A.
+            Dickinson's database)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listRelation>
+               
+               <relation name="ecrm:P129_is_about" active="LIT2870RepCh151" passive="PRS10375Yohanne"></relation>
+               <relation name="skos:exactMatch" active="LIT2870RepCh151" passive="https://w3id.org/malke/2870/"></relation>
+            </listRelation>
             <listBibl type="editions">
+               <bibl><ptr target="bm:MgWebsite"/></bibl>
                <bibl>
                   <ptr target="bm:Chaine1913Rep"/>
                   <citedRange unit="item">151</citedRange>
                </bibl>
             </listBibl>
          </div>
+         <div type="edition" xml:lang="gez">
+            <note>the text from Malkea Gubae as edited by A. Dickinson at <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+            <div type="textpart" xml:id="malke">
+               <lg type="stanza" n="1">
+                  <l n="1">ሰላም፡ ለዝክረ፡ ስምከ፡ ዘበመጽሐፈ፡ ሕግ፡ ተሐትመ፨</l>
+                  <l n="2">ወለሥዕርትከ፡ ሜላት፡ ዘበፈትለ፡ ሥጋ፡ ተአንመ፨</l>
+                  <l n="3">ባሕታዊ፡ ዮሐንስ፡ እስመ፡ መነንከ፡ ዓለመ፨</l>
+                  <l n="4">በጽላሎትከ፡ ይነቅሕ፡ ዘኖመ፨</l>
+                  <l n="5">ወበሰበንከ፡ ይትፌወስ፡ ዘሐመ፨</l>
+               </lg>
+               <lg type="stanza" n="2">
+                  <l n="1">ሰላም፡ ለርእስከ፡ ዘይደልዎ፡ ውዳሴ፨</l>
+                  <l n="2">ወለገጽከ፡ ስቡሕ፡ ተመሳሌ፡ ገጹ፡ ለሙሴ፨</l>
+                  <l n="3">ውስተ፡ ዝኅር፡ ዮሐንስ፡ እምአመ፡ ኮንከ፡ ፈላሴ፨</l>
+                  <l n="4">ይበክዩ፡ በእንቲአከ፡ ምስለ፡ ቤተ፡ ዳዊት፡ ዘእሤ፨</l>
+                  <l n="5">ኤፍሬም፡ በከዋላ፡ ወበፍጽም፡ ምናሴ፨</l>
+               </lg>
+               <lg type="stanza" n="9">
+                  <l n="1">ሰላም፡ ለክሳድከ፡ ወለመታክፍቲከ፡ ጕርዔ፨</l>
+                  <l n="2">እለ፡ ዕሩቃተ፡ ኮና፡ እምአርዑተ፡ አይሁድ፡ ዝንጋዔ፨</l>
+                  <l n="3">እምዘርአ፡ ሥርናይ፡ ዮሐንስ፡ መበይነ፡ ክርዳድ፡ መሥዔ፨</l>
+                  <l n="4">ተሐደሰት፡ በመንግሥትከ፡ ዘቈስጠንጢኖስ፡ ጉባኤ፨</l>
+                  <l n="5">ወበመንግሥትከ፡ ሰዱቃዊ፡ አእመረ፡ ትንሣኤ፨</l>
+               </lg>
+               <lg type="stanza" n="11">
+                  <l n="1">ሰላም፡ ለሕፅንከ፡ ምጽላለ፡ ነዳይ፡ ብእሲ፨</l>
+                  <l n="2">ወለአእዳዊከ፡ አብትር፡ መቅሠፍታተ፡ ርእሱ፡ ለከይሲ፨</l>
+                  <l n="3">አበ፡ ምኔተ፡ ደብር፡ ዮሐንስ፡ ወዮሐንስ፡ አበ፡ ነጋሢ፨</l>
+                  <l n="4">ምስለ፡ አኖሬዎስ፡ ዘበሰማያት፡ ኀሣሢ፨</l>
+                  <l n="5">ወአማናዊ፡ ቢጽከ፡ ዳንኤል፡ ፈላሲ፨</l>
+               </lg>
+               <lg type="stanza" n="13">
+                  <l n="1">ሰላም፡ ለእመትከ፡ ወለእራኅከ፡ እብል፨</l>
+                  <l n="2">ሀብተ፡ በረከት፡ መጥዎ፡ ወተመጥዎ፡ ዘይክል፨</l>
+                  <l n="3">መልዕልተ፡ ርእስከ፡ ሤመት፡ ንግሥተ፡ እስራኤል፡ ድንግል፨</l>
+                  <l n="4">አክሊለ፡ ሰማያዊ፡ ህየንተ፡ ምድራዊ፡ አክሊል፨</l>
+                  <l n="5">በምድር፡ ወሰማይ፡ ዮሐንስ፡ ባዕል፨</l>
+               </lg>
+               <lg type="stanza" n="20">
+                  <l n="1">ሰላም፡ ለአብራኪከ፡ ዘአጻመዎን፡ ሰጊድ፨</l>
+                  <l n="2">ወለአእጋሪከ፡ አብያጽ፡ አዕማደ፡ ሥጋ፡ ማኅፈድ፨</l>
+                  <l n="3">አስከሬነ፡ ወርቅ፡ ዮሐንስ፡ ምሥያመ፡ ኢያሱ፡ መረግድ፨</l>
+                  <l n="4">መንበርከ፡ ዘኢፈለሰ፡ መንገለ፡ ካልእ፡ ነገድ፨</l>
+                  <l n="5">ስብሐት፡ ለአብ፡ ወስብሐት፡ ለወልድ፨</l>
+               </lg>
+               <lg type="stanza" n="24">
+                  <l n="1">ሰላም፡ ለፀአተ፡ ነፍስከ፡ በዕለተ፡ ዐባይ፡ ሰንበት፨</l>
+                  <l n="2">ወለበድነ፡ ሥጋከ፡ ክቡር፡ መንቅሔ፡ ሥጋ፡ ምውት፨</l>
+                  <l n="3">ማኅቶትነ፡ ዮሐንስ፡ ተኀድገነ፡ ለምንት፨</l>
+                  <l n="4">አኮኑ፡ ተኣምር፡ እግዚኦ፡ ለእመ፡ ጠፍአ፡ ማኅቶት፨</l>
+                  <l n="5">ከመ፡ ንጻሬ፡ ይጠፍእ፡ ወይጸልም፡ ቤት፨</l>
+               </lg>
+               <lg type="stanza" n="28">
+                  <l n="1">ሕዝበ፡ እስራኤል፡ ያብኡ፡ ለንጉሦሙ፡ ጸባሕተ፨</l>
+                  <l n="2">እስከ፡ ይእዜ፡ እምሳኦል፡ እስመ፡ አቀሙ፡ ሥርዓተ፨</l>
+                  <l n="3">ተመጠወኒ፡ ዮሐንስ፡ ጻማ፡ ከናፍርየ፡ ሊተ፨</l>
+                  <l n="4">ወተወከፍ፡ ፍርል፡ አፉየ፡ እንበለ፡ ትበለኒ፡ አንተ፨</l>
+                  <l n="5">ዘንተ፡ አሠነይከ፡ ወአኅሠምከ፡ ዘንተ፨</l>
+               </lg>
+            </div>
+         </div>
+         
          <div type="edition">
             <div type="textpart" subtype="incipit" xml:lang="gez">
                <note>The following incipit is taken from <ref type="mss" corresp="BLorient575"/>.</note>
