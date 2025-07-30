@@ -6,8 +6,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <titleStmt>
             <title xml:id="t1" xml:lang="gez">ታሪክ፡ ዘጋላ፡ ወራእየ፡ ልብነ፡ ድንግል፡</title>
             <title corresp="#t1" type="normalized" xml:lang="gez">Tārik za-gāllā wa-rāʾǝya Lǝbna Dǝngǝl</title>
+            <title corresp="#t1"  xml:lang="en">History of the Oromo and of the vision of Lǝbna
+               Dǝngǝl</title>
             <title xml:id="t2" xml:lang="gez">ታሪከ፡ ነገሥት፡</title>
             <title corresp="#t2" type="normalized" xml:lang="gez">Tārika nagaśt</title>
+            <title corresp="#t2"  xml:lang="en">History of the kings</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -36,18 +39,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <abstract><p>Amharic narration on the origins of the Oromo people and the reasons for the
+            invasion of <persName ref="PRS1522Ahmadb"/>, related to the <ref type="work"
+               corresp="LIT1296Dersan"/> and part of a narrative cycle in Amharic containing several other works.</p></abstract>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="HistoryAndHistoriography"/>
+               <term key="AmharicLiterature"/>
+               <term key="ApocalypticLiterature"/>
+            </keywords>
+         </textClass>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
-         <change who="DR" when="2025-07-30">Updated title, added abstract and bibliography</change>
+         <change who="DR" when="2025-07-30">Updated title, added abstract, keywords and bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <div type="bibliography">
+           <listBibl type="editions">
+              <bibl><ptr target="bm:Caquot1957Gragn"/></bibl>
+           </listBibl>
+           <listBibl type="secondary">
+              <bibl><ptr target="bm:Lusini1992Oromo"/></bibl>
+              <bibl><ptr target="bm:Lusini2005EAEDersanaRaguel"/></bibl>  
+           </listBibl>
+           <listRelation>
+              <relation name="saws:isRelatedTo" active="LIT2419Tarikz" passive="LIT1296Dersan"/>
+           </listRelation>
+        </div>
       </body>
    </text>
 </TEI>
