@@ -6,7 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <titleStmt>
             
             <title xml:lang="gez" xml:id="t1">ድርሳነ፡ ኡራኤል፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsāna ʿUrāʾel</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsāna ʾUrāʾel</title>
             <title xml:lang="en" corresp="#t1">Homily of (Archangel) Uriel</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -37,9 +37,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p>The Homily as edited in <bibl>
-                  <ptr target="bm:Caquot1955Urael"/>
-               </bibl>, different from <ref type="work" corresp="LIT4951DersanaUrael"/>
+            <p>The homily is a narrative by the apostle John who describes how archangel Uriel collected blood from Christ's side and travelled the world with it, finally reaching Ethiopia.
             </p>
          </abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
@@ -48,14 +46,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="MKr" when="2025-08-23">Added relation, incipit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div xml:lang="gez" type="edition">
+            <note>The incipit is taken from <ref type="mss" corresp="EMML1939"/>.</note>
+            <div type="textpart" subtype="incipit">
+               <ab xml:lang="gez">በስመ፡ እግዚአብሔር፡ አብ፡ ሕያው፡ ዘሀሎ፡ ወይሄሉ፡ እምቅድመ፡ ዓለም። ወበስመ፡ እግዚአብሔር፡ ወልድ፡ ዘተሰብእ፡ በሥጋ፡ እማርያም፡ በእንተ፡ 
+                  አፍቅሮተ፡ አዳም። ወበስመ፡ እግዚአብሔር፡ መንፈስ፡ ቅዱስ፡ ዘይነብር፡ መልዕለተ፡ አርያም፡ ዘሥረፀ፡ እምኀበ፡ አብ፡ ሎቱ፡ ስብሐት፡ ወአኰቴት፡ እስከ፡ እስትንፋስ፡ ደኃሪት፡ ለዓለመ፡ ዓለም፡ አሜን። 
+                  ስምዑ፡ አኃውየ፡ ወአበውየ፡ ክቡራነ፡ ዓለም፡ ዘነገረነ፡ ዮሐንስ፡ አኁነ፡ በድርሳኑ፡ ዘውእቱ፡ ነባቤ፡ መለኮት፡ ወሐዋርያ፡ ሐዲስ፡ አባ፡ ቴዎዶጦስ፡ ረድዑ፡ ለአብሮኮሮስ፡ ረድዑ፡ ለዮሐንስ፡ ፍቁረ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ። 
+                  አንሰ፡ ሖኩኬ፡ ኀቤሁ፡ ለጥይቅና፡ ትእምርተ፡ ትስብእቱ፡ ለአምላክነ፡ ማኅየዊ። </ab>
+            </div>
+          </div>
+         
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Lusini2005DersanaUrael"/></bibl>
+            </listBibl>
+            <listBibl type="editions">
+               <bibl><ptr target="bm:Caquot1955Urael"/></bibl>
+            </listBibl>
          <listRelation>
             <relation name="saws:isDifferentTo" active="LIT1302Dersan" passive="LIT4951DersanaUrael"/>
+            <relation name="ecrm:P129_is_about" active="LIT1302Dersan" passive="PRS9684Uriel"/>
          </listRelation>
          <ab/>
+         </div>
       </body>
    </text>
 </TEI>
