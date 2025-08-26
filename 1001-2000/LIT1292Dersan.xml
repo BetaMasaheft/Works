@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Dǝrsāna malāʾǝkt</title>
+            <title xml:lang="gez" xml:id="t1">ድርሳነ፡  መላእክት፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Dǝrsāna malāʾǝkt</title>
+            <title xml:lang="en" xml:id="t2">Homilies  in honor of the angels</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,18 +35,44 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <abstract>
+            <p>The record is to be used for an early collection of texts on archangels, so far attested by two
+               manuscripts only: <ref type="mss" corresp="EMML1835">EMML 1835</ref> and <ref type="mss" corresp="EMML1841">EMML 1841</ref>, both from  the
+               library of Dabra Ḥayq ʾƎsṭifānos.  However fragments of it are found in other homiliaries on archangels such as <ref type="work" corresp="LIT1295Dersan">Dǝrsāna Mikāʾel</ref>.
+               The compilation may have been inspired by <ref type="pers" corresp="PRS10626ZaraY">Zarʾa Yāʿqob</ref>.</p>
+         </abstract> 
+         <langUsage>
+            <language ident="en">English</language>
+             <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2024-11-25" who="JK">Updated transcription</change>
+         <change when="2025-08-23" who="MKr">Added abstract, relations.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl><ptr target="bm:Amsalu2019Homily"/><note>Edition of the homily on Uriel.</note></bibl>
+            </listBibl> 
+              <listRelation>
+                 <relation name="ecrm:P129_is_about" active="LIT1292Dersan" passive="PRS7049Michael"/>
+                 <relation name="ecrm:P129_is_about" active="LIT1292Dersan" passive="PRS4377Gabriel"/>
+                 <relation name="ecrm:P129_is_about" active="LIT1292Dersan" passive="PRS8083Raphael"/>
+                 <relation name="ecrm:P129_is_about" active="LIT1292Dersan" passive="PRS9684Uriel"/>
+                 <relation name="ecrm:P129_is_about" active="LIT1292Dersan" passive="PRS9036Suriel"/>
+                 <relation name="ecrm:P129_is_about" active="LIT1292Dersan" passive="PRS7840Phanuel"/>
+                 <relation name="ecrm:P129_is_about" active="LIT1292Dersan" passive="PRS1461Afnin"/>
+                 <relation name="ecrm:P129_is_about" active="LIT1292Dersan" passive="PRS8065Raguel"/>
+                 <relation name="ecrm:P129_is_about" active="LIT1292Dersan" passive="PRS14319Sakuel"/>
+            </listRelation>
+         </div>
       </body>
    </text>
+   
 </TEI>
