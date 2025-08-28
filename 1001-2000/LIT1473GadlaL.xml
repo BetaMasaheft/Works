@@ -6,9 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">ገድለ፡ ሊባኖስ፡</title>
             <title corresp="#t1" xml:lang="gez">Gadla Libānos</title>
-            <title corresp="#t1" xml:lang="en">Vita of Libānos</title>
-            
-            
+            <title corresp="#t1" xml:lang="en">Vita of Libānos (general record)</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -84,15 +82,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:KRZ"/>
                   <citedRange unit="item">91</citedRange>
                </bibl>
+               <bibl type="BHO">
+                  <ptr target="bm:BHO"/>
+                  <citedRange unit="item">564</citedRange>
+               </bibl>
             </listBibl>
-            <listWit>
-               <witness corresp="BAVcerulli198"/>
-            </listWit>
-            <bibl type="BHO">
-               <ptr target="bm:BHO"/>
-               <citedRange unit="item">564</citedRange>
-            </bibl>
-            
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -104,13 +98,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
-         <abstract><p>The Gadl of St Libānos (Maṭāʿ) exists in three different recensions, the most frequent being <ref target="#recension2">the second one</ref>. 
+         <abstract><p>This is the general
+            record for the Gadl of St Libānos (Maṭāʿ), to be used in cases where the recension
+            cannot be identified. The Gadl exists in three different recensions: the first recension
+            (<ref type="work" corresp="LIT7615GadLib1"/>); the second recension, which is the most frequent one
+            (<ref type="work" corresp="LIT7616GadLib2"/>); the third recension (<ref type="work" corresp="LIT7617GadLib3"/>).
             The text is attributed to ʾElyās, the Bishop of Aksum (cp. <ref type="mss" corresp="ESmgm012"></ref>, 
             <locus target="#17ra">17ra</locus>).</p></abstract>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Hagiography"/>
+               <term key="generalRecord"/>
             </keywords>
          </textClass>
       </profileDesc>
@@ -120,56 +119,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="MV" when="2017-10-30">Updated</change>
          <change when="2021-02-01" who="ES">updated</change>
+         <change who="DR" when="2025-08-28">Converted into general record</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
-            <listBibl type="editions">
-               <bibl corresp="#recension2">
-                  <ptr target="bm:Bausi2003Libanos"/>
-               </bibl>
-               <bibl corresp="#recension1"><ptr target="bm:Getatchew1990Elyas"/></bibl>
-            </listBibl>
             <listBibl type="secondary">
-               <bibl corresp="#recension3"> 
-                  <ptr target="bm:ContiRossini1903Ricordi"/>
-                  <citedRange>25-34</citedRange>
-               </bibl>
                <bibl> 
                   <ptr target="bm:Bausi2007Libanos"/>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:id="recension2">
-            <note>Recension 2 provided after <bibl>
-               <ptr target="bm:Bausi2003Libanos"/>
-            </bibl></note>
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                ስምዑ፡ እንግርክሙ፡ ዘንተ፡ ነገረ፡ በእንተ፡ <gap reason="omitted"/> ዘከመ፡ ሕይወ፡ ውስተ፡ ምድር፡ ፭፻፷ወ፯፡ ዓመተ፡ <gap reason="omitted"/> 
-              ወዓዲ፡ እነግረክሙ፡ ዘከመ፡ ተወልደ፡
-               </ab>
-            </div>
-            <div type="textpart" subtype="explicit" xml:lang="gez">
-               <ab>
-                  አዕረፈ፡ ኀይልነ፡ አብ፡ በ፴፡ ወ፪፡ ዓመት፡ አመ፡ ፲፡ ወ፭፡ ለሚያዝያ፡ በሰላመ፡ እግዚአብሔር፡ ወተቀበልዎ፡ መላእክተ፡ ብርሃን። ስብሐት፡ <gap reason="omitted"/> 
-               </ab>
-            </div>
-         </div>
-         
-         <div type="edition" xml:id="recension1">
-            <note>as edited in <bibl><ptr target="bm:Getatchew1990Elyas"/></bibl></note>
-         </div>
-         <div type="edition" xml:id="recension3">
-            <note>see <bibl> 
-               <ptr target="bm:ContiRossini1903Ricordi"/>
-               <citedRange>25-34</citedRange>
-            </bibl></note>
-         </div>
          <listRelation>
-            <relation name="saws:isAttributedToAuthor" active="LIT1473GadlaL" passive="PRS3750elyas"></relation>
-            <relation name="ecrm:P129_is_about" active="LIT1473GadlaL" passive="PRS6298Libanos"></relation>
+            <relation name="saws:isAttributedToAuthor" active="LIT1473GadlaL"
+               passive="PRS3750elyas"/>
+            <relation name="ecrm:P129_is_about" active="LIT1473GadlaL" passive="PRS6298Libanos"/>
          </listRelation>
       </body>
    </text>
