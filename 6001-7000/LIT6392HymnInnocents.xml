@@ -5,10 +5,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ሕፃናት፡ ኄራን፡ ወንጹሐን፡ እምርኵስ፡ ናሁ፡ ወጠንኩ፡ ሰላመክሙ፡ በብርሃነ፡ ጥበብ፡ ቅዱስ፡</title>
+                <title xml:id="t1" xml:lang="gez">መልክአ፡ ሕፃናት፡ ቅዱሳን፡</title>
+                <title corresp="#t1" xml:lang="gez" type="normalized">Malkǝʾa Ḥǝḍānāt Qǝddusān</title>
+                <title corresp="#t1" xml:lang="en">Image of the Holy Innocents</title>
+                <title xml:lang="gez" xml:id="t2">ሕፃናት፡ ኄራን፡ ወንጹሐን፡ እምርኵስ፡ ናሁ፡ ወጠንኩ፡ ሰላመክሙ፡ በብርሃነ፡ ጥበብ፡ ቅዱስ፡</title>
                 <title xml:lang="gez" type="normalized" corresp="#t2">Ḥǝḍānāt ḫerān wa-neṣuḥan ʾǝm-rǝkʷus nāhu waṭanku salāmakemu ba-bǝrhana ṭǝbab qǝddus</title>
-                <title xml:lang="en" corresp="#t1">Good children, pure from defilement, behold, I begin your salutation with the light of holy wisdom</title>
-                <title xml:lang="en" xml:id="t2">Hymn to the Innocent Children</title>
+                <title xml:lang="en" corresp="#t2">Good children, pure from defilement, behold, I begin your salutation with the light of holy wisdom</title>
+                <title xml:lang="en" xml:id="t3">Hymn to the Innocent Children</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="RL"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -24,7 +27,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="EMML1297"/>
+                    <witness corresp="EMIP00764"/>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -48,12 +54,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="RL" when="2021-03-04">Created entity</change>
+            <change who="AD" when="2024-12-01">Created XML record for Malkea gubae</change>
+            <change who="ES" when="2025-06-26">aligned to Augustine Dickinson's database</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-          
-            <div type="edition">
+            <listRelation>
+                <relation name="betmas:formerlyAlsoListedAs" active="LIT6392HymnInnocents" passive="LIT0285Malke"></relation>
+                <relation name="ecrm:P129_is_about"
+                    active="LIT6392HymnInnocents"
+                    passive="innocents"/>
+                <relation name="skos:exactMatch"
+                    active="LIT6392HymnInnocents"
+                    passive="https://w3id.org/malke/6392/"/>
+            </listRelation>
+            <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:MgWebsite"/>
+                    </bibl>
+                </listBibl>
+            </div>
+            <div type="edition" xml:lang="gez" xml:id="malkeagubae">
+                <note>This edition is taken from <bibl><ptr target="bm:MgWebsite"/></bibl></note>
+                <div type="textpart" xml:id="malke">
+                    <lg type="stanza" n="1">
+                        <l n="1">እንዘ፡ እሴፎ፡ ረድኤተክሙ፡ በጊዜ፡ ምንዳቤ፡ ወተፅናስ፨</l>
+                        <l n="2">ከመ፡ ይርድአኒ፡ ሊተ፡ በአፀደ፡ ሥጋ፡ ወነፍስ፨</l>
+                        <l n="3">ሕፃናት፡ ኄራን፡ ወንጹሓን፡ እምርኵስ፨</l>
+                        <l n="4">ናሁ፡ ወጠንኩ፡ ሰላመክሙ፡ በብርሃነ፡ ጥበብ፡ ቅዱስ፨</l>
+                        <l n="5">ጽልመተ፡ ኅሊናየ፡ ያብርህ፡ ኢየሱስ፡ ክርስቶስ፨</l>
+                    </lg>
+                    <lg type="stanza" n="2">
+                        <l n="1">ሰላም፡ ለዝክረ፡ ስምክሙ፡ በሰላመ፡ አምላክ፡ እብኖዲ፨</l>
+                        <l n="2">ወሰላም፡ ካዕበ፡ ለሥዕርተ፡ ርእስክሙ፡ ዓዲ፨</l>
+                        <l n="3">ሕፃናት፡ ኄራን፡ አዝማደ፡ ዮሐንስ፡ ቃለ፡ ዐዋዲ፨</l>
+                        <l n="4">እፎ፡ ተክዕወ፡ ደምክሙ፡ በትእዛዘ፡ ሄሮድስ፡ ከሓዲ፨</l>
+                        <l n="5">ማሕተመ፡ ሞት፡ ዘነሥአ፡ እምሰይጣን፡ ረዋዲ፨</l>
+                    </lg>
+                    <lg type="stanza" n="30">
+                        <l n="1">ናሁ፡ አብጻሕኩ፡ ሰላመክሙ፡ በኍልቈ፡ ውሳኔ፡ ሠላሳ፨</l>
+                        <l n="2">ዘውእቱ፡ መንፈቀ፡ ስሳ፨</l>
+                        <l n="3">ሕፃናት፡ ኄራን፡ ኅሩማነ፡ በቀል፡ ወአበሳ፨</l>
+                        <l n="4">ቅድመ፡ አምላክ፡ ኰናኒ፡ አመ፡ ይከውን፡ ኀሠሣ፨</l>
+                        <l n="5">አክሊለ፡ ጽድቅ፡ ለነፍስየ፡ አንብሩ፡ በርእሳ፨</l>
+                    </lg>
+                </div>
+            </div>
+            <div type="edition" xml:id="emip764">
               <note>the text follows <ref type="mss" corresp="EMIP00764"/> ff. 129v-131v</note>
               <div type="textpart" subtype="incipit" xml:lang="gez">
                 <ab>
