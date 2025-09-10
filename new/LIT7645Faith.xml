@@ -1,13 +1,13 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7066NiceneCreedAmh" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7645Faith" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Nicene Creed (Amharic)</title>
+                <title xml:lang="en" xml:id="t1">Confession of Faith</title>
                 <editor role="generalEditor" key="AB"/>
-                <editor key="JK"/>
+                <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -21,50 +21,49 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <listWit>
-                    <witness corresp="UppEt10"/>
-                </listWit>
+                <p/>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
         </encodingDesc>
         <profileDesc>
-            <creation/>
+            <t:creation xmlns:t="http://www.tei-c.org/ns/1.0"/>
             <abstract>
                 <p/>
             </abstract>
             <textClass>
                 <keywords>
-                    <term key="AmharicLiterature"/>
                     <term key="ChristianLiterature"/>
+                    <term key="Theology"/>
+                    <term key="Liturgy"/>
                 </keywords>
             </textClass>
-            <langUsage>
+            <t:langUsage xmlns:t="http://www.tei-c.org/ns/1.0">
                 <language ident="en">English</language>
-                <language ident="am">Amharic</language>
-            </langUsage>
+                <language ident="gez">Gǝʿǝz</language>
+            </t:langUsage>
         </profileDesc>
         <revisionDesc>
-            <t:change xmlns:t="http://www.tei-c.org/ns/1.0" who="JK" when="2024-09-06">Created entity</t:change>
+            <change who="MV" when="2025-09-10">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="edition" subtype="incipit" xml:lang="am">
-                <note>This incipit is taken from <ref type="mss" corresp="UppEt10"/>.</note>
-                <ab>
-                    እናምናለን፡ በሀንድ፡ አምላክ፡ እግዚአብሔር፡ <add place="above">አባት።</add>
-                    ኍሉ፡ የሚቻለው፡ ሰማይና፡ ምድርን፡ የፈጠረ።
-                    የሚታይንም፡ የማይታይንም፡ ኍሉ።
-                    እናምናለን፡ በሀንድ፡ እግዚእ፡ ኢየሱስ፡ ክርስቶስ፡ የአባት፡ ሀንድ፡ ልጅ።
-                </ab>
+            <div type="edition">
+                <note>The following incipit is taken from <ref type="mss" corresp="BAVet135"/> according to the catalogue description in 
+                    <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">540</citedRange></bibl>.</note>
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <ab>
+                        አአምን፡ በአብ፡ ከመ፡ ውእቱ፡ ፍጹም፡ በአካሉ፡ ወበገጹ፡ ወበመልክዑ፤ አአምን፡ በወልድ፡ ከመ፡ ውእቱ፡ ፍጹም፡ በአካሉ፡ ወበገጹ፡ ወበመልክዑ፤ 
+                        አአምን፡ በመንፈስ፡ ቅዱስ፡ ከመ፡ ውእቱ፡ ፍጹም፡ <del rend="effaced">በአካሉ፡</del> ወበገጹ፡ ወበምልክዑ።
+                    </ab>
+                </div>
             </div>
             <div type="bibliography">
                 <listRelation>
-                    <relation name="lawd:hasAttestation" active="LIT7066NiceneCreedAmh" passive="UppEt10"/>
-                    <relation name="saws:isVersionOf" active="LIT7066NiceneCreedAmh" passive="LIT7646Creed"/>
-                    <relation name="saws:isVersionInAnotherLanguageOf" active="LIT7066NiceneCreedAmh" passive="LIT3308Nicene"/>
+                    <relation name="saws:isVersionOf" active="LIT7645Faith" passive="LIT7646Creed"/>
+                    <relation name="saws:isDifferentTo" active="LIT7645Faith" passive="LIT3308Nicene"/>
                 </listRelation>
             </div>
         </body>
