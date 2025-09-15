@@ -33,7 +33,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
         <profileDesc>
-            <creation/>
+            <creation/>            
             <abstract>
                 <p/>
             </abstract>
@@ -47,21 +47,41 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <langUsage><language ident="en">English</language></langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DN" when="2019-06-28">Created entity</change>
+            <change who="DN" when="2019-06-28">created entity</change>
+            <change who="DN" when="2025-09-15">wrote out the miracles</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
-          <listRelation>
-              <relation name="saws:isRelatedTo" active="LIT5778MirTaklaHaymanotSabal" passive="LIT3971Taamme"/>
-              <relation name="ecrm:P129_is_about" active="LIT5778MirTaklaHaymanotSabal" passive="PRS9151TaklaHa"/>
-                   <relation name="lawd:hasAttestation" active="LIT5778MirTaklaHaymanotSabal" passive="IVorlov35"/>
-          </listRelation>
-            <div type="edition">
-                <div type="textpart" subtype="incipit">
-                    <ab/>
+            <listRelation>
+                <relation name="saws:isRelatedTo" active="LIT5778MirTaklaHaymanotSabal" passive="LIT3971Taamme"/>
+                <relation name="ecrm:P129_is_about" active="LIT5778MirTaklaHaymanotSabal" passive="PRS9151TaklaHa"/>
+                <relation name="lawd:hasAttestation" active="LIT5778MirTaklaHaymanotSabal" passive="IVorlov35"/>
+            </listRelation>
+            <div type="edition">           
+                <note>The text follows <ref type="mss" corresp="IVorlov35"/>.</note>
+                
+                <div type="textpart" subtype="chapter" xml:id="MiracleChamberRos">                    
+                    <label>How <persName ref="PRS8212RosNabi">Ros Nabiyāt</persName> gave away his chamber to turn it into a church of Takla Hāymānot, and 
+                        granted land to the monks</label>
+                    
+                    <div type="textpart" subtype="chapter" xml:id="MiracleBeer">
+                        <label>How the beer prepared for the commemoration of Takla Hāymānot was saved</label>                        
+                    </div>
+                    
+                    <div type="textpart" subtype="chapter" xml:id="MiraclesDogs">
+                        <label>The dogs entered the church and were killed by a snake</label>                        
+                    </div>
+                    
+                    <div type="textpart" subtype="chapter" xml:id="MiraclesCaw">
+                        <label>A man wanted to keep a fat cow for 
+                            himself instead of giving it for the commemoration of Takla Hāymānot, but the cow died</label>
+                    </div>                     
                 </div>
             </div>
         </body>
     </text>
 </TEI>
+
+
+
