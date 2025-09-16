@@ -4,7 +4,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Maṣḥafa faws</title>
+            <title xml:id="t1" xml:lang="gez">መጽሐፈ፡ ፈውስ፡</title>
+            <title corresp="#t1" type="normalized" xml:lang="gez">Maṣḥafa faws</title>
+            <title corresp="#t1" xml:lang="en">Book of Healing</title>
+            <title xml:id="t2" xml:lang="en">Treatise of Therapeutics</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,18 +36,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <creation/>
+         <abstract>
+            <p>Medical prescriptions</p>
+         </abstract>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Medicine"/>
+               <term key="Magic"/>
+            </keywords>
+         </textClass>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="JK" when="2024-11-25">Updated transcription</change>
+         <change when="2025-09-12" who="CH">Updated title, added edition in div, keywords and abstract.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="edition">
+            <div type="textpart" xml:lang="gez">
+               <note>The following incipit is taken from <ref type="mss" corresp="BLorient11390#ms_i13"/> according to the catalogue 
+                  description in <bibl><ptr target="bm:Strelcyn1978BritishLibrary"/><citedRange unit="page">155</citedRange></bibl>.</note>
+               <ab>መጽሐፈ፡ ፈውስ፡ ለኵሎን፡ ደዌያት፡ ወለኵሎን፡ መለያልያት፡ ዘአስተጋብኡ፡ ጣቢባን፡ ቀደምት፡ ከመ፡ ይኩን፡ በቍዔተ፡ ለኵሎሙ፡ ድውያን፡</ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
