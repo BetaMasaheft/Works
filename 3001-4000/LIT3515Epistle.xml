@@ -61,6 +61,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <div type="bibliography">
             <listRelation>
                <relation name="saws:formsPartOf" active="LIT3515Epistle" passive="LIT3505PaulineEpis"/>
+               <relation name="ecrm:CLP46i_may_form_part_of" active="LIT3515Epistle#Preface" passive="LIT3515Epistle"/>
             </listRelation>
             <listBibl type="secondary">
                <bibl>
@@ -75,20 +76,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </div>
          <div type="edition" xml:lang="gez">
             <!--this is a preliminary division of the epistle to the Romans into textparts which are
-               present in manuscripts,  not taking into consideration the different recensions-->
-            <note>All incipits are from <bibl>
-                  <ptr target="bm:Tedros2001Romani"/>
-               </bibl>. The text of the Epistle itself is taken from the printed EOTC Bible.</note>
+               present in manuscripts,  not taking into consideration the different recensions-->       
             <div type="textpart" xml:id="Prescription">
                <label>Prescription</label>
                <ab>ለብሔረ፡ ሮሜ፡</ab>
                <ab>መልእክት፡ ቀዳማዊ፡ ኀበ፡ ሰብአ፡ ሮሜ፡</ab>
             </div>
-            <div type="textpart" xml:id="Introduction">
-               <label>Introduction</label>
+            <div type="textpart" xml:id="Preface">
+               <label>Preface to the epistle</label>
+               <note>The preface is not present in all manuscripts. This particular incipit and explicit are taken from <ref type="mss" corresp="BAVet137"/> according to the catalogue description in 
+                  <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">544-545</citedRange></bibl>.</note>
+               <div type="textpart" subtype="incipit" xml:lang="gez">
+                  <ab>
+                     መቅድመ፡ ጳውሎስ፡ ሐዋርያ፡ ምክንያተ<supplied reason="omitted">፡</supplied> መልእክቱ፡ ለሮማውያን፨ በእንተ፡ ፪ግብር፡ ብዙኅ። እስመ፡ በሮሜ፡ ነበሩ፡ አይሁድ፡ ወአረሚ፡ ኅቡረ፡ ወ፪ሆሙ፡ ተወክፉ፡ አሚነ፡ በክርስቶስ፨ ወድኅሬሆሙ፡ <sic>ተቀሐዉ፡</sic> በበይናቲሆሙ፡
+                  </ab>
+               </div>
+               <div type="textpart" subtype="explicit" xml:lang="gez">
+                  <ab>
+                     ወጳውሎስ፡ ሜጦሙ፡ እምዝንቱ፡ ስሕተት፡ ውስተ፡ አሚነ፡ ወንጌል፡ ርትዕት፨ ወጸሐፈ፡ ሎሙ<supplied reason="omitted">፡</supplied> ዘንተ፡ መልእክተ፡ እንዘ፡ ሀሎ፡ በቆሮንቶስ፡ ወፈነዋ፡ በእደ፡ ፌቤን፡ <supplied reason="omitted">እንተ፡</supplied> <sic>ተለአከተ<supplied reason="omitted">፡</supplied></sic> ቤተ፡ ክርስቲያን፡ ዘከንክርኤስ፨
+                  </ab>
+               </div>
             </div>
+            
             <div type="textpart" xml:id="Epistle">
                <label>Epistle</label>
+               <note>All incipits are from <bibl>
+                  <ptr target="bm:Tedros2001Romani"/>
+               </bibl>. The text of the Epistle itself is taken from the printed EOTC Bible.</note>
                <div type="textpart" subtype="chapter" n="1" xml:id="ch1">
       <label>ምዕራፍ 1</label>
       <ab>
