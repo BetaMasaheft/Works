@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Salām lawǝgatǝka </title>
+                <title xml:lang="gez" xml:id="t1">ሰላም፡ ለውግአትከ፡ በእደ፡ ለንጊኖስ፡ ዘተወጋእከ፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Salām lawǝgʾatǝka baʾǝda Langinos zatawagāʾǝka</title>
+                <title xml:lang="en" corresp="#t1">Prayer against sharp pains</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -27,33 +29,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <encodingDesc>
             <p>A digital born TEI file</p>
         </encodingDesc>
-        <t:profileDesc xmlns:t="http://www.tei-c.org/ns/1.0">
-            <t:creation/>
-            <t:abstract>
+        <profileDesc>
+            <creation/>
+            <abstract>
                 <p/>
-            </t:abstract>
-            <t:textClass>
+            </abstract>
+            <textClass>
                 <keywords>
-                    <t:term key="Magic"/>
-                    <t:term key="Prayers"/>
+                    <term key="ChristianLiterature"/>
+                    <term key="Magic"/>
+                    <term key="Prayers"/>
                 </keywords>
-            </t:textClass>
-            <t:langUsage>
-                <t:language ident="en">English</t:language>
-                <t:language ident="gez">Gǝʿǝz</t:language>
-            </t:langUsage>
-        </t:profileDesc>
-        <t:revisionDesc xmlns:t="http://www.tei-c.org/ns/1.0">
-            <change who="MK" when="2025-10-01">Created stub</change>
-        </t:revisionDesc>
+            </textClass>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="gez">Gǝʿǝz</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change who="MK" when="2025-10-01">Created record</change>
+        </revisionDesc>
     </teiHeader>
-    <t:text xmlns:t="http://www.tei-c.org/ns/1.0">
+    <text>
         <body>
             <div type="bibliography">
+                <div type="edition">
+                    <div type="textpart" subtype="incipit" xml:lang="gez">
+                        <note>The following incipit is taken from <ref type="mss" corresp="ESdd31#a27"/>.</note>
+                        <ab>ሰላም፡ ለውግአትከ፡ በእደ፡ ለንጊኖስ፡ ዘተወጋእከ፡ ሰላም፡ ለመስቀልከ፡ ወስፍንግ፡ ምስብከ፡ ሰላም፡ ሰላም፡ ለርግዘተ፡ ገቦከ፡ ለዘውኅዘ፡ ደም፡ ወማይ፡ እምነ፡ ገቦከ፡ ለዘ፡ በእንቲአሁ፡ መሐረነ፡ ተማኅፀነ፡ ብከ፡ ለቤዛ፡ ኃጥአን፡ አምላክ፡ ዘሦእከ፡ ርእስከ።</ab>
+                    </div>
+                </div>
                 <listRelation>
-                    <relation name="saws:isRelatedTo" active="LIT7711SalamSharpPain" passive=""/>
+                    <relation name="saws:isRelatedTo" active="LIT7711SalamSharpPain" passive="LIT4625Prayer"/>
                 </listRelation>
-            </div><!---->
+            </div>
         </body>
-    </t:text>
+    </text>
 </TEI>
