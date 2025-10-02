@@ -1,15 +1,15 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT6041HemamaKars" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7679MarhaEwur" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ጸሎተ፡ ሕማመ፡ ከርሥ፡</title>
-                <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalota ḥǝmāma karś</title>
-                <title xml:lang="en" corresp="#t1">Prayer against stomach illnesses</title>
+                <title xml:lang="gez" xml:id="t1">መርሐ፡ ዕውራን፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Marḥa ʿǝwwurān</title>
+                <title xml:lang="en" corresp="#t1">Guide for the Blind</title>
                 <editor role="generalEditor" key="AB"/>
-                <editor key="DR"/>
+                <editor key="MK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -25,6 +25,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <sourceDesc>
                 <p/>
             </sourceDesc>
+            <sourceDesc>
+            <listWit>
+                <witness corresp="ESdd031"></witness>
+            </listWit>
+            </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
@@ -32,31 +37,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p>The prayer is written in Amharic.</p>
+                <p>This text concerns the calculation of moveable feasts over several 19-year cycles for a seven-day week. 
+                    It appears to provide information that is otherwise presented in tabular form, as in <ref type="mss" corresp="ESdd026#ms_i3.2"/>, where the table is also referred to as ‘Marḥa ʿǝwwurān’.
+                </p>
             </abstract>
             <textClass>
                 <keywords>
-                    <term key="ChristianLiterature"/>
-                    <term key="Magic"/>
-                    <term key="Prayers"/>
+                    <term key="Chronography"/>
                 </keywords>
             </textClass>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
-                <language ident="am">Amharic</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="DR" when="2020-06-23">Created entity</change>
+            <change who="MK" when="2025-09-22">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/>
-            <listRelation>
-                <relation name="saws:isDifferentTo" active="LIT6041HemamaKars" passive="LIT7710SalotHemKers"/>
-            </listRelation>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="saws:isRelatedTo" active="LIT7679MarhaEwur" passive="NAR0003tables"/>
+                    <relation name="saws:isDifferentTo" active="LIT7679MarhaEwur" passive="LIT1879Marhae"/>
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>
