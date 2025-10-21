@@ -4,9 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘደረሰ፡ አብ፡ ቅዱስ፡ አባ፡ ሳዊሮስ፡ ኤጲስ፡ ቆጶስ፡ ዘሀገረ፡ ፈይም፡</title>
-            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān za-darasa ʾab qǝddus ʾabbā Sāwiros ʾeṗṗis qoṗos za-hagara Fayyǝm</title>
-            <title xml:lang="en" xml:id="t2">Homily by Severus of Fayyum on the glorious angel Gabriel</title>
+            <title xml:lang="gez" xml:id="t1">ድርሳን፡ ዘደረሰ፡ አባ፡ ዘለእስክንድሮስ፡ አባውሬ፡ ኤጲስ፡ ቆጶስ፡ ዘሀገረ፡ ፈይም፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Dǝrsān za-darasa ʾAbbā za-la-ʾǝskǝndros ʾAbāwre ʾeṗṗis qoṗos za-hagara Fayyǝm</title>
+            <title xml:lang="en" xml:id="t2">Homily by ʾAbāwre Bishop of Fayyum on the glorious angel Gabriel</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -53,14 +53,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-04-13">Fixed title, added keywords</change>
+         <change who="MV" when="2025-10-21">Corrected title, added relation and incipit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
             <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT3956Homily" passive="PRS4377Gabriel"/>
                <relation name="saws:formsPartOf" active="LIT3956Homily" passive="LIT1284Dersan"/>
             </listRelation>
+         </div>
+         <div type="edition">
+            <note>The following incipit is taken from <ref type="mss" corresp="BAVet82"/>.</note>
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <ab>
+                  በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፤ ዘደረሰ፡ አባ፡ ዘለእስክንድሮስ፡ አባውሬ፡ ኤጲስ፡ ቆጶስ፡ ዘሀገረ፡ ፈይም፡ ይዜኑ፡ በእንቲአሁ፡ ዕበዮ፡ ለመልአከ፡ 
+                  ክቡር፤ ሊቆሙ፡ በኃይለ፡ ሰማያት፡ ገብርኤል፡ መበስር፡ ወሕንጸተ፡ ቤተ፡ ክርስቲያና፤ ወቅዳሴሃ፡ ኮነ፡ በደብረ፡ አቅሎን፡ ዮም፤ በዛቲ፡ ዕለት፡ ዝውእቱ፡ አመ፡
+                  ፳ወ፯እምነ፡ ወርኃ፡ ሰኔ፤ ትንብልናሁ፡ <gap reason="ellipsis"/> ይቤ፡ ሠናየ፡ ተነበየ፡ ዳዊት፡ መዘምር፤ እንዘ፡ ይብል፡ አብደርኩ፡ ከመ፡ እኅድር፡ ቤቶ፡
+                  ለእግዚአብሔር፡ በኵሉ፡ መዋዕለ፡ ሕይወትየ፤
+               </ab>
+            </div>
          </div>
       </body>
    </text>
