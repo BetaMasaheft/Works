@@ -4,8 +4,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7726SalamPetrosBsoy" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
-            <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Salām to ʾAbbā Ṗeṭros and ʾAbbā Bsoy</title>
+            <titleStmt>                
+                <title xml:lang="gez" xml:id="t1">   ሰላም፡ ለዘሀለዉ፡ ለቤተ፡ ሞቅሕ፡ በውስቴቱ፡ ብሶይ፡ ወጴጥሮስ፡ ለእግዚአብሔር፡ ሰማዕቱ።</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Salām la-za-hallawu la-beta moqǝḥ bawǝstetu Bsoy wa-Ṗeṭros la-ʾƎgziʾabǝḥer samāʿtu</title>
+                <title xml:lang="en" corresp="#t1">Salutation to those who were in prison, Bsoy and Ṗeṭros, martyrs of God</title>
+                <title xml:lang="en" xml:id="t2"><foreign xml:lang="gez">Salām</foreign>-hymn in honour of ʾAbbā Ṗeṭros and ʾAbbā Bsoy</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -35,6 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
+                    <term key="Hagiography"/>
                     <term key="Poetry"/>
                 </keywords>
             </textClass>
@@ -44,12 +48,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MV" when="2025-10-21">Created stub</change>
+            <change who="MV" when="2025-10-21">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="edition">
+                <note>The following incipit is taken from <ref type="mss" corresp="BAVet149"/>, quoted according to
+                    the catalogue description in <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">580</citedRange></bibl>.</note>
+                <div type="textpart" subtype="title" xml:lang="gez">
+                    <ab> 
+                        ሰላም፡ <sic>ለዘሀለው፡</sic> ለቤተ፡ ሞቅሕ፡ በውስቴቱ፡ ብሶይ፡ ወጴጥሮስ፡ ለእግዚአብሔር፡ ሰማዕቱ።
+                    </ab>
+                </div>
+            </div>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7726SalamPetrosBsoy" passive="LIT1284Dersan">
+                        <desc>The text is part of the reading for 19 Miyāzyā in the monthly arrangement of the <foreign xml:lang="gez">Dǝrsāna Gabrǝʾel</foreign>.</desc>
+                    </relation>
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>
