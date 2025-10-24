@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle on Barādyos i.e., continuation of the homily on Barādyos</title>
+                <title xml:lang="gez" xml:id="t1">Miracle of St Gabriel on Barādyos i.e., continuation of the homily on Barādyos</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -35,6 +35,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
+                    <term key="Hagiography"/>
                     <term key="Miracle"/>
                 </keywords>
             </textClass>
@@ -44,12 +45,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MV" when="2025-10-21">Created stub</change>
+            <change who="MV" when="2025-10-21">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="edition">
+                <note>The following incipit and explicit are taken from <ref type="mss" corresp="BAVet149"/>, quoted according to
+                    the catalogue description in <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">584</citedRange></bibl>.</note>
+                <div type="textpart" subtype="title" xml:lang="gez">
+                    <ab> 
+                        ተአምሪሁ፡ <gap reason="ellipsis"/> ትንብልናሁ፡ <gap reason="ellipsis"/> ወሶበ፡ ተፈጸመት፡ አሐቲ፡ ዓመት፡ ሐለፈ፡ እድሜሁ፡ ለአብራድዮስ፡
+                        ወአልቦ<supplied reason="omitted">፡</supplied> ዘወሀቦ፡ ለዝኩ፡ ባዕል፡ እምንዋዩ፡ እስመ፡ ሰይጣን፡ <sic>አወሮ፡</sic> አእይንቲሁ፡
+                    </ab>
+                </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <ab>
+                        ወዝኩሰ፡ አብራድዮስ፡ ረሰየ፡ ንብረቶ፡ ውስተ፡ ቤተ፡ ክርስቲያኑ፡ ለቅዱስ፡ ገብርኤል፡ ሊቀ፡ መላእክት፡ ወነበረ፡ እንዘ፡ ይትለአክ፡ እስከ፡ ዕለተ፡ ፍልሰቱ፡
+                        ወኢተመይጠ፡ ይግበር፡ ምግባረ፡ አመፃ። ዳግመ፡ ወኢዕከየ፡ ጸሎቱ<supplied reason="omitted">፡</supplied> <gap reason="ellipsis"/>
+                    </ab>
+                </div>
+            </div>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="ecrm:P129_is_about" active="LIT7733MGBaradyos" passive="PRS4377Gabriel"/>
+                    <relation name="saws:formsPartOf" active="LIT7733MGBaradyos" passive="LIT1284Dersan">
+                        <desc>The text is part of the monthly reading for 19 Naḥase.</desc>
+                    </relation>
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>

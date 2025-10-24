@@ -5,7 +5,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Salām in honour of John the Baptist</title>
+                <title xml:lang="gez" xml:id="t1">ሰላም፡ ለፅንሰት፡ በሰሌዳ፡ ከርሣ፡ ዘተገልፈ፡ ለኤልሳቤጥ፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Salām la-ḍǝnsat ba-saledā karśā za-tagalfa la-ʾElsābeṭ</title>
+                <title xml:lang="en" corresp="#t1">Salutation to the conception, which is carved into the tablet of Elizabeth's womb</title>
+                <title xml:lang="en" xml:id="t2"><foreign xml:lang="gez">Salām</foreign>-hymn in honour of John the Baptist</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -35,6 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
+                    <term key="Hagiography"/>
                     <term key="Poetry"/>
                 </keywords>
             </textClass>
@@ -44,12 +48,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MV" when="2025-10-21">Created stub</change>
+            <change who="MV" when="2025-10-21">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="edition">
+                <note>The following incipit is taken from <ref type="mss" corresp="BAVet149"/>, quoted according to
+                    the catalogue description in <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">585</citedRange></bibl>.</note>
+                <div type="textpart" subtype="title" xml:lang="gez">
+                    <ab> 
+                        ሰላም፡ ለፅንሰት፡ በሰሌ<surplus>ሌ</surplus>ዳ፡ ከርሣ፡ ዘተገልፈ፨ ለኤልሳቤጥ፡ እምከ፡ እምድኅረ፡ ወርኃ፡ ኀለፈ፨
+                    </ab>
+                </div>
+            </div>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="ecrm:P129_is_about" active="LIT7735SalamJohn" passive="PRS5741Johnthe"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7735SalamJohn" passive="LIT1284Dersan">
+                        <desc>The text is part of the monthly reading for 19 Maskaram.</desc>
+                    </relation>
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>

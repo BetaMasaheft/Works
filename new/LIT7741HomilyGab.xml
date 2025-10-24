@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Continuation of the anonymous homily on St Gabriel</title>
+                <title xml:lang="gez" xml:id="t1">Continuation of the anonymous homily on the Archangel Gabriel</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -44,12 +44,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MV" when="2025-10-21">Created stub</change>
+            <change who="MV" when="2025-10-21">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="edition">
+                <note>The following incipit and explicit are taken from <ref type="mss" corresp="BAVet82"/>, quoted according to
+                    the catalogue description in <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">310</citedRange></bibl>.</note>
+                <div type="textpart" subtype="title" xml:lang="gez">
+                    <ab> 
+                        ወካዕበ፡ ርኢኩ፡ ለኵሉ፡ አዕማድ፡ ኀበ፡ አቀምክዎሙ፡ ወውስተ፡ እዴሁ፡ ዘሀሎ፤ መስቀሎ፡
+                    </ab>
+                </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <ab> 
+                        <sic>ወየዓትው፡</sic> አብያቲሆሙ፤ ሕያዋኒሆሙ፡ እንዘ፡ <sic>የአኵትዎ፡</sic> ለወልደ፡ እግዚአብሔር፡ ገባሬ፡ 
+                        መንክራት፤ አሜሃ፡ ሰአሉ፡ ለሊቀ፡ መላእክት፡ ገብርኤል፡ ወወደይዎ፡ ውስተ፡ ቤተ፡ ክርስቲያኑ፡ ቅድስት፨ ለዓለመ፤ ዓለም፤ አሜን፨ 
+                    </ab>
+                </div>
+            </div>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="ecrm:P129_is_about" active="LIT7741HomilyGab" passive="PRS4377Gabriel"/>
+                    <relation name="saws:follows" active="LIT7741HomilyGab" passive="LIT7740HomilyGab">
+                        <desc>The text is a continuation of <ref type="work" corresp="LIT7740HomilyGab"/>.</desc>
+                    </relation>
+                    <relation name="saws:formsPartOf" active="LIT7741HomilyGab" passive="LIT1284Dersan">
+                        <desc>The text is part of the weekly reading for Friday.</desc>
+                    </relation>               
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>
