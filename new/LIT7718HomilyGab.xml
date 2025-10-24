@@ -4,8 +4,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7718HomilyGab" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
-            <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Homily on the annuciation of the Archangel Gabriel to Zechariah, father of John the Baptist</title>
+            <titleStmt>             
+                <title xml:lang="en" xml:id="t1">Homily on the annuciation of the Archangel Gabriel to Zechariah, father of John the Baptist</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -44,12 +44,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MV" when="2025-10-21">Created stub</change>
+            <change who="MV" when="2025-10-21">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="edition">
+                <note>The following incipit and explicit are taken from <ref type="mss" corresp="BAVet82"/>, quoted according to
+                    the catalogue description in <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page"></citedRange></bibl>.</note>
+                <div type="textpart" subtype="title" xml:lang="gez">
+                    <ab> 
+                        በስመ፡ አብ፡ <gap reason="omitted" extent="unknown" resp="bm:GrebTiss1935Codices"/> ድርሳን፡ ዘቅዱስ፨ ወብፁዕ፡ ወክቡር፡ ሊቀ፡ መላእክት፡ 
+                        ገብርኤል፡ ግሡሐ፡ ገጽ፡ እምእለ፡ ይተግሁ፡ መላእክት፡ ቅዱሳን፨ አብሳሬ፡ ፍሥሐ፡ ወሐሤት፡ ለኵሉ፡ ዓለም፡ ሰባኬ፡ ፀሐየ፡ ጽድቅ፡ ወፀዋሬ፡ ዜና፡ ብስራት፤
+                    </ab>
+                </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <ab>
+                        ወኢይትኃፈር፡ እምኔሁ፡ አመ፡ ይመጽእ፡ በዕበየ፡ ግርማሁ፡ ወከመ፡ ያብአኒ፡ በኂሩተ፡ ዚአሁ፡ ውስተ፡ ሰማያት፨ ጽርሑ፡ በስእለቱ፡ ለገብርኤል፤ ለፍቁሩ፤ ወልደ፡ አምላክ፡ ለዓለመ፤ ዓለም፤ አሜን፨
+                    </ab>
+                </div>
+            </div>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="ecrm:P129_is_about" active="LIT7718HomilyGab" passive="PRS4377Gabriel"/>
+                    <relation name="saws:formsPartOf" active="LIT7718HomilyGab" passive="LIT1284Dersan">
+                        <desc>The text is part of the reading for 19 Tāḫśāś in the monthly arrangement of the <foreign xml:lang="gez">Dǝrsāna Gabrǝʾel</foreign> 
+                            and part of the reading for Monday in the weekly arrangement of the same work.</desc>
+                    </relation>
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>
