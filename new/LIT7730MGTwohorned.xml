@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Miracle of St Gabriel on the two-horned serpent that bit a man</title>
+                <title xml:lang="en" xml:id="t1">Miracle of St Gabriel on the two-horned serpent that bit a man</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -35,6 +35,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
+                    <term key="Hagiography"/>
                     <term key="Miracle"/>
                 </keywords>
             </textClass>
@@ -44,12 +45,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MV" when="2025-10-21">Created stub</change>
+            <change who="MV" when="2025-10-21">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="edition">
+                <note>The following incipit and explicit are taken from <ref type="mss" corresp="BAVet149"/>, quoted according to
+                    the catalogue description in <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">581</citedRange></bibl>.</note>
+                <div type="textpart" subtype="title" xml:lang="gez">
+                    <ab> 
+                        ተአምሪሁ፡ <gap reason="ellipsis"/> ትንብልናሁ፡ <gap reason="ellipsis"/> ስምዑ፡ ዓየድዓክሙ፡ ውእቱ፡ ጊዜ፨ መጠነ፡ ቆሙ፡ ለብእሲ፡ ውእቱ፡ 
+                        አሚረ፡ አስተርአየ፨ ከይሲ፡ ዘቦቱ፡ ፪ዓቅርንት፡ ወነሰኮ፡ ለ፩ብእሲ፡ እምእለ፡ ይከርዩ፡ ሰኰና፡ እግሩ፡ ዘየማን፡
+                    </ab>
+                </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <ab>
+                        ወእምዝ፡ መጽኡ፡ ከመ<supplied reason="omitted">፡</supplied> ይርአዩ፡ ታህተ፡ መሠረት፡ ኀበ፡ ኮነ፡ ብእሲ፡ ረከብዎ፡ 
+                        ለ<supplied reason="omitted">ከ</supplied>ይሲ፨ አፍዓ፡ ውዱቀ፡ ወአዕረግዎ፡ ለከይሲ፡ አፍዓ፡ መልዕልተ፡ ኵሉ፡ ሰብእ፡ ሶበ፡ ርእዩ፡ ዘንተ፡ 
+                        አንከሩ፡ ዕበያቲሁ፡ ለእግዚአብሔር፡ በረከተ፡ ጸሎቱ፡ <gap reason="ellipsis"/>
+                    </ab>
+                </div>
+            </div>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="ecrm:P129_is_about" active="LIT7730MGTwohorned" passive="PRS4377Gabriel"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7730MGTwohorned" passive="LIT4652TaammeraGa"/>
+                    <relation name="saws:formsPartOf" active="LIT7730MGTwohorned" passive="LIT1284Dersan">
+                        <desc>The text is part of the monthly reading for 19 Sane.</desc>
+                    </relation>
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>

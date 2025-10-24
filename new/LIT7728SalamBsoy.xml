@@ -5,7 +5,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Salām to ʾAbbā Bsoy</title>
+                <title xml:lang="gez" xml:id="t1">ሰላም፡ ለአባ፡ ብሶይ፡ በላህበ፡ ማኅትው፡ ዘውዕየ፨</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Salām la-ʾAbbā Bsoy ba-lāhba māḫtǝw za-wǝʿya</title>
+                <title xml:lang="en" corresp="#t1">Salutation to ʾAbbā Bsoy, who burned with the flame of torches</title>
+                <title xml:lang="en" xml:id="t2"><foreign xml:lang="gez">Salām</foreign>-hymn in honour of ʾAbbā Bsoy</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -35,6 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
+                    <term key="Hagiography"/>
                     <term key="Poetry"/>
                 </keywords>
             </textClass>
@@ -44,12 +48,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MV" when="2025-10-21">Created stub</change>
+            <change who="MV" when="2025-10-21">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="edition">
+                <note>The following incipit is taken from <ref type="mss" corresp="BAVet149"/>, quoted according to
+                    the catalogue description in <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">581</citedRange></bibl>.</note>
+                <div type="textpart" subtype="title" xml:lang="gez">
+                    <ab> 
+                        ሰላም፡ ለአባ፡ ብሶይ፡ በላህበ፡ ማሐትው፡ ዘውእየ፨
+                    </ab>
+                </div>
+            </div>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7728SalamBsoy" passive="LIT1284Dersan">
+                        <desc>The text is part of the monthly reading for 19 Gǝnbot.</desc>
+                    </relation>
+                </listRelation>
+            </div>
         </body>
     </text>
 </TEI>
