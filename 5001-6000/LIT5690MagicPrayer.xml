@@ -4,12 +4,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-              <title xml:lang="gez" xml:id="t1">ጸሎት፡ በእንተ፡ ሕማመ፡ ዓይነት፡</title>
-              <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalot baʾǝnta ḥǝmāma ʿaynat</title>
-              <title xml:lang="en" corresp="#t1">Prayer against pain of the eye.</title>
-              <title xml:lang="gez" xml:id="t2">ጸሎት፡ በእንተ፡ ዓይነ፡ ጥላ፡ ወዓይነ፡ ወርቅ፡ ጸሎተ፡ ንድራ፡ ዝውእቱ፡ ሕማመ፡ ዓይነ፡ እኩይ፡</title>
-              <title xml:lang="gez" type="normalized" corresp="#t2">Ṣalot baʾǝnta ʿayna ṭǝlā wa-ʿayna
-                warq ṣalota nǝdrā zǝ-wǝʾǝtu ḥǝmāma ʿayna ʾǝkkuy</title>
+                <title xml:lang="gez" xml:id="t1">ጸሎተ፡ ነደራ፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalota nadarā</title>
+                <title xml:lang="en" corresp="#t1">Prayer against eye disease</title>
+                
+              <title xml:lang="gez" xml:id="t2">ጸሎት፡ በእንተ፡ ሕማመ፡ ዓይነት፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t2">Ṣalot baʾǝnta ḥǝmāma ʿāynat</title>
+                <title xml:lang="en" corresp="#t2">Prayer against eye pain</title>
+                
+                <title xml:lang="gez" xml:id="t3">ጸሎት፡ በእንተ፡ ሕማመ፡ ነደራ፡ ዝውእቱ፡ ዓይነት፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t3">Ṣalot baʾǝnta ḥǝmāma nadarā zǝ-wǝʾǝtu ʿāynat</title>
+                <title xml:lang="en" corresp="#t3">Prayer against eye disease which is an eye pain</title>
+                
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DE"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -27,6 +33,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <sourceDesc>
                 <p/>
             </sourceDesc>
+            <sourceDesc>
+                <listWit>
+                    <witness corresp="IVEf91#ms_i1"></witness>
+                    <witness corresp="BAVet208#ms_i2"></witness>
+                    <witness corresp="EMIP00616#ms_i21"></witness>
+                    <witness corresp="BLorient4943#ms_i7"></witness>
+                    <witness corresp="BLorient4865#ms_i2 "></witness>
+                    <witness corresp="InEtn210327#ms_i1"></witness>
+                    <witness corresp="InEtn40555#ms_i1"></witness>
+                    <witness corresp="BAVet100#ms_i2"></witness>
+                    <witness corresp="EMIP02060#ms_i3"></witness>
+                    <witness corresp="EMIP02083#ms_i4"></witness>
+                    <witness corresp="ESdd043#ms_i4"></witness>
+                    <witness corresp="ANLcr32#ms_i9"></witness>
+                    <witness corresp="BDLaethf11#ms_i1"></witness>
+                    <witness corresp="ESakm015#p2_i2"></witness>
+                </listWit>
+            </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
@@ -39,8 +63,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         <profileDesc>
             <creation/>
             <abstract>
-                <p>Magic prayer against the evil eye including the legend of the witch seen by the apostles on the shore of the 
-                    <placeName ref="LOC7368Tiberias">Sea of Galilee (Tiberias)</placeName>.</p>
+                <p>Magic prayer against the evil eye, followed by the legend of the witch seen by the Apostles on the shore of the 
+                    <placeName ref="LOC7368Tiberias">Sea of Galilee (Tiberias)</placeName>. The prayer begins with the name of an eye disease (or, alternatively, a demon that causes it), or with several such names. 
+                    The most common are <foreign xml:lang="gez">nadarā</foreign> (also <foreign xml:lang="gez">nadǝrā, nǝd(ǝ)rā</foreign>) and  <foreign xml:lang="gez">ʿāynat</foreign>.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -57,39 +82,44 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <change when="2020-03-24" who="DE">Added titles and edition</change>
             <change when="2025-01-07" who="CH">Minor correction</change>
             <change when="2025-01-12" who="CH">Updated titles and added abstract</change>
+            <change when="2025-10-27" who="MK">Updated titles, completed abstract, added witnesses, added relations and incipits.</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
           <div type="bibliography">
               <listRelation>
-                  <relation name="betmas:formerlyAlsoListedAs" active="LIT5690MagicPrayer" passive="LIT4703MagicPr"/>
+                  <listRelation>               
+                      <relation name="saws:isRelatedTo" active="LIT5690MagicPrayer" passive="LIT4967Salotanadara"><desc>The difference between the two records is that the latter contains an ʾasmāt-prayer.</desc></relation>
+                      <relation name="betmas:formerlyAlsoListedAs" active="LIT5690MagicPrayer" passive="LIT4703MagicPr"/>
+                      <relation name="betmas:formerlyAlsoListedAs" active="LIT5690MagicPrayer" passive="LIT4574MagicPr"/>
+                  </listRelation>
               </listRelation>
              <listBibl type="editions">
                 <bibl>
                    <ptr target="bm:Budge1928History"/>
-                   <citedRange unit="page">595-596</citedRange>
+                   <citedRange unit="page">595–596</citedRange>
                 </bibl>
              </listBibl>
              <listBibl type="translation">
                 <bibl>
                    <ptr target="bm:Budge1928History"/>
-                   <citedRange unit="page">592-593</citedRange>
+                   <citedRange unit="page">592–593</citedRange>
                 </bibl>
                 <bibl>
                    <ptr target="bm:Worrell1910Zauberwesen"/>
-                   <citedRange unit="page">87-88</citedRange>
+                   <citedRange unit="page">87–88</citedRange>
                 </bibl>
                 <bibl>
                    <ptr target="bm:Worrell1914Zauberwesen"/>
-                   <citedRange unit="page">102-103</citedRange>
+                   <citedRange unit="page">102–103</citedRange>
                 </bibl>
              </listBibl>
           </div>
           <div type="edition">
-            <note>The text of the edition quotes <bibl>
+              <note>The following incipit is taken from<bibl>
                <ptr target="bm:Budge1928History"/>
-               <citedRange unit="page">595-596</citedRange>
+               <citedRange unit="page">595–596</citedRange>
             </bibl></note>
              <div type="textpart" xml:lang="gez">
                 <ab>
@@ -103,6 +133,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 </ab>
              </div>
              </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>The following incipit is taken from <ref type="mss" corresp="IVEf91#ms_i1"/>.</note>
+                    <ab>ጸሎት፡ በእንተ፡ ዓይነ፡ ጥላ፡ ወዓይነ፡ ወርቅ፡ ጸሎተ፡ ንድራ፡ ዝውእቱ፡ ሕማመ፡ ዓይነ፡ እኩይ፡</ab>
+                </div>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>The following incipit is taken from <ref type="mss" corresp="ANLcr32#ms_i9"/>.</note>
+                    <ab>በስመ፡ <gap reason="ellipsis"/>ጸሎት፡ በእንተ፡ አይነተ፡ ባርያ፡ ወአይነ፡ ወርቅ፡ ሕማመ፡ ነደራ፡ <gap reason="ellipsis"/> ወእንዘ፡ የሐውር፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ አርዳኢሁ፡ ምስሌሁ፡ ወርእዩ፡ መልክዓ፡ ገጻ፡ ለአሮጊት እንዘ፡ ትገብር፡ላቲ፡ መፍርህት፡ ወመደንግፅት፡</ab>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>
