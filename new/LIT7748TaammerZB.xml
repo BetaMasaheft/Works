@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT7748TaamerZB">
+    <teiHeader xml:base="https://betamasaheft.eu/">
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="en" xml:id="t1">Hagiographic Dossier of ʾabuna Zarʾa Buruk</title>
+                <editor role="generalEditor" key="AB"/>
+                <editor key="CH"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+                    Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                <pubPlace>Hamburg</pubPlace>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
+                        <p> This file is licensed under the Creative Commons Attribution-ShareAlike 4.0.
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Work of the literatures of Ethiopia and Eritrea</p>
+            </sourceDesc>
+            <sourceDesc>
+                <listBibl type="clavis">
+                    <bibl type="KRZ">
+                        <ptr target="bm:KRZ"/>
+                        <citedRange unit="item">196</citedRange>
+                    </bibl>
+                </listBibl>
+                <listWit>
+                    <witness corresp="BerOrOct1015"/>
+                    <witness corresp="ANLcr83"/>
+                    <witness corresp="EMIP02393"/>
+                    <!-- ANLcr115 -->
+                    <!-- Schoyen 2074, cf. Issue#3192 -->
+                </listWit>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+                <xi:fallback>
+                    <p>Definitions of prefixes used.</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
+        <profileDesc>
+            <abstract>
+                <p>Hagiographic texts of <persName ref="PRS10618ZaraB"/>, an Ethiopian saint from the 17th century 
+                    <placeName ref="LOC3549Gojjam"/>. The hagiographical dossier contains miracles, as well as poetic texts, but no Gadl 
+                    (Life of the Saint), unless the miracle accounts are often recounted as Gadla ʾabuna Zarʾa Buruk. The number of miracles may vary
+                    from the core transmission of 26 miracles to 42 or more in other versions. The inclusion of a significantly greater number of miracles
+                    may have occurred due to the merging of traditions relating to another saint with the same name. The poetic texts included in the 
+                    dossier may vary as well and comprise Malkǝʾ-hymns as for instance <ref type="work" corresp="LIT0512Malke"/>, salām-hymns 
+                    and qǝne-poems.</p><!-- For more information and ungoing research see Issue #3192 -->
+            </abstract>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="gez">Gǝʿǝz</language>
+            </langUsage>
+            <textClass>
+                <keywords>
+                    <term key="Hagiography"/>
+                    <term key="ChristianLiterature"/>
+                    <term key="Poetry"/>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc>
+            <change who="CH" when="2025-11-12">Created record according to Issue #3192</change>
+            <!-- Add change note after review -->
+        </revisionDesc>
+    </teiHeader>
+    <text xml:base="https://betamasaheft.eu/">
+        <body>
+            <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:Jaeger1912ZaraBuruk"/>
+                    </bibl>
+                </listBibl>
+                <listBibl type="translation">
+                    <bibl>
+                        <ptr target="bm:Ricci1979ZaraBuruk"/>
+                    </bibl>
+                </listBibl>
+                <listBibl type="secondary">
+                    <bibl>
+                        <ptr target="bm:Sokolinskaia2014ZaraBuruk"/>
+                    </bibl>
+                    <bibl>
+                        <ptr target="bm:Jaeger1911TaamerZB"/>
+                    </bibl>
+                    <bibl>
+                        <ptr target="bm:Turaev1909ZaraBuruk"/>
+                    </bibl>
+                </listBibl>
+            </div>
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="saws:contains" active="LIT7748TaammerZB" passive="LIT0512Malke"/>
+                </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" xml:id="ImageZaraBuruk" corresp="LIT0512Malke">
+                    <label>Malkǝʾ-hymn to ʾabuna Zarʾa Buruk</label>
+                </div>
+                <div type="textpart" xml:id="Miracles" corresp="LIT1528GadlaZ">
+                    <label>Miracles of ʾabuna Zarʾa Buruk</label>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>
