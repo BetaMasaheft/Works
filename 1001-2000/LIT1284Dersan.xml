@@ -42,97 +42,717 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <keywords>
                <term key="ChristianLiterature"/>
                <term key="Homily"/>
+               <term key="Poetry"/>
             </keywords>
          </textClass>
+         <abstract>
+            <p><foreign xml:lang="gez">Dǝrsāna Gabrǝʾel</foreign> is a collection of 12 monthly readings in honour of <persName ref="PRS4377Gabriel"/>, beginning with the
+               month of <foreign xml:lang="gez">Tāḫśāś</foreign> (cf. <bibl><ptr target="bm:Samuel2005EAEDersanaGabreel"/></bibl>). Each section includes a homily, a miracle, a
+               commemorative note concerning the apparition of the Archangel to a biblical or a saintly figure, and a <foreign xml:lang="gez">salām</foreign>-hymn to
+               <persName ref="PRS4377Gabriel"/> or to other saints. 
+               In some manuscripts, like <ref type="mss" corresp="BAVet82"/>, the <foreign xml:lang="gez">Dǝrsāna Gabrǝʾel</foreign> is divided into 7 readings, one for each
+               weekday, and the miracles are grouped separately.
+            </p>
+         </abstract>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="MV" when="2017-05-23">Added textparts and keywords</change>
+         <change who="MV" when="2025-10-15">Added textparts and abstract</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
-            <listRelation><relation name="ecrm:P129_is_about" active="LIT1284Dersan" passive="PRS4377Gabriel"></relation></listRelation>
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT1284Dersan" passive="PRS4377Gabriel"/>
+            </listRelation>
             <listBibl type="secondary">
                <bibl>
                   <ptr target="bm:Samuel2005EAEDersanaGabreel"/>
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Maskaram">
-               <label>
-                  <foreign xml:lang="gez">Maskaram</foreign>
-               </label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Teqemt">
-               <label>
-                  <foreign xml:lang="gez">Ṭǝqǝmt</foreign>
-               </label>
-            </div>
-            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Hedar">
-               <label>
-                  <foreign xml:lang="gez">Ḫǝdār</foreign>
-               </label>
-            </div>
+         <div type="edition" xml:lang="gez">
+            <note>The following subdivision is based on <ref type="mss" corresp="BAVet149"/>, in which textparts follow a monthly arrangement.</note>
+            
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Tahsas">
-               <label>
-                  <foreign xml:lang="gez">Tāḫśāś</foreign>
+               <label xml:lang="en">
+                  Reading for 19 Tāḫśāś
                </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="TahsasDana" corresp="LIT3955Homily">
+                  <label xml:lang="en">Introduction concerning the building of the church of St Gabriel in Dana by <persName ref="PRS11658Archelaus"/>.</label> 
+               </div>       
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleLabourer" corresp="LIT4655MiracleGa">
+                  <label xml:lang="en">Miracle of the labourer whose foot was injured by a stone</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet82"/>.</note> 
+                     <ab>
+                        ተአምሪሁ፡ <gap reason="ellipsis"/> ወእንዘ፡ ደከሪ፡ ምድረ፡ ወሪዶሙ፡ መጠነ፡ ቆሙ፡ ብእሲ፡ ወወፅአ፡ ከይሲ፡ ዘዲበ፡ ርእሱ፡ አቅርንት፡ ወነከሶ፡ ለዘይከሪ፡
+                        ምድረ፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="CommemorativeTahsas">
+                  <label xml:lang="en">Commemorative note about the three youths in the furnace.</label>
+                  <note>According to <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">575</citedRange></bibl>, the commemorative note is 
+                     identical to <ref type="work" corresp="LIT1295Dersan#CommemorativeTahsas"/>, but the Archangel who intervenes is Gabriel instead of Michael.</note>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamTahsas" corresp="LIT6822SalamLakaAqabi">
+                  <label xml:lang="en">Salām-hymn to you, keeper</label>
+                  <note>According to <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">575</citedRange></bibl>, 
+                     the <foreign xml:lang="gez">salām</foreign> is identical to <ref type="work" corresp="LIT1295Dersan#SalamTahsas"/>, but it is dedicated to the Archangel
+                     Gabriel instead of Michael.</note>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="ConsecrationDana" corresp="LIT7717Consecra">
+                  <label xml:lang="en">On the consecration of the church of St Gabriel in Dana.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet82"/>.</note> 
+                     <ab>
+                        በስመ፡ አብ፡ <gap reason="ellipsis"/> አመ፡ ፳ወ፪ለወርኃ፡ ታኅሣሥ፡ በዛቲ፡ ዕለት፤ ኮነ፡ ተዝካረ፡ በዓሉ፡ ለመልአክ፡ ክቡር፡ ወቅዱስ፡ ገብርኤል፡ ሊቀ፡
+                        መላእክት፡ መበስር፡ ወሕንፀተ፡ ቤተ፡ ክ<supplied reason="omitted">ር</supplied>ስቲያኑ፡ በውስተ፡ ሀገረ፡ ዳና፤ ወአርአየ፡ መልአክ፡ ተአምራቲሁ፡ ባቲ፡
+                        ወቅዳሴሃ፡ በከመ፡ ዛቲ፡ ዕለት፨ ወኮነ፡ ስምዓ፡ በዝንቱ፡ አርከላኦስ፡ ቀሲስ፡ ኤጲስ፡ ቆጶስ፡ ዘይእቲ፡ ሀገር፤
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Annunciation" corresp="LIT4035SenkessarDL#Tahs19Gabriel">
+                  <label xml:lang="en">On the institution of the feast of the Annunciation.</label>
+                  <note>According to <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">575</citedRange></bibl>, 
+                     the note corresponds to <ref type="work" corresp="LIT4035SenkessarDL#Tahs19Gabriel"/>.</note>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ወካዕበ፡ በዛቲ፡ ዕለት፡ <sic>ትዝካረ፡</sic> በዓል፡ ዓቢይ፡ በዘዜነዋ፡ ሊቀ፡ መላእክት፡ ገብርኤል፡ ወአብሰራ፡ ለእግዝእትነ፨ 
+                        ማርያም<supplied reason="omitted">፡</supplied> ወላዲተ፡ አምላክ፡ ወሀሎ፡ ፩ብእሲ፡ ኤጲስ፡ ቆጶስ፡ በሀገረ፡ ሮሜ፨ ዘስሙ፡ ደቅስዮስ፡
+                     </ab>
+                  </div>                  
+               </div>
             </div>
+            
+            
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Terr">
                <label>
-                  <foreign xml:lang="gez">Ṭǝrr</foreign>
+                  Reading for 19 Ṭǝrr
                </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyZechariah" corresp="LIT7718HomilyGab">
+                  <label xml:lang="en">Homily on the annuciation of the Archangel Gabriel to Zechariah, father of John the Baptist.</label> 
+                  <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet82"/>.</note> 
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፡ ዘቅዱስ፨ ወብፁዕ፡ ወክቡር፡ ሊቀ፡ መላእክት፡ 
+                     ገብርኤል፡ ፍሡሐ፡ ገጽ፡ እምእለ፡ ይተግሁ፡ መላእክት፡ ቅዱሳን፨ አብሳሬ፡ ፍሥሐ፡ ወሐሤት፡ ለኵሉ፡ ዓለም፡ ሰባኬ፡ ፀሐየ፡ ጽድቅ፡ ወፀዋሬ፡ ዜና፡ ብስራት፤
+                  </ab>
+               </div>        
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleBuilding" corresp="LIT4656MiracleGa">
+                  <label xml:lang="en">Miracle of the building of the columns of the altar dedicated to St Gabriel.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ተአምሪሁ፡ <gap reason="ellipsis"/> ወሐኒፆሙ፡ ቤተ፡ ክርስቲያን፡ ገብሩ፡ <sic>ምሥዋዒ፡</sic> ወአኃዙ፡ ያቁ<surplus>፡</surplus>ሙ፡ አዕማደ፨
+                        ለለ፩ዱ፡ ወቦአ፡ ወሬዛ፡ ዘሠናይ፡ ላህዩ፡ ወቆመ፨ እንዘ፡ ያነክር፡ ወከሠተ፡ አዕይንቲሁ፡ ወርእዮ፡ ለገብርኤል<supplied reason="omitted">፡</supplied>
+                        ሊቀ፡ መላእክት፡ እንዘ፡ ይቀውም፨
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="AppearanceEvagrius">
+                  <label xml:lang="en">Commemorative note on St Gabriel's appearance to Evagrius.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ወበዛቲ፡ ዕለት፡ መጽአ፡ ገብርኤል፡ ሊቀ<supplied reason="omitted">፡</supplied> መላእክት፡ ወሆረ፡ በአምሳለ፡ 
+                        <choice><corr resp="bm:GrebTiss1935Codices">ፍቁሩ፡</corr><sic>ፍቅሩ፡</sic></choice> 
+                        ዘትካት፡ ኀበ፡ አባ፨ <sic>ወቅሪስ፡</sic> እንዘ፡ ይትሐወክ፡ በዝንቱ፡ ግብር፡ ወይቤሎ፡ ምንት፡ ውእቱ፡ ዝ<add place="interlinear">ን</add>ቱ፡ 
+                        ማዕሠርከ፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamTerr" corresp="LIT7719SalamGa"> 
+                  <label xml:lang="en">Salām-hymn for the month of Ṭǝrr.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ወበከመ፡ ገብርኤል፡ ለኤልሳቤጥ፡ ዘአስተፍሥሓ፡ ቀዲሙ፡
+                     </ab>
+                  </div>                  
+               </div>
             </div>
+           
+            
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Yakkatit">
                <label>
-                  <foreign xml:lang="gez">Yakkātit</foreign>
+                  Reading for 19 Yakkātit
                </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyIncarnation" corresp="LIT7720HomilyGab"> 
+                  <!-- Possibly LIT6508DersanaG (Homily in Honour of St Gabriel the Archangel, for 19th Yakkātit, told by Epiphanius, bishop of Cyprus, in the book that is called ʾAksimāros), but the incipit of the latter is too sketchy (it's a title) -->
+                  <label xml:lang="en">Homily on the Incarnation, to be read on 19 Yakkātit.</label> 
+                  <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፡ ዘቅዱስ፡ ገብርኤል<supplied reason="omitted">፡</supplied> ሊቀ፡ መላእክት፡ ዘይትነበብ፡ አመ፡
+                     ፲ወ፱ለየካቲት፨ ወሶበ፡ ተፈጸመ፡ መዋዕለ፡ ፅንሳ፡ ወለደቶ፡ ለዮሐንስ፡ ካህን፡ ወነቢይ፡ ወ<surplus>ወ</surplus>መጥምቅ፡ ወዝ፡ ውእቱ፡ 
+                     ገብርኤ<supplied reason="omitted">ል፡</supplied> <sic>ዘተፈነዎ፡</sic> እምኀበ፡ እግዚአብሔር፡ አብ፡ 
+                     <supplied reason="omitted">ኀበ፡</supplied> ማርያም፡ ቅድስት<supplied reason="omitted">፡</supplied> ድንግል፨ ወላዲተ፡ አምላክ፡ ከመ፡
+                     ይዜንዋ፡ <surplus>ንዋ፡</surplus> ተሠግዎቶ፡ ለወልደ፡ እግዚአብሔር፡ ሕያው<supplied reason="omitted">፡</supplied> እምኔሃ፡
+                     <surplus>ወ</surplus>በሳድስ፡ ወርኅ፡ እም<surplus>፡ </surplus>አመ፡ ዜነዎ፡ ለዘካር<supplied reason="omitted">ያ</supplied>ስ፡ ልደተ፡ ዮሐንስ፨
+                  </ab>
+               </div>    
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiraclePreeminence" corresp="LIT7721MGPreeminence">
+                  <label xml:lang="en">Miracle on the preeminence of St Gabriel.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ተአምሪሁ፡ <gap reason="ellipsis"/> ዝውእቱ፡ ገብርኤል፡ ዘይቤሎ፡ እግዚእነ፡ ጸሐፍ፨ ዲቤሆሙ፡ ለምዙራን፡ 
+                        ወለምኑና<supplied reason="omitted">ን</supplied>፨ ወዲበ፡ ዘማት፡ ወኅጕሎሙ፡ ወለውሉዶሙኒ፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="DeathPaphnutius">
+                  <label xml:lang="en">On the death of St Paphnutius and the appearance of the Archangel Gabriel.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ወበዛቲ፡ ዕለት፡ በእንተ፡ አስተር<supplied reason="omitted">እ</supplied>ዮቱ፡ ለ<surplus>ለ</surplus>ሊቀ፡ መላእክት፡ 
+                        ገብርኤል<supplied reason="omitted">፡</supplied> ጸሎቱ፡ <gap reason="ellipsis"/> ወ<supplied reason="omitted">በ</supplied>ይእቲ፡ ዕለት፡ ካዕበ፡
+                        አዕረፈ፡ አብ፡ ክቡር፡ ወመስተጋድል፡ አባ፡ በፍኖትዮስ፨ ወዝንቱ፡ መነኮስ፡ ተጋደለ፡ ተጋድሎ፡ ዓቢየ፡       
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamYakkatit" corresp="LIT7722SalamPaph">
+                  <label xml:lang="en">Salām-hymn in honour of Paphnutius for the month of Yakkātit.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ሰላም<supplied reason="omitted">፡</supplied> ለበፍኖትዮስ፡ እንተ፡ ደለዎ፡ ተሰምዮ፨ መሥዋዕተ፡ ልዑል፡ ንጹሐ፡ በእንተ፡ የውሐት፡ ወኢተአብዮ፨
+                     </ab>
+                  </div>                  
+               </div>
             </div>
+           
+            
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Maggabit">
                <label>
-                  <foreign xml:lang="gez">Maggābit</foreign>
+                  Reading for 19 Maggābit
                </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyAthanasius" corresp="LIT7723HomilyAthGab">
+                  <label xml:lang="en">Homily by Athanasius of Alexandria on St Gabriel at the time of Jesus Christ's death.</label>
+                  <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፡ ወነገር፡ ዘቅዱስ፡ ገብርኤል፡ ሊቀ፡ መላ<supplied reason="omitted">እ</supplied>ክት፡ ዘይትነበብ፡
+                     አመ፡ ፲ወ፱ለመጋቢት፡ ዘደረሰ፡ አብ፡ ቅዱስ፡ አትናቴዎስ፨ ሐዋርያዊ፡ ሊቀ፡ ጳጳሳት፡ 
+                     ዘሀ<add place="interlinear">ገ</add>ረ<supplied reason="omitted">፡</supplied> እስክ<supplied reason="omitted">ን</supplied>ድርያ፡ አባይ፡
+                     ትንብልናሁ፡ <gap reason="ellipsis"/> ወካዕበ፡ ይቤ፡ በእንተ፡ ነፍሱ፡ ወሥጋሁ፡ ወርደቱ፡ ለእግዚእነ፡ ውስተ፡ ሲኦል፡ ወአዕረገ፡ ጻድቃነ፡ ጐየ፡ ፀሐይ፡
+                     ወጸልመ፡ ወርኅ፡ ወከዋክብትኒ፡ ተጋብኡ፡ ከመ፡ ኢያብርሁ፨ ለመናፍቃን፡ በጊዜ፡ ስቅለቱ፡ ቅዱስ፨
+                  </ab>
+               </div>        
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleSnake" corresp="LIT4654MiracleGa">
+                  <label xml:lang="en">Miracle of the man who was bitten by a snake.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet82"/>.</note> 
+                     <ab>
+                        ተአምሪሁ፡ <gap reason="ellipsis"/> ወእንዘ፡ ደከሪ፡ ምድረ፡ ወሪዶሙ፡ መጠነ፡ ቆሙ፡ ብእሲ፡ ወወፅአ፡ ከይሲ፡ ዘዲበ፡ ርእሱ፡ አቅርንት፡ ወነከሶ፡ ለዘይከሪ፡ ምድረ፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="AppearanceVirginMary">
+                  <label xml:lang="en">Commemorative note on St Gabriel's appearance to the Virgin Mary.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ወበዛቲ፡ ዕለት፡ ይደልወነ፡ ከመ፡  <expan><abbr>በሰላ</abbr><ex>ም</ex></expan>፡ ንግበር፡ በዓሎ፡ ለመልአክ፡ ክቡር፡ ገብርኤል፡ ሊቀ፡ መላእክት፡
+                        በእንተ፡ ዕበየ፡ ክብሩ፡ ዘደለዎ፡ በኀበ፡ እግዚአብሔር፡ ከመ፡ ይኩን፡ ፀዋሬ<supplied reason="omitted">፡</supplied> ዜና፡ ወልዱ፡ ኀበ፨ ማርያም፡
+                        ወላዲቱ፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamMaggabit" corresp="LIT7724SalamGab">
+                  <label xml:lang="en">Salām-hymn for the month of Maggābit.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ሰላም፡ ለገብርኤል፡ ዘተፈነወ፡ እምልዑል፡ እንዘ፡ ዜና፡ ወልድ፡ ይፀውር፡ <supplied reason="omitted">ኀበ፡</supplied> ማርያም፡ ድንግል፨
+                     </ab>
+                  </div>                  
+               </div>
             </div>
+            
+            
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Miyazya">
                <label>
-                  <foreign xml:lang="gez">Miyāzyā</foreign>
+                  Reading for 19 Miyāzyā
                </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyAbrasit" corresp="LIT7725HomilyEpiph">
+                  <label xml:lang="en">Homily by Epiphanius, bishop of Cyprus, on King ʾAbrāsit and his son ʾAwǝr.</label> 
+                  <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፡ ዘቅዱስ፡ ገብርኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ፡ አመ፡ ፲ወ፱፡
+                     <sic>ለሚ<surplus>ለሚ</surplus>ያዘያ፡</sic> ዘደረሰ፡ ቅዱስ፡ ኤጲፋንዮስ፡ ኤጲስ፡ ቆጶስ፡ ዘሀገረ፡ ቆጵሮስ፡ ካልእ፡ ጸሎቱ፡ <gap reason="ellipsis"/>
+                     ወመጽአ፡ መልአከ፡ እግዚአብሔር፡ <expan><abbr>ቅዱ</abbr><ex>ስ፡</ex></expan> ሊቀ፡ መላእክት፡ ገብርኤል፡ 
+                     እምሰማይ<supplied reason="omitted">፡</supplied>
+                  </ab>
+               </div>        
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleKing" corresp="LIT7197MGKing">
+                  <label xml:lang="en">On the apparition of St Gabriel to a king who did not want to build the church</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ተአምሪሁ፡ <gap reason="ellipsis"/> ወሶበ፡ ኮነ፡ መጠነ፡ አሐቲ፡ ወርኅ፡ እንዘ፡ ሀሎነ፡ <sic>ንብራነ፡</sic> ሀቤሆሙ፡ ወእውርሰ፡ ተስእላ፡ ለንግሥት፡
+                        ከመ፡ ትፈጽም፡ ፃሕቆ፡ ዘሀሠሠ፡ በእንተ፡ ሕንፄሃ፡ ለቤተ፡ ክርስቲያን፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="AppearancePetrosBsoy">
+                  <label xml:lang="en">Commemorative note on St Gabriel's appearance to ʾAbbā Ṗeṭros and ʾAbbā Bǝsoy.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ወበዛቲ፡ ዕለት፡ በዓሉ፡ ለቅዱስ፡ ገብርኤል፡ ሊቀ፡ መላእክት፡ እ<add place="interlinear">ስ</add>መ፡ በዛቲ፡ ዕለት፡ አስተርአዮሙ፨ ለአባ፡ ጴጥሮስ፡
+                        ወአባ፡ ብሶይ፡ በረከቱ፡ <gap reason="ellipsis"/> ወሶበ፡ ኮኖሙ፡ <supplied reason="omitted">፲</supplied>፪ዓመተ፡
+                        ወሰ<surplus>ደ</surplus>ድዎሙ፡ ኀበ፡ መምህር፡ ወተምህሩ፡ ኵሎ፡ ሕገ፡ ቤተ፡ ክርስቲያን፡ ወነበሩ፡ በጾም፡ ወበጸሎት፡ እንዘ፡ ይገብሩ፡ ተአምራተ፡
+                        ወመንክራተ፨ ወአስተርአዮሙ፡ መልአከ፡ እግዚአብሔር፡ <expan><abbr>ገብርኤ</abbr><ex>ል፡</ex></expan> ወነገሮሙ፡ ከመ፡ ይኩኑ፡ ሰማዕተ፡
+                        በእንተ፡ ክርስቶስ፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamPetrosBsoy" corresp="LIT7726SalamPetrosBsoy"> 
+                  <label xml:lang="en">Salām-hymn to ʾAbbā Ṗeṭros and ʾAbbā Bǝsoy for the month of Miyāzyā.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ሰላም፡ <sic>ለዘሀለው፡</sic> ለቤተ፡ ሞቅሕ፡ በውስቴቱ፡ ብሶይ፡ ወጴጥሮስ፡ ለእግዚአብሔር፡ ሰማዕቱ።
+                     </ab>
+                  </div>                  
+               </div>
             </div>
+           
+            
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Genbot">
                <label>
-                  <foreign xml:lang="gez">Gǝnbot</foreign>
+                  Reading for 19 Gǝnbot
                </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyMaryEve" corresp="LIT7727HomilyJCMaryEve"> 
+                  <label xml:lang="en">Homily by John Chrysostom on Mary and Eve and the building of the church.</label> 
+                  <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፡ ዘቅዱስ፡ ገብርኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ፡ አመ፡ ፲ወ፱ለግንቦት፡ ዘደረሰ፡ ቅዱስ፡ ዮሐንስ፡ አፈ፡
+                     ወርቅ፨ ሊቀ፡ ጳጳሳት፡ ዘሀገረ፡ ቈስጥንጥንያ፡ ሶበ፡ ተወልደ፡ እምድንግል፡ ዓቀበ<supplied reason="omitted">ት</supplied>፡ ድንግልናሃ፡ ዘእንበለ፡
+                     ሙስና፡ እስመ፡ ቀዳሚኒ፡ ኮነት፡ ሔዋን፡ ድንግለ፡ ወአስሐታ፡ ዲያብሎስ፡ ወወለደት፡ ቃየልሃ፡ ምክንያተ፡ ሞት።  
+                  </ab>
+               </div>   
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleSatan" corresp="LIT7204MGSatan">
+                  <label xml:lang="en">How Satan tried to interfere with the building of the church.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ተአምሪሁ፡ <gap reason="ellipsis"/> ወበውእቱ፡ መዋዕል፡ ቀንዓ፨ ሰይጣን፡ ሰላዔ፡ ሠናያት፡ ወስእነ፡ አርምሞ፡ በእንተ፡ ቤተ፡ ክርስቲያኑ፡ ለቅዱስ፡
+                        <expan><abbr>ገብር<surplus>ብ</surplus>ኤ</abbr><ex>ል፡</ex></expan> ወአሐተ፡ ዕለተ፡ ተመስለ፡ ሰይጣን፡ 
+                        በአር<supplied reason="omitted">አ</supplied>ያ፡ ብእሲ፡ ወመጽአ፡ ኀበ፡ አውር፨ 
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="AppearanceBsoy">
+                  <label xml:lang="en">Commemorative note on St Gabriel's appearance to ʾAbbā Bǝsoy.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ወበዛቲ፡ ዕለት፡ ካዕበ፡ ስምዓ፡ ኮነ፡ አባ፡ ብ<surplus>ብ</surplus>ሶይ፡ <gap reason="ellipsis"/> ለዝ<surplus>ገ</surplus>ንቱ፡ ቅዱስ፡ ኰነንዎ፡
+                        በመዋቅሕት፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamBsoy" corresp="LIT7728SalamBsoy">  
+                  <label xml:lang="en">Salām-hymn to ʾAbbā Bǝsoy for the month of Gǝnbot.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ሰላም<supplied reason="omitted">፡</supplied> ለአባ፡ ብሶይ፡ በላህበ<supplied reason="lost">፡</supplied> <sic>ማሐትው፡</sic> ዘውእየ፨
+                     </ab>
+                  </div>                  
+               </div>
             </div>
+           
+            
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Sane">
                <label>
-                  <foreign xml:lang="gez">Sane</foreign>
+                  Reading for 19 Sane
                </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyLabourerSatan" corresp="LIT7205MGWorker"> 
+                  <label xml:lang="en">Homily on the labourer whom Satan stoned.</label> 
+                  <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፡ ዘቅዱስ፡ ገብርኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ፡ አመ፡ ፲ወ፱ለሰኔ፡ ጸሎቱ፡ <gap reason="ellipsis"/>
+                     ወካዕበ፡ ተመስለ፡ ሰይጣን፡ በአምሳለ፡ አረጋዊ፡ መነኮስ፡ ዘተለዓለ፡ መዋዕሊሁ፡ መጠነ፡ ፻ዓመት፡ ወምጽአ፡ መንገለ፡ ጥቃሆሙ፡ ለእለ፡ የሐንጹ፡
+                     መስተገብራን፨ 
+                  </ab>
+               </div>        
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleTwoHornedSnake" corresp="LIT7730MGTwohorned">
+                  <label xml:lang="en">Miracle of the two-horned serpent that bit a man.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ተአምሪሁ፡ <gap reason="ellipsis"/> ትንብልናሁ፡ <gap reason="ellipsis"/> ስምዑ፡ ዓየድዓክሙ፡ ውእቱ፡ ጊዜ፨ መጠነ፡ ቆሙ፡ ለብእሲ፡ ውእቱ፡ 
+                        አሚረ፡ አስተርአየ፨ ከይሲ፡ ዘቦቱ፡ ፪ዓቅርንት፡ ወነሰኮ፡ ለ፩ብእሲ፡ እምእለ፡ ይከርዩ፡ ሰኰና፡ እግሩ፡ ዘየማን፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="AppearanceTewodros">
+                  <label xml:lang="en">Commemorative note on St Gabriel's appearance to St Tewodros, who received a white horse by him.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ወበዛቲ፡ ዕለት፡ ሶበ፡ ርእ<add place="interlinear">የ፡ </add>እግዚአብሔር<supplied reason="omitted">፡</supplied> ትዕግሥቶ፡ ፈነዎ፡ ለመልአክ፡
+                        ክቡር፡ ገብርኤል፡ ሊቀ፡ መላእክት፡ ወቀተሎ፡ ለመኰንን፡ <gap reason="ellipsis"/> ወእ<supplied reason="omitted">ም</supplied>ዝ፡ ወሀቦ፡
+                        <expan><abbr>ገ</abbr><ex>ብርኤል፡</ex></expan> ለቅዱስ፡ ቴዎድሮስ፨ ፈረሰ፡ ፀዓዳ፡ ከመ፡ ይጸዓን፡ ዲቤሁ፡ 
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamSane" corresp="LIT7731SalamGaMi">
+                  <label xml:lang="en">Salām-hymn to Gabriel and Michael for the month of Sane.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ሰላም<supplied reason="omitted">፡</supplied> ለክሙ፡ <expan><abbr>ገብርኤ</abbr><ex>ል፡</ex></expan> ወሚካኤል፡
+                        ዘትሴ<supplied reason="omitted">ብ</supplied>ሑ፡ አምላክ፡ በአርምሞ፡ ቃል፨
+                     </ab>
+                  </div>                  
+               </div>
             </div>
+            
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Hamle">
                <label>
-                  <foreign xml:lang="gez">Ḥamle</foreign>
+                  Reading for 19 Ḥamle
                </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyBlessing" corresp="LIT7207MGBlessing">
+                  <label xml:lang="en">Homily on the labourer blessed for the construction of a church.</label> 
+                  <note>The text is transmitted in some manuscripts as a miracle to be read on 19 Ḥamle (cf. <ref type="work" corresp="LIT7207MGBlessing"/> in <ref type="mss" corresp="ANLcr3"/>).</note> 
+                  <div type="textpart" subtype="incipit">
+                  <note>The following incipit is after <ref type="mss" corresp="BAVet149"/>.</note> 
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፡ ዘቅዱስ፡ ገብርኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ፡ አመ፡ ፲ወ፱ለሐምሌ፡ ትንብልናሁ፡ 
+                     <gap reason="ellipsis"/> ወሶበ፡ ፈጸመ፡ <sic>ከረየ፡</sic> መሠረት፡ ፆረ፡ <sic>ኀበ<supplied reason="omitted">፡</supplied></sic> አዕባነ፡ በሱራሬ፡
+                     መሠረተ፡ ቤተ፡ ክርስቲያን፡ ወናሁ፡ ዕብን፡ ዓቢይ<supplied reason="omitted">፡</supplied> ወክቡድ፡ አምሰጠ፡ እምዕደ፡ ሐናፂ፡ 
+                     <choice><corr resp="bm:GrebTiss1935Codices">ዲበ፡</corr><sic>ወዲ፡</sic></choice> ፩ብእሲ፡ እምዕለ፡ ይትጌበሩ፡ በሐኒጸ፡ ቤተ፡
+                     <expan><abbr>ክር</abbr><ex>ስቲያን፡</ex></expan> ወተሰብረ፡ ወመጽኡ፡ አዝማዲሁ፡
+                  </ab>
+                  </div>
+               </div>        
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleParalytic" corresp="LIT7200MGParalytic">
+                  <label xml:lang="en">Miracle of the healing of a paralytic and leprous man.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ተአምሪሁ፡ <gap reason="ellipsis"/> በረከቱ፡ <gap reason="ellipsis"/> ወሀሎ፡ ፩ኤጲስ፡ ቆጶስ፡ በውስተ፡ ቤተ፡ ክርስቲያን፡ ዘቅዱስ፡ ገብርኤል፡ ሊቀ፡
+                        መላእክት፡ ወሶበ፡ ተቀንየ፡ ኤጲስ፡ ቆጶስ፡ በበዓል፡ ገብረ፡ ቅዳሴ፡ ዓቢየ፡ <sic>ወሀለው፨</sic> ምስሌሁ፡ ጉቡኣን፡ አሕዛብ፡ ወውእቱ፡ እንዘ፡ ይሜህሮሙ፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="AppearanceDaniel">
+                  <label xml:lang="en">Commemorative note on St Gabriel's appearance to the prophet Daniel</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ወበዛቲ፡ ዕለት። ካዕበ፡ ኮነ፡ ልማዶሙ፡ ለሕዝበ፡ ክርስቲያን፡ በብሔረ፡ ግ<add place="interlinear">ብ</add>ጽ፡ ከመ፡ ይግበሩ፡ 
+                        <choice><corr resp="bm:GrebTiss1935Codices">በዓሎ፡</corr><sic>በዓሉ፡</sic></choice> ለመልአክ፨ ክቡር፡ ገብርኤል፡ ሊቀ፡ መላእክት፡ ዘሰበከ፡
+                        ዜና<supplied reason="omitted">፡</supplied> ሐዲሰ፡ ቀዲሙሰ፡ ውእቱሰ፡ ዘሰበከ፡ ለዳንዔል፡ ሶበ፡ ይጼሊ፡ <gap reason="ellipsis"/> በእንተ፡
+                        ኃጢአቶሙ፡ ለደቂቀ፡ ፳ኤል፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamHamle" corresp="LIT7732SalamGa">
+                  <label xml:lang="en">Salām-hymn for the month of Ḥamle.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ሰላም<supplied reason="omitted">፡</supplied> ዕብል፡ ለገብርኤል<supplied reason="omitted">፡</supplied> በአዕዳዊሁ፡ ዘተአሥሩ፡ መላእክተ፡ 
+                        ሰማይ፡
+                     </ab>
+                  </div>                  
+               </div>
             </div>
+            
+            
             <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Nahase">
                <label>
-                  <foreign xml:lang="gez">Naḥase</foreign>
+                  Reading for 19 Naḥase
                </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyBaradyos" corresp="LIT7208MGBaradyos">
+                  <label xml:lang="en">Homily on Barādyos, who asked a rich man for money.</label> 
+                  <note>The text is transmitted in some manuscripts as a miracle to be read on 19 Naḥase (cf. <ref type="work" corresp="LIT7208MGBaradyos"/> in 
+                     <ref type="mss" corresp="ANLcr3"/>).</note> 
+                  <div type="textpart" subtype="incipit">
+                     <note>The following incipit is after <ref type="mss" corresp="BAVet149"/>.</note> 
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፡ ዘቅዱስ፡ ገብርኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ፡ አመ፡ ፲ወ፱ለነሐሴ፡ ትንብልናሁ፡ 
+                     <gap reason="ellipsis"/> ወሀሎ፡ ፩ብእሲ፡ ዘስሙ፡ በራድዮስ፡ ዝኬ፡ ውእቱ፡ ዘሖረ፡ ኀበ፡ ፩ብእሲ፡ ባዕል፡ ወሐሠሠ፡ እምኔሁ፡ ፻ዲናረ፡ ወርቅ፡
+                  </ab>
+               </div>   
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleBaradyos" corresp="LIT7733MGBaradyos"> 
+                  <label xml:lang="en">Miracle on Barādyos i.e., continuation of the homily on Barādyos.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ተአምሪሁ፡ <gap reason="ellipsis"/> ትንብልናሁ፡ <gap reason="ellipsis"/> ወሶበ፡ ተፈጸመት፡ አሐቲ፡ ዓመት፡ ሐለፈ፡ እድሜሁ፡ ለአብራድዮስ፡
+                        ወአልቦ<supplied reason="omitted">፡</supplied> ዘወሀቦ፡ ለዝኩ፡ ባዕል፡ እምንዋዩ፡ እስመ፡ ሰይጣን፡ <sic>አወሮ፡</sic> አእይንቲሁ፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="DeathBsoy">
+                  <label xml:lang="en">On the death of ʾAbbā Bǝsoy in the monastery of St Macarius.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ወበዛቲ፡ ዕለት፡ አዕረፈ፡ አብ፡ ቅዱስ፡ ዝክር፡ ሠናይ፡ ኮከበ፡ ገዳም፡ በደብረ፡ አባ፡ መቃርስ፡ ወዝንቱ፡ ቅዱስ፡ ኮነ፡ እምሀገር፡ እንተ፡ 
+                        <choice><corr resp="bm:GrebTiss1935Codices">ስማ፡</corr><sic>ስምዓ፡</sic></choice> ሰነሳ፡ እምብሔረ፡ ግብጽ፡ <sic>ወሀለው፡</sic> ሎቱ፡
+                        ፯አሀው፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamConsecration" corresp="LIT7734SalamConsec">
+                  <label xml:lang="en">Salām-hymn in honour of the consecration of the church of the Archangel Gabriel for the month of Naḥase.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ሰላም፡ ለቅዳሴ፡ ቤትከ፡ ኪሩብ። በደብረ፡ ናቅሎን፤ ይእቲ፡ እንተ፡ ተሐንጸት፡ በጥበብ።
+                     </ab>
+                  </div>                  
+               </div>
             </div>
-            <div type="textpart" subtype="chapter" xml:id="Monday"/>
-            <div type="textpart" subtype="chapter" xml:id="Tuesday" corresp="LIT3956Homily"/>
-            <div type="textpart" subtype="chapter" xml:id="Wednesday"/>
+           
+            
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Maskaram">
+               <label>
+                  Reading for 19 Maskaram
+               </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyFalasforos" corresp="LIT7199MGFalasforos">
+                  <label xml:lang="en">Homily on the merchant Falāsforos.</label> 
+                  <note>The text is transmitted in some manuscripts as a miracle to be read on 19 Maskaram (cf. <ref type="work" corresp="LIT7199MGFalasforos"/> in <ref type="mss" corresp="ANLcr3"/>).</note> 
+                  <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፡ ዘቅዱስ፡ ገብርኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ<supplied reason="omitted">፡</supplied> አመ፡
+                     ፲ወ፱ለመስከረም፡ ትንብልናሁ፡ <gap reason="ellipsis"/> ወሀሎ፡ ፩ብእሲ፡ ነጋዲ፡ ዓቢይ፡ ዘስሙ፡ ፈላስፎሮስ፡ ዘተሣየጠ፡ ነዋየ፡ ወአጥረየ፡ ብዕለ፡ ወፈተወ፡
+                     ይሑር፡ ብሔረ፡ እምድኅረ፡ አርብሐ፡ መካልየ፡
+                  </ab>
+               </div>
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleFalasforos" corresp="LIT7201MGFalasfaros2">
+                  <label xml:lang="en">Miracle on Falāsforos i.e., continuation of the homily on Falāsforos.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ተአምሪሁ፡ <gap reason="ellipsis"/> ትንብልናሁ፡ <gap reason="ellipsis"/> ወተንሥአ፡ ፈላስፎሮስ፡ ወሖረ፡ ኀበ፡ ሀገረ፡ <sic>ቁንስጥንጥያ፡</sic>
+                        ወበጽሐ፡ ኀበ፡ ሀሎ፡ ነሐቤ፡ ወርቅ፡ ወይቤሎ። አነ፡ አኃሥሥ፡ እምኔከ፡ ከመ፡ ትስዓል፡ ስዕሎ፡ <surplus>ሰ፡</surplus> ለቅዱስ፡ ገብርኤል፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="AppearanceZechariah">
+                  <label xml:lang="en">Commemorative note on St Gabriel's appearance to Zechariah.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ወበዛቲ፡ ዕለት፡ ፈነዎ፡ እግዚአብሔር፡ ለገብርኤል፡ ሊቀ፡ መላእክት፡ ኀበ፡ ዘካርያስ፡ ካህን፡ ወልደ፡ በራክዩ፡ ወዜነዎ፡ 
+                        በእንተ<supplied reason="omitted">፡</supplied> <choice><corr resp="bm:GrebTiss1935Codices">ወልዱ፡</corr><sic>ወልደ፡</sic></choice>
+                        ዮሐንስ፡ መጥምቅ፨ እስመ፡ ጻድቅ፡ ውእቱ፡ ዘካርያስ፡ ወልሕቀ፡ ፈድፋደ፡ በመዋዕሊሁ፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamJohnBaptist" corresp="LIT7735SalamJohn">
+                  <label xml:lang="en">Salām-hymn in honour of John the Baptist for the month of Maskaram.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ሰላም፡ ለፅንሰት፡ በሰሌ<surplus>ሌ</surplus>ዳ፡ ከርሣ፡ ዘተገልፈ፨ ለኤልሳቤጥ፡ እምከ፡ እምድኅረ፡ ወርኃ፡ ኀለፈ፨
+                     </ab>
+                  </div>                  
+               </div>
+            </div>
+            
+            
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Teqemt">
+               <label>
+                  Reading for 19 Ṭǝqǝmt
+               </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyAwtrabyos" corresp="LIT7209MGAwtrabyos">
+                  <label xml:lang="en">Homily on ʾAwṭrābiyos and his wife Qisārya.</label> 
+                  <note>The text is transmitted in some manuscripts as a miracle to be read on 19 Ṭǝqǝmt (cf. <ref type="work" corresp="LIT7209MGAwtrabyos"/> in <ref type="mss" corresp="ANLcr3"/>).</note> 
+                  <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፡ ዘቅዱስ፡ ገብርኤል፡ ሊቀ፡ መላእክት፡ ዘይትነበብ<supplied reason="omitted">፡</supplied> አመ፡
+                     ፲ወ፱ለጥቅምት፡ በረከቱ፡ <gap reason="ellipsis"/> ወበይእቲ፡ ዕለት፡ ፈተወ፡ 
+                     <choice><corr resp="bm:GrebTiss1935Codices">፩ብእሲ፡</corr><sic>፩ብእሴ፡</sic></choice> <sic>ከመ፡</sic> በዕል፡ 
+                     ከመ<supplied reason="omitted">፡</supplied> 
+                     <choice><corr resp="bm:GrebTiss1935Codices">ያብልዕዎሙ፡</corr><sic>ያብዕልዎሙ፡</sic></choice> ኅብስተ፡ ለመስተገብራን፡ ወለኬነውት፡
+                  </ab>
+               </div>        
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HealingBlind" corresp="LIT7202MGStatue">
+                  <label xml:lang="en">Healing of the blind who was born before the image of St Gabriel.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ተአምሪሁ፡ <gap reason="ellipsis"/> በረከቱ፡ <gap reason="ellipsis"/> ወበውእቱ፡ መዋዕል፡ ጊዜ፡ ሰዓተ፡ መዓልት፡ እንተ፡ ጊዜ፡ ይበውእ፡ ሥዕሉ፡
+                        ለቅዱስ፡ ገብርኤል፡ ሶበ፡ ገብረ፡ ተአምረ፡ ወመንክረ፡ ዓቢየ፡ <gap reason="ellipsis"/> ነዋ፡ አብጽሑ፡ ዕውረ፡ ዘተወልደ፡ እምከርሠ፡ እሙ፡ 
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="AppearanceSarapamon1">
+                  <label xml:lang="en">Commemorative note on St Gabriel's appearance to St Sarabāmon.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ወ<add place="interlinear">በ</add>ዛቲ፡ ዕለት፡ <surplus>ወ</surplus>ሶበ፡ ቀርበ፡ ጊዜ፡ ዕረፍቱ፡ ለቅዱስ፡ ሰረባሞን፡ አስተርአዮ፡ መልአክ፡ ክቡር፡
+                        ገብርኤል፡ ሊቀ፡ <choice><corr resp="bm:GrebTiss1935Codices">መላእክት፡</corr><sic>መባእክት፡</sic></choice> በሕልም፡
+                        <surplus>ወወሀበት፡</surplus> ወወሀበ፡ መስቀለ፡ ዘእሳት፡ ወይቤሎ፡ አኃዝ፡ ወዕዴከ፡ ዘንተ፡ መስቀለ፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamSarapamon1" corresp="LIT7736SalamSarab"> 
+                  <label xml:lang="en">Salām-hymn in honour of St Sarabāmon for the month of Ṭǝqǝmt.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ሰላ<add place="interlinear">ም</add><supplied reason="omitted">፡</supplied> ዕብል፡ ለሰረባሞን፡ ቡሩክ፨ ዘሞቅሐ፡ ነፍሶ፡ እንበለ፡ ምሂክ፨
+                     </ab>
+                  </div>                  
+               </div>
+            </div>
+           
+            
+            <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Hedar">
+               <label>
+                  Reading for 19 Ḫǝdār
+               </label>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="HomilyVirginMary" corresp="LIT7737HomilyInc"> 
+                  <label xml:lang="en">Homily on the dialogue between Gabriel and the Virgin Mary on the Incarnation.</label> 
+                  <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፡ ዘቅዱስ፡ ገብርኤል፡ ሊቀ፡ መላእክት፡ ዘከመ፡ ዜነዋ፡ ወነገራ፡ ለማርያም፡ ዘይትነበብ፡ አመ፡ ፲ወ፱ለኅዳር፡
+                     ዘከመ፡ ዜነዋ፡ ለማርያም፡ ወአውሥአት፡ እግዝእትነ፡ ማርያም፡ ብዙኃ፡ እፈርህ፡ ይእዜ፡ ወብዙኃ፡ አፍራህከኒ፡ እሳት፡ ውእቱ፡ በከመ፡ ትቤለኒ፡
+                  </ab>
+               </div>     
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="MiracleAwer" corresp="LIT7210MGAwer">
+                  <label xml:lang="en">Miracle of the bishop ʾAbbā ʾAwǝr.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ተአምሪሁ፡ <gap reason="ellipsis"/> ትንብልናሁ፡ <gap reason="ellipsis"/> አነ፡ ዮሐንስ፡ እለ፡ እስክ<supplied reason="omitted">ን</supplied>ድርያ፡
+                        <surplus>ሰ፡</surplus> <choice><corr resp="bm:GrebTiss1935Codices">ኀሎኩ፡</corr><sic>ኀሎክሙ፡</sic></choice> ውስተ፡ ዝንቱ፡ ደብር፡
+                        ዓይድአኒ፡ ዜና፡ ዝንቱ፡ አብ፡ ቅዱስ፡ ኤጲስ፡ ቆጶስ፡ አበ፡ አውር፡ ኵሎ፡ ግብረ፡ ዘረከቦ፡ ወዘርእየ፡ እምአመ፡ ተወልደ፡ እስከ፡ አመ፡ ተሰይመ፨ ኤጲስ፡
+                        ቆጶስ፡ ዲበ፡ ሀገረ፡ ፍዩም፡ ከማሁ፨ ኮነ፡ ሶበ፡ <sic>አልቀ፡</sic> መዋዕሊሁ፡ ለአብ፡ ክቡር፡ ኤጲስ፡ ቆጶስ፡ አባ፡ አውር፡ ጊዜ፡ ፍልሰቱ፡ እምዝንቱ፡
+                        ዓለም፡ ጸውአኒ<supplied reason="omitted">፡</supplied> ሊተ፡ ለዮሐንስ፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="AppearanceSarapamon2">
+                  <label xml:lang="en">Commemorative note on St Gabriel's appearance to the father of St Sarabāmon.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ወበዛቲ፡ ዕለት፡ ሶበ፡ ሞተ፡ አቡሁ፡ ለሰረባሞን፡ ሊቀ፡ ጳጳሳት፡ ፈተወ፡ ከመ፡ ይኩን፡ ክርስቲያናዊ፨ ወአስተርአዮ፡ መልአከ፡ እግዚአብሔር፡ ገብርኤል፡
+                        ሊቀ፡ መላእክት፡ ወአዘዘ፡ ከመ፡ ይሑር፡ ኀበ፡ አባ፡ ዮሐንስ፡ ኤጲስ፡ ቆጶስ፡
+                     </ab>
+                  </div>                  
+               </div>
+               <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="SalamSarapamon2" corresp="LIT7739SalamSarab">
+                  <label xml:lang="en">Salām-hymn in honour of St Sarabāmon for the month of Ḫǝdār.</label>
+                  <div type="textpart" subtype="incipit">
+                     <note>The incipit follows <ref type="mss" corresp="BAVet149"/>.</note> 
+                     <ab>
+                        ሰላም፡ ለሰረባሞን፡ ዘተሰምየ፡ ሱታፎ፨ ለወንጌላዊ፡ ዮሐንስ፡
+                     </ab>
+                  </div>                  
+               </div>
+            </div>
+         </div>
+        
+                 
+         <div type="edition" xml:lang="gez">
+            <note>The following text is based on <ref type="mss" corresp="BAVet82"/>, in which textparts follow a weekly arrangement.</note>
+            <div type="textpart" subtype="chapter" xml:id="Monday" corresp="LIT7718HomilyGab"> 
+               <label xml:lang="en"></label> 
+            <div type="textpart" subtype="incipit">
+               <note>The incipit follows <ref type="mss" corresp="BAVet82"/>.</note> 
+               <ab>
+                  በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፡ ዘቅዱስ፨ ወብፁዕ፡ ወክቡር፡ ሊቀ፡ መላእክት፡ ገብርኤል፡ ፍሡሐ፡ ገጽ፡ እምእለ፡ ይተግሁ፡ መላእክት፡ ቅዱሳን፨
+                  አብሳሬ፡ ፍሥሐ፡ ወሐሤት፡ ለኵሉ፡ ዓለም፡ ሰባኬ፡ ፀሐየ፡ ጽድቅ፡ ወፀዋሬ፡ ዜና፡ ብስራት፤
+               </ab>
+            </div>   
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Tuesday" corresp="LIT3956Homily">
+               <label xml:lang="en">Homily by ʾAbāwre Bishop of <placeName ref="LOC3066Fayyum">Fayyum</placeName> on the glorious angel Gabriel.</label> 
+               <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet82"/>.</note> 
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፤ ዘደረሰ፡ አባ፡ ዘለእስክንድሮስ፡ አባውሬ፡ ኤጲስ፡ ቆጶስ፡ ዘሀገረ፡ ፈይም፡ ይዜኑ፡ በእንቲአሁ፡ ዕበዮ፡ ለመልአከ፡ 
+                     ክቡር፤ ሊቆሙ፡ በኃይለ፡ ሰማያት፡ ገብርኤል፡ መበስር፡ ወሕንጸተ፡ ቤተ፡ ክርስቲያና፤ ወቅዳሴሃ፡ ኮነ፡ በደብረ፡ አቅሎን፡ ዮም፤ በዛቲ፡ ዕለት፡ ዝውእቱ፡ አመ፡
+                     ፳ወ፯እምነ፡ ወርኃ፡ ሰኔ፤ ትንብልናሁ፡ <gap reason="ellipsis"/> ይቤ፡ ሠናየ፡ ተነበየ፡ ዳዊት፡ መዘምር፤ እንዘ፡ ይብል፡ አብደርኩ፡ ከመ፡ እኅድር፡ ቤቶ፡
+                     ለእግዚአብሔር፡ በኵሉ፡ መዋዕለ፡ ሕይወትየ፤
+                  </ab>
+               </div>        
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Wednesday" corresp="LIT7740HomilyGab#First">               
+               <note>Anonymous homily to be read on Wednesday.</note>
+               <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet82"/>.</note> 
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ወሶበ፡ ይብል፡ ከመዝ፡ ውእቱ፡ ጊዜ፡ መጽአ፡ ኀቤሁ፡ መልአከ፡ እግዚአብሔር፡ ገብርኤል፡ ዜናዊ፨
+                  </ab>
+               </div>        
+            </div>
             <div type="textpart" subtype="chapter" xml:id="Thursday" corresp="LIT3955Homily">
+               <label xml:lang="en">Homily concerning the building of the church of St Gabriel in Dana by <persName ref="PRS11658Archelaus"/>.</label> 
                <listRelation>
                   <relation name="saws:isAttributedToAuthor" active="LIT1284Dersan#Thursday" passive="PRS11658Archelaus"/>
                </listRelation>
+               <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet82"/>.</note> 
+                  <ab>
+                     በስመ፡ አብ፡ <gap reason="ellipsis"/> ድርሳን፡ ዘደረሰ፡ አብ፡ ክቡር፡ ቅዱስ፡ ወመምሕር፨ 
+                     ዓቢይ፡ እምኀበ፡ እግዚአብሔር፡ አርክላኦስ፡ ኤጲስ፡ ቆጶስ፤ ዘሀገረ፡ ዳና፡ በእንተ፡ ሊቀ፡ መላእክት፡ ገብርኤል፡ ወሶበ፡ መጽኡ፡ ኀቤሁ፡ መኳንንተ፡ ምድር፤ ተሰአልዎ፡                  </ab>
+               </div>        
             </div>
-            <div type="textpart" subtype="chapter" xml:id="Friday"/>
-            <div type="textpart" subtype="chapter" xml:id="Saturday"/>
-            <div type="textpart" subtype="chapter" xml:id="Sunday" corresp="LIT7199MGFalasforos"/>
+            <div type="textpart" subtype="chapter" xml:id="Friday" corresp="LIT7740HomilyGab#Second"> 
+               <note>Continuation of the anonymous homily, to be read on Friday.</note>
+               <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet82"/>.</note> 
+                  <ab>
+                     ወካዕበ፡ ርኢኩ፡ ለኵሉ፡ አዕማድ፡ ኀበ፡ አቀምክዎሙ፡ ወውስተ፡ እዴሁ፡ ዘሀሎ፤ መስቀሎ፡
+                  </ab>
+               </div>        
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Saturday" corresp="LIT7208MGBaradyos">
+               <label xml:lang="en">Homily on Barādyos, who asked a rich man for money.</label> 
+               <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet82"/>.</note> 
+                  <ab>
+                     ወበውእቱ፡ መዋዕል፡ ሀሎ፡ ብእሲ፡ ዘስሙ፡ በራድዮስ፡ ዝኬ፡ ውእቱ፨ ዘሖረ፡ <supplied reason="omitted">ኀበ፡</supplied> ፩ብእሲ፡ ባዕል፡ ወኃሠሠ፡ እምኔሁ፡
+                     ፻ዲናረ፡ ወርቅ፡ ከመ፡ ይትገበር፡ ቦቶን፡
+                  </ab>
+               </div>        
+            </div>
+            <div type="textpart" subtype="chapter" xml:id="Sunday" corresp="LIT7199MGFalasforos">
+               <label xml:lang="en">Homily on the merchant Falāsforos.</label> 
+               <div type="textpart" subtype="incipit">
+                  <note>The incipit follows <ref type="mss" corresp="BAVet82"/>.</note> 
+                  <ab>
+                     ኦፍቁራንየ፡ አኃሥሥ፡ ዮም፡ እንግርክሙ፡ ዘንተ፡ ዐቢየ፡ ግብረ፡ ዘታነክሩ፡ ኪያሁ፤ ወሀሎ፡ በውእቱ፡ መዋዕል፡ ብእሲ፡ ነጋዲ፡ ዐቢይ፡ ዘስሙ፡ ፈለስፎሮን፡
+                  </ab>
+               </div>        
+            </div>
          </div>
       </body>
    </text>
