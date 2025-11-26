@@ -4,8 +4,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Hymn to Jesus Christ</title>
+            <title xml:lang="gez" xml:id="t1">ሰላምታ፡ ዘኢየሱስ፡ ዘሰብዐቱ፡ ጊዜያት፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Salāmtā za-ʾIyasus za-sabʿattu gizeyāt</title>
+            <title xml:lang="en" corresp="#t1">Salutations for Jesus for the Canonical Hours</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="MV"/>   
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -15,18 +18,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
                   <p>
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </p>
+                     This file is licensed under the Creative Commons
+                     Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
-         </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness/>
-            </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -37,7 +35,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Poetry"/>        
@@ -48,6 +49,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-06-03">Added keywords and incipit</change>
+         <change who="MV" when="2025-11-24">Revised title, added textparts</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -60,11 +62,119 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ስብሐት፡ ለከ፡ ዘበሰማያት፡ አቡነ፡ ወዘበምድር፡ ዓዲ።
-               </ab>
+         <div type="edition" xml:lang="gez">
+            <note>The following incipit and explicit are based on <ref type="mss" corresp="EMML6251#ms_i3.71"/>.</note>
+            
+            <div type="textpart" xml:lang="gez" xml:id="Twilight" corresp="LIT4286Hymn">
+               <label>First salutation, for the twilight (ዘሠርክ፡)</label>                
+               <lg type="stanza" n="1">
+                     <l n="1">ስብሐት፡ ለከ፡ ሀበነ፡ ሰላመከ፡ መምሕረ፡ ትሕትና፡ ክርስቶስ፡ ወልደ፡ አምላክ፡ ወሰብዕ።</l>
+                     <l n="2">ጊዜ፡ ፍና፡ ሠርክ፡ በዓውደ፡ ምብልዕ፡</l>
+                     <l n="3">ዘረፈቀ፡ ምስለ፡ አርዳእ።</l>
+                  </lg>   
+               <lg type="stanza" n="7">
+                     <l n="1">ስብሐት፡ ከከ፡ ዘንተ፡ ኵሎ፡ በእንተ፡ ፍቅረ፡ ስብዕ፡ ዘኮንከ።</l>
+                     <l n="2">ለሕማም፡ ወሞት፡ እስከ፡ በጻሕከ።</l>
+                     <l n="3">ይእዜኒ፡ ተወከፍ፡ ነግሃ፡ ወሠርከ።</l>
+                     <l n="4"> ስብሐታት፡ ዘናቀርብ፡ ለከ።</l>
+               </lg>   
+            </div>
+            <div type="textpart" xml:lang="gez" xml:id="Compline">
+               <label>Second salutation, for the compline (ዘንዋም፡)</label>                
+               <lg type="stanza" n="1">
+                     <l n="1">ስብሐት፡ ለከ፡ ስምዓነ፡ አምላክነ፡ ወሰላመከ፡ ሀበነ፡ እስመ፡ ወሀብከነ፡ ኵሎ።</l>
+                     <l n="2">ስብሐተ፡ ዚአከ፡ ንንግር፡ እምትካት፡ ዘሀሎ።</l>
+                     <l n="3">በመዓርግ፡ ወበበመትሎ።</l>
+                  </lg>   
+               <lg type="stanza" n="7">
+                     <l n="1">ስብሐት፡ ለከ፡ ዕቀበነ፡ ዘልፈ፡ እግዚኦ፡ በዛቲ፡ ዘዓት።</l>
+                     <l n="2">እምእለ፡ ይብሕቱ፡ አጋንንት።</l>
+                     <l n="3">ዓውደነ፡ ሕፅር፡ በሃይለ፡ መላእክት።</l> 
+                     <l n="4">እስመ፡ ናሁ፡ ሰፈነ፡ ሌሊት።</l>
+               </lg>   
+            </div>
+            <div type="textpart" xml:lang="gez" xml:id="Midnight">
+               <label>Third salutation, for midnight (ዘመንፈቀ፡ ሌሊት፡)</label>                
+               <lg type="stanza" n="1">
+                     <l n="1"> ስብሐት፡ ለከ፡ ተዘከርኩ፡ በሌሊት፡ ብዝኃ፡ ትሕትናከ፡ ኵሎ፡ እንተ፡ የዓዱ፡ እምዓቅም። </l>
+                     <l n="2">ጊዜ፡ አኃዙከ፡ ሠገራተ፡ ሮም፡ </l>
+                     <l n="3">ኢየሱስ፡ ወልደ፡ ማርያም። </l>
+                  </lg>   
+               <lg type="stanza" n="7">
+                     <l n="1">ስብሐት፡ ለከ፡ መንፈቀ፡ ሌሊት፡ ድኅረ፡ ጊዜ፡ ይከውን፡ ወውዖ። </l>
+                     <l n="2">ቤተከ፡ ነሃሉ፡ በተጋብኦ። </l>
+                     <l n="3">ሶበ፡ ሰአልናከ፡ በአስተብቍዖ። </l>
+                     <l n="4">አርኁ፡ ለነ፡ እግዚኦ፡ እግዚኦ።</l>
+               </lg>   
+            </div>
+            <div type="textpart" xml:lang="gez" xml:id="Morning">
+               <label>Fourth salutation, for the morning (ዘነግህ፡)</label>               
+               <lg type="stanza" n="1">
+                     <l n="1">ስብሐት፡ ለከ፡ ከመ፡ ንንግር፡ ኵሎ፡ ስብሐቲከ፡ በአናቅጺሃ፡ ለጽዮን፡ ማኅደረ፡ ብዙኅ፡ ሰላም።</l>
+                     <l n="2">ዘአንቃሕከነ፡ እምነ፡ ንዋም።</l>
+                  </lg>   
+               <lg type="stanza" n="7">
+                     <l n="1">ስብሐት፡ ለከ፡ አኰቴተ፡ ስብሐት፡ ወትረ፡ ለመንግሥትከ፡ ስቡሕ።</l>
+                     <l n="2">ጊዜ፡ እምንዋምነ፡ ንነቅሕ። </l>
+                     <l n="3">ናቀርብ፡ ለከ፡ በቃለ፡ ክላህ።</l>
+                     <l n="4">ወንፌኑ፡ ስብሐተ፡ ዘነግህ።</l>
+               </lg>   
+            </div>
+            <div type="textpart" xml:lang="gez" xml:id="Third">
+               <label>Fifth salutation, for the third hour (ዘ፫፡ ሰዓት፡)</label>            
+               <lg type="stanza" n="1">
+                     <l n="1">ስብሐት፡ ለከ፡ እኤምኅ፡ አእጋሪከ፡ በጊዜ፡ ሰለስቱ፡ ሰዓት፡ ቅድመ፡ ጲላጦስ፡ ዘቆማ።</l>
+                     <l n="2">ኢየሱስ፡ ጠቢብ፡ ወንጉሥ፡ ፌማ።</l>
+                     <l n="3">ዘአድከምከ፡ ኃይለ፡ መስቴማ።</l>
+                  </lg>  
+               <lg type="stanza" n="7">
+                     <l n="1">ስብሐት፡ ለከ፡ ኀበ፡ ሐዋርያት፡ ገብሩ፡ በጽርሐ፡ ጽዮን፡ እንግልጋ፡</l>
+                     <l n="2">ዘፈኖከ፡ ሎሙ፡ መንፈሰ፡ ጸጋ።</l>
+                     <l n="3">ፈኑ፡ ለነ፡ እንበለ፡ ንትጋ። </l>
+                     <l n="4">ያኅድገነ፡ ምግባረ፡ ዘሥጋ።</l>
+               </lg>   
+            </div>
+            <div type="textpart" xml:lang="gez" xml:id="Sixth">
+               <label>Sixth salutation, for the sixth hour (ዘ፮፡ ሰዓት፡)</label>                  
+               <lg type="stanza" n="1">
+                     <l n="1">ስብሐት፡ ለከ፡ ኦዘተቀኖከ፡ ኢየሱስ፡ ጻድቅ፡ ማዕከለ፡ ፪፡ ፈያት፡</l>
+                     <l n="2">እንዘ፡ ኢትከውን፡ አንተ፡ ገባሬ፡ ዕኪት።</l>
+                     <l n="3">ከመ፡ ትሥዓር፡ ቀኖተ፡ ሞት።</l>
+                  </lg>   
+               <lg type="stanza" n="7">
+                     <l n="1">ስብሐት፡ ለከ፡ ሕፅረነ፡ ወትረ፡ እግዚኦ፡ ለደቂቀ፡ ዛቲ፡ ማኅበር።</l>
+                     <l n="2">በመስቀልከ፡ መግረሬ፡ ፀር።</l>
+                     <l n="3">እምድድቅ፡ ወእምጋኔነ፡ ቀትር።</l>
+                     <l n="4">ወእምኵሉ፡ ዘይመጽእ፡ ግብር።</l>
+               </lg>   
+            </div>
+            <div type="textpart" xml:lang="gez" xml:id="Ninth" corresp="LIT4518Hymn">
+               <label>Seventh salutation, for the ninth hour (ዘ፱፡ ሰዓት፡)</label>                    
+               <lg type="stanza" n="1">
+                     <l n="1">ስብሐት፡ ለከ፡ አምላኪየ፡ አምላኪየ፡ ነጽረኒ፡ ወትረ፡ ወኢትኅድገኒ፡ ዘልፈ።</l>
+                     <l n="2">እስመ፡ አንተ፡ ትቤ፡ ከሢተከ፡ አፈ።</l>
+                     <l n="3">ትፈጽም፡ ሕገ፡ ተጽሕፈ።</l>
+                  </lg>   
+               <lg type="stanza" n="7">
+                     <l n="1">ስብሐት፡ ለከ፡ ተወከፍ፡ ሊተ፡ እግዚኦ፡ ከመ፡ ቍርባን፡ ጥሉል። </l>
+                     <l n="2">በበሱባዔ፡ እንዘ፡ እክፍል።</l>
+                     <l n="3">ዘአቅረብኩ፡ ለከ፡ ኍልቈ፡ ኢዮቤል፡</l>
+                     <l n="4">ስብሐታተ፡ በዘአንሰ፡ እክል።</l>
+               </lg>   
+            </div>
+            <div type="textpart" xml:lang="gez" xml:id="AllHours">
+               <label>Eighth salutation, for all the hours (ዘኵሎን፡ ጊዜያት፡)</label>
+               <lg type="stanza" n="1">
+                     <l n="1">ስብሐት፡ ለከ፡ ዘበሰማያት፡ አቡነ፡ ዘበምድር፡ ዓዲ።</l>
+                     <l n="2">ግብተ፡ እንበለ፡ ታጐንዲ።</l>
+                     <l n="3">ዘታብዕል፡ ወዘታነዲ።</l>
+                  </lg>   
+               <lg type="stanza" n="11">
+                     <l n="1">ስብሐት፡ ለከ፡ ዘመሐረኒ፡ ወልድከ፡ ጸሎተ፡ ብዙኃን፡ እንግልጋ።</l>
+                     <l n="2">ሶበ፡ ንጼሊ፡ ነበለ፡ ንትጋ።</l>
+                     <l n="3">እግዚኦ፡ ሀበነ፡ መንፈሰ፡ ጸጋ፡</l>
+                     <l n="4">ዘይሤኒ፡ ላዕለ፡ ነፍስ፡ ወሥጋ።</l>
+               </lg>   
             </div>
          </div>
       </body>

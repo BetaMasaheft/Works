@@ -4,8 +4,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn to Our Lady Mary</title>
+            <title xml:lang="gez" xml:id="t1">ሰላምታ፡ ዘማርያም፡ ዘሰብዐቱ፡ ጊዜያት፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Salāmtā za-Māryām za-sabʿattu gizeyāt</title>
+            <title xml:lang="en" corresp="#t1">Salutations for Mary for the Canonical Hours</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="MV"/>   
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -33,7 +36,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Poetry"/>  
@@ -45,6 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-07-26">Created XML record from Ethio authority google spreadsheet</change>
          <change who="MV" when="2017-05-05">Added keywords and incipit</change>
          <change who="DR" when="2019-11-21">Corrected incipit</change>
+         <change who="MV" when="2025-11-24">Revised title, added textparts</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -57,13 +64,105 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </bibl>
             </listBibl>
          </div>
-         <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለኪ፡ ማርያም፡ ድንግል። ዘመዐዛ፡ አፉኪ፡ ኮል።
-               </ab>
-               <note><foreign xml:lang="gez">ዘመፀዛ፡</foreign> erroneously given by Chaîne.</note>
+         <div type="edition" xml:lang="gez">
+            <note>The following incipit and explicit are based on <ref type="mss" corresp="EMML6251#ms_i3.77"/>.</note>
+            
+            <div type="textpart" xml:lang="gez" xml:id="Twilight" corresp="LIT6559Salam">
+               <label>First salutation, for the twilight (ዘሠርክ፡)</label>                
+               <lg type="stanza" n="1">
+                     <l n="1">ሰላም፡ ለኪ፡ ምልዕተ፡ ጸጋ፡ ምልዕተ፡ ጸጋ።</l>
+                     <l n="2">ምልዕተ፡ ክብር፡ ወብዕል፡ እንበለ፡ ንትጋ፡</l>
+                     <l n="3">አምላከ፡ ሰማያዌ፡ ዘወለድኪ፡ በሥጋ።</l>
+               </lg>   
+               <lg type="stanza" n="7">
+                     <l n="1">ሰላም፡ ለኪ፡ ጽላተ፡ ሙሴ።</l>
+                     <l n="2">ወሐውልተ፡ ስምዕ፡ ዘነቢይ፡ አውሴ።</l>
+                     <l n="3">እምአመ፡ ንዕስኪ፡ እንተ፡ ኢተአምሪ፡ ብእሴ።</l>
+                     <l n="4">ለኪ፡ ወለወልድኪ፡ ይደሉ፡ ውዳሴ።</l>
+               </lg>   
             </div>
+            <div type="textpart" xml:lang="gez" xml:id="Compline">
+               <label>Second salutation, for the compline (ዘንዋም፡)</label>                
+               <lg type="stanza" n="1">
+                     <l n="1">ሰላም፡ ለኪ፡ መንበረ፡ ፀሐይ፡ ሰማይ፡ ዘከዋክብት፡ አክሊላ።</l>
+                     <l n="2">ምድርኒ፡ ሥርጉት፡ በጽጌ፡ ሂላ።</l>
+                     <l n="3">ማርያም፡ ዘመነ፡ ተድላ።</l>
+                  </lg>   
+               <lg type="stanza" n="12">
+                     <l n="1">ሰላም፡ ለኪ፡ ማርያም፡ ዳግመ፡ ተአምረኪ፡ ክሥቲ።</l>
+                     <l n="2">ድኅረ፡ ንዋምየ፡ ለመዋቲ።</l>
+                     <l n="3">ምስለ፡ ሰላምኪ፡ ፍሥሐ፡ ዘባቲ፡</l>
+                     <l n="4">ታስተርዒ፡ ከመ፡ ጽጌ፡ ልሳንየ፡ ዛቲ።</l>
+               </lg>   
+            </div>
+            <div type="textpart" xml:lang="gez" xml:id="Midnight">
+               <label>Third salutation, for midnight (ዘመንፈቀ፡ ሌሊት፡)</label>                
+               <lg type="stanza" n="1">
+                     <l n="1">ሰላም፡ ለኪ፡ ማርያም፡ ስብሐት፡ ቀስተ፡ መሐላሁ፡ ለኖኅ።</l>
+                     <l n="2">ዲበ፡ ገጸ፡ ምድር፡ ዳግመ፡ እምደመና፡ ላህ።</l>
+                     <l n="3">ኢያንጠብጥብ፡ ዝናመ፡ አይኅ።</l>
+                  </lg>   
+               <lg type="stanza" n="13">
+                     <l n="1">ሰላም፡ ለኪ፡ ድካመ፡ ጊጋይየ፡ ትማዕ፡ ማርያም፡ ጽድቀ፡ ዚአኪ፡ በፅንዓ፡</l>
+                     <l n="2">መዳልወ፡ ጥበብ፡ ሶበ፡ መልዓ።</l>
+                     <l n="3">ከማኒተ፡ ነፍስ፡ ዘምስለ፡ ስብዓ።</l>
+                     <l n="4">ከመ፡ ሕፍነ፡ ማይ፡ ኀይለ፡ ወሞዓ።</l>
+               </lg>   
+            </div>
+            <div type="textpart" xml:lang="gez" xml:id="Morning">
+               <label>Fourth salutation, for the morning (ዘነግህ፡)</label>               
+               <lg type="stanza" n="1">
+                     <l n="1">ሰላም፡ ለኪ፡ ማርያም፡ ድንግል፡ ዘመዓዛ፡ አፉኪ፡ ኮል።</l>
+                     <l n="2">እንተ፡ ትፄንዊ፡ በገዳም፡ ወሐቅል።</l>
+                  </lg>   
+               <lg type="stanza" n="5">
+                     <l n="1">ሰላም፡ ለኪ፡ በከመ፡ ልማድኪ፡ በሊ፡</l>
+                     <l n="2">ኀበ፡ ወልድኪ፡ ሰአሊ።</l>
+                     <l n="3">ኦርኅሩኅ፡ ኢተበቃሊ፡ ያጠፍዖኑ፡ ለሥዕሉ፡ ሠዓሊ።</l>
+                     <l n="4">ኪነተከ፡ ዘትካት፡ ሐሊ።</l>
+               </lg>   
+            </div>
+            <div type="textpart" xml:lang="gez" xml:id="Third" corresp="LIT4337Hymn">
+               <label>Fifth salutation, for the third hour (ዘ፫፡ ሰዓት፡)</label>            
+               <lg type="stanza" n="1">
+                     <l n="1">ሰላም፡ ለኪ፡ ማርያም፡ ርግብ፡ ሰማያዊት።</l> 
+                     <l n="2">ሰላም፡ ለኪ፡ ወንስር፡ መንፈሳዊት።</l>
+                  </lg>   
+               <lg type="stanza" n="3">
+                     <l n="1">ሰላም፡ ለኪ፡ ጊዜ፡ ጸልዮትኪ፡ በጽሐ፡ ከመ፡ ኢይሙት፡ ገብርኪ።</l>
+                     <l n="2">ቅድሜሁ፡ ስግዲ፡ ወአከብርኪ።</l>
+                     <l n="3">እንዘ፡ ታዘክሪዮ፡ እሙ፡ ፃማ፡ ንግድትኪ።</l>
+                     <l n="4">ርግብየ፡ የዋሂት፡ ለየዋህ፡ ወልድኪ።</l>
+               </lg>   
+            </div>
+            <div type="textpart" xml:lang="gez" xml:id="Sixth">
+               <label>Sixth salutation, for the sixth hour (ዘ፮፡ ሰዓት፡)</label>                  
+               <lg type="stanza" n="1">
+                     <l n="1">ሰላም፡ ለኪ፡ ማርያም፡ ውድስት፡</l>
+                     <l n="2">በአፈ፡ ኵሉ፡ ፍጥረት፡ ታቦት፡</l>
+                     <l n="3">አንቲ፡ ዘሙሴ፡ ጽላት፡ ዘሕግ፡ ወዘሥርዓት።</l>
+                  </lg>   
+               <lg type="stanza" n="8">
+                     <l n="1">ሰላም፡ ለኪ፡ እሙ፡ በሊዮ፡ በእንቲአየ፡ ለፍሬ፡ ከርሥኪ፡ ብኖዲ።   </l>
+                     <l n="2">ላዕሌሁ፡ ምሕረተ፡ ኢታጐንዲ።</l>
+                     <l n="3">እመ፡ አኀዘነከ፡ ብእሲ፡ ዓባዲ።</l>
+                     <l n="4">ቤዛ፡ ነፍሱ፡ ንጽሕየ፡ እፈዲ።</l>
+               </lg>   
+            </div>
+            <div type="textpart" xml:lang="gez" xml:id="Ninth">
+               <label>Seventh salutation, for the ninth hour (ዘ፱፡ ሰዓት፡)</label>                    
+               <lg type="stanza" n="1">
+                     <l n="1">ሰላም፡ ለኪ፡ ማርያም፡ ዕክል።</l>
+                     <l n="2">ሰላም፡ ለኪ፡ መፅንዒተ፡ ኃይል።</l> 
+                  </lg>   
+               <lg type="stanza" n="10">
+                     <l n="1">ሰላም፡ ለኪ፡ አስምዕኒ፡ ቃለ፡ ፍሥሐ፡ ጊዜ፡ አኃዝን፡ ወአስቆቁ።</l>
+                     <l n="2">ሣህልኪ፡ ይምጻእ፡ እምሥራቁ።</l>
+                     <l n="3">ለእሳተ፡ ኀዘን፡ እስከ፡ ይቈርር፡ ሞቁ።</l>
+                     <l n="4">ማርያም፡ ለኃጥእ፡ ጽድቁ።</l>
+                     <l n="5">ኦእግዝእትነ፡ ዕቀብነ፡ ወአድኅንነ። ለአግብርትኪ፡ ወለአዕማትኪ። ሞገስ፡ ዓም፡ ሚካ።</l>
+               </lg>   
+            </div>           
          </div>
       </body>
    </text>
