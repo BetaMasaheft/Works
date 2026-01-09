@@ -5,7 +5,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ʾIyasus Krǝstos ṭǝʿuma sǝm la-za-yǝṣewwǝʿo</title>
+                <title xml:lang="gez" xml:id="t1">ኢየሱስ፡ ክርስቶስ፡ ጥዑመ፡ ስም፡ ለዘይጼውዖ።</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">ʾIyasus Krǝstos ṭǝʿuma sǝm la-za-yǝṣewwǝʿo</title>
+                <title xml:lang="en" corresp="#t1">Jesus Christ, whose name is sweet to invoke</title>
+                <title xml:lang="en" xml:id="t2">Hymn to Jesus Christ</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,7 +33,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>The hymn is an excerpt from  <ref type="work" corresp="LIT1961Mashaf"/> but can also be transmitted independently. </p>
             </abstract>
             <textClass>
                 <keywords>
@@ -38,20 +41,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="Poetry"/>
                 </keywords>
             </textClass>
-            <t:langUsage xmlns:t="http://www.tei-c.org/ns/1.0">
+            <langUsage xmlns:t="http://www.tei-c.org/ns/1.0">
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
-            </t:langUsage>
+            </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MKr" when="2026-01-07">Created stub</change>
+            <change who="MKr" when="2026-01-07">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+                <div xml:lang="gez" type="edition">
+                    <note>The incipit and explicit are taken from <ref type="mss" corresp="BAVet146"/>.</note>
+                    <div type="textpart" subtype="incipit">
+                        <ab xml:lang="gez">ኢየሱስ፡ ክርስቶስ፡ ጥዑመ፡ ስም፡ ለዘይጼውዖ። ኢየሱስ፡ ክርስቶስ፡ ህብስተ፡ ሕይወት፡ ለዘይበልዖ። ኢየሱስ፡ ክርስቶስ፡ ስቴ፡ መድኃኒት፡ ለዘይጸምዖ።</ab>
+                    </div>
+                    <div type="textpart" subtype="explicit">
+                        <ab>ውስተ፡ ስያሐ፡ ሱራፊ፡ ለስእለትየ፡ ደዮ። ወበሕማምከ፡ ለቍስልየ፡ አጥዕዮ።</ab>
+                    </div>
+                </div>
                 <listRelation>
-                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7766JesusChristWhoseName" passive=""/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7766JesusChristWhoseName" passive="LIT1961Mashaf"/>
                 </listRelation>
             </div><!---->
         </body>
