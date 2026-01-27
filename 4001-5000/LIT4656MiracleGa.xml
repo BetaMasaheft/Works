@@ -4,7 +4,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="en" xml:id="t1">Miracle of Gabriel: Miracle of the building of the columns of the altar dedicated to St Gabriel</title>
+            <title xml:lang="gez" xml:id="t1">ተአምሪሁ፡ ለቅዱስ፡ ገብርኤል፡ (...) ወሐኒጾሙ፡ ቤተ፡ ክርስቲያን፡ ገብሩ፡ ምሥዋዐ፡</title>
+            <title xml:lang="gez" type="normalized" corresp="#t1">Taʾammǝrihu la-Qǝddus Gabrǝʾel (...) wa-ḥaniṣomu beta krǝstiyān gabru
+               mǝśwāʿ</title>
+            <title xml:lang="en" corresp="#t1">Miracle of St Gabriel (...), while building a church, they established an altar</title>
+            <title xml:lang="en" xml:id="t2">Miracle of the building of a church dedicated to St Gabriel</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -34,6 +38,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <abstract>
+            <p>Miracle of <persName ref="PRS4377Gabriel"/>, which is either part of the monthly reading for 19th of Yakkātit or 19th or Ṭǝrr.</p>
+         </abstract>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -46,6 +53,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="MV" when="2017-05-24">Created entity</change>
          <change who="DR" when="2024-12-17">Added relations and incipit</change>
+         <change when="2026-01-27" who="CH">Replaced editon by bm:Makweriya1976DersanaGabriel, added t1 and abstract</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -53,18 +61,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <div type="bibliography">
             <listRelation>               
                <relation name="ecrm:P129_is_about" active="LIT4656MiracleGa" passive="PRS4377Gabriel"/>
-               <relation name="ecrm:CLP46i_may_form_part_of" active="LIT4656MiracleGa" passive="LIT1284Dersan">
-                  <desc>The text is part of the monthly reading for 19 Ṭǝrr.</desc>
-               </relation>
+               <relation name="ecrm:CLP46i_may_form_part_of" active="LIT4656MiracleGa" passive="LIT1284Dersan"/>               
                <relation name="ecrm:CLP46i_may_form_part_of" active="LIT4656MiracleGa" passive="LIT4652TaammeraGa"/>
               </listRelation>
          </div>
-         <div type="edition">
-            <note>The following incipit is taken from <ref type="mss" corresp="ANLcr3"/>.</note>
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab> ፫ ተአምሪሁ፡ <gap reason="ellipsis"/> ወሐኒጾሙ፡ ቤተ፡ ክርስቲያን፡ ገብሩ፡ 
-                  ምሥዋዓ፡ ወአኃዙ፡ ያቅሙ፡  ሰረገላ፡ ወአዕማደ፡ ለለ፩ ወቦአ፡ ወሬዛ፡ 
-                  ዘሠናይ፡ ላህዩ፡ ወቆመ፡ እንዘ፡ ያነክር፡ ወርእዮ፡ ለገብርኤል፡</ab>
+         <div type="edition" xml:lang="gez">
+            <note>The following textparts are taken from 
+               <bibl><ptr target="bm:Makweriya1976DersanaGabriel"/><citedRange unit="page">104</citedRange></bibl>.</note>
+            <div type="edition" subtype="inscriptio" xml:id="Title">
+               <ab>ተአምሪሁ፡ ለቅዱስ፡ ገብርኤል፡ ሊቀ፡ መላእክት፡</ab>
+            </div>
+            <div type="textpart" subtype="supplication" xml:id="Supplication">
+               <ab>ጸሎቱ፡ ወበረከቱ፡ የሀሉ፡ ምስለ፡ ፍቁሩ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
+            </div>
+            <div type="textpart" subtype="coretext" xml:id="Miracle">
+               <div type="edition" subtype="incipit">
+                  <ab>ወሐኒጾሙ፡ ቤተ፡ ክርስቲያን፡ ገብሩ፡ ምሥዋዐ፡ ወአኀዙ፡ ያቅሙ፡ አዕማደ፡ ለለ፩፩፡ ወቦአ፡ ወሬዛ፡ ዘሠናይ፡ ላህዩ፡ ወቆመ፡ እንዘ፡ ያነክር። ወከሠተ፡ አዕይንቲሁ፡ ወርእዮ፡
+                     ለገብርኤል፡ እንዘ፡ ይቀውም፡ ወስፉሕ፡ ክነፊሁ፡ ወይጼልል፡ ላዕሌሆሙ፡ ወሶበ፡ ይመትርዎ፡ ፀረብት፡ ለዐምድ፡ ከመ፡ ያቅምዎ፡ ያነሥእ፡ ገብርኤል፡ በትረ፡ ወያነብር፡ ዲበ፡ ዓምድ፡
+                     ወሶቤሃ፡ ይቀውም፡ በከመ፡ ፈቀዱ፡ ፀረብት። ወርእዮ፡ ወሬዛ፡ ዘንተ፡ ዓቢየ፡ ተአምረ፡ ፈርሀ፡ ወደንገፀ፡ ወወድቀ፡ ዲበ፡ ምድር፡ ወደንገፁ፡ እለ፡ ርእዩ። ወሶበ፡ ገብአ፡ ልቡ፡ ይቤልዎ፡
+                     ምንተ፡ ኮንከ፡ ወምንተ፡ ርኢከ፡ ወይቤሎሙ፡ ብእሴ፡ ብሩሃ፡ ርኢኩ፡ ወቦቱ፡ ክንፍ፡ ዓቢይ፡ ወይጼልል፡ ቦቱ፡ ላዕለ፡ ዝንቱ፡ ሕዝብ።</ab>
+               </div>
             </div>
          </div>
       </body>
