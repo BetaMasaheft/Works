@@ -6,7 +6,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Miracle of Gabriel: Healing of a paralytic and leprous man while the bishop gave an admonition about the archangel to the people gathered to honor the feast of the archangel</title>
+                <title xml:lang="gez" xml:id="t1">ተአምሪሁ፡ ለቅዱስ፡ ገብርኤል፡ <gap reason="ellipsis"/>  ወሀሎ፡ አሐዱ፡ ኤጲስ፡ ቆጶስ፡ ውስተ፡ ቤተ፡ ክርስቲያን፡ ዘሊቀ፡ 
+                    መላእክት፡ ገብርኤል፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Tǝʾammǝrihu la-Qǝddus Gabrǝʾel <gap reason="ellipsis"/> wa-hallo 
+                    ʾaḥadu ʾeṗis qoṗos wǝsta beta krǝstiyān za-liqa malāʾǝkt Gabrǝʾel</title>
+                <title xml:lang="en" corresp="#t1">Miracle of St Gabriel <gap reason="ellipsis"/>: Once upon a time, there was a bishop in a 
+                    church of the archangel Gabriel</title>
+                <title xml:lang="en" xml:id="t2" type="main">Miracle of Gabriel: Healing of a paralytic and leprous man</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DR"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,11 +36,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </encodingDesc>
         <profileDesc>
             <creation/>
+            <abstract>
+                <p>Miracle of St Gabriel about the healing of a paralytic and leprous man while the bishop gave an admonition about the archangel
+                    to the people gathered to honor the feast of the archangel. The miracle may be part of the reading for 
+                    <date ref="ethiocal:Nahase19">19th of Naḥase</date> in the <ref type="work" corresp="LIT1284Dersan"/>.</p>
+            </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Hagiography"/>
                     <term key="Miracle"/>
+                    <term key="demon"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -44,6 +56,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2024-12-16">Created entity</change>
+            <change who="CH" when="2026-01-30">Added text from bm:Makweriya1976DersanaGabriel, abstract and t1</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -58,16 +71,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <relation name="lawd:hasAttestation" active="LIT7200MGParalytic" passive="BAVet149"/>
                 </listRelation>
             </div>
-            <div type="edition">
-                <note>The following incipit is derived from the manuscript description.</note>
-                <div type="textpart" subtype="incipit" xml:lang="gez">
-                    <ab>፱ ተአምሪሁ፡ <gap reason="ellipsis"/> ወሀሎ፡ ፩ ኤጲስ፡ ቆጶስ፡ በውስተ፡ ቤተ፡ ክርስቲያኑ፡ 
-                        ለቅዱስ፡ ገብርኤል፡ ወሶበ፡ ተቀንየ፡ ኤጲስ፡ ቆጶስ፡ ለበዓል፡ ገብረ፡ ቅዳሴ፡ 
-                        ዓቢየ። ወሀለዉ፡ ምስሌሁ፡ ጉቡአን፡ ሕዝብ፡ ወውእቱ፡ እንዘ፡ ይሜህሮሙ፡ ተግሣጸ፡ በቃለ፡ እግዚአብሔር፡ ወይዜንዎሙ፡ 
-                        ሊቀ፡ መላእክት፡ ወእንዘ፡ ሀለዉ፡ ያነብቡ፡ በከመ፡ ይደሉ፡ ለክብረ፡ ዕበዩ፡ ለሊቀ፡ መላእክት፡ 
-                        ገብርኤል፡ ወናሁ፡ አምጽኡ፡ ፩ መፃጕዓ፡ ዝልጉሰ፡ ወሙቁሐ፡ በማዕሰረ፡ ሰይጣን።</ab>
+            <div type="edition" xml:lang="gez">
+                <note>The following textparts are taken from 
+                    <bibl><ptr target="bm:Makweriya1976DersanaGabriel"/><citedRange unit="page">230</citedRange></bibl>.</note>
+                <div type="textpart" subtype="inscriptio" xml:id="Title">
+                    <ab>ተአምሪሁ፡ ለቅዱስ፡ ገብርኤል፡ ሊቀ፡ መላእክት፡</ab>
                 </div>
-            </div>
+                <div type="textpart" subtype="supplication" xml:id="Supplication">
+                    <ab>ትንብልናሁ፡ የሃሉ፡ ምስለ፡ ፍቁሩ፡ ለዓለመ፡ ዓለም፡ አሜን።</ab>
+                </div>
+                <div type="textpart" subtype="coretext" xml:id="Miracle">
+                    <div type="textpart" subtype="incipit">
+                        <ab>ወሀሎ፡ አሐዱ፡ ኤጲስ፡ ቆ<choice resp="CH"><sic>ጰ</sic><corr>ጶ</corr></choice>ስ፡ ውስተ፡ ቤተ፡ ክርስቲያን፡ ዘሊቀ፡ መላእክት፡ 
+                            ገብርኤል፡ ወሶበ፡ ተቀንየ፡ ለበዓል፡ ገብረ፡ ቅዳሴ፡ ዐቢየ። ወሀለው፡ ምስሌሁ፡ ጉቡአን፡ ሕዝብ፡ ወውእቱ፡ እንዘ፡ ይሜህሮሙ፡ ተግሣፀ፡ በቃለ፡ እግዚአብሔር፡ ወይዜንዎሙ፡ 
+                            ዕበዮ፡ ለሊቀ፡ መላእክት፡ ገብርኤል። ወእንዘ፡ ያነብቡ፡ በከመ፡ ይደሉ፡ ለክብረ፡ እበዩ፡ ለሊቀ፡ መላእክት፡ ወናሁ፡ አምጽኡ፡ ፩ደ፡ ዝልጉሰ፡ ወሙቁሐ፡ በማዕሠረ፡ ሰይጣን። 
+                            ወሶበ፡ አብእዎ፡ ውስተ፡ ቤተ፡ ክርስቲያን፡ ዘሊቀ፡ መላእክት፡ ገብርኤል፡ ወአንበርዎ፡ ማዕከለ፡ ፪ቱ፡ አዕማድ፡ ወኀደግዎ፡ ህየ፡ ወሖሩ፡ እንዘ፡ ግዱፍ፡ ዲበ፡ ምድር፡ ወበጊዜ፡ 
+                            ሰብሑ፡ ወፈጸሙ፡ ተአምኆ፡ ሰላም፡ በቅድስት፡ ሥላሴ።</ab>
+                    </div>
+                </div>
+            </div> 
         </body>
     </text>
 </TEI>
