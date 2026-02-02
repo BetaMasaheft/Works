@@ -7,8 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">ተረፈ፡ ሠለስት፡</title>
                 <title xml:lang="gez" corresp="#t1" type="normalized">Tarafa śalast</title>
-                <title xml:lang="gez" xml:id="t2"></title>
-                <title xml:lang="en" xml:id="t3">Śalast for Saturday</title>
+                <title xml:lang="en" xml:id="t2">Śalast for Saturday</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -33,7 +32,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p><bibl><ptr target="bm:Velat1966MeerafText"/><citedRange unit="page">67–68</citedRange></bibl> treats this melodic model as a additional śalast model, hence the name ‘Tarafa śalast’.
+                    In contrast, <bibl><ptr target="bm:HabtaMW1969Tentawi"/><citedRange unit="page">66</citedRange></bibl> regards it as part of <ref type="work" corresp="LIT7783SalastAntif"/> for Saturday. 
+                 </p>
             </abstract>
             <textClass>
                 <keywords>
@@ -53,8 +54,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <text>
         <body>
             <div type="bibliography">
+                    <listBibl type="editions">
+                        <bibl><ptr target="bm:Velat1966MeerafText"/>
+                            <citedRange unit="page">67–68</citedRange>
+                        </bibl>
+                    </listBibl>
+                    <listBibl type="translation">
+                        <bibl><ptr target="bm:Velat1966MeerafTrad"/>
+                            <citedRange unit="page">265–266</citedRange>
+                        </bibl>
+                    </listBibl>
+                    <listBibl type="secondary">
+                        <bibl><ptr target="bm:HabtaMW1969Tentawi"/>
+                            <citedRange unit="page">63–66</citedRange>
+                        </bibl>
+                    </listBibl>
                 <listRelation>
                     <relation name="saws:formsPartOf" active="LIT7795TarafaSal" passive="LIT6720collections"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of"  active="LIT7795TarafaSal" passive="LIT7783SalastAntif"></relation>
                     <relation name="ecrm:CLP46i_may_form_part_of"  active="LIT7795TarafaSal" passive="LIT3186Meeraf"></relation>
                 </listRelation>
             </div><!---->
