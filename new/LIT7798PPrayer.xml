@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Prayer to unsolve charms</title>
+                <title xml:lang="en" xml:id="t1">Prayer for undoing charms</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -36,6 +36,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Prayers"/>
+                    <term key="Asmat"/>
+                    <term key="Magic"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -44,12 +46,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MV" when="2026-02-03">Created stub</change>
+            <change who="MV" when="2026-02-03">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT7798PPrayer"
+                        passive="BAVet198"/>
+                    <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7798PPrayer"
+                        passive="LIT1824Mafteh"/>
+                </listRelation>
+            </div>
+            <div xml:lang="gez" type="edition">
+                <note>The following incipit and explicit are taken from <ref type="mss" corresp="BAVet198"/> following <bibl><ptr target="bm:GrebTiss1935Codices"
+                    /><citedRange unit="page">664</citedRange></bibl>.</note>
+                <div type="textpart" subtype="incipit">
+                    <ab> 
+                        በስመ፡ አብ፡ <gap reason="ellipsis" resp="bm:GrebTiss1935Codices"/> ዋህድ፡ ተፈታሕ፡ አሌፍ፡ ወኢብን፡ ዋህድ፡ ተፈታሕ፡ ቤት፡ አል፡ ዕንቁ፡ 
+                        አል<surplus>፡ </surplus>ቁድስ፡ ዋህድ፡ ተፈታሕ፡ ዳሌጥ፡ ክንበሬን፡ ዋህድ፡ ተፋታሕ፡
+                    </ab>
+                </div>
+                <div type="textpart" subtype="explicit">
+                    <ab> 
+                        ዘአንሣእኮ፡ <sic>ለአላዛር፡</sic> እምከርሠ፡ መቃብር፡ ከማሁ፡ አንሥእ፡ አዕምሮ፡ ህሊናየ፡ ወአዕምሮ፡ ሥጋየ፡ ወልቡናየ፡ ለገብርከ፡
+                    </ab>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>

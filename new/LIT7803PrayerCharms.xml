@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Prayer to unsolve charms</title>
+                <title xml:lang="gez" xml:id="t1">ጸሎት፡ በእንተ፡ መፍትሔ፡ ሥራይ፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalot baʾǝnta maftǝḥe śǝrāy</title>
+                <title xml:lang="en" corresp="#t1">Prayer for undoing charms</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -36,6 +38,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Prayers"/>
+                    <term key="Asmat"/>
+                    <term key="Magic"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -44,12 +48,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MV" when="2026-02-03">Created stub</change>
+            <change who="MV" when="2026-02-03">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT7803PrayerCharms" passive="BAVet198"/>
+                </listRelation>
+            </div>
+            <div xml:lang="gez" type="edition">
+                <note>The following incipit and explicit are taken from <ref type="mss" corresp="BAVet198"/> following <bibl><ptr target="bm:GrebTiss1935Codices"
+                /><citedRange unit="page">665-666</citedRange></bibl>.</note>
+                <div type="textpart" subtype="incipit">
+                    <ab> 
+                        ጸሎት፡ በእንተ፡ መፍትሔ፡ ሥራይ፡ ዘረበቦሙ፡ አጋንንት፡ በትእዛዘ፡ እግዚአብሔር፡ እንዘ፡ ይቤ፡ ሸምዳን። አሸምዳን፡ አሸማዳኤል፡
+                    </ab>
+                </div>
+                <div type="textpart" subtype="explicit">
+                    <ab> 
+                        በትንሣኤሁ፡ ቅድስት፡ ወበዕርገቱ፡ ውስተ፡ ሰማያት፡ በርደቱ፡ ለጰራቅሊጦስ፡ መንፈሰ፡ ጽድቅ፡ በከመ፡ ፈትሐ፡ ቆጵርያኖስ፡ ከማሁ፡ 
+                        ፈታሕ፡ ለገሢሥ፡ በአስማቲሁ፡ ግሩም፡ በነበልባለ፡ ቃሉ፡ መድምም፡ ፍታሕ፡ ሥራያታተ፡ ሥራይ፡ ለገብርከ፡
+                    </ab>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>

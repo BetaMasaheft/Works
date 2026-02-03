@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Prayer to unsolve charms</title>
+                <title xml:lang="gez" xml:id="t1">ጸሎት፡ በእንተ፡ ዓይነ፡ ጥላ፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalot baʾǝnta ʿāyna ṭǝllā</title>
+                <title xml:lang="en" corresp="#t1">Prayer against the blind eye</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -13,11 +15,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
                 <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
-                            Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                    Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
-                                licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                        licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -36,6 +38,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Prayers"/>
+                    <term key="Asmat"/>
+                    <term key="Magic"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -44,12 +48,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MV" when="2026-02-03">Created stub</change>
+            <change who="MV" when="2026-02-03">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT7806PrayerCharms" passive="BAVet198"/>
+                    <relation name="saws:isVersionOf" active="LIT7806PrayerCharms" passive="LIT4159Saragalla">
+                        <desc>The two prayers are similar but the magic names are different.</desc>
+                    </relation>
+                </listRelation>
+            </div>
+            <div xml:lang="gez" type="edition">
+                <note>The following incipit and explicit are taken from <ref type="mss" corresp="BAVet198"/> following <bibl><ptr target="bm:GrebTiss1935Codices"
+                /><citedRange unit="page">667</citedRange></bibl>.</note>
+                <div type="textpart" subtype="incipit">
+                    <ab> 
+                        በስመ፡ አብ፡ <gap reason="ellipsis" resp="bm:GrebTiss1935Codices"/> ጸሎት፡ በእንተ፡ ዓይነ፡ ጥላ፡ ሠረገላ፡ ኤልያስ፡ ዓይነ፡ ወርቅ፡ ወዓይነ፡ ባርያ፨ 
+                        ያኅድያይ፡ ያኅድያይ፡ ያኅድያይ፡
+                    </ab>
+                </div>
+                <div type="textpart" subtype="explicit">
+                    <ab> 
+                        <sic>ኵነኒ፡</sic> መድኃኒተ፡ ሥጋ፡ ወነፍስ፨ አድኅነኒ፡ እምዓይነ፡ ጥላ፡ ወዓይነ፡ ባርያ፡ ወዓይነ፡ ወርቅ፨ 
+                        ለገርብከ፡ ለዓለመ፡ ዓለም፡ አሜን፡ ወአሜን፡ <sic>ለይኵን፡</sic> <sic>ለይኵን፨</sic>
+                    </ab>
+                </div>
+            </div>
         </body>
     </text>
 </TEI>
