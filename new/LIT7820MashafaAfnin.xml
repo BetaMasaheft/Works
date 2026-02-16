@@ -5,7 +5,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Maṣḥafa dǝrsānu la-ʾAfnin</title>
+                <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ድርሳኑ፡ ለአፍኒን፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t1">Maṣḥafa dǝrsānu la-ʾAfnin</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MKr"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,7 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>The homily is attributed to <q xml:lang="gez">አቴንያ፡ ሊቀ፡ ጳጳሳት፡ ዘሀገረ፡ ቍስጥንያ፡</q>probably to be identified with Athanasius of Alexandria.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -44,15 +45,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </t:langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MKr" when="2026-02-16">Created stub</change>
+            <change who="MKr" when="2026-02-16">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+                <listBibl type="translation">
+                    <bibl><ptr target="bm:Beylot2014Archange"/><citedRange unit="page">121-125</citedRange></bibl>
+                </listBibl>
                 <listRelation>
-                    <relation name="saws:isDifferentTo" active="LIT7820MashafaAfnin" passive=""/>
+                    <relation name="saws:isDifferentTo" active="LIT7820MashafaAfnin" passive="LIT1282Dersan"/>
+                    <relation name="ecrm:P129_is_about" active="LIT7820MashafaAfnin" passive="PRS1461Afnin"/>
+                    <relation name="saws:isAttributedToAuthor" active="LIT7820MashafaAfnin" passive="PRS2213Athanasi"/>
                 </listRelation>
+                
+                <div xml:lang="gez" type="edition">
+                    <note>The incipit is taken from <ref type="mss" corresp="BLG001"/>.</note>
+                    <div type="textpart" subtype="incipit">
+                        <ab xml:lang="gez">ዝንቱ፡ ውእቱ፡ መጽሐፈ፡ ድርሳኑ፡ ለአፍኒን፡ <surplus>ለ፡ መልአክ፡ </surplus>መልአከ፡ ሣህል፡ ወምሕረት፡ ይስአል፡ ስርየተ፡ ለኵሉ፡ እመላእክት፡ እሉ፡ ቀዊሞሙ፡ ቅድመ፡ መንበረ፡ እግዚአ፡ ኵሉ፡ ጸሎቱ፡ ወበረከቱ፡ ወትንባሌሁ፡  በሰላመ፡ እግዚአብሔር፡ አብ፡ ምስሌነ፡ የሀሉ፡ ለዓለመ፡ ዓለም። </ab>
+                    </div>
+                </div>
+                               
             </div><!---->
         </body>
     </text>
