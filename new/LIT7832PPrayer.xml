@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Prayer against the evil eye and jaundice</title>
+                <title xml:lang="gez" xml:id="t1">ጸሎት፡ በእንተ፡ ሕማመ፡ ዓይነ፡ ጽላ፡ ወዓይነ፡ ወርቅ፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalot baʾǝnta ḥǝmāma ʿayna ṣǝllā wa-ʿayna warq</title>
+                <title xml:lang="en" xml:id="t2">Prayer against the evil eye and jaundice</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -37,6 +39,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="ChristianLiterature"/>
                     <term key="Magic"/>
                     <term key="Prayers"/>
+                    <term key="Asmat"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -45,12 +48,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MV" when="2026-03-23">Created stub</change>
+            <change who="MV" when="2026-03-23">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT7832PPrayer" passive="BAVet212"/>
+                </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>
+                        The following incipit is taken from <ref type="mss" corresp="BAVet212"/> according to
+                        <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">682</citedRange></bibl>.</note>
+                    <ab>
+                        በስመ፡ አብ፡ <gap reason="ellipsis" resp="bm:GrebTiss1935Codices"/> ጸሎት፡ በእንተ፡ ሕማመ፡ ዓይነ፡ ጽላ፡ ወዓይነ፤ ወርቅ፡ ለሜርጅጅን፡ ወአላጁን፡ 
+                        ወፈቀጁን፡ ወላዑማኑ፡
+                    </ab>
+                </div>       
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <note>The following explicit is taken from <ref type="mss" corresp="BAVet212"/> according to
+                        <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">682</citedRange></bibl>.</note>
+                    <ab>
+                        በኃይለ፡ ዝንቱ፡ <choice><corr resp="bm:GrebTiss1935Codices">በዝቃልከ፡</corr><sic>በዝቃልቦ፡</sic></choice> 
+                        <sic>አድኅኖ<supplied reason="omitted">፡</supplied></sic> እምዓይነ፡ ጽላ፡ ወዓይነ፡ ወርቅ፡ ሊተ፡ ለገብርከ። 
+                    </ab>
+                </div>       
+            </div>
         </body>
     </text>
 </TEI>

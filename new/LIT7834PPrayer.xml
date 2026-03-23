@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Protective prayer with magic names</title>
+                <title xml:lang="en" xml:id="t1">Protective prayer with magic names</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -37,6 +37,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="ChristianLiterature"/>
                     <term key="Magic"/>
                     <term key="Prayers"/>
+                    <term key="Asmat"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -45,12 +46,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="MV" when="2026-03-23">Created stub</change>
+            <change who="MV" when="2026-03-23">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT7834PPrayer" passive="BAVet212"/>
+                    <relation name="saws:isDifferentTo" active="LIT7834PPrayer" passive="LIT6854Prayer">
+                        <desc>The prayer contains some magic names also attested in <ref type="work" corresp="LIT6854Prayer"/>, but the two texts are different.</desc>
+                    </relation>
+                </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>
+                        The following incipit is taken from <ref type="mss" corresp="BAVet212"/> according to
+                        <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">683</citedRange></bibl>.</note>
+                    <ab>
+                        በስመ፡ አብ፡ <gap reason="ellipsis" resp="bm:GrebTiss1935Codices"/> አስማተ፡ ኃይል፡ አካዕ፡ ክስብኤል፡ አቅማሄል፡ አዛሄል፡ ልማኤል፡
+                    </ab>
+                </div>       
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <note>The following explicit is taken from <ref type="mss" corresp="BAVet212"/> according to
+                        <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">683</citedRange></bibl>.</note>
+                    <ab>
+                        አድኅነኒ፡ እምሕማመ፡ ዓይነ፡ ጽላ፡ ወሌጌዎን፡ ዛር፡ <gap reason="ellipsis" resp="bm:GrebTiss1935Codices"/> ነሐቢ፡ ወነሀብት፡ ሰሪ፡ ምትአት፡ ወሰሪ፡ ውግዓት፡
+                        ለገብርከ፡
+                    </ab>
+                </div>       
+            </div>
         </body>
     </text>
 </TEI>
