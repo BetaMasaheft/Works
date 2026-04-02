@@ -20,15 +20,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
+                  
                 This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
+                Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Work of the literatures of Ethiopia and Eritrea</p>
-            <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
+<listWit>
+   <witness corresp="BLorient721"></witness>
+   <witness corresp="BLorient722"></witness>
+   <witness corresp="BLorient723"></witness>
+   <witness corresp="BLorient724"></witness>
+   <witness corresp="BLorient726"></witness>
+   <witness corresp="BLorient727"></witness>
+   <witness corresp="BLorient728"></witness>
+   <witness corresp="ANLcr16"></witness>
+   <witness corresp="BAVet110"></witness>
+   <witness corresp="BNFet136"></witness>
+   <witness corresp="BNFet138"></witness>
+   <witness corresp="BNFet137"></witness>
+</listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -39,6 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+         <abstract>
+            <p>This is a general record for any possible constellation of the Miracles of Takla Hāymānot.</p>
+            <p>The full version as witnessed e.g. by <ref type="mss" corresp="IVorlov35"/> contains up to 72 miracles divided into three cycles of 22 miracles and a homily each,  <ref target="#Birth">the Cycle for the Birth on <date>22 Tahsas</date></ref>,  <ref target="#Concept">the Cycle for Conception on <date>24  Maggābit</date></ref>, <ref target="#Trans">the Cycle for the Translation of his relics on <date>12 Gǝnbot</date></ref>, in addition to <ref type="work" corresp="LIT5778MirTaklaHaymanotSabal"></ref>. Other witnesses may include any subset, e.g. <ref type="mss" corresp="BLorient723"></ref> with 44 + 2 miracles, <ref type="mss" corresp="BAVet110"></ref>, with 34 miracles, <ref type="mss" corresp="ANLcr16 "></ref> with 21 miracles, <ref type="mss" corresp="BLorient721"></ref> and <ref type="mss" corresp="BLorient722"></ref>, <ref type="mss" corresp="BLorient724"></ref> with 16 miracles each, <ref type="mss" corresp="BLorient727"></ref> with 18 miracles, <ref type="mss" corresp="BLorient728"></ref> with 20 miracles, etc. </p>
+         </abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
             <keywords scheme="#ethioauthlist">
@@ -50,11 +66,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </profileDesc>
       <revisionDesc>
          <change who="MV" when="2016-09-06">CREATED: text record</change>
+         <change when="2026-04-01" who="ES">added div for cycles, abstract</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Budge1906Taklahaymanot"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:ContiRossini1896TaklaHaymanot"/><citedRange>122-124</citedRange>
+               </bibl>
+            </listBibl>
             <listRelation>
                <relation name="dcterms:isPartOf" active="LIT3971Taamme" passive="LIT1008DossierTH">
                   <desc>Miracles of Takla Hāymānot is part of a hagiographic dossier of Takla Hāymānot</desc>
@@ -140,6 +165,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <div type="textpart" subtype="chapter" xml:id="Miracletranslation21"><label>Miracle 21 on the translation of Takla Hāymānot</label></div>
                <div type="textpart" subtype="chapter" xml:id="Miracletranslation22"><label>Miracle 22 on the translation of Takla Hāymānot</label></div>
                
+            </div>
+            
+            <div type="textpart" subtype="part" xml:id="Sabal" corresp="LIT5778MirTaklaHaymanotSabal"><label>Miracles of Takla Hāymānot worked in Šabal</label>
+               <div type="textpart" subtype="chapter" xml:id="MiracleChamberRos" corresp="LIT5778MirTaklaHaymanotSabal#MiracleChamberRos">                    
+                  <label>How Ros Nabiyāt gave away his chamber to turn it into a church of Takla Hāymānot</label>
+               </div>
+               <div type="textpart" subtype="chapter" xml:id="MiracleBeer" corresp="LIT5778MirTaklaHaymanotSabal#MiracleBeer">
+                  <label>How the beer prepared for the commemoration of Takla Hāymānot was saved</label>                        
+               </div>               
+               <div type="textpart" subtype="chapter" xml:id="MiraclesDogs" corresp="LIT5778MirTaklaHaymanotSabal#MiraclesDogs">
+                  <label>The dogs entered the church and were killed by a snake</label>                        
+               </div>               
+               <div type="textpart" subtype="chapter" xml:id="MiraclesCow" corresp="LIT5778MirTaklaHaymanotSabal#MiraclesCaw">
+                  <label>A man wanted to keep a fat cow for himself instead of giving it for the commemoration of Takla Hāymānot, but the cow died</label>
+               </div>                     
             </div>
             
          </div>
