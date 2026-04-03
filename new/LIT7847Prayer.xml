@@ -5,7 +5,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">Prayer against nose bleed and rhinitis</title>
+                <title xml:lang="gez" xml:id="t1">ጸሎት፡ በእንተ፡ ደመ፡ ንስር፡ ወንዛዝ፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t1">Ṣalot baʾǝnta dama nǝsr wa-nǝzāz</title>
+                <title xml:lang="en" xml:id="t2">Prayer against nose bleed and rhinitis</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -27,29 +29,47 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <encodingDesc>
             <p>A digital born TEI file</p>
         </encodingDesc>
-        <t:profileDesc xmlns:t="http://www.tei-c.org/ns/1.0">
+        <profileDesc>
             <creation/>
-            <t:abstract>
+            <abstract>
                 <p/>
-            </t:abstract>
-            <t:textClass>
+            </abstract>
+            <textClass>
                 <keywords>
-                    <t:term key="ChristianLiterature"/>
-                    <t:term key="Magic"/>
+                    <term key="ChristianLiterature"/>
+                    <term key="Magic"/>
+                    <term key="Prayers"/>
+                    <term key="Asmat"/>
+                    <term key="Disease"/>
                 </keywords>
-            </t:textClass>
-            <t:langUsage>
-                <t:language ident="en">English</t:language>
-                <t:language ident="gez">Gǝʿǝz</t:language>
-            </t:langUsage>
-        </t:profileDesc>
+            </textClass>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="gez">Gǝʿǝz</language>
+            </langUsage>
+        </profileDesc>
         <revisionDesc>
-            <change who="MV" when="2026-04-03">Created stub</change>
+            <change who="MV" when="2026-04-03">Created record</change>
         </revisionDesc>
     </teiHeader>
-    <t:text xmlns:t="http://www.tei-c.org/ns/1.0">
+    <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="lawd:hasAttestation" active="LIT7847Prayer" passive="BAVet213"/>
+                </listRelation>
+            </div>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>
+                        The following is the entire text. It is taken from <ref type="mss" corresp="BAVet213"/> according to
+                        <bibl><ptr target="bm:GrebTiss1935Codices"/><citedRange unit="page">686</citedRange></bibl>.</note>
+                    <ab>
+                        በስመ፡ አብ፡ <gap reason="ellipsis" resp="bm:GrebTiss1935Codices"/> ጸሎት፡ በእንተ፡ ደመ፡ <supplied reason="lost">ን</supplied>ስር፡ ወንዛዝ፡ ፋሎክ፡
+                        አፍስሎክ፡ ኢታውርድ፡ ዘደመ፡ ንስ<choice><corr resp="bm:GrebTiss1935Codices">ር</corr><sic>ብ</sic></choice>፡ እምላእለ፡ ገብርከ፡ 
+                    </ab>
+                </div>      
+            </div>
         </body>
-    </t:text>
+    </text>
 </TEI>
