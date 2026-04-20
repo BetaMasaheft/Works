@@ -5,14 +5,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ተአምሪሁ፡ ለቅዱስ፡ ገብርኤል፡ <gap reason="ellipsis"/> ወሀሎ፡ ፩፡ ሀገር፡ ዘይሰመይ፡ ኔቅሎን፡ ወበውእቱ፡ ሀገር፡ ፈቀዱ፡ 
-                    ሐኒጸ፡ ቤተ፡ ክርስቲያን፡</title>
-                <title xml:lang="gez" type="normalized" corresp="#t1">Taʾammǝrihu la-Qǝddus Gabrǝʾel <gap reason="ellipsis"/> wa-hallo 
+                <title xml:lang="en" xml:id="t1" type="main">Miracle of Gabriel: About the construction of a church dedicated to St Gabriel in 
+                    the city Neqlon</title>
+                <title xml:lang="gez" xml:id="t2">ወሀሎ፡ ፩፡ ሀገር፡ ዘይሰመይ፡ ኔቅሎን፡ ወበውእቱ፡ ሀገር፡ ፈቀዱ፡ ሐኒጸ፡ ቤተ፡ ክርስቲያን፡</title>
+                <title xml:lang="gez" type="normalized" corresp="#t2">Wa-hallo 
                     1 hagar za-yǝssammay Neqlon wa-ba-wǝʾǝtu hagar faqadu ḥaniṣa beta krǝstiyān</title>
-                <title xml:lang="en" corresp="#t1">Miracle of St Gabriel <gap reason="ellipsis"/>: Once upon a time, there was a country named
+                <title xml:lang="en" corresp="#t2">Once upon a time, there was a country named
                     Neqlon, in which some wanted to build a church</title>
-                <title xml:lang="en" xml:id="t2" type="main">Miracle about the construction of a church dedicated to St Gabriel in the country 
-                    Neqlon</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="CH"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -38,10 +37,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <creation/>
             <abstract>
                 <p>Miracle of <persName ref="PRS4377Gabriel"/> about the building of a church dedicated to St Gabriel in the country 
-                    Neqlon with mentioning of a blind person, who asked about the completion of the work while the construction began. This 
-                    miracle is very similar to <ref type="work" corresp="LIT7810MiyazMir"/> and thematically similar to 
-                    <ref type="work" corresp="LIT7786SaneHomily"/>. It forms part of the monthly reading for the 19th of Gǝnbot in the 
-                    <ref type="work" corresp="LIT7815DersanaGa"/>.</p>
+                    Neqlon/Niqlon with mentioning of a blind person, who asked about the completion of the work while the construction began. This 
+                    miracle is very similar to <ref type="work" corresp="LIT7196MGNiqlon"/> and thematically similar to 
+                    <ref type="work" corresp="LIT7786SaneHomily"/>. According to the edition of 
+                    <bibl><ptr target="bm:Makweriya1976DersanaGabriel"/><citedRange unit="page">166</citedRange></bibl>,
+                    it forms part of the monthly reading for the 19th of Gǝnbot in the <ref type="work" corresp="LIT7815DersanaGa"/>.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -61,6 +61,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change when="2026-02-10" who="CH">Replaced reference in abstract and relation for LIT7815DersanaGa</change>
             <change when="2026-02-21" who="CH">Added listBibl</change>
             <change when="2026-02-23" who="CH">Removed subdivision of edition</change>
+            <change when="2026-04-20" who="CH">Updated title and abstract; deleted doublet LIT7810MiyazMir</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -68,7 +69,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="bibliography">
                 <listRelation>
                     <relation name="ecrm:CLP46i_may_form_part_of" active="LIT7811GenbMir" passive="LIT7815DersanaGa"/>
-                    <relation name="ecrm:P129_is_about" active="LIT7808TerrMir" passive="PRS4377Gabriel"/>     
+                    <relation name="ecrm:P129_is_about" active="LIT7808TerrMir" passive="PRS4377Gabriel"/> 
+                    <relation name="saws:isDifferentTo" active="LIT7811GenbMir" passive="LIT7196MGNiqlon"/>
                 </listRelation>
                 <listBibl type="editions">
                     <bibl><ptr target="bm:Makweriya1976DersanaGabriel"/><citedRange unit="page">166</citedRange></bibl>
