@@ -4,7 +4,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Malkǝʾ-hymn for the consecration of the church of St Gabriel in Dānā</title>
+            <title xml:lang="en" xml:id="t1">Malkǝʾ-hymn for the consecration of the church of St Gabriel in Dānā</title>
+            <title xml:lang="en" xml:id="t2">Salām-hymn to St Gabriel</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -25,7 +26,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </sourceDesc>
          <sourceDesc>
             <listWit>
-               <witness corresp="BAVet82"/>
+               <witness corresp="BLorient590" xml:id="L"/>
+               <witness corresp="BAVet82" xml:id="V"/>
             </listWit>
          </sourceDesc>
       </fileDesc>
@@ -42,21 +44,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <keywords scheme="#ethioauthlist">
                <term key="Poetry"/>        
                <term key="ChristianLiterature"/>
+               <term key="Hagiography"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="MV" when="2017-05-24">Created entity</change>
+         <change when="2026-05-05" who="CH">Deleted doublet LIT6632SalGabBetka and updated LIT4658Salam according to Issue #3310</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div type="bibliography">
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT4658Salam" passive="PRS4377Gabriel"/>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT4658Salam" passive="LIT6632SalGabBetka"/>
+            </listRelation>
+         </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ሰላም፡ ለቅዳሴ፡ ቤትከ፡ በሀገረ፡ ዳና፡ ዘቀደሳ፡ አርከላኦስ፡ ኤጲስ፡ ቆጶስ፡ ዘብሔረ፡ ሱሳ፡
-               </ab>
-            </div>
+            <note>The following text is taken from <ref type="mss" corresp="BLorient590"/> with an emendation based on a reading from
+               <ref type="mss" corresp="BAVet82"/> in line 2.</note>
+            <ab>
+               <lg>
+                  <l n="1">ሰላም፡ ለቤትከ፡ በሀገረ፡ ደናሕ፡ ዘቀደሳ።</l>
+                  <l n="2">አርኬልላዖስ፡ ኤጲስ፡ <app><lem wit="#L">ቆጶስ፡ ዘብሔረ፡ ሱሳ።</lem><rdg wit="#V">ቆጶሳ።</rdg></app></l>
+                  <l n="3">ገብርኤል፡ ሰባኬ፡ ምጽአተ፡ ክርስቶስ፡ አንበሳ።</l>
+                  <l n="4">በዛቲ፡ በዓልከ፡ በዘይትሌዓል፡ ሞገሳ።</l>
+                  <l n="5">በዓለ፡ ማርያም፡ አንበረ፡ ደቅስዮስ፡ በርእሳ።</l>
+               </lg>
+            </ab>
          </div>
       </body>
    </text>
