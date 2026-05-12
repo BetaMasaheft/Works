@@ -6,8 +6,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">ነገረ፡ አርእስተ፡ አእምሮ፡</title>
                 <title corresp="#t1" xml:lang="gez" type="normalized">Nagara ʾarʾǝsta ʾaʾǝmro</title>
-                <title corresp="#t1" xml:lang="en">Discourse of the chapters of
-                    knowledge</title>
+                <title xml:lang="gez" xml:id="t2">ትርጓሜ፡ አርእስተ፡ አእምሮ፡</title>
+                <title corresp="#t2" xml:lang="gez" type="normalized">Tǝrgʷāme ʾarʾǝsta ʾaʾǝmro</title>
+                <title corresp="t3" xml:lang="en">Commentary on the chapters of
+                    knowledge by ʾAragāwi Manfasāwi</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="ES"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -23,7 +25,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="ESmakm091"/>
+                    <witness corresp="ESmakm014"/>
+                    <witness corresp="ESmakm012#a1"/>
+                    <witness corresp="Tanasee39"></witness>
+              </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -42,6 +49,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
+                    <term key="Commentary"/>
+                    <term key="MonasticLiterature"/>
                 </keywords>
             </textClass>
             <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
@@ -53,11 +62,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
     <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
+                <listBibl type="editions">
+                    <bibl>
+                        <ptr target="bm:1982Aragawi"/>
+                        <citedRange unit="page">347–348</citedRange>
+                    </bibl>
+                </listBibl>
+                <div type="edition">
+                    <note>The following incipit is taken from <ref type="mss" corresp="ESmakm014"/>.</note>
+                    <div type="textpart" subtype="incipit">
+                        <ab>ንጽሕፍ፡ ነገረ፡ አርእስተ፡ አእምሮ፡ ቀዳማዊ፡ ወፍካሬሁ፡ ረቂቅ፡ ልቡ፡ ለባሕታዊ፡ ገነተ፡ ተድላ፡ ውእቱ፡ ወእምኔሁ፡ ይፈለፍል፡ ነቅዓ፡ ሕይወት። ወይሠቀዮሙ፡ ለ፬ዘይቤ፡ አንብዕ፡ ቦዘይቤ፡ አንብዕ፡ ጽማዊ፡ ልባዌ፡ ጣዕመ፡ ዝማሬ፡ አንብዕ።
+                            ወለ፭ዘይቤ፡ ኵነኔ፡ ቦዘይቤ፡ ኵነኔ፡ ፍቅረ፡ እጓለ፡ እምሕያው፡ ሑሰት፡
+                        </ab></div>
+                    <div type="edition">
+                        <note>The following incipit is taken from <ref type="mss" corresp="ESmakm012"/>.</note>
+                        <div type="textpart" subtype="incipit">
+                            <ab>ለ፬ዘይቤ፡ ልባዌ፡ አንብቦ፡ ዝማሬ፡ ጣዕመ፡ ዝማሬ፨ ለ፫ዘይቤ፡ አንብዕ፡ ኵነኒ፡ ዑቃቢ፡ ፍቅረ፡ ደቂቀ፡ እጓለ፡ እምሕያው፡ ሁሰት። ወበውስቴቱ፡ ይትኀብኡ፡ ፫ዘይቤ፡
+                                ንጽሐ፡ ሥጋ፡ ንጽሐ፡ ሕሊና፡ ንጽሮ። ምስለ፡ ፲ዘይቤ፡ እምልባዌ፡ እስከ፡ ከዊነ፡ እሳት፡</ab></div>
+                    </div>
+                </div>
+            </div>
                 <listRelation>
                     <relation name="saws:isDifferentTo" active="LIT5627NagaraArestaAemro" passive="LIT3989Aragawi#ChaptersKnowledge"/>
+                    <relation name="ecrm:P129_is_about" active="LIT5627NagaraArestaAemro" passive="LIT3989Aragawi#ChaptersKnowledge"/>                
                 </listRelation>
-            </div>
-         <!---->
         </body>
+      
     </text>
 </TEI>
