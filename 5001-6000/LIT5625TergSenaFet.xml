@@ -4,10 +4,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="t1">ትርጓሜ ፡ ስነ ፡ ፍጥረታት ፡</title>
-                <title corresp="#t1" xml:lang="gez" type="normalized">Tǝrgʷāme śǝna fǝṭrat</title>
+                <title xml:lang="gez" xml:id="t1">ትርጓሜ ፡ ሥነ፡ ፍጥረታት ፡</title>
+                <title corresp="#t1" xml:lang="gez" type="normalized">Tǝrgʷāme śǝna fǝṭratāt</title>
                 <title corresp="#t1" xml:lang="en">Commentary on the Beauty of the Creation</title>
                 <title corresp="#t1" xml:lang="en">Exposition on the Beauty of the Creation</title>
+                <title xml:lang="gez" xml:id="t2">ትርጓሜ ፡ ሥነ ፡ ፍጥረት፡</title>
+                <title corresp="#t2" xml:lang="gez" type="normalized">Tǝrgʷāme śǝna fǝṭrat</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="ES"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -23,7 +25,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="ESthmr018#ms_i5"/>
+                    <witness corresp="ESmakm014#p1_i1"/>
+                    <witness corresp="BLorient503#ms_i1"/>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -50,13 +56,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         </profileDesc>
         <revisionDesc>
             <change who="ES" when="2019-04-09">Created entity</change>
+            <change when="2026-05-12" who="MK">added incipits, witnesses, secondary title, a relation</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
+                <div type="edition">
+                    <note>The following incipit is taken from <ref type="mss" corresp="ESthmr018"/>.</note>
+                    <div type="textpart" subtype="incipit">
+                        <ab>በስመ፡ እግዚአብሔር፡ መሓሪ፡ ወመስተሣህል፡ ንጽሕፍ፡ ትርጓሜ: ስነ፡ ፍጥረት፡ ኦሪት፡ ዘልደት፡ ይቤ፡ መተርጕም፡ ኦሪት፡ ብሂል፡ ፍትሕ፡ ዓዲ፡ ሕግ፡ ወሥርዓት፡ ዓዲ፡ አእምሮ፡ ዘቦቱ፡ ይፈልጡ፡ ሠናየ፡ ወእኩየ፡ ወዓዲ፡ መጽሔት፡ ዘይኔጽሩ፡ በቲ፡ በዓይን፡ ልቡናዊ፡ ዘኢያስተርኢ፡  ግብራተ፡ ወበዓይን፡ ሥጋዊ፡  ዘያስተርኢ፡ ግብራተ፡ ወዕውቅ፡ ዝንተ።</ab>
+                    </div>
+                </div>
+                    <div type="edition">
+                        <note>The following incipit is taken from <ref type="mss" corresp="ESmakm014"/>.</note>
+                        <div type="textpart" subtype="incipit">
+                            <ab>በስመ፡ እግዚአብሔር፡ ንጽሕፍ፡ ትርጓሜ: ስነ፡ ፍጥረታት፡ ኦሪት፡ ብሂል፡ ፍትሕ፡ ወዓዲ፡ አእምሮ፡ ዘይፈልጡ፡ ሠናይ፡ እምእኩይ፡ ወዓዲ፡ መጽሔት፡ ዘይኔጽሩ፡ ቦቱ፡ በዓይን፡ ልቡናዊ፡ ዘኢያስተርእዩ፡ ግብራተ፡ ወበዓይን፡ ሥጋዊ፡ ዘያስተርእዩ፡ ግብራተ፡  ወእውቅ፡ ዝንቱ፡ ቃል።</ab>
+                        </div>
+                </div>
                 <listRelation>
                     <relation name="saws:isDifferentTo" active="LIT5625TergSenaFet" passive="LIT2314senafe"/>
+                    <relation name="ecrm:P129_is_about" active="LIT1546Genesi"><desc>Interpretation of <ref type="work" corresp="LIT1546Genesi#Gen1">the Book of Genesis, Chapter 1</ref>.</desc></relation>
                 </listRelation>
             </div>
          <!---->
