@@ -6,7 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <fileDesc>
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">መልክአ፡ ገብረ፡ መንፈስ፡ ቅዱስ፡</title>
-                <title xml:lang="gez" type="normalized" corresp="#t1">Malkǝ'a gabra manfas qǝddus</title>
+                <title xml:lang="gez" type="normalized" corresp="#t1">Malkǝ'a Gabra Manfas Qǝddus</title>
                 <title xml:lang="en" xml:id="t2">Image of Gabra Manfas Qǝddus</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="RL"/>
@@ -48,18 +48,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="RL" when="2021-05-11">Created entity</change>
+            <change when="2026-06-15" who="ESh">Added witnesses and text parts</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="ecrm:P129_is_about" active="IT6447MalkeaGMQeddus"
+                        passive="PRS4306GabraMa"/>
+                    <relation name="lawd:hasAttestation" active="IT6447MalkeaGMQeddus"
+                        passive="CamOr2269#ms_i4"/>
+                    <relation name="lawd:hasAttestation" active="IT6447MalkeaGMQeddus"
+                        passive="EMIP00289#ms_i17"/>
+                    <relation name="lawd:hasAttestation" active="IT6447MalkeaGMQeddus"
+                        passive="EMIP02402"><desc>This version begins slightly different than the ones in <ref type="mss" corresp="EMIP00289"/> and <ref type="mss" corresp="CamOr2269"/>.</desc></relation>
+                    <relation name="lawd:hasAttestation" active="IT6447MalkeaGMQeddus"
+                        passive="CBD921#a1"><desc>The manuscript contains only the beginning of this Image as a guest text written on a protective folium.</desc></relation>
+                </listRelation>
+            </div>
             <div type="edition">
-              <div type="textpart" subtype="incipit" xml:lang="gez">
-                <note>Incipit transcribed from EMIP 2402</note>
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>The following incipit is taken from <ref type="mss" corresp="EMIP00289"
+                    />.</note>
                 <ab>
-                  ገብረ፡ መንፈስ፡ ቅዱስ፡ ዕንቈ፡ ሶም፡ ሰላም፡ ለከ፡ ሰላም።
+                    <hi rend="rubric">ሃሌ፡ ሃሌያ፡ ሉያ፡ መፍቅሬ፡ ጸሎ</hi>ት፡ ወጾም፡ ኮከበ፡ ገዳም፡ ገብረ፡ መንፈስ፡ ቅዱስ፡ ዕንቈ፡ ሶም፡ ሰላም፡ ለከ፡ ሰላም<hi rend="rubric">። ሃ</hi>ለ፡ ብእሲ፡ ጊጉይ፡ ድኅረ፡ 
+                        ንስሐሁ፡ ዘሰረይከ፡ ሎቱ፡ ከማሁ፡ አባ፡ አበሳሁ፡ ስረይ፡ ሊተ፡ <sic>ከከማሁ</sic>። 
                 </ab>
               </div>
+                <div type="textpart" subtype="explicit" xml:lang="gez">
+                    <note>The following incipit is taken from <ref type="mss" corresp="EMIP00289"
+                    />.</note>
+                    <ab>ሰብእ፡ ደቂቅ፡ ውስተ፡ እግረ፡ ጸድፍ፡ ዘተዋነዬ፡ ስብሐቲከ፡ ከመ፡ ርእዩ፡ አሕዩ፡ ለአርዌ፡ ቀይሕ፡ እምከዩ።
+                    </ab>
+                </div>
             </div>
         </body>
     </text>
