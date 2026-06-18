@@ -32,12 +32,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>The edition by Arras is based on <ref type="mss" corresp="BNFabb158"/> and <ref type="mss" corresp="BLorient692"/> which preserve the shorter text of the homily  in respect to other
+                witnesses such as <ref type="mss" corresp="EMML1763"/>.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Homily"/>
+                    <term key="Apocrypha"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -48,11 +50,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="MKr" when="2021-08-17">Created entity</change>
             <change who="MKr" when="2022-03-24">Added incipit</change>
+            <change  who="MKr" when="2026-05-19">Added bibliography and abstract</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography">
+                
+                <listBibl type="editions">
+                    <bibl><ptr target="bm:Arras1974TransituText"/><citedRange unit="page">56-61</citedRange></bibl>
+                 </listBibl>
+                
+                <listBibl type="translation">
+                    <bibl><ptr target="bm:Arras1974TransituVersio"/><citedRange unit="page">43-46</citedRange></bibl>
+                    <bibl><ptr target="bm:Bombeck2010MM"/><citedRange unit="page">224-233</citedRange></bibl>
+                </listBibl>
+                
                 <listRelation>
                     <relation name="saws:isAttributedToAuthor" active="LIT6493Dersan" passive="PRS13526Yohannes"/>
                     <relation name="ecrm:P129_is_about" active="LIT6493Dersan" passive="PRS6819Mary"/>
