@@ -1,11 +1,14 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7231AynatBarya" xml:lang="en" type="work">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT7881DamAflis" xml:lang="en" type="work">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="en" xml:id="t1">Prayer against ʿAynat, the evil eye of Bāryā, and for stopping vaginal haemorrhage</title>
+                <title xml:lang="gez" xml:id="t1">ጸሎት፡ በእንተ፡ ደም፡</title>
+                <title xml:lang="gez" corresp="#t1" type="normalized">Ṣalot baʾenta dam</title>
+                <title xml:lang="en" corresp="#t1">Prayer over the blood</title>
+                <title xml:lang="en" xml:id="t2">Prayer against vaginal haemorrhage</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="CH"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -21,9 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <listWit>
-                    <witness corresp="BLorient12053"/>
-                </listWit>
+                <p/>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -32,16 +33,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <profileDesc>
             <creation/>
             <abstract>
-                <p>Magic prayer against ʿAynat, the Evil Eye, the demon Bāryā as well as against vaginal haemorrhage using ʾasmāt. The prayer is
-                    similar to <ref type="work" corresp="LIT7881DamAflis"/>, which is directed only against haemorrhage.</p>
+                <p>Magic prayer against vaginal haemorrhage using ʾasmāt.</p>
             </abstract>
             <textClass>
                 <keywords>
                     <term key="Magic"/>
                     <term key="Prayers"/>
-                    <term key="DiseaseWomen"/>
                     <term key="Asmat"/>
-                    <term key="demon"/>
+                    <term key="DiseaseWomen"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -50,15 +49,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="CH" when="2025-01-09">Created entity</change>
-            <change when="2025-01-09" who="CH">Corrections after reviews by Nafisa Valieva and Jonas Karlsson</change>
-            <change when="2026-06-26" who="CH">Added abstract with reference to LIT7881DamAflis</change>
+            <change who="CH" when="2026-06-26">Created record</change>
+            <change when="2026-06-27" who="MK">Reviewed and approved</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="edition" subtype="incipit">
-                <ab>በስመ፡ <gap reason="ellipsis"/> ጸሎት፡ በእንተ፡ ዓይነት፡ ወአይነተ፡ ባርያ፡ መርግዔ፡ ደም፡ <term key="Asmat">አፍሊስ፡ ሊስ፡ መላሊስ፡</term></ab>
+            <div type="bibliography">
+                <listBibl type="secondary">
+                    <bibl><ptr target="bm:Strelcyn1976Catalogue"/></bibl>
+                </listBibl>
+                <listRelation>
+                    <relation name="saws:isDifferentTo" active="LIT7881DamAflis" passive="LIT7231AynatBarya"><desc>A similar prayer to
+                        <ref type="work" corresp="LIT7231AynatBarya"/>, which is only directed against vaginal haemorrhage, but not against
+                        demons, as it is the case with <ref type="work" corresp="LIT7231AynatBarya"/>.</desc></relation>
+                </listRelation>
+            </div>
+            <div xml:lang="gez" type="edition">
+                <note>The following incipit is taken from <ref type="mss" corresp="ANLcr67"/> according to the catalogue description in
+                    <bibl><ptr target="bm:Strelcyn1976Catalogue"/><citedRange unit="page">182</citedRange></bibl>.</note>
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <ab>ጸሎት፡ በእንተ፡ ሕማመ፡ ደም፡ ሊስ፡ አፍሊስ፡</ab>
+                </div>
             </div>
         </body>
     </text>
