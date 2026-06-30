@@ -13,7 +13,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ አኅብሮ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa ʾAḫbǝro</title>
             <title xml:lang="en" corresp="#t1">The Book of the Agreement</title>
-            <title xml:lang="en" xml:id="t2">A homily for the joint celebration of the feasts of Saint George and the Virgin Mary</title>
+            <title xml:lang="en" xml:id="t2">A homily for the joint celebration of the feasts of Saint George and Saint Mary</title>
             <editor role="generalEditor" key="AB"/>
             <editor key="SG"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -29,7 +29,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p/>
+            <listWit>
+               <witness corresp="ESmakm060#ms_i1.5"/>
+               <witness corresp="EMML1735"/>
+               <witness corresp="BLorient712#ms_i1.5"></witness>
+            </listWit>
          </sourceDesc>         
       </fileDesc>
       <encodingDesc>
@@ -60,7 +64,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="SG" when="2019-04-01">Created entity</change>         
+         <change who="SG" when="2019-04-01">Created entity</change>    
+         <change when="2026-06-30" who="MK">Added translation of the title, witnesses, abstract, incipits, bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -81,6 +86,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   አንሰ፡ አቀድም፡ አዕኵቶቶ፡ ለእግዚአብሔር፡ በእንተ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ወበእንተ፡ ኵልክሙ።</ab> 
             </div>
          </div>
+         <listRelation>
+            <relation name="dcterms:isPartOf" active="LIT5481MashafaAhbero" passive="LIT6172DossierGeorge"/>
+            <relation name="ecrm:P129_is_about" active="LIT5481MashafaAhbero" passive="PRS4585Georgeo"/>
+         </listRelation>
       </body>
    </text>
 </TEI>
