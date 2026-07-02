@@ -6,9 +6,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <titleStmt>
                 <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ አንክሮ፡</title>
                 <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa ʾAnkǝro</title>
-                <title xml:lang="en" xml:id="t2">The passion of George</title>
+                <title xml:lang="en" corresp="#t2">The Book of Admiration</title>
+                <title xml:lang="en" xml:id="t2">A book on the passion of Saint George</title>
                 
-               
                 <editor role="generalEditor" key="AB"/>
                 <editor key="SG"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -24,7 +24,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p/>
+                <listWit>
+                    <witness corresp="MAKM060#ms_i1.4"/>
+                    <witness corresp="BNFabb103#ms_i1.5"/>
+                    <witness corresp="BLorient712#ms_i1.4"/>
+                </listWit>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -33,7 +37,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         <profileDesc>
             <creation/>
             <abstract>
-                <p/>
+                <p>A homily written by an anonymous author on the passion of Saint George.</p>
             </abstract>
             <textClass>
                 <keywords>
@@ -44,11 +48,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         </profileDesc>
         <revisionDesc>
             <change who="SG" when="2019-08-20">Created entity</change>
+            <change when="2026-06-26" who="MK">added incipits, abstract, witnesses, bibliography, relations, changed en title</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography">
+                <listRelation>
+                    <relation name="dcterms:isPartOf" active="LIT5781MashafaAnkero" passive="LIT6172DossierGeorge"/>
+                    <relation name="ecrm:P129_is_about" active="LIT5781MashafaAnkero" passive="PRS4585Georgeo"/>
+                </listRelation>
+                
+                <listBibl type="secondary"><bibl><ptr target="bm:Raineri2005EAEGeorge"/></bibl>
+                </listBibl>
+                <note>Raineri says that the homily concerns the birth of Saint George but in fact it deals with his martyrdom.</note>
+            <div type="edition">
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>The following incipit is taken from <ref type="mss" corresp="MAKM060"/></note>
+                    <ab>በስመ፡ አብ፡ <gap reason="ellipsis" resp="MK"/> አጤይቀክሙ፡ አኃዊነ፡ አንክሮ፡ ፃማሁ፡ ለብፁዕ፡ ወለቅዱስ፡ ማር፡ ጊዮርጊስ፡ አንሰ፡ አነክር፡ ወያንኮልለኒ፡ ርእስየ፡ ወይቀጠቀጥ፡ አዕፅማትየ፡ ሶበ፡ እሄሊ፡ ከመ፡ ወቅዕዎ፡ ድማሆ፡ ለቅዱስ፡ ጊዮርጊስ፡ 
+                        በመንኰራኵረ፡ ሐፂን፡ እስከ፡ ትውኅዝ፡ ናላሁ፡ እንተ፡ አፉሁ።</ab>
+                </div>
+                <div type="textpart" subtype="incipit" xml:lang="gez">
+                    <note>The following incipit is taken from <ref type="mss" corresp="AQG014"/></note>
+                    <ab>በስመ፡ አብ፡ <gap reason="ellipsis" resp="MK"/> ንቀድም፡ በረድኤተ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ንጽሕፍ፡ ለክሙ፡ <unclear>ድርሳነ</unclear>፡ ዘይሰመይ፡ መጽሐፈ፡ አንክሮ፡ በእንተ፡ ሕማሙ፡ 
+                        ለብፁዕ፡ ወቅዱስ፡ ጊዮርጊስ፡ ጸሎቱ፡ <gap reason="ellipsis" resp="MK"/> አጤይቀክሙ፡ አኃዊነ፡ አንክሮ፡ ለብፁዕ፡ ወለቅዱስ፡ ማር፡ ጊዮርጊስ፡ አንሰ፡ አነክር፡ ወያንኮልለኒ፡ 
+                        ርእስየ፡ ወይቀጠቀጥ፡ አዕፅማትየ፡ ሶበ፡ እሔሊ፡ ስበ<sic/>፡ ወቅዕዎ፡ ድማሁ፡  ለቅዱስ፡ ለብፁዕ፡ ጊዮርጊስ፡ በመንኰራረ፡ ሐፂን፡ እስከ፡ ውኅዘ፡ ናላሁ፡ እንተ፡ ሐፉ።</ab> 
+                </div>
+            </div>
+            </div>
         </body>
     </text>
 </TEI>
