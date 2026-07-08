@@ -12,7 +12,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ አኅብሮ፡</title>
             <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa ʾAḫbǝro</title>
-            <title xml:lang="en" xml:id="t2">The conjunction of the festivals of George and of the blessed virgin Mary</title>
+            <title xml:lang="en" corresp="#t1">The Book of the Agreement</title>
+            <title xml:lang="en" xml:id="t2">A homily for the joint celebration of the feasts of Saint George and Saint Mary</title>
             <editor role="generalEditor" key="AB"/>
             <editor key="SG"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -28,7 +29,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p/>
+            <listWit>
+               <witness corresp="ESmakm060#ms_i1.5"/>
+               <witness corresp="EMML1735"/>
+               <witness corresp="BLorient712#ms_i1.5"/>
+            </listWit>
          </sourceDesc>         
       </fileDesc>
       <encodingDesc>
@@ -43,7 +48,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <profileDesc>
          <creation/>
          <abstract>
-            <p/>
+            <p>An anonymous homily for the joint celebration of the feast of <persName ref="PRS4585Georgeo">Saint George</persName> and <persName ref="PRS6819Mary">Saint Mary</persName>, 
+               to be read on the 16th of Naḥāse. On this day, in the Ethiopian Orthodox Church, falls the feast of the Assumption of Saint Mary into heaven and the translation of the body (relics) of 
+               Saint George from ‘Persia’ to his church in <placeName ref="LOC4355Lydda">Lydda</placeName>. 
+               In the homily, the coincidence of these two feasts is explained not as a mere accident but as divine disposition.</p>
          </abstract>
          <textClass>
             <keywords>
@@ -52,20 +60,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </textClass>
          <langUsage>
             <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="am">Amharic</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="SG" when="2019-04-01">Created entity</change>         
+         <change who="SG" when="2019-04-01">Created entity</change>    
+         <change when="2026-06-30" who="MK">Added translation of the title, witnesses, abstract, incipits, bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <div type="bibliography"/>
-         <!---->
+         <div type="bibliography">
+            <listRelation>
+               <relation name="dcterms:isPartOf" active="LIT5481MashafaAhbero" passive="LIT6172DossierGeorge"/>
+               <relation name="ecrm:P129_is_about" active="LIT5481MashafaAhbero" passive="PRS4585Georgeo"/>
+               <relation name="ecrm:P129_is_about" active="LIT5481MashafaAhbero" passive="PRS6819Mary"/>
+            </listRelation>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Getatchew2003Ahbero"/></bibl>
+               </listBibl>
+         </div>
+         <div type="edition">
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>The following incipit is taken from <ref type="mss" corresp="MAKM060"/></note>
+               <ab>በስመ፡ አብ፡ <gap reason="ellipsis" resp="MK"/> ድርሳን፡ ዘይሰመይ፡ መጽሐፈ፡ አኅብሮ፡ ዘይነግር፡ ኅብረተ፡ በዓላ፡ ለእግዝእትነ፡ ማርያም፡ ድንግል፡ በክልኢ፡ ምስለ፡ በዓሉ፡ ለቅዱስ፡ ጊዮርጊስ፡ በረከተ፡ ጸሎቶሙ፡ <gap reason="ellipsis" resp="MK"/>።
+               አንሰ፡ አቀድም፡ አእኵቶቶ፡ ለእግዚአብሔር፡ በእንተ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ወበእንተኒ፡ ኵልክሙ።</ab>
+            </div>
+            <div type="textpart" subtype="incipit" xml:lang="gez">
+               <note>The following incipit is taken from <ref type="mss" corresp="AQG014"/></note>
+               <ab>በስመ፡ አብ፡ <gap reason="ellipsis" resp="MK"/> ድር<surplus>ር</surplus>ሳን፡ ዘይሰመይ፡ መጽሐፈ፡ አኅብሮ፡ ዘይነግር፡ ኅብረት፡ ለበዓለ፡ እግዝእትነ፡ ድንግል፡ በ፪ኤ፡ ማርያም፡ ምስለ፡ በዓሉ፡ ለቅዱስ፡ ጊዮርጊስ፡ ጸሎቱ፡ <gap reason="ellipsis" resp="MK"/>
+                  አንሰ፡ አቀድም፡ አዕኵቶቶ፡ ለእግዚአብሔር፡ በእንተ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ወበእንተ፡ ኵልክሙ።</ab> 
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
