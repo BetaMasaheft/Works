@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Kitāb al-farāʾiḍ</title>
+            <title xml:id="t1" xml:lang="ha-Arab">كتاب الفرائض</title>
+            <title corresp="#t1" xml:lang="ha-Arab" type="normalized">Kitāb al-farāʾiḍ</title>
+            <title corresp="#t1" xml:lang="en">Book of the Obligations of Law</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -33,17 +35,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <abstract>
+            <p>Contrary to the regular use of the term <foreign xml:lang="ar">ʿilm al-farāʾid</foreign> (lit. "the science of the obligations of law") 
+               in Muslim law, this work does not primarily concern hereditary law. Instead the treatise is made up of two parts with different content. 
+               The first by the author <persName ref="PRS1179Abdarra" role="author"/> contains sayings based on numbers, such as: ‘Four things
+               do not last forever: the friendship of a liar, the wedding dinner of a miser, the wealth of this world and the shadow of a cloud’. Some of 
+               these include religious contents and obligations. The second part by <persName ref="PRS9354Tayyiba" role="author"/> starts with 
+               a catechism-like commentary on a creed. The articles of faith are first given in Arabic and then explained in Harari. Later religious
+               formulae are also interpreted and religious duties enumerated.</p>
+         </abstract>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="ha-Arab">Harari in Arabic script</language>
+            <language ident="ha">Harari</language>
+            <language ident="ar">Arabic</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change when="2026-07-14" who="CH">Added abstract according to Wagner in EAe, added bibliography and updated title</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="secondary">
+               <bibl>
+                  <ptr target="bm:IHABookSection14"/>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Banti2005EAeHarariLit"/>
+                  <citedRange unit="page">1029b</citedRange>
+               </bibl>
+               <bibl>
+                  <ptr target="bm:Strelcyn1976Catalogue"/>
+                  <citedRange unit="item">75</citedRange>
+                  <citedRange unit="page">197</citedRange>
+               </bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:isAttributedToAuthor" active="LIT1726Kitaba" passive="PRS1179Abdarra"/>
+               <relation name="saws:isAttributedToAuthor" active="LIT1726Kitaba" passive="PRS9354Tayyiba"/>
+            </listRelation>
+         </div>
       </body>
    </text>
 </TEI>
