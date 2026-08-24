@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1878Marbab">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="work" xml:lang="en" xml:id="LIT1878Marbab">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -12,13 +13,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+               Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                This file is licensed under the Creative Commons
-                Attribution-ShareAlike 4.0. </p>
+                  <p> This file is licensed under the Creative Commons Attribution-ShareAlike 4.0.
+                  </p>
                </licence>
             </availability>
          </publicationStmt>
@@ -28,7 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+            href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -36,9 +38,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p>Magic prayer referring to the biblical king <persName ref="PRS8925Solomon"/> and his alleged endeavours against demons.</p>
+            <p>Magic prayer referring to the biblical King <persName ref="PRS8925Solomon"/> and his
+               alleged endeavours against demons. <term key="Asmat">ʾAsmāt</term> and <term
+                  key="demon">demons’ names</term> may vary from one manuscript to another.</p>
          </abstract>
-         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
@@ -48,11 +55,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-03-21"> Created file from google
-            spreadsheet </change>
+         <change who="PL" when="2016-03-21"> Created file from google spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="DR" when="2017-03-17">Added keywords</change>
-         <change who="CH" when="2026-06-11">Added abstract, bibliography and incipit from edition</change>
+         <change who="CH" when="2026-06-11">Added abstract, bibliography and incipit from
+            edition</change>
+         <change when="2026-08-22" who="ESh">Added relations and updated abstract as well as the
+            incipit.</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -66,6 +75,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <bibl><ptr target="bm:Euringer1929NetzSalomons"/></bibl>
             </listBibl>
          </div>
+         <listRelation>
+            <relation name="betmas:formerlyAlsoListedAs" active="LIT1878Marbab"
+               passive="LIT4644MagicPr"/>
+            <relation name="ecrm:P129_is_about" active="LIT1878Marbab" passive="PRS8925Solomon"/>
+         </listRelation>
          <div type="edition">
             <note>The following incipit is taken from the edition in <bibl><ptr
                      target="bm:Euringer1928NetzSalomons"/><citedRange unit="page"

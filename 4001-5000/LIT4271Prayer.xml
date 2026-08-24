@@ -5,6 +5,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Prayers for the twilight</title>
+            <title xml:lang="gez" xml:id="t2">አምላክነ፡ </title>
+            <title xml:lang="gez" corresp="#t2" type="normalized">ʾAmlākǝna</title>
+            <title corresp="#t2" xml:lang="en">Our God</title>
+            <title xml:lang="gez" xml:id="t3">ሊጦን፡ ዘሰርክ፡ </title>
+            <title xml:lang="gez" corresp="#t3" type="normalized">Liṭon za-sark</title>
+            <title corresp="#t3" xml:lang="en">Litany of the evening</title>
+            <title xml:lang="gez" xml:id="t4">ዘሰርክ፡</title>
+            <title xml:lang="gez" corresp="#t4" type="normalized">Za-sark</title>
+            <title corresp="#t4" xml:lang="en">Of the evening</title>
+            <title xml:lang="gez" xml:id="t5">ኪዳን፡ ዘሰርክ፡</title>
+            <title xml:lang="gez" corresp="#t5" type="normalized">Kidān za-sark</title>
+            <title corresp="#t5" xml:lang="en">Testimony of the evening</title>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -21,12 +33,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-            <listWit>
-               <witness corresp="BAVet22"/>
-               
-            </listWit>
-         </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -37,7 +43,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <abstract>
-            <p/>
+            <p>Prayer or litany for the evening, which is attested independently or as part of <ref type="work" corresp="LIT1808Litonz"/>
+               or <ref type="work" corresp="LIT3577GizeS"/>.</p>
          </abstract>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <textClass>
@@ -45,24 +52,43 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <term key="ChristianLiterature"/>
                <term key="Prayers"/>
                <term key="Liturgy"/>
+               <term key="Missal"/>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-12-16">Created XML record from Ethio authority google spreadsheet</change>
          <change who="DR" when="2017-04-03">Added keywords and adjustments</change>
+         <change when="2026-08-19" who="CH">Updated records and deleted doublets</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="bibliography">
-            
+            <listBibl type="editions">
+               <bibl><ptr target="bm:Hammerschmidt1959Suendenbekenntnis"/><citedRange>103-109</citedRange></bibl>
+               <bibl><ptr target="bm:Velat1966MeerafText"/><citedRange unit="page">7</citedRange></bibl>
+               <bibl><ptr target="bm:1957Qeddase"/></bibl>
+            </listBibl>
+            <listBibl type="secondary">
+               <bibl><ptr target="bm:Bahr2023Litanies"/></bibl>
+            </listBibl>
+            <listRelation>
+               <relation name="saws:formsPartOf" active="LIT4271Prayer" passive="LIT1808Litonz"/>
+               <relation name="saws:formsPartOf" active="LIT4271Prayer" passive="LIT3577GizeS"/>
+               <relation name="betmas:formerlyAlsoListedAs" active="LIT4271Prayer" passive="LIT7009Amlakena"/>
+            </listRelation>
          </div>
          <div type="edition">
-            <div type="textpart" subtype="incipit" xml:lang="gez">
-               <ab>
-                  ጸሎተ፡ ሰርክ፡ አምላክነ፡ ዘዲበ፡ ኪሩቤል፡ ይነብር፡ እምኀበ፡ መላእክት፡ ይትዌደስ፡ ወይሴባሕ፡ አንተ፡ ውእቱ፡ ዘከፈልከነ፡ ንባእ፡ ውስተ፡ ቅዱስ፡ ማኅደርከ።
-                  </ab>
+            <note>The text follows <bibl><ptr target="bm:1957Qeddase"/></bibl>.</note>
+            <div type="textpart">
+               <ab>ይ፡ ካ፡ አምላክነ፡ ዘዲበ፡ ኪሩቤል፡ ትነብር፡ እምኀበ፡ መላእክት፡ ትትአኰት፡ ወትሴባሕ፡ አንተ፡ ውእቱ፡ ዘከፈልከነ፡
+                  ንባእ፡ ውስተ፡ ጽርሐ፡ ቅዱስ፡ ማኅደርከ፡ ንዘከር፡ ቅድሳተ፡ ስብሐቲከ፡ ወንፍዲ፡ ለከ፡ ዘሰርክ፡ አኰቴተ፡ አንተ፡
+                  ተወከፍ፡ ዘኵልነ፡ ሰክዮተ፡ ወበቍዔተ፡ በተአምኖ፡ ዘውስተ፡ ልብው፡ ዘበሰማያት፡ ምስጢርከ፡ በጼና፡ ሠናይ፡ መዐዛ፡
+                  ዕቀብ፡ ኵለነ፡ ዘእንበለ፡ ጻሕብ፡ ወዘእንበለ፡ ተመውኦ፡ ወዘእንበለ፡ ማዕቅፍ፡ አድኅን፡ አእጋረነ፡ እምዳኅፅ፡
+                  ወአዕይንተ፡ እምአንብዕ፡ ወነፍስተነ፡ እሞተ፡ ኀጢአት፡ ወደምረነ፡ ምስለ፡ እለ፡ ድኅኑ፡ ብከ፡ በጸሎተ፡ ኵሎሙ፡ እለ፡
+                  እምዓለም፡ አሥመሩከ፡ በ፩ዱ፡ ወልድከ፡ ዘቦቱ፡ ለከ፡ ምስሌሁ፡ ወምስለ፡ ቅዱስ፡ መንፈስ፡ ስብሐት፡ ወእኂዝ፡ ይእዜኒ፡
+                  ወዘልፈኒ፡ ወለዓለመ፡ ዓለም። ይ፡ ሕ፡ አሜን። </ab>
             </div>
          </div>
       </body>
