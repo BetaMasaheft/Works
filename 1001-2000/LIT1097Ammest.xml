@@ -55,6 +55,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <witness type="external" corresp="https://w3id.org/vhmml/readingRoom/view/534461">EMDA 00446</witness>
                   <witness type="external" corresp="https://w3id.org/vhmml/readingRoom/view/501206">G4-IV-91-23, EMDA 00275</witness>
                   <witness type="external" corresp="https://w3id.org/vhmml/readingRoom/view/501215">G4-IV-91-25, EMDA 00290</witness>
+                  <witness type="external" corresp="https://w3id.org/vhmml/readingRoom/view/882444">COLL 00159 C</witness>
                   <witness corresp="EMML23"/>
                   <witness corresp="EMML305"/>
                   <witness corresp="EMML306"/>
@@ -82,7 +83,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <witness corresp="EMML4641"/>
                   <witness corresp="EMML4963"/>
                   <witness corresp="EMML5048"/> 
-                  <witness corresp="EMML5594"/>
+                 <witness corresp="EMML5594"/>
                   <witness corresp="EMML5690"/>
                   <witness corresp="NLA33"/>
                </listWit>
@@ -99,14 +100,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <profileDesc>
          <langUsage><language ident="en">English</language><language ident="am">Amharic</language><language ident="gez">Gǝʿǝz</language></langUsage>
          <abstract>
-            <p>The work consists of teaching the Orthodox faith 
-               At a cursory survey it seems that the most widespread version is that contained in such mss. as  <ref type="mss" corresp="ESddm013"/>, <ref type="mss" corresp="EMML379"/>, 
-               <ref type="mss" corresp="EMML4404"/>, <ref type="mss" corresp="EMDA 00268"/>,  <ref type="mss" corresp="EMML4963"/>. The texts are of various length, from very concise such as <ref type="mss" corresp="EMML3247"/> and <ref type="mss" corresp="EMML3517"/> with only four folia 
-               to those of considerable length of over one hundred folia, such as <ref type="mss" corresp="EMML 3408"/>. 
-               The text in <ref type="mss" corresp="EMDA206"/> dated to 1792 is atypical in that relatively much of the text consists of Gǝʿǝz quotations whereas Amharic narration is present to a lesser extent.  
-               The text in <ref type="mss" corresp="EMML1288"/> is peculiar in that the mysteries of the faith are consistently presented as a dialog of questions and answers, which is also reflected in the layout. 
-               Some texts begin with an introduction which might or might not be a part of the ʾAmmǝstu ʾaʿmāda mǝśṭir. In this introduction the text that follows is called  Maṣḥafa mǝgbār wa-hāymānot (e.g., <ref type="mss" corresp="EMML 5048"/>,  <ref type="mss" corresp="EMML5594"/>,  
-               
+            <p>This is a general record of any work teaching the Orthodox faith and concerning the five mysteries: the mystery of the Trinity, the Incarnation, the Baptism, the Eucharist, and the Resurrection of the Dead.
+               At a cursory survey, it seems that the most widespread version is that contained in manuscripts such as <ref type="mss" corresp="ESddm013"/>, <ref type="mss" corresp="EMML379"/>, 
+               <ref type="mss" corresp="EMML4404"/>, and <ref type="mss" corresp="EMML4963"/>.
+               The texts vary in length, from very concise ones such as <ref type="mss" corresp="EMML3247"/> and <ref type="mss" corresp="EMML3517"/>, which contain only four folia, to those of considerable length, 
+               with over one hundred folia, such as <ref type="mss" corresp="EMML3408"/>.
+               The text in <ref type="mss" corresp="EMDA206"/>, dated to 1792, is atypical in that a relatively large part of the text consists of Gǝʿǝz quotations, whereas Amharic narration is present to a lesser extent.
+               The text in <ref type="mss" corresp="EMML1288"/> is peculiar in that the mysteries of the faith are consistently presented in a dialogue of questions and answers, which is also reflected in the layout
+               Some texts begin with an introduction, which may or may not be part of the ʾAmmǝstu ʾaʿmāda mǝśṭir. 
+               In this introduction, the whole text is called “Maṣḥafa mǝgbār wa-hāymānot” (e.g., <ref type="mss" corresp="EMML 5048"/>, <ref type="mss" corresp="EMML5594"/>).
+               In <ref type="mss" corresp="EMML5594"/>, “Maṣḥafa mǝgbār wa-hāymānot” is separated from the ʾAmmǝstu ʾaʿmāda mǝśṭir by another text.
             </p>
          </abstract>
         
@@ -125,11 +128,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change when="2016-10-12" who="MV">Added textparts</change>
          <change who="DR" when="2017-02-09">Added keywords</change>
          <change when="2024-11-25" who="JK">Updated transcription</change>
-         <change when="2026-08-31" who="MK">Minor corrections, added language "am", added witnesses</change>
+         <change when="2026-10-02" who="MK">Corrections, added language "am", added witnesses, added abstract, added relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <div type="bibliography">            
+            <listRelation>
+               <relation name="saws:isRelatedTo" active="LIT1097Ammest" passive="LIT5963CommTrinity"/>
+               <relation name="saws:isRelatedTo" active="LIT1097Ammest" passive="LIT5964CommIncarnation"/>
+               <relation name="saws:isRelatedTo" active="LIT1097Ammest" passive=" LIT5965CommBapt"/>
+               <relation name="saws:isRelatedTo" active="LIT1097Ammest" passive="LIT5966CommCommunion"/>
+               <relation name="saws:isRelatedTo" active="LIT1097Ammest" passive="LIT5967CommResurrection"/>
+              
+            </listRelation>
+         </div>
          <div type="edition">
             <div type="textpart" xml:id="Introduction">
                <label>Introduction to the Five Pillars of Mystery</label>
