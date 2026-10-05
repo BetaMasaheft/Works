@@ -4,7 +4,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Maṣḥafa śǝna fǝṭrat</title>
+            <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ሥነ፡ ፍጥረት፡</title>
+            <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa śǝna fǝṭrat</title>
+            <title xml:lang="en" corresp="#t1">The Book of Creation’s Beauty</title>
             <author>Kabte</author>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -25,6 +27,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <p>Work of the literatures of Ethiopia and Eritrea</p>
             <p>A TEI file converted from the ETHIO-authority google spreadsheet</p>
          </sourceDesc>
+         <sourceDesc>
+            <listWit>
+               <witness corresp="ESmakm101#ms_i2"/>
+            </listWit>
+         </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -34,18 +41,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+      <abstract>
+         <p>The text is an interpretation of the creation of the world and of man and woman in the Book of Genesis. 
+            It consists of quoted passages from Genesis, starting with <foreign xml:lang="gez">እመጽሐፍ፡</foreign>, followed by an interpretation, 
+            <foreign xml:lang="gez">ትርጓሜ፡</foreign> or <foreign xml:lang="gez">ፍካሬ፡</foreign>.</p>
+      </abstract>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="Theology"/>
+               <term key="Bible"></term>
+               <term key="OldTestament"></term>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="JK" when="2024-11-25">Updated transcription</change>
+         <change who="MK" when="2024-11-25">Added witness, relations, abstract, keywords etc.</change>
+         
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listRelation>
+               <relation name="saws:isDifferentTo" active="LIT1967Mashaf" passive="LIT5625TergSenaFet"/>
+               <relation name="ecrm:P129_is_about" active="LIT1967Mashaf" passive="LIT1546Genesi"><desc>Interpretation of <ref type="work" corresp="LIT1546Genesi#Gen1">the Book of Genesis, Chapter 1</ref>.</desc></relation>
+            </listRelation>
+         </div>
       </body>
    </text>
 </TEI>
