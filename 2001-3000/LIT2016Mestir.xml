@@ -12,7 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             
             <title xml:id="t2" xml:lang="am">ኦማርያም፡ መሰረት፡</title>
             <title xml:lang="am" corresp="#t2" type="normalized">ʾO-Māryām masarat</title>
-            <title xml:lang="en" corresp="#t2">Oh Mary, the foundation</title>
+            <title xml:lang="en" corresp="#t2">O Mary, the foundation</title>
             
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -37,9 +37,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <witness corresp="BerOrOct234"/>
                <witness corresp="BNFabb235"/>
                <witness corresp="BLadd11292"/>
-               <witness corresp="EMML1308" type="external"/>
-               <witness corresp="EMML3842" type="external"/>
-               <witness corresp="EMML4007" type="external"/>
+               <witness corresp="EMML586"/>
+               <witness corresp="EMML1308"/>
+               <witness corresp="EMML1878"/>
+               <witness corresp="EMML3842"/>
+               <witness corresp="EMML4007"/>
             </listWit>
 
             
@@ -63,7 +65,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </textClass>
          
          <abstract>
-            <p>An Amharic hymn in honour of <persName ref="PRS6819Mary"/>. One of the very few Old Amharic poetic compositions extolling St Mary</p>
+            <p>It is an Amharic version of the Catholic Mysteries of the Rosary. It consists of fifteen mysteries divided into three groups: 
+               The Five Joyful Mysteries, the Five Sorrowful Mysteries and the Five Glorious Mysteries. The Amharic texts originates from the 17th century.</p>
          </abstract>
       </profileDesc>
       
@@ -72,12 +75,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change when="2017-02-09" who="ES">updated title, keyword, abstract</change>
+         <change when="2026-10-27" who="MK">added a few mss, relations, bibliography, incipit</change>
          
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="bibliography">            
+            <listRelation>
+               <relation name="ecrm:P129_is_about" active="LIT2016Mestir" passive="PRS6819Mary"/>
+               <relation name="ecrm:P129_is_about" active="LIT2016Mestir" passive="PRS5684JesusCh"/>
+            </listRelation>
+            <listBibl type="editions">
+               <bibl>
+                  <ptr target="bm:Goldenberg2013Rosaries"/>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="edition">
+            <note>The following introduction and the incipit of the hymn to St Mary is taken from <bibl><ptr target="bm:Goldenberg2013Rosaries"/><citedRange unit="page">162</citedRange></bibl>.</note>
+            <div type="textpart" subtype="incipit">
+               <ab><l n="1">[ምሥጢረ፡ ጽጌያት።]</l>
+                  <l n="2">ማርያም፡ መሠረት፡</l>
+                  <l n="3">የክርስቲያን፡ ጸሎት፡</l>
+                  <l n="4">የኁሉ፡ እምቤት፡</l>
+                <l n="5">እናገራለሁ፡ ጥቄት፡</l>
+                <l n="6">ከምሥጢረ፡ ጽጌያት፡</l>
+                 <l n="7">የተናገረ፡</l>
+                  <l n="8">የማርያም፡ ጸላእት፡</l>
+                  <l n="9"> ኦመሠረት፡ አንቲ፡</l>
+                  <l n="10">ማርያም፡ መሠረት፡ የኁሉ፡ ነገር፡ የጥንት፡</l>
+                     <l n="11">ማርያም፡ መሠረት፡ የኁሉ፡ ተፍጻሜት።</l>
+               </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
