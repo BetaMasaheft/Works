@@ -26,12 +26,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc>
             <p>Work of the literatures of Ethiopia and Eritrea</p>
          </sourceDesc>
-         <sourceDesc>
-           <listWit>
-              <witness corresp="BNFet133#p2_i3"/>
-              <witness corresp="ESbhm002#p2_i2"/>
-           </listWit>
-         </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -59,12 +53,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="DR" when="2017-03-24">Added keywords</change>
          <change who="DR" when="2017-06-29">Added keywords</change>
          <change who="CH" when="2026-10-27">Corrected witness, deleted empty title (ar)</change>
+         <change who="CH" when="2026-10-29">Deleted witList; added editions</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
         <div type="bibliography">
-           
+              <listBibl type="editions">
+                 <bibl>
+                    <ptr target="bm:Budge1930George"/>
+                 </bibl>
+                 <bibl>
+                    <ptr target="bm:1968GadTamMalkGiyorgis"/>
+                 </bibl>
+              <bibl>
+                 <ptr target="bm:Arras1953GeorgiusText"/>
+              </bibl>
+           </listBibl>
+           <listBibl type="translation">
+              <bibl>
+                 <ptr target="bm:Arras1953GeorgiusTrans"/>
+              </bibl>
+           </listBibl>
            <listBibl type="secondary">
               <bibl corresp="#t1">
                  <ptr target="bm:Zotenberg1877Catalogue"/>
@@ -74,6 +84,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ptr target="bm:Raineri2005EAEGeorge"/>
                </bibl>
            </listBibl>
+           <listRelation>
+              <relation name="ecrm:P129_is_about" active="LIT4006Taamme" passive="PRS4585Georgeo"/>
+           </listRelation>
         </div>
          <div type="edition" xml:lang="gez">
             <div type="textpart" subtype="colophon" xml:id="coloph1">
