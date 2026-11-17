@@ -39,7 +39,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
            <language ident="gez">Gǝʿǝz</language>
          </langUsage>
          <abstract>
-<p>A short chronicle of the <ref type="ins" corresp="INS0341DL">Dabra Libānos</ref> monastery written in <date notBefore="1653" notAfter="1654">1653/1654</date>.</p>
+            <p>A chronicle of the <ref type="ins" corresp="INS0341DL">Dabra Libānos</ref> monastery written in <date notBefore="1653" notAfter="1654">1653/1654</date>, thus far known only from
+               <ref type="mss" corresp="BNFabb108"/>, which was used for the partial Russian translation by Boris Turaev (see <bibl><ptr target="bm:Turaev1906ZenaDabralibanos"/></bibl>). Its edition remains a desideratum.
+            </p>
          </abstract>
          <textClass>
               <keywords>
@@ -54,17 +56,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
          <change who="MKr" when="2024-08-18">Added bibliography, abstract, keywords</change>
+         <change who="NV" when="2026-11-17">Corrected bibliography, corrected abstract, added incipit and explicit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
         <div type="bibliography">
-         <listBibl type="editions">
-             <bibl><ptr target="bm:Turaev1906ZenaDabralibanos"/></bibl>
-             <bibl><ptr target="bm:Derat2003Domaine"/></bibl>
-             <bibl><ptr target="bm:Sergew1993Source"/></bibl>
-         </listBibl>
+           <listBibl type="translation">
+                 <bibl><ptr target="bm:Turaev1906ZenaDabralibanos"/></bibl>
+           </listBibl>
+           <listBibl type="secondary">
+            
+             <bibl><ptr target="bm:Sergew1993Source"/></bibl> 
+              <bibl><ptr target="bm:Derat2003Domaine"/></bibl>
+           </listBibl>
        </div>
+         <div type="edition">
+            <note>The following text is taken from <ref type="mss" corresp="BNFabb108"/> .</note>
+            <div type="textpart" subtype="incipit">
+               <ab xml:lang="gez">ንዌጥን፡ ጺሐፈ፡ ዜናሃ፡ ለሀገር፡ ዓባይ፡ ደብረ፡ ሊባኖስ፡ ርእሰ፡ ኵሎሙ፡ አኅጉራት፡ ውስተ፡ እሙ፡ አድባራት፡ </ab>
+            </div>
+            <div type="textpart" subtype="explicit">
+               <ab xml:lang="gez">ዓዲ፡ ቀሱታተ፡ ደብር፡ ይነብር፡ ማኅተመ፡ መስቀሉ፡ በቤቶሙ፡ ዘቦቱ፡ ትእምርት፡ ወሶበ፡ ቦአ፡ በተስሕቶ፡ ኀበ፡ ካልዕ፡ ቤት፡ እመኒ፡ ረከብዎ፡ በእንግዳ፡ በቃት፡ አኮ፡ ዘይአኅዝዎ፡ በህየ፡ አላ፡ ይቀልውዎ፡ ኀበ፡ ቦአ፡ ቤት፡ ወይሁብዎ፡ ሶቤሃ። </ab>
+            </div>
+         </div>
       </body>
    </text>
 </TEI>
