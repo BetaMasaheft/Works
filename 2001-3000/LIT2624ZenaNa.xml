@@ -4,8 +4,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Zena Narga</title>
+            <title xml:lang="gez" xml:id="t1">ዜና፡ ናርጋ</title>
+            <title type="normalized" xml:lang="gez" corresp="#t1">Zenā Nārgā</title>
+            <title xml:lang="en" corresp="#t1">A History of Nārgā</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="NV"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -33,17 +36,46 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
+         <abstract>
+            <p>A History of Nārgā relates the story of the <placeName ref="LOC4970NargaS">Nārgā Śǝllāse</placeName> church, founded in <date notBefore="1737">1737/1738</date> by <persName ref="PRS2682BerhanM"><roleName type="title">ʾǝtege</roleName> Mǝntǝwwāb</persName>.   
+            </p>
+         </abstract>
+         <textClass>
+            <keywords>
+               <term key="ChristianLiterature"/>
+               <term key="HistoryAndHistoriography"/>
+               <term key="MonasticLiterature"/>
+            </keywords>
+         </textClass>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2016-03-21"> Created file from google
             spreadsheet </change>
          <change who="ES" when="2016-02-09">CREATED: text record</change>
+         <change who="NV" when="2026-11-19">expanded title, added abstract, keywords, bibl ref to the edition and incipit and explicit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <div type="bibliography">
+            <listBibl type="editions">
+               <bibl><ptr target="bm:Guidi1905RaccontoNarga"/><citedRange unit="page">237–260</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition">
+        <note>The following text is taken from <bibl><ptr target="bm:Guidi1905RaccontoNarga"></ptr><citedRange unit="page">237, 260</citedRange></bibl> .</note>
+             <div type="textpart" subtype="incipit">
+                <ab xml:lang="gez">ንጽሕፍ፡ ዜና፡ ለንጉሥነ፡ ኢያሱ፡ ወንግሥትነ፡ ወለተ፡ ጊዮርጊስ። ኀበ፡ አገበረነ፡ ተድላ፡ ኂሩቶሙ፡ እስመ፡ ኢሀለወ፡ ንጉሥ፡ ከመ፡ ኢያሱ፡ እንበለ፡ ቈስጠንጢኖስ፡ ወኢሀለወት፡ ንግሥት፡ ከመ፡ ወለተ፡ ጊዮርጊስ፡ እንበለ፡ እሌኒ።</ab> </div>
+         <div type="textpart" subtype="explicit">
+            <note>The following explicit is taken from <ref type="mss" corresp="BNFabb108"/></note>
+            <ab xml:lang="gez">ወበእንተዝ፡ ኢኈለቍናሆሙ፡ ምስለ፡ ካህናት፡ ሶበ፡ ተጽሕፋ፡ ቀዳሚ፡ ፩ድኅረ፡ ፩በበዕብሬቶሙ፡ ትእምርተ፡ ክብረ፡ በዓልኒ፡ ወመምህር፡ ውእቱ፡ ሰንደቅ፡ ምስለ፡ በትር፡ ወዲባግ፡ ዘታሕቴሁ፡ ያጽንዑ፡ እሉ፡ ፫ዘውእቶሙ፡ ሩፋኤል፡ ወልደ፡ ልዑል፡ ነቢየ፡ ልዑል፡ በበዕብሬቶሙ፡ አስበ፡ ፃማሆሙሰ፡ ከመ፡ እለ፡ አስምዑ፡ ጥብጣቤ፡ ዘሐብል።
+            </ab>
+         </div>
+         </div>
       </body>
    </text>
 </TEI>
